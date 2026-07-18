@@ -290,7 +290,7 @@ npm install; npm run dev
 **Interfaces:**
 - Consumes: Task 2 確認過的影片清單；Task 7 的 manifest 協定
 
-- [ ] **Step 1: 確認 yt-dlp 可用**
+- [x] **Step 1: 確認 yt-dlp 可用**（已安裝 2026.06.09）
 
 ```powershell
 yt-dlp --version
@@ -298,28 +298,28 @@ yt-dlp --version
 
 沒裝的話：`winget install yt-dlp.yt-dlp`（需向使用者確認安裝）。
 
-- [ ] **Step 2: 向使用者最後確認下載動作**
+- [x] **Step 2: 向使用者最後確認下載動作**（Piplup Step 動畫MV，約 12.1MB，使用者確認下載）
 
 列出 Task 2 清單（含每部預估檔案大小），確認後才下載。
 
-- [ ] **Step 3: 逐部下載**
+- [x] **Step 3: 逐部下載**（`bm0nLJuRNbw.mp4`，12,751,751 bytes，1080p mp4+m4a 合併）
 
 ```powershell
 yt-dlp -f "bv*[height<=1080][ext=mp4]+ba[ext=m4a]/b[ext=mp4]" -o "public/videos/%(id)s.mp4" <影片URL>
 ```
 
-- [ ] **Step 4: 產生 manifest.json**
+- [x] **Step 4: 產生 manifest.json**
 
 ```powershell
 $files = Get-ChildItem public/videos -Filter *.mp4 | Select-Object -ExpandProperty Name
 @{ videos = $files } | ConvertTo-Json | Out-File -Encoding utf8 public/videos/manifest.json
 ```
 
-- [ ] **Step 5: 本地驗證影片模式**
+- [x] **Step 5: 本地驗證影片模式**（video-mode="local" 正確切換；videoSrc=/videos/bm0nLJuRNbw.mp4；videoRect/backdropRect 與 viewport 完全對齊 1280x720，cover-crop 正確；currentTime 持續推進確認播放中；`git status` 確認影片與 manifest 未被追蹤）
 
 `npm run dev` → 開瀏覽器：背景應改播本地影片（無 YT 浮水印）、播畢換下一部；`git status` 確認影片與 manifest 未被追蹤。再驗證波加曼、塗鴉一切正常。
 
-- [ ] **Step 6: 勾選 Task 9（無 commit——本任務產物皆在 .gitignore 內）**
+- [x] **Step 6: 勾選 Task 9（無 commit——本任務產物皆在 .gitignore 內）**
 
 ---
 
