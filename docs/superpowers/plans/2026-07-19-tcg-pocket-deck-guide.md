@@ -131,7 +131,7 @@ console.log(`wrote ${Object.keys(index).length} cards`);
 - Consumes: `cards.json`（Task 2）、Task 1 確認的牌表
 - Produces: `getCard(id: string): CardEntry | undefined`；`listDecks(): Deck[]`（S→A→B→C 排序）；`getDeck(id: string): Deck | undefined`；型別 `Deck`/`DeckCard`/`Matchup`/`EnergyType`/`Tier`/`CardEntry`
 
-- [ ] **Step 1: 寫 `src/data/types.ts`**
+- [x] **Step 1: 寫 `src/data/types.ts`**
 
 ```ts
 export type Tier = "S" | "A" | "B" | "C";
@@ -170,7 +170,7 @@ export interface Deck {
 }
 ```
 
-- [ ] **Step 2: 寫 `src/data/cards.ts`**
+- [x] **Step 2: 寫 `src/data/cards.ts`**
 
 ```ts
 import type { CardEntry } from "./types";
@@ -183,7 +183,7 @@ export function getCard(id: string): CardEntry | undefined {
 }
 ```
 
-- [ ] **Step 3: 寫 `src/data/decks.ts`（5 套策展牌組）**
+- [x] **Step 3: 寫 `src/data/decks.ts`（5 套策展牌組）**（五套完整繁中攻略＋對戰思路，攻略內容以「打法模式」層級撰寫、不引述不確定的單卡效果細節）
 
 結構如下；`cards`／tier／名稱用 Task 1 確認的研究結果，`summary`/`strategy`/`matchups` 以繁中撰寫（每套 strategy 至少 3 段：核心思路、展開順序、注意事項；matchups 至少 2 筆）。範例骨架（第一套，其餘四套同型）：
 
@@ -228,17 +228,12 @@ export function getDeck(id: string): Deck | undefined {
 
 （範例中的「……（實作時撰寫）」是指實作此步驟時必須寫出完整繁中內容，成品檔案不得留任何省略號。）
 
-- [ ] **Step 4: 驗證資料完整性（快速腳本）**
+- [x] **Step 4: 驗證資料完整性（快速腳本）**（missing: none、五套皆 total 20）
 
 Run: `node --input-type=module -e "const cards=(await import('./src/data/cards.json',{with:{type:'json'}})).default; const src=(await import('node:fs')).readFileSync('src/data/decks.ts','utf8'); const ids=[...src.matchAll(/id: \"([A-Za-z0-9]+-\\d+)\"/g)].map(m=>m[1]); const missing=ids.filter(id=>!cards[id]); console.log('deck card refs:',ids.length,'missing:',missing);"`
 Expected: `missing: []`。每套牌 `cards` 張數總和應為 20（TCG Pocket 牌組 20 張）——目視每套加總確認。
 
-- [ ] **Step 5: Commit**
-
-```bash
-git add src/data/types.ts src/data/cards.ts src/data/decks.ts
-git commit -m "feat: add curated TCG Pocket deck data and card lookup"
-```
+- [x] **Step 5: Commit**
 
 ---
 
