@@ -666,9 +666,7 @@ function DeckDetailPage() {
 - Consumes: Tasks 2–7 完成的本地檔案
 - Produces: Lovable 線上預覽與本地行為一致
 
-- [ ] **Step 1: 向使用者確認要不要同步**
-
-說明：同步會用 Lovable credits（逐檔 send_message）。使用者不同步就停在本地版，勾選註記後結束。
+- [x] **Step 1: 向使用者確認要不要同步**（已詢問，使用者選「先不同步」——暫緩，非拒絕。日後要同步：把 `src/data/*`、`src/components/guide/*`、`src/routes/decks/*`、`src/routes/index.tsx` 入口修改，逐批用 `send_message` 附完整內容請 Lovable 逐字寫入 project_id `979b3029-36fa-43ee-a9fa-719bf67f8c4e`，再跑 Steps 2-3 線上驗證）
 
 - [ ] **Step 2: 逐檔同步**
 
