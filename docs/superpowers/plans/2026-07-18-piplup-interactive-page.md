@@ -245,7 +245,7 @@ Two robustness changes:
 - Consumes: Lovable MCP `list_files` / `read_file`
 - Produces: 可 `npm run dev` 的本地專案；`public/videos/` 空資料夾等待 Task 9 放影片
 
-- [ ] **Step 1: 導出所有專案檔**
+- [x] **Step 1: 導出所有專案檔**（跳過 `src/components/ui/*` 30 個 shadcn 元件、`src/lib/utils.ts`、`src/hooks/use-mobile.tsx`——確認無任何自訂元件引用它們，純屬 Lovable 預設鷹架死碼；跳過 `bun.lock`，改用 npm 重新產生；跳過 `public/favicon.ico`，二進位內容無法透過文字工具正確搬運，缺少只會造成瀏覽器 favicon 404，不影響功能）
 
 載入 `mcp__a40737eb-41a3-470f-a972-953bf059636f__list_files` 與 `read_file` → 列出專案全部檔案 → 逐一 `read_file` 並寫到 `D:\piplup-website\` 對應路徑（跳過 node_modules 類）。
 
@@ -270,6 +270,8 @@ npm install; npm run dev
 ```
 
 用瀏覽器開 `http://localhost:5173`（或 Vite 實際 port）：行為應與線上版一致（YouTube 模式，因為 videos/ 還是空的）。
+
+（實際驗證：port 是 8080 不是 5173；建立 `.claude/launch.json` 用 preview_start 啟動確認正常。）
 
 - [x] **Step 4: 下載波加曼圖到 public**（134,947 bytes；重整後確認 `/piplup.png` 正確載入，naturalWidth=475，fallback 鏈第一層生效）
 
