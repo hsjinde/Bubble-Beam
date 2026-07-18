@@ -50,28 +50,23 @@
 **Interfaces:**
 - Produces: 確認過的 5 套牌組完整牌表（每張卡的 TCGdex id 如 `A4-039` 與張數）、涵蓋的 set id 清單（給 Task 2 的腳本）
 
-- [ ] **Step 1: 抓 Limitless 當前 meta 前五 archetype**
+- [x] **Step 1: 抓 Limitless 當前 meta 前五 archetype**（B3b Standard；前五與 URL 已記錄）
 
 用 WebFetch 抓 `https://play.limitlesstcg.com/decks?game=pocket`，記下前 5 名 archetype 名稱與 meta share/勝率（僅作為 tier 評定參考，不放站上）。
 
-- [ ] **Step 2: 逐套抓標準牌表**
+- [x] **Step 2: 逐套抓標準牌表**（archetype 頁只有賽績，改抓各套第一名選手實際牌表；五套皆 20 張）
 
 對每個 archetype，WebFetch 其 Limitless 牌組頁（列表頁點入的連結，如 `https://play.limitlesstcg.com/decks/<slug>?game=pocket`），記錄 20 張牌表：卡名 + set 代號 + 編號（Limitless 顯示格式如「Miraidon ex A4 39」→ TCGdex id `A4-039`，編號補零成三位）。
 
-- [ ] **Step 3: 對 TCGdex 抽查驗證 id**
+- [x] **Step 3: 對 TCGdex 抽查驗證 id**（發現 TCGdex 缺 B3/B3a/B3b/PROMO-B → 改用 flibustier 資料庫＋pokemon-tcg-exchange 卡圖；47 張不重複卡逐張驗證全過，資料源變更已寫入 spec 修訂）
 
 每套牌抽 2 張卡，WebFetch `https://api.tcgdex.net/v2/en/cards/{id}`（如 `A4-039`）確認卡名吻合。若編號對不上（TCGdex 與 Limitless 編號差異），改抓該 set 全卡 `https://api.tcgdex.net/v2/en/sets/{set}` 用卡名比對出正確 id，並在研究記錄註明。
 
-- [ ] **Step 4: 寫 `deck-research.md` 並向使用者確認名單**
+- [x] **Step 4: 寫 `deck-research.md` 並向使用者確認名單**（使用者確認：資料源變更＋五套名單都 OK）
 
 記錄 5 套牌組（名稱、tier 初評、20 張牌表含 id、涵蓋 set 清單）。用 AskUserQuestion 向使用者確認這 5 套（可換）。**未確認不進 Task 2。**
 
-- [ ] **Step 5: Commit**
-
-```bash
-git add docs/superpowers/plans/deck-research.md
-git commit -m "docs: research current TCG Pocket meta decks for guide seed"
-```
+- [x] **Step 5: Commit**
 
 ---
 

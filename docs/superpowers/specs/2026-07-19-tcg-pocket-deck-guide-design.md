@@ -15,9 +15,15 @@
 
 ## 資料來源驗證（已確認）
 
+> **修訂（2026-07-19，經使用者確認）**：實作研究發現 TCGdex 的 TCG Pocket 僅收錄到 B2a，缺當前 meta 必需的 B3/B3a/B3b/PROMO-B。資料源改為：
+> - 卡片資料：`flibustier/pokemon-tcg-pocket-database`（`.../main/dist/cards/{SET}.json`，覆蓋 A1–B3b + PROMO-A/B）
+> - 卡圖：`flibustier/pokemon-tcg-exchange`（`.../main/public/images/cards-by-set/{SET}/{number}.webp`，實測跨 set 全部 200）
+> - 卡 id 慣例：`{SET}-{number}` 不補零（`B3b-41`、`PROMO-A-7`）
+> 詳見 `docs/superpowers/plans/deck-research.md`。下方原始 TCGdex 驗證記錄保留供參考。
+
 - TCGdex set `A1`（Genetic Apex，2024-10-30 發行）回傳 286 張卡，每張含 `id`（如 `A1-001`）、`name`、卡圖。
 - 卡圖 URL 格式：`https://assets.tcgdex.net/en/tcgp/{set}/{num}/high.webp`（例：`.../en/tcgp/A1/036/high.webp`）。
-- 繁中 locale（`zh-tw`）對 TCG Pocket 回 404 → **TCGdex 無繁中卡名**。因此：卡名預設英文；卡面美術通用（不分語言）；攻略文字與站點介面用繁體中文。
+- 繁中 locale（`zh-tw`）對 TCG Pocket 回 404 → **TCGdex 無繁中卡名**（flibustier 資料庫亦僅英文卡名）。因此：卡名預設英文；卡面美術通用（不分語言）；攻略文字與站點介面用繁體中文。
 
 ## 總體架構
 
