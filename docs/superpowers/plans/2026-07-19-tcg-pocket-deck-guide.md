@@ -484,7 +484,7 @@ dev server（`.claude/launch.json` 的 `piplup-dev`，port 8080）→ 開 `http:
 - Consumes: `getDeck(id)`、`GuideLayout`、`Decklist`、`CardImage`、`TierBadge`、`EnergyIcon`
 - Produces: route `/decks/:deckId`（含 not-found 狀態）
 
-- [ ] **Step 1: 寫 `Decklist.tsx`（卡圖網格＋張數角標）**
+- [x] **Step 1: 寫 `Decklist.tsx`（卡圖網格＋張數角標）**
 
 ```tsx
 import type { DeckCard as DeckCardEntry } from "@/data/types";
@@ -513,7 +513,7 @@ export function Decklist({ cards }: { cards: DeckCardEntry[] }) {
 }
 ```
 
-- [ ] **Step 2: 寫 `src/routes/decks/$deckId.tsx`（含攻略段落渲染與 not-found）**
+- [x] **Step 2: 寫 `src/routes/decks/$deckId.tsx`（含攻略段落渲染與 not-found）**
 
 ```tsx
 import { Link, createFileRoute } from "@tanstack/react-router";
@@ -615,16 +615,11 @@ function DeckDetailPage() {
 }
 ```
 
-- [ ] **Step 3: 瀏覽器驗證詳情頁**
+- [x] **Step 3: 瀏覽器驗證詳情頁**（五套詳情頁卡圖全載入〔14/15/13/12/17 種〕、攻略段落＋列點＋對戰思路渲染正確、no-such-deck 顯示 not-found＋返回連結、壞圖 src 自動退為占位卡背）
 
 （1）從 `/decks` 點入每套牌 → 標頭（tier／能量／難度）、20 張卡圖牌表與張數角標、攻略段落、對戰思路都正確；（2）開 `http://localhost:8080/decks/no-such-deck` → 顯示「找不到這套牌」＋返回連結；（3）用 `javascript_tool` 把一張卡圖 src 改成壞網址 → 占位卡背出現。console 無紅字。截圖詳情頁。
 
-- [ ] **Step 4: Commit**
-
-```bash
-git add src/components/guide/Decklist.tsx src/routes/decks/\$deckId.tsx src/routeTree.gen.ts
-git commit -m "feat: add deck detail page with decklist and strategy"
-```
+- [x] **Step 4: Commit**
 
 ---
 
