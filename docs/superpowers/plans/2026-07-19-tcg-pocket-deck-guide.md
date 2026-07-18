@@ -350,7 +350,7 @@ export function CardImage({ cardId, className = "" }: { cardId: string; classNam
 - Consumes: `listDecks()`、`TierBadge`、`EnergyIcon`、`CardImage`
 - Produces: route `/decks`；`<GuideLayout>{children}</GuideLayout>`（Task 6 詳情頁沿用）
 
-- [ ] **Step 1: 寫 `GuideLayout.tsx`**
+- [x] **Step 1: 寫 `GuideLayout.tsx`**（頁尾出處改註明 flibustier 資料庫）
 
 ```tsx
 import { Link } from "@tanstack/react-router";
@@ -381,7 +381,7 @@ export function GuideLayout({ children }: { children: ReactNode }) {
 }
 ```
 
-- [ ] **Step 2: 寫 `DeckCard.tsx`（列表用牌組卡，主卡圖 = 牌表第一張）**
+- [x] **Step 2: 寫 `DeckCard.tsx`（列表用牌組卡，主卡圖 = 牌表第一張）**
 
 ```tsx
 import { Link } from "@tanstack/react-router";
@@ -419,7 +419,7 @@ export function DeckCard({ deck }: { deck: Deck }) {
 }
 ```
 
-- [ ] **Step 3: 寫 `src/routes/decks/index.tsx`（tier 分組列表）**
+- [x] **Step 3: 寫 `src/routes/decks/index.tsx`（tier 分組列表）**
 
 ```tsx
 import { createFileRoute } from "@tanstack/react-router";
@@ -466,16 +466,11 @@ function DecksPage() {
 }
 ```
 
-- [ ] **Step 4: 瀏覽器驗證列表頁**
+- [x] **Step 4: 瀏覽器驗證列表頁**（Tier S×2 + Tier A×3 正確分組、5 張主卡圖全載入、console 無錯誤、截圖確認）
 
 dev server（`.claude/launch.json` 的 `piplup-dev`，port 8080）→ 開 `http://localhost:8080/decks`：tier 區塊依 S→A→B→C 出現、每卡有主卡圖／tier 徽章／能量圖示／簡介、hover 有浮起效果。console 無紅字。截圖。
 
-- [ ] **Step 5: Commit**
-
-```bash
-git add src/components/guide/GuideLayout.tsx src/components/guide/DeckCard.tsx src/routes/decks/index.tsx src/routeTree.gen.ts
-git commit -m "feat: add /decks list page with tier-grouped deck cards"
-```
+- [x] **Step 5: Commit**
 
 ---
 
