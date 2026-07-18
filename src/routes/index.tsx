@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { VideoBackdrop } from "@/components/VideoBackdrop";
 import { Piplup } from "@/components/Piplup";
 import { Doodles } from "@/components/Doodles";
@@ -59,6 +59,18 @@ function Index() {
         </h1>
         <Doodles />
       </div>
+
+      {/* Guide entrance */}
+      <Link
+        to="/decks"
+        className="fixed right-6 top-6 z-40 rounded-full border-2 border-[#2a6f97] bg-white/90 px-4 py-2 font-bold text-[#2a6f97] shadow-lg transition hover:scale-105"
+        style={{
+          fontFamily: "'Comic Sans MS', 'Segoe Print', cursive",
+          transform: "rotate(2deg)",
+        }}
+      >
+        牌組攻略 →
+      </Link>
 
       {/* 4. Piplup */}
       <Piplup />

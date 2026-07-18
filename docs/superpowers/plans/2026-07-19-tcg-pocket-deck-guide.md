@@ -632,7 +632,7 @@ function DeckDetailPage() {
 - Consumes: route `/decks`（Task 5）
 - Produces: 首頁右上角入口按鈕（z-40、pointer-events auto，不影響互動層）
 
-- [ ] **Step 1: 首頁加入口按鈕**
+- [x] **Step 1: 首頁加入口按鈕**
 
 在 `src/routes/index.tsx` 的 doodle-layer `</div>` 之後、`<Piplup />` 之前插入（doodle-layer 是 pointer-events-none，所以按鈕獨立放 z-40）：
 
@@ -649,16 +649,11 @@ function DeckDetailPage() {
 
 並在檔頭加 `import { Link } from "@tanstack/react-router";`。
 
-- [ ] **Step 2: 全站瀏覽器驗證**
+- [x] **Step 2: 全站瀏覽器驗證**（首頁影片/塗鴉/波加曼追逐照舊＋入口按鈕就位；按鈕→/decks→牌組卡→詳情→導覽列→首頁整圈互通；mobile 375×812 牌表 3 欄、無橫向捲軸）
 
 （1）`/` 波加曼追逐／點擊／塗鴉全部照舊，右上角出現手繪風入口按鈕、可點；（2）按鈕 → `/decks` → 點牌組 → 詳情 → 導覽列回首頁，整圈導覽互通；（3）`resize_window` 到 mobile（375×812）：列表單欄、牌表 3 欄、無橫向捲軸；回 desktop 正常。截圖手機版牌表。
 
-- [ ] **Step 3: 更新本計畫勾選並 Commit**
-
-```bash
-git add src/routes/index.tsx src/routeTree.gen.ts docs/superpowers/plans/2026-07-19-tcg-pocket-deck-guide.md
-git commit -m "feat: add guide entrance on Piplup home page"
-```
+- [x] **Step 3: 更新本計畫勾選並 Commit**
 
 ---
 
