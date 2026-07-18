@@ -80,7 +80,7 @@
 - Consumes: Task 1 的 set id 清單（填入 `SETS` 常數）
 - Produces: `cards.json`，格式 `{ "A1-036": { "id": "A1-036", "nameEN": "Charizard ex", "imageUrl": "https://assets.tcgdex.net/en/tcgp/A1/036/high.webp" }, ... }`（以 id 為 key 的物件，便於 O(1) 查）
 
-- [ ] **Step 1: 寫 `scripts/fetch-cards.mjs`**
+- [x] **Step 1: 寫 `scripts/fetch-cards.mjs`**（依 Task 1 確認的資料源變更改用 flibustier：資料 `dist/cards/{SET}.json`、卡圖 pokemon-tcg-exchange `cards-by-set/{SET}/{number}.webp`、id 不補零）
 
 ```js
 // One-shot: fetch full card pools for the sets our curated decks use,
@@ -110,21 +110,13 @@ await writeFile(OUT, JSON.stringify(index, null, 2));
 console.log(`wrote ${Object.keys(index).length} cards`);
 ```
 
-- [ ] **Step 2: 執行腳本**
+- [x] **Step 2: 執行腳本**（15 sets 共 2,494 張，wrote 成功）
 
-Run: `node scripts/fetch-cards.mjs`
-Expected: 每個 set 印出張數，最後 `wrote N cards`，產生 `src/data/cards.json`。
-
-- [ ] **Step 3: 抽查產物**
+- [x] **Step 3: 抽查產物**（10 張跨牌組關鍵卡全部存在、imageUrl 格式正確）
 
 用 Grep/Read 抽查 `cards.json`：Task 1 牌表中每套牌抽 1 張卡 id，確認存在且 `imageUrl` 以 `/high.webp` 結尾。任一缺漏→回 Task 1 Step 3 的比對法修正 id。
 
-- [ ] **Step 4: Commit**
-
-```bash
-git add scripts/fetch-cards.mjs src/data/cards.json
-git commit -m "feat: add TCGdex card index fetch script and card data"
-```
+- [x] **Step 4: Commit**
 
 ---
 
