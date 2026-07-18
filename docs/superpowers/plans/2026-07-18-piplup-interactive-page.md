@@ -332,9 +332,7 @@ $files = Get-ChildItem public/videos -Filter *.mp4 | Select-Object -ExpandProper
 - Consumes: Lovable MCP `deploy_project`
 - Produces: 公開網址
 
-- [ ] **Step 1: 向使用者確認部署**
-
-確認：（1）要部署、（2）公開範圍（公開連結即可？）。**未確認不執行。**
+- [x] **Step 1: 向使用者確認部署**（已詢問，使用者選擇「先不部署」——暫緩，非拒絕。之後要部署時直接請我用 `mcp__a40737eb-41a3-470f-a972-953bf059636f__deploy_project` 對 project_id `979b3029-36fa-43ee-a9fa-719bf67f8c4e` 執行即可，Steps 2-3 屆時再做）
 
 - [ ] **Step 2: deploy_project 並驗證線上版**
 
