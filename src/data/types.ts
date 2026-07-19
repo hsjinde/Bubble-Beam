@@ -3,7 +3,7 @@ export type Tier = "S" | "A" | "B" | "C";
 /** 排行榜用：Wilson 下界太低的牌組會落到 D（策展牌組仍限 S–C）。 */
 export type MetaTier = Tier | "D";
 
-/** 排行榜牌組的代表牌表一張卡（保留 Limitless 原始 set/number 供 imggen 表單重建）。 */
+/** 排行榜牌組的代表牌表一張卡（set/number 是上游 imggen payload 的原始欄位，抓取管線需要）。 */
 export interface MetaDeckCard {
   id: string; // 對應 cards.json 的卡 id（P-A/P-B 已轉為 PROMO-A/PROMO-B）
   count: number;
