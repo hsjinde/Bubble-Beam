@@ -97,7 +97,7 @@ const decks: Deck[] = [
   {
     id: "greninja-mega-sableye",
     name: "甲賀忍蛙 Mega勾魂眼ex",
-    tier: "A",
+    tier: "C",
     energy: ["Darkness"],
     difficulty: "難",
     summary: "使用率第二的削血流：雙忍蛙＋達克萊伊每回合固定磨血，Mega勾魂眼ex 負責收割。",
@@ -142,7 +142,7 @@ const decks: Deck[] = [
   {
     id: "suicune-baxcalibur",
     name: "水君ex 戟脊龍",
-    tier: "A",
+    tier: "S",
     energy: ["Water"],
     difficulty: "中",
     summary: "水系中速：戟脊龍供能引擎讓水君ex 與古劍豹ex 連發重擊。",
