@@ -1,5 +1,21 @@
 export type Tier = "S" | "A" | "B" | "C";
 
+/** 排行榜用：Wilson 下界太低的牌組會落到 D（策展牌組仍限 S–C）。 */
+export type MetaTier = Tier | "D";
+
+/** /decks 排行榜的一列（來源：scripts/update-meta.mjs 產生的 meta.json）。 */
+export interface MetaDeck {
+  rank: number;
+  name: string; // Limitless 英文牌組名（專有名詞，不翻譯）
+  tier: MetaTier;
+  wilsonLowerBoundPct: number;
+  winratePct: number;
+  sharePct: number;
+  games: number;
+  record: string; // "W-L-T"
+  curatedId?: string; // 有策展攻略時對應 decks.ts 的 id
+}
+
 export type EnergyType =
   | "Grass"
   | "Fire"

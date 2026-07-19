@@ -1,0 +1,210 @@
+{
+  "fetchedAt": "2026-07-19T08:23:37.371Z",
+  "source": "https://play.limitlesstcg.com/decks?game=pocket",
+  "decks": [
+    {
+      "rank": 1,
+      "name": "Miraidon ex Magnezone",
+      "tier": "S",
+      "wilsonLowerBoundPct": 53.13,
+      "winratePct": 52.78,
+      "sharePct": 10.08,
+      "games": 4079,
+      "record": "2153-1773-153",
+      "curatedId": "miraidon-magnezone"
+    },
+    {
+      "rank": 2,
+      "name": "Suicune ex Baxcalibur",
+      "tier": "S",
+      "wilsonLowerBoundPct": 52.21,
+      "winratePct": 52.43,
+      "sharePct": 6.25,
+      "games": 2432,
+      "record": "1275-1071-86",
+      "curatedId": "suicune-baxcalibur"
+    },
+    {
+      "rank": 3,
+      "name": "Mega Sceptile ex Greninja",
+      "tier": "S",
+      "wilsonLowerBoundPct": 52.21,
+      "winratePct": 52.65,
+      "sharePct": 6.19,
+      "games": 2528,
+      "record": "1331-1121-76",
+      "curatedId": "mega-sceptile-greninja"
+    },
+    {
+      "rank": 4,
+      "name": "Mega Blaziken ex Greninja",
+      "tier": "S",
+      "wilsonLowerBoundPct": 52.07,
+      "winratePct": 53.22,
+      "sharePct": 3.31,
+      "games": 1351,
+      "record": "719-591-41"
+    },
+    {
+      "rank": 5,
+      "name": "Indeedee ex Giratina ex",
+      "tier": "A",
+      "wilsonLowerBoundPct": 51.43,
+      "winratePct": 51.57,
+      "sharePct": 2.26,
+      "games": 859,
+      "record": "443-361-55"
+    },
+    {
+      "rank": 6,
+      "name": "Mega Lucario ex Lucario",
+      "tier": "A",
+      "wilsonLowerBoundPct": 51.03,
+      "winratePct": 51.23,
+      "sharePct": 5.14,
+      "games": 2122,
+      "record": "1087-953-82",
+      "curatedId": "mega-lucario"
+    },
+    {
+      "rank": 7,
+      "name": "Mega Altaria ex Espeon",
+      "tier": "A",
+      "wilsonLowerBoundPct": 50.97,
+      "winratePct": 52.74,
+      "sharePct": 2.03,
+      "games": 802,
+      "record": "423-352-27"
+    },
+    {
+      "rank": 8,
+      "name": "Zoroark ex Mega Absol ex",
+      "tier": "A",
+      "wilsonLowerBoundPct": 50.97,
+      "winratePct": 53.74,
+      "sharePct": 1.26,
+      "games": 508,
+      "record": "273-219-16"
+    },
+    {
+      "rank": 9,
+      "name": "Milotic ex Eevee ex",
+      "tier": "A",
+      "wilsonLowerBoundPct": 50.73,
+      "winratePct": 54.55,
+      "sharePct": 0.62,
+      "games": 242,
+      "record": "132-98-12"
+    },
+    {
+      "rank": 10,
+      "name": "Greninja Mega Absol ex",
+      "tier": "B",
+      "wilsonLowerBoundPct": 49.98,
+      "winratePct": 54.09,
+      "sharePct": 0.58,
+      "games": 220,
+      "record": "119-90-11"
+    },
+    {
+      "rank": 11,
+      "name": "Giratina ex Darkrai ex",
+      "tier": "B",
+      "wilsonLowerBoundPct": 49.47,
+      "winratePct": 53.78,
+      "sharePct": 0.51,
+      "games": 225,
+      "record": "121-94-10"
+    },
+    {
+      "rank": 12,
+      "name": "Mega Altaria ex Chingling",
+      "tier": "B",
+      "wilsonLowerBoundPct": 49.15,
+      "winratePct": 52.83,
+      "sharePct": 0.36,
+      "games": 159,
+      "record": "84-62-13"
+    },
+    {
+      "rank": 13,
+      "name": "Mega Manectric ex Zeraora",
+      "tier": "B",
+      "wilsonLowerBoundPct": 48.95,
+      "winratePct": 51.96,
+      "sharePct": 1.01,
+      "games": 408,
+      "record": "212-181-15"
+    },
+    {
+      "rank": 14,
+      "name": "Gourgeist Galarian Cursola",
+      "tier": "B",
+      "wilsonLowerBoundPct": 48.42,
+      "winratePct": 51.47,
+      "sharePct": 0.17,
+      "games": 68,
+      "record": "35-21-12"
+    },
+    {
+      "rank": 15,
+      "name": "Greninja Oricorio",
+      "tier": "B",
+      "wilsonLowerBoundPct": 48.35,
+      "winratePct": 56.52,
+      "sharePct": 0.14,
+      "games": 69,
+      "record": "39-25-5"
+    },
+    {
+      "rank": 16,
+      "name": "Magnezone ex Magnezone",
+      "tier": "B",
+      "wilsonLowerBoundPct": 48.34,
+      "winratePct": 53.03,
+      "sharePct": 0.43,
+      "games": 198,
+      "record": "105-84-9"
+    },
+    {
+      "rank": 17,
+      "name": "Magnezone Miraidon ex",
+      "tier": "B",
+      "wilsonLowerBoundPct": 48.09,
+      "winratePct": 52.41,
+      "sharePct": 0.89,
+      "games": 332,
+      "record": "174-151-7"
+    },
+    {
+      "rank": 18,
+      "name": "Hitmonchan ex Mega Lucario ex",
+      "tier": "C",
+      "wilsonLowerBoundPct": 47.86,
+      "winratePct": 60.47,
+      "sharePct": 0.07,
+      "games": 43,
+      "record": "26-15-2"
+    },
+    {
+      "rank": 19,
+      "name": "Mega Blaziken ex Castform Sunny Form",
+      "tier": "C",
+      "wilsonLowerBoundPct": 47.66,
+      "winratePct": 51.27,
+      "sharePct": 0.85,
+      "games": 314,
+      "record": "161-141-12"
+    },
+    {
+      "rank": 20,
+      "name": "Milotic ex Chien-Pao ex",
+      "tier": "C",
+      "wilsonLowerBoundPct": 47.53,
+      "winratePct": 51.71,
+      "sharePct": 0.74,
+      "games": 292,
+      "record": "151-132-9"
+    }
+  ]
+}

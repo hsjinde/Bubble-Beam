@@ -1,42 +1,51 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { listDecks } from "@/data/decks";
-import type { Deck, Tier } from "@/data/types";
+import { getMeta } from "@/data/meta";
 import { DeckCard } from "@/components/guide/DeckCard";
 import { GuideLayout } from "@/components/guide/GuideLayout";
+import { MetaRanking } from "@/components/guide/MetaRanking";
 
 export const Route = createFileRoute("/decks/")({
   head: () => ({
     meta: [
-      { title: "牌組攻略 — Piplup! TCG Pocket" },
-      { name: "description", content: "Pokémon TCG Pocket 熱門牌組整理與繁中攻略。" },
+      { title: "環境排行榜 — Piplup! TCG Pocket" },
+      {
+        name: "description",
+        content: "Pokémon TCG Pocket 即時環境 Top 20 排行榜（Wilson score）與精選牌組攻略。",
+      },
     ],
   }),
   component: DecksPage,
 });
 
-const TIERS: Tier[] = ["S", "A", "B", "C"];
-
 function DecksPage() {
-  const decks = listDecks();
-  const byTier = new Map<Tier, Deck[]>();
-  for (const d of decks) byTier.set(d.tier, [...(byTier.get(d.tier) ?? []), d]);
+  const meta = getMeta();
+  const curated = listDecks();
 
   return (
     <GuideLayout>
-      <h1 className="text-3xl font-bold text-[#2a6f97]">TCG Pocket 牌組攻略</h1>
+      <h1 className="text-3xl font-bold text-[#2a6f97]">TCG Pocket 環境排行榜</h1>
       <p className="mt-2 text-slate-600">
-        人工整理的當前熱門牌組。點進牌組看完整牌表與打法。
+        依 Limitless 賽事數據以 Wilson score 95% 下界排序的 Top {meta.decks.length}
+        ：小樣本的極端勝率會被往下修正，名次反映「有統計信心的最低實力」。帶連結的牌組有完整攻略。資料日期：
+        {meta.fetchedAt.slice(0, 10)}。
       </p>
-      {TIERS.filter((t) => byTier.has(t)).map((tier) => (
-        <section key={tier} className="mt-8">
-          <h2 className="mb-3 text-xl font-bold text-[#2a6f97]">Tier {tier}</h2>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {byTier.get(tier)!.map((deck) => (
-              <DeckCard key={deck.id} deck={deck} />
-            ))}
-          </div>
-        </section>
-      ))}
+
+      <div className="mt-6">
+        <MetaRanking decks={meta.decks} />
+      </div>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-bold text-[#2a6f97]">精選牌組攻略</h2>
+        <p className="mt-1 text-sm text-slate-600">
+          人工整理的完整牌表、打法與對戰思路。
+        </p>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          {curated.map((deck) => (
+            <DeckCard key={deck.id} deck={deck} />
+          ))}
+        </div>
+      </section>
     </GuideLayout>
   );
 }
