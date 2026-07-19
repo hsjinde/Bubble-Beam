@@ -1,0 +1,5 @@
+# Copyright: locally-downloaded background video is for local playback only.
+# Never publish these to Cloudflare Workers assets. Mirrors the .gitignore entries.
+videos/*.mp4
+videos/*.webm
+videos/manifest.json
