@@ -1,0 +1,23 @@
+{
+  "_comment": "Maps this site's curated deck ids (src/data/decks.ts) to Limitless archetype display names, so the tcg-pocket-tier-list skill can propose tier updates from live tournament data. Match by limitlessName (stable); slug is informational and may drift as Limitless renames set suffixes.",
+  "miraidon-magnezone": {
+    "limitlessName": "Miraidon ex Magnezone",
+    "slug": "/decks/miraidon-ex-b3a-magnezone-b1a"
+  },
+  "mega-sceptile-greninja": {
+    "limitlessName": "Mega Sceptile ex Greninja",
+    "slug": "/decks/mega-sceptile-ex-b3-greninja-a1"
+  },
+  "greninja-mega-sableye": {
+    "limitlessName": "Greninja Mega Sableye ex",
+    "slug": "/decks/greninja-a1-mega-sableye-ex-b3b"
+  },
+  "suicune-baxcalibur": {
+    "limitlessName": "Suicune ex Baxcalibur",
+    "slug": "/decks/suicune-ex-a4a-baxcalibur-b2a"
+  },
+  "mega-lucario": {
+    "limitlessName": "Mega Lucario ex Lucario",
+    "slug": "/decks/mega-lucario-ex-b3-lucario-a2"
+  }
+}
