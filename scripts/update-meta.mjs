@@ -1,9 +1,10 @@
 // Transforms the tcg-pocket-tier-list skill's JSON output into src/data/meta.json,
-// consumed by the /decks ranking page. Keeps the top N archetypes (already sorted
-// by Wilson lower bound), tags rows that have a curated guide (matched by
-// Limitless display name via limitless-map.json), and fetches a representative
-// decklist for every deck (its best recent tournament finish on Limitless) so
-// the site can render the 20-card list with real card images.
+// consumed by the /decks ranking page. Keeps the top N archetypes by Wilson lower
+// bound (after dropping tiny samples and same-name duplicates, see MIN_GAMES),
+// tags rows that have a curated guide (matched by Limitless display name via
+// limitless-map.json), and fetches a representative decklist for every deck (its
+// best recent tournament finish on Limitless) so the site can render the 20-card
+// list with real card images.
 //
 // The decklist comes from the hidden "Open as Image" form on each player's
 // decklist page — Limitless posts structured JSON [{count,name,set,number}] to
@@ -20,6 +21,10 @@ if (!input) {
   process.exit(1);
 }
 const TOP_N = 20;
+// The ranking page sells itself as "有統計信心的最低實力", so archetypes with a
+// handful of recorded games don't belong on it — a 22-game deck rides sampling
+// noise into the top 20 and pushes out an established one.
+const MIN_GAMES = 100;
 const BASE = "https://play.limitlesstcg.com";
 const UA = { "user-agent": "Mozilla/5.0 (piplup-website meta updater)" };
 
@@ -79,8 +84,21 @@ for (const [id, entry] of Object.entries(map)) {
   }
 }
 
+// Limitless sometimes lists two archetypes under one display name (the A2 and B3
+// Lucario variants both render as "Mega Lucario ex Lucario", differing only by
+// slug). Since curated guides are matched by name, both rows would link to the
+// same guide and read as a duplicate — keep whichever has the larger sample.
+const byName = new Map();
+for (const d of data.decks) {
+  if (d.games < MIN_GAMES) continue;
+  const prev = byName.get(d.name);
+  if (!prev || d.games > prev.games) byName.set(d.name, d);
+}
+const eligible = [...byName.values()].sort((a, b) => b.wilsonLowerBoundPct - a.wilsonLowerBoundPct);
+const dropped = data.decks.length - eligible.length;
+
 const decks = [];
-for (const [i, d] of data.decks.slice(0, TOP_N).entries()) {
+for (const [i, d] of eligible.slice(0, TOP_N).entries()) {
   const deck = {
     rank: i + 1,
     name: d.name,
@@ -113,5 +131,5 @@ const out = {
 };
 await writeFile(new URL("../src/data/meta.json", import.meta.url), JSON.stringify(out, null, 2));
 console.log(
-  `wrote meta.json: top ${decks.length}, ${decks.filter((d) => d.curatedId).length} curated links, ${decks.filter((d) => d.cards).length} with sample decklists, fetched ${out.fetchedAt}`,
+  `wrote meta.json: top ${decks.length} of ${eligible.length} eligible (${dropped} archetypes below ${MIN_GAMES} games or same-name duplicates), ${decks.filter((d) => d.curatedId).length} curated links, ${decks.filter((d) => d.cards).length} with sample decklists, fetched ${out.fetchedAt}`,
 );
