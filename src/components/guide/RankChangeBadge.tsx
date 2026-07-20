@@ -4,7 +4,16 @@ import { getRankChange } from "@/data/meta";
 /**
  * 排名變化：上升／下降／持平／新進榜。狀態同時用形狀（▲▼—新）與顏色表示，
  * 不單靠顏色區分，色盲或單色列印也讀得出來。
+ *
+ * 顏色是同色相壓深後的值，一般列（#ffffff）與 Tier S 列（#f4fbff）都 ≥4.5:1。
+ * 原本用 text-emerald-600／text-rose-500／text-slate-300 只有 3.49／3.59／1.42。
+ * 換色時兩種列背景都要重算。
  */
+const CHANGE_INK = {
+  up: "#008251", // 白底 4.87、Tier S 底 4.66
+  down: "#e30041", // 4.84 / 4.63
+  same: "#69737e", // 4.82 / 4.61
+} as const;
 export function RankChangeBadge({ deck }: { deck: MetaDeck }) {
   const { state, delta, previousRank } = getRankChange(deck);
 
@@ -27,7 +36,8 @@ export function RankChangeBadge({ deck }: { deck: MetaDeck }) {
   if (state === "same") {
     return (
       <span
-        className="inline-flex items-center text-xs font-semibold text-slate-300"
+        className="inline-flex items-center text-xs font-semibold"
+        style={{ color: CHANGE_INK.same }}
         title={`持平：與上次更新同為第 ${previousRank} 名`}
       >
         —<span className="sr-only">持平</span>
@@ -38,9 +48,8 @@ export function RankChangeBadge({ deck }: { deck: MetaDeck }) {
   const up = state === "up";
   return (
     <span
-      className={`inline-flex items-center gap-0.5 text-xs font-bold tabular-nums ${
-        up ? "text-emerald-600" : "text-rose-500"
-      }`}
+      className="inline-flex items-center gap-0.5 text-xs font-bold tabular-nums"
+      style={{ color: up ? CHANGE_INK.up : CHANGE_INK.down }}
       title={`${up ? "上升" : "下降"} ${delta} 名（上次第 ${previousRank} 名）`}
     >
       <span aria-hidden="true">{up ? "▲" : "▼"}</span>

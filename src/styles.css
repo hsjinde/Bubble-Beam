@@ -141,4 +141,30 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+
+  /*
+   * 全站鍵盤焦點環。原本沒有任何 :focus-visible 規則，靠瀏覽器預設的橘色
+   * outline: auto 1px —— 看得見，但和水藍色系衝突，在密集表格列上也難定位。
+   * 用 :where() 讓權重維持 0，個別元件要覆寫不需要 !important。
+   */
+  :where(a, button, [tabindex]:not([tabindex="-1"]), input, select, textarea):focus-visible {
+    outline: 2px solid #2a6f97;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/*
+ * 減少動態：DeckCard 的 hover 位移、卡片陰影過場等一律縮到近乎瞬時。
+ * 技能規則明訂每個動畫都要有 reduced-motion 對應，這裡用全域保險絲一次涵蓋。
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
