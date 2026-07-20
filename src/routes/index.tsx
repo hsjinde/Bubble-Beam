@@ -24,16 +24,14 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  // touch-action: none 讓觸控拖曳交給 pointermove（波加曼跟隨），不觸發捲動/下拉重整
   return (
-    <div className="fixed inset-0 overflow-hidden">
+    <div className="fixed inset-0 overflow-hidden" style={{ touchAction: "none" }}>
       {/* 1. Backdrop */}
       <VideoBackdrop />
 
       {/* 2. Tint overlay */}
-      <div
-        className="fixed inset-0 z-10"
-        style={{ backgroundColor: "rgba(191,227,245,0.25)" }}
-      />
+      <div className="fixed inset-0 z-10" style={{ backgroundColor: "rgba(191,227,245,0.25)" }} />
 
       {/* 3. Doodle layer */}
       <div
@@ -43,12 +41,11 @@ function Index() {
         style={{ pointerEvents: "none" }}
       >
         <h1
-          className="absolute top-6 left-8 select-none"
+          className="absolute top-5 left-5 select-none sm:top-6 sm:left-8"
           style={{
-            fontFamily:
-              "'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', 'Segoe Print', cursive",
+            fontFamily: "'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', 'Segoe Print', cursive",
             color: "#2a6f97",
-            fontSize: "3rem",
+            fontSize: "clamp(1.9rem, 8vw, 3rem)",
             fontWeight: 700,
             transform: "rotate(-4deg)",
             textShadow: "2px 2px 0 rgba(255,255,255,0.6)",
@@ -63,7 +60,7 @@ function Index() {
       {/* Guide entrance */}
       <Link
         to="/decks"
-        className="fixed right-6 top-6 z-40 rounded-full border-2 border-[#2a6f97] bg-white/90 px-4 py-2 font-bold text-[#2a6f97] shadow-lg transition hover:scale-105"
+        className="fixed right-4 top-4 z-40 rounded-full border-2 border-[#2a6f97] bg-white/90 px-3 py-1.5 text-sm font-bold text-[#2a6f97] shadow-lg transition hover:scale-105 sm:right-6 sm:top-6 sm:px-4 sm:py-2 sm:text-base"
         style={{
           fontFamily: "'Comic Sans MS', 'Segoe Print', cursive",
           transform: "rotate(2deg)",

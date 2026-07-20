@@ -117,7 +117,7 @@ export function Doodles() {
   }, [droplets]);
 
   useEffect(() => {
-    const onMove = (e: MouseEvent) => {
+    const onMove = (e: PointerEvent) => {
       const now = performance.now();
       if (now - lastSpawnRef.current < 120) return;
       if (dropletsRef.current.length >= 20) return;
@@ -129,8 +129,8 @@ export function Doodles() {
         setDroplets((prev) => prev.filter((x) => x.id !== id));
       }, 850);
     };
-    window.addEventListener("mousemove", onMove);
-    return () => window.removeEventListener("mousemove", onMove);
+    window.addEventListener("pointermove", onMove);
+    return () => window.removeEventListener("pointermove", onMove);
   }, []);
 
   return (

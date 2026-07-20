@@ -9,6 +9,11 @@ function ExpandedList({ deck }: { deck: MetaDeck }) {
   return (
     <div className="bg-[#f8fcff] px-4 py-4">
       <div className="mb-3 flex flex-wrap items-center gap-3 text-xs text-slate-500">
+        {/* 桌面版表格已顯示這些欄位，手機版被隱藏，改在展開區補顯示 */}
+        <span className="font-semibold text-[#2a6f97] md:hidden">
+          Wilson 下界 {deck.wilsonLowerBoundPct}%・使用率 {deck.sharePct}%・
+          {deck.games.toLocaleString()} 場（{deck.record}）
+        </span>
         {deck.curatedId && (
           <Link
             to="/decks/$deckId"
@@ -45,18 +50,21 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
 
   return (
     <div className="overflow-x-auto rounded-xl border border-[#bfe3f5] bg-white shadow-sm">
-      <table className="w-full min-w-[640px] text-sm">
+      <table className="w-full text-sm md:min-w-[640px]">
         <thead>
           <tr className="border-b border-[#bfe3f5] text-left text-[#2a6f97]">
-            <th className="px-3 py-2 font-bold">#</th>
-            <th className="px-3 py-2 font-bold">Tier</th>
-            <th className="px-3 py-2 font-bold">牌組</th>
-            <th className="px-3 py-2 text-right font-bold" title="Wilson score 95% 信賴下界">
+            <th className="px-2 py-2 font-bold md:px-3">#</th>
+            <th className="px-2 py-2 font-bold md:px-3">Tier</th>
+            <th className="px-2 py-2 font-bold md:px-3">牌組</th>
+            <th
+              className="hidden px-3 py-2 text-right font-bold md:table-cell"
+              title="Wilson score 95% 信賴下界"
+            >
               Wilson 下界
             </th>
-            <th className="px-3 py-2 text-right font-bold">勝率</th>
-            <th className="px-3 py-2 text-right font-bold">使用率</th>
-            <th className="px-3 py-2 text-right font-bold">場數 (W-L-T)</th>
+            <th className="px-2 py-2 text-right font-bold md:px-3">勝率</th>
+            <th className="hidden px-3 py-2 text-right font-bold md:table-cell">使用率</th>
+            <th className="hidden px-3 py-2 text-right font-bold md:table-cell">場數 (W-L-T)</th>
           </tr>
         </thead>
         <tbody>
@@ -70,11 +78,11 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
                     d.tier === "S" ? "bg-[#f4fbff]" : ""
                   }`}
                 >
-                  <td className="px-3 py-2 font-bold text-[#2a6f97]">{d.rank}</td>
-                  <td className="px-3 py-2">
+                  <td className="px-2 py-2 font-bold text-[#2a6f97] md:px-3">{d.rank}</td>
+                  <td className="px-2 py-2 md:px-3">
                     <TierBadge tier={d.tier} />
                   </td>
-                  <td className="px-3 py-2 font-semibold text-slate-700">
+                  <td className="px-2 py-2 font-semibold text-slate-700 md:px-3">
                     {expandable ? (
                       <button
                         type="button"
@@ -94,12 +102,14 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
                       d.name
                     )}
                   </td>
-                  <td className="px-3 py-2 text-right font-semibold text-slate-700">
+                  <td className="hidden px-3 py-2 text-right font-semibold text-slate-700 md:table-cell">
                     {d.wilsonLowerBoundPct}%
                   </td>
-                  <td className="px-3 py-2 text-right text-slate-600">{d.winratePct}%</td>
-                  <td className="px-3 py-2 text-right text-slate-600">{d.sharePct}%</td>
-                  <td className="px-3 py-2 text-right text-slate-500">
+                  <td className="px-2 py-2 text-right text-slate-600 md:px-3">{d.winratePct}%</td>
+                  <td className="hidden px-3 py-2 text-right text-slate-600 md:table-cell">
+                    {d.sharePct}%
+                  </td>
+                  <td className="hidden px-3 py-2 text-right text-slate-500 md:table-cell">
                     {d.games.toLocaleString()} ({d.record})
                   </td>
                 </tr>

@@ -59,7 +59,7 @@ function DeckDetailPage() {
       </Link>
       <div className="mt-3 flex flex-wrap items-center gap-3">
         <TierBadge tier={deck.tier} />
-        <h1 className="text-3xl font-bold text-[#2a6f97]">{deck.name}</h1>
+        <h1 className="text-2xl font-bold text-[#2a6f97] sm:text-3xl">{deck.name}</h1>
         <span className="flex gap-1">
           {deck.energy.map((e) => (
             <EnergyIcon key={e} type={e} />

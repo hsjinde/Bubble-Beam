@@ -70,7 +70,8 @@ export function Piplup() {
     };
     targetRef.current = { ...posRef.current };
 
-    const onMove = (e: MouseEvent) => {
+    // pointermove 同時涵蓋滑鼠與觸控，手機拖曳手指也能讓波加曼跟隨
+    const onMove = (e: PointerEvent) => {
       targetRef.current = { x: e.clientX + 24, y: e.clientY + 24 };
       if (stateRef.current !== "react") {
         setState("chase");
@@ -80,7 +81,7 @@ export function Piplup() {
       }
       scheduleIdleSleep();
     };
-    window.addEventListener("mousemove", onMove);
+    window.addEventListener("pointermove", onMove);
     scheduleIdleSleep();
 
     const tick = (time: number) => {
@@ -143,7 +144,7 @@ export function Piplup() {
     rafRef.current = requestAnimationFrame(tick);
 
     return () => {
-      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("pointermove", onMove);
       clearTimers();
       if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
     };
@@ -213,17 +214,55 @@ export function Piplup() {
           }}
         >
           {/* Body */}
-          <ellipse cx="60" cy="72" rx="38" ry="42" fill="#5fa8d3" stroke="#2a6f97" strokeWidth="3" />
+          <ellipse
+            cx="60"
+            cy="72"
+            rx="38"
+            ry="42"
+            fill="#5fa8d3"
+            stroke="#2a6f97"
+            strokeWidth="3"
+          />
           {/* Face */}
-          <ellipse cx="60" cy="58" rx="26" ry="24" fill="#ffffff" stroke="#2a6f97" strokeWidth="2.5" />
+          <ellipse
+            cx="60"
+            cy="58"
+            rx="26"
+            ry="24"
+            fill="#ffffff"
+            stroke="#2a6f97"
+            strokeWidth="2.5"
+          />
           {/* Eyes */}
           <circle cx="50" cy="54" r="3.5" fill="#1a1a1a" />
           <circle cx="70" cy="54" r="3.5" fill="#1a1a1a" />
           {/* Beak */}
-          <path d="M54 66 Q60 74 66 66 Q60 70 54 66 Z" fill="#f4a12a" stroke="#c07a10" strokeWidth="1.5" strokeLinejoin="round" />
+          <path
+            d="M54 66 Q60 74 66 66 Q60 70 54 66 Z"
+            fill="#f4a12a"
+            stroke="#c07a10"
+            strokeWidth="1.5"
+            strokeLinejoin="round"
+          />
           {/* Feet */}
-          <ellipse cx="46" cy="112" rx="8" ry="4" fill="#f4a12a" stroke="#c07a10" strokeWidth="1.5" />
-          <ellipse cx="74" cy="112" rx="8" ry="4" fill="#f4a12a" stroke="#c07a10" strokeWidth="1.5" />
+          <ellipse
+            cx="46"
+            cy="112"
+            rx="8"
+            ry="4"
+            fill="#f4a12a"
+            stroke="#c07a10"
+            strokeWidth="1.5"
+          />
+          <ellipse
+            cx="74"
+            cy="112"
+            rx="8"
+            ry="4"
+            fill="#f4a12a"
+            stroke="#c07a10"
+            strokeWidth="1.5"
+          />
         </svg>
       ) : (
         <img
