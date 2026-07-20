@@ -77,6 +77,17 @@ const map = JSON.parse(
   await readFile(new URL("../src/data/limitless-map.json", import.meta.url), "utf8"),
 );
 
+// 排名變化的基準：現有的 meta.json 就是「上一次」的快照，覆寫前先讀進來比對。
+// 沒有既有檔案時（第一次產生）整批不寫 previousRank，前端才不會把 20 列全標成新進榜。
+const metaPath = new URL("../src/data/meta.json", import.meta.url);
+let previous = null;
+try {
+  previous = JSON.parse(await readFile(metaPath, "utf8"));
+} catch {
+  console.log("no existing meta.json to diff against — this run omits rank changes");
+}
+const previousRanks = new Map((previous?.decks ?? []).map((d) => [d.name, d.rank]));
+
 const nameToCuratedId = {};
 for (const [id, entry] of Object.entries(map)) {
   if (entry && typeof entry === "object" && entry.limitlessName) {
@@ -101,6 +112,10 @@ const decks = [];
 for (const [i, d] of eligible.slice(0, TOP_N).entries()) {
   const deck = {
     rank: i + 1,
+    // 上次也在榜上就記其名次，不在榜上記 null（＝新進榜）
+    ...(previousRanks.size
+      ? { previousRank: previousRanks.has(d.name) ? previousRanks.get(d.name) : null }
+      : {}),
     name: d.name,
     tier: d.tier,
     wilsonLowerBoundPct: d.wilsonLowerBoundPct,
@@ -127,9 +142,16 @@ for (const [i, d] of eligible.slice(0, TOP_N).entries()) {
 const out = {
   fetchedAt: new Date().toISOString(),
   source: data.source,
+  ...(previous?.fetchedAt ? { previousFetchedAt: previous.fetchedAt } : {}),
   decks,
 };
-await writeFile(new URL("../src/data/meta.json", import.meta.url), JSON.stringify(out, null, 2));
+await writeFile(metaPath, JSON.stringify(out, null, 2));
+const moved = decks.filter((d) => typeof d.previousRank === "number" && d.previousRank !== d.rank);
 console.log(
   `wrote meta.json: top ${decks.length} of ${eligible.length} eligible (${dropped} archetypes below ${MIN_GAMES} games or same-name duplicates), ${decks.filter((d) => d.curatedId).length} curated links, ${decks.filter((d) => d.cards).length} with sample decklists, fetched ${out.fetchedAt}`,
 );
+if (previousRanks.size) {
+  console.log(
+    `rank changes vs ${previous.fetchedAt}: ${moved.filter((d) => d.previousRank > d.rank).length} up, ${moved.filter((d) => d.previousRank < d.rank).length} down, ${decks.filter((d) => d.previousRank === d.rank).length} unchanged, ${decks.filter((d) => d.previousRank === null).length} new`,
+  );
+}

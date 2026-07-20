@@ -1,9 +1,11 @@
 {
   "fetchedAt": "2026-07-20T17:12:51.933Z",
   "source": "https://play.limitlesstcg.com/decks?game=pocket",
+  "previousFetchedAt": "2026-07-19T16:50:01.536Z",
   "decks": [
     {
       "rank": 1,
+      "previousRank": 1,
       "name": "Miraidon ex Magnezone",
       "tier": "S",
       "wilsonLowerBoundPct": 53.25,
@@ -116,6 +118,7 @@
     },
     {
       "rank": 2,
+      "previousRank": 2,
       "name": "Suicune ex Baxcalibur",
       "tier": "S",
       "wilsonLowerBoundPct": 52.45,
@@ -214,6 +217,7 @@
     },
     {
       "rank": 3,
+      "previousRank": 3,
       "name": "Mega Sceptile ex Greninja",
       "tier": "S",
       "wilsonLowerBoundPct": 52.08,
@@ -333,6 +337,7 @@
     },
     {
       "rank": 4,
+      "previousRank": 8,
       "name": "Zoroark ex Mega Absol ex",
       "tier": "S",
       "wilsonLowerBoundPct": 52.02,
@@ -451,6 +456,7 @@
     },
     {
       "rank": 5,
+      "previousRank": 4,
       "name": "Mega Blaziken ex Greninja",
       "tier": "A",
       "wilsonLowerBoundPct": 52,
@@ -569,6 +575,7 @@
     },
     {
       "rank": 6,
+      "previousRank": 10,
       "name": "Greninja Mega Absol ex",
       "tier": "A",
       "wilsonLowerBoundPct": 51.28,
@@ -673,6 +680,7 @@
     },
     {
       "rank": 7,
+      "previousRank": 5,
       "name": "Indeedee ex Giratina ex",
       "tier": "A",
       "wilsonLowerBoundPct": 51.24,
@@ -770,6 +778,7 @@
     },
     {
       "rank": 8,
+      "previousRank": 9,
       "name": "Milotic ex Eevee ex",
       "tier": "A",
       "wilsonLowerBoundPct": 51.07,
@@ -881,6 +890,7 @@
     },
     {
       "rank": 9,
+      "previousRank": 7,
       "name": "Mega Altaria ex Espeon",
       "tier": "A",
       "wilsonLowerBoundPct": 51.01,
@@ -985,6 +995,7 @@
     },
     {
       "rank": 10,
+      "previousRank": 6,
       "name": "Mega Lucario ex Lucario",
       "tier": "A",
       "wilsonLowerBoundPct": 50.56,
@@ -1118,6 +1129,7 @@
     },
     {
       "rank": 11,
+      "previousRank": 11,
       "name": "Giratina ex Darkrai ex",
       "tier": "B",
       "wilsonLowerBoundPct": 49.31,
@@ -1236,6 +1248,7 @@
     },
     {
       "rank": 12,
+      "previousRank": 13,
       "name": "Mega Manectric ex Zeraora",
       "tier": "B",
       "wilsonLowerBoundPct": 48.7,
@@ -1340,6 +1353,7 @@
     },
     {
       "rank": 13,
+      "previousRank": 12,
       "name": "Mega Altaria ex Chingling",
       "tier": "B",
       "wilsonLowerBoundPct": 48.46,
@@ -1465,6 +1479,7 @@
     },
     {
       "rank": 14,
+      "previousRank": null,
       "name": "Mega Lucario ex",
       "tier": "B",
       "wilsonLowerBoundPct": 48.36,
@@ -1597,6 +1612,7 @@
     },
     {
       "rank": 15,
+      "previousRank": 19,
       "name": "Mega Blaziken ex Castform Sunny Form",
       "tier": "C",
       "wilsonLowerBoundPct": 47.81,
@@ -1694,6 +1710,7 @@
     },
     {
       "rank": 16,
+      "previousRank": 17,
       "name": "Magnezone Miraidon ex",
       "tier": "C",
       "wilsonLowerBoundPct": 47.78,
@@ -1805,6 +1822,7 @@
     },
     {
       "rank": 17,
+      "previousRank": 16,
       "name": "Magnezone ex Magnezone",
       "tier": "C",
       "wilsonLowerBoundPct": 47.77,
@@ -1930,6 +1948,7 @@
     },
     {
       "rank": 18,
+      "previousRank": 20,
       "name": "Milotic ex Chien-Pao ex",
       "tier": "C",
       "wilsonLowerBoundPct": 47.53,
@@ -2041,6 +2060,7 @@
     },
     {
       "rank": 19,
+      "previousRank": null,
       "name": "Mega Charizard Y ex Entei ex",
       "tier": "C",
       "wilsonLowerBoundPct": 47.49,
@@ -2152,6 +2172,7 @@
     },
     {
       "rank": 20,
+      "previousRank": null,
       "name": "Butterfree Mega Sceptile ex",
       "tier": "C",
       "wilsonLowerBoundPct": 47.19,

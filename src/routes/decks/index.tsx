@@ -28,7 +28,10 @@ function DecksPage() {
       <p className="mt-2 text-slate-600">
         依 Limitless 賽事數據以 Wilson score 95% 下界排序的 Top {meta.decks.length}
         ：小樣本的極端勝率會被往下修正，名次反映「有統計信心的最低實力」。帶連結的牌組有完整攻略。資料日期：
-        {meta.fetchedAt.slice(0, 10)}。
+        {meta.fetchedAt.slice(0, 10)}
+        {meta.previousFetchedAt
+          ? `；「變化」欄與 ${meta.previousFetchedAt.slice(0, 10)} 的排行相比。`
+          : "。"}
       </p>
 
       <div className="mt-6">

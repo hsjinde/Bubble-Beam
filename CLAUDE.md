@@ -66,6 +66,8 @@ TanStack Start 檔案式路由。`src/routes/README.md` 有完整慣例表——
 
 **生成檔不要手改**：`cards.json`、`meta.json`、`routeTree.gen.ts`。
 
+**排名變化（`previousRank`）的基準是「上一份 `meta.json`」**：`update-meta.mjs` 覆寫前會先把現有的 `meta.json` 讀進來當比較對象，牌組名對得上就記舊名次，對不上記 `null`（＝新進榜），沒有舊檔則整批不寫這個欄位、前端留白。**別為了「重跑一次確認」而連續跑兩次**——第二次會拿第一次的產出當基準，把真正的升降全洗成持平，而且救不回來（要復原只能從 git 取回上一版 `meta.json`）。
+
 ### 卡片 id 慣例
 
 `{SET}-{number}`，**不補零**（`B3b-41`、`PROMO-A-7`）。Limitless 用 `P-A`／`P-B` 表示 promo，本站用 `PROMO-A`／`PROMO-B`——轉換在 `update-meta.mjs` 的 `toCardId()`。卡圖與卡名來自 flibustier 的社群資料庫（TCGdex 進度落後，缺 B3 之後的 set，已棄用）。`getCard()` 查不到或圖載入失敗時，`CardImage` 會退成文字 placeholder，不要拿掉這層保護——排行榜的牌表來自上游，隨時可能出現本地索引沒有的新卡。

@@ -25,6 +25,12 @@ export interface MetaDeck {
   curatedId?: string; // 有策展攻略時對應 decks.ts 的 id
   cards?: MetaDeckCard[]; // 代表牌表（該牌組最近的最佳賽績）
   listSource?: string; // 牌表來源（Limitless 選手牌表頁網址）
+  /**
+   * 上一次抓取時的名次，用來算排名變化。三種值意義不同，不要混為一談：
+   * 數字＝上次也在榜上；null＝上次不在榜上（新進榜）；欄位不存在＝那次抓取沒有可比對的
+   * 前一份快照（例如第一次產生 meta.json），此時前端不顯示變化而不是謊報新進榜。
+   */
+  previousRank?: number | null;
 }
 
 export type EnergyType =

@@ -2,6 +2,7 @@ import { Fragment, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import type { MetaDeck } from "@/data/types";
 import { Decklist } from "./Decklist";
+import { RankChangeBadge } from "./RankChangeBadge";
 import { TierBadge } from "./TierBadge";
 
 function ExpandedList({ deck }: { deck: MetaDeck }) {
@@ -54,6 +55,12 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
         <thead>
           <tr className="border-b border-[#bfe3f5] text-left text-[#2a6f97]">
             <th className="px-2 py-2 font-bold md:px-3">#</th>
+            <th
+              className="px-1 py-2 font-bold whitespace-nowrap md:px-2"
+              title="與上次更新相比的名次變化"
+            >
+              變化
+            </th>
             <th className="px-2 py-2 font-bold md:px-3">Tier</th>
             <th className="px-2 py-2 font-bold md:px-3">牌組</th>
             <th
@@ -79,6 +86,9 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
                   }`}
                 >
                   <td className="px-2 py-2 font-bold text-[#2a6f97] md:px-3">{d.rank}</td>
+                  <td className="px-1 py-2 whitespace-nowrap md:px-2">
+                    <RankChangeBadge deck={d} />
+                  </td>
                   <td className="px-2 py-2 md:px-3">
                     <TierBadge tier={d.tier} />
                   </td>
@@ -115,7 +125,7 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
                 </tr>
                 {isExpanded && (
                   <tr className="border-b border-[#eef7fc] last:border-0">
-                    <td colSpan={7} className="p-0">
+                    <td colSpan={8} className="p-0">
                       <ExpandedList deck={d} />
                     </td>
                   </tr>
