@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## 跨 Agent 共用規則
+
+本專案由 Claude Code 與 Antigravity CLI（`agy`）共同協作。專案根目錄的 `core_rules.md` 是雙方共用的協同規則檔，與本檔案具**同等指令權限**——開始任何工作前，兩份檔案都要讀，衝突時以較新、較明確的規則為準。`core_rules.md` 可能由任一 agent 更新，用來記錄雙方都要遵守的協同事項（例如誰負責哪塊、目前分工狀態）。
+
 ## 專案概述
 
 一個非官方粉絲站，由兩塊性質完全不同的內容組成，共用同一個 TanStack Start app：

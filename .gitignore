@@ -27,6 +27,13 @@ dist-ssr
 *.pem
 *.key
 
+# Agent local config / logs / scratch (Claude Code, Antigravity CLI, etc.)
+.claude/settings.local.json
+.agy/
+.antigravity/
+agy.log
+*.agy.log
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
