@@ -1,0 +1,497 @@
+{
+  "A1-87": {
+    "id": "A1-87",
+    "nameEN": "Froakie",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/87.webp"
+  },
+  "A1-89": {
+    "id": "A1-89",
+    "nameEN": "Greninja",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/89.webp"
+  },
+  "A1-98": {
+    "id": "A1-98",
+    "nameEN": "Magneton",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/98.webp"
+  },
+  "A1-154": {
+    "id": "A1-154",
+    "nameEN": "Hitmonlee",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/154.webp"
+  },
+  "A1-223": {
+    "id": "A1-223",
+    "nameEN": "Giovanni",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/223.webp"
+  },
+  "A1-225": {
+    "id": "A1-225",
+    "nameEN": "Sabrina",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/225.webp"
+  },
+  "A1a-19": {
+    "id": "A1a-19",
+    "nameEN": "Vaporeon",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1a/19.webp"
+  },
+  "A2-91": {
+    "id": "A2-91",
+    "nameEN": "Riolu",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/91.webp"
+  },
+  "A2-92": {
+    "id": "A2-92",
+    "nameEN": "Lucario",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/92.webp"
+  },
+  "A2-110": {
+    "id": "A2-110",
+    "nameEN": "Darkrai ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/110.webp"
+  },
+  "A2-147": {
+    "id": "A2-147",
+    "nameEN": "Giant Cape",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/147.webp"
+  },
+  "A2-148": {
+    "id": "A2-148",
+    "nameEN": "Rocky Helmet",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/148.webp"
+  },
+  "A2-150": {
+    "id": "A2-150",
+    "nameEN": "Cyrus",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/150.webp"
+  },
+  "A2a-72": {
+    "id": "A2a-72",
+    "nameEN": "Irida",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2a/72.webp"
+  },
+  "A2b-8": {
+    "id": "A2b-8",
+    "nameEN": "Charmander",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2b/8.webp"
+  },
+  "A2b-35": {
+    "id": "A2b-35",
+    "nameEN": "Giratina ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2b/35.webp"
+  },
+  "A2b-42": {
+    "id": "A2b-42",
+    "nameEN": "Riolu",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2b/42.webp"
+  },
+  "A2b-70": {
+    "id": "A2b-70",
+    "nameEN": "Pokémon Center Lady",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2b/70.webp"
+  },
+  "A2b-71": {
+    "id": "A2b-71",
+    "nameEN": "Red",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2b/71.webp"
+  },
+  "A3-66": {
+    "id": "A3-66",
+    "nameEN": "Oricorio",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/66.webp"
+  },
+  "A3-84": {
+    "id": "A3-84",
+    "nameEN": "Tapu Lele",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/84.webp"
+  },
+  "A3-144": {
+    "id": "A3-144",
+    "nameEN": "Rare Candy",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/144.webp"
+  },
+  "A3-147": {
+    "id": "A3-147",
+    "nameEN": "Leaf Cape",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/147.webp"
+  },
+  "A3a-7": {
+    "id": "A3a-7",
+    "nameEN": "Pheromosa",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3a/7.webp"
+  },
+  "A3a-21": {
+    "id": "A3a-21",
+    "nameEN": "Zeraora",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3a/21.webp"
+  },
+  "A3b-56": {
+    "id": "A3b-56",
+    "nameEN": "Eevee ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3b/56.webp"
+  },
+  "A4-134": {
+    "id": "A4-134",
+    "nameEN": "Eevee",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/134.webp"
+  },
+  "A4a-10": {
+    "id": "A4a-10",
+    "nameEN": "Entei ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4a/10.webp"
+  },
+  "A4a-20": {
+    "id": "A4a-20",
+    "nameEN": "Suicune ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4a/20.webp"
+  },
+  "A4a-21": {
+    "id": "A4a-21",
+    "nameEN": "Feebas",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4a/21.webp"
+  },
+  "A4a-59": {
+    "id": "A4a-59",
+    "nameEN": "Igglybuff",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4a/59.webp"
+  },
+  "A4a-67": {
+    "id": "A4a-67",
+    "nameEN": "Inflatable Boat",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4a/67.webp"
+  },
+  "B1-33": {
+    "id": "B1-33",
+    "nameEN": "Torchic",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/33.webp"
+  },
+  "B1-34": {
+    "id": "B1-34",
+    "nameEN": "Combusken",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/34.webp"
+  },
+  "B1-36": {
+    "id": "B1-36",
+    "nameEN": "Mega Blaziken ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/36.webp"
+  },
+  "B1-44": {
+    "id": "B1-44",
+    "nameEN": "Heatmor",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/44.webp"
+  },
+  "B1-102": {
+    "id": "B1-102",
+    "nameEN": "Mega Altaria ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/102.webp"
+  },
+  "B1-106": {
+    "id": "B1-106",
+    "nameEN": "Jirachi",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/106.webp"
+  },
+  "B1-109": {
+    "id": "B1-109",
+    "nameEN": "Chingling",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/109.webp"
+  },
+  "B1-120": {
+    "id": "B1-120",
+    "nameEN": "Klefki",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/120.webp"
+  },
+  "B1-121": {
+    "id": "B1-121",
+    "nameEN": "Indeedee ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/121.webp"
+  },
+  "B1-151": {
+    "id": "B1-151",
+    "nameEN": "Mega Absol ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/151.webp"
+  },
+  "B1-184": {
+    "id": "B1-184",
+    "nameEN": "Eevee",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/184.webp"
+  },
+  "B1-196": {
+    "id": "B1-196",
+    "nameEN": "Swablu",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/196.webp"
+  },
+  "B1-217": {
+    "id": "B1-217",
+    "nameEN": "Flame Patch",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/217.webp"
+  },
+  "B1-223": {
+    "id": "B1-223",
+    "nameEN": "May",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/223.webp"
+  },
+  "B1-225": {
+    "id": "B1-225",
+    "nameEN": "Copycat",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/225.webp"
+  },
+  "B1-226": {
+    "id": "B1-226",
+    "nameEN": "Lisia",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/226.webp"
+  },
+  "B1a-14": {
+    "id": "B1a-14",
+    "nameEN": "Mega Charizard Y ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1a/14.webp"
+  },
+  "B1a-24": {
+    "id": "B1a-24",
+    "nameEN": "Magnemite",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1a/24.webp"
+  },
+  "B1a-26": {
+    "id": "B1a-26",
+    "nameEN": "Magnezone",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1a/26.webp"
+  },
+  "B1a-67": {
+    "id": "B1a-67",
+    "nameEN": "Quick-Grow Extract",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1a/67.webp"
+  },
+  "B1a-68": {
+    "id": "B1a-68",
+    "nameEN": "Clemont",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1a/68.webp"
+  },
+  "B2-145": {
+    "id": "B2-145",
+    "nameEN": "Lucky Ice Pop",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/145.webp"
+  },
+  "B2-147": {
+    "id": "B2-147",
+    "nameEN": "Protective Poncho",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/147.webp"
+  },
+  "B2-153": {
+    "id": "B2-153",
+    "nameEN": "Training Area",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/153.webp"
+  },
+  "B2-154": {
+    "id": "B2-154",
+    "nameEN": "Starting Plains",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/154.webp"
+  },
+  "B2-155": {
+    "id": "B2-155",
+    "nameEN": "Peculiar Plaza",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/155.webp"
+  },
+  "B2a-34": {
+    "id": "B2a-34",
+    "nameEN": "Frigibax",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2a/34.webp"
+  },
+  "B2a-36": {
+    "id": "B2a-36",
+    "nameEN": "Baxcalibur",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2a/36.webp"
+  },
+  "B2a-37": {
+    "id": "B2a-37",
+    "nameEN": "Chien-Pao ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2a/37.webp"
+  },
+  "B2b-8": {
+    "id": "B2b-8",
+    "nameEN": "Charmeleon",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2b/8.webp"
+  },
+  "B2b-27": {
+    "id": "B2b-27",
+    "nameEN": "Mega Manectric ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2b/27.webp"
+  },
+  "B2b-40": {
+    "id": "B2b-40",
+    "nameEN": "Darkrai",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2b/40.webp"
+  },
+  "B2b-69": {
+    "id": "B2b-69",
+    "nameEN": "Hiking Trail",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2b/69.webp"
+  },
+  "B3-5": {
+    "id": "B3-5",
+    "nameEN": "Treecko",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/5.webp"
+  },
+  "B3-6": {
+    "id": "B3-6",
+    "nameEN": "Grovyle",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/6.webp"
+  },
+  "B3-8": {
+    "id": "B3-8",
+    "nameEN": "Mega Sceptile ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/8.webp"
+  },
+  "B3-24": {
+    "id": "B3-24",
+    "nameEN": "Castform Sunny Form",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/24.webp"
+  },
+  "B3-54": {
+    "id": "B3-54",
+    "nameEN": "Magnezone ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/54.webp"
+  },
+  "B3-79": {
+    "id": "B3-79",
+    "nameEN": "Riolu",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/79.webp"
+  },
+  "B3-81": {
+    "id": "B3-81",
+    "nameEN": "Mega Lucario ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/81.webp"
+  },
+  "B3-105": {
+    "id": "B3-105",
+    "nameEN": "Zorua",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/105.webp"
+  },
+  "B3-106": {
+    "id": "B3-106",
+    "nameEN": "Zoroark ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/106.webp"
+  },
+  "B3-115": {
+    "id": "B3-115",
+    "nameEN": "Bombirdier",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/115.webp"
+  },
+  "B3-147": {
+    "id": "B3-147",
+    "nameEN": "Field Blower",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/147.webp"
+  },
+  "B3-148": {
+    "id": "B3-148",
+    "nameEN": "Lucky Egg",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/148.webp"
+  },
+  "B3-149": {
+    "id": "B3-149",
+    "nameEN": "Korrina",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/149.webp"
+  },
+  "B3-153": {
+    "id": "B3-153",
+    "nameEN": "Fragrant Forest",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/153.webp"
+  },
+  "B3-154": {
+    "id": "B3-154",
+    "nameEN": "Arena of Antiquity",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/154.webp"
+  },
+  "B3a-19": {
+    "id": "B3a-19",
+    "nameEN": "Miraidon ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/19.webp"
+  },
+  "B3a-20": {
+    "id": "B3a-20",
+    "nameEN": "Espeon",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/20.webp"
+  },
+  "B3a-47": {
+    "id": "B3a-47",
+    "nameEN": "Roaring Moon",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/47.webp"
+  },
+  "B3a-71": {
+    "id": "B3a-71",
+    "nameEN": "Juliana",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/71.webp"
+  },
+  "B3a-73": {
+    "id": "B3a-73",
+    "nameEN": "Professor Turo",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/73.webp"
+  },
+  "B3b-1": {
+    "id": "B3b-1",
+    "nameEN": "Caterpie",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/1.webp"
+  },
+  "B3b-2": {
+    "id": "B3b-2",
+    "nameEN": "Metapod",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/2.webp"
+  },
+  "B3b-3": {
+    "id": "B3b-3",
+    "nameEN": "Butterfree",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/3.webp"
+  },
+  "B3b-15": {
+    "id": "B3b-15",
+    "nameEN": "Milotic ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/15.webp"
+  },
+  "B3b-41": {
+    "id": "B3b-41",
+    "nameEN": "Mega Sableye ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/41.webp"
+  },
+  "B3b-61": {
+    "id": "B3b-61",
+    "nameEN": "Furfrou",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/61.webp"
+  },
+  "B3b-64": {
+    "id": "B3b-64",
+    "nameEN": "Small Balloon",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/64.webp"
+  },
+  "B3b-65": {
+    "id": "B3b-65",
+    "nameEN": "Elegant Cape",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/65.webp"
+  },
+  "B3b-68": {
+    "id": "B3b-68",
+    "nameEN": "Wallace",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/68.webp"
+  },
+  "PROMO-A-2": {
+    "id": "PROMO-A-2",
+    "nameEN": "X Speed",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-A/2.webp"
+  },
+  "PROMO-A-5": {
+    "id": "PROMO-A-5",
+    "nameEN": "Poké Ball",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-A/5.webp"
+  },
+  "PROMO-A-7": {
+    "id": "PROMO-A-7",
+    "nameEN": "Professor’s Research",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-A/7.webp"
+  },
+  "PROMO-B-43": {
+    "id": "PROMO-B-43",
+    "nameEN": "Electrike",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-B/43.webp"
+  },
+  "PROMO-B-51": {
+    "id": "PROMO-B-51",
+    "nameEN": "Zygarde",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-B/51.webp"
+  }
+}

@@ -37,7 +37,14 @@ node scripts/update-meta.mjs <scratchpad>/tier-list.json   # → src/data/meta.j
 
 # 出新擴充包時重建卡片索引（先在 fetch-cards.mjs 的 SETS 加上新 set 代號）
 node scripts/fetch-cards.mjs                               # → src/data/cards.json
+
+# 改完 meta.json 或 decks.ts 後重算「本站實際引用的卡片」子集
+node scripts/subset-cards.mjs                              # → src/data/cards.used.json
+node scripts/subset-cards.mjs --check                      # 只檢查是否過期（不寫檔）
 ```
+
+`subset-cards.mjs` 已掛在 `package.json` 的 `prebuild`，`npm run build` 會自動重跑，
+所以正式建置產物一定是最新的。手動在 dev 下改資料時才需要自己跑一次。
 
 ## 架構
 
@@ -60,11 +67,16 @@ TanStack Start 檔案式路由。`src/routes/README.md` 有完整慣例表——
 | `src/data/decks.ts` | 人工策展牌組：繁中攻略、對戰思路、tier S–C | 手寫 |
 | `src/data/meta.json` | Limitless Top 20 即時排行：Wilson 下界、勝率、使用率、代表牌表；tier 可到 D | `scripts/update-meta.mjs` 生成 |
 | `src/data/limitless-map.json` | 兩者的橋樑：策展 id ↔ Limitless 英文牌組名 | 手寫 |
-| `src/data/cards.json` | 卡片索引 `id → {nameEN, imageUrl}` | `scripts/fetch-cards.mjs` 生成 |
+| `src/data/cards.json` | 完整卡片索引 `id → {nameEN, imageUrl}`，3520 張。**只給腳本查表用，前端不要 import** | `scripts/fetch-cards.mjs` 生成 |
+| `src/data/cards.used.json` | 上面的子集，只含本站實際引用的約 100 張。`cards.ts` import 的是這個 | `scripts/subset-cards.mjs` 生成 |
 
 `update-meta.mjs` 用 `limitless-map.json` 的 `limitlessName` 反查，替有攻略的排行列打上 `curatedId`，前端才知道哪一列可以連到詳情頁。新增策展牌組時，`decks.ts` 和 `limitless-map.json` 要一起改，否則該牌組在排行榜上不會出現連結。
 
-**生成檔不要手改**：`cards.json`、`meta.json`、`routeTree.gen.ts`。
+**生成檔不要手改**：`cards.json`、`cards.used.json`、`meta.json`、`routeTree.gen.ts`。
+
+**前端不要 `import cards.json`**：完整索引約 580 KB，靜態 import 會整包進 client bundle
+（實測曾是 562.7 KB，比整個 React + router 還大），而全站只用到約 100 張。
+要查卡一律走 `getCard()`（讀的是 `cards.used.json`，約 19 KB）。
 
 **排名變化（`previousRank`）的基準是「上一份 `meta.json`」**：`update-meta.mjs` 覆寫前會先把現有的 `meta.json` 讀進來當比較對象，牌組名對得上就記舊名次，對不上記 `null`（＝新進榜），沒有舊檔則整批不寫這個欄位、前端留白。**別為了「重跑一次確認」而連續跑兩次**——第二次會拿第一次的產出當基準，把真正的升降全洗成持平，而且救不回來（要復原只能從 git 取回上一版 `meta.json`）。
 
