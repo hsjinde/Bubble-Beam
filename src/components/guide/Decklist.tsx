@@ -10,7 +10,7 @@ export function Decklist({ cards }: { cards: DeckCardEntry[] }) {
         return (
           <figure key={c.id} className="relative">
             <CardImage cardId={c.id} />
-            <span className="absolute -right-1 -top-1 rounded-full bg-[#2a6f97] px-2 py-0.5 text-xs font-bold text-white shadow">
+            <span className="absolute -right-1 -top-1 rounded-full bg-guide-ink px-2 py-0.5 text-xs font-bold text-white shadow">
               ×{c.count}
             </span>
             <figcaption className="mt-1 truncate text-center text-xs text-slate-600">

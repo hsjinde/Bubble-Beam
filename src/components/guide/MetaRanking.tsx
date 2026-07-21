@@ -8,10 +8,10 @@ import { TierBadge } from "./TierBadge";
 function ExpandedList({ deck }: { deck: MetaDeck }) {
   if (!deck.cards) return null;
   return (
-    <div id={`deck-cards-${deck.rank}`} className="bg-[#f8fcff] px-4 py-4">
+    <div id={`deck-cards-${deck.rank}`} className="bg-guide-bg-panel px-4 py-4">
       <div className="mb-3 flex flex-wrap items-center gap-3 text-xs text-slate-500">
         {/* 桌面版表格已顯示這些欄位，手機版被隱藏，改在展開區補顯示 */}
-        <span className="font-semibold text-[#2a6f97] md:hidden">
+        <span className="font-semibold text-guide-ink md:hidden">
           Wilson 下界 {deck.wilsonLowerBoundPct}%・使用率 {deck.sharePct}%・
           {deck.games.toLocaleString()} 場（{deck.record}）
         </span>
@@ -20,7 +20,7 @@ function ExpandedList({ deck }: { deck: MetaDeck }) {
           <Link
             to="/decks/$deckId"
             params={{ deckId: deck.curatedId }}
-            className="inline-flex min-h-11 items-center rounded-full bg-[#2a6f97] px-4 text-xs font-semibold text-white shadow-sm transition hover:bg-[#1d5273]"
+            className="inline-flex min-h-11 items-center rounded-full bg-guide-ink px-4 text-xs font-semibold text-white shadow-sm transition hover:bg-guide-ink-deep"
           >
             查看完整攻略 →
           </Link>
@@ -34,7 +34,7 @@ function ExpandedList({ deck }: { deck: MetaDeck }) {
                 href={deck.listSource}
                 target="_blank"
                 rel="noreferrer"
-                className="underline hover:text-[#2a6f97]"
+                className="underline hover:text-guide-ink"
               >
                 牌表來源
               </a>
@@ -51,10 +51,10 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
   const [expanded, setExpanded] = useState<number | null>(null);
 
   return (
-    <div className="overflow-x-auto rounded-xl border border-[#bfe3f5] bg-white shadow-sm">
+    <div className="overflow-x-auto rounded-xl border border-guide-tint bg-white shadow-sm">
       <table className="w-full text-sm md:min-w-[640px]">
         <thead>
-          <tr className="border-b border-[#bfe3f5] text-left text-[#2a6f97]">
+          <tr className="border-b border-guide-tint text-left text-guide-ink">
             <th
               scope="col"
               className="px-2 py-2 font-bold whitespace-nowrap md:px-3"
@@ -93,13 +93,13 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
             return (
               <Fragment key={d.rank}>
                 <tr
-                  className={`border-b border-[#eef7fc] last:border-0 ${
-                    d.tier === "S" ? "bg-[#f4fbff]" : ""
+                  className={`border-b border-guide-bg last:border-0 ${
+                    d.tier === "S" ? "bg-guide-bg-highlight" : ""
                   }`}
                 >
                   <td className="px-2 py-2 whitespace-nowrap md:px-3">
                     <span className="inline-flex items-center gap-1.5">
-                      <span className="font-bold text-[#2a6f97]">{d.rank}</span>
+                      <span className="font-bold text-guide-ink">{d.rank}</span>
                       <RankChangeBadge deck={d} />
                     </span>
                   </td>
@@ -114,15 +114,15 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
                         aria-expanded={isExpanded}
                         aria-controls={`deck-cards-${d.rank}`}
                         // min-h-11：手機上這是本頁主要互動，原本只有 20px 高
-                        className="flex min-h-11 w-full cursor-pointer flex-wrap items-center gap-x-1.5 gap-y-1 text-left text-slate-700 hover:text-[#2a6f97]"
+                        className="flex min-h-11 w-full cursor-pointer flex-wrap items-center gap-x-1.5 gap-y-1 text-left text-slate-700 hover:text-guide-ink"
                       >
                         <span>{d.name}</span>
                         {d.curatedId && (
-                          <span className="rounded-full bg-[#bfe3f5] px-2 py-0.5 text-xs font-semibold text-[#1d5273]">
+                          <span className="rounded-full bg-guide-tint px-2 py-0.5 text-xs font-semibold text-guide-ink-deep">
                             攻略
                           </span>
                         )}
-                        <span aria-hidden="true" className="text-xs text-[#2a6f97]">
+                        <span aria-hidden="true" className="text-xs text-guide-ink">
                           {isExpanded ? "▲" : "▼"}
                         </span>
                       </button>
@@ -142,7 +142,7 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
                   </td>
                 </tr>
                 {isExpanded && (
-                  <tr className="border-b border-[#eef7fc] last:border-0">
+                  <tr className="border-b border-guide-bg last:border-0">
                     <td colSpan={7} className="p-0">
                       <ExpandedList deck={d} />
                     </td>

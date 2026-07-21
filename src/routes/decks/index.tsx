@@ -24,7 +24,7 @@ function DecksPage() {
 
   return (
     <GuideLayout>
-      <h1 className="text-2xl font-bold text-[#2a6f97] sm:text-3xl">TCG Pocket 環境排行榜</h1>
+      <h1 className="text-2xl font-bold text-guide-ink sm:text-3xl">TCG Pocket 環境排行榜</h1>
       <p className="mt-2 text-slate-600">
         依 Limitless 賽事數據以 Wilson score 95% 下界排序的 Top {meta.decks.length}
         ：小樣本的極端勝率會被往下修正，名次反映「有統計信心的最低實力」。帶連結的牌組有完整攻略。資料日期：
@@ -39,7 +39,7 @@ function DecksPage() {
       </div>
 
       <section className="mt-10">
-        <h2 className="text-xl font-bold text-[#2a6f97]">精選牌組攻略</h2>
+        <h2 className="text-xl font-bold text-guide-ink">精選牌組攻略</h2>
         <p className="mt-1 text-sm text-slate-600">人工整理的完整牌表、打法與對戰思路。</p>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           {curated.map((deck) => (

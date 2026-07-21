@@ -13,10 +13,10 @@ export function GuideEntry() {
     >
       {/* 膠帶 */}
       <span
-        className="absolute left-1/2 top-0 h-4 w-16 -translate-x-1/2 -translate-y-1/2 -rotate-[4deg] rounded-[2px] bg-[#bfe3f5]/70 sm:h-5 sm:w-20"
+        className="absolute left-1/2 top-0 h-4 w-16 -translate-x-1/2 -translate-y-1/2 -rotate-[4deg] rounded-[2px] bg-guide-tint/70 sm:h-5 sm:w-20"
         style={{ boxShadow: "0 1px 3px rgba(42,111,151,0.2)" }}
       />
-      <span className="text-lg font-bold text-[#2a6f97] sm:text-2xl">牌組攻略</span>
+      <span className="text-lg font-bold text-guide-ink sm:text-2xl">牌組攻略</span>
       <span
         className="h-px w-full"
         style={{
@@ -24,12 +24,12 @@ export function GuideEntry() {
             "repeating-linear-gradient(to right, rgba(95,168,211,0.6) 0 6px, transparent 6px 12px)",
         }}
       />
-      <span className="text-[0.7rem] leading-snug text-[#2a6f97]/75 sm:text-sm">
+      <span className="text-[0.7rem] leading-snug text-guide-ink/75 sm:text-sm">
         Top 20 即時排行
         <br />
         繁中牌組攻略
       </span>
-      <span className="self-end text-sm text-[#5fa8d3] transition-transform duration-300 group-hover:translate-x-1 sm:text-base">
+      <span className="self-end text-sm text-guide-accent transition-transform duration-300 group-hover:translate-x-1 sm:text-base">
         →
       </span>
     </Link>

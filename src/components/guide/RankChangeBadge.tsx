@@ -34,7 +34,7 @@ export function RankChangeBadge({ deck }: { deck: MetaDeck }) {
   if (state === "new") {
     return (
       <span
-        className="inline-flex items-center rounded-full bg-[#2a6f97] px-1.5 py-0.5 text-[10px] font-bold text-white shadow-sm"
+        className="inline-flex items-center rounded-full bg-guide-ink px-1.5 py-0.5 text-[10px] font-bold text-white shadow-sm"
         title="新進榜：上次更新時不在榜上"
       >
         新

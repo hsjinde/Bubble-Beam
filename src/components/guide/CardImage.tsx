@@ -3,7 +3,7 @@ import { getCard } from "@/data/cards";
 
 function Placeholder({ label }: { label: string }) {
   return (
-    <div className="flex aspect-[63/88] w-full items-center justify-center rounded-lg border-2 border-[#5fa8d3] bg-gradient-to-br from-[#bfe3f5] to-[#5fa8d3] p-1 text-center text-xs font-semibold text-[#2a6f97]">
+    <div className="flex aspect-[63/88] w-full items-center justify-center rounded-lg border-2 border-guide-accent bg-gradient-to-br from-guide-tint to-guide-accent p-1 text-center text-xs font-semibold text-guide-ink">
       {label}
     </div>
   );

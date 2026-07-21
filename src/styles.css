@@ -2,20 +2,23 @@
 @source "../src";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 /*
  * Design system definition.
  *
  * The @theme inline block maps CSS custom properties to Tailwind utility
  * classes (e.g. --color-primary -> bg-primary, text-primary).
  *
- * The :root and .dark blocks define the actual color values using oklch.
- * All colors MUST use oklch format.
+ * :root defines the actual color values using oklch. All colors MUST use
+ * oklch format. There is no .dark variant: nothing in this app ever applies
+ * a .dark class, so no @custom-variant dark or .dark block exists. If dark
+ * mode is ever added, reintroduce both alongside a real toggle.
  *
  * To add a new semantic color:
- * 1. Add the variable to :root (light value) and .dark (dark value)
+ * 1. Add the variable to :root
  * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ *
+ * The /decks guide palette (--guide-*, bottom of :root) is a separate,
+ * intentionally hex-based system — see the comment at its definition.
  */
 
 @theme inline {
@@ -59,6 +62,15 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* /decks 攻略頁色板（見 :root 區塊註解）*/
+  --color-guide-ink: var(--guide-ink);
+  --color-guide-ink-deep: var(--guide-ink-deep);
+  --color-guide-accent: var(--guide-accent);
+  --color-guide-tint: var(--guide-tint);
+  --color-guide-bg: var(--guide-bg);
+  --color-guide-bg-panel: var(--guide-bg-panel);
+  --color-guide-bg-highlight: var(--guide-bg-highlight);
 }
 
 :root {
@@ -95,41 +107,20 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
-}
 
-.dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
+  /*
+   * /decks 攻略頁色板：刻意維持原始十六進位、不轉 oklch。這是既有品牌配色
+   * （見 CLAUDE.md）的具名化，不是新配色決定，色值必須逐位元組對應。攻略頁
+   * 不套用上面這組 shadcn/oklch design system，兩者刻意分開。這組沒有 .dark
+   * 對應值——攻略頁沒有深色模式。
+   */
+  --guide-ink: #2a6f97;
+  --guide-ink-deep: #1d5273;
+  --guide-accent: #5fa8d3;
+  --guide-tint: #bfe3f5;
+  --guide-bg: #eef7fc;
+  --guide-bg-panel: #f8fcff;
+  --guide-bg-highlight: #f4fbff;
 }
 
 @layer base {
@@ -148,7 +139,7 @@
    * 用 :where() 讓權重維持 0，個別元件要覆寫不需要 !important。
    */
   :where(a, button, [tabindex]:not([tabindex="-1"]), input, select, textarea):focus-visible {
-    outline: 2px solid #2a6f97;
+    outline: 2px solid var(--guide-ink);
     outline-offset: 2px;
     border-radius: 4px;
   }

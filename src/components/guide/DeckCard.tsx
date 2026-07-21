@@ -9,7 +9,7 @@ export function DeckCard({ deck }: { deck: Deck }) {
     <Link
       to="/decks/$deckId"
       params={{ deckId: deck.id }}
-      className="block rounded-xl border border-[#bfe3f5] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+      className="block rounded-xl border border-guide-tint bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
     >
       <div className="flex items-start gap-4">
         <div className="w-20 shrink-0">
@@ -18,7 +18,7 @@ export function DeckCard({ deck }: { deck: Deck }) {
         <div className="min-w-0">
           <div className="flex items-center gap-2">
             <TierBadge tier={deck.tier} />
-            <h3 className="truncate text-lg font-bold text-[#2a6f97]">{deck.name}</h3>
+            <h3 className="truncate text-lg font-bold text-guide-ink">{deck.name}</h3>
           </div>
           <div className="mt-1 flex gap-1">
             {deck.energy.map((e) => (

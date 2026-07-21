@@ -16,7 +16,7 @@ P1 已全數修完並上線，估計 18/20。
 | ------------- | -------- | ------- | --------------------------------------------- |
 | Accessibility | 2/4      | 4/4     | 程式量測 WCAG AA 全過；**未經螢幕閱讀器實測** |
 | Performance   | 2/4      | 4/4     | 卡片索引子集化                                |
-| Theming       | 2/4      | **2/4** | **唯一沒動的面向**，見待辦 A                  |
+| Theming       | 2/4      | **待重新稽核** | 水藍色板已收斂成 7 個 `--guide-*` token，見待辦 A |
 | Responsive    | 3/4      | 4/4     | 觸控目標補齊                                  |
 | Anti-Patterns | 4/4      | 4/4     | 偵測器 0 命中，無 AI slop 特徵                |
 
@@ -67,21 +67,29 @@ P1 已全數修完並上線，估計 18/20。
 
 ## 待辦
 
-### A. 收斂色彩語彙（優先）
+### A. 收斂色彩語彙（優先）—— 2026-07-21 已處理
 
-Theming 是唯一還是 2/4 的面向。同一個 app 並存四套色彩語彙，沒有單一事實來源，
-導致每次調對比都要逐檔搜十六進位：
+跑了 `$impeccable polish /decks`。第 1 項（硬編十六進位）已收斂：`styles.css` 的 `:root`
+新增 7 個 `--guide-*` token（`ink`／`ink-deep`／`accent`／`tint`／`bg`／`bg-panel`／
+`bg-highlight`），註冊進 `@theme inline` 變成 Tailwind utility（`text-guide-ink`、
+`bg-guide-tint`…），色值逐位元組保留不變。九個消費檔（`GuideLayout`／`GuideEntry`／
+`DeckCard`／`Decklist`／`CardImage`／`MetaRanking`／`RankChangeBadge`／`decks/index.tsx`／
+`decks/$deckId.tsx`）全部換成新 utility。用瀏覽器 `getComputedStyle` 逐元素比對過
+（含展開列、Tier S 列、CTA hover 態、focus-visible 環），換前換後 rgb 值完全一致。
 
-1. 硬編十六進位（攻略頁全部）：`#2a6f97` `#5fa8d3` `#bfe3f5` `#eef7fc` `#f8fcff` `#f4fbff` `#1d5273`
-2. oklch design token（僅 404／error 頁）：`bg-background`、`text-foreground`
-3. Tailwind 內建色階（`TierBadge`）：`bg-amber-400`、`bg-sky-300`…
-4. inline style 十六進位（`EnergyIcon`、`RankChangeBadge`）
+`.dark` 死碼（34 個變數＋`@custom-variant dark`）已確認全站無人套用並移除。
 
-要求：把水藍那組收斂成一組具名 token，**色值維持完全不變**（那是刻意的品牌選擇，見 CLAUDE.md）。
-不要改用 `styles.css` 那套 Lovable 帶來的 oklch design system——攻略頁沒在用它。
-另外 `styles.css` 有 34 個 `.dark` 變數但全站沒有任何地方會加 `.dark` class，確認是死碼就清掉。
+**刻意維持原樣、沒有動**：
 
-建議指令：`$impeccable polish /decks`
+- 第 2 項（oklch token，僅 404／error 頁）——照要求不碰。
+- 第 3 項（`TierBadge` 的 Tailwind 色階）與第 4 項（`EnergyIcon`／`RankChangeBadge` 漲跌色的
+  inline 十六進位）——這兩組是 tier 等級／能量屬性／漲跌指示色，語意上不屬於「水藍那組」，
+  這輪要求沒提到就沒動。要繼續收斂的話這是下一個可做的範圍。
+- 首頁（`routes/index.tsx`／`Doodles.tsx`／`VideoBackdrop.tsx`）湊巧重用了同一組十六進位
+  （`#2a6f97`／`#5fa8d3`／`#bfe3f5`），但那是首頁自己的塗鴉配色決定，不是攻略頁品牌延伸；
+  照待辦 B 的 register 切分原則，這輪沒有動它們。
+
+尚未重新跑 `$impeccable audit` 量分數，上面表格先標「待重新稽核」。
 
 ### B. 首頁從沒被稽核過
 
