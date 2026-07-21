@@ -24,6 +24,7 @@ export function spawnAgent({ model, cwd, name }) {
   const listeners = [];
   const decoder = new StringDecoder("utf8");
   let buffer = "";
+  let exited = false;
 
   proc.stdout.on("data", (chunk) => {
     buffer += decoder.write(chunk);
@@ -39,9 +40,25 @@ export function spawnAgent({ model, cwd, name }) {
     }
   });
 
+  proc.on("error", (err) => {
+    console.error(`[${name}] process error:`, err);
+  });
+
+  proc.on("exit", (code, signal) => {
+    exited = true;
+  });
+
+  proc.stdin.on("error", (err) => {
+    console.error(`[${name}] stdin error:`, err);
+  });
+
   return {
     proc,
     send(cmd) {
+      if (exited) {
+        console.error(`[${name}] send() called after process exit; dropping command`);
+        return;
+      }
       proc.stdin.write(JSON.stringify(cmd) + "\n");
     },
     onEvent(cb) {
