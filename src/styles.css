@@ -121,6 +121,25 @@
   --guide-bg: #eef7fc;
   --guide-bg-panel: #f8fcff;
   --guide-bg-highlight: #f4fbff;
+
+  /*
+   * Tier 段位色階。刻意「低飽和金屬段位感」，與 EnergyIcon 的鮮豔屬性色區隔：
+   * 屬性色已佔滿高飽和黃(雷)／綠(草)／藍(水)／紅(火)／紫(超)…，tier 若也用鮮豔
+   * 色相就會跟屬性圖示撞色（原本 S 金撞雷、A 藍撞水、B 綠撞草）。改走柔和段位路線，
+   * 靠飽和度差（柔和 vs 鮮豔）整體區隔，不靠色相。S 金為頂點暖色，A→D 由霧藍漸變到
+   * 中性灰＝強度遞減。badge 上有字母，顏色是強度氛圍與品牌協調，非唯一識別。
+   * 淺底深字，對比度見 TierBadge.tsx 註解（實測 ≥4.5:1，WCAG AA）。
+   */
+  --tier-s-bg: #f0d283;
+  --tier-s-ink: #5c4200;
+  --tier-a-bg: #a9cfe6;
+  --tier-a-ink: #123b52;
+  --tier-b-bg: #cfe4f0;
+  --tier-b-ink: #1d5273;
+  --tier-c-bg: #d4dbe2;
+  --tier-c-ink: #334a57;
+  --tier-d-bg: #e3e3e6;
+  --tier-d-ink: #4d4d54;
 }
 
 @layer base {
