@@ -47,16 +47,31 @@ function openLog() {
   };
 }
 
-async function runTurn(turnNumber, speakerLabel, speaker, listenerLabel, message, log) {
-  console.log(`[turn ${turnNumber}] -> ${speakerLabel}: ${message}`);
-  log.write({ turn: turnNumber, direction: "prompt", to: speakerLabel, message });
-
+// Registers a single, long-lived onEvent listener for `speaker`. rpc-agent.mjs's
+// onEvent has no unsubscribe mechanism, so calling speaker.onEvent(...) once per
+// turn (as this used to do) accumulates one listener per turn the agent has
+// spoken, and every subsequent event re-fires all of them under their
+// originally-captured (stale) turn numbers. Instead, register exactly once per
+// agent and read the "currently active turn" out of a mutable `context` object
+// that the turn loop updates right before each prompt is sent. Turns are
+// strictly sequential (the loop awaits each runTurn before the next begins), so
+// there's no concurrency hazard in `context` being shared/mutated this way.
+function registerSpeakerLogger(speaker, context, log) {
   speaker.onEvent((event) => {
+    const { turnNumber, speakerLabel } = context;
     log.write({ turn: turnNumber, speaker: speakerLabel, event });
     if (event.type === "tool_execution_start") {
       console.log(`[turn ${turnNumber}]   (tool) ${speakerLabel} ran ${event.toolName}: ${JSON.stringify(event.args)}`);
     }
   });
+}
+
+async function runTurn(turnNumber, speakerLabel, speaker, context, listenerLabel, message, log) {
+  console.log(`[turn ${turnNumber}] -> ${speakerLabel}: ${message}`);
+  log.write({ turn: turnNumber, direction: "prompt", to: speakerLabel, message });
+
+  context.turnNumber = turnNumber;
+  context.speakerLabel = speakerLabel;
 
   speaker.send({ type: "prompt", message });
   await waitForSettled(speaker, TURN_TIMEOUT_MS);
@@ -89,6 +104,12 @@ async function main() {
     process.exit(1);
   }
 
+  // One listener per agent for its entire lifetime (see registerSpeakerLogger).
+  const contextA = { turnNumber: null, speakerLabel: null };
+  const contextB = { turnNumber: null, speakerLabel: null };
+  registerSpeakerLogger(agentA, contextA, log);
+  registerSpeakerLogger(agentB, contextB, log);
+
   const cleanup = () => {
     try {
       agentA.send({ type: "abort" });
@@ -109,13 +130,13 @@ async function main() {
   try {
     let message = OPENING_PROMPT;
     const pairs = [
-      [AGENT_A.name, agentA, AGENT_B.name],
-      [AGENT_B.name, agentB, AGENT_A.name],
+      [AGENT_A.name, agentA, contextA, AGENT_B.name],
+      [AGENT_B.name, agentB, contextB, AGENT_A.name],
     ];
 
     for (let turn = 1; turn <= MAX_TURNS; turn++) {
-      const [speakerLabel, speaker, listenerLabel] = pairs[(turn - 1) % 2];
-      message = await runTurn(turn, speakerLabel, speaker, listenerLabel, message, log);
+      const [speakerLabel, speaker, context, listenerLabel] = pairs[(turn - 1) % 2];
+      message = await runTurn(turn, speakerLabel, speaker, context, listenerLabel, message, log);
     }
 
     console.log(`[done] ${MAX_TURNS} turns complete. Full log: ${log.path}`);
