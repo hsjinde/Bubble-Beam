@@ -32,10 +32,7 @@ function wilsonLowerBound(successes, n) {
   if (n === 0) return 0;
   const p = successes / n;
   const z2 = Z * Z;
-  return (
-    (p + z2 / (2 * n) - Z * Math.sqrt((p * (1 - p) + z2 / (4 * n)) / n)) /
-    (1 + z2 / n)
-  );
+  return (p + z2 / (2 * n) - Z * Math.sqrt((p * (1 - p) + z2 / (4 * n)) / n)) / (1 + z2 / n);
 }
 
 function tierOf(lb) {
@@ -59,13 +56,12 @@ const html = await res.text();
 const tableMatch = html.match(/<table class="meta">([\s\S]*?)<\/table>/);
 if (!tableMatch) {
   console.error(
-    "Could not find <table class=\"meta\"> in the page. Limitless may have changed their markup — inspect the HTML and update the parser.",
+    'Could not find <table class="meta"> in the page. Limitless may have changed their markup — inspect the HTML and update the parser.',
   );
   process.exit(1);
 }
 
-const rowRe =
-  /<tr(?: class="more")? data-share="([^"]+)" data-winrate="([^"]+)">([\s\S]*?)<\/tr>/g;
+const rowRe = /<tr(?: class="more")? data-share="([^"]+)" data-winrate="([^"]+)">([\s\S]*?)<\/tr>/g;
 const decks = [];
 let m;
 while ((m = rowRe.exec(tableMatch[1])) !== null) {
@@ -115,7 +111,9 @@ lines.push(`# TCG Pocket Tier List (Wilson score, 95% lower bound)`);
 lines.push(``);
 lines.push(`Source: ${URL_}`);
 if (titleMatch) lines.push(`Page: ${titleMatch[1]}`);
-lines.push(`Archetypes parsed: ${decks.length} (main table: share >= ${MIN_SHARE}%; ${excluded} low-share decks summarized at the end)`);
+lines.push(
+  `Archetypes parsed: ${decks.length} (main table: share >= ${MIN_SHARE}%; ${excluded} low-share decks summarized at the end)`,
+);
 lines.push(``);
 
 const TIERS = ["S", "A", "B", "C", "D"];

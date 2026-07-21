@@ -1,9 +1,34 @@
 import { useEffect, useRef, useState } from "react";
 import { VIDEO_IDS } from "@/config/videos";
 
+interface YTPlayer {
+  mute(): void;
+  playVideo(): void;
+  getIframe(): HTMLIFrameElement | null;
+  loadVideoById(id: string): void;
+  destroy(): void;
+}
+
+interface YTPlayerOptions {
+  videoId: string;
+  playerVars?: Record<string, unknown>;
+  events?: {
+    onReady?: (e: { target: YTPlayer }) => void;
+    onStateChange?: (e: { data: number }) => void;
+    onError?: () => void;
+  };
+}
+
+interface YTNamespace {
+  Player: new (element: HTMLElement, options: YTPlayerOptions) => YTPlayer;
+  PlayerState: {
+    ENDED: number;
+  };
+}
+
 declare global {
   interface Window {
-    YT: any;
+    YT: YTNamespace;
     onYouTubeIframeAPIReady: (() => void) | undefined;
   }
 }
@@ -37,7 +62,7 @@ export function VideoBackdrop() {
   const hostRef = useRef<HTMLDivElement>(null);
   const iframeWrapRef = useRef<HTMLDivElement>(null);
   const videoElRef = useRef<HTMLVideoElement>(null);
-  const playerRef = useRef<any>(null);
+  const playerRef = useRef<YTPlayer | null>(null);
   const indexRef = useRef(0);
   const erroredIdsRef = useRef<Set<string>>(new Set());
 
@@ -53,7 +78,9 @@ export function VideoBackdrop() {
         const res = await fetch("/videos/manifest.json");
         if (!cancelled && res.ok) {
           const data = await res.json();
-          const vids = Array.isArray(data?.videos) ? data.videos.filter((v: any) => typeof v === "string") : [];
+          const vids = Array.isArray(data?.videos)
+            ? data.videos.filter((v: unknown) => typeof v === "string")
+            : [];
           if (vids.length > 0) {
             setLocalList(vids);
             setMode("local");
@@ -133,12 +160,12 @@ export function VideoBackdrop() {
           modestbranding: 1,
         },
         events: {
-          onReady: (e: any) => {
+          onReady: (e: { target: YTPlayer }) => {
             e.target.mute();
             e.target.playVideo();
             e.target.getIframe()?.setAttribute("tabindex", "-1");
           },
-          onStateChange: (e: any) => {
+          onStateChange: (e: { data: number }) => {
             if (e.data === window.YT.PlayerState.ENDED) {
               advance();
             }
@@ -219,7 +246,11 @@ export function VideoBackdrop() {
           tabIndex={-1}
           onEnded={() => setLocalIndex((i) => (i + 1) % localList.length)}
           className="absolute inset-0 h-full w-full"
-          style={{ objectFit: "cover", pointerEvents: "none", animation: "video-fade-in 500ms ease-out" }}
+          style={{
+            objectFit: "cover",
+            pointerEvents: "none",
+            animation: "video-fade-in 500ms ease-out",
+          }}
         />
       )}
     </div>

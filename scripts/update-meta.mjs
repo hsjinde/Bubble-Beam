@@ -131,9 +131,13 @@ for (const [i, d] of eligible.slice(0, TOP_N).entries()) {
       deck.cards = sample.cards;
       deck.listSource = sample.listSource;
     }
-    console.log(`#${deck.rank} ${deck.name}: ${sample ? sample.cards.length + " card entries" : "no decklist found"}`);
+    console.log(
+      `#${deck.rank} ${deck.name}: ${sample ? sample.cards.length + " card entries" : "no decklist found"}`,
+    );
   } catch (err) {
-    console.log(`#${deck.rank} ${deck.name}: decklist fetch failed (${err.message}) — row kept without cards`);
+    console.log(
+      `#${deck.rank} ${deck.name}: decklist fetch failed (${err.message}) — row kept without cards`,
+    );
   }
   decks.push(deck);
   await sleep(250);

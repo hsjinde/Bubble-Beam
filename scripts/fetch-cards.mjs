@@ -7,9 +7,27 @@
 import { writeFile } from "node:fs/promises";
 
 const SETS = [
-  "A1", "A1a", "A2", "A2a", "A2b", "A3", "A3a", "A3b", "A4", "A4a", "A4b",
-  "B1", "B1a", "B2", "B2a", "B2b", "B3", "B3a", "B3b",
-  "PROMO-A", "PROMO-B",
+  "A1",
+  "A1a",
+  "A2",
+  "A2a",
+  "A2b",
+  "A3",
+  "A3a",
+  "A3b",
+  "A4",
+  "A4a",
+  "A4b",
+  "B1",
+  "B1a",
+  "B2",
+  "B2a",
+  "B2b",
+  "B3",
+  "B3a",
+  "B3b",
+  "PROMO-A",
+  "PROMO-B",
 ];
 const DATA_BASE =
   "https://raw.githubusercontent.com/flibustier/pokemon-tcg-pocket-database/main/dist/cards";
