@@ -8,7 +8,12 @@ for Bubble-Beam. See the design doc for full details:
 ## Requirements
 
 - `pi` CLI installed and on PATH (`pi --version` should print something).
-- Anthropic authenticated (`pi` then `/login`, or `ANTHROPIC_API_KEY` set).
+- Anthropic authenticated (`pi` then `/login`, or `ANTHROPIC_API_KEY` set) —
+  and that account must actually be allowed to make third-party-app API
+  calls. If prompts fail with a 400 like *"Third-party apps now draw from
+  your extra usage, not your plan limits"*, add usage credit at
+  claude.ai/settings/usage, or reconfigure `pi` to use a raw
+  `ANTHROPIC_API_KEY` instead of the OAuth session.
 - Node.js >= 22.
 
 ## Run it
