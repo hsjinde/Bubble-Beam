@@ -8,11 +8,20 @@ import { getRankChange } from "@/data/meta";
  * 顏色是同色相壓深後的值，一般列（#ffffff）與 Tier S 列（#f4fbff）都 ≥4.5:1。
  * 原本用 text-emerald-600／text-rose-500／text-slate-300 只有 3.49／3.59／1.42。
  * 換色時兩種列背景都要重算。
+ *
+ * 色彩採華語圈慣例（漲紅跌綠），與歐美股市紅跌綠漲相反。
+ *
+ * 上升／下降加上極淺色底做成藥丸狀，跟名次數字並排時才不會兩串文字黏在一起分不清——
+ * 淺底本身接近白色，對比度沿用同一組已驗證過的文字色，不需要重算。
  */
 const CHANGE_INK = {
-  up: "#008251", // 白底 4.87、Tier S 底 4.66
-  down: "#e30041", // 4.84 / 4.63
+  up: "#e30041", // 漲＝紅。白底 4.84、Tier S 底 4.63
+  down: "#008251", // 跌＝綠。白底 4.87、Tier S 底 4.66
   same: "#69737e", // 4.82 / 4.61
+} as const;
+const CHANGE_BG = {
+  up: "#fce7ec",
+  down: "#e2f3ec",
 } as const;
 export function RankChangeBadge({ deck }: { deck: MetaDeck }) {
   const { state, delta, previousRank } = getRankChange(deck);
@@ -48,8 +57,11 @@ export function RankChangeBadge({ deck }: { deck: MetaDeck }) {
   const up = state === "up";
   return (
     <span
-      className="inline-flex items-center gap-0.5 text-xs font-bold tabular-nums"
-      style={{ color: up ? CHANGE_INK.up : CHANGE_INK.down }}
+      className="inline-flex items-center gap-0.5 rounded-full px-1.5 py-0.5 text-[11px] font-bold tabular-nums"
+      style={{
+        color: up ? CHANGE_INK.up : CHANGE_INK.down,
+        backgroundColor: up ? CHANGE_BG.up : CHANGE_BG.down,
+      }}
       title={`${up ? "上升" : "下降"} ${delta} 名（上次第 ${previousRank} 名）`}
     >
       <span aria-hidden="true">{up ? "▲" : "▼"}</span>

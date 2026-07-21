@@ -1,18 +1,18 @@
 {
-  "fetchedAt": "2026-07-20T17:12:51.933Z",
+  "fetchedAt": "2026-07-21T02:58:45.013Z",
   "source": "https://play.limitlesstcg.com/decks?game=pocket",
-  "previousFetchedAt": "2026-07-19T16:50:01.536Z",
+  "previousFetchedAt": "2026-07-20T17:12:51.933Z",
   "decks": [
     {
       "rank": 1,
       "previousRank": 1,
       "name": "Miraidon ex Magnezone",
       "tier": "S",
-      "wilsonLowerBoundPct": 53.25,
+      "wilsonLowerBoundPct": 53.26,
       "winratePct": 52.89,
-      "sharePct": 10.1,
-      "games": 4298,
-      "record": "2273-1865-160",
+      "sharePct": 10.12,
+      "games": 4322,
+      "record": "2286-1876-160",
       "curatedId": "miraidon-magnezone",
       "cards": [
         {
@@ -123,7 +123,7 @@
       "tier": "S",
       "wilsonLowerBoundPct": 52.45,
       "winratePct": 52.67,
-      "sharePct": 6.38,
+      "sharePct": 6.35,
       "games": 2643,
       "record": "1392-1162-89",
       "curatedId": "suicune-baxcalibur",
@@ -217,14 +217,133 @@
     },
     {
       "rank": 3,
+      "previousRank": 5,
+      "name": "Mega Blaziken ex Greninja",
+      "tier": "S",
+      "wilsonLowerBoundPct": 52.05,
+      "winratePct": 53.17,
+      "sharePct": 3.31,
+      "games": 1420,
+      "record": "755-623-42",
+      "cards": [
+        {
+          "id": "B1-33",
+          "count": 2,
+          "name": "Torchic",
+          "set": "B1",
+          "number": "33"
+        },
+        {
+          "id": "B1-34",
+          "count": 1,
+          "name": "Combusken",
+          "set": "B1",
+          "number": "34"
+        },
+        {
+          "id": "B1-36",
+          "count": 1,
+          "name": "Mega Blaziken ex",
+          "set": "B1",
+          "number": "36"
+        },
+        {
+          "id": "A1-87",
+          "count": 1,
+          "name": "Froakie",
+          "set": "A1",
+          "number": "87"
+        },
+        {
+          "id": "A1-89",
+          "count": 1,
+          "name": "Greninja",
+          "set": "A1",
+          "number": "89"
+        },
+        {
+          "id": "B3-24",
+          "count": 1,
+          "name": "Castform Sunny Form",
+          "set": "B3",
+          "number": "24"
+        },
+        {
+          "id": "B1-44",
+          "count": 1,
+          "name": "Heatmor",
+          "set": "B1",
+          "number": "44"
+        },
+        {
+          "id": "B1-225",
+          "count": 2,
+          "name": "Copycat",
+          "set": "B1",
+          "number": "225"
+        },
+        {
+          "id": "PROMO-A-7",
+          "count": 2,
+          "name": "Professor's Research",
+          "set": "P-A",
+          "number": "7"
+        },
+        {
+          "id": "A2-150",
+          "count": 1,
+          "name": "Cyrus",
+          "set": "A2",
+          "number": "150"
+        },
+        {
+          "id": "B3a-71",
+          "count": 1,
+          "name": "Juliana",
+          "set": "B3a",
+          "number": "71"
+        },
+        {
+          "id": "A3-144",
+          "count": 2,
+          "name": "Rare Candy",
+          "set": "A3",
+          "number": "144"
+        },
+        {
+          "id": "PROMO-A-5",
+          "count": 2,
+          "name": "Poké Ball",
+          "set": "P-A",
+          "number": "5"
+        },
+        {
+          "id": "B1-217",
+          "count": 1,
+          "name": "Flame Patch",
+          "set": "B1",
+          "number": "217"
+        },
+        {
+          "id": "B2b-69",
+          "count": 1,
+          "name": "Hiking Trail",
+          "set": "B2b",
+          "number": "69"
+        }
+      ],
+      "listSource": "https://play.limitlesstcg.com/tournament/6a4446d0c87cd9ff0a313eed/player/banzai/decklist"
+    },
+    {
+      "rank": 4,
       "previousRank": 3,
       "name": "Mega Sceptile ex Greninja",
       "tier": "S",
-      "wilsonLowerBoundPct": 52.08,
-      "winratePct": 52.43,
+      "wilsonLowerBoundPct": 52.03,
+      "winratePct": 52.38,
       "sharePct": 6.18,
-      "games": 2636,
-      "record": "1382-1172-82",
+      "games": 2644,
+      "record": "1385-1177-82",
       "curatedId": "mega-sceptile-greninja",
       "cards": [
         {
@@ -336,15 +455,15 @@
       "listSource": "https://play.limitlesstcg.com/tournament/6a41b5a5c87cd9ff0a3125ea/player/koehearts/decklist"
     },
     {
-      "rank": 4,
-      "previousRank": 8,
+      "rank": 5,
+      "previousRank": 4,
       "name": "Zoroark ex Mega Absol ex",
-      "tier": "S",
-      "wilsonLowerBoundPct": 52.02,
-      "winratePct": 54.18,
-      "sharePct": 1.42,
-      "games": 598,
-      "record": "324-252-22",
+      "tier": "A",
+      "wilsonLowerBoundPct": 51.6,
+      "winratePct": 53.76,
+      "sharePct": 1.45,
+      "games": 612,
+      "record": "329-261-22",
       "cards": [
         {
           "id": "B3-105",
@@ -455,71 +574,57 @@
       "listSource": "https://play.limitlesstcg.com/tournament/6a552624232a1a55ee10b7d1/player/mdjoe/decklist"
     },
     {
-      "rank": 5,
-      "previousRank": 4,
-      "name": "Mega Blaziken ex Greninja",
+      "rank": 6,
+      "previousRank": 9,
+      "name": "Mega Altaria ex Espeon",
       "tier": "A",
-      "wilsonLowerBoundPct": 52,
-      "winratePct": 53.12,
-      "sharePct": 3.3,
-      "games": 1412,
-      "record": "750-620-42",
+      "wilsonLowerBoundPct": 51.36,
+      "winratePct": 53.07,
+      "sharePct": 2.24,
+      "games": 929,
+      "record": "493-408-28",
       "cards": [
         {
-          "id": "B1-33",
+          "id": "B1-196",
           "count": 2,
-          "name": "Torchic",
+          "name": "Swablu",
           "set": "B1",
-          "number": "33"
+          "number": "196"
         },
         {
-          "id": "B1-34",
+          "id": "B1-102",
           "count": 1,
-          "name": "Combusken",
+          "name": "Mega Altaria ex",
           "set": "B1",
-          "number": "34"
+          "number": "102"
         },
         {
-          "id": "B1-36",
-          "count": 1,
-          "name": "Mega Blaziken ex",
-          "set": "B1",
-          "number": "36"
-        },
-        {
-          "id": "A1-87",
-          "count": 1,
-          "name": "Froakie",
-          "set": "A1",
-          "number": "87"
-        },
-        {
-          "id": "A1-89",
-          "count": 1,
-          "name": "Greninja",
-          "set": "A1",
-          "number": "89"
-        },
-        {
-          "id": "B3-24",
-          "count": 1,
-          "name": "Castform Sunny Form",
-          "set": "B3",
-          "number": "24"
-        },
-        {
-          "id": "B1-44",
-          "count": 1,
-          "name": "Heatmor",
-          "set": "B1",
-          "number": "44"
-        },
-        {
-          "id": "B1-225",
+          "id": "B1-184",
           "count": 2,
-          "name": "Copycat",
+          "name": "Eevee",
           "set": "B1",
-          "number": "225"
+          "number": "184"
+        },
+        {
+          "id": "B3a-20",
+          "count": 2,
+          "name": "Espeon",
+          "set": "B3a",
+          "number": "20"
+        },
+        {
+          "id": "B2b-40",
+          "count": 2,
+          "name": "Darkrai",
+          "set": "B2b",
+          "number": "40"
+        },
+        {
+          "id": "A4a-59",
+          "count": 2,
+          "name": "Igglybuff",
+          "set": "A4a",
+          "number": "59"
         },
         {
           "id": "PROMO-A-7",
@@ -536,18 +641,25 @@
           "number": "150"
         },
         {
-          "id": "B3a-71",
+          "id": "B1-225",
           "count": 1,
-          "name": "Juliana",
-          "set": "B3a",
-          "number": "71"
+          "name": "Copycat",
+          "set": "B1",
+          "number": "225"
         },
         {
-          "id": "A3-144",
-          "count": 2,
-          "name": "Rare Candy",
-          "set": "A3",
-          "number": "144"
+          "id": "B1-226",
+          "count": 1,
+          "name": "Lisia",
+          "set": "B1",
+          "number": "226"
+        },
+        {
+          "id": "A1-225",
+          "count": 1,
+          "name": "Sabrina",
+          "set": "A1",
+          "number": "225"
         },
         {
           "id": "PROMO-A-5",
@@ -557,30 +669,121 @@
           "number": "5"
         },
         {
-          "id": "B1-217",
+          "id": "B2-153",
           "count": 1,
-          "name": "Flame Patch",
-          "set": "B1",
-          "number": "217"
-        },
-        {
-          "id": "B2b-69",
-          "count": 1,
-          "name": "Hiking Trail",
-          "set": "B2b",
-          "number": "69"
+          "name": "Training Area",
+          "set": "B2",
+          "number": "153"
         }
       ],
-      "listSource": "https://play.limitlesstcg.com/tournament/6a4446d0c87cd9ff0a313eed/player/banzai/decklist"
+      "listSource": "https://play.limitlesstcg.com/tournament/6a552624232a1a55ee10b7d1/player/feyyzo/decklist"
     },
     {
-      "rank": 6,
-      "previousRank": 10,
+      "rank": 7,
+      "previousRank": 7,
+      "name": "Indeedee ex Giratina ex",
+      "tier": "A",
+      "wilsonLowerBoundPct": 51.31,
+      "winratePct": 51.51,
+      "sharePct": 2.2,
+      "games": 893,
+      "record": "460-378-55",
+      "cards": [
+        {
+          "id": "A3-66",
+          "count": 2,
+          "name": "Oricorio",
+          "set": "A3",
+          "number": "66"
+        },
+        {
+          "id": "B1-121",
+          "count": 2,
+          "name": "Indeedee ex",
+          "set": "B1",
+          "number": "121"
+        },
+        {
+          "id": "A2b-35",
+          "count": 1,
+          "name": "Giratina ex",
+          "set": "A2b",
+          "number": "35"
+        },
+        {
+          "id": "B1-225",
+          "count": 2,
+          "name": "Copycat",
+          "set": "B1",
+          "number": "225"
+        },
+        {
+          "id": "A2b-70",
+          "count": 2,
+          "name": "Pokémon Center Lady",
+          "set": "A2b",
+          "number": "70"
+        },
+        {
+          "id": "PROMO-A-7",
+          "count": 1,
+          "name": "Professor's Research",
+          "set": "P-A",
+          "number": "7"
+        },
+        {
+          "id": "A2-150",
+          "count": 1,
+          "name": "Cyrus",
+          "set": "A2",
+          "number": "150"
+        },
+        {
+          "id": "PROMO-A-5",
+          "count": 2,
+          "name": "Poké Ball",
+          "set": "P-A",
+          "number": "5"
+        },
+        {
+          "id": "B2-145",
+          "count": 2,
+          "name": "Lucky Ice Pop",
+          "set": "B2",
+          "number": "145"
+        },
+        {
+          "id": "B2-147",
+          "count": 2,
+          "name": "Protective Poncho",
+          "set": "B2",
+          "number": "147"
+        },
+        {
+          "id": "A2-147",
+          "count": 2,
+          "name": "Giant Cape",
+          "set": "A2",
+          "number": "147"
+        },
+        {
+          "id": "B2-154",
+          "count": 1,
+          "name": "Starting Plains",
+          "set": "B2",
+          "number": "154"
+        }
+      ],
+      "listSource": "https://play.limitlesstcg.com/tournament/6a4ab64c063cb29d318e4331/player/n7hs4/decklist"
+    },
+    {
+      "rank": 8,
+      "previousRank": 6,
       "name": "Greninja Mega Absol ex",
       "tier": "A",
       "wilsonLowerBoundPct": 51.28,
       "winratePct": 55.25,
-      "sharePct": 0.66,
+      "sharePct": 0.65,
       "games": 257,
       "record": "142-104-11",
       "cards": [
@@ -679,106 +882,8 @@
       "listSource": "https://play.limitlesstcg.com/tournament/6a4b1a5f65724db9ded3ddbd/player/toxology/decklist"
     },
     {
-      "rank": 7,
-      "previousRank": 5,
-      "name": "Indeedee ex Giratina ex",
-      "tier": "A",
-      "wilsonLowerBoundPct": 51.24,
-      "winratePct": 51.42,
-      "sharePct": 2.18,
-      "games": 881,
-      "record": "453-373-55",
-      "cards": [
-        {
-          "id": "A3-66",
-          "count": 2,
-          "name": "Oricorio",
-          "set": "A3",
-          "number": "66"
-        },
-        {
-          "id": "B1-121",
-          "count": 2,
-          "name": "Indeedee ex",
-          "set": "B1",
-          "number": "121"
-        },
-        {
-          "id": "A2b-35",
-          "count": 1,
-          "name": "Giratina ex",
-          "set": "A2b",
-          "number": "35"
-        },
-        {
-          "id": "B1-225",
-          "count": 2,
-          "name": "Copycat",
-          "set": "B1",
-          "number": "225"
-        },
-        {
-          "id": "A2b-70",
-          "count": 2,
-          "name": "Pokémon Center Lady",
-          "set": "A2b",
-          "number": "70"
-        },
-        {
-          "id": "PROMO-A-7",
-          "count": 1,
-          "name": "Professor's Research",
-          "set": "P-A",
-          "number": "7"
-        },
-        {
-          "id": "A2-150",
-          "count": 1,
-          "name": "Cyrus",
-          "set": "A2",
-          "number": "150"
-        },
-        {
-          "id": "PROMO-A-5",
-          "count": 2,
-          "name": "Poké Ball",
-          "set": "P-A",
-          "number": "5"
-        },
-        {
-          "id": "B2-145",
-          "count": 2,
-          "name": "Lucky Ice Pop",
-          "set": "B2",
-          "number": "145"
-        },
-        {
-          "id": "B2-147",
-          "count": 2,
-          "name": "Protective Poncho",
-          "set": "B2",
-          "number": "147"
-        },
-        {
-          "id": "A2-147",
-          "count": 2,
-          "name": "Giant Cape",
-          "set": "A2",
-          "number": "147"
-        },
-        {
-          "id": "B2-154",
-          "count": 1,
-          "name": "Starting Plains",
-          "set": "B2",
-          "number": "154"
-        }
-      ],
-      "listSource": "https://play.limitlesstcg.com/tournament/6a4ab64c063cb29d318e4331/player/n7hs4/decklist"
-    },
-    {
-      "rank": 8,
-      "previousRank": 9,
+      "rank": 9,
+      "previousRank": 8,
       "name": "Milotic ex Eevee ex",
       "tier": "A",
       "wilsonLowerBoundPct": 51.07,
@@ -889,120 +994,15 @@
       "listSource": "https://play.limitlesstcg.com/tournament/6a3a18df83fd320299bce65d/player/jlng/decklist"
     },
     {
-      "rank": 9,
-      "previousRank": 7,
-      "name": "Mega Altaria ex Espeon",
-      "tier": "A",
-      "wilsonLowerBoundPct": 51.01,
-      "winratePct": 52.72,
-      "sharePct": 2.23,
-      "games": 920,
-      "record": "485-407-28",
-      "cards": [
-        {
-          "id": "B1-196",
-          "count": 2,
-          "name": "Swablu",
-          "set": "B1",
-          "number": "196"
-        },
-        {
-          "id": "B1-102",
-          "count": 1,
-          "name": "Mega Altaria ex",
-          "set": "B1",
-          "number": "102"
-        },
-        {
-          "id": "B1-184",
-          "count": 2,
-          "name": "Eevee",
-          "set": "B1",
-          "number": "184"
-        },
-        {
-          "id": "B3a-20",
-          "count": 2,
-          "name": "Espeon",
-          "set": "B3a",
-          "number": "20"
-        },
-        {
-          "id": "B2b-40",
-          "count": 2,
-          "name": "Darkrai",
-          "set": "B2b",
-          "number": "40"
-        },
-        {
-          "id": "A4a-59",
-          "count": 2,
-          "name": "Igglybuff",
-          "set": "A4a",
-          "number": "59"
-        },
-        {
-          "id": "PROMO-A-7",
-          "count": 2,
-          "name": "Professor's Research",
-          "set": "P-A",
-          "number": "7"
-        },
-        {
-          "id": "A2-150",
-          "count": 1,
-          "name": "Cyrus",
-          "set": "A2",
-          "number": "150"
-        },
-        {
-          "id": "B1-225",
-          "count": 1,
-          "name": "Copycat",
-          "set": "B1",
-          "number": "225"
-        },
-        {
-          "id": "B1-226",
-          "count": 1,
-          "name": "Lisia",
-          "set": "B1",
-          "number": "226"
-        },
-        {
-          "id": "A1-225",
-          "count": 1,
-          "name": "Sabrina",
-          "set": "A1",
-          "number": "225"
-        },
-        {
-          "id": "PROMO-A-5",
-          "count": 2,
-          "name": "Poké Ball",
-          "set": "P-A",
-          "number": "5"
-        },
-        {
-          "id": "B2-153",
-          "count": 1,
-          "name": "Training Area",
-          "set": "B2",
-          "number": "153"
-        }
-      ],
-      "listSource": "https://play.limitlesstcg.com/tournament/6a552624232a1a55ee10b7d1/player/feyyzo/decklist"
-    },
-    {
       "rank": 10,
-      "previousRank": 6,
+      "previousRank": 10,
       "name": "Mega Lucario ex Lucario",
       "tier": "A",
       "wilsonLowerBoundPct": 50.56,
       "winratePct": 50.79,
-      "sharePct": 5.18,
-      "games": 2215,
-      "record": "1125-1008-82",
+      "sharePct": 5.16,
+      "games": 2219,
+      "record": "1127-1010-82",
       "curatedId": "mega-lucario",
       "cards": [
         {
@@ -1248,7 +1248,7 @@
     },
     {
       "rank": 12,
-      "previousRank": 13,
+      "previousRank": 12,
       "name": "Mega Manectric ex Zeraora",
       "tier": "B",
       "wilsonLowerBoundPct": 48.7,
@@ -1353,7 +1353,7 @@
     },
     {
       "rank": 13,
-      "previousRank": 12,
+      "previousRank": 13,
       "name": "Mega Altaria ex Chingling",
       "tier": "B",
       "wilsonLowerBoundPct": 48.46,
@@ -1479,14 +1479,14 @@
     },
     {
       "rank": 14,
-      "previousRank": null,
+      "previousRank": 14,
       "name": "Mega Lucario ex",
       "tier": "B",
-      "wilsonLowerBoundPct": 48.36,
-      "winratePct": 50.21,
-      "sharePct": 1.77,
-      "games": 717,
-      "record": "360-331-26",
+      "wilsonLowerBoundPct": 48.29,
+      "winratePct": 50.14,
+      "sharePct": 1.78,
+      "games": 728,
+      "record": "365-337-26",
       "cards": [
         {
           "id": "A2-91",
@@ -1612,105 +1612,7 @@
     },
     {
       "rank": 15,
-      "previousRank": 19,
-      "name": "Mega Blaziken ex Castform Sunny Form",
-      "tier": "C",
-      "wilsonLowerBoundPct": 47.81,
-      "winratePct": 51.4,
-      "sharePct": 0.82,
-      "games": 321,
-      "record": "165-144-12",
-      "cards": [
-        {
-          "id": "B1-33",
-          "count": 2,
-          "name": "Torchic",
-          "set": "B1",
-          "number": "33"
-        },
-        {
-          "id": "B1-36",
-          "count": 2,
-          "name": "Mega Blaziken ex",
-          "set": "B1",
-          "number": "36"
-        },
-        {
-          "id": "B3-24",
-          "count": 2,
-          "name": "Castform Sunny Form",
-          "set": "B3",
-          "number": "24"
-        },
-        {
-          "id": "PROMO-A-7",
-          "count": 2,
-          "name": "Professor's Research",
-          "set": "P-A",
-          "number": "7"
-        },
-        {
-          "id": "B1-225",
-          "count": 1,
-          "name": "Copycat",
-          "set": "B1",
-          "number": "225"
-        },
-        {
-          "id": "A2-150",
-          "count": 1,
-          "name": "Cyrus",
-          "set": "A2",
-          "number": "150"
-        },
-        {
-          "id": "A1-225",
-          "count": 1,
-          "name": "Sabrina",
-          "set": "A1",
-          "number": "225"
-        },
-        {
-          "id": "PROMO-A-5",
-          "count": 2,
-          "name": "Poké Ball",
-          "set": "P-A",
-          "number": "5"
-        },
-        {
-          "id": "A3-144",
-          "count": 2,
-          "name": "Rare Candy",
-          "set": "A3",
-          "number": "144"
-        },
-        {
-          "id": "B1-217",
-          "count": 2,
-          "name": "Flame Patch",
-          "set": "B1",
-          "number": "217"
-        },
-        {
-          "id": "B2-147",
-          "count": 1,
-          "name": "Protective Poncho",
-          "set": "B2",
-          "number": "147"
-        },
-        {
-          "id": "B2b-69",
-          "count": 2,
-          "name": "Hiking Trail",
-          "set": "B2b",
-          "number": "69"
-        }
-      ],
-      "listSource": "https://play.limitlesstcg.com/tournament/6a49ad1a063cb29d318e36c9/player/hofuruhoshi/decklist"
-    },
-    {
-      "rank": 16,
-      "previousRank": 17,
+      "previousRank": 16,
       "name": "Magnezone Miraidon ex",
       "tier": "C",
       "wilsonLowerBoundPct": 47.78,
@@ -1821,8 +1723,8 @@
       "listSource": "https://play.limitlesstcg.com/tournament/6a4ab64c063cb29d318e4331/player/esqueletoncio/decklist"
     },
     {
-      "rank": 17,
-      "previousRank": 16,
+      "rank": 16,
+      "previousRank": 17,
       "name": "Magnezone ex Magnezone",
       "tier": "C",
       "wilsonLowerBoundPct": 47.77,
@@ -1947,13 +1849,125 @@
       "listSource": "https://play.limitlesstcg.com/tournament/6a3b6074c87cd9ff0a30e598/player/nabrix/decklist"
     },
     {
+      "rank": 17,
+      "previousRank": 19,
+      "name": "Mega Charizard Y ex Entei ex",
+      "tier": "C",
+      "wilsonLowerBoundPct": 47.61,
+      "winratePct": 50.11,
+      "sharePct": 1.09,
+      "games": 437,
+      "record": "219-199-19",
+      "cards": [
+        {
+          "id": "A2b-8",
+          "count": 2,
+          "name": "Charmander",
+          "set": "A2b",
+          "number": "8"
+        },
+        {
+          "id": "B2b-8",
+          "count": 2,
+          "name": "Charmeleon",
+          "set": "B2b",
+          "number": "8"
+        },
+        {
+          "id": "B1a-14",
+          "count": 1,
+          "name": "Mega Charizard Y ex",
+          "set": "B1a",
+          "number": "14"
+        },
+        {
+          "id": "A4a-10",
+          "count": 2,
+          "name": "Entei ex",
+          "set": "A4a",
+          "number": "10"
+        },
+        {
+          "id": "PROMO-A-7",
+          "count": 2,
+          "name": "Professor's Research",
+          "set": "P-A",
+          "number": "7"
+        },
+        {
+          "id": "B1-225",
+          "count": 1,
+          "name": "Copycat",
+          "set": "B1",
+          "number": "225"
+        },
+        {
+          "id": "B1-223",
+          "count": 1,
+          "name": "May",
+          "set": "B1",
+          "number": "223"
+        },
+        {
+          "id": "A2b-70",
+          "count": 1,
+          "name": "Pokémon Center Lady",
+          "set": "A2b",
+          "number": "70"
+        },
+        {
+          "id": "A1-225",
+          "count": 1,
+          "name": "Sabrina",
+          "set": "A1",
+          "number": "225"
+        },
+        {
+          "id": "B1-217",
+          "count": 2,
+          "name": "Flame Patch",
+          "set": "B1",
+          "number": "217"
+        },
+        {
+          "id": "PROMO-A-5",
+          "count": 2,
+          "name": "Poké Ball",
+          "set": "P-A",
+          "number": "5"
+        },
+        {
+          "id": "B2-145",
+          "count": 1,
+          "name": "Lucky Ice Pop",
+          "set": "B2",
+          "number": "145"
+        },
+        {
+          "id": "A2-147",
+          "count": 1,
+          "name": "Giant Cape",
+          "set": "A2",
+          "number": "147"
+        },
+        {
+          "id": "B2-147",
+          "count": 1,
+          "name": "Protective Poncho",
+          "set": "B2",
+          "number": "147"
+        }
+      ],
+      "listSource": "https://play.limitlesstcg.com/tournament/6a44fdc1c87cd9ff0a3145ed/player/a2lbabar08/decklist"
+    },
+    {
       "rank": 18,
-      "previousRank": 20,
+      "previousRank": 18,
       "name": "Milotic ex Chien-Pao ex",
       "tier": "C",
       "wilsonLowerBoundPct": 47.53,
       "winratePct": 51.71,
-      "sharePct": 0.7,
+      "sharePct": 0.69,
       "games": 292,
       "record": "151-132-9",
       "cards": [
@@ -2060,168 +2074,35 @@
     },
     {
       "rank": 19,
-      "previousRank": null,
-      "name": "Mega Charizard Y ex Entei ex",
+      "previousRank": 15,
+      "name": "Mega Blaziken ex Castform Sunny Form",
       "tier": "C",
-      "wilsonLowerBoundPct": 47.49,
-      "winratePct": 50,
-      "sharePct": 1.08,
-      "games": 430,
-      "record": "215-196-19",
+      "wilsonLowerBoundPct": 47.5,
+      "winratePct": 51.08,
+      "sharePct": 0.83,
+      "games": 323,
+      "record": "165-146-12",
       "cards": [
         {
-          "id": "A2b-8",
+          "id": "B1-33",
           "count": 2,
-          "name": "Charmander",
-          "set": "A2b",
-          "number": "8"
-        },
-        {
-          "id": "B2b-8",
-          "count": 2,
-          "name": "Charmeleon",
-          "set": "B2b",
-          "number": "8"
-        },
-        {
-          "id": "B1a-14",
-          "count": 1,
-          "name": "Mega Charizard Y ex",
-          "set": "B1a",
-          "number": "14"
-        },
-        {
-          "id": "A4a-10",
-          "count": 2,
-          "name": "Entei ex",
-          "set": "A4a",
-          "number": "10"
-        },
-        {
-          "id": "PROMO-A-7",
-          "count": 2,
-          "name": "Professor's Research",
-          "set": "P-A",
-          "number": "7"
-        },
-        {
-          "id": "B1-225",
-          "count": 1,
-          "name": "Copycat",
+          "name": "Torchic",
           "set": "B1",
-          "number": "225"
+          "number": "33"
         },
         {
-          "id": "B1-223",
-          "count": 1,
-          "name": "May",
+          "id": "B1-36",
+          "count": 2,
+          "name": "Mega Blaziken ex",
           "set": "B1",
-          "number": "223"
+          "number": "36"
         },
         {
-          "id": "A2b-70",
-          "count": 1,
-          "name": "Pokémon Center Lady",
-          "set": "A2b",
-          "number": "70"
-        },
-        {
-          "id": "A1-225",
-          "count": 1,
-          "name": "Sabrina",
-          "set": "A1",
-          "number": "225"
-        },
-        {
-          "id": "B1-217",
+          "id": "B3-24",
           "count": 2,
-          "name": "Flame Patch",
-          "set": "B1",
-          "number": "217"
-        },
-        {
-          "id": "PROMO-A-5",
-          "count": 2,
-          "name": "Poké Ball",
-          "set": "P-A",
-          "number": "5"
-        },
-        {
-          "id": "B2-145",
-          "count": 1,
-          "name": "Lucky Ice Pop",
-          "set": "B2",
-          "number": "145"
-        },
-        {
-          "id": "A2-147",
-          "count": 1,
-          "name": "Giant Cape",
-          "set": "A2",
-          "number": "147"
-        },
-        {
-          "id": "B2-147",
-          "count": 1,
-          "name": "Protective Poncho",
-          "set": "B2",
-          "number": "147"
-        }
-      ],
-      "listSource": "https://play.limitlesstcg.com/tournament/6a44fdc1c87cd9ff0a3145ed/player/a2lbabar08/decklist"
-    },
-    {
-      "rank": 20,
-      "previousRank": null,
-      "name": "Butterfree Mega Sceptile ex",
-      "tier": "C",
-      "wilsonLowerBoundPct": 47.19,
-      "winratePct": 48.16,
-      "sharePct": 3.86,
-      "games": 1549,
-      "record": "746-756-47",
-      "cards": [
-        {
-          "id": "B3b-1",
-          "count": 2,
-          "name": "Caterpie",
-          "set": "B3b",
-          "number": "1"
-        },
-        {
-          "id": "B3b-2",
-          "count": 2,
-          "name": "Metapod",
-          "set": "B3b",
-          "number": "2"
-        },
-        {
-          "id": "B3b-3",
-          "count": 2,
-          "name": "Butterfree",
-          "set": "B3b",
-          "number": "3"
-        },
-        {
-          "id": "B3-5",
-          "count": 1,
-          "name": "Treecko",
+          "name": "Castform Sunny Form",
           "set": "B3",
-          "number": "5"
-        },
-        {
-          "id": "B3-6",
-          "count": 1,
-          "name": "Grovyle",
-          "set": "B3",
-          "number": "6"
-        },
-        {
-          "id": "B3-8",
-          "count": 1,
-          "name": "Mega Sceptile ex",
-          "set": "B3",
-          "number": "8"
+          "number": "24"
         },
         {
           "id": "PROMO-A-7",
@@ -2245,42 +2126,161 @@
           "number": "150"
         },
         {
-          "id": "A1-223",
+          "id": "A1-225",
           "count": 1,
-          "name": "Giovanni",
+          "name": "Sabrina",
           "set": "A1",
-          "number": "223"
+          "number": "225"
         },
         {
-          "id": "B1a-67",
+          "id": "PROMO-A-5",
           "count": 2,
-          "name": "Quick-Grow Extract",
-          "set": "B1a",
-          "number": "67"
-        },
-        {
-          "id": "PROMO-A-2",
-          "count": 1,
-          "name": "X Speed",
+          "name": "Poké Ball",
           "set": "P-A",
-          "number": "2"
+          "number": "5"
         },
         {
-          "id": "A3-147",
-          "count": 1,
-          "name": "Leaf Cape",
+          "id": "A3-144",
+          "count": 2,
+          "name": "Rare Candy",
           "set": "A3",
+          "number": "144"
+        },
+        {
+          "id": "B1-217",
+          "count": 2,
+          "name": "Flame Patch",
+          "set": "B1",
+          "number": "217"
+        },
+        {
+          "id": "B2-147",
+          "count": 1,
+          "name": "Protective Poncho",
+          "set": "B2",
           "number": "147"
         },
         {
-          "id": "B3-153",
+          "id": "B2b-69",
           "count": 2,
-          "name": "Fragrant Forest",
-          "set": "B3",
+          "name": "Hiking Trail",
+          "set": "B2b",
+          "number": "69"
+        }
+      ],
+      "listSource": "https://play.limitlesstcg.com/tournament/6a49ad1a063cb29d318e36c9/player/hofuruhoshi/decklist"
+    },
+    {
+      "rank": 20,
+      "previousRank": null,
+      "name": "Mega Altaria ex Gourgeist",
+      "tier": "C",
+      "wilsonLowerBoundPct": 47.43,
+      "winratePct": 51.88,
+      "sharePct": 0.57,
+      "games": 239,
+      "record": "124-106-9",
+      "cards": [
+        {
+          "id": "B2-71",
+          "count": 2,
+          "name": "Pumpkaboo",
+          "set": "B2",
+          "number": "71"
+        },
+        {
+          "id": "B2-72",
+          "count": 2,
+          "name": "Gourgeist",
+          "set": "B2",
+          "number": "72"
+        },
+        {
+          "id": "B1-196",
+          "count": 2,
+          "name": "Swablu",
+          "set": "B1",
+          "number": "196"
+        },
+        {
+          "id": "B1-102",
+          "count": 2,
+          "name": "Mega Altaria ex",
+          "set": "B1",
+          "number": "102"
+        },
+        {
+          "id": "B1-106",
+          "count": 1,
+          "name": "Jirachi",
+          "set": "B1",
+          "number": "106"
+        },
+        {
+          "id": "A3-80",
+          "count": 1,
+          "name": "Comfey",
+          "set": "A3",
+          "number": "80"
+        },
+        {
+          "id": "B1-109",
+          "count": 1,
+          "name": "Chingling",
+          "set": "B1",
+          "number": "109"
+        },
+        {
+          "id": "PROMO-A-7",
+          "count": 2,
+          "name": "Professor's Research",
+          "set": "P-A",
+          "number": "7"
+        },
+        {
+          "id": "B1-225",
+          "count": 2,
+          "name": "Copycat",
+          "set": "B1",
+          "number": "225"
+        },
+        {
+          "id": "A1-225",
+          "count": 1,
+          "name": "Sabrina",
+          "set": "A1",
+          "number": "225"
+        },
+        {
+          "id": "B1-226",
+          "count": 1,
+          "name": "Lisia",
+          "set": "B1",
+          "number": "226"
+        },
+        {
+          "id": "A2-150",
+          "count": 1,
+          "name": "Cyrus",
+          "set": "A2",
+          "number": "150"
+        },
+        {
+          "id": "PROMO-A-5",
+          "count": 1,
+          "name": "Poké Ball",
+          "set": "P-A",
+          "number": "5"
+        },
+        {
+          "id": "B2-153",
+          "count": 1,
+          "name": "Training Area",
+          "set": "B2",
           "number": "153"
         }
       ],
-      "listSource": "https://play.limitlesstcg.com/tournament/6a4c37ea063cb29d318e54de/player/andrewbreaker/decklist"
+      "listSource": "https://play.limitlesstcg.com/tournament/6a5d79f052c24ac2da646ef0/player/shinra67/decklist"
     }
   ]
 }

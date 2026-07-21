@@ -49,3 +49,6 @@ agy.log
 public/videos/*.mp4
 public/videos/*.webm
 public/videos/manifest.json
+
+# Cloned repositories / test scripts
+pi/

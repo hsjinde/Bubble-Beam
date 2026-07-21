@@ -55,15 +55,12 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
       <table className="w-full text-sm md:min-w-[640px]">
         <thead>
           <tr className="border-b border-[#bfe3f5] text-left text-[#2a6f97]">
-            <th scope="col" className="px-2 py-2 font-bold md:px-3">
-              #
-            </th>
             <th
               scope="col"
-              className="px-1 py-2 font-bold whitespace-nowrap md:px-2"
-              title="與上次更新相比的名次變化"
+              className="px-2 py-2 font-bold whitespace-nowrap md:px-3"
+              title="名次；旁邊是與上次更新相比的變化"
             >
-              變化
+              #
             </th>
             <th scope="col" className="px-2 py-2 font-bold md:px-3">
               Tier
@@ -100,9 +97,11 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
                     d.tier === "S" ? "bg-[#f4fbff]" : ""
                   }`}
                 >
-                  <td className="px-2 py-2 font-bold text-[#2a6f97] md:px-3">{d.rank}</td>
-                  <td className="px-1 py-2 whitespace-nowrap md:px-2">
-                    <RankChangeBadge deck={d} />
+                  <td className="px-2 py-2 whitespace-nowrap md:px-3">
+                    <span className="inline-flex items-center gap-1.5">
+                      <span className="font-bold text-[#2a6f97]">{d.rank}</span>
+                      <RankChangeBadge deck={d} />
+                    </span>
                   </td>
                   <td className="px-2 py-2 md:px-3">
                     <TierBadge tier={d.tier} />
@@ -144,7 +143,7 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
                 </tr>
                 {isExpanded && (
                   <tr className="border-b border-[#eef7fc] last:border-0">
-                    <td colSpan={8} className="p-0">
+                    <td colSpan={7} className="p-0">
                       <ExpandedList deck={d} />
                     </td>
                   </tr>

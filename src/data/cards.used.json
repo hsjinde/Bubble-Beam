@@ -99,6 +99,11 @@
     "nameEN": "Oricorio",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/66.webp"
   },
+  "A3-80": {
+    "id": "A3-80",
+    "nameEN": "Comfey",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/80.webp"
+  },
   "A3-84": {
     "id": "A3-84",
     "nameEN": "Tapu Lele",
@@ -108,11 +113,6 @@
     "id": "A3-144",
     "nameEN": "Rare Candy",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/144.webp"
-  },
-  "A3-147": {
-    "id": "A3-147",
-    "nameEN": "Leaf Cape",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/147.webp"
   },
   "A3a-7": {
     "id": "A3a-7",
@@ -254,15 +254,20 @@
     "nameEN": "Magnezone",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1a/26.webp"
   },
-  "B1a-67": {
-    "id": "B1a-67",
-    "nameEN": "Quick-Grow Extract",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1a/67.webp"
-  },
   "B1a-68": {
     "id": "B1a-68",
     "nameEN": "Clemont",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1a/68.webp"
+  },
+  "B2-71": {
+    "id": "B2-71",
+    "nameEN": "Pumpkaboo",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/71.webp"
+  },
+  "B2-72": {
+    "id": "B2-72",
+    "nameEN": "Gourgeist",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/72.webp"
   },
   "B2-145": {
     "id": "B2-145",
@@ -389,11 +394,6 @@
     "nameEN": "Korrina",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/149.webp"
   },
-  "B3-153": {
-    "id": "B3-153",
-    "nameEN": "Fragrant Forest",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/153.webp"
-  },
   "B3-154": {
     "id": "B3-154",
     "nameEN": "Arena of Antiquity",
@@ -423,21 +423,6 @@
     "id": "B3a-73",
     "nameEN": "Professor Turo",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/73.webp"
-  },
-  "B3b-1": {
-    "id": "B3b-1",
-    "nameEN": "Caterpie",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/1.webp"
-  },
-  "B3b-2": {
-    "id": "B3b-2",
-    "nameEN": "Metapod",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/2.webp"
-  },
-  "B3b-3": {
-    "id": "B3b-3",
-    "nameEN": "Butterfree",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/3.webp"
   },
   "B3b-15": {
     "id": "B3b-15",
