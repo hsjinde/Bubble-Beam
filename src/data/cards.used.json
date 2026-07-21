@@ -99,11 +99,6 @@
     "nameEN": "Oricorio",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/66.webp"
   },
-  "A3-80": {
-    "id": "A3-80",
-    "nameEN": "Comfey",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/80.webp"
-  },
   "A3-84": {
     "id": "A3-84",
     "nameEN": "Tapu Lele",
@@ -209,6 +204,16 @@
     "nameEN": "Mega Absol ex",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/151.webp"
   },
+  "B1-155": {
+    "id": "B1-155",
+    "nameEN": "Deino",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/155.webp"
+  },
+  "B1-157": {
+    "id": "B1-157",
+    "nameEN": "Hydreigon",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/157.webp"
+  },
   "B1-184": {
     "id": "B1-184",
     "nameEN": "Eevee",
@@ -258,16 +263,6 @@
     "id": "B1a-68",
     "nameEN": "Clemont",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1a/68.webp"
-  },
-  "B2-71": {
-    "id": "B2-71",
-    "nameEN": "Pumpkaboo",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/71.webp"
-  },
-  "B2-72": {
-    "id": "B2-72",
-    "nameEN": "Gourgeist",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/72.webp"
   },
   "B2-145": {
     "id": "B2-145",
