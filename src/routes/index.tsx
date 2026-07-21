@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { VideoBackdrop } from "@/components/VideoBackdrop";
-import { Piplup } from "@/components/Piplup";
 import { Doodles } from "@/components/Doodles";
 import { GuideEntry } from "@/components/GuideEntry";
 
@@ -25,9 +24,8 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  // touch-action: none 讓觸控拖曳交給 pointermove（波加曼跟隨），不觸發捲動/下拉重整
   return (
-    <div className="fixed inset-0 overflow-hidden" style={{ touchAction: "none" }}>
+    <div className="fixed inset-0 overflow-hidden">
       {/* 1. Backdrop */}
       <VideoBackdrop />
 
@@ -60,9 +58,6 @@ function Index() {
 
       {/* Guide entrance */}
       <GuideEntry />
-
-      {/* 4. Piplup */}
-      <Piplup />
     </div>
   );
 }
