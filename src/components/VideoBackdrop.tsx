@@ -136,6 +136,7 @@ export function VideoBackdrop() {
           onReady: (e: any) => {
             e.target.mute();
             e.target.playVideo();
+            e.target.getIframe()?.setAttribute("tabindex", "-1");
           },
           onStateChange: (e: any) => {
             if (e.data === window.YT.PlayerState.ENDED) {
@@ -178,24 +179,31 @@ export function VideoBackdrop() {
       id="video-backdrop"
       data-testid="video-mode"
       data-video-mode={dataMode}
+      aria-hidden="true"
       className="fixed inset-0 z-0 overflow-hidden"
       style={{
-        backgroundColor: "#bfe3f5",
+        backgroundColor: "var(--guide-tint)",
         backgroundImage: `
           radial-gradient(rgba(255,255,255,0.35) 1px, transparent 1px),
-          radial-gradient(rgba(42,111,151,0.08) 1px, transparent 1px),
+          radial-gradient(color-mix(in srgb, var(--guide-ink) 8%, transparent) 1px, transparent 1px),
           repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0 2px, transparent 2px 6px),
-          repeating-linear-gradient(-45deg, rgba(42,111,151,0.03) 0 2px, transparent 2px 6px)
+          repeating-linear-gradient(-45deg, color-mix(in srgb, var(--guide-ink) 3%, transparent) 0 2px, transparent 2px 6px)
         `,
         backgroundSize: "14px 14px, 22px 22px, 100% 100%, 100% 100%",
         backgroundPosition: "0 0, 7px 11px, 0 0, 0 0",
       }}
     >
+      <style>{`
+        @keyframes video-fade-in {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+      `}</style>
       {mode === "youtube" && (
         <div
           ref={iframeWrapRef}
           className="absolute"
-          style={{ pointerEvents: "none" }}
+          style={{ pointerEvents: "none", animation: "video-fade-in 500ms ease-out" }}
         >
           <div ref={hostRef} style={{ width: "100%", height: "100%" }} />
         </div>
@@ -208,9 +216,10 @@ export function VideoBackdrop() {
           muted
           autoPlay
           playsInline
+          tabIndex={-1}
           onEnded={() => setLocalIndex((i) => (i + 1) % localList.length)}
           className="absolute inset-0 h-full w-full"
-          style={{ objectFit: "cover", pointerEvents: "none" }}
+          style={{ objectFit: "cover", pointerEvents: "none", animation: "video-fade-in 500ms ease-out" }}
         />
       )}
     </div>

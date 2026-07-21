@@ -30,7 +30,10 @@ function Index() {
       <VideoBackdrop />
 
       {/* 2. Tint overlay */}
-      <div className="fixed inset-0 z-10" style={{ backgroundColor: "rgba(191,227,245,0.25)" }} />
+      <div
+        className="fixed inset-0 z-10"
+        style={{ backgroundColor: "color-mix(in srgb, var(--guide-tint) 25%, transparent)" }}
+      />
 
       {/* 3. Doodle layer */}
       <div
@@ -43,11 +46,12 @@ function Index() {
           className="absolute top-5 left-5 select-none sm:top-6 sm:left-8"
           style={{
             fontFamily: "'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', 'Segoe Print', cursive",
-            color: "#2a6f97",
+            color: "var(--guide-ink)",
             fontSize: "clamp(1.9rem, 8vw, 3rem)",
             fontWeight: 700,
             transform: "rotate(-4deg)",
-            textShadow: "2px 2px 0 rgba(255,255,255,0.6)",
+            textShadow:
+              "0 0 16px rgba(255,255,255,0.95), 0 0 6px rgba(255,255,255,0.95), 2px 2px 0 rgba(255,255,255,0.7)",
             letterSpacing: "0.02em",
           }}
         >

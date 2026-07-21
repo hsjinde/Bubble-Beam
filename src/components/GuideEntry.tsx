@@ -24,12 +24,12 @@ export function GuideEntry() {
             "repeating-linear-gradient(to right, rgba(95,168,211,0.6) 0 6px, transparent 6px 12px)",
         }}
       />
-      <span className="text-[0.7rem] leading-snug text-guide-ink/75 sm:text-sm">
+      <span className="text-[0.7rem] leading-snug text-guide-ink sm:text-sm">
         Top 20 即時排行
         <br />
         繁中牌組攻略
       </span>
-      <span className="self-end text-sm text-guide-accent transition-transform duration-300 group-hover:translate-x-1 sm:text-base">
+      <span className="self-end text-sm text-guide-ink transition-transform duration-300 group-hover:translate-x-1 sm:text-base">
         →
       </span>
     </Link>

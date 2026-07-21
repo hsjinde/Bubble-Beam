@@ -15,7 +15,7 @@ interface Doodle {
   rotate: number;
 }
 
-const COLORS = ["#2a6f97", "#5fa8d3", "#ffffff"];
+const COLORS = ["var(--guide-ink)", "var(--guide-accent)", "#ffffff"];
 
 // Positions clustered around edges/corners, avoiding center (30-70%, 30-70%)
 const EDGE_POSITIONS: Array<{ left: string; top: string }> = [
@@ -106,11 +106,17 @@ interface Droplet {
 }
 
 export function Doodles() {
-  const [doodles] = useState<Doodle[]>(() => makeDoodles());
+  const [doodles, setDoodles] = useState<Doodle[]>([]);
   const [droplets, setDroplets] = useState<Droplet[]>([]);
   const dropletIdRef = useRef(0);
   const lastSpawnRef = useRef(0);
   const dropletsRef = useRef<Droplet[]>([]);
+
+  // 隨機屬性只能在 client mount 後才算：SSR 與首次 client render 都輸出空陣列,
+  // 避免 Math.random() 兩邊算出不同值造成 hydration mismatch。
+  useEffect(() => {
+    setDoodles(makeDoodles());
+  }, []);
 
   useEffect(() => {
     dropletsRef.current = droplets;
@@ -134,7 +140,7 @@ export function Doodles() {
   }, []);
 
   return (
-    <>
+    <div aria-hidden="true">
       <style>{`
         @keyframes doodle-drift-y {
           0%, 100% { transform: translateY(0) rotate(var(--r,0deg)) scale(1); }
@@ -181,14 +187,14 @@ export function Doodles() {
           <svg width="14" height="18" viewBox="0 0 14 18" fill="none">
             <path
               d="M7 2 Q11 8 11 12 Q11 16 7 16 Q3 16 3 12 Q3 8 7 2 Z"
-              stroke="#2a6f97"
+              stroke="var(--guide-ink)"
               strokeWidth="1.6"
               strokeLinejoin="round"
-              fill="rgba(95,168,211,0.35)"
+              fill="color-mix(in srgb, var(--guide-accent) 35%, transparent)"
             />
           </svg>
         </div>
       ))}
-    </>
+    </div>
   );
 }
