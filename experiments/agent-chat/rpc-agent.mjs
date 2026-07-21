@@ -70,8 +70,99 @@ export function spawnAgent({ model, cwd, name }) {
   };
 }
 
-// Self-test: run this file directly to smoke-test that pi spawns and
-// responds to a basic RPC command.
+/**
+ * Resolves once the freshly spawned process responds to a `get_state`
+ * command, confirming pi actually started and is accepting RPC commands.
+ * Rejects on timeout, which signals a spawn/startup failure (e.g. `pi`
+ * missing from PATH, or an invalid --model pattern).
+ *
+ * @param {ReturnType<typeof spawnAgent>} agent
+ * @param {number} timeoutMs
+ * @returns {Promise<void>}
+ */
+export function waitForReady(agent, timeoutMs) {
+  return new Promise((resolve, reject) => {
+    const requestId = `ready-check-${Date.now()}`;
+    const timer = setTimeout(() => {
+      reject(new Error(`agent did not respond within ${timeoutMs}ms of spawn`));
+    }, timeoutMs);
+
+    agent.onEvent((event) => {
+      if (
+        event.type === "response" &&
+        event.command === "get_state" &&
+        event.id === requestId
+      ) {
+        clearTimeout(timer);
+        resolve();
+      }
+    });
+
+    agent.send({ type: "get_state", id: requestId });
+  });
+}
+
+/**
+ * Resolves when the agent emits `agent_settled` (fully done: no pending
+ * retry, compaction retry, or queued follow-up). Rejects if an
+ * error-type `message_update` delta arrives first, or if `timeoutMs`
+ * elapses.
+ *
+ * @param {ReturnType<typeof spawnAgent>} agent
+ * @param {number} timeoutMs
+ * @returns {Promise<void>}
+ */
+export function waitForSettled(agent, timeoutMs) {
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(() => {
+      reject(new Error(`waitForSettled timed out after ${timeoutMs}ms`));
+    }, timeoutMs);
+
+    agent.onEvent((event) => {
+      if (event.type === "agent_settled") {
+        clearTimeout(timer);
+        resolve();
+        return;
+      }
+      if (
+        event.type === "message_update" &&
+        event.assistantMessageEvent?.type === "error"
+      ) {
+        clearTimeout(timer);
+        reject(
+          new Error(
+            `agent error: ${event.assistantMessageEvent.reason ?? "unknown"}`,
+          ),
+        );
+      }
+    });
+  });
+}
+
+/**
+ * Fetches the text of the agent's last assistant message.
+ *
+ * @param {ReturnType<typeof spawnAgent>} agent
+ * @returns {Promise<string>}
+ */
+export function getLastText(agent) {
+  return new Promise((resolve) => {
+    const requestId = `get-last-text-${Date.now()}`;
+    agent.onEvent((event) => {
+      if (
+        event.type === "response" &&
+        event.command === "get_last_assistant_text" &&
+        event.id === requestId
+      ) {
+        resolve(event.data?.text ?? "");
+      }
+    });
+    agent.send({ type: "get_last_assistant_text", id: requestId });
+  });
+}
+
+// Self-test: run this file directly to smoke-test spawn + prompt + settle
+// + fetch-last-text against a real pi process.
 if (process.argv[1] && process.argv[1].endsWith("rpc-agent.mjs")) {
   const agent = spawnAgent({
     model: "claude-sonnet-4-5",
@@ -79,21 +170,18 @@ if (process.argv[1] && process.argv[1].endsWith("rpc-agent.mjs")) {
     name: "SelfTest",
   });
 
-  agent.onEvent((event) => {
-    if (event.type === "response" && event.command === "get_state") {
-      console.log("get_state response:", JSON.stringify(event.data));
+  agent.send({ type: "prompt", message: "Say hello in exactly one short sentence." });
+
+  waitForSettled(agent, 60000)
+    .then(() => getLastText(agent))
+    .then((text) => {
+      console.log("last assistant text:", text);
       agent.kill();
       process.exit(0);
-    }
-  });
-
-  setTimeout(() => {
-    agent.send({ type: "get_state", id: "self-test-1" });
-  }, 500);
-
-  setTimeout(() => {
-    console.error("self-test timed out waiting for get_state response");
-    agent.kill();
-    process.exit(1);
-  }, 10000);
+    })
+    .catch((err) => {
+      console.error("self-test failed:", err.message);
+      agent.kill();
+      process.exit(1);
+    });
 }
