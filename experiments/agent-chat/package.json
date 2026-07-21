@@ -1,0 +1,9 @@
+{
+  "name": "agent-chat-demo",
+  "private": true,
+  "type": "module",
+  "description": "POC: two pi RPC agents talking to each other via a relay script.",
+  "engines": {
+    "node": ">=22"
+  }
+}
