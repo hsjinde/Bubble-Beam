@@ -104,9 +104,14 @@ export function waitForReady(agent, timeoutMs) {
 
 /**
  * Resolves when the agent emits `agent_settled` (fully done: no pending
- * retry, compaction retry, or queued follow-up). Rejects if an
- * error-type `message_update` delta arrives first, or if `timeoutMs`
- * elapses.
+ * retry, compaction retry, or queued follow-up). Rejects if `timeoutMs`
+ * elapses, or if either of pi's two observed error-signaling shapes
+ * arrives first:
+ *   - an error-type `message_update` delta
+ *     (`event.assistantMessageEvent?.type === "error"`)
+ *   - a `message_start` or `turn_end` event carrying
+ *     `event.stopReason === "error"` (with `event.errorMessage` describing
+ *     the failure)
  *
  * @param {ReturnType<typeof spawnAgent>} agent
  * @param {number} timeoutMs
@@ -132,6 +137,18 @@ export function waitForSettled(agent, timeoutMs) {
         reject(
           new Error(
             `agent error: ${event.assistantMessageEvent.reason ?? "unknown"}`,
+          ),
+        );
+        return;
+      }
+      if (
+        (event.type === "message_start" || event.type === "turn_end") &&
+        event.stopReason === "error"
+      ) {
+        clearTimeout(timer);
+        reject(
+          new Error(
+            `agent error: ${event.errorMessage ?? "unknown"}`,
           ),
         );
       }
