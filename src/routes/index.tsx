@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="fixed inset-0 overflow-hidden">
+    <main className="fixed inset-0 overflow-hidden" aria-label="波加曼粉絲遊樂場首頁">
       {/* 1. Backdrop */}
       <VideoBackdrop />
 
@@ -62,6 +62,6 @@ function Index() {
 
       {/* Guide entrance */}
       <GuideEntry />
-    </div>
+    </main>
   );
 }

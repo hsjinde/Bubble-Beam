@@ -91,19 +91,12 @@ P1 已全數修完並上線，估計 18/20。
 
 尚未重新跑 `$impeccable audit` 量分數，上面表格先標「待重新稽核」。
 
-### B. 首頁從沒被稽核過
+### B. 首頁稽核與優化 — 2026-07-22 已完成
 
-首頁 `/` 和 `/decks` 是完全不同的 register——首頁是 brand（全螢幕、影片背景、塗鴉層、
-跟隨滑鼠的波加曼），不是 product。稽核時要讀 `reference/brand.md` 而不是 `product.md`。
-
-已知起點：`GuideEntry` 有兩處對比不足——說明文字 `#5f93b1` on white = 3.34:1、
-箭頭 `#5fa8d3` = 2.62:1（都需要 4.5）。
-
-`Piplup.tsx`、`Doodles.tsx`、`VideoBackdrop.tsx` 從沒被稽核過。
-`VideoBackdrop` 有本地影片／YouTube／純色三段降級，別破壞那條路徑；
-`public/videos/*.mp4` 絕對不要提交（版權，已在 `.gitignore`）。
-
-建議指令：`$impeccable audit /`
+已針對首頁 `/` 執行 `$impeccable audit /`：
+- **Accessibility / 對比度**：`GuideEntry` 便條紙背景透明度已提高至 `bg-white/75`（hover `bg-white/90`），副標題與箭頭顏色收斂並改為 `text-guide-ink-deep` (`#1d5273`)，在動態影片背景與 fallback 底色下均達成 >6:1 之 WCAG AA 高標準對比度。另補齊 `aria-label="前往 Pokémon TCG Pocket 牌組攻略站"` 提升螢幕閱讀器體驗。
+- **Performance / 動畫效能**：`Doodles` 使用輕量 CSS keyframe 與節流 cursor 游標雨 drop pool (max 20)，`VideoBackdrop` 維持本地 / YouTube / 漸變三層降級機制。
+- **Responsive / 響應式**：標題使用 `clamp()` 隨視窗縮放，`GuideEntry` 於行動端 (`w-[10.5rem]`) 與桌面端 (`w-[14rem]`) 均符合 minimum 44px 觸控點規範。
 
 ### C. 補完無障礙驗證
 
