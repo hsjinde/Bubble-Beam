@@ -7,7 +7,7 @@ interface PokopiaSearch {
   b?: string;
 }
 
-export const Route = createFileRoute("/pokopia")({
+export const Route = createFileRoute("/pokopia/")({
   validateSearch: (search: Record<string, unknown>): PokopiaSearch => ({
     b: typeof search.b === "string" ? search.b : undefined,
   }),

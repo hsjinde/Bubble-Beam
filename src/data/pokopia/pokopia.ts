@@ -152,36 +152,150 @@ export const BOOKMARKS: Bookmark[] = [
 ];
 
 /**
- * 建築靈感影片：熱門的 Pokopia 建築／佈局教學。全部經 YouTube oEmbed 查證存在，
- * `title`／`channel` 為原始資料；縮圖走 i.ytimg.com/vi/{id}/hqdefault.jpg，連結
- * 走 youtube.com/watch?v={id}。挑選兼顧「靈感展示 / 設計技巧 / 新手 / 實作 build」。
+ * 建築靈感影片：Pokopia 建築教學／展示，按「建築內容類型」分 7 區（見 VideoGroup）。
+ * 日系精緻建築主播（使用者精選清單）與英文速建教學不分語言、按內容混排。
+ * `title`／`channel` 為 YouTube 原始資料（標題保留日文／英文原文，符合本站專有名詞慣例）；
+ * 縮圖走 i.ytimg.com/vi/{id}/hqdefault.jpg，連結走 youtube.com/watch?v={id}。
+ *
+ * 選片依據（2026-07）：從使用者精選清單的主播出發，抓各頻道 videos 頁的觀看數／發布時間
+ * 取「近期熱門」，並逐支用 YouTube oEmbed 查證存在＋取回官方標題（同時濾掉混入頻道的
+ * 他遊戲影片，如 Disney Dreamlight Valley）。更新時沿用同一套查證流程，別憑印象填 id。
  */
 export const VIDEOS: VideoInspiration[] = [
+  // ── 城市・街景 ─────────────────────────────────────────────────
   {
-    id: "7mnOUEO8WdE",
+    id: "ZgwE9xk-MOQ",
+    title: "【島紹介】ぽこポケとは思えない「サイバーパンクな街」が凄すぎる！【ぽこあポケモン】",
+    channel: "すくると",
+    blurb: "賽博龐克風城市島導覽，霓虹高樓的震撼範例。",
+    group: "city",
+  },
+  {
+    id: "jmbUoFY4B24",
     title:
-      "8 Amazing Builds You Need for Pokemon Pokopia Inspiration and Ideas Haunted Mansions, Farms and More",
-    channel: "MSensei NTD",
-    blurb: "8 個腦洞大開的建築展示，鬼屋、農場都有，找靈感首選。",
+      "Pokémon Pokopia~PALETTE TOWN ENTRY DESIGN & SKYSCRAPERS~BUILDING A HUGE MODERN CITY~#pokopia  #7",
+    channel: "HorribleGaming",
+    blurb: "Palette Town 主題的都會入口與摩天樓群，大城市感十足。",
+    group: "city",
   },
   {
-    id: "vWWQdwB6QTc",
+    id: "vghz7UzZNqs",
+    title: "【島紹介】1000時間プレイで作られた超巨大建築が凄すぎる！【ぽこあポケモン】",
+    channel: "すくると",
+    blurb: "遊玩上千小時打造的超巨大建築島導覽，開眼界找靈感。",
+    group: "city",
+  },
+  // ── 住宅・別墅 ─────────────────────────────────────────────────
+  {
+    id: "2PXUx1F1_VA",
+    title: "【ぽこポケ】初期地形を生かす⛱️レストランの再建と海辺の自宅づくり🏝️",
+    channel: "Haruchi create",
+    blurb: "活用初期地形，重建餐廳並蓋海邊自宅（發售初期經典）。",
+    group: "house",
+  },
+  {
+    id: "-5um9Org_Ys",
+    title: "【ぽこポケ】初期地形を生かす🔰地下倉庫のある水車小屋作り",
+    channel: "Haruchi create",
+    blurb: "有地下倉庫的水車小屋，順著地形而建的機能住宅（你清單精選）。",
+    group: "house",
+  },
+  {
+    id: "tEU_Az77RT0",
     title:
-      "Overwhelmed? 12 Beginner Design Tips to Plan a Pretty & Functional Starter Base in Pokopia",
-    channel: "CloudySkies Gaming",
-    blurb: "新手入門：12 個把起始基地規劃得又美又實用的技巧。",
+      "Pokémon Pokopia~BEGINNER PLAYER HOME STORAGE HOUSE DESIGN~BUILDING A HOME IN #pokopia~Home Design",
+    channel: "HorribleGaming",
+    blurb: "新手玩家家園＋收納屋，機能與外觀一次到位。",
+    group: "house",
   },
   {
-    id: "qqZ3TNA91AM",
-    title: "Pokemon Pokopia - Design Tips & Build Ideas You Should Know!",
-    channel: "Crossing Channel",
-    blurb: "該懂的設計原則與 build 點子，快速提升整體質感。",
+    id: "8JHUVsq-L2Y",
+    title:
+      "Pokémon Pokopia~REALISTIC MODERN VILLA HABITAT HOME DESIGN~BLEAK BEACH~SPEED BUILD~#pokopia",
+    channel: "HorribleGaming",
+    blurb: "寫實現代別墅，蓋在荒涼海灘上的質感住宅。",
+    group: "house",
+  },
+  // ── 商店・餐飲 ─────────────────────────────────────────────────
+  {
+    id: "aLZAW3kcS9M",
+    title:
+      "【ぽこあ建築】ドライブスルー付き！ぽこあポケモンの世界にマクドナルドを復活させてみた【ぽこあポケモン】",
+    channel: "涼太ぱんけーき♭",
+    blurb: "附得來速車道的麥當勞，速食店招牌的還原度爆表。",
+    group: "shop",
   },
   {
-    id: "BSzj9XqFnw0",
-    title: "You Can Design BETTER In Pokopia || Easy Tips & Tricks",
-    channel: "Lex Play",
-    blurb: "簡單易上手的排版小技巧，讓你的島瞬間變好看。",
+    id: "yQo5BmnfX2w",
+    title:
+      "【ぽこポケ】使い方次第で別のアイテムに！アイスクリーム屋さんの作り方＆解説【ぽこあポケモン建築】",
+    channel: "すくると",
+    blurb: "冰淇淋店做法解說，教你用道具巧手拼出小店（你清單精選）。",
+    group: "shop",
+  },
+  {
+    id: "TybuNrH2FLg",
+    title:
+      "Pokémon Pokopia~EASY STARTER CAFE/STOREFRONT HABITAT BUILDING DESIGN~STORAGE BUILDING IDEA",
+    channel: "HorribleGaming",
+    blurb: "新手也能蓋的咖啡廳／店面，附收納建築點子。",
+    group: "shop",
+  },
+  // ── 主題・地標・遊樂 ───────────────────────────────────────────
+  {
+    id: "WNUGARMiE_8",
+    title: "【ぽこあポケモン】本の中から現れる「幻想的な神殿」の作り方│建築│Pokopia",
+    channel: "かぴぱか create",
+    blurb: "從書中浮現的幻想神殿，充滿故事感的主題地標。",
+    group: "landmark",
+  },
+  {
+    id: "Tv9aIqSlPio",
+    title:
+      "期間限定ジラーチイベント！イベント限定アイテムで可愛い星空が見える家を建築してみた！【ぽこあポケモン】",
+    channel: "涼太ぱんけーき♭",
+    blurb: "基拉祈活動限定，能望見星空的浪漫主題屋。",
+    group: "landmark",
+  },
+  {
+    id: "7nBNt4n2CYw",
+    title:
+      "【ぽこあポケモン】ガチで作りこんだ「巨大水上遊園地」のクオリティが限界突破すぎる…！【観覧車】ぽこポケ│建築",
+    channel: "かぴぱか create",
+    blurb: "有摩天輪的巨大水上遊樂園，大型主題設施天花板。",
+    group: "landmark",
+  },
+  // ── 機關・自動化 ───────────────────────────────────────────────
+  {
+    id: "XuwJzDk9y8w",
+    title: "The ONLY Crafting Base You Need in Pokopia! This Build FIXES Storage",
+    channel: "zoibean",
+    blurb: "一次解決收納痛點的製作基地，機能流必看。",
+    group: "automation",
+  },
+  {
+    id: "L_YmoChE4O4",
+    title: "【ぽこポケ】不具合を解決した野菜と木の実自動化施設の徹底解説！サラサラ岩｜クロック回路",
+    channel: "わむのスローライフっぽい",
+    blurb: "蔬菜與木之實全自動化設施徹底解說，電路機關硬核向。",
+    group: "automation",
+  },
+  {
+    id: "uHzBdlva08Y",
+    title:
+      "Pokémon Pokopia~INDUSTRIAL CRAFTING & STORAGE WAREHOUSE~PALETTE TOWN MODERN CITY DESIGN~#pokopia #11",
+    channel: "HorribleGaming",
+    blurb: "工業風製作＋倉儲廠房，把機能區蓋得有模有樣。",
+    group: "automation",
+  },
+  // ── 自然造景 ───────────────────────────────────────────────────
+  {
+    id: "spDVWmZlqh4",
+    title:
+      "Pokémon Pokopia~NATURAL CAMPSITE DESIGN~OVERGROWN NATURAL TOWN AESTHETIC~MULTIPLE HABITATS~ #pokopia",
+    channel: "HorribleGaming",
+    blurb: "野趣露營地，蔓草叢生的自然風小鎮造景。",
+    group: "nature",
   },
   {
     id: "qud4uVkthmY",
@@ -189,12 +303,38 @@ export const VIDEOS: VideoInspiration[] = [
       "POKOPIA Natural Aesthetic PokéCenter & Neighborhood Speed Build | PocoPoke Design Tutorial",
     channel: "Lex Play",
     blurb: "自然風寶可夢中心與街區的實作 speed build，跟著蓋。",
+    group: "nature",
   },
   {
-    id: "TybuNrH2FLg",
+    id: "Bi_xDPh9Vmo",
     title:
-      "Pokémon Pokopia~EASY STARTER CAFE/STOREFRONT HABITAT BUILDING DESIGN~STORAGE BUILDING IDEA",
-    channel: "HorribleGaming",
-    blurb: "新手也能蓋的咖啡廳／店面棲地設計，附收納建築點子。",
+      "【ぽこあ建築】癒やし効果あり？草・虫ポケモン達がのんびり暮らせる楽園を建築【ぽこあポケモン】",
+    channel: "涼太ぱんけーき♭",
+    blurb: "草系與蟲系寶可夢的療癒樂園，綠意盎然的棲地造景。",
+    group: "nature",
+  },
+  // ── 設計技巧・綜合 ─────────────────────────────────────────────
+  {
+    id: "NnJHT0kCq5s",
+    title: "【ぽこポケ】置くだけでかわいい！5種類の乗り物の作り方＆解説【ぽこあポケモン建築】",
+    channel: "すくると",
+    blurb: "只要擺上就很可愛，5 種載具小物的做法解說。",
+    group: "tips",
+  },
+  {
+    id: "vWWQdwB6QTc",
+    title:
+      "Overwhelmed? 12 Beginner Design Tips to Plan a Pretty & Functional Starter Base in Pokopia",
+    channel: "CloudySkies Gaming",
+    blurb: "新手入門：12 個把起始基地規劃得又美又實用的技巧。",
+    group: "tips",
+  },
+  {
+    id: "7mnOUEO8WdE",
+    title:
+      "8 Amazing Builds You Need for Pokemon Pokopia Inspiration and Ideas Haunted Mansions, Farms and More",
+    channel: "MSensei NTD",
+    blurb: "8 個腦洞大開的建築展示，鬼屋、農場都有，找靈感首選。",
+    group: "tips",
   },
 ];

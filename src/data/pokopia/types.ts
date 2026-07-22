@@ -58,6 +58,19 @@ export interface Bookmark {
   icon: string;
 }
 
+/**
+ * 影片分區：以「建築內容類型」為軸，讓玩家依想蓋的東西找靈感。
+ * 日系精緻建築與英文速建教學不分語言、按內容混排（使用者定調）。
+ */
+export type VideoGroup =
+  | "city" // 城市・街景
+  | "house" // 住宅・別墅
+  | "shop" // 商店・餐飲
+  | "landmark" // 主題・地標・遊樂
+  | "automation" // 機關・自動化
+  | "nature" // 自然造景
+  | "tips"; // 設計技巧・綜合
+
 /** YouTube 建築靈感影片（皆經 oEmbed 查證存在，標題／頻道為原始資料）。 */
 export interface VideoInspiration {
   /** YouTube 影片 id，縮圖與連結都由它組出 */
@@ -68,4 +81,6 @@ export interface VideoInspiration {
   channel: string;
   /** 一句繁中說明它適合看什麼 */
   blurb: string;
+  /** 所屬分區；決定在「房屋・住宅設計」或「設計技巧・其他建築」下呈現 */
+  group: VideoGroup;
 }

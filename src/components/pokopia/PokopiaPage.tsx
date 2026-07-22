@@ -6,7 +6,6 @@ import { BuildingFilters } from "./BuildingFilters";
 import { BuildingList } from "./BuildingList";
 import { BuildingDetail } from "./BuildingDetail";
 import { CollectionCard } from "./CollectionCard";
-import { VideoInspiration } from "./VideoInspiration";
 
 interface PokopiaPageProps {
   /** 目前選取的建築 id（來自 URL ?b=），null 表示未選 */
@@ -139,9 +138,6 @@ export function PokopiaPage({ selectedBuildingId, onSelectBuilding }: PokopiaPag
           </div>
         </section>
       )}
-
-      {/* 建築靈感影片（同樣只在瀏覽狀態顯示） */}
-      {!selectedBuilding && <VideoInspiration />}
 
       {/* 手機：詳情以 modal 呈現 */}
       {selectedBuilding && (
