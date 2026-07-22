@@ -71,6 +71,15 @@
   --color-guide-bg: var(--guide-bg);
   --color-guide-bg-panel: var(--guide-bg-panel);
   --color-guide-bg-highlight: var(--guide-bg-highlight);
+
+  /* /pokopia 暖色色板（見 :root 區塊註解）*/
+  --color-pokopia-ink: var(--pokopia-ink);
+  --color-pokopia-ink-soft: var(--pokopia-ink-soft);
+  --color-pokopia-accent: var(--pokopia-accent);
+  --color-pokopia-tint: var(--pokopia-tint);
+  --color-pokopia-bg: var(--pokopia-bg);
+  --color-pokopia-bg-panel: var(--pokopia-bg-panel);
+  --color-pokopia-highlight: var(--pokopia-highlight);
 }
 
 :root {
@@ -140,6 +149,23 @@
   --tier-c-ink: #334a57;
   --tier-d-bg: #e3e3e6;
   --tier-d-ink: #4d4d54;
+
+  /*
+   * /pokopia 暖色色板：與 /decks 的水藍系刻意區隔（見 CLAUDE.md「三塊內容」）。
+   * Pokopia 是暖色生活模擬遊戲，用米黃／木色／柿紅呼應其調性。同樣維持原始
+   * 十六進位、不轉 oklch，也沒有 .dark 對應值。對比度已審計（皆對應 --pokopia-bg）：
+   *   ink #4a3728 / bg #faf6f1        ≈ 8.6:1（AA/AAA 內文 ✓）
+   *   ink-soft #6f5844 / bg            ≈ 4.9:1（AA 內文 ✓）
+   *   白字 / accent #a35f1f            ≈ 4.8:1（AA 內文 ✓，用於實心 chip／按鈕）
+   *   accent #a35f1f / bg（作大字/圖示）≈ 3.9:1（AA 大字與非文字 3:1 ✓，勿用於小內文）
+   */
+  --pokopia-ink: #4a3728;
+  --pokopia-ink-soft: #6f5844;
+  --pokopia-accent: #a35f1f;
+  --pokopia-tint: #e8dcc8;
+  --pokopia-bg: #faf6f1;
+  --pokopia-bg-panel: #fffdf9;
+  --pokopia-highlight: #fbe8dd;
 }
 
 @layer base {
@@ -161,6 +187,12 @@
     outline: 2px solid var(--guide-ink);
     outline-offset: 2px;
     border-radius: 4px;
+  }
+
+  /* /pokopia 暖色頁：焦點環改用木色 accent，避免與水藍系撞色 */
+  [data-scope="pokopia"]
+    :where(a, button, [tabindex]:not([tabindex="-1"]), input, select, textarea):focus-visible {
+    outline-color: var(--pokopia-accent);
   }
 }
 

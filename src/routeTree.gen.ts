@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PokopiaRouteImport } from './routes/pokopia'
 import { Route as DecksIndexRouteImport } from './routes/decks/index'
 import { Route as DecksDeckIdRouteImport } from './routes/decks/$deckId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PokopiaRoute = PokopiaRouteImport.update({
+  id: '/pokopia',
+  path: '/pokopia',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DecksIndexRoute = DecksIndexRouteImport.update({
@@ -31,30 +37,34 @@ const DecksDeckIdRoute = DecksDeckIdRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/pokopia': typeof PokopiaRoute
   '/decks/$deckId': typeof DecksDeckIdRoute
   '/decks/': typeof DecksIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/pokopia': typeof PokopiaRoute
   '/decks/$deckId': typeof DecksDeckIdRoute
   '/decks': typeof DecksIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/pokopia': typeof PokopiaRoute
   '/decks/$deckId': typeof DecksDeckIdRoute
   '/decks/': typeof DecksIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/decks/$deckId' | '/decks/'
+  fullPaths: '/' | '/pokopia' | '/decks/$deckId' | '/decks/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/decks/$deckId' | '/decks'
-  id: '__root__' | '/' | '/decks/$deckId' | '/decks/'
+  to: '/' | '/pokopia' | '/decks/$deckId' | '/decks'
+  id: '__root__' | '/' | '/pokopia' | '/decks/$deckId' | '/decks/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PokopiaRoute: typeof PokopiaRoute
   DecksDeckIdRoute: typeof DecksDeckIdRoute
   DecksIndexRoute: typeof DecksIndexRoute
 }
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pokopia': {
+      id: '/pokopia'
+      path: '/pokopia'
+      fullPath: '/pokopia'
+      preLoaderRoute: typeof PokopiaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/decks/': {
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PokopiaRoute: PokopiaRoute,
   DecksDeckIdRoute: DecksDeckIdRoute,
   DecksIndexRoute: DecksIndexRoute,
 }
