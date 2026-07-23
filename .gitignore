@@ -29,6 +29,9 @@ dist-ssr
 
 # Agent local config / logs / scratch (Claude Code, Antigravity CLI, etc.)
 .claude/settings.local.json
+# git worktree 的實體目錄——內容是同一個 repo 的另一份 checkout，
+# 不能當成一般檔案 commit 進來（會變成巢狀 repo 內容）
+.claude/worktrees/
 .agy/
 .antigravity/
 agy.log
