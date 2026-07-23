@@ -3,6 +3,10 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "engines": {
+    "//": "prebuild 的 generate-sitemap.mjs 用 --experimental-strip-types 直接載入 decks.ts，該旗標自 Node 22.6.0 起可用。低於此版建置會失敗，且失敗點在 prebuild、不易一眼看出。",
+    "node": ">=22.6.0"
+  },
   "scripts": {
     "dev": "vite dev",
     "prebuild": "node scripts/subset-cards.mjs && npm run gen:sitemap",
