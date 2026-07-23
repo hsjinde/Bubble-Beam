@@ -1,7 +1,7 @@
 # Pokémon Pokopia 書籤頁設計文件
 
 **日期**：2026-07-22  
-**狀態**：已核准，進入實作
+**狀態**：⚠️ **已被實作取代（superseded，2026-07-23）**——保留作為設計脈絡的歷史紀錄，**不要照此文件實作**。實際上線的版本見 `d769c4e`／`895b8c9`，差異見文末「實作差異」。
 
 ## 概述
 
@@ -126,3 +126,22 @@ interface CommunityLayout {
 - **選擇方案 B（JSON 資料檔）**：資料與代碼分離，便於未來擴展和維護
 - **前端篩選**：資料量小（45 建築），前端篩選性能足夠，無需後端
 - **無子路由**：詳情用頁面內狀態切換，避免 URL 層級過深
+
+---
+
+## 實作差異（2026-07-23 補記）
+
+實作時發現本文件多處是**憑空發明的資料模型**，實作版改以 pokopia.pokemonhubs.com 的上游社群資料為準。
+以下差異以**實作版為準**：
+
+| 本文件 | 實作版 | 為什麼 |
+|---|---|---|
+| `styles: string[]`（日式／現代／自然／可愛／古風） | `category`（住宅／寶可夢中心／發電／商店設施／裝飾地標）+ `series`（城市／沙地／石頭…） | 原本那組風格 tag 遊戲裡不存在，是憑空捏的；實作版改用遊戲內真實的功能 × 材質分軸 |
+| `communities.json`（10 個「社群佈局方案」） | `collections.json`（8 個主題選集） | 「社群方案」查無來源，等於捏造；改為本站策展的真實建築組合，UI 明確標示非官方 |
+| `pairings.json` 獨立檔 | 併入 `pokopia.ts`，且每筆多一個 `reason` 欄位 | 搭配建議需要說明理由，純 id 陣列不夠 |
+| 建築圖示用 emoji／簡圖 | 真實建築圖（pokopiadex 資產），失敗時 `BuildingImage` 退回功能色塊 | 有真圖就不用 emoji 代打 |
+| `BuildingSearch` / `CommunityCard` | `BuildingFilters` / `CollectionCard` | 隨資料模型更名 |
+| 無子路由，單一 `/routes/pokopia.tsx` | `/routes/pokopia/index.tsx` + `/routes/pokopia/videos.tsx`，另有 `?b=` deep-link 參數 | 多了「影片靈感」分頁（7 個分區、經 oEmbed 查證的 YouTube 影片）；建築詳情可分享連結 |
+| — | 新增 `PokopiaLayout`、`BuildingImage`、`VideoInspiration`、`PokopiaEntry`（首頁入口） | 本文件未涵蓋 |
+
+不變的部分：JSON 靜態資料 + 前端篩選、45 棟建築、書籤導航區、搭配建議與選集區塊。

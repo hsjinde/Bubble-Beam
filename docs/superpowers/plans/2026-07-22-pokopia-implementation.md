@@ -1,5 +1,9 @@
 # Pokémon Pokopia 書籤頁實作計畫
 
+> ⚠️ **本計畫已作廢（2026-07-23）。`/pokopia` 已於 `d769c4e`／`895b8c9` 實作完成，且實作版刻意偏離本計畫。**
+> **不要執行下面的 13 個 task**——照做會用捏造的風格 tag 與「社群佈局方案」覆蓋掉現行以上游真實資料為基礎的實作。
+> 差異對照見 [設計文件的「實作差異」章節](../specs/2026-07-22-pokopia-bookmark-design.md#實作差異2026-07-23-補記)。本檔僅保留作為歷史紀錄。
+
 > **For agentic workers:** RECOMMENDED SUB-SKILL: Use superpowers:subagent-driven-development to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** 新增 `/pokopia` 路由頁面，提供 Pokémon Pokopia 遊戲的自策展書籤與互動建築指南，包含搜尋、篩選、搭配建議和社群方案展示。
