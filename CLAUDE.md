@@ -104,6 +104,16 @@ TanStack Start 檔案式路由。`src/routes/README.md` 有完整慣例表——
 
 **攻略頁配色**是硬編的水系淡藍（`#2a6f97` 深藍字、`#5fa8d3` 邊框、`#bfe3f5` 淺藍、`#eef7fc` 背景），不是走 `styles.css` 的 Tailwind theme token。改攻略頁 UI 時沿用這組色碼保持一致；`styles.css` 的 oklch design system 是 Lovable 模板帶來的，攻略頁沒在用。
 
-**Lovable 連結**：本專案連到 Lovable（見 `AGENTS.md`）。不要改寫已推送的 git 歷史——force push、rebase、amend、squash 都會弄壞 Lovable 端的歷史。目前 repo 沒有設 git remote，同步狀態待使用者決定。
+**Lovable 連結**：本專案連到 Lovable（見 `AGENTS.md`）。不要改寫已推送的 git 歷史——force push、rebase、amend、squash 都會弄壞 Lovable 端的歷史。remote `origin` 指向 `https://github.com/hsjinde/Bubble-Beam.git`，與 Lovable 端的同步狀態待使用者確認。
 
 **相依安裝**：`bunfig.toml` 設了 `minimumReleaseAge = 86400`（24 小時供應鏈防護，擋掉剛發布的版本）。要加例外到 `minimumReleaseAgeExcludes` 前先問使用者。
+
+## Agent skills
+
+### Issue tracker
+
+Issues 走 GitHub Issues（`hsjinde/Bubble-Beam`），用 `gh` CLI 操作。See `docs/agents/issue-tracker.md`.
+
+### Domain docs
+
+單一 context：根目錄 `CONTEXT.md` ＋ `docs/adr/`（目前兩者都尚未建立，需要時才由 `/domain-modeling` 產生）。See `docs/agents/domain.md`.
