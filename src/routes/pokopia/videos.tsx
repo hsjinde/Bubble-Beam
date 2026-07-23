@@ -5,7 +5,7 @@ import { VideoInspiration } from "@/components/pokopia/VideoInspiration";
 
 /**
  * /pokopia/videos：建築影片專屬頁。影片從主頁 /pokopia 搬來獨立成頁，完整 22 支、
- * 7 個建築類型分區。入口在 BookmarkNav（站內連結）。頁首提供 h1 與返回連結，
+ * 7 個建築類型分區。入口在 PokopiaLayout 的 header 導覽列。頁首提供 h1 與返回連結，
  * 分區標題由 VideoInspiration 以 h2 呈現，維持 h1→h2 的階層。
  */
 export const Route = createFileRoute("/pokopia/videos")({

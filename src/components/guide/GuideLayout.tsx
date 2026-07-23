@@ -37,7 +37,7 @@ export function GuideLayout({ children }: { children: ReactNode }) {
           </Link>
           <Link
             to="/decks"
-            className="inline-flex min-h-11 items-center font-semibold text-guide-ink hover:underline [&.active]:underline"
+            className="inline-flex min-h-11 items-center font-semibold text-guide-ink hover:underline"
           >
             牌組攻略
           </Link>

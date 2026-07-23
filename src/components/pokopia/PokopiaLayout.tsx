@@ -35,17 +35,19 @@ export function PokopiaLayout({ children }: { children: ReactNode }) {
               Piplup!
             </span>
           </Link>
-          <Link
-            to="/decks"
-            className="inline-flex min-h-11 items-center font-semibold text-pokopia-ink hover:underline"
-          >
-            牌組攻略
-          </Link>
+          {/* exact：否則 /pokopia/videos 下父路由也會被標成 active，兩個連結同時 aria-current */}
           <Link
             to="/pokopia"
-            className="inline-flex min-h-11 items-center font-semibold text-pokopia-ink hover:underline [&.active]:underline"
+            activeOptions={{ exact: true }}
+            className="inline-flex min-h-11 items-center font-semibold text-pokopia-ink hover:underline"
           >
             Pokopia 建築
+          </Link>
+          <Link
+            to="/pokopia/videos"
+            className="inline-flex min-h-11 items-center font-semibold text-pokopia-ink hover:underline"
+          >
+            建築影片
           </Link>
         </nav>
       </header>

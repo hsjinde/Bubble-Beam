@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router";
 import { BOOKMARKS } from "@/data/pokopia/pokopia";
 
 /**
@@ -39,31 +38,6 @@ export function BookmarkNav() {
   return (
     <nav aria-label="Pokopia 相關資源" className="mt-6">
       <ul className="flex flex-wrap gap-2">
-        {/* 站內主要入口：建築影片專屬頁（非外連，用 Link＋accent 邊框與外部資源區隔） */}
-        <li>
-          <Link
-            to="/pokopia/videos"
-            className="inline-flex min-h-11 items-center gap-2 rounded-full border border-pokopia-accent bg-pokopia-bg-panel px-4 py-2 text-sm font-medium text-pokopia-ink transition-colors hover:bg-pokopia-highlight [&.active]:bg-pokopia-highlight"
-          >
-            <span className="text-pokopia-accent">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={1.75}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <circle cx="12" cy="12" r="9" />
-                <path d="M10 8.5 16 12l-6 3.5Z" />
-              </svg>
-            </span>
-            建築影片
-          </Link>
-        </li>
         {BOOKMARKS.map((bookmark) => (
           <li key={bookmark.label}>
             <a
