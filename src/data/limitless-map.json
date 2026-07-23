@@ -4,20 +4,84 @@
     "limitlessName": "Miraidon ex Magnezone",
     "slug": "/decks/miraidon-ex-b3a-magnezone-b1a"
   },
-  "mega-sceptile-greninja": {
-    "limitlessName": "Mega Sceptile ex Greninja",
-    "slug": "/decks/mega-sceptile-ex-b3-greninja-a1"
-  },
-  "greninja-mega-sableye": {
-    "limitlessName": "Greninja Mega Sableye ex",
-    "slug": "/decks/greninja-a1-mega-sableye-ex-b3b"
-  },
   "suicune-baxcalibur": {
     "limitlessName": "Suicune ex Baxcalibur",
     "slug": "/decks/suicune-ex-a4a-baxcalibur-b2a"
   },
+  "mega-blaziken-greninja": {
+    "limitlessName": "Mega Blaziken ex Greninja",
+    "slug": "/decks/mega-blaziken-ex-b1-greninja-a1"
+  },
+  "mega-sceptile-greninja": {
+    "limitlessName": "Mega Sceptile ex Greninja",
+    "slug": "/decks/mega-sceptile-ex-b3-greninja-a1"
+  },
+  "zoroark-mega-absol": {
+    "limitlessName": "Zoroark ex Mega Absol ex",
+    "slug": "/decks/zoroark-ex-b3-mega-absol-ex-b1"
+  },
+  "mega-altaria-espeon": {
+    "limitlessName": "Mega Altaria ex Espeon",
+    "slug": "/decks/mega-altaria-ex-b1-espeon-b3a"
+  },
+  "indeedee-giratina": {
+    "limitlessName": "Indeedee ex Giratina ex",
+    "slug": "/decks/indeedee-ex-b1-giratina-ex-a2b"
+  },
+  "milotic-eevee-ex": {
+    "limitlessName": "Milotic ex Eevee ex",
+    "slug": "/decks/milotic-ex-b3b-eevee-ex-a3b"
+  },
+  "giratina-darkrai": {
+    "limitlessName": "Giratina ex Darkrai ex",
+    "slug": "/decks/giratina-ex-a2b-darkrai-ex-a2"
+  },
+  "greninja-mega-absol": {
+    "limitlessName": "Greninja Mega Absol ex",
+    "slug": "/decks/greninja-a1-mega-absol-ex-b1"
+  },
   "mega-lucario": {
     "limitlessName": "Mega Lucario ex Lucario",
     "slug": "/decks/mega-lucario-ex-b3-lucario-a2"
+  },
+  "mega-manectric-zeraora": {
+    "limitlessName": "Mega Manectric ex Zeraora",
+    "slug": "/decks/mega-manectric-ex-b2b-zeraora-a3a"
+  },
+  "mega-altaria-chingling": {
+    "limitlessName": "Mega Altaria ex Chingling",
+    "slug": "/decks/mega-altaria-ex-b1-chingling-b1"
+  },
+  "mega-lucario-solo": {
+    "limitlessName": "Mega Lucario ex",
+    "slug": "/decks/mega-lucario-ex-b3"
+  },
+  "magnezone-miraidon": {
+    "limitlessName": "Magnezone Miraidon ex",
+    "slug": "/decks/magnezone-b1a-miraidon-ex-b3a"
+  },
+  "magnezone-ex-magnezone": {
+    "limitlessName": "Magnezone ex Magnezone",
+    "slug": "/decks/magnezone-ex-b3-magnezone-b1a"
+  },
+  "milotic-chien-pao": {
+    "limitlessName": "Milotic ex Chien-Pao ex",
+    "slug": "/decks/milotic-ex-b3b-chien-pao-ex-b2a"
+  },
+  "mega-charizard-entei": {
+    "limitlessName": "Mega Charizard Y ex Entei ex",
+    "slug": "/decks/mega-charizard-y-ex-b1a-entei-ex-a4a"
+  },
+  "mega-blaziken-castform": {
+    "limitlessName": "Mega Blaziken ex Castform Sunny Form",
+    "slug": "/decks/mega-blaziken-ex-b1-castform-sunny-form-b3"
+  },
+  "hydreigon-mega-sableye": {
+    "limitlessName": "Hydreigon Mega Sableye ex",
+    "slug": "/decks/hydreigon-b1-mega-sableye-ex-b3b"
+  },
+  "greninja-mega-sableye": {
+    "limitlessName": "Greninja Mega Sableye ex",
+    "slug": "/decks/greninja-a1-mega-sableye-ex-b3b"
   }
 }
