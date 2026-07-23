@@ -97,7 +97,8 @@ const decks: Deck[] = [
     tier: "S",
     energy: ["Fire"],
     difficulty: "中",
-    summary: "S級火系重砲：神奇糖果直上 Mega火焰雞ex 高傷害輸出，配合甲賀忍蛙飛水手裏劍遠程補刀削血。",
+    summary:
+      "S級火系重砲：神奇糖果直上 Mega火焰雞ex 高傷害輸出，配合甲賀忍蛙飛水手裏劍遠程補刀削血。",
     cards: [
       { id: "B1-33", count: 2 }, // Torchic
       { id: "B1-34", count: 1 }, // Combusken
@@ -191,7 +192,8 @@ const decks: Deck[] = [
     tier: "A",
     energy: ["Darkness"],
     difficulty: "難",
-    summary: "惡系變幻打法：索羅亞克ex 特性複製對手攻勢，搭配 Mega阿勃梭魯ex 棄牌區破壞進行雙重撕裂。",
+    summary:
+      "惡系變幻打法：索羅亞克ex 特性複製對手攻勢，搭配 Mega阿勃梭魯ex 棄牌區破壞進行雙重撕裂。",
     cards: [
       { id: "B3-105", count: 2 }, // Zorua
       { id: "B3-106", count: 2 }, // Zoroark ex
@@ -283,7 +285,8 @@ const decks: Deck[] = [
     tier: "A",
     energy: ["Psychic"],
     difficulty: "中",
-    summary: "超能加速控制：愛管侍ex 特性加速供能與恢復血量，養出騎拉帝納ex 毀滅級輸出爆發打爆戰線。",
+    summary:
+      "超能加速控制：愛管侍ex 特性加速供能與恢復血量，養出騎拉帝納ex 毀滅級輸出爆發打爆戰線。",
     cards: [
       { id: "A3-66", count: 2 }, // Oricorio
       { id: "B1-121", count: 2 }, // Giratina ex
@@ -327,7 +330,8 @@ const decks: Deck[] = [
     tier: "A",
     energy: ["Water"],
     difficulty: "易",
-    summary: "水系高機動控場：伊布ex 靈活抽牌與進化展開，美納斯ex 封鎖對方道具與特定招式，掌控對局主導權。",
+    summary:
+      "水系高機動控場：伊布ex 靈活抽牌與進化展開，美納斯ex 封鎖對方道具與特定招式，掌控對局主導權。",
     cards: [
       { id: "A4a-21", count: 2 }, // Feebas
       { id: "B3b-15", count: 2 }, // Milotic ex
@@ -373,7 +377,8 @@ const decks: Deck[] = [
     tier: "A",
     energy: ["Psychic", "Darkness"],
     difficulty: "難",
-    summary: "雙神重砲點傷：達克萊伊ex 特性每回合放置傷害指示物，騎拉帝納ex 在後期一擊必殺收割勝利。",
+    summary:
+      "雙神重砲點傷：達克萊伊ex 特性每回合放置傷害指示物，騎拉帝納ex 在後期一擊必殺收割勝利。",
     cards: [
       { id: "A2-110", count: 2 }, // Darkrai ex
       { id: "A2b-35", count: 2 }, // Giratina ex
@@ -420,7 +425,8 @@ const decks: Deck[] = [
     tier: "A",
     energy: ["Darkness"],
     difficulty: "難",
-    summary: "干擾與削血控制：甲賀忍蛙飛水手裏劍點傷，Mega阿勃梭魯ex 打亂對方手牌與資源庫進行破壞。",
+    summary:
+      "干擾與削血控制：甲賀忍蛙飛水手裏劍點傷，Mega阿勃梭魯ex 打亂對方手牌與資源庫進行破壞。",
     cards: [
       { id: "A1-87", count: 2 }, // Froakie
       { id: "A1-89", count: 2 }, // Greninja
@@ -608,7 +614,8 @@ const decks: Deck[] = [
     tier: "B",
     energy: ["Fighting"],
     difficulty: "易",
-    summary: "純格直球強攻：簡化進化線，滿載飛腿郎與多麗米亞輔助前場，集中資源讓 Mega路卡利歐ex 強攻破局。",
+    summary:
+      "純格直球強攻：簡化進化線，滿載飛腿郎與多麗米亞輔助前場，集中資源讓 Mega路卡利歐ex 強攻破局。",
     cards: [
       { id: "A2-91", count: 1 }, // Riolu (A2)
       { id: "A2b-42", count: 1 }, // Riolu (A2b)
@@ -703,7 +710,8 @@ const decks: Deck[] = [
     tier: "C",
     energy: ["Lightning"],
     difficulty: "中",
-    summary: "雙磁怪鋼雷防線：自爆磁怪ex 巨額 HP 與重砲攻擊，搭配單卡自爆磁怪讓雷系火力與傳能源源不絕。",
+    summary:
+      "雙磁怪鋼雷防線：自爆磁怪ex 巨額 HP 與重砲攻擊，搭配單卡自爆磁怪讓雷系火力與傳能源源不絕。",
     cards: [
       { id: "B1a-24", count: 2 }, // Magnemite
       { id: "A1-98", count: 2 }, // Magneton
@@ -797,7 +805,8 @@ const decks: Deck[] = [
     tier: "C",
     energy: ["Fire"],
     difficulty: "易",
-    summary: "炎帝前衝噴火重砲：炎帝ex 前期快速登場加載火焰貼紙，Mega噴火龍Y ex 一出即一擊轟飛對方滿血主力。",
+    summary:
+      "炎帝前衝噴火重砲：炎帝ex 前期快速登場加載火焰貼紙，Mega噴火龍Y ex 一出即一擊轟飛對方滿血主力。",
     cards: [
       { id: "A2b-8", count: 2 }, // Charmander
       { id: "B2b-8", count: 2 }, // Charmeleon
@@ -843,7 +852,8 @@ const decks: Deck[] = [
     tier: "C",
     energy: ["Fire"],
     difficulty: "易",
-    summary: "天氣火系極速衝鋒：飄浮泡泡太陽型態免費撤退與場地搭配，加速 Mega火焰雞ex 糖果直上成型。",
+    summary:
+      "天氣火系極速衝鋒：飄浮泡泡太陽型態免費撤退與場地搭配，加速 Mega火焰雞ex 糖果直上成型。",
     cards: [
       { id: "B1-33", count: 2 }, // Torchic
       { id: "B1-36", count: 2 }, // Mega Blaziken ex

@@ -6,3 +6,13 @@ pnpm-lock.yaml
 package-lock.json
 bun.lock
 routeTree.gen.ts
+
+# 生成的資料檔。格式由各自的產生器決定（scripts/fetch-cards.mjs、
+# subset-cards.mjs、update-meta.mjs），讓 prettier 重排的話下次跑產生器
+# 又會被寫回去，每次更新資料都多出一份無意義的 diff。
+src/data/cards.json
+src/data/cards.used.json
+src/data/meta.json
+
+# sitemap 由 scripts/generate-sitemap.mjs 產生
+public/sitemap.xml

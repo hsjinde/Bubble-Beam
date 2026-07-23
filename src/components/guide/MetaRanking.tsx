@@ -172,13 +172,22 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
               >
                 WILSON 下界
               </th>
-              <th scope="col" className="px-2 py-2.5 text-right font-bold text-xs tracking-wider md:px-3">
+              <th
+                scope="col"
+                className="px-2 py-2.5 text-right font-bold text-xs tracking-wider md:px-3"
+              >
                 勝率
               </th>
-              <th scope="col" className="hidden px-3 py-2.5 text-right font-bold text-xs tracking-wider md:table-cell">
+              <th
+                scope="col"
+                className="hidden px-3 py-2.5 text-right font-bold text-xs tracking-wider md:table-cell"
+              >
                 使用率
               </th>
-              <th scope="col" className="hidden px-3 py-2.5 text-right font-bold text-xs tracking-wider md:table-cell">
+              <th
+                scope="col"
+                className="hidden px-3 py-2.5 text-right font-bold text-xs tracking-wider md:table-cell"
+              >
                 場數 (W-L-T)
               </th>
             </tr>

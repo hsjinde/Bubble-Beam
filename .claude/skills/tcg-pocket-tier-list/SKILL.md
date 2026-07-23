@@ -14,7 +14,7 @@ deck's win rate — not raw win rate.
 The Limitless meta table contains ~500 archetypes, but most have only 1–2
 recorded games. A deck at "77% win rate" over 1 game is noise; sorting by raw
 win rate puts pure noise at the top and bottom. The Wilson lower bound (95%)
-answers "how good is this deck *at least*" — small samples sink toward the
+answers "how good is this deck _at least_" — small samples sink toward the
 bottom, large consistent samples rise. Ties count as half a win.
 
 ## Workflow

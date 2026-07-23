@@ -62,13 +62,13 @@ TanStack Start 檔案式路由。`src/routes/README.md` 有完整慣例表——
 
 `/decks` 由兩條獨立資料流匯合而成：
 
-| 檔案 | 性質 | 誰維護 |
-|---|---|---|
-| `src/data/decks.ts` | 人工策展牌組：繁中攻略、對戰思路、tier S–C | 手寫 |
-| `src/data/meta.json` | Limitless Top 20 即時排行：Wilson 下界、勝率、使用率、代表牌表；tier 可到 D | `scripts/update-meta.mjs` 生成 |
-| `src/data/limitless-map.json` | 兩者的橋樑：策展 id ↔ Limitless 英文牌組名 | 手寫 |
-| `src/data/cards.json` | 完整卡片索引 `id → {nameEN, imageUrl}`，3520 張。**只給腳本查表用，前端不要 import** | `scripts/fetch-cards.mjs` 生成 |
-| `src/data/cards.used.json` | 上面的子集，只含本站實際引用的約 100 張。`cards.ts` import 的是這個 | `scripts/subset-cards.mjs` 生成 |
+| 檔案                          | 性質                                                                                 | 誰維護                          |
+| ----------------------------- | ------------------------------------------------------------------------------------ | ------------------------------- |
+| `src/data/decks.ts`           | 人工策展牌組：繁中攻略、對戰思路、tier S–C                                           | 手寫                            |
+| `src/data/meta.json`          | Limitless Top 20 即時排行：Wilson 下界、勝率、使用率、代表牌表；tier 可到 D          | `scripts/update-meta.mjs` 生成  |
+| `src/data/limitless-map.json` | 兩者的橋樑：策展 id ↔ Limitless 英文牌組名                                           | 手寫                            |
+| `src/data/cards.json`         | 完整卡片索引 `id → {nameEN, imageUrl}`，3520 張。**只給腳本查表用，前端不要 import** | `scripts/fetch-cards.mjs` 生成  |
+| `src/data/cards.used.json`    | 上面的子集，只含本站實際引用的約 100 張。`cards.ts` import 的是這個                  | `scripts/subset-cards.mjs` 生成 |
 
 `update-meta.mjs` 用 `limitless-map.json` 的 `limitlessName` 反查，替有攻略的排行列打上 `curatedId`，前端才知道哪一列可以連到詳情頁。新增策展牌組時，`decks.ts` 和 `limitless-map.json` 要一起改，否則該牌組在排行榜上不會出現連結。
 

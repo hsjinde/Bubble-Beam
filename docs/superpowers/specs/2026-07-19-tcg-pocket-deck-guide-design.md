@@ -8,6 +8,7 @@
 在現有的波加曼互動頁專案上，擴充一個 **Pokémon TCG Pocket（ポケポケ）牌組攻略站**：以人工策展的方式收錄熱門牌組，每套牌用真實卡圖呈現牌表，並附繁體中文攻略（tier、能量、玩法、對戰思路）。用途為個人與朋友使用，不公開營利。
 
 參考站（僅參考呈現形式，不複製其數據）：
+
 - Limitless TCG Pocket decks：`https://play.limitlesstcg.com/decks?game=pocket`
 - pokemon-zone decks：`https://www.pokemon-zone.com/decks/`
 
@@ -16,10 +17,11 @@
 ## 資料來源驗證（已確認）
 
 > **修訂（2026-07-19，經使用者確認）**：實作研究發現 TCGdex 的 TCG Pocket 僅收錄到 B2a，缺當前 meta 必需的 B3/B3a/B3b/PROMO-B。資料源改為：
+>
 > - 卡片資料：`flibustier/pokemon-tcg-pocket-database`（`.../main/dist/cards/{SET}.json`，覆蓋 A1–B3b + PROMO-A/B）
 > - 卡圖：`flibustier/pokemon-tcg-exchange`（`.../main/public/images/cards-by-set/{SET}/{number}.webp`，實測跨 set 全部 200）
 > - 卡 id 慣例：`{SET}-{number}` 不補零（`B3b-41`、`PROMO-A-7`）
-> 詳見 `docs/superpowers/plans/deck-research.md`。下方原始 TCGdex 驗證記錄保留供參考。
+>   詳見 `docs/superpowers/plans/deck-research.md`。下方原始 TCGdex 驗證記錄保留供參考。
 
 - TCGdex set `A1`（Genetic Apex，2024-10-30 發行）回傳 286 張卡，每張含 `id`（如 `A1-001`）、`name`、卡圖。
 - 卡圖 URL 格式：`https://assets.tcgdex.net/en/tcgp/{set}/{num}/high.webp`（例：`.../en/tcgp/A1/036/high.webp`）。
@@ -31,11 +33,11 @@
 
 ### 站點結構（路由）
 
-| 路由 | 內容 |
-|------|------|
-| `/` | 現有波加曼互動頁，維持原樣（全螢幕固定互動遊樂場）。新增一個進入攻略站的入口連結。 |
-| `/decks` | 牌組列表：依 tier 分組的牌組卡牆。 |
-| `/decks/$deckId` | 牌組詳情：真實卡圖牌表 + tier + 能量 + 難度 + 攻略文 + 對戰思路。 |
+| 路由             | 內容                                                                               |
+| ---------------- | ---------------------------------------------------------------------------------- |
+| `/`              | 現有波加曼互動頁，維持原樣（全螢幕固定互動遊樂場）。新增一個進入攻略站的入口連結。 |
+| `/decks`         | 牌組列表：依 tier 分組的牌組卡牆。                                                 |
+| `/decks/$deckId` | 牌組詳情：真實卡圖牌表 + tier + 能量 + 難度 + 攻略文 + 對戰思路。                  |
 
 攻略頁（`/decks`、`/decks/$deckId`）共用一個乾淨、可捲動、適合閱讀的 `GuideLayout`（含導覽列，互通首頁與攻略）。**波加曼不跟隨到攻略頁**，避免干擾閱讀。首頁維持原本的全螢幕互動排版，不套 `GuideLayout`。
 
@@ -47,24 +49,24 @@
 
 ```ts
 interface Deck {
-  id: string;            // 網址用 slug，例 "miraidon-magnezone"
-  name: string;          // 繁中牌組名（人工撰寫）
-  tier: "S" | "A" | "B" | "C";  // 人工評定
-  energy: EnergyType[];  // 能量屬性，例 ["Lightning"]
-  cards: DeckCard[];     // 牌表
-  summary: string;       // 一句話簡介（繁中）
-  strategy: string;      // 玩法攻略，繁中 markdown
-  matchups?: Matchup[];  // 對戰思路（可選）
+  id: string; // 網址用 slug，例 "miraidon-magnezone"
+  name: string; // 繁中牌組名（人工撰寫）
+  tier: "S" | "A" | "B" | "C"; // 人工評定
+  energy: EnergyType[]; // 能量屬性，例 ["Lightning"]
+  cards: DeckCard[]; // 牌表
+  summary: string; // 一句話簡介（繁中）
+  strategy: string; // 玩法攻略，繁中 markdown
+  matchups?: Matchup[]; // 對戰思路（可選）
   difficulty: "易" | "中" | "難";
 }
 
 interface DeckCard {
-  id: string;   // 參照 TCGdex 卡 id，例 "A1-036"
+  id: string; // 參照 TCGdex 卡 id，例 "A1-036"
   count: number;
 }
 
 interface Matchup {
-  vs: string;   // 對手牌組名或描述
+  vs: string; // 對手牌組名或描述
   note: string; // 繁中思路
 }
 ```
@@ -75,9 +77,9 @@ interface Matchup {
 
 ```ts
 interface CardEntry {
-  id: string;       // "A1-036"
-  nameEN: string;   // "Charizard ex"
-  nameTC?: string;  // 人工補上的繁中對照名（可選）
+  id: string; // "A1-036"
+  nameEN: string; // "Charizard ex"
+  nameTC?: string; // 人工補上的繁中對照名（可選）
   imageUrl: string; // TCGdex CDN high.webp
 }
 ```
@@ -86,17 +88,17 @@ runtime 不打 TCGdex API（名稱走本地索引）；卡圖由瀏覽器向 TCG
 
 ## 元件切分
 
-| 元件 | 職責 |
-|------|------|
-| `GuideLayout` | 攻略區共用殼：導覽列（首頁／牌組）、頁尾、可捲動的閱讀排版。 |
-| `DeckList`（route `/decks`） | 依 tier 分組，渲染 `DeckCard` 網格。 |
-| `DeckCard` | 牌組縮圖卡：主 Pokémon 卡圖、牌組名、`TierBadge`、`EnergyIcon`，連往詳情。 |
+| 元件                                   | 職責                                                                       |
+| -------------------------------------- | -------------------------------------------------------------------------- |
+| `GuideLayout`                          | 攻略區共用殼：導覽列（首頁／牌組）、頁尾、可捲動的閱讀排版。               |
+| `DeckList`（route `/decks`）           | 依 tier 分組，渲染 `DeckCard` 網格。                                       |
+| `DeckCard`                             | 牌組縮圖卡：主 Pokémon 卡圖、牌組名、`TierBadge`、`EnergyIcon`，連往詳情。 |
 | `DeckDetail`（route `/decks/$deckId`） | 標頭（名稱／tier／能量／難度）＋ `Decklist` ＋ 攻略 markdown ＋ 對戰思路。 |
-| `Decklist` | 牌表：卡圖網格，每張含張數標示，用 `CardImage`。 |
-| `CardImage` | 依卡 id 從本地索引取 URL 渲染卡圖，含載入失敗 fallback（占位卡背）。 |
-| `TierBadge` / `EnergyIcon` | 小型呈現元件。 |
-| `cards` 資料模組 | 載入 `cards.json`，提供 `getCard(id)` 查詢。 |
-| `decks` 資料模組 | 載入牌組資料，提供 `listDecks()` / `getDeck(id)`。 |
+| `Decklist`                             | 牌表：卡圖網格，每張含張數標示，用 `CardImage`。                           |
+| `CardImage`                            | 依卡 id 從本地索引取 URL 渲染卡圖，含載入失敗 fallback（占位卡背）。       |
+| `TierBadge` / `EnergyIcon`             | 小型呈現元件。                                                             |
+| `cards` 資料模組                       | 載入 `cards.json`，提供 `getCard(id)` 查詢。                               |
+| `decks` 資料模組                       | 載入牌組資料，提供 `listDecks()` / `getDeck(id)`。                         |
 
 ## 資料流
 

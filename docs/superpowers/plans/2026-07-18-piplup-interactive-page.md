@@ -24,10 +24,12 @@
 ### Task 1: 建立 Lovable 專案與三層骨架
 
 **Files:**
+
 - Lovable 專案（新建）：頁面骨架，元件由 Lovable 自行組織
 - 本計畫檔：勾選進度
 
 **Interfaces:**
+
 - Produces: Lovable 專案 ID 與 preview URL（後續所有任務用 `send_message` 對同一專案迭代）；三個圖層 DOM：`#video-backdrop`（z-0）、色調覆蓋層（z-10）、`#doodle-layer`（z-20, pointer-events-none）、`#piplup`（z-30）
 
 - [x] **Step 1: 載入 Lovable MCP 工具**
@@ -62,9 +64,11 @@ Add a small hand-drawn-style title "Piplup!" (rounded playful font, dark blue #2
 ### Task 2: 挑選官方影片清單（需使用者確認）
 
 **Files:**
+
 - Create: `docs/superpowers/plans/video-list.md`（影片清單記錄：標題 + YouTube video ID + 網址）
 
 **Interfaces:**
+
 - Produces: 3–5 部官方波加曼影片的 YouTube video ID 陣列，供 Task 3（嵌入輪播）與 Task 8（yt-dlp 下載）共用
 
 - [x] **Step 1: 搜尋候選影片**
@@ -87,9 +91,11 @@ git commit -m "docs: confirmed Piplup video playlist"
 ### Task 3: VideoBackdrop——YouTube 輪播背景
 
 **Files:**
+
 - Lovable 專案：`VideoBackdrop` 元件（`send_message` 迭代）
 
 **Interfaces:**
+
 - Consumes: Task 2 的 video ID 陣列（填入 prompt 的 `VIDEO_IDS`）
 - Produces: 全頁 YouTube 輪播背景；`#video-backdrop` 內部實作改變，對外圖層結構不變
 
@@ -121,9 +127,11 @@ Requirements:
 ### Task 4: Piplup 追逐狀態（跟隨滑鼠）
 
 **Files:**
+
 - Lovable 專案：`Piplup` 元件
 
 **Interfaces:**
+
 - Produces: `Piplup` 元件內部狀態機骨架（`chase` 狀態），Task 5 在其上加 `idle`/`sleep`/`react`
 
 - [x] **Step 1: send_message 實作追逐**
@@ -151,9 +159,11 @@ Make the #piplup image chase the mouse cursor. Implement inside a Piplup compone
 ### Task 5: 發呆／睡著＋點擊反應
 
 **Files:**
+
 - Lovable 專案：`Piplup` 元件（擴充狀態機）
 
 **Interfaces:**
+
 - Consumes: Task 4 的 `chase` 狀態機
 - Produces: 完整四狀態：`chase` / `idle` / `sleep` / `react`
 
@@ -180,9 +190,11 @@ Extend the Piplup state machine with three more states:
 ### Task 6: DoodleLayer 塗鴉前景＋游標水滴粒子
 
 **Files:**
+
 - Lovable 專案：`DoodleLayer` 元件
 
 **Interfaces:**
+
 - Produces: 前景裝飾層；維持 `pointer-events: none` 之全域約束
 
 - [x] **Step 1: send_message 實作塗鴉層**（加 `data-testid`／`.cursor-droplet` class 方便自動化驗證）
@@ -208,9 +220,11 @@ Fill the #doodle-layer (pointer-events: none, keep it that way) with hand-drawn 
 ### Task 7: 錯誤處理與影片來源開關（雙版本關鍵）
 
 **Files:**
+
 - Lovable 專案：`VideoBackdrop`（來源開關）、`Piplup`（圖片 fallback）
 
 **Interfaces:**
+
 - Produces: `fetch('/videos/manifest.json')` 開關協定——本地版只要放 `public/videos/manifest.json`（格式：`{"videos":["file1.mp4", ...]}`）＋影片檔即自動切換為本地 `<video>` 模式。Task 9 依賴此協定。
 
 - [x] **Step 1: send_message 實作開關與 fallback**（加 `data-testid="video-mode"`／`data-video-mode` 屬性方便驗證）
@@ -237,11 +251,13 @@ Two robustness changes:
 ### Task 8: 程式碼導出到本地 repo
 
 **Files:**
+
 - Create: 本地 repo 根目錄（`package.json`、`src/**`、`public/**` 等，全部來自 Lovable 專案）
 - Create: `.gitignore`（含影片排除規則）
 - Create: `public/videos/.gitkeep`
 
 **Interfaces:**
+
 - Consumes: Lovable MCP `list_files` / `read_file`
 - Produces: 可 `npm run dev` 的本地專案；`public/videos/` 空資料夾等待 Task 9 放影片
 
@@ -284,10 +300,12 @@ npm install; npm run dev
 ### Task 9: yt-dlp 下載影片＋本地版驗證
 
 **Files:**
+
 - Create: `public/videos/*.mp4`（不進 git）
 - Create: `public/videos/manifest.json`（不進 git）
 
 **Interfaces:**
+
 - Consumes: Task 2 確認過的影片清單；Task 7 的 manifest 協定
 
 - [x] **Step 1: 確認 yt-dlp 可用**（已安裝 2026.06.09）
@@ -326,9 +344,11 @@ $files = Get-ChildItem public/videos -Filter *.mp4 | Select-Object -ExpandProper
 ### Task 10: 部署（需使用者確認）
 
 **Files:**
+
 - Lovable 專案：部署設定
 
 **Interfaces:**
+
 - Consumes: Lovable MCP `deploy_project`
 - Produces: 公開網址
 

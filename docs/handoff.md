@@ -14,13 +14,13 @@
 同日補上三項站台基礎建設（詳見下方「2026-07-23 這輪」）：兩個子站的導覽互連、
 每頁專屬的 OG 分享卡片、favicon 與 webmanifest。
 
-| 面向          | 稽核當下 | 現在    | 備註                                          |
-| ------------- | -------- | ------- | --------------------------------------------- |
-| Accessibility | 2/4      | 4/4     | 程式量測 WCAG AA 全過；**未經螢幕閱讀器實測** |
-| Performance   | 2/4      | 4/4     | 卡片索引子集化                                |
+| 面向          | 稽核當下 | 現在           | 備註                                              |
+| ------------- | -------- | -------------- | ------------------------------------------------- |
+| Accessibility | 2/4      | 4/4            | 程式量測 WCAG AA 全過；**未經螢幕閱讀器實測**     |
+| Performance   | 2/4      | 4/4            | 卡片索引子集化                                    |
 | Theming       | 2/4      | **待重新稽核** | 水藍色板已收斂成 7 個 `--guide-*` token，見待辦 A |
-| Responsive    | 3/4      | 4/4     | 觸控目標補齊                                  |
-| Anti-Patterns | 4/4      | 4/4     | 偵測器 0 命中，無 AI slop 特徵                |
+| Responsive    | 3/4      | 4/4            | 觸控目標補齊                                      |
+| Anti-Patterns | 4/4      | 4/4            | 偵測器 0 命中，無 AI slop 特徵                    |
 
 相關 commit：`b6ece42`（bundle 子集化）、`4e73cf5`（a11y）。
 
@@ -96,6 +96,7 @@
 ### B. 首頁稽核與優化 — 2026-07-22 已完成
 
 已針對首頁 `/` 執行 `$impeccable audit /`：
+
 - **Accessibility / 對比度**：`GuideEntry` 便條紙背景透明度已提高至 `bg-white/75`（hover `bg-white/90`），副標題與箭頭顏色收斂並改為 `text-guide-ink-deep` (`#1d5273`)，在動態影片背景與 fallback 底色下均達成 >6:1 之 WCAG AA 高標準對比度。另補齊 `aria-label="前往 Pokémon TCG Pocket 牌組攻略站"` 提升螢幕閱讀器體驗。
 - **Performance / 動畫效能**：`Doodles` 使用輕量 CSS keyframe 與節流 cursor 游標雨 drop pool (max 20)，`VideoBackdrop` 維持本地 / YouTube / 漸變三層降級機制。
 - **Responsive / 響應式**：標題使用 `clamp()` 隨視窗縮放，`GuideEntry` 於行動端 (`w-[10.5rem]`) 與桌面端 (`w-[14rem]`) 均符合 minimum 44px 觸控點規範。
@@ -205,20 +206,20 @@ Windows 的 FAT→NTFS 工具，不是 ImageMagick，別誤用）。圖示是用
 
 ### 這輪的驗證數字
 
-| 檢查                              | 結果                                   |
-| --------------------------------- | -------------------------------------- |
-| `/decks` 全頁文字對比             | 308 個節點，**0 失敗**（底線維持）     |
-| `/pokopia/videos` 全頁文字對比     | 89 個節點，**0 失敗**                  |
-| 新增跨區連結文字對比               | 5.46:1 靜態／5.07:1 hover（guide 側）  |
-|                                   | 11:1 靜態／9.47:1 hover（pokopia 側）  |
-| 手機 375px 水平溢位                | 無；所有觸控目標 44px                  |
-| `npm run build`                    | 通過（prebuild 有跑 sitemap 產生器）   |
-| client 卡片索引 chunk              | 19.6 KB（未回退）                      |
-| console 錯誤                       | 無                                     |
-| 五個頁面的 canonical               | 全部正確；`?b=` 變體收斂到裸網址       |
-| JSON-LD                            | 全部合法 JSON，位於 `<head>`，未洩漏到畫面 |
-| sitemap 網址數                     | 25（建置產物一致）                     |
-| 線上部署（`b7e599a`）              | 已驗證：`/favicon.ico` 200、攻略頁標題為每頁專屬 |
+| 檢查                           | 結果                                             |
+| ------------------------------ | ------------------------------------------------ |
+| `/decks` 全頁文字對比          | 308 個節點，**0 失敗**（底線維持）               |
+| `/pokopia/videos` 全頁文字對比 | 89 個節點，**0 失敗**                            |
+| 新增跨區連結文字對比           | 5.46:1 靜態／5.07:1 hover（guide 側）            |
+|                                | 11:1 靜態／9.47:1 hover（pokopia 側）            |
+| 手機 375px 水平溢位            | 無；所有觸控目標 44px                            |
+| `npm run build`                | 通過（prebuild 有跑 sitemap 產生器）             |
+| client 卡片索引 chunk          | 19.6 KB（未回退）                                |
+| console 錯誤                   | 無                                               |
+| 五個頁面的 canonical           | 全部正確；`?b=` 變體收斂到裸網址                 |
+| JSON-LD                        | 全部合法 JSON，位於 `<head>`，未洩漏到畫面       |
+| sitemap 網址數                 | 25（建置產物一致）                               |
+| 線上部署（`b7e599a`）          | 已驗證：`/favicon.ico` 200、攻略頁標題為每頁專屬 |
 
 **踩過的坑**：`read_console_messages` 會回傳**保留緩衝**，重啟 dev server 後仍吐出
 同一個 Vite HMR 時間戳（`?t=...`）的舊錯誤。判斷是否為當下真錯誤，要看時間戳有沒有變、
