@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { VideoBackdrop } from "@/components/VideoBackdrop";
 import { Doodles } from "@/components/Doodles";
 import { GuideEntry } from "@/components/GuideEntry";
+import { PokopiaEntry } from "@/components/PokopiaEntry";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -60,8 +61,9 @@ function Index() {
         <Doodles />
       </div>
 
-      {/* Guide entrance */}
+      {/* Guide entrances */}
       <GuideEntry />
+      <PokopiaEntry />
     </main>
   );
 }

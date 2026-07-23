@@ -1,0 +1,105 @@
+[
+  {
+    "id": "leaf-village",
+    "name": "葉片自然村",
+    "description": "整套葉片住宅圍出綠意聚落，再用公園與噴泉留白，適合草／蟲系寶可夢棲息。",
+    "buildingIds": [
+      "leaf-hut",
+      "leaf-den",
+      "leaf-house",
+      "leaf-cottage",
+      "relaxing-park",
+      "fountain-plaza"
+    ]
+  },
+  {
+    "id": "power-district",
+    "name": "發電廠專區",
+    "description": "把五種發電設施集中一區，供電效率高、也很有工業景觀感，適合電系聚落。",
+    "buildingIds": [
+      "charging-station",
+      "abandoned-power-plant",
+      "waterwheel",
+      "furnace",
+      "windmill"
+    ]
+  },
+  {
+    "id": "pokecenter-tour",
+    "name": "寶可夢中心巡禮",
+    "description": "四種主題寶可夢中心並列，天空、山脊、海灘、荒野各有風情，是島上的機能核心。",
+    "buildingIds": [
+      "skyland-pokemon-center",
+      "ridge-pokemon-center",
+      "beach-pokemon-center",
+      "wasteland-pokemon-center"
+    ]
+  },
+  {
+    "id": "seaside-resort",
+    "name": "海濱度假村",
+    "description": "沙地住宅配上海灘中心與皮卡丘噴泉，度假氛圍拉滿，適合水系寶可夢。",
+    "buildingIds": [
+      "sand-hut",
+      "sand-house",
+      "sand-cottage",
+      "beach-pokemon-center",
+      "pikachu-fountain",
+      "orange-cottage"
+    ]
+  },
+  {
+    "id": "stone-town",
+    "name": "石造山城",
+    "description": "石頭與灰色住宅堆出粗獷山城，火焰祭壇與熔爐點綴，適合岩／火系氛圍。",
+    "buildingIds": [
+      "stone-hut",
+      "stone-den",
+      "stone-house",
+      "stone-cottage",
+      "gray-hut",
+      "gray-cottage",
+      "altar-of-flame",
+      "furnace"
+    ]
+  },
+  {
+    "id": "pastel-street",
+    "name": "粉彩街區",
+    "description": "粉色、黃色、橙色住宅混搭時尚咖啡廳，色調柔和明亮，最適合仙／一般系。",
+    "buildingIds": [
+      "pink-hut",
+      "pink-cottage",
+      "yellow-hut",
+      "yellow-cottage",
+      "orange-hut",
+      "stylish-cafe"
+    ]
+  },
+  {
+    "id": "downtown",
+    "name": "城市商圈",
+    "description": "城市住宅加上辦公室、精靈商店與咖啡廳，機能齊全的都會生活區。",
+    "buildingIds": [
+      "city-hut",
+      "city-house",
+      "city-cottage",
+      "small-office",
+      "pokemart",
+      "stylish-cafe"
+    ]
+  },
+  {
+    "id": "landmark-park",
+    "name": "地標公園",
+    "description": "把裝飾地標集中成觀光公園，舞台、噴泉、雕像與冰封山脈，適合舉辦活動。",
+    "buildingIds": [
+      "relaxing-park",
+      "fountain-plaza",
+      "moonlight-dance-statue",
+      "concert-stage",
+      "pikachu-fountain",
+      "freezing-chambers"
+    ]
+  }
+]
