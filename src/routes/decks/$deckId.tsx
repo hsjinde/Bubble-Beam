@@ -1,9 +1,11 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { getAdjacentDecks, getDeck, getDeckByName } from "@/data/decks";
 import { getCard } from "@/data/cards";
+import { getMetaByCuratedId } from "@/data/meta";
 import { getHeroCardId } from "@/data/hero-card";
 import { absoluteUrl } from "@/lib/site";
 import { breadcrumbList, jsonLdScript } from "@/lib/json-ld";
+import { CardUsagePanel } from "@/components/guide/CardUsagePanel";
 import { CopyDecklist } from "@/components/guide/CopyDecklist";
 import { Decklist } from "@/components/guide/Decklist";
 import { EnergyIcon } from "@/components/guide/EnergyIcon";
@@ -134,6 +136,7 @@ function DeckPager({ current }: { current: string }) {
 function DeckDetailPage() {
   const { deckId } = Route.useParams();
   const deck = getDeck(deckId);
+  const metaRow = deck ? getMetaByCuratedId(deck.id) : undefined;
 
   if (!deck) {
     return (
@@ -182,6 +185,16 @@ function DeckDetailPage() {
       <div className="mt-4">
         <Decklist cards={deck.cards} />
       </div>
+
+      {/*
+       * 採用率來自排行榜那一列（Limitless 取樣牌表），不是策展資料——牌組跌出
+       * Top 20 時就沒有，整塊省略而不是顯示空面板。
+       */}
+      {metaRow?.cardUsage && metaRow.cardUsage.length > 0 && metaRow.listsSampled && (
+        <div className="mt-6">
+          <CardUsagePanel usage={metaRow.cardUsage} listsSampled={metaRow.listsSampled} />
+        </div>
+      )}
 
       <h2 className="mt-10 border-l-4 border-guide-accent pl-3 text-xl font-bold text-guide-ink">
         打法攻略

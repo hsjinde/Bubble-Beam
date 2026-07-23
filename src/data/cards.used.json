@@ -19,6 +19,11 @@
     "nameEN": "Hitmonlee",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/154.webp"
   },
+  "A1-220": {
+    "id": "A1-220",
+    "nameEN": "Misty",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/220.webp"
+  },
   "A1-223": {
     "id": "A1-223",
     "nameEN": "Giovanni",
@@ -64,6 +69,11 @@
     "nameEN": "Cyrus",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/150.webp"
   },
+  "A2-155": {
+    "id": "A2-155",
+    "nameEN": "Mars",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/155.webp"
+  },
   "A2a-72": {
     "id": "A2a-72",
     "nameEN": "Irida",
@@ -99,6 +109,11 @@
     "nameEN": "Oricorio",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/66.webp"
   },
+  "A3-80": {
+    "id": "A3-80",
+    "nameEN": "Comfey",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/80.webp"
+  },
   "A3-84": {
     "id": "A3-84",
     "nameEN": "Tapu Lele",
@@ -128,6 +143,11 @@
     "id": "A4-134",
     "nameEN": "Eevee",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/134.webp"
+  },
+  "A4-151": {
+    "id": "A4-151",
+    "nameEN": "Elemental Switch",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/151.webp"
   },
   "A4a-10": {
     "id": "A4a-10",
@@ -264,6 +284,16 @@
     "nameEN": "Clemont",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1a/68.webp"
   },
+  "B2-71": {
+    "id": "B2-71",
+    "nameEN": "Pumpkaboo",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/71.webp"
+  },
+  "B2-72": {
+    "id": "B2-72",
+    "nameEN": "Gourgeist",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/72.webp"
+  },
   "B2-145": {
     "id": "B2-145",
     "nameEN": "Lucky Ice Pop",
@@ -304,10 +334,25 @@
     "nameEN": "Chien-Pao ex",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2a/37.webp"
   },
+  "B2a-86": {
+    "id": "B2a-86",
+    "nameEN": "Electric Generator",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2a/86.webp"
+  },
+  "B2a-93": {
+    "id": "B2a-93",
+    "nameEN": "Mesagoza",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2a/93.webp"
+  },
   "B2b-8": {
     "id": "B2b-8",
     "nameEN": "Charmeleon",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2b/8.webp"
+  },
+  "B2b-26": {
+    "id": "B2b-26",
+    "nameEN": "Electrike",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2b/26.webp"
   },
   "B2b-27": {
     "id": "B2b-27",
@@ -344,6 +389,11 @@
     "nameEN": "Castform Sunny Form",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/24.webp"
   },
+  "B3-37": {
+    "id": "B3-37",
+    "nameEN": "Vaporeon ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/37.webp"
+  },
   "B3-54": {
     "id": "B3-54",
     "nameEN": "Magnezone ex",
@@ -358,6 +408,11 @@
     "id": "B3-81",
     "nameEN": "Mega Lucario ex",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/81.webp"
+  },
+  "B3-86": {
+    "id": "B3-86",
+    "nameEN": "Sawk",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/86.webp"
   },
   "B3-105": {
     "id": "B3-105",

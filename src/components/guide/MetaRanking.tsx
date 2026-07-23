@@ -2,6 +2,7 @@ import { Fragment, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { getDeck } from "@/data/decks";
 import type { MetaDeck, MetaTier } from "@/data/types";
+import { CardUsagePanel } from "./CardUsagePanel";
 import { Decklist } from "./Decklist";
 import { RankChangeBadge } from "./RankChangeBadge";
 import { TierBadge } from "./TierBadge";
@@ -84,6 +85,11 @@ function ExpandedList({ deck }: { deck: MetaDeck }) {
         </span>
       </div>
       <Decklist cards={deck.cards.map(({ id, count }) => ({ id, count }))} />
+      {deck.cardUsage && deck.cardUsage.length > 0 && deck.listsSampled && (
+        <div className="mt-4">
+          <CardUsagePanel usage={deck.cardUsage} listsSampled={deck.listsSampled} />
+        </div>
+      )}
     </div>
   );
 }

@@ -1,18 +1,18 @@
 {
-  "fetchedAt": "2026-07-23T00:25:15.420Z",
+  "fetchedAt": "2026-07-23T17:19:35.871Z",
   "source": "https://play.limitlesstcg.com/decks?game=pocket",
-  "previousFetchedAt": "2026-07-21T23:30:04.055Z",
+  "previousFetchedAt": "2026-07-23T00:25:15.420Z",
   "decks": [
     {
       "rank": 1,
       "previousRank": 1,
       "name": "Miraidon ex Magnezone",
       "tier": "S",
-      "wilsonLowerBoundPct": 53.35,
-      "winratePct": 52.98,
-      "sharePct": 10.17,
-      "games": 4417,
-      "record": "2340-1914-163",
+      "wilsonLowerBoundPct": 53.48,
+      "winratePct": 53.1,
+      "sharePct": 10.13,
+      "games": 4446,
+      "record": "2361-1921-164",
       "curatedId": "miraidon-magnezone",
       "cards": [
         {
@@ -114,18 +114,91 @@
           "number": "147"
         }
       ],
-      "listSource": "https://play.limitlesstcg.com/tournament/6a3b6074c87cd9ff0a30e598/player/tornado1/decklist"
+      "listSource": "https://play.limitlesstcg.com/tournament/6a3b6074c87cd9ff0a30e598/player/tornado1/decklist",
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A1-98",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A2-147",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-150",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A3a-21",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-226",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1a-24",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1a-26",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B3a-19",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B3a-73",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1a-68",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "A1-225",
+          "usagePct": 75,
+          "modalCount": 1
+        }
+      ]
     },
     {
       "rank": 2,
       "previousRank": 2,
       "name": "Suicune ex Baxcalibur",
       "tier": "S",
-      "wilsonLowerBoundPct": 52.43,
-      "winratePct": 52.62,
-      "sharePct": 6.37,
-      "games": 2689,
-      "record": "1415-1183-91",
+      "wilsonLowerBoundPct": 52.48,
+      "winratePct": 52.66,
+      "sharePct": 6.33,
+      "games": 2702,
+      "record": "1423-1187-92",
       "curatedId": "suicune-baxcalibur",
       "cards": [
         {
@@ -213,18 +286,97 @@
           "number": "154"
         }
       ],
-      "listSource": "https://play.limitlesstcg.com/tournament/6a4290e583fd320299bd3f55/player/dot1/decklist"
+      "listSource": "https://play.limitlesstcg.com/tournament/6a4290e583fd320299bd3f55/player/dot1/decklist",
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A2-147",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A3-144",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A4a-20",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A4a-67",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B2a-34",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B2a-36",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B2a-37",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A2b-70",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-147",
+          "usagePct": 60,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-150",
+          "usagePct": 40,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-154",
+          "usagePct": 35,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-155",
+          "usagePct": 25,
+          "modalCount": 1
+        }
+      ]
     },
     {
       "rank": 3,
       "previousRank": 3,
       "name": "Mega Blaziken ex Greninja",
       "tier": "S",
-      "wilsonLowerBoundPct": 52.07,
-      "winratePct": 53.16,
-      "sharePct": 3.3,
-      "games": 1441,
-      "record": "766-632-43",
+      "wilsonLowerBoundPct": 52.32,
+      "winratePct": 53.31,
+      "sharePct": 3.32,
+      "games": 1467,
+      "record": "782-639-46",
+      "curatedId": "mega-blaziken-greninja",
       "cards": [
         {
           "id": "B1-33",
@@ -333,18 +485,100 @@
         }
       ],
       "listSource": "https://play.limitlesstcg.com/tournament/6a4446d0c87cd9ff0a313eed/player/banzai/decklist",
-      "curatedId": "mega-blaziken-greninja"
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A1-87",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A1-89",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-150",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A3-144",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-217",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-33",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-36",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-44",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B2b-69",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B3-24",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-34",
+          "usagePct": 90,
+          "modalCount": 1
+        },
+        {
+          "id": "B3a-71",
+          "usagePct": 90,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-147",
+          "usagePct": 15,
+          "modalCount": 1
+        }
+      ]
     },
     {
       "rank": 4,
       "previousRank": 4,
       "name": "Mega Sceptile ex Greninja",
       "tier": "A",
-      "wilsonLowerBoundPct": 51.93,
-      "winratePct": 52.27,
-      "sharePct": 6.2,
-      "games": 2684,
-      "record": "1403-1198-83",
+      "wilsonLowerBoundPct": 51.88,
+      "winratePct": 52.23,
+      "sharePct": 6.22,
+      "games": 2713,
+      "record": "1417-1213-83",
       "curatedId": "mega-sceptile-greninja",
       "cards": [
         {
@@ -453,18 +687,107 @@
           "number": "148"
         }
       ],
-      "listSource": "https://play.limitlesstcg.com/tournament/6a41b5a5c87cd9ff0a3125ea/player/koehearts/decklist"
+      "listSource": "https://play.limitlesstcg.com/tournament/6a41b5a5c87cd9ff0a3125ea/player/koehearts/decklist",
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A1-87",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A1-89",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-150",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A3-144",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A3a-7",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B3-5",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B3-6",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-8",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B3b-61",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B3a-71",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "B3b-64",
+          "usagePct": 90,
+          "modalCount": 1
+        },
+        {
+          "id": "B2b-69",
+          "usagePct": 55,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-148",
+          "usagePct": 30,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-147",
+          "usagePct": 30,
+          "modalCount": 1
+        }
+      ]
     },
     {
       "rank": 5,
       "previousRank": 5,
       "name": "Zoroark ex Mega Absol ex",
       "tier": "A",
-      "wilsonLowerBoundPct": 51.57,
-      "winratePct": 53.72,
+      "wilsonLowerBoundPct": 51.84,
+      "winratePct": 53.99,
       "sharePct": 1.47,
-      "games": 631,
-      "record": "339-270-22",
+      "games": 639,
+      "record": "345-272-22",
+      "curatedId": "zoroark-mega-absol",
       "cards": [
         {
           "id": "B3-105",
@@ -573,18 +896,101 @@
         }
       ],
       "listSource": "https://play.limitlesstcg.com/tournament/6a552624232a1a55ee10b7d1/player/mdjoe/decklist",
-      "curatedId": "zoroark-mega-absol"
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A2-110",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-150",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2b-70",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-151",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B3-105",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B3-106",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B3-115",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A2-148",
+          "usagePct": 95,
+          "modalCount": 2
+        },
+        {
+          "id": "A1-225",
+          "usagePct": 90,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-147",
+          "usagePct": 70,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-147",
+          "usagePct": 50,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-145",
+          "usagePct": 50,
+          "modalCount": 1
+        },
+        {
+          "id": "B3a-47",
+          "usagePct": 50,
+          "modalCount": 1
+        }
+      ]
     },
     {
       "rank": 6,
       "previousRank": 6,
       "name": "Mega Altaria ex Espeon",
       "tier": "A",
-      "wilsonLowerBoundPct": 51.3,
-      "winratePct": 52.95,
-      "sharePct": 2.29,
-      "games": 965,
-      "record": "511-425-29",
+      "wilsonLowerBoundPct": 51.37,
+      "winratePct": 52.97,
+      "sharePct": 2.3,
+      "games": 976,
+      "record": "517-429-30",
+      "curatedId": "mega-altaria-espeon",
       "cards": [
         {
           "id": "B1-196",
@@ -679,18 +1085,91 @@
         }
       ],
       "listSource": "https://play.limitlesstcg.com/tournament/6a552624232a1a55ee10b7d1/player/feyyzo/decklist",
-      "curatedId": "mega-altaria-espeon"
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A1-225",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-150",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A4a-59",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-102",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-184",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-196",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-226",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-153",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B2b-40",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B3a-20",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-2",
+          "usagePct": 25,
+          "modalCount": 1
+        }
+      ]
     },
     {
       "rank": 7,
       "previousRank": 7,
       "name": "Indeedee ex Giratina ex",
       "tier": "A",
-      "wilsonLowerBoundPct": 51.25,
-      "winratePct": 51.43,
+      "wilsonLowerBoundPct": 51.18,
+      "winratePct": 51.36,
       "sharePct": 2.21,
-      "games": 912,
-      "record": "469-387-56",
+      "games": 917,
+      "record": "471-390-56",
+      "curatedId": "indeedee-giratina",
       "cards": [
         {
           "id": "A3-66",
@@ -778,131 +1257,86 @@
         }
       ],
       "listSource": "https://play.limitlesstcg.com/tournament/6a4ab64c063cb29d318e4331/player/n7hs4/decklist",
-      "curatedId": "indeedee-giratina"
-    },
-    {
-      "rank": 8,
-      "previousRank": 8,
-      "name": "Milotic ex Eevee ex",
-      "tier": "A",
-      "wilsonLowerBoundPct": 51.07,
-      "winratePct": 54.65,
-      "sharePct": 0.62,
-      "games": 258,
-      "record": "141-104-13",
-      "cards": [
+      "listsSampled": 20,
+      "cardUsage": [
         {
-          "id": "A4a-21",
-          "count": 2,
-          "name": "Feebas",
-          "set": "A4a",
-          "number": "21"
+          "id": "A2-147",
+          "usagePct": 100,
+          "modalCount": 2
         },
         {
-          "id": "B3b-15",
-          "count": 2,
-          "name": "Milotic ex",
-          "set": "B3b",
-          "number": "15"
+          "id": "A2-150",
+          "usagePct": 100,
+          "modalCount": 1
         },
         {
-          "id": "B2a-37",
-          "count": 1,
-          "name": "Chien-Pao ex",
-          "set": "B2a",
-          "number": "37"
-        },
-        {
-          "id": "A1a-19",
-          "count": 1,
-          "name": "Vaporeon",
-          "set": "A1a",
-          "number": "19"
-        },
-        {
-          "id": "A3b-56",
-          "count": 1,
-          "name": "Eevee ex",
-          "set": "A3b",
-          "number": "56"
-        },
-        {
-          "id": "B3b-68",
-          "count": 2,
-          "name": "Wallace",
-          "set": "B3b",
-          "number": "68"
-        },
-        {
-          "id": "PROMO-A-7",
-          "count": 2,
-          "name": "Professor's Research",
-          "set": "P-A",
-          "number": "7"
-        },
-        {
-          "id": "B1-225",
-          "count": 2,
-          "name": "Copycat",
-          "set": "B1",
-          "number": "225"
+          "id": "A2b-35",
+          "usagePct": 100,
+          "modalCount": 1
         },
         {
           "id": "A2b-70",
-          "count": 1,
-          "name": "Pokémon Center Lady",
-          "set": "A2b",
-          "number": "70"
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A3-66",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-121",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-145",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B2-147",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-154",
+          "usagePct": 100,
+          "modalCount": 1
         },
         {
           "id": "PROMO-A-5",
-          "count": 2,
-          "name": "Poké Ball",
-          "set": "P-A",
-          "number": "5"
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
         },
         {
           "id": "B3-147",
-          "count": 1,
-          "name": "Field Blower",
-          "set": "B3",
-          "number": "147"
-        },
-        {
-          "id": "A2-147",
-          "count": 1,
-          "name": "Giant Cape",
-          "set": "A2",
-          "number": "147"
-        },
-        {
-          "id": "B3b-65",
-          "count": 1,
-          "name": "Elegant Cape",
-          "set": "B3b",
-          "number": "65"
-        },
-        {
-          "id": "B2-153",
-          "count": 1,
-          "name": "Training Area",
-          "set": "B2",
-          "number": "153"
+          "usagePct": 80,
+          "modalCount": 1
         }
-      ],
-      "listSource": "https://play.limitlesstcg.com/tournament/6a3a18df83fd320299bce65d/player/jlng/decklist",
-      "curatedId": "milotic-eevee-ex"
+      ]
     },
     {
-      "rank": 9,
+      "rank": 8,
       "previousRank": 9,
       "name": "Giratina ex Darkrai ex",
       "tier": "A",
-      "wilsonLowerBoundPct": 51.02,
-      "winratePct": 55.17,
-      "sharePct": 0.55,
-      "games": 261,
-      "record": "144-107-10",
+      "wilsonLowerBoundPct": 51.14,
+      "winratePct": 55.26,
+      "sharePct": 0.56,
+      "games": 266,
+      "record": "147-109-10",
+      "curatedId": "giratina-darkrai",
       "cards": [
         {
           "id": "A2-110",
@@ -1011,18 +1445,297 @@
         }
       ],
       "listSource": "https://play.limitlesstcg.com/tournament/6a41b5a5c87cd9ff0a3125ea/player/joshuasutherland21/decklist",
-      "curatedId": "giratina-darkrai"
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A1-225",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-110",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A2-147",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-148",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A2-150",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2b-35",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A2b-71",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-121",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-155",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-147",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-154",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-145",
+          "usagePct": 75,
+          "modalCount": 1
+        },
+        {
+          "id": "A2b-70",
+          "usagePct": 30,
+          "modalCount": 1
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "previousRank": 8,
+      "name": "Milotic ex Eevee ex",
+      "tier": "A",
+      "wilsonLowerBoundPct": 51.07,
+      "winratePct": 54.65,
+      "sharePct": 0.61,
+      "games": 258,
+      "record": "141-104-13",
+      "curatedId": "milotic-eevee-ex",
+      "cards": [
+        {
+          "id": "A4a-21",
+          "count": 2,
+          "name": "Feebas",
+          "set": "A4a",
+          "number": "21"
+        },
+        {
+          "id": "B3b-15",
+          "count": 2,
+          "name": "Milotic ex",
+          "set": "B3b",
+          "number": "15"
+        },
+        {
+          "id": "B2a-37",
+          "count": 1,
+          "name": "Chien-Pao ex",
+          "set": "B2a",
+          "number": "37"
+        },
+        {
+          "id": "A1a-19",
+          "count": 1,
+          "name": "Vaporeon",
+          "set": "A1a",
+          "number": "19"
+        },
+        {
+          "id": "A3b-56",
+          "count": 1,
+          "name": "Eevee ex",
+          "set": "A3b",
+          "number": "56"
+        },
+        {
+          "id": "B3b-68",
+          "count": 2,
+          "name": "Wallace",
+          "set": "B3b",
+          "number": "68"
+        },
+        {
+          "id": "PROMO-A-7",
+          "count": 2,
+          "name": "Professor's Research",
+          "set": "P-A",
+          "number": "7"
+        },
+        {
+          "id": "B1-225",
+          "count": 2,
+          "name": "Copycat",
+          "set": "B1",
+          "number": "225"
+        },
+        {
+          "id": "A2b-70",
+          "count": 1,
+          "name": "Pokémon Center Lady",
+          "set": "A2b",
+          "number": "70"
+        },
+        {
+          "id": "PROMO-A-5",
+          "count": 2,
+          "name": "Poké Ball",
+          "set": "P-A",
+          "number": "5"
+        },
+        {
+          "id": "B3-147",
+          "count": 1,
+          "name": "Field Blower",
+          "set": "B3",
+          "number": "147"
+        },
+        {
+          "id": "A2-147",
+          "count": 1,
+          "name": "Giant Cape",
+          "set": "A2",
+          "number": "147"
+        },
+        {
+          "id": "B3b-65",
+          "count": 1,
+          "name": "Elegant Cape",
+          "set": "B3b",
+          "number": "65"
+        },
+        {
+          "id": "B2-153",
+          "count": 1,
+          "name": "Training Area",
+          "set": "B2",
+          "number": "153"
+        }
+      ],
+      "listSource": "https://play.limitlesstcg.com/tournament/6a3a18df83fd320299bce65d/player/jlng/decklist",
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A1a-19",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-147",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A3b-56",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A4a-21",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B2a-37",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B3b-15",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B2-153",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "B3b-68",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-147",
+          "usagePct": 75,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-37",
+          "usagePct": 75,
+          "modalCount": 1
+        },
+        {
+          "id": "B3b-65",
+          "usagePct": 70,
+          "modalCount": 1
+        },
+        {
+          "id": "A2b-70",
+          "usagePct": 35,
+          "modalCount": 1
+        },
+        {
+          "id": "A4a-67",
+          "usagePct": 20,
+          "modalCount": 1
+        }
+      ]
     },
     {
       "rank": 10,
       "previousRank": 10,
       "name": "Greninja Mega Absol ex",
       "tier": "A",
-      "wilsonLowerBoundPct": 50.65,
-      "winratePct": 54.62,
-      "sharePct": 0.66,
-      "games": 260,
-      "record": "142-107-11",
+      "wilsonLowerBoundPct": 50.7,
+      "winratePct": 54.44,
+      "sharePct": 0.67,
+      "games": 270,
+      "record": "147-111-12",
+      "curatedId": "greninja-mega-absol",
       "cards": [
         {
           "id": "A1-87",
@@ -1117,18 +1830,100 @@
         }
       ],
       "listSource": "https://play.limitlesstcg.com/tournament/6a4b1a5f65724db9ded3ddbd/player/toxology/decklist",
-      "curatedId": "greninja-mega-absol"
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A1-87",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A1-89",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A2-110",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-150",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A3-144",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-109",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-151",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B3-148",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "B3b-64",
+          "usagePct": 80,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-155",
+          "usagePct": 40,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-148",
+          "usagePct": 25,
+          "modalCount": 1
+        },
+        {
+          "id": "A4a-67",
+          "usagePct": 20,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-147",
+          "usagePct": 20,
+          "modalCount": 1
+        }
+      ]
     },
     {
       "rank": 11,
       "previousRank": 11,
       "name": "Mega Lucario ex Lucario",
       "tier": "A",
-      "wilsonLowerBoundPct": 50.56,
-      "winratePct": 50.78,
-      "sharePct": 5.14,
-      "games": 2241,
-      "record": "1138-1020-83",
+      "wilsonLowerBoundPct": 50.52,
+      "winratePct": 50.74,
+      "sharePct": 5.1,
+      "games": 2243,
+      "record": "1138-1022-83",
       "curatedId": "mega-lucario",
       "cards": [
         {
@@ -1251,7 +2046,100 @@
           "number": "154"
         }
       ],
-      "listSource": "https://play.limitlesstcg.com/tournament/6a3a18df83fd320299bce65d/player/hansuwe/decklist"
+      "listSource": "https://play.limitlesstcg.com/tournament/6a3a18df83fd320299bce65d/player/hansuwe/decklist",
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A1-154",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-148",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-150",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-92",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2b-70",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-147",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-149",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-154",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-79",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-81",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-2",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A1-225",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-91",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "PROMO-B-51",
+          "usagePct": 50,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-86",
+          "usagePct": 45,
+          "modalCount": 1
+        }
+      ]
     },
     {
       "rank": 12,
@@ -1260,9 +2148,10 @@
       "tier": "B",
       "wilsonLowerBoundPct": 48.7,
       "winratePct": 51.71,
-      "sharePct": 0.94,
+      "sharePct": 0.93,
       "games": 410,
       "record": "212-183-15",
+      "curatedId": "mega-manectric-zeraora",
       "cards": [
         {
           "id": "PROMO-B-43",
@@ -1357,7 +2246,94 @@
         }
       ],
       "listSource": "https://play.limitlesstcg.com/tournament/6a4290e583fd320299bd3f55/player/iplaypokemans/decklist",
-      "curatedId": "mega-manectric-zeraora"
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A1-225",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-150",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2b-70",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A3a-21",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B2b-27",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A2-148",
+          "usagePct": 95,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-B-43",
+          "usagePct": 90,
+          "modalCount": 2
+        },
+        {
+          "id": "B2-153",
+          "usagePct": 80,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-147",
+          "usagePct": 70,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-147",
+          "usagePct": 55,
+          "modalCount": 1
+        },
+        {
+          "id": "A1-223",
+          "usagePct": 45,
+          "modalCount": 1
+        },
+        {
+          "id": "B2a-86",
+          "usagePct": 35,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-145",
+          "usagePct": 15,
+          "modalCount": 1
+        },
+        {
+          "id": "B2b-26",
+          "usagePct": 15,
+          "modalCount": 2
+        }
+      ]
     },
     {
       "rank": 13,
@@ -1369,6 +2345,7 @@
       "sharePct": 0.34,
       "games": 163,
       "record": "85-65-13",
+      "curatedId": "mega-altaria-chingling",
       "cards": [
         {
           "id": "B1-196",
@@ -1484,18 +2461,116 @@
         }
       ],
       "listSource": "https://play.limitlesstcg.com/tournament/6a4b1a23063cb29d318e4719/player/njjord7/decklist",
-      "curatedId": "mega-altaria-chingling"
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A1-225",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-150",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A3-84",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-102",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-106",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-109",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-196",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-226",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-153",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "B3b-61",
+          "usagePct": 85,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-120",
+          "usagePct": 65,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-148",
+          "usagePct": 60,
+          "modalCount": 1
+        },
+        {
+          "id": "A2b-71",
+          "usagePct": 55,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-147",
+          "usagePct": 40,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-155",
+          "usagePct": 35,
+          "modalCount": 1
+        },
+        {
+          "id": "A2b-70",
+          "usagePct": 15,
+          "modalCount": 1
+        }
+      ]
     },
     {
       "rank": 14,
       "previousRank": 14,
       "name": "Mega Lucario ex",
       "tier": "B",
-      "wilsonLowerBoundPct": 48.43,
-      "winratePct": 50.27,
-      "sharePct": 1.77,
-      "games": 736,
-      "record": "370-340-26",
+      "wilsonLowerBoundPct": 48.22,
+      "winratePct": 50.07,
+      "sharePct": 1.78,
+      "games": 743,
+      "record": "372-345-26",
+      "curatedId": "mega-lucario-solo",
       "cards": [
         {
           "id": "A2-91",
@@ -1618,10 +2693,322 @@
         }
       ],
       "listSource": "https://play.limitlesstcg.com/tournament/6a4bc3ee063cb29d318e4b87/player/popay/decklist",
-      "curatedId": "mega-lucario-solo"
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A2-150",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-149",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-154",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-81",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A1-225",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-148",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "PROMO-A-2",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 95,
+          "modalCount": 2
+        },
+        {
+          "id": "A1-154",
+          "usagePct": 90,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-91",
+          "usagePct": 90,
+          "modalCount": 2
+        },
+        {
+          "id": "A2b-70",
+          "usagePct": 90,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-147",
+          "usagePct": 75,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-145",
+          "usagePct": 65,
+          "modalCount": 1
+        },
+        {
+          "id": "A2b-42",
+          "usagePct": 35,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-86",
+          "usagePct": 30,
+          "modalCount": 1
+        },
+        {
+          "id": "B3b-61",
+          "usagePct": 30,
+          "modalCount": 1
+        },
+        {
+          "id": "PROMO-B-51",
+          "usagePct": 30,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-79",
+          "usagePct": 25,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-147",
+          "usagePct": 15,
+          "modalCount": 1
+        }
+      ]
     },
     {
       "rank": 15,
+      "previousRank": null,
+      "name": "Mega Altaria ex Gourgeist",
+      "tier": "C",
+      "wilsonLowerBoundPct": 47.83,
+      "winratePct": 52.24,
+      "sharePct": 0.57,
+      "games": 245,
+      "record": "128-108-9",
+      "cards": [
+        {
+          "id": "B2-71",
+          "count": 2,
+          "name": "Pumpkaboo",
+          "set": "B2",
+          "number": "71"
+        },
+        {
+          "id": "B2-72",
+          "count": 2,
+          "name": "Gourgeist",
+          "set": "B2",
+          "number": "72"
+        },
+        {
+          "id": "B1-196",
+          "count": 2,
+          "name": "Swablu",
+          "set": "B1",
+          "number": "196"
+        },
+        {
+          "id": "B1-102",
+          "count": 2,
+          "name": "Mega Altaria ex",
+          "set": "B1",
+          "number": "102"
+        },
+        {
+          "id": "B1-106",
+          "count": 1,
+          "name": "Jirachi",
+          "set": "B1",
+          "number": "106"
+        },
+        {
+          "id": "A3-80",
+          "count": 1,
+          "name": "Comfey",
+          "set": "A3",
+          "number": "80"
+        },
+        {
+          "id": "B1-109",
+          "count": 1,
+          "name": "Chingling",
+          "set": "B1",
+          "number": "109"
+        },
+        {
+          "id": "PROMO-A-7",
+          "count": 2,
+          "name": "Professor's Research",
+          "set": "P-A",
+          "number": "7"
+        },
+        {
+          "id": "B1-225",
+          "count": 2,
+          "name": "Copycat",
+          "set": "B1",
+          "number": "225"
+        },
+        {
+          "id": "A1-225",
+          "count": 1,
+          "name": "Sabrina",
+          "set": "A1",
+          "number": "225"
+        },
+        {
+          "id": "B1-226",
+          "count": 1,
+          "name": "Lisia",
+          "set": "B1",
+          "number": "226"
+        },
+        {
+          "id": "A2-150",
+          "count": 1,
+          "name": "Cyrus",
+          "set": "A2",
+          "number": "150"
+        },
+        {
+          "id": "PROMO-A-5",
+          "count": 1,
+          "name": "Poké Ball",
+          "set": "P-A",
+          "number": "5"
+        },
+        {
+          "id": "B2-153",
+          "count": 1,
+          "name": "Training Area",
+          "set": "B2",
+          "number": "153"
+        }
+      ],
+      "listSource": "https://play.limitlesstcg.com/tournament/6a5d79f052c24ac2da646ef0/player/shinra67/decklist",
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A2-150",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-102",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-196",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B2-153",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-71",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B2-72",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A1-225",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-226",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-109",
+          "usagePct": 85,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-106",
+          "usagePct": 70,
+          "modalCount": 1
+        },
+        {
+          "id": "A3-80",
+          "usagePct": 65,
+          "modalCount": 1
+        },
+        {
+          "id": "A3-84",
+          "usagePct": 15,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-155",
+          "usagePct": 15,
+          "modalCount": 2
+        },
+        {
+          "id": "B3-147",
+          "usagePct": 15,
+          "modalCount": 1
+        },
+        {
+          "id": "B3b-65",
+          "usagePct": 15,
+          "modalCount": 1
+        }
+      ]
+    },
+    {
+      "rank": 16,
       "previousRank": 15,
       "name": "Magnezone Miraidon ex",
       "tier": "C",
@@ -1630,6 +3017,7 @@
       "sharePct": 0.86,
       "games": 340,
       "record": "177-156-7",
+      "curatedId": "magnezone-miraidon",
       "cards": [
         {
           "id": "B1a-24",
@@ -1731,10 +3119,87 @@
         }
       ],
       "listSource": "https://play.limitlesstcg.com/tournament/6a4ab64c063cb29d318e4331/player/esqueletoncio/decklist",
-      "curatedId": "magnezone-miraidon"
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A1-98",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A2-150",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-226",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1a-24",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1a-26",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1a-68",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B3a-19",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A2-147",
+          "usagePct": 95,
+          "modalCount": 1
+        },
+        {
+          "id": "B3a-73",
+          "usagePct": 90,
+          "modalCount": 1
+        },
+        {
+          "id": "A3-66",
+          "usagePct": 85,
+          "modalCount": 2
+        },
+        {
+          "id": "A1-225",
+          "usagePct": 45,
+          "modalCount": 1
+        },
+        {
+          "id": "A2b-70",
+          "usagePct": 40,
+          "modalCount": 1
+        }
+      ]
     },
     {
-      "rank": 16,
+      "rank": 17,
       "previousRank": 16,
       "name": "Magnezone ex Magnezone",
       "tier": "C",
@@ -1743,6 +3208,7 @@
       "sharePct": 0.43,
       "games": 210,
       "record": "110-91-9",
+      "curatedId": "magnezone-ex-magnezone",
       "cards": [
         {
           "id": "B1a-24",
@@ -1858,10 +3324,97 @@
         }
       ],
       "listSource": "https://play.limitlesstcg.com/tournament/6a3b6074c87cd9ff0a30e598/player/nabrix/decklist",
-      "curatedId": "magnezone-ex-magnezone"
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A1-98",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A2-150",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-226",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1a-24",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1a-26",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-54",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A3-66",
+          "usagePct": 90,
+          "modalCount": 2
+        },
+        {
+          "id": "B1a-68",
+          "usagePct": 90,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-147",
+          "usagePct": 85,
+          "modalCount": 1
+        },
+        {
+          "id": "B3a-19",
+          "usagePct": 85,
+          "modalCount": 1
+        },
+        {
+          "id": "B3a-73",
+          "usagePct": 65,
+          "modalCount": 1
+        },
+        {
+          "id": "A2b-70",
+          "usagePct": 55,
+          "modalCount": 1
+        },
+        {
+          "id": "A1-225",
+          "usagePct": 45,
+          "modalCount": 1
+        },
+        {
+          "id": "A3a-21",
+          "usagePct": 40,
+          "modalCount": 2
+        }
+      ]
     },
     {
-      "rank": 17,
+      "rank": 18,
       "previousRank": 17,
       "name": "Milotic ex Chien-Pao ex",
       "tier": "C",
@@ -1870,6 +3423,7 @@
       "sharePct": 0.69,
       "games": 296,
       "record": "153-134-9",
+      "curatedId": "milotic-chien-pao",
       "cards": [
         {
           "id": "A4a-21",
@@ -1971,120 +3525,119 @@
         }
       ],
       "listSource": "https://play.limitlesstcg.com/tournament/6a4bc3ee063cb29d318e4b87/player/thunderlulz/decklist",
-      "curatedId": "milotic-chien-pao"
-    },
-    {
-      "rank": 18,
-      "previousRank": 18,
-      "name": "Mega Charizard Y ex Entei ex",
-      "tier": "C",
-      "wilsonLowerBoundPct": 47.5,
-      "winratePct": 50,
-      "sharePct": 1.11,
-      "games": 452,
-      "record": "226-207-19",
-      "cards": [
+      "listsSampled": 20,
+      "cardUsage": [
         {
-          "id": "A2b-8",
-          "count": 2,
-          "name": "Charmander",
-          "set": "A2b",
-          "number": "8"
+          "id": "A4a-21",
+          "usagePct": 100,
+          "modalCount": 2
         },
         {
-          "id": "B2b-8",
-          "count": 2,
-          "name": "Charmeleon",
-          "set": "B2b",
-          "number": "8"
+          "id": "B2a-37",
+          "usagePct": 100,
+          "modalCount": 1
         },
         {
-          "id": "B1a-14",
-          "count": 1,
-          "name": "Mega Charizard Y ex",
-          "set": "B1a",
-          "number": "14"
+          "id": "B3b-15",
+          "usagePct": 100,
+          "modalCount": 2
         },
         {
-          "id": "A4a-10",
-          "count": 2,
-          "name": "Entei ex",
-          "set": "A4a",
-          "number": "10"
-        },
-        {
-          "id": "PROMO-A-7",
-          "count": 2,
-          "name": "Professor's Research",
-          "set": "P-A",
-          "number": "7"
-        },
-        {
-          "id": "B1-225",
-          "count": 1,
-          "name": "Copycat",
-          "set": "B1",
-          "number": "225"
-        },
-        {
-          "id": "B1-223",
-          "count": 1,
-          "name": "May",
-          "set": "B1",
-          "number": "223"
-        },
-        {
-          "id": "A2b-70",
-          "count": 1,
-          "name": "Pokémon Center Lady",
-          "set": "A2b",
-          "number": "70"
-        },
-        {
-          "id": "A1-225",
-          "count": 1,
-          "name": "Sabrina",
-          "set": "A1",
-          "number": "225"
-        },
-        {
-          "id": "B1-217",
-          "count": 2,
-          "name": "Flame Patch",
-          "set": "B1",
-          "number": "217"
+          "id": "B3b-68",
+          "usagePct": 100,
+          "modalCount": 2
         },
         {
           "id": "PROMO-A-5",
-          "count": 2,
-          "name": "Poké Ball",
-          "set": "P-A",
-          "number": "5"
+          "usagePct": 100,
+          "modalCount": 2
         },
         {
-          "id": "B2-145",
-          "count": 1,
-          "name": "Lucky Ice Pop",
-          "set": "B2",
-          "number": "145"
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 95,
+          "modalCount": 1
         },
         {
           "id": "A2-147",
-          "count": 1,
-          "name": "Giant Cape",
-          "set": "A2",
-          "number": "147"
+          "usagePct": 85,
+          "modalCount": 1
         },
         {
-          "id": "B2-147",
-          "count": 1,
-          "name": "Protective Poncho",
-          "set": "B2",
-          "number": "147"
+          "id": "A1a-19",
+          "usagePct": 70,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-184",
+          "usagePct": 65,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-150",
+          "usagePct": 55,
+          "modalCount": 1
+        },
+        {
+          "id": "A2b-70",
+          "usagePct": 55,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-226",
+          "usagePct": 55,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-153",
+          "usagePct": 55,
+          "modalCount": 1
+        },
+        {
+          "id": "B3b-65",
+          "usagePct": 50,
+          "modalCount": 1
+        },
+        {
+          "id": "A4-151",
+          "usagePct": 25,
+          "modalCount": 2
+        },
+        {
+          "id": "A4a-67",
+          "usagePct": 25,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-155",
+          "usagePct": 20,
+          "modalCount": 1
+        },
+        {
+          "id": "A2a-72",
+          "usagePct": 20,
+          "modalCount": 1
+        },
+        {
+          "id": "A1-220",
+          "usagePct": 15,
+          "modalCount": 2
+        },
+        {
+          "id": "A4-134",
+          "usagePct": 15,
+          "modalCount": 1
+        },
+        {
+          "id": "B3-147",
+          "usagePct": 15,
+          "modalCount": 1
         }
-      ],
-      "listSource": "https://play.limitlesstcg.com/tournament/6a44fdc1c87cd9ff0a3145ed/player/a2lbabar08/decklist",
-      "curatedId": "mega-charizard-entei"
+      ]
     },
     {
       "rank": 19,
@@ -2093,9 +3646,10 @@
       "tier": "C",
       "wilsonLowerBoundPct": 47.5,
       "winratePct": 51.08,
-      "sharePct": 0.81,
+      "sharePct": 0.8,
       "games": 323,
       "record": "165-146-12",
+      "curatedId": "mega-blaziken-castform",
       "cards": [
         {
           "id": "B1-33",
@@ -2183,18 +3737,91 @@
         }
       ],
       "listSource": "https://play.limitlesstcg.com/tournament/6a49ad1a063cb29d318e36c9/player/hofuruhoshi/decklist",
-      "curatedId": "mega-blaziken-castform"
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A2-150",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A3-144",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-217",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-33",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-36",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B2b-69",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B3-24",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "A1-225",
+          "usagePct": 85,
+          "modalCount": 1
+        },
+        {
+          "id": "B2-147",
+          "usagePct": 55,
+          "modalCount": 1
+        },
+        {
+          "id": "B2a-93",
+          "usagePct": 40,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-148",
+          "usagePct": 25,
+          "modalCount": 1
+        }
+      ]
     },
     {
       "rank": 20,
       "previousRank": 20,
       "name": "Hydreigon Mega Sableye ex",
       "tier": "C",
-      "wilsonLowerBoundPct": 47.43,
-      "winratePct": 49.74,
-      "sharePct": 2.42,
-      "games": 977,
-      "record": "486-475-16",
+      "wilsonLowerBoundPct": 47.35,
+      "winratePct": 49.65,
+      "sharePct": 2.45,
+      "games": 997,
+      "record": "495-486-16",
+      "curatedId": "hydreigon-mega-sableye",
       "cards": [
         {
           "id": "B1-155",
@@ -2282,7 +3909,89 @@
         }
       ],
       "listSource": "https://play.limitlesstcg.com/tournament/6a52bdde3592ce392e7fb3f9/player/jlng/decklist",
-      "curatedId": "hydreigon-mega-sableye"
+      "listsSampled": 20,
+      "cardUsage": [
+        {
+          "id": "A2-150",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "A3-144",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-155",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-157",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B1-225",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B2-145",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B3b-41",
+          "usagePct": 100,
+          "modalCount": 1
+        },
+        {
+          "id": "PROMO-A-5",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "PROMO-A-7",
+          "usagePct": 100,
+          "modalCount": 2
+        },
+        {
+          "id": "B3-115",
+          "usagePct": 85,
+          "modalCount": 1
+        },
+        {
+          "id": "A2-148",
+          "usagePct": 55,
+          "modalCount": 2
+        },
+        {
+          "id": "A2-147",
+          "usagePct": 45,
+          "modalCount": 2
+        },
+        {
+          "id": "A2b-70",
+          "usagePct": 45,
+          "modalCount": 1
+        },
+        {
+          "id": "B1-151",
+          "usagePct": 40,
+          "modalCount": 1
+        },
+        {
+          "id": "A1-225",
+          "usagePct": 25,
+          "modalCount": 1
+        },
+        {
+          "id": "B2b-69",
+          "usagePct": 20,
+          "modalCount": 1
+        }
+      ]
     }
   ]
 }
