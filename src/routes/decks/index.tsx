@@ -6,15 +6,27 @@ import { GuideLayout } from "@/components/guide/GuideLayout";
 import { MetaRanking } from "@/components/guide/MetaRanking";
 
 export const Route = createFileRoute("/decks/")({
-  head: () => ({
-    meta: [
-      { title: "環境排行榜 — Piplup! TCG Pocket" },
-      {
-        name: "description",
-        content: "Pokémon TCG Pocket 即時環境 Top 20 排行榜（Wilson score）與精選牌組攻略。",
-      },
-    ],
-  }),
+  head: () => {
+    // 數字從資料算，不要硬編——牌組增減時描述才不會默默過期
+    const topN = getMeta().decks.length;
+    const curatedCount = listDecks().length;
+    const title = "TCG Pocket 環境排行榜 — Piplup!";
+    return {
+      meta: [
+        { title },
+        {
+          name: "description",
+          content: `Pokémon TCG Pocket 即時環境 Top ${topN} 排行榜：依 Limitless 賽事數據以 Wilson score 下界排序，附 ${curatedCount} 套繁中牌組攻略與完整牌表。`,
+        },
+        // 不覆寫的話這頁會沿用 __root 的通用分享卡片
+        { property: "og:title", content: title },
+        {
+          property: "og:description",
+          content: `依 Limitless 賽事數據排序的即時 Top ${topN} 環境排行榜，附 ${curatedCount} 套繁中牌組攻略與完整牌表。`,
+        },
+      ],
+    };
+  },
   component: DecksPage,
 });
 

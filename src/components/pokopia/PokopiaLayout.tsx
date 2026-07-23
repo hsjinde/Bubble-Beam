@@ -10,7 +10,12 @@ export function PokopiaLayout({ children }: { children: ReactNode }) {
   return (
     <div data-scope="pokopia" className="min-h-dvh bg-pokopia-bg">
       <header className="sticky top-0 z-40 border-b border-pokopia-tint bg-pokopia-bg-panel/90 backdrop-blur">
-        <nav className="mx-auto flex max-w-5xl items-center gap-6 px-4 py-2">
+        {/*
+         * flex-wrap：四個 CJK 標籤不折行時共 349px，超過 375px 手機的 343px 可用寬度。
+         * 不換行就會有標籤被折成兩行（「Pokopia／建築」），所以讓跨區連結整塊掉到第二行
+         * 右側，桌機寬度足夠時仍是單行。手機 header 因此從 61px 變成 109px（實測）。
+         */}
+        <nav className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-1 px-4 py-2">
           <Link to="/" className="group inline-flex min-h-11 items-center gap-1.5 text-pokopia-ink">
             {/* 首頁 identity 延續：手寫 logo ＋ 一片小樹葉，呼應 Pokopia 的自然生活調性 */}
             <svg
@@ -39,15 +44,23 @@ export function PokopiaLayout({ children }: { children: ReactNode }) {
           <Link
             to="/pokopia"
             activeOptions={{ exact: true }}
-            className="inline-flex min-h-11 items-center font-semibold text-pokopia-ink hover:underline"
+            className="inline-flex min-h-11 items-center font-semibold whitespace-nowrap text-pokopia-ink hover:underline"
           >
             Pokopia 建築
           </Link>
           <Link
             to="/pokopia/videos"
-            className="inline-flex min-h-11 items-center font-semibold text-pokopia-ink hover:underline"
+            className="inline-flex min-h-11 items-center font-semibold whitespace-nowrap text-pokopia-ink hover:underline"
           >
             建築影片
+          </Link>
+          {/* 跨區入口，與 GuideLayout 的對稱作法；配色留在 pokopia 暖色域內。 */}
+          <Link
+            to="/decks"
+            className="ml-auto inline-flex min-h-11 items-center gap-1 rounded-full border border-pokopia-tint px-3.5 text-sm font-semibold whitespace-nowrap text-pokopia-ink transition hover:border-pokopia-accent hover:bg-pokopia-highlight"
+          >
+            牌組攻略
+            <span aria-hidden="true">→</span>
           </Link>
         </nav>
       </header>

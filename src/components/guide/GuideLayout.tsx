@@ -37,9 +37,22 @@ export function GuideLayout({ children }: { children: ReactNode }) {
           </Link>
           <Link
             to="/decks"
-            className="inline-flex min-h-11 items-center font-semibold text-guide-ink hover:underline"
+            className="inline-flex min-h-11 items-center font-semibold whitespace-nowrap text-guide-ink hover:underline"
           >
             牌組攻略
+          </Link>
+          {/*
+           * 跨區入口。在這之前兩個子站只有首頁一條橋——從搜尋引擎直接落到 /decks 的
+           * 訪客完全不知道有 Pokopia 建築指南。ml-auto ＋ 邊框藥丸是刻意的區隔：
+           * 左側是「本區的分頁」，右側是「離開這一區」，避免看起來像同層級的第三個分頁。
+           * 用 guide 色票而非 pokopia 暖色——它還在攻略站的視覺範圍內。
+           */}
+          <Link
+            to="/pokopia"
+            className="ml-auto inline-flex min-h-11 items-center gap-1 rounded-full border border-guide-tint px-3.5 text-sm font-semibold whitespace-nowrap text-guide-ink transition hover:border-guide-accent hover:bg-guide-bg"
+          >
+            Pokopia 建築
+            <span aria-hidden="true">→</span>
           </Link>
         </nav>
       </header>

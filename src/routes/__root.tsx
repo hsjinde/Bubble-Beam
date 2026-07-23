@@ -78,8 +78,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         name: "description",
         content: "Pokémon TCG Pocket 繁中牌組攻略與 Limitless 即時環境排行榜。",
       },
-      // og:* 與 twitter:* 不會被子路由的 head() 覆寫，所以這裡放的是全站通用值；
-      // 個別頁面若要客製分享卡片，需在該路由的 head() 一併覆寫這幾個 property。
+      // 子路由的 head() 會依 property／name 覆寫同名項目（實測：/pokopia 的 og:title
+      // 確實蓋掉這裡的值），所以這裡放的是「沒有頁面會客製」的全站通用值。
+      // og:title／og:description 是每頁該自己覆寫的，見各路由的 head()。
+      { name: "theme-color", content: "#2a6f97" },
       { property: "og:site_name", content: "Piplup!" },
       { property: "og:title", content: "Piplup! — TCG Pocket 牌組攻略" },
       {
@@ -107,8 +109,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/piplup.png", type: "image/png" },
-      { rel: "apple-touch-icon", href: "/piplup.png" },
+      // favicon.ico 內含 16／32／48 三種尺寸（PNG-in-ICO），瀏覽器自己挑；
+      // apple-touch-icon 是不透明白底版本——iOS 會把透明區塊合成為黑色。
+      { rel: "icon", href: "/favicon.ico" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+      { rel: "manifest", href: "/site.webmanifest" },
     ],
   }),
   shellComponent: RootShell,

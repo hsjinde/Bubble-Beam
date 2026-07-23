@@ -8,8 +8,25 @@ import { TierBadge } from "@/components/guide/TierBadge";
 export const Route = createFileRoute("/decks/$deckId")({
   head: ({ params }) => {
     const deck = getDeck(params.deckId);
+    if (!deck) {
+      // 不存在的 slug 不該被索引，否則打錯的網址會進 SERP
+      return {
+        meta: [{ title: "找不到牌組 — Piplup!" }, { name: "robots", content: "noindex" }],
+      };
+    }
+    // 每頁自己的分享卡片：__root 只提供 og:site_name／og:image／og:locale 那類全站值，
+    // og:title／og:description 不覆寫的話 21 頁攻略會共用同一張卡片。
+    const title = `${deck.name} 牌組攻略 — Piplup!`;
+    const description = `${deck.summary}Tier ${deck.tier}・難度${deck.difficulty}，附完整 20 張牌表、打法攻略與對戰思路。`;
     return {
-      meta: [{ title: deck ? `${deck.name} — 牌組攻略` : "找不到牌組" }],
+      meta: [
+        { title },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        // 覆寫 __root 的 website：攻略頁是文章而非站台首頁
+        { property: "og:type", content: "article" },
+      ],
     };
   },
   component: DeckDetailPage,

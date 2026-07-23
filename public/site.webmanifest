@@ -1,0 +1,15 @@
+{
+  "name": "Piplup! — TCG Pocket 牌組攻略",
+  "short_name": "Piplup!",
+  "description": "Pokémon TCG Pocket 繁中牌組攻略與 Limitless 即時環境排行榜。",
+  "lang": "zh-Hant",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#eef7fc",
+  "theme_color": "#2a6f97",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
