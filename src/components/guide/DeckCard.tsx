@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { Deck } from "@/data/types";
+import { getHeroCardId } from "@/data/hero-card";
 import { CardImage } from "./CardImage";
 import { EnergyIcon } from "./EnergyIcon";
 import { TierBadge } from "./TierBadge";
@@ -13,7 +14,8 @@ export function DeckCard({ deck }: { deck: Deck }) {
     >
       <div className="flex items-start gap-4">
         <div className="w-20 shrink-0">
-          <CardImage cardId={deck.cards[0].id} />
+          {/* 門面卡而非 cards[0]——牌表照進化線排，第一張常是進化前的小卡 */}
+          <CardImage cardId={getHeroCardId(deck)} />
         </div>
         <div className="min-w-0">
           <div className="flex items-center gap-2">

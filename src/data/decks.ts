@@ -941,6 +941,9 @@ const decks: Deck[] = [
     tier: "C",
     energy: ["Darkness"],
     difficulty: "難",
+    // 牌表同時有 Mega Absol ex 與 Mega Sableye ex，且 Absol 排在前面，
+    // 自動推導會挑到 Absol。這套的門面是牌組名裡的勾魂眼，明確指定。
+    heroCardId: "B3b-41",
     summary: "使用率第二的削血流：雙忍蛙＋達克萊伊每回合固定磨血，Mega勾魂眼ex 負責收割。",
     cards: [
       { id: "A1-87", count: 2 }, // Froakie
@@ -990,4 +993,13 @@ export function listDecks(): Deck[] {
 
 export function getDeck(id: string): Deck | undefined {
   return decks.find((d) => d.id === id);
+}
+
+/**
+ * 依繁中牌組名查。給「對戰思路」用——`matchups[].vs` 存的是牌組名字串，
+ * 對得上就能連到那套牌的攻略頁。目前 63 筆對戰思路 100% 都對得上，
+ * 但仍要處理 undefined：新增 matchup 時打錯字或提到尚未策展的牌組都會落空。
+ */
+export function getDeckByName(name: string): Deck | undefined {
+  return decks.find((d) => d.name === name);
 }

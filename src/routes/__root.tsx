@@ -102,9 +102,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.gstatic.com",
         crossOrigin: "anonymous" as const,
       },
+      /*
+       * 字重清單只影響「這支 CSS 的大小」，不影響字型下載量——這點很反直覺，別搞錯：
+       * Noto Sans TC 是**可變字型**，30 個 woff2 分塊共用同一個檔案 hash，分塊切的是
+       * unicode 範圍而不是字重。所以 1.73 MB 是「頁面用到多少字」的成本，加減字重動不了它。
+       *
+       * 字重數影響的是 @font-face 宣告數（每個字重約 110 段 unicode range）。
+       * 實測：400;500;600;700 → CSS 489 KB（傳輸 133 KB，render-blocking）；
+       * 砍成 400;700 → 247 KB（傳輸 66.9 KB）。字型檔維持 31 分塊 / 1.73 MB 不變。
+       *
+       * 取捨：省下 66 KB 的**阻塞首次繪製**資源，代價是中文的 font-medium(500)／
+       * font-semibold(600) 會落到最近的 400／700。CJK 在這兩級的字面差異很細微，
+       * 而首次繪製影響每一位訪客——所以選了砍字重。
+       *
+       * 那 1.73 MB 還在，唯一的解法是不要載 Noto Sans TC（改用系統 CJK 字型）
+       * 或自架子集，兩者都是視覺決定，留給人決定。它是 display=swap ＋ 非阻塞的，
+       * 文字會先用系統字型顯示再替換，所以不擋首次繪製。
+       *
+       * Jakarta 的 800 也拿掉了：全站只有一處 font-extrabold，已改用 font-bold。
+       */
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;700&display=swap",
       },
       {
         rel: "stylesheet",

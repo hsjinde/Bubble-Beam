@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { listDecks } from "@/data/decks";
 import { getMeta } from "@/data/meta";
-import { DeckCard } from "@/components/guide/DeckCard";
+import { CuratedDecks } from "@/components/guide/CuratedDecks";
 import { GuideLayout } from "@/components/guide/GuideLayout";
 import { MetaRanking } from "@/components/guide/MetaRanking";
 import { absoluteUrl } from "@/lib/site";
@@ -83,11 +83,7 @@ function DecksPage() {
       <section className="mt-10">
         <h2 className="text-xl font-bold text-guide-ink">精選牌組攻略</h2>
         <p className="mt-1 text-sm text-slate-600">人工整理的完整牌表、打法與對戰思路。</p>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          {curated.map((deck) => (
-            <DeckCard key={deck.id} deck={deck} />
-          ))}
-        </div>
+        <CuratedDecks decks={curated} />
       </section>
     </GuideLayout>
   );

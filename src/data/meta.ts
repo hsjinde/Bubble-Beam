@@ -1,5 +1,5 @@
 import type { MetaDeck } from "./types";
-import raw from "./meta.json";
+import raw from "./meta.json" with { type: "json" };
 
 export interface MetaSnapshot {
   fetchedAt: string; // ISO timestamp
