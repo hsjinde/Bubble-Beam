@@ -177,6 +177,32 @@ Windows 的 FAT→NTFS 工具，不是 ImageMagick，別誤用）。圖示是用
 `site.webmanifest` 只讓站台「可安裝」（`display: standalone`），**沒有** service worker、
 沒有離線快取——真正的 PWA 是另一件事，還沒做。
 
+### 4. SEO 基礎建設（sitemap／robots／canonical／JSON-LD）
+
+- `public/sitemap.xml` 與 `public/robots.txt` 由 `scripts/generate-sitemap.mjs` 產生，
+  **已掛在 `prebuild`**（透過 `npm run gen:sitemap`），`npm run build` 會自動重跑。
+  兩個都是**生成檔，不要手改**。目前 25 個網址（首頁＋排行榜＋21 頁攻略＋2 頁 Pokopia）。
+- 全站五種頁面都有 `canonical`。`/pokopia` 的 canonical **刻意不帶 `?b=<slug>`**——
+  那參數只換掉建築詳情面板，主體相同，不收斂會讓 45 個近乎重複的網址各自被索引。
+- JSON-LD：`/decks` 有 `ItemList`（排行榜本體）＋ `BreadcrumbList`，
+  `/decks/$deckId` 有 `BreadcrumbList`。**沒有用 `Article`**——Google 的 Article
+  複合式結果需要 `author` 與 `datePublished`，策展攻略沒有逐篇的作者與發佈時間，
+  填假值比不宣告更糟。
+- 網域統一放在 `src/lib/site.ts` 的 `SITE_URL`，前端與 sitemap 腳本共用同一個來源。
+  換網域只改這裡。
+
+**`generate-sitemap.mjs` 的兩個地雷**（都踩過了，別重蹈）：
+
+1. 牌組清單是 `import` `src/data/decks.ts` 進來的（靠 Node 的 `--experimental-strip-types`），
+   **不要改成 regex 掃檔案**——prettier 重排就會漏抓，而漏抓只是安靜地少幾個網址。
+   Windows 上 `import()` 絕對路徑要先過 `pathToFileURL`，否則 `ERR_UNSUPPORTED_ESM_URL_SCHEME`。
+2. 不要走 `meta.ts` 拿 `fetchedAt`——它的 `import raw from "./meta.json"` 少了
+   `with { type: "json" }`，Vite 吃得下但 Node 的 ESM loader 會拒絕。腳本直接 `readFileSync`。
+
+`lastmod` 只有 `/decks` 有（用 `meta.json` 的 `fetchedAt`，那是內容真正改變的時刻）。
+其餘頁面沒有可靠時間來源就不寫——Google 對不準的 lastmod 會忽略整個欄位，寫假的更糟。
+`changefreq`／`priority` 已被 Google 忽略，沒寫。
+
 ### 這輪的驗證數字
 
 | 檢查                              | 結果                                   |
@@ -186,9 +212,18 @@ Windows 的 FAT→NTFS 工具，不是 ImageMagick，別誤用）。圖示是用
 | 新增跨區連結文字對比               | 5.46:1 靜態／5.07:1 hover（guide 側）  |
 |                                   | 11:1 靜態／9.47:1 hover（pokopia 側）  |
 | 手機 375px 水平溢位                | 無；所有觸控目標 44px                  |
-| `npm run build`                    | 通過                                   |
+| `npm run build`                    | 通過（prebuild 有跑 sitemap 產生器）   |
 | client 卡片索引 chunk              | 19.6 KB（未回退）                      |
 | console 錯誤                       | 無                                     |
+| 五個頁面的 canonical               | 全部正確；`?b=` 變體收斂到裸網址       |
+| JSON-LD                            | 全部合法 JSON，位於 `<head>`，未洩漏到畫面 |
+| sitemap 網址數                     | 25（建置產物一致）                     |
+| 線上部署（`b7e599a`）              | 已驗證：`/favicon.ico` 200、攻略頁標題為每頁專屬 |
+
+**踩過的坑**：`read_console_messages` 會回傳**保留緩衝**，重啟 dev server 後仍吐出
+同一個 Vite HMR 時間戳（`?t=...`）的舊錯誤。判斷是否為當下真錯誤，要看時間戳有沒有變、
+並直接查 DOM 現況（例如 root 的 `head()` 有沒有跑，就看 `og:image` 在不在）。
+新建檔案（如這輪的 `src/lib/site.ts`）會讓 HMR 出現短暫的模組撕裂，那是暫時的。
 
 **已知、未處理**：跨區藥丸的 `border-guide-tint` 邊框對底色是 1.34:1，低於 WCAG 1.4.11
 的 3:1。這與 `MetaRanking` 既有的 Tier 篩選按鈕（1.35:1，同一組 token）是同一個狀況，

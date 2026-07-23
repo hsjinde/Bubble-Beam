@@ -3,9 +3,11 @@ import { VideoBackdrop } from "@/components/VideoBackdrop";
 import { Doodles } from "@/components/Doodles";
 import { GuideEntry } from "@/components/GuideEntry";
 import { PokopiaEntry } from "@/components/PokopiaEntry";
+import { absoluteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
+    links: [{ rel: "canonical", href: absoluteUrl("/") }],
     meta: [
       { title: "Piplup! — A Playful Fan Site" },
       {

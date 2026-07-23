@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PokopiaLayout } from "@/components/pokopia/PokopiaLayout";
 import { PokopiaPage } from "@/components/pokopia/PokopiaPage";
+import { absoluteUrl } from "@/lib/site";
 
 interface PokopiaSearch {
   /** 目前選取的建築 slug，用於 deep-link（可分享、可用瀏覽器返回） */
@@ -12,6 +13,12 @@ export const Route = createFileRoute("/pokopia/")({
     b: typeof search.b === "string" ? search.b : undefined,
   }),
   head: () => ({
+    /*
+     * canonical 刻意不帶 ?b=<slug>。那個參數只是換掉頁面裡的建築詳情面板，
+     * 主體（全 45 種一覽）完全相同——不收斂的話 45 個近乎重複的網址會各自被索引，
+     * 把排名訊號打散。深連結本身仍然可分享、可返回，只是不各自進索引。
+     */
+    links: [{ rel: "canonical", href: absoluteUrl("/pokopia") }],
     meta: [
       { title: "Pokopia 建築指南 — Piplup!" },
       {

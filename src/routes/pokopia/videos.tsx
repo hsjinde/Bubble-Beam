@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { VIDEOS } from "@/data/pokopia/pokopia";
 import { PokopiaLayout } from "@/components/pokopia/PokopiaLayout";
 import { VideoInspiration } from "@/components/pokopia/VideoInspiration";
+import { absoluteUrl } from "@/lib/site";
 
 /**
  * /pokopia/videos：建築影片專屬頁。影片從主頁 /pokopia 搬來獨立成頁，完整 22 支、
@@ -10,6 +11,7 @@ import { VideoInspiration } from "@/components/pokopia/VideoInspiration";
  */
 export const Route = createFileRoute("/pokopia/videos")({
   head: () => ({
+    links: [{ rel: "canonical", href: absoluteUrl("/pokopia/videos") }],
     meta: [
       { title: "Pokopia 建築影片 — Piplup!" },
       {

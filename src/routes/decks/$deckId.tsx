@@ -1,5 +1,7 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { getDeck } from "@/data/decks";
+import { absoluteUrl } from "@/lib/site";
+import { breadcrumbList, jsonLdScript } from "@/lib/json-ld";
 import { Decklist } from "@/components/guide/Decklist";
 import { EnergyIcon } from "@/components/guide/EnergyIcon";
 import { GuideLayout } from "@/components/guide/GuideLayout";
@@ -18,6 +20,8 @@ export const Route = createFileRoute("/decks/$deckId")({
     // og:title／og:description 不覆寫的話 21 頁攻略會共用同一張卡片。
     const title = `${deck.name} 牌組攻略 — Piplup!`;
     const description = `${deck.summary}Tier ${deck.tier}・難度${deck.difficulty}，附完整 20 張牌表、打法攻略與對戰思路。`;
+    // 用 deck.id 而非 params.deckId：canonical 要指向正規化後的網址
+    const canonical = absoluteUrl(`/decks/${deck.id}`);
     return {
       meta: [
         { title },
@@ -26,6 +30,22 @@ export const Route = createFileRoute("/decks/$deckId")({
         { property: "og:description", content: description },
         // 覆寫 __root 的 website：攻略頁是文章而非站台首頁
         { property: "og:type", content: "article" },
+        { property: "og:url", content: canonical },
+      ],
+      links: [{ rel: "canonical", href: canonical }],
+      /*
+       * 只放 BreadcrumbList。原本考慮加 Article，但 Google 的 Article 複合式搜尋結果
+       * 需要 author 與 datePublished，而策展攻略沒有逐篇的作者與發佈時間——
+       * 與其填假值，不如不宣告。麵包屑的資料是真的，也是這類頁面實際拿得到的結果。
+       */
+      scripts: [
+        jsonLdScript(
+          breadcrumbList([
+            { name: "首頁", url: absoluteUrl("/") },
+            { name: "牌組攻略", url: absoluteUrl("/decks") },
+            { name: deck.name, url: canonical },
+          ]),
+        ),
       ],
     };
   },

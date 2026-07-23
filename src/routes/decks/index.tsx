@@ -4,13 +4,17 @@ import { getMeta } from "@/data/meta";
 import { DeckCard } from "@/components/guide/DeckCard";
 import { GuideLayout } from "@/components/guide/GuideLayout";
 import { MetaRanking } from "@/components/guide/MetaRanking";
+import { absoluteUrl } from "@/lib/site";
+import { breadcrumbList, jsonLdScript } from "@/lib/json-ld";
 
 export const Route = createFileRoute("/decks/")({
   head: () => {
     // 數字從資料算，不要硬編——牌組增減時描述才不會默默過期
-    const topN = getMeta().decks.length;
+    const meta = getMeta();
+    const topN = meta.decks.length;
     const curatedCount = listDecks().length;
     const title = "TCG Pocket 環境排行榜 — Piplup!";
+    const canonical = absoluteUrl("/decks");
     return {
       meta: [
         { title },
@@ -24,6 +28,32 @@ export const Route = createFileRoute("/decks/")({
           property: "og:description",
           content: `依 Limitless 賽事數據排序的即時 Top ${topN} 環境排行榜，附 ${curatedCount} 套繁中牌組攻略與完整牌表。`,
         },
+        { property: "og:url", content: canonical },
+      ],
+      links: [{ rel: "canonical", href: canonical }],
+      scripts: [
+        jsonLdScript(
+          breadcrumbList([
+            { name: "首頁", url: absoluteUrl("/") },
+            { name: "牌組攻略", url: canonical },
+          ]),
+        ),
+        // 這頁本體就是一份排名清單，ItemList 是誠實的描述。只有帶攻略的列給 url，
+        // 其餘僅列名次與名稱——沒有對應頁面就不要編一個出來。
+        jsonLdScript({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Pokémon TCG Pocket 環境排行榜",
+          description: "依 Limitless 賽事數據以 Wilson score 95% 信賴下界排序。",
+          numberOfItems: topN,
+          itemListOrder: "https://schema.org/ItemListOrderDescending",
+          itemListElement: meta.decks.map((d) => ({
+            "@type": "ListItem",
+            position: d.rank,
+            name: d.name,
+            ...(d.curatedId ? { url: absoluteUrl(`/decks/${d.curatedId}`) } : {}),
+          })),
+        }),
       ],
     };
   },

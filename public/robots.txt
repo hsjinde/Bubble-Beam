@@ -1,0 +1,5 @@
+# 由 scripts/generate-sitemap.mjs 產生，不要手改
+User-agent: *
+Allow: /
+
+Sitemap: https://bubble.19980803.xyz/sitemap.xml

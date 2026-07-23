@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { absoluteUrl } from "../lib/site";
 
 function NotFoundComponent() {
   return (
@@ -90,9 +91,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "zh_TW" },
-      { property: "og:image", content: "https://bubble.19980803.xyz/piplup.png" },
+      { property: "og:image", content: absoluteUrl("/piplup.png") },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: "https://bubble.19980803.xyz/piplup.png" },
+      { name: "twitter:image", content: absoluteUrl("/piplup.png") },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },

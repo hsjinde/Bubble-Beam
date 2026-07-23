@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "prebuild": "node scripts/subset-cards.mjs",
+    "prebuild": "node scripts/subset-cards.mjs && npm run gen:sitemap",
+    "gen:sitemap": "node --experimental-strip-types --disable-warning=ExperimentalWarning scripts/generate-sitemap.mjs",
     "build": "vite build",
-    "build:dev": "node scripts/subset-cards.mjs && vite build --mode development",
+    "build:dev": "node scripts/subset-cards.mjs && npm run gen:sitemap && vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write ."
