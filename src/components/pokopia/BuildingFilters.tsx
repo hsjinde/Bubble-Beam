@@ -140,7 +140,10 @@ function FilterChip({
       )}
       {label}
       {typeof count === "number" && (
-        <span className={active ? "text-white/80" : "text-pokopia-ink-soft"}>{count}</span>
+        // 選中態原本是 text-white/80，在 pokopia-accent（#a35f1f）上只有 3.81:1。
+        // /90 也只到 4.39，仍不到 4.5——這個底色沒有「淡一點的白」可用，
+        // 只能用純白（4.98:1，與旁邊 label 同值）。未選中態的 ink-soft 本來就合格。
+        <span className={active ? "text-white" : "text-pokopia-ink-soft"}>{count}</span>
       )}
     </button>
   );

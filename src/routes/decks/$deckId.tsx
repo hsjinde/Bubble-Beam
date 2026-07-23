@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { getDeck, getDeckByName } from "@/data/decks";
+import { getAdjacentDecks, getDeck, getDeckByName } from "@/data/decks";
 import { getCard } from "@/data/cards";
 import { getHeroCardId } from "@/data/hero-card";
 import { absoluteUrl } from "@/lib/site";
@@ -88,6 +88,46 @@ function Strategy({ text }: { text: string }) {
         ),
       )}
     </>
+  );
+}
+
+/**
+ * 逐套翻閱用的頁尾導覽。21 套牌原本只能「回列表 → 再點下一套」，來回兩次跳轉。
+ *
+ * 邊框沿用 matchup 卡的 `border-guide-tint`——那個 1.35:1 的淺色邊框是全站待辦
+ * （Tier 藥丸、跨區膠囊都是同一個），要修就整批一起修，不要只在這裡改成別的顏色，
+ * 否則同一頁會出現兩種卡片邊框。牌組名用 guide-ink（5.5:1），那是不能動的底線。
+ */
+function DeckPager({ current }: { current: string }) {
+  const { prev, next } = getAdjacentDecks(current);
+  if (!prev && !next) return null;
+
+  const card =
+    "flex min-h-11 flex-col justify-center rounded-xl border border-guide-tint bg-white p-4 shadow-xs transition-shadow hover:shadow-md";
+
+  return (
+    <nav
+      aria-label="其他牌組"
+      className="mt-12 grid gap-3 border-t border-guide-tint pt-6 sm:grid-cols-2"
+    >
+      {prev && (
+        <Link to="/decks/$deckId" params={{ deckId: prev.id }} className={`group ${card}`}>
+          <span className="text-xs font-semibold text-slate-600">← 上一套</span>
+          <span className="mt-0.5 font-bold text-guide-ink group-hover:underline">{prev.name}</span>
+        </Link>
+      )}
+      {next && (
+        // 沒有上一套時把「下一套」推到右欄，維持「左＝前／右＝後」的空間直覺
+        <Link
+          to="/decks/$deckId"
+          params={{ deckId: next.id }}
+          className={`group ${card} sm:text-right ${prev ? "" : "sm:col-start-2"}`}
+        >
+          <span className="text-xs font-semibold text-slate-600">下一套 →</span>
+          <span className="mt-0.5 font-bold text-guide-ink group-hover:underline">{next.name}</span>
+        </Link>
+      )}
+    </nav>
   );
 }
 
@@ -196,6 +236,8 @@ function DeckDetailPage() {
           </div>
         </>
       )}
+
+      <DeckPager current={deck.id} />
     </GuideLayout>
   );
 }

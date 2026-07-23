@@ -115,11 +115,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
        * 範圍寫法比砍字重更小，而且 font-medium(500)／font-semibold(600) 仍能正確算繪，
        * 離散寫法反而會讓它們落到最近的既有字重。
        *
-       * 字型檔本身（31 個 woff2 分塊、約 1.73 MB）**不受字重寫法影響**——分塊共用
-       * 同一個檔案 hash，切的是 unicode 範圍而不是字重，所以那是「頁面用到多少字」
-       * 的成本。要動它只能不載 Noto Sans TC（改用系統 CJK 字型）或自架子集，
-       * 兩者都是視覺決定，留給人拍板。它是 display=swap ＋ 非阻塞，文字會先用系統
-       * 字型顯示再替換，不擋首次繪製。
+       * 字型檔本身**不受字重寫法影響**——分塊切的是 unicode 範圍而不是字重。
+       *
+       * 別以為 unicode-range 分塊會讓成本自動變小。/decks 的實測（Resource Timing，
+       * decodedBodySize）：
+       *   Noto Sans TC      23 個分塊 / 1463 KB
+       *   Plus Jakarta Sans  1 個分塊 /   27 KB
+       * 而這頁只用到 **383 個相異漢字**——平均一個字花掉 3.8 KB。漢字分塊是照使用
+       * 頻率切的，一篇正常中文文章就會散落在二十幾個區段裡，等於幾乎整套都要載。
+       *
+       * 所以真正有效的手段是自架子集（383 字 ≈ 50 KB，省 96%），不是換字重寫法。
+       * 那需要引入字型子集化工具鏈，而且 meta.json 每週更新、文字會變，子集要跟著
+       * 重算，漏字就會出現豆腐框——是個要人拍板的取捨，別順手做。
+       *
+       * 現況的緩解：display=swap ＋ 非阻塞，文字先用系統 CJK 字型顯示再替換，
+       * 不擋首次繪製；Google CDN 快取一年，回訪者成本為 0。
        */
       {
         rel: "stylesheet",

@@ -11,11 +11,18 @@ export function PokopiaLayout({ children }: { children: ReactNode }) {
     <div data-scope="pokopia" className="min-h-dvh bg-pokopia-bg">
       <header className="sticky top-0 z-40 border-b border-pokopia-tint bg-pokopia-bg-panel/90 backdrop-blur">
         {/*
-         * flex-wrap：四個 CJK 標籤不折行時共 349px，超過 375px 手機的 343px 可用寬度。
-         * 不換行就會有標籤被折成兩行（「Pokopia／建築」），所以讓跨區連結整塊掉到第二行
-         * 右側，桌機寬度足夠時仍是單行。手機 header 因此從 61px 變成 109px（實測）。
+         * 375px 手機的實測預算（可用寬 343px＝375 − px-4 兩側）：
+         *   logo 82 ＋「Pokopia 建築」99 ＋「建築影片」64 ＋ 跨區膠囊 104 ＋ gap-x-6 72 ＝ 421
+         * 超出 78px，跨區膠囊被擠到第二行，sticky header 從 61px 漲到 109px（手機視高 13%）。
+         *
+         * 只縮 gap 不夠（gap-x-4 才省 24px），所以手機同時縮欄間距與區內標籤：
+         *   82 ＋「建築」32 ＋「影片」32 ＋ 104 ＋ gap-x-4 48 ＝ 298，留 45px 餘裕。
+         * 縮的是**區內**標籤而非跨區膠囊——你已經在 Pokopia 區裡了，區名是冗餘資訊；
+         * 「離開這一區」的膠囊反而要講清楚去哪。sm 以上一律還原全名。
+         *
+         * flex-wrap 留著當保險：日後再加連結塞不下時折成兩行，而不是溢出或壓縮標籤。
          */}
-        <nav className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-1 px-4 py-2">
+        <nav className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-4 gap-y-1 px-4 py-2 sm:gap-x-6">
           <Link to="/" className="group inline-flex min-h-11 items-center gap-1.5 text-pokopia-ink">
             {/* 首頁 identity 延續：手寫 logo ＋ 一片小樹葉，呼應 Pokopia 的自然生活調性 */}
             <svg
@@ -46,13 +53,16 @@ export function PokopiaLayout({ children }: { children: ReactNode }) {
             activeOptions={{ exact: true }}
             className="inline-flex min-h-11 items-center font-semibold whitespace-nowrap text-pokopia-ink hover:underline"
           >
-            Pokopia 建築
+            {/* hidden＝display:none，所以無障礙樹裡永遠只有一個名稱，不會被讀兩次 */}
+            <span className="sm:hidden">建築</span>
+            <span className="hidden sm:inline">Pokopia 建築</span>
           </Link>
           <Link
             to="/pokopia/videos"
             className="inline-flex min-h-11 items-center font-semibold whitespace-nowrap text-pokopia-ink hover:underline"
           >
-            建築影片
+            <span className="sm:hidden">影片</span>
+            <span className="hidden sm:inline">建築影片</span>
           </Link>
           {/* 跨區入口，與 GuideLayout 的對稱作法；配色留在 pokopia 暖色域內。 */}
           <Link

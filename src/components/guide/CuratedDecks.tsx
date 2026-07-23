@@ -81,9 +81,17 @@ export function CuratedDecks({ decks }: { decks: Deck[] }) {
   return (
     <div>
       <div className="mt-4 space-y-3 rounded-xl border border-guide-tint bg-white/70 p-4">
+        {/*
+          這頁有兩組長得幾乎一樣的 Tier 篩選（上面排行榜一組、這裡一組）。
+          兩者的差異靠三件事說清楚，別為了視覺整齊拿掉任何一件：
+          這塊有外框面板、標籤明講範圍（「精選攻略」而非「牌組」）、下面這句話。
+        */}
+        <p className="text-xs text-slate-600">
+          以下條件只篩這 {decks.length} 套精選攻略，與上方排行榜的篩選各自獨立。
+        </p>
         <div>
           <label htmlFor="deck-search" className="text-xs font-semibold text-guide-ink">
-            搜尋牌組
+            搜尋精選攻略
           </label>
           {/*
             三個對比相關的決定，都是量出來的，不要憑感覺改回去：
@@ -105,7 +113,11 @@ export function CuratedDecks({ decks }: { decks: Deck[] }) {
           />
         </div>
 
-        <div className="flex flex-wrap items-center gap-2">
+        <div
+          className="flex flex-wrap items-center gap-2"
+          role="group"
+          aria-label="依 Tier 篩選精選攻略"
+        >
           <span className="text-xs font-semibold text-guide-ink">Tier</span>
           {TIER_ORDER.map((t) => (
             <Chip key={t} active={tiers.has(t)} onClick={() => toggle(tiers, setTiers, t)}>

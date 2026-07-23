@@ -1003,3 +1003,19 @@ export function getDeck(id: string): Deck | undefined {
 export function getDeckByName(name: string): Deck | undefined {
   return decks.find((d) => d.name === name);
 }
+
+/**
+ * 攻略頁「上一套／下一套」用的相鄰牌組。
+ *
+ * 順序＝ `listDecks()`（tier 排序，同 tier 內維持宣告順序），跟 /decks 精選格線
+ * 看到的順序一致——逐套翻閱的體感才會是「照著剛剛那份列表往下走」。
+ *
+ * **不環繞**：第一套沒有上一套、最後一套沒有下一套。這是依強度排序的清單，
+ * 環繞會把「已經看到底了」這個資訊吃掉。
+ */
+export function getAdjacentDecks(id: string): { prev?: Deck; next?: Deck } {
+  const ordered = listDecks();
+  const i = ordered.findIndex((d) => d.id === id);
+  if (i === -1) return {};
+  return { prev: ordered[i - 1], next: ordered[i + 1] };
+}
