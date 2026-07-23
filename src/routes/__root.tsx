@@ -103,27 +103,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         crossOrigin: "anonymous" as const,
       },
       /*
-       * 字重清單只影響「這支 CSS 的大小」，不影響字型下載量——這點很反直覺，別搞錯：
-       * Noto Sans TC 是**可變字型**，30 個 woff2 分塊共用同一個檔案 hash，分塊切的是
-       * unicode 範圍而不是字重。所以 1.73 MB 是「頁面用到多少字」的成本，加減字重動不了它。
+       * **用範圍語法 `wght@400..700`，不要用離散的 `wght@400;500;600;700`。**
+       * 兩者都是可變字型，離散寫法會讓 Google 為每個字重各發一整套 @font-face
+       * （每套約 105 段 unicode range），而範圍寫法只發一套、宣告成
+       * `font-weight: 400 700`，可變軸自己插值出中間字重。
        *
-       * 字重數影響的是 @font-face 宣告數（每個字重約 110 段 unicode range）。
-       * 實測：400;500;600;700 → CSS 489 KB（傳輸 133 KB，render-blocking）；
-       * 砍成 400;700 → 247 KB（傳輸 66.9 KB）。字型檔維持 31 分塊 / 1.73 MB 不變。
+       * 實測這支 render-blocking CSS（`@font-face` 數）：
+       *   離散 400;500;600;700 → 489 KB / 440 個（傳輸 133 KB）
+       *   離散 400;700        → 247 KB / 226 個（傳輸 66.9 KB）
+       *   範圍 400..700       → 122 KB / 109 個  ← 現在用這個
+       * 範圍寫法比砍字重更小，而且 font-medium(500)／font-semibold(600) 仍能正確算繪，
+       * 離散寫法反而會讓它們落到最近的既有字重。
        *
-       * 取捨：省下 66 KB 的**阻塞首次繪製**資源，代價是中文的 font-medium(500)／
-       * font-semibold(600) 會落到最近的 400／700。CJK 在這兩級的字面差異很細微，
-       * 而首次繪製影響每一位訪客——所以選了砍字重。
-       *
-       * 那 1.73 MB 還在，唯一的解法是不要載 Noto Sans TC（改用系統 CJK 字型）
-       * 或自架子集，兩者都是視覺決定，留給人決定。它是 display=swap ＋ 非阻塞的，
-       * 文字會先用系統字型顯示再替換，所以不擋首次繪製。
-       *
-       * Jakarta 的 800 也拿掉了：全站只有一處 font-extrabold，已改用 font-bold。
+       * 字型檔本身（31 個 woff2 分塊、約 1.73 MB）**不受字重寫法影響**——分塊共用
+       * 同一個檔案 hash，切的是 unicode 範圍而不是字重，所以那是「頁面用到多少字」
+       * 的成本。要動它只能不載 Noto Sans TC（改用系統 CJK 字型）或自架子集，
+       * 兩者都是視覺決定，留給人拍板。它是 display=swap ＋ 非阻塞，文字會先用系統
+       * 字型顯示再替換，不擋首次繪製。
        */
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..700&family=Noto+Sans+TC:wght@400..700&display=swap",
       },
       {
         rel: "stylesheet",
