@@ -50,7 +50,7 @@ const decks: Deck[] = [
   {
     id: "mega-sceptile-greninja",
     name: "Mega蜥蜴王ex 甲賀忍蛙",
-    tier: "S",
+    tier: "A",
     energy: ["Grass"],
     difficulty: "中",
     summary: "勝率最高的草系牌組：神奇糖果直上 Mega蜥蜴王ex，甲賀忍蛙特性每回合補刀。",

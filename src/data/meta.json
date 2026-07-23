@@ -1,7 +1,7 @@
 {
-  "fetchedAt": "2026-07-21T23:30:04.055Z",
+  "fetchedAt": "2026-07-23T00:25:15.420Z",
   "source": "https://play.limitlesstcg.com/decks?game=pocket",
-  "previousFetchedAt": "2026-07-21T02:58:45.013Z",
+  "previousFetchedAt": "2026-07-21T23:30:04.055Z",
   "decks": [
     {
       "rank": 1,
@@ -778,7 +778,7 @@
     },
     {
       "rank": 8,
-      "previousRank": 9,
+      "previousRank": 8,
       "name": "Milotic ex Eevee ex",
       "tier": "A",
       "wilsonLowerBoundPct": 51.07,
@@ -890,7 +890,7 @@
     },
     {
       "rank": 9,
-      "previousRank": 11,
+      "previousRank": 9,
       "name": "Giratina ex Darkrai ex",
       "tier": "A",
       "wilsonLowerBoundPct": 51.02,
@@ -1009,7 +1009,7 @@
     },
     {
       "rank": 10,
-      "previousRank": 8,
+      "previousRank": 10,
       "name": "Greninja Mega Absol ex",
       "tier": "A",
       "wilsonLowerBoundPct": 50.65,
@@ -1114,7 +1114,7 @@
     },
     {
       "rank": 11,
-      "previousRank": 10,
+      "previousRank": 11,
       "name": "Mega Lucario ex Lucario",
       "tier": "A",
       "wilsonLowerBoundPct": 50.56,
@@ -1850,7 +1850,7 @@
     },
     {
       "rank": 17,
-      "previousRank": 18,
+      "previousRank": 17,
       "name": "Milotic ex Chien-Pao ex",
       "tier": "C",
       "wilsonLowerBoundPct": 47.52,
@@ -1962,7 +1962,7 @@
     },
     {
       "rank": 18,
-      "previousRank": 17,
+      "previousRank": 18,
       "name": "Mega Charizard Y ex Entei ex",
       "tier": "C",
       "wilsonLowerBoundPct": 47.5,
@@ -2172,7 +2172,7 @@
     },
     {
       "rank": 20,
-      "previousRank": null,
+      "previousRank": 20,
       "name": "Hydreigon Mega Sableye ex",
       "tier": "C",
       "wilsonLowerBoundPct": 47.43,
