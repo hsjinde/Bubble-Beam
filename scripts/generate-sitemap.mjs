@@ -42,6 +42,7 @@ const urls = [
   ...decks.map((d) => ({ loc: `/decks/${d.id}` })),
   { loc: "/pokopia" },
   { loc: "/pokopia/videos" },
+  { loc: "/pokopia/habitats" },
 ];
 
 const xml = [

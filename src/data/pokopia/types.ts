@@ -50,6 +50,31 @@ export interface Collection {
   buildingIds: string[];
 }
 
+/** 棲息地會出沒的一隻寶可夢。 */
+export interface HabitatPokemon {
+  /** 上游圖鑑 slug；也用來組 sprite 網址（sprites/{id}.png） */
+  id: string;
+  /** 全國圖鑑編號；沒有圖鑑頁的變種形態（如無殼海兔東海形態）為 0 */
+  no: number;
+  /** 官方繁中名 */
+  name: string;
+  /** 分類（如「迷你龜寶可夢」）；變種形態的卡片沒有這欄，為空字串 */
+  category: string;
+}
+
+/** 一個棲息地（來源：scripts/fetch-habitats.mjs 產生的 habitats.json）。 */
+export interface Habitat {
+  /** 上游 slug，穩定 id，也用於 deep-link 的 ?h= 參數 */
+  id: string;
+  /** 上游編號（No.001） */
+  no: number;
+  /** 官方繁中名 */
+  name: string;
+  /** 圖片路徑，相對於 pokopiadex 的 /images/habitats/（例：`habitat_ui/tall-grass-001.png`） */
+  image: string;
+  pokemon: HabitatPokemon[];
+}
+
 /** 外部書籤連結（皆為查證過的真實網址）。 */
 export interface Bookmark {
   label: string;

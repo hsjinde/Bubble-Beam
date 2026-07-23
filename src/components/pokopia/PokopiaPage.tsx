@@ -6,6 +6,7 @@ import { BuildingFilters } from "./BuildingFilters";
 import { BuildingList } from "./BuildingList";
 import { BuildingDetail } from "./BuildingDetail";
 import { CollectionCard } from "./CollectionCard";
+import { useBuiltChecklist } from "./useBuiltChecklist";
 
 interface PokopiaPageProps {
   /** 目前選取的建築 id（來自 URL ?b=），null 表示未選 */
@@ -18,6 +19,8 @@ export function PokopiaPage({ selectedBuildingId, onSelectBuilding }: PokopiaPag
   const [searchTerm, setSearchTerm] = useState("");
   const [category, setCategory] = useState<BuildingCategory | null>(null);
   const [series, setSeries] = useState<BuildingSeries | null>(null);
+  const [unbuiltOnly, setUnbuiltOnly] = useState(false);
+  const { built, hydrated, toggle: toggleBuilt, clear: clearBuilt } = useBuiltChecklist();
 
   const filtered = useMemo(() => {
     const q = searchTerm.trim().toLowerCase();
@@ -29,9 +32,10 @@ export function PokopiaPage({ selectedBuildingId, onSelectBuilding }: PokopiaPag
         b.description.toLowerCase().includes(q);
       const matchesCategory = category === null || b.category === category;
       const matchesSeries = series === null || b.series === series;
-      return matchesSearch && matchesCategory && matchesSeries;
+      const matchesBuilt = !unbuiltOnly || !built.has(b.id);
+      return matchesSearch && matchesCategory && matchesSeries && matchesBuilt;
     });
-  }, [searchTerm, category, series]);
+  }, [searchTerm, category, series, unbuiltOnly, built]);
 
   // URL 帶進來的 id 若不存在（手改網址），視為未選
   const selectedBuilding = selectedBuildingId ? (getBuilding(selectedBuildingId) ?? null) : null;
@@ -46,6 +50,7 @@ export function PokopiaPage({ selectedBuildingId, onSelectBuilding }: PokopiaPag
     setSearchTerm("");
     setCategory(null);
     setSeries(null);
+    setUnbuiltOnly(false);
   }
 
   // 手機 modal 開啟時鎖背景捲動 + ESC 關閉
@@ -67,6 +72,37 @@ export function PokopiaPage({ selectedBuildingId, onSelectBuilding }: PokopiaPag
           種建築物一覽：功能分類、材質系列、搭配靈感與主題選集，幫你規劃夢想樂園。建築名稱與描述為官方繁中資料。
         </p>
         <BookmarkNav />
+
+        {/*
+         * 進度只在 localStorage 讀回來之後才顯示：SSR 端一律是 0，先畫出來會在
+         * 掛載瞬間從「已蓋 0」跳成實際值，看起來像紀錄被清掉了。
+         */}
+        {hydrated && built.size > 0 && (
+          <div className="mt-5 flex flex-wrap items-center gap-3 rounded-xl border border-pokopia-tint bg-pokopia-bg-panel px-4 py-3">
+            <span className="text-sm font-bold text-pokopia-ink">
+              已蓋 {built.size} / {buildings.length}
+            </span>
+            <span
+              aria-hidden="true"
+              className="h-2 min-w-32 flex-1 overflow-hidden rounded-full bg-pokopia-tint"
+            >
+              <span
+                className="block h-full rounded-full bg-pokopia-accent"
+                style={{ width: `${Math.round((built.size / buildings.length) * 100)}%` }}
+              />
+            </span>
+            <button
+              type="button"
+              onClick={clearBuilt}
+              className="inline-flex min-h-11 items-center rounded-lg border border-pokopia-tint bg-white px-3 text-sm font-medium text-pokopia-ink transition-colors hover:border-pokopia-accent"
+            >
+              清除紀錄
+            </button>
+            <p className="w-full text-xs text-pokopia-ink-soft">
+              進度只存在這台裝置的瀏覽器裡，不會上傳。
+            </p>
+          </div>
+        )}
       </header>
 
       <div className="mt-8">
@@ -78,6 +114,8 @@ export function PokopiaPage({ selectedBuildingId, onSelectBuilding }: PokopiaPag
           onSearchChange={setSearchTerm}
           onCategoryChange={handleCategoryChange}
           onSeriesChange={setSeries}
+          unbuiltOnly={unbuiltOnly}
+          onUnbuiltOnlyChange={setUnbuiltOnly}
         />
       </div>
 
@@ -89,6 +127,8 @@ export function PokopiaPage({ selectedBuildingId, onSelectBuilding }: PokopiaPag
               buildings={filtered}
               selectedBuildingId={selectedBuildingId}
               onSelect={onSelectBuilding}
+              builtIds={built}
+              onToggleBuilt={toggleBuilt}
             />
           ) : (
             <div className="rounded-xl border border-dashed border-pokopia-tint bg-pokopia-bg-panel p-8 text-center">

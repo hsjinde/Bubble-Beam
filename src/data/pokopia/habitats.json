@@ -1,0 +1,4158 @@
+[
+  {
+    "id": "tall-grass-001",
+    "no": 1,
+    "name": "綠色的草叢",
+    "image": "habitat_ui/tall-grass-001.png",
+    "pokemon": [
+      {
+        "id": "squirtle",
+        "no": 7,
+        "name": "傑尼龜",
+        "category": "迷你龜寶可夢"
+      },
+      {
+        "id": "bulbasaur",
+        "no": 1,
+        "name": "妙蛙種子",
+        "category": "種子寶可夢"
+      },
+      {
+        "id": "charmander",
+        "no": 4,
+        "name": "小火龍",
+        "category": "蜥蜴寶可夢"
+      },
+      {
+        "id": "oddish",
+        "no": 13,
+        "name": "走路草",
+        "category": "雜草寶可夢"
+      },
+      {
+        "id": "charizard",
+        "no": 6,
+        "name": "噴火龍",
+        "category": "火焰寶可夢"
+      },
+      {
+        "id": "geodude",
+        "no": 159,
+        "name": "小拳石",
+        "category": "岩石寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "tree-shaded-tall-grass-002",
+    "no": 2,
+    "name": "樹蔭的草叢",
+    "image": "habitat_ui/tree-shaded-tall-grass-002.png",
+    "pokemon": [
+      {
+        "id": "scyther",
+        "no": 42,
+        "name": "飛天螳螂",
+        "category": "螳螂寶可夢"
+      },
+      {
+        "id": "bellsprout",
+        "no": 21,
+        "name": "喇叭芽",
+        "category": "花朵寶可夢"
+      },
+      {
+        "id": "pinsir",
+        "no": 44,
+        "name": "凱羅斯",
+        "category": "鍬甲寶可夢"
+      },
+      {
+        "id": "heracross",
+        "no": 50,
+        "name": "赫拉克羅斯",
+        "category": "獨角寶可夢"
+      },
+      {
+        "id": "skwovet",
+        "no": 191,
+        "name": "貪心栗鼠",
+        "category": "頑皮寶可夢"
+      },
+      {
+        "id": "scizor",
+        "no": 43,
+        "name": "巨鉗螳螂",
+        "category": "鉗夾寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "boulder-shaded-tall-grass-003",
+    "no": 3,
+    "name": "岩影的草地",
+    "image": "habitat_ui/boulder-shaded-tall-grass-003.png",
+    "pokemon": [
+      {
+        "id": "timburr",
+        "no": 65,
+        "name": "搬運小匠",
+        "category": "肌肉寶可夢"
+      },
+      {
+        "id": "machop",
+        "no": 156,
+        "name": "腕力",
+        "category": "超力寶可夢"
+      },
+      {
+        "id": "gurdurr",
+        "no": 66,
+        "name": "鐵骨土人",
+        "category": "肌肉寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "hydrated-tall-grass-004",
+    "no": 4,
+    "name": "濕潤的草地",
+    "image": "habitat_ui/hydrated-tall-grass-004.png",
+    "pokemon": [
+      {
+        "id": "squirtle",
+        "no": 7,
+        "name": "傑尼龜",
+        "category": "迷你龜寶可夢"
+      },
+      {
+        "id": "sliggoo",
+        "no": 75,
+        "name": "黏美兒",
+        "category": "軟組織寶可夢"
+      },
+      {
+        "id": "wartortle",
+        "no": 8,
+        "name": "卡咪龜",
+        "category": "龜寶可夢"
+      },
+      {
+        "id": "blastoise",
+        "no": 9,
+        "name": "水箭龜",
+        "category": "甲殼寶可夢"
+      },
+      {
+        "id": "cramorant",
+        "no": 77,
+        "name": "古月鳥",
+        "category": "吞嚥寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "seaside-tall-grass-005",
+    "no": 5,
+    "name": "海浪邊的草叢",
+    "image": "habitat_ui/seaside-tall-grass-005.png",
+    "pokemon": [
+      {
+        "id": "slowpoke",
+        "no": 24,
+        "name": "呆呆獸",
+        "category": "呆呆寶可夢"
+      },
+      {
+        "id": "slowking",
+        "no": 26,
+        "name": "呆呆王",
+        "category": "皇族寶可夢"
+      },
+      {
+        "id": "slowbro",
+        "no": 25,
+        "name": "呆殼獸",
+        "category": "寄居蟹寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "elevated-tall-grass-006",
+    "no": 6,
+    "name": "高崗的草叢",
+    "image": "habitat_ui/elevated-tall-grass-006.png",
+    "pokemon": [
+      {
+        "id": "pidgey",
+        "no": 10,
+        "name": "波波",
+        "category": "迷你鳥寶可夢"
+      },
+      {
+        "id": "noctowl",
+        "no": 49,
+        "name": "貓頭夜鷹",
+        "category": "貓頭鷹寶可夢"
+      },
+      {
+        "id": "hoothoot",
+        "no": 48,
+        "name": "咕咕",
+        "category": "貓頭鷹寶可夢"
+      },
+      {
+        "id": "pidgeotto",
+        "no": 11,
+        "name": "比比鳥",
+        "category": "鳥寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "illuminated-tall-grass-007",
+    "no": 7,
+    "name": "光照的草叢",
+    "image": "habitat_ui/illuminated-tall-grass-007.png",
+    "pokemon": [
+      {
+        "id": "venomoth",
+        "no": 20,
+        "name": "摩魯蛾",
+        "category": "毒蛾寶可夢"
+      },
+      {
+        "id": "venonat",
+        "no": 19,
+        "name": "毛球",
+        "category": "昆蟲寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "pretty-flower-bed-008",
+    "no": 8,
+    "name": "漂亮的花田",
+    "image": "habitat_ui/pretty-flower-bed-008.png",
+    "pokemon": [
+      {
+        "id": "pidgey",
+        "no": 10,
+        "name": "波波",
+        "category": "迷你鳥寶可夢"
+      },
+      {
+        "id": "combee",
+        "no": 57,
+        "name": "三蜜蜂",
+        "category": "迷你蜜蜂寶可夢"
+      },
+      {
+        "id": "magby",
+        "no": 162,
+        "name": "鴨嘴寶寶",
+        "category": "活炭寶可夢"
+      },
+      {
+        "id": "hoothoot",
+        "no": 48,
+        "name": "咕咕",
+        "category": "貓頭鷹寶可夢"
+      },
+      {
+        "id": "pidgeotto",
+        "no": 11,
+        "name": "比比鳥",
+        "category": "鳥寶可夢"
+      },
+      {
+        "id": "eevee",
+        "no": 280,
+        "name": "伊布",
+        "category": "進化寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "tree-shaded-flower-bed-009",
+    "no": 9,
+    "name": "樹蔭的花田",
+    "image": "habitat_ui/tree-shaded-flower-bed-009.png",
+    "pokemon": [
+      {
+        "id": "goomy",
+        "no": 74,
+        "name": "黏黏寶",
+        "category": "軟組織寶可夢"
+      },
+      {
+        "id": "cacturne",
+        "no": 56,
+        "name": "夢歌仙人掌",
+        "category": "稻草人寶可夢"
+      },
+      {
+        "id": "vikavolt",
+        "no": 140,
+        "name": "鍬農炮蟲",
+        "category": "鍬甲寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "hydrated-flower-bed-010",
+    "no": 10,
+    "name": "濕潤的花田",
+    "image": "habitat_ui/hydrated-flower-bed-010.png",
+    "pokemon": [
+      {
+        "id": "illumise",
+        "no": 52,
+        "name": "甜甜螢",
+        "category": "螢火蟲寶可夢"
+      },
+      {
+        "id": "volbeat",
+        "no": 51,
+        "name": "電螢蟲",
+        "category": "螢火蟲寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "field-of-flowers-011",
+    "no": 11,
+    "name": "整片的花海",
+    "image": "habitat_ui/field-of-flowers-011.png",
+    "pokemon": [
+      {
+        "id": "vespiquen",
+        "no": 58,
+        "name": "蜂女王",
+        "category": "蜂巢寶可夢"
+      },
+      {
+        "id": "ivysaur",
+        "no": 2,
+        "name": "妙蛙草",
+        "category": "種子寶可夢"
+      },
+      {
+        "id": "venusaur",
+        "no": 3,
+        "name": "妙蛙花",
+        "category": "種子寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "elevated-flower-bed-012",
+    "no": 12,
+    "name": "高崗的花海",
+    "image": "habitat_ui/elevated-flower-bed-012.png",
+    "pokemon": [
+      {
+        "id": "parasect",
+        "no": 18,
+        "name": "派拉斯特",
+        "category": "蘑菇寶可夢"
+      },
+      {
+        "id": "paras",
+        "no": 17,
+        "name": "派拉斯",
+        "category": "蘑菇寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "grave-with-flowers-013",
+    "no": 13,
+    "name": "花朵纏繞的墓地",
+    "image": "habitat_ui/grave-with-flowers-013.png",
+    "pokemon": [
+      {
+        "id": "cubone",
+        "no": 32,
+        "name": "卡拉卡拉",
+        "category": "孤獨寶可夢"
+      },
+      {
+        "id": "marowak",
+        "no": 33,
+        "name": "嘎啦嘎啦",
+        "category": "守骨寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "flower-garden-014",
+    "no": 14,
+    "name": "花園",
+    "image": "habitat_ui/flower-garden-014.png",
+    "pokemon": [
+      {
+        "id": "parasect",
+        "no": 18,
+        "name": "派拉斯特",
+        "category": "蘑菇寶可夢"
+      },
+      {
+        "id": "paras",
+        "no": 17,
+        "name": "派拉斯",
+        "category": "蘑菇寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "fresh-veggie-field-015",
+    "no": 15,
+    "name": "新鮮蔬菜田",
+    "image": "habitat_ui/fresh-veggie-field-015.png",
+    "pokemon": [
+      {
+        "id": "drilbur",
+        "no": 63,
+        "name": "螺釘地鼠",
+        "category": "鼴鼠寶可夢"
+      },
+      {
+        "id": "excadrill",
+        "no": 64,
+        "name": "龍頭地鼠",
+        "category": "鑽地寶可夢"
+      },
+      {
+        "id": "rowlet",
+        "no": 185,
+        "name": "木木梟",
+        "category": "草羽寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "riding-warm-updrafts-016",
+    "no": 16,
+    "name": "乘上暖風",
+    "image": "habitat_ui/riding-warm-updrafts-016.png",
+    "pokemon": [
+      {
+        "id": "drifloon",
+        "no": 61,
+        "name": "飄飄球",
+        "category": "氣球寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "campsite-017",
+    "no": 17,
+    "name": "露營組合",
+    "image": "habitat_ui/campsite-017.png",
+    "pokemon": [
+      {
+        "id": "charmeleon",
+        "no": 5,
+        "name": "火恐龍",
+        "category": "火焰寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "training-waterfall-018",
+    "no": 18,
+    "name": "修行瀑布",
+    "image": "habitat_ui/training-waterfall-018.png",
+    "pokemon": [
+      {
+        "id": "tyrogue",
+        "no": 34,
+        "name": "無畏小子",
+        "category": "格鬥寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "tantalizing-dining-set-019",
+    "no": 19,
+    "name": "餓肚肚用餐區",
+    "image": "habitat_ui/tantalizing-dining-set-019.png",
+    "pokemon": [
+      {
+        "id": "gulpin",
+        "no": 53,
+        "name": "溶食獸",
+        "category": "胃袋寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "picnic-set-020",
+    "no": 20,
+    "name": "野餐風餐桌",
+    "image": "habitat_ui/picnic-set-020.png",
+    "pokemon": [
+      {
+        "id": "pichu",
+        "no": 78,
+        "name": "皮丘",
+        "category": "迷你鼠寶可夢"
+      },
+      {
+        "id": "pikachu",
+        "no": 0,
+        "name": "皮卡丘",
+        "category": ""
+      }
+    ]
+  },
+  {
+    "id": "flowery-table-021",
+    "no": 21,
+    "name": "華麗的桌子",
+    "image": "habitat_ui/flowery-table-021.png",
+    "pokemon": [
+      {
+        "id": "weepinbell",
+        "no": 22,
+        "name": "口呆花",
+        "category": "捕蠅寶可夢"
+      },
+      {
+        "id": "victreebel",
+        "no": 23,
+        "name": "大食花",
+        "category": "捕蠅寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "bench-with-greenery-022",
+    "no": 22,
+    "name": "綠色的長椅",
+    "image": "habitat_ui/bench-with-greenery-022.png",
+    "pokemon": [
+      {
+        "id": "bulbasaur",
+        "no": 1,
+        "name": "妙蛙種子",
+        "category": "種子寶可夢"
+      },
+      {
+        "id": "ivysaur",
+        "no": 2,
+        "name": "妙蛙草",
+        "category": "種子寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "illuminated-bench-023",
+    "no": 23,
+    "name": "光照的長椅",
+    "image": "habitat_ui/illuminated-bench-023.png",
+    "pokemon": [
+      {
+        "id": "venonat",
+        "no": 19,
+        "name": "毛球",
+        "category": "昆蟲寶可夢"
+      },
+      {
+        "id": "venomoth",
+        "no": 20,
+        "name": "摩魯蛾",
+        "category": "毒蛾寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "exercise-resting-spot-024",
+    "no": 24,
+    "name": "健身區用餐區",
+    "image": "habitat_ui/exercise-resting-spot-024.png",
+    "pokemon": [
+      {
+        "id": "hitmonchan",
+        "no": 36,
+        "name": "快拳郎",
+        "category": "拳擊寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "urgent-care-025",
+    "no": 25,
+    "name": "緊急救護站",
+    "image": "habitat_ui/urgent-care-025.png",
+    "pokemon": [
+      {
+        "id": "hitmonlee",
+        "no": 35,
+        "name": "飛腿郎",
+        "category": "踢腳寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "gym-first-aid-026",
+    "no": 26,
+    "name": "健身區救護站",
+    "image": "habitat_ui/gym-first-aid-026.png",
+    "pokemon": [
+      {
+        "id": "hitmontop",
+        "no": 37,
+        "name": "戰舞郎",
+        "category": "倒立寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "road-sign-027",
+    "no": 27,
+    "name": "指路牌",
+    "image": "habitat_ui/road-sign-027.png",
+    "pokemon": [
+      {
+        "id": "shellos-west-sea",
+        "no": 59,
+        "name": "無殼海兔",
+        "category": "海蛞蝓寶可夢"
+      },
+      {
+        "id": "shellos-east-sea",
+        "no": 0,
+        "name": "無殼海兔",
+        "category": ""
+      }
+    ]
+  },
+  {
+    "id": "large-luggage-carrier-028",
+    "no": 28,
+    "name": "載上大行李",
+    "image": "habitat_ui/large-luggage-carrier-028.png",
+    "pokemon": [
+      {
+        "id": "gurdurr",
+        "no": 66,
+        "name": "鐵骨土人",
+        "category": "肌肉寶可夢"
+      },
+      {
+        "id": "tinkatuff",
+        "no": 269,
+        "name": "巧鍛匠",
+        "category": "鐵鎚寶可夢"
+      },
+      {
+        "id": "tinkatink",
+        "no": 268,
+        "name": "小鍛匠",
+        "category": "鍛冶寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "lumberjacks-workplace-029",
+    "no": 29,
+    "name": "樵夫的工作區",
+    "image": "habitat_ui/lumberjacks-workplace-029.png",
+    "pokemon": [
+      {
+        "id": "axew",
+        "no": 71,
+        "name": "牙牙",
+        "category": "牙牙寶可夢"
+      },
+      {
+        "id": "fraxure",
+        "no": 72,
+        "name": "斧牙龍",
+        "category": "斧顎寶可夢"
+      },
+      {
+        "id": "haxorus",
+        "no": 73,
+        "name": "雙斧戰龍",
+        "category": "斧顎寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "bed-with-a-plush-030",
+    "no": 30,
+    "name": "布偶伴好眠",
+    "image": "habitat_ui/bed-with-a-plush-030.jpg",
+    "pokemon": [
+      {
+        "id": "drifloon",
+        "no": 61,
+        "name": "飄飄球",
+        "category": "氣球寶可夢"
+      },
+      {
+        "id": "slowbro",
+        "no": 25,
+        "name": "呆殼獸",
+        "category": "寄居蟹寶可夢"
+      },
+      {
+        "id": "slowking",
+        "no": 26,
+        "name": "呆呆王",
+        "category": "皇族寶可夢"
+      },
+      {
+        "id": "munchlax",
+        "no": 107,
+        "name": "小卡比獸",
+        "category": "大食客寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "gently-lit-bed-031",
+    "no": 31,
+    "name": "柔光伴好眠",
+    "image": "habitat_ui/gently-lit-bed-031.png",
+    "pokemon": [
+      {
+        "id": "noctowl",
+        "no": 49,
+        "name": "貓頭夜鷹",
+        "category": "貓頭鷹寶可夢"
+      },
+      {
+        "id": "hoothoot",
+        "no": 48,
+        "name": "咕咕",
+        "category": "貓頭鷹寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "grave-offering-032",
+    "no": 32,
+    "name": "墓前的供品",
+    "image": "habitat_ui/grave-offering-032.png",
+    "pokemon": [
+      {
+        "id": "litwick",
+        "no": 68,
+        "name": "燭光靈",
+        "category": "蠟燭寶可夢"
+      },
+      {
+        "id": "lampent",
+        "no": 69,
+        "name": "燈火幽靈",
+        "category": "燈籠寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "creepy-grave-offering-033",
+    "no": 33,
+    "name": "詭異墓前的供品",
+    "image": "habitat_ui/creepy-grave-offering-033.png",
+    "pokemon": [
+      {
+        "id": "chandelure",
+        "no": 70,
+        "name": "水晶燈火靈",
+        "category": "誘惑寶可夢"
+      },
+      {
+        "id": "litwick",
+        "no": 68,
+        "name": "燭光靈",
+        "category": "蠟燭寶可夢"
+      },
+      {
+        "id": "lampent",
+        "no": 69,
+        "name": "燈火幽靈",
+        "category": "燈籠寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "chansey-resting-area-034",
+    "no": 34,
+    "name": "吉利蛋休息處",
+    "image": "habitat_ui/chansey-resting-area-034.png",
+    "pokemon": [
+      {
+        "id": "vileplume",
+        "no": 15,
+        "name": "霸王花",
+        "category": "花朵寶可夢"
+      },
+      {
+        "id": "bellossom",
+        "no": 16,
+        "name": "美麗花",
+        "category": "花朵寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "irresistible-scent-and-glow-035",
+    "no": 35,
+    "name": "光與香氣的勾引",
+    "image": "habitat_ui/irresistible-scent-and-glow-035.jpg",
+    "pokemon": [
+      {
+        "id": "weepinbell",
+        "no": 22,
+        "name": "口呆花",
+        "category": "捕蠅寶可夢"
+      },
+      {
+        "id": "victreebel",
+        "no": 23,
+        "name": "大食花",
+        "category": "捕蠅寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "floating-in-the-shade-036",
+    "no": 36,
+    "name": "在陰涼處漂浮玩水",
+    "image": "habitat_ui/floating-in-the-shade-036.png",
+    "pokemon": [
+      {
+        "id": "blastoise",
+        "no": 9,
+        "name": "水箭龜",
+        "category": "甲殼寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "smooth-tall-grass-037",
+    "no": 37,
+    "name": "乾爽草叢",
+    "image": "habitat_ui/smooth-tall-grass-037.png",
+    "pokemon": [
+      {
+        "id": "onix",
+        "no": 30,
+        "name": "大岩蛇",
+        "category": "岩蛇寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "factory-storage-038",
+    "no": 38,
+    "name": "工廠倉庫",
+    "image": "habitat_ui/factory-storage-038.jpg",
+    "pokemon": [
+      {
+        "id": "magnemite",
+        "no": 27,
+        "name": "小磁怪",
+        "category": "磁石寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "luxury-chirp-chirp-meal-039",
+    "no": 39,
+    "name": "豪華小雞飼料",
+    "image": "habitat_ui/luxury-chirp-chirp-meal-039.jpg",
+    "pokemon": [
+      {
+        "id": "pidgeot",
+        "no": 12,
+        "name": "大比鳥",
+        "category": "鳥寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "berry-feast-campsite-040",
+    "no": 40,
+    "name": "樹果露營大餐",
+    "image": "habitat_ui/berry-feast-campsite-040.png",
+    "pokemon": [
+      {
+        "id": "charizard",
+        "no": 6,
+        "name": "噴火龍",
+        "category": "火焰寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "rain-dance-site-041",
+    "no": 41,
+    "name": "求雨地點",
+    "image": "habitat_ui/rain-dance-site-041.png",
+    "pokemon": [
+      {
+        "id": "goomy",
+        "no": 74,
+        "name": "黏黏寶",
+        "category": "軟組織寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "sunny-day-site-042",
+    "no": 42,
+    "name": "大晴天地點",
+    "image": "habitat_ui/sunny-day-site-042.jpg",
+    "pokemon": [
+      {
+        "id": "cacnea",
+        "no": 55,
+        "name": "刺球仙人掌",
+        "category": "仙人掌寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "professors-treasure-trove-043",
+    "no": 43,
+    "name": "博士的寶物",
+    "image": "habitat_ui/professors-treasure-trove-043.jpg",
+    "pokemon": [
+      {
+        "id": "tangrowth",
+        "no": 41,
+        "name": "巨蔓藤",
+        "category": "藤蔓寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "crazy-log-handicrafts-044",
+    "no": 44,
+    "name": "圓木的溫馨感",
+    "image": "habitat_ui/crazy-log-handicrafts-044.jpg",
+    "pokemon": [
+      {
+        "id": "axew",
+        "no": 71,
+        "name": "牙牙",
+        "category": "牙牙寶可夢"
+      },
+      {
+        "id": "fraxure",
+        "no": 72,
+        "name": "斧牙龍",
+        "category": "斧顎寶可夢"
+      },
+      {
+        "id": "haxorus",
+        "no": 73,
+        "name": "雙斧戰龍",
+        "category": "斧顎寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "very-berry-space-045",
+    "no": 45,
+    "name": "樹果大集合",
+    "image": "habitat_ui/very-berry-space-045.jpg",
+    "pokemon": [
+      {
+        "id": "goodra",
+        "no": 76,
+        "name": "黏美龍",
+        "category": "龍寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "garden-terrace-046",
+    "no": 46,
+    "name": "庭園陽台",
+    "image": "habitat_ui/garden-terrace-046.png",
+    "pokemon": [
+      {
+        "id": "venusaur",
+        "no": 3,
+        "name": "妙蛙花",
+        "category": "種子寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "tree-shaded-snoozing-snorlax-047",
+    "no": 47,
+    "name": "樹蔭下熟睡的卡比獸",
+    "image": "habitat_ui/tree-shaded-snoozing-snorlax-047.jpg",
+    "pokemon": [
+      {
+        "id": "munchlax",
+        "no": 107,
+        "name": "小卡比獸",
+        "category": "大食客寶可夢"
+      },
+      {
+        "id": "snorlax",
+        "no": 0,
+        "name": "卡比獸",
+        "category": ""
+      }
+    ]
+  },
+  {
+    "id": "good-old-fashioned-antiques-048",
+    "no": 48,
+    "name": "懷舊古董",
+    "image": "habitat_ui/good-old-fashioned-antiques-048.png",
+    "pokemon": [
+      {
+        "id": "weezing",
+        "no": 39,
+        "name": "雙彈瓦斯",
+        "category": "毒氣寶可夢"
+      },
+      {
+        "id": "snorlax",
+        "no": 0,
+        "name": "卡比獸",
+        "category": ""
+      }
+    ]
+  },
+  {
+    "id": "nothin-but-poke-balls-049",
+    "no": 49,
+    "name": "滿滿是寶可夢球",
+    "image": "habitat_ui/nothin-but-poke-balls-049.jpg",
+    "pokemon": [
+      {
+        "id": "tangela",
+        "no": 40,
+        "name": "蔓藤怪",
+        "category": "藤蔓寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "yellow-tall-grass-050",
+    "no": 50,
+    "name": "黃色的草叢",
+    "image": "habitat_ui/yellow-tall-grass-050.png",
+    "pokemon": [
+      {
+        "id": "spinarak",
+        "no": 109,
+        "name": "圓絲蛛",
+        "category": "噴絲寶可夢"
+      },
+      {
+        "id": "grubbin",
+        "no": 138,
+        "name": "強顎雞母蟲",
+        "category": "幼蟲寶可夢"
+      },
+      {
+        "id": "ariados",
+        "no": 110,
+        "name": "阿利多斯",
+        "category": "長腿寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "tree-shaded-yellow-tall-grass-051",
+    "no": 51,
+    "name": "樹蔭的黃色草叢",
+    "image": "habitat_ui/tree-shaded-yellow-tall-grass-051.png",
+    "pokemon": [
+      {
+        "id": "makuhita",
+        "no": 125,
+        "name": "幕下力士",
+        "category": "鬥志寶可夢"
+      },
+      {
+        "id": "zubat",
+        "no": 81,
+        "name": "超音蝠",
+        "category": "蝙蝠寶可夢"
+      },
+      {
+        "id": "golbat",
+        "no": 82,
+        "name": "大嘴蝠",
+        "category": "蝙蝠寶可夢"
+      },
+      {
+        "id": "hariyama",
+        "no": 126,
+        "name": "鐵掌力士",
+        "category": "臂推寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "elevated-yellow-tall-grass-052",
+    "no": 52,
+    "name": "高崗的黃色草叢",
+    "image": "habitat_ui/elevated-yellow-tall-grass-052.png",
+    "pokemon": [
+      {
+        "id": "pelipper",
+        "no": 124,
+        "name": "大嘴鷗",
+        "category": "水鳥寶可夢"
+      },
+      {
+        "id": "wingull",
+        "no": 123,
+        "name": "長翅鷗",
+        "category": "海鷗寶可夢"
+      },
+      {
+        "id": "crobat",
+        "no": 83,
+        "name": "叉字蝠",
+        "category": "蝙蝠寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "hydrated-yellow-tall-grass-053",
+    "no": 53,
+    "name": "濕潤的黃色草叢",
+    "image": "habitat_ui/hydrated-yellow-tall-grass-053.png",
+    "pokemon": [
+      {
+        "id": "marill",
+        "no": 115,
+        "name": "瑪力露",
+        "category": "水鼠寶可夢"
+      },
+      {
+        "id": "piplup",
+        "no": 128,
+        "name": "波加曼",
+        "category": "企鵝寶可夢"
+      },
+      {
+        "id": "azurill",
+        "no": 114,
+        "name": "露力麗",
+        "category": "圓點寶可夢"
+      },
+      {
+        "id": "prinplup",
+        "no": 129,
+        "name": "波皇子",
+        "category": "企鵝寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "marshy-tall-grass-054",
+    "no": 54,
+    "name": "沼澤的草叢",
+    "image": "habitat_ui/marshy-tall-grass-054.png",
+    "pokemon": [
+      {
+        "id": "wooper",
+        "no": 117,
+        "name": "烏波",
+        "category": "毒魚寶可夢"
+      },
+      {
+        "id": "clodsire",
+        "no": 118,
+        "name": "土王",
+        "category": "刺魚寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "overgrowth-vending-machine-055",
+    "no": 55,
+    "name": "草叢的自動販賣機",
+    "image": "habitat_ui/overgrowth-vending-machine-055.png",
+    "pokemon": [
+      {
+        "id": "mareep",
+        "no": 111,
+        "name": "咩利羊",
+        "category": "羊毛寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "breezy-flower-bed-056",
+    "no": 56,
+    "name": "涼爽的花田",
+    "image": "habitat_ui/breezy-flower-bed-056.png",
+    "pokemon": [
+      {
+        "id": "pawmi",
+        "no": 142,
+        "name": "布撥",
+        "category": "老鼠寶可夢"
+      },
+      {
+        "id": "zoroark",
+        "no": 135,
+        "name": "索羅亞克",
+        "category": "幻覺狐狸寶可夢"
+      },
+      {
+        "id": "zorua",
+        "no": 134,
+        "name": "索羅亞",
+        "category": "狡猾狐狸寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "tropical-vibes-057",
+    "no": 57,
+    "name": "南國氣氛",
+    "image": "habitat_ui/tropical-vibes-057.png",
+    "pokemon": [
+      {
+        "id": "gloom",
+        "no": 14,
+        "name": "臭臭花",
+        "category": "雜草寶可夢"
+      },
+      {
+        "id": "exeggutor",
+        "no": 99,
+        "name": "椰蛋樹",
+        "category": "椰子寶可夢"
+      },
+      {
+        "id": "exeggcute",
+        "no": 98,
+        "name": "蛋蛋",
+        "category": "蛋蛋寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "windy-flower-bed-058",
+    "no": 58,
+    "name": "風之花田",
+    "image": "habitat_ui/windy-flower-bed-058.png",
+    "pokemon": [
+      {
+        "id": "wingull",
+        "no": 123,
+        "name": "長翅鷗",
+        "category": "海鷗寶可夢"
+      },
+      {
+        "id": "pelipper",
+        "no": 124,
+        "name": "大嘴鷗",
+        "category": "水鳥寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "shaded-beach-059",
+    "no": 59,
+    "name": "沙灘的樹蔭",
+    "image": "habitat_ui/shaded-beach-059.png",
+    "pokemon": [
+      {
+        "id": "exeggcute",
+        "no": 98,
+        "name": "蛋蛋",
+        "category": "蛋蛋寶可夢"
+      },
+      {
+        "id": "exeggutor",
+        "no": 99,
+        "name": "椰蛋樹",
+        "category": "椰子寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "tropical-seaside-060",
+    "no": 60,
+    "name": "熱帶海岸邊",
+    "image": "habitat_ui/tropical-seaside-060.png",
+    "pokemon": [
+      {
+        "id": "lapras",
+        "no": 106,
+        "name": "拉普拉斯",
+        "category": "運輸寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "resting-spot-061",
+    "no": 61,
+    "name": "休息好地方",
+    "image": "habitat_ui/resting-spot-061.png",
+    "pokemon": [
+      {
+        "id": "meowth",
+        "no": 84,
+        "name": "喵喵",
+        "category": "抓抓貓寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "perpetual-mess-062",
+    "no": 62,
+    "name": "來收拾吧",
+    "image": "habitat_ui/perpetual-mess-062.png",
+    "pokemon": [
+      {
+        "id": "growlithe",
+        "no": 88,
+        "name": "卡蒂狗",
+        "category": "小狗寶可夢"
+      },
+      {
+        "id": "azurill",
+        "no": 114,
+        "name": "露力麗",
+        "category": "圓點寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "trash-collection-site-063",
+    "no": 63,
+    "name": "垃圾集中站",
+    "image": "habitat_ui/trash-collection-site-063.png",
+    "pokemon": [
+      {
+        "id": "trubbish",
+        "no": 132,
+        "name": "破破袋",
+        "category": "垃圾袋寶可夢"
+      },
+      {
+        "id": "koffing",
+        "no": 38,
+        "name": "瓦斯彈",
+        "category": "毒氣寶可夢"
+      },
+      {
+        "id": "weezing",
+        "no": 39,
+        "name": "雙彈瓦斯",
+        "category": "毒氣寶可夢"
+      },
+      {
+        "id": "garbodor",
+        "no": 133,
+        "name": "灰塵山",
+        "category": "垃圾堆寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "trash-can-central-064",
+    "no": 64,
+    "name": "垃圾桶擺好擺滿",
+    "image": "habitat_ui/trash-can-central-064.png",
+    "pokemon": [
+      {
+        "id": "electabuzz",
+        "no": 104,
+        "name": "電擊獸",
+        "category": "電氣寶可夢"
+      },
+      {
+        "id": "magnezone",
+        "no": 29,
+        "name": "自爆磁怪",
+        "category": "磁場寶可夢"
+      },
+      {
+        "id": "magneton",
+        "no": 28,
+        "name": "三合一磁怪",
+        "category": "磁石寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "trash-disposal-site-065",
+    "no": 65,
+    "name": "垃圾場",
+    "image": "habitat_ui/trash-disposal-site-065.png",
+    "pokemon": [
+      {
+        "id": "crobat",
+        "no": 83,
+        "name": "叉字蝠",
+        "category": "蝙蝠寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "park-bench-066",
+    "no": 66,
+    "name": "公園的長椅",
+    "image": "habitat_ui/park-bench-066.jpg",
+    "pokemon": [
+      {
+        "id": "zubat",
+        "no": 81,
+        "name": "超音蝠",
+        "category": "蝙蝠寶可夢"
+      },
+      {
+        "id": "voltorb",
+        "no": 96,
+        "name": "霹靂電球",
+        "category": "圓球寶可夢"
+      },
+      {
+        "id": "electrode",
+        "no": 97,
+        "name": "頑皮雷彈",
+        "category": "圓球寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "tantalizing-restaurant-067",
+    "no": 67,
+    "name": "餓肚肚餐廳",
+    "image": "habitat_ui/tantalizing-restaurant-067.png",
+    "pokemon": [
+      {
+        "id": "pawmo",
+        "no": 143,
+        "name": "布土撥",
+        "category": "老鼠寶可夢"
+      },
+      {
+        "id": "pawmi",
+        "no": 142,
+        "name": "布撥",
+        "category": "老鼠寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "tableside-delivery-cart-068",
+    "no": 68,
+    "name": "桌邊送餐車",
+    "image": "habitat_ui/tableside-delivery-cart-068.jpg",
+    "pokemon": [
+      {
+        "id": "empoleon",
+        "no": 130,
+        "name": "帝王拿波",
+        "category": "皇帝寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "chirp-chirp-meal-069",
+    "no": 69,
+    "name": "咕咕啾啾大餐",
+    "image": "habitat_ui/chirp-chirp-meal-069.png",
+    "pokemon": [
+      {
+        "id": "torchic",
+        "no": 120,
+        "name": "火稚雞",
+        "category": "小雞寶可夢"
+      },
+      {
+        "id": "blaziken",
+        "no": 122,
+        "name": "火焰雞",
+        "category": "火炎寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "cafe-space-070",
+    "no": 70,
+    "name": "咖啡空間",
+    "image": "habitat_ui/cafe-space-070.jpg",
+    "pokemon": [
+      {
+        "id": "pawmo",
+        "no": 143,
+        "name": "布土撥",
+        "category": "老鼠寶可夢"
+      },
+      {
+        "id": "pawmi",
+        "no": 142,
+        "name": "布撥",
+        "category": "老鼠寶可夢"
+      },
+      {
+        "id": "pawmot",
+        "no": 144,
+        "name": "巴布土撥",
+        "category": "動手做寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "beach-set-071",
+    "no": 71,
+    "name": "海灘套組",
+    "image": "habitat_ui/beach-set-071.jpg",
+    "pokemon": [
+      {
+        "id": "tatsugiri-curly-form",
+        "no": 145,
+        "name": "米立龍",
+        "category": "模擬寶可夢"
+      },
+      {
+        "id": "tatsugiri-droopy-form",
+        "no": 0,
+        "name": "米立龍",
+        "category": ""
+      },
+      {
+        "id": "tatsugiri-stretchy-form",
+        "no": 0,
+        "name": "米立龍",
+        "category": ""
+      }
+    ]
+  },
+  {
+    "id": "light-up-stage-072",
+    "no": 72,
+    "name": "燈光舞台",
+    "image": "habitat_ui/light-up-stage-072.jpg",
+    "pokemon": [
+      {
+        "id": "electivire",
+        "no": 105,
+        "name": "電擊魔獸",
+        "category": "霹靂寶可夢"
+      },
+      {
+        "id": "electabuzz",
+        "no": 104,
+        "name": "電擊獸",
+        "category": "電氣寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "surprise-in-store-073",
+    "no": 73,
+    "name": "小心機關",
+    "image": "habitat_ui/surprise-in-store-073.jpg",
+    "pokemon": [
+      {
+        "id": "haunter",
+        "no": 94,
+        "name": "鬼斯通",
+        "category": "氣體寶可夢"
+      },
+      {
+        "id": "gengar",
+        "no": 95,
+        "name": "耿鬼",
+        "category": "幽靈寶可夢"
+      },
+      {
+        "id": "zoroark",
+        "no": 135,
+        "name": "索羅亞克",
+        "category": "幻覺狐狸寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "night-festival-venue-074",
+    "no": 74,
+    "name": "夜晚的慶典會場",
+    "image": "habitat_ui/night-festival-venue-074.jpg",
+    "pokemon": [
+      {
+        "id": "flaaffy",
+        "no": 112,
+        "name": "茸茸羊",
+        "category": "羊毛寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "changing-area-075",
+    "no": 75,
+    "name": "更衣區",
+    "image": "habitat_ui/changing-area-075.png",
+    "pokemon": [
+      {
+        "id": "minccino",
+        "no": 136,
+        "name": "泡沫栗鼠",
+        "category": "龍貓鼠寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "private-makeup-stand-076",
+    "no": 76,
+    "name": "更衣中別偷看",
+    "image": "habitat_ui/private-makeup-stand-076.jpg",
+    "pokemon": [
+      {
+        "id": "cinccino",
+        "no": 137,
+        "name": "奇諾栗鼠",
+        "category": "圍巾寶可夢"
+      },
+      {
+        "id": "minccino",
+        "no": 136,
+        "name": "泡沫栗鼠",
+        "category": "龍貓鼠寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "knitting-station-077",
+    "no": 77,
+    "name": "用毛線來織東西吧",
+    "image": "habitat_ui/knitting-station-077.png",
+    "pokemon": [
+      {
+        "id": "mareep",
+        "no": 111,
+        "name": "咩利羊",
+        "category": "羊毛寶可夢"
+      },
+      {
+        "id": "flaaffy",
+        "no": 112,
+        "name": "茸茸羊",
+        "category": "羊毛寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "hot-spring-shower-078",
+    "no": 78,
+    "name": "溫泉沖洗區",
+    "image": "habitat_ui/hot-spring-shower-078.jpg",
+    "pokemon": [
+      {
+        "id": "psyduck",
+        "no": 86,
+        "name": "可達鴨",
+        "category": "鴨寶可夢"
+      },
+      {
+        "id": "golduck",
+        "no": 87,
+        "name": "哥達鴨",
+        "category": "鴨寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "resort-meal-prep-079",
+    "no": 79,
+    "name": "度假區的備餐時刻",
+    "image": "habitat_ui/resort-meal-prep-079.png",
+    "pokemon": [
+      {
+        "id": "growlithe",
+        "no": 88,
+        "name": "卡蒂狗",
+        "category": "小狗寶可夢"
+      },
+      {
+        "id": "combusken",
+        "no": 121,
+        "name": "力壯雞",
+        "category": "雛鳥寶可夢"
+      },
+      {
+        "id": "torchic",
+        "no": 120,
+        "name": "火稚雞",
+        "category": "小雞寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "all-packed-up-080",
+    "no": 80,
+    "name": "打包好囉",
+    "image": "habitat_ui/all-packed-up-080.png",
+    "pokemon": [
+      {
+        "id": "farfetchd",
+        "no": 90,
+        "name": "大蔥鴨",
+        "category": "野鴨寶可夢"
+      },
+      {
+        "id": "makuhita",
+        "no": 125,
+        "name": "幕下力士",
+        "category": "鬥志寶可夢"
+      },
+      {
+        "id": "hariyama",
+        "no": 126,
+        "name": "鐵掌力士",
+        "category": "臂推寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "full-recovery-081",
+    "no": 81,
+    "name": "痊癒前好好休息",
+    "image": "habitat_ui/full-recovery-081.jpg",
+    "pokemon": [
+      {
+        "id": "chansey",
+        "no": 101,
+        "name": "吉利蛋",
+        "category": "蛋蛋寶可夢"
+      },
+      {
+        "id": "pikachu-pale",
+        "no": 79,
+        "name": "皮卡丘",
+        "category": "老鼠寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "alarm-clock-sleep-zone-082",
+    "no": 82,
+    "name": "鬧鐘床鋪空間",
+    "image": "habitat_ui/alarm-clock-sleep-zone-082.png",
+    "pokemon": [
+      {
+        "id": "happiny",
+        "no": 100,
+        "name": "小福蛋",
+        "category": "玩具屋寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "vending-machine-break-area-083",
+    "no": 83,
+    "name": "自動販賣機旁偷個閒",
+    "image": "habitat_ui/vending-machine-break-area-083.jpg",
+    "pokemon": [
+      {
+        "id": "grubbin",
+        "no": 138,
+        "name": "強顎雞母蟲",
+        "category": "幼蟲寶可夢"
+      },
+      {
+        "id": "charjabug",
+        "no": 139,
+        "name": "蟲電寶",
+        "category": "電池寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "vending-machine-set-084",
+    "no": 84,
+    "name": "自動販賣機套組",
+    "image": "habitat_ui/vending-machine-set-084.jpg",
+    "pokemon": [
+      {
+        "id": "electivire",
+        "no": 105,
+        "name": "電擊魔獸",
+        "category": "霹靂寶可夢"
+      },
+      {
+        "id": "elekid",
+        "no": 103,
+        "name": "電擊怪",
+        "category": "電氣寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "mini-game-corner-085",
+    "no": 85,
+    "name": "迷你遊戲城",
+    "image": "habitat_ui/mini-game-corner-085.png",
+    "pokemon": [
+      {
+        "id": "magnezone",
+        "no": 29,
+        "name": "自爆磁怪",
+        "category": "磁場寶可夢"
+      },
+      {
+        "id": "magneton",
+        "no": 28,
+        "name": "三合一磁怪",
+        "category": "磁石寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "waterwheel-spot-086",
+    "no": 86,
+    "name": "水力發電廠",
+    "image": "habitat_ui/waterwheel-spot-086.png",
+    "pokemon": [
+      {
+        "id": "prinplup",
+        "no": 129,
+        "name": "波皇子",
+        "category": "企鵝寶可夢"
+      },
+      {
+        "id": "empoleon",
+        "no": 130,
+        "name": "帝王拿波",
+        "category": "皇帝寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "furnace-spot-087",
+    "no": 87,
+    "name": "火力發電廠",
+    "image": "habitat_ui/furnace-spot-087.jpg",
+    "pokemon": [
+      {
+        "id": "blaziken",
+        "no": 122,
+        "name": "火焰雞",
+        "category": "火炎寶可夢"
+      },
+      {
+        "id": "combusken",
+        "no": 121,
+        "name": "力壯雞",
+        "category": "雛鳥寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "dock-088",
+    "no": 88,
+    "name": "碼頭",
+    "image": "habitat_ui/dock-088.png",
+    "pokemon": [
+      {
+        "id": "marill",
+        "no": 115,
+        "name": "瑪力露",
+        "category": "水鼠寶可夢"
+      },
+      {
+        "id": "azumarill",
+        "no": 116,
+        "name": "瑪力露麗",
+        "category": "水兔寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "spooky-study-089",
+    "no": 89,
+    "name": "詭異書房",
+    "image": "habitat_ui/spooky-study-089.png",
+    "pokemon": [
+      {
+        "id": "gastly",
+        "no": 93,
+        "name": "鬼斯",
+        "category": "氣體寶可夢"
+      },
+      {
+        "id": "haunter",
+        "no": 94,
+        "name": "鬼斯通",
+        "category": "氣體寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "playing-pirate-090",
+    "no": 90,
+    "name": "水手家家酒",
+    "image": "habitat_ui/playing-pirate-090.png",
+    "pokemon": [
+      {
+        "id": "voltorb",
+        "no": 96,
+        "name": "霹靂電球",
+        "category": "圓球寶可夢"
+      },
+      {
+        "id": "electrode",
+        "no": 97,
+        "name": "頑皮雷彈",
+        "category": "圓球寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "working-the-register-091",
+    "no": 91,
+    "name": "到收銀檯結帳",
+    "image": "habitat_ui/working-the-register-091.png",
+    "pokemon": [
+      {
+        "id": "meowth",
+        "no": 84,
+        "name": "喵喵",
+        "category": "抓抓貓寶可夢"
+      },
+      {
+        "id": "audino",
+        "no": 131,
+        "name": "差不多娃娃",
+        "category": "聽覺寶可夢"
+      },
+      {
+        "id": "happiny",
+        "no": 100,
+        "name": "小福蛋",
+        "category": "玩具屋寶可夢"
+      },
+      {
+        "id": "mawile",
+        "no": 175,
+        "name": "大嘴娃",
+        "category": "欺騙寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "tiny-atelier-092",
+    "no": 92,
+    "name": "小小畫室",
+    "image": "habitat_ui/tiny-atelier-092.jpg",
+    "pokemon": [
+      {
+        "id": "smeargle",
+        "no": 119,
+        "name": "圖圖犬",
+        "category": "畫家寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "gourmets-altar-093",
+    "no": 93,
+    "name": "供奉美食",
+    "image": "habitat_ui/gourmets-altar-093.png",
+    "pokemon": [
+      {
+        "id": "snorlax-mossy",
+        "no": 108,
+        "name": "卡比獸",
+        "category": "睡眠寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "pikachu-space-094",
+    "no": 94,
+    "name": "皮卡丘空間",
+    "image": "habitat_ui/pikachu-space-094.jpg",
+    "pokemon": [
+      {
+        "id": "mimikyu",
+        "no": 141,
+        "name": "謎擬Ｑ",
+        "category": "偽裝寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "cuteness-overload-095",
+    "no": 95,
+    "name": "超可愛空間",
+    "image": "habitat_ui/cuteness-overload-095.jpg",
+    "pokemon": [
+      {
+        "id": "blissey",
+        "no": 102,
+        "name": "幸福蛋",
+        "category": "幸福寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "welcoming-resort-096",
+    "no": 96,
+    "name": "歡迎光臨度假村",
+    "image": "habitat_ui/welcoming-resort-096.png",
+    "pokemon": [
+      {
+        "id": "absol",
+        "no": 127,
+        "name": "阿勃梭魯",
+        "category": "災難寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "plain-life-097",
+    "no": 97,
+    "name": "自然風格的生活",
+    "image": "habitat_ui/plain-life-097.jpg",
+    "pokemon": [
+      {
+        "id": "ampharos",
+        "no": 113,
+        "name": "電龍",
+        "category": "光明寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "red-tall-grass-098",
+    "no": 98,
+    "name": "紅色的草叢",
+    "image": "habitat_ui/red-tall-grass-098.png",
+    "pokemon": [
+      {
+        "id": "scorbunny",
+        "no": 188,
+        "name": "炎兔兒",
+        "category": "兔子寶可夢"
+      },
+      {
+        "id": "riolu",
+        "no": 180,
+        "name": "利歐路",
+        "category": "波動寶可夢"
+      },
+      {
+        "id": "kricketot",
+        "no": 177,
+        "name": "圓法師",
+        "category": "蟋蟀寶可夢"
+      },
+      {
+        "id": "cinderace",
+        "no": 190,
+        "name": "閃焰王牌",
+        "category": "射手寶可夢"
+      },
+      {
+        "id": "kricketune",
+        "no": 178,
+        "name": "音箱蟀",
+        "category": "蟋蟀寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "tree-shaded-red-tall-grass-099",
+    "no": 99,
+    "name": "樹蔭的紅色草叢",
+    "image": "habitat_ui/tree-shaded-red-tall-grass-099.png",
+    "pokemon": [
+      {
+        "id": "bonsly",
+        "no": 165,
+        "name": "盆才怪",
+        "category": "盆栽寶可夢"
+      },
+      {
+        "id": "diglett",
+        "no": 154,
+        "name": "地鼠",
+        "category": "鼴鼠寶可夢"
+      },
+      {
+        "id": "dugtrio",
+        "no": 155,
+        "name": "三地鼠",
+        "category": "鼴鼠寶可夢"
+      },
+      {
+        "id": "sudowoodo",
+        "no": 166,
+        "name": "樹才怪",
+        "category": "模仿寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "pointy-tree-shaded-rocky-tall-grass-100",
+    "no": 100,
+    "name": "三角樹蔭下的岩石與草叢",
+    "image": "habitat_ui/pointy-tree-shaded-rocky-tall-grass-100.png",
+    "pokemon": [
+      {
+        "id": "dartrix",
+        "no": 186,
+        "name": "投羽梟",
+        "category": "刀羽寶可夢"
+      },
+      {
+        "id": "decidueye",
+        "no": 187,
+        "name": "狙射樹梟",
+        "category": "箭羽寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "hydrated-red-tall-grass-101",
+    "no": 101,
+    "name": "濕潤的紅色草叢",
+    "image": "habitat_ui/hydrated-red-tall-grass-101.png",
+    "pokemon": [
+      {
+        "id": "lombre",
+        "no": 173,
+        "name": "蓮帽小童",
+        "category": "歡樂寶可夢"
+      },
+      {
+        "id": "lotad",
+        "no": 172,
+        "name": "蓮葉童子",
+        "category": "水草寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "elevated-red-tall-grass-102",
+    "no": 102,
+    "name": "高崗的紅色草叢",
+    "image": "habitat_ui/elevated-red-tall-grass-102.jpg",
+    "pokemon": [
+      {
+        "id": "murkrow",
+        "no": 167,
+        "name": "黑暗鴉",
+        "category": "暗夜寶可夢"
+      },
+      {
+        "id": "honchkrow",
+        "no": 168,
+        "name": "烏鴉頭頭",
+        "category": "大老闆寶可夢"
+      },
+      {
+        "id": "chatot",
+        "no": 179,
+        "name": "聒噪鳥",
+        "category": "音符寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "grassy-training-field-103",
+    "no": 103,
+    "name": "草叢訓練場",
+    "image": "habitat_ui/grassy-training-field-103.png",
+    "pokemon": [
+      {
+        "id": "machoke",
+        "no": 157,
+        "name": "豪力",
+        "category": "超力寶可夢"
+      },
+      {
+        "id": "machamp",
+        "no": 158,
+        "name": "怪力",
+        "category": "超力寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "graceful-flower-bed-104",
+    "no": 104,
+    "name": "優雅的花田",
+    "image": "habitat_ui/graceful-flower-bed-104.png",
+    "pokemon": [
+      {
+        "id": "cleffa",
+        "no": 148,
+        "name": "皮寶寶",
+        "category": "星形寶可夢"
+      },
+      {
+        "id": "clefairy",
+        "no": 149,
+        "name": "皮皮",
+        "category": "妖精寶可夢"
+      },
+      {
+        "id": "clefable",
+        "no": 150,
+        "name": "皮可西",
+        "category": "妖精寶可夢"
+      },
+      {
+        "id": "fidough",
+        "no": 198,
+        "name": "狗仔包",
+        "category": "小狗寶可夢"
+      },
+      {
+        "id": "dachsbun",
+        "no": 199,
+        "name": "麻花犬",
+        "category": "狗寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "tree-shaded-graceful-flower-bed-105",
+    "no": 105,
+    "name": "樹蔭的優雅花田",
+    "image": "habitat_ui/tree-shaded-graceful-flower-bed-105.jpg",
+    "pokemon": [
+      {
+        "id": "volcarona",
+        "no": 184,
+        "name": "火神蛾",
+        "category": "太陽寶可夢"
+      },
+      {
+        "id": "murkrow",
+        "no": 167,
+        "name": "黑暗鴉",
+        "category": "暗夜寶可夢"
+      },
+      {
+        "id": "larvesta",
+        "no": 183,
+        "name": "燃燒蟲",
+        "category": "火把寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "hydrated-graceful-flower-bed-106",
+    "no": 106,
+    "name": "濕潤的優雅花田",
+    "image": "habitat_ui/hydrated-graceful-flower-bed-106.png",
+    "pokemon": [
+      {
+        "id": "ekans",
+        "no": 146,
+        "name": "阿柏蛇",
+        "category": "蛇寶可夢"
+      },
+      {
+        "id": "arbok",
+        "no": 147,
+        "name": "阿柏怪",
+        "category": "眼鏡蛇寶可夢"
+      },
+      {
+        "id": "politoed",
+        "no": 212,
+        "name": "蚊香蛙皇",
+        "category": "青蛙寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "flower-garden-stump-stage-107",
+    "no": 107,
+    "name": "花園舞台樹樁",
+    "image": "habitat_ui/flower-garden-stump-stage-107.png",
+    "pokemon": [
+      {
+        "id": "igglybuff",
+        "no": 151,
+        "name": "寶寶丁",
+        "category": "氣球寶可夢"
+      },
+      {
+        "id": "jigglypuff",
+        "no": 152,
+        "name": "胖丁",
+        "category": "氣球寶可夢"
+      },
+      {
+        "id": "politoed",
+        "no": 212,
+        "name": "蚊香蛙皇",
+        "category": "青蛙寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "toil-in-the-soil-108",
+    "no": 108,
+    "name": "辛勤耕作",
+    "image": "habitat_ui/toil-in-the-soil-108.jpg",
+    "pokemon": [
+      {
+        "id": "tyranitar",
+        "no": 171,
+        "name": "班基拉斯",
+        "category": "盔甲寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "uplifting-duckweed-109",
+    "no": 109,
+    "name": "快樂無比的水坑",
+    "image": "habitat_ui/uplifting-duckweed-109.png",
+    "pokemon": [
+      {
+        "id": "lotad",
+        "no": 172,
+        "name": "蓮葉童子",
+        "category": "水草寶可夢"
+      },
+      {
+        "id": "ludicolo",
+        "no": 174,
+        "name": "樂天河童",
+        "category": "無憂無慮寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "mossy-rest-spot-110",
+    "no": 110,
+    "name": "滿滿是苔",
+    "image": "habitat_ui/mossy-rest-spot-110.png",
+    "pokemon": [
+      {
+        "id": "larvitar",
+        "no": 169,
+        "name": "幼基拉斯",
+        "category": "岩皮寶可夢"
+      },
+      {
+        "id": "tyranitar",
+        "no": 171,
+        "name": "班基拉斯",
+        "category": "盔甲寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "mossy-boulder-111",
+    "no": 111,
+    "name": "滿滿是苔的岩石",
+    "image": "habitat_ui/mossy-boulder-111.png",
+    "pokemon": [
+      {
+        "id": "graveler",
+        "no": 160,
+        "name": "隆隆石",
+        "category": "岩石寶可夢"
+      },
+      {
+        "id": "golem",
+        "no": 161,
+        "name": "隆隆岩",
+        "category": "百萬噸寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "mossy-hot-spring-112",
+    "no": 112,
+    "name": "生苔的溫泉",
+    "image": "habitat_ui/mossy-hot-spring-112.png",
+    "pokemon": [
+      {
+        "id": "torkoal",
+        "no": 176,
+        "name": "煤炭龜",
+        "category": "煤炭寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "open-air-bath-113",
+    "no": 113,
+    "name": "露天溫泉",
+    "image": "habitat_ui/open-air-bath-113.jpg",
+    "pokemon": [
+      {
+        "id": "raboot",
+        "no": 189,
+        "name": "騰蹴小將",
+        "category": "兔子寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "harmonious-hot-spring-114",
+    "no": 114,
+    "name": "養生溫泉",
+    "image": "habitat_ui/harmonious-hot-spring-114.png",
+    "pokemon": [
+      {
+        "id": "politoed",
+        "no": 212,
+        "name": "蚊香蛙皇",
+        "category": "青蛙寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "piping-hot-lava-115",
+    "no": 115,
+    "name": "熔岩熔岩熱呼呼",
+    "image": "habitat_ui/piping-hot-lava-115.jpg",
+    "pokemon": [
+      {
+        "id": "volcarona",
+        "no": 184,
+        "name": "火神蛾",
+        "category": "太陽寶可夢"
+      },
+      {
+        "id": "charcadet",
+        "no": 200,
+        "name": "炭小侍",
+        "category": "火焰孩童寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "digging-and-burning-116",
+    "no": 116,
+    "name": "挖挖又燒燒",
+    "image": "habitat_ui/digging-and-burning-116.png",
+    "pokemon": [
+      {
+        "id": "magmar",
+        "no": 163,
+        "name": "鴨嘴火獸",
+        "category": "噴火寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "clink-clang-iron-construction-117",
+    "no": 117,
+    "name": "鏘啷鏘啷鋼構工程",
+    "image": "habitat_ui/clink-clang-iron-construction-117.png",
+    "pokemon": [
+      {
+        "id": "steelix",
+        "no": 31,
+        "name": "大鋼蛇",
+        "category": "鋼蛇寶可夢"
+      },
+      {
+        "id": "machamp",
+        "no": 158,
+        "name": "怪力",
+        "category": "超力寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "creepy-white-rocks-118",
+    "no": 118,
+    "name": "詭異的白色岩石",
+    "image": "habitat_ui/creepy-white-rocks-118.png",
+    "pokemon": [
+      {
+        "id": "glimmet",
+        "no": 203,
+        "name": "晶光芽",
+        "category": "礦石寶可夢"
+      },
+      {
+        "id": "glimmora",
+        "no": 204,
+        "name": "晶光花",
+        "category": "礦石寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "container-snacking-119",
+    "no": 119,
+    "name": "在置物場吃點東西",
+    "image": "habitat_ui/container-snacking-119.png",
+    "pokemon": [
+      {
+        "id": "diglett",
+        "no": 154,
+        "name": "地鼠",
+        "category": "鼴鼠寶可夢"
+      },
+      {
+        "id": "glimmet",
+        "no": 203,
+        "name": "晶光芽",
+        "category": "礦石寶可夢"
+      },
+      {
+        "id": "glimmora",
+        "no": 204,
+        "name": "晶光花",
+        "category": "礦石寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "dinner-table-surprise-120",
+    "no": 120,
+    "name": "充滿期待的餐桌",
+    "image": "habitat_ui/dinner-table-surprise-120.jpg",
+    "pokemon": [
+      {
+        "id": "swalot",
+        "no": 54,
+        "name": "吞食獸",
+        "category": "毒袋寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "best-bread-bakery-121",
+    "no": 121,
+    "name": "大口吃麵包工坊",
+    "image": "habitat_ui/best-bread-bakery-121.jpg",
+    "pokemon": [
+      {
+        "id": "fidough",
+        "no": 198,
+        "name": "狗仔包",
+        "category": "小狗寶可夢"
+      },
+      {
+        "id": "dachsbun",
+        "no": 199,
+        "name": "麻花犬",
+        "category": "狗寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "mini-kitchen-122",
+    "no": 122,
+    "name": "迷你廚房",
+    "image": "habitat_ui/mini-kitchen-122.jpg",
+    "pokemon": [
+      {
+        "id": "magmortar",
+        "no": 164,
+        "name": "鴨嘴炎獸",
+        "category": "噴射寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "house-party-123",
+    "no": 123,
+    "name": "大家一起派對",
+    "image": "habitat_ui/house-party-123.jpg",
+    "pokemon": [
+      {
+        "id": "dugtrio",
+        "no": 155,
+        "name": "三地鼠",
+        "category": "鼴鼠寶可夢"
+      },
+      {
+        "id": "sudowoodo",
+        "no": 166,
+        "name": "樹才怪",
+        "category": "模仿寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "lazy-photo-album-scrolling-124",
+    "no": 124,
+    "name": "悠閒回顧照片",
+    "image": "habitat_ui/lazy-photo-album-scrolling-124.jpg",
+    "pokemon": [
+      {
+        "id": "toxel",
+        "no": 196,
+        "name": "毒電嬰",
+        "category": "嬰兒寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "chirping-recital-125",
+    "no": 125,
+    "name": "啁啁啾啾演唱會",
+    "image": "habitat_ui/chirping-recital-125.png",
+    "pokemon": [
+      {
+        "id": "chatot",
+        "no": 179,
+        "name": "聒噪鳥",
+        "category": "音符寶可夢"
+      },
+      {
+        "id": "honchkrow",
+        "no": 168,
+        "name": "烏鴉頭頭",
+        "category": "大老闆寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "recital-stage-126",
+    "no": 126,
+    "name": "演唱會舞台",
+    "image": "habitat_ui/recital-stage-126.png",
+    "pokemon": [
+      {
+        "id": "jigglypuff",
+        "no": 152,
+        "name": "胖丁",
+        "category": "氣球寶可夢"
+      },
+      {
+        "id": "wigglytuff",
+        "no": 153,
+        "name": "胖可丁",
+        "category": "氣球寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "box-to-the-rhythm-127",
+    "no": 127,
+    "name": "跟著節奏一二跳",
+    "image": "habitat_ui/box-to-the-rhythm-127.jpg",
+    "pokemon": [
+      {
+        "id": "machoke",
+        "no": 157,
+        "name": "豪力",
+        "category": "超力寶可夢"
+      },
+      {
+        "id": "riolu",
+        "no": 180,
+        "name": "利歐路",
+        "category": "波動寶可夢"
+      },
+      {
+        "id": "lucario",
+        "no": 181,
+        "name": "路卡利歐",
+        "category": "波動寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "music-and-magazines-128",
+    "no": 128,
+    "name": "音樂和閱讀",
+    "image": "habitat_ui/music-and-magazines-128.jpg",
+    "pokemon": [
+      {
+        "id": "kricketot",
+        "no": 177,
+        "name": "圓法師",
+        "category": "蟋蟀寶可夢"
+      },
+      {
+        "id": "kricketune",
+        "no": 178,
+        "name": "音箱蟀",
+        "category": "蟋蟀寶可夢"
+      },
+      {
+        "id": "rotom",
+        "no": 182,
+        "name": "音箱洛托姆",
+        "category": "等離子寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "mini-museum-129",
+    "no": 129,
+    "name": "小小博物館",
+    "image": "habitat_ui/mini-museum-129.png",
+    "pokemon": [
+      {
+        "id": "arcanine",
+        "no": 89,
+        "name": "風速狗",
+        "category": "傳說寶可夢"
+      },
+      {
+        "id": "gimmighoul",
+        "no": 205,
+        "name": "索財靈",
+        "category": "錢箱寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "refreshing-locker-room-130",
+    "no": 130,
+    "name": "清爽的更衣室",
+    "image": "habitat_ui/refreshing-locker-room-130.jpg",
+    "pokemon": [
+      {
+        "id": "cinderace",
+        "no": 190,
+        "name": "閃焰王牌",
+        "category": "射手寶可夢"
+      },
+      {
+        "id": "raboot",
+        "no": 189,
+        "name": "騰蹴小將",
+        "category": "兔子寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "bronze-landmark-131",
+    "no": 131,
+    "name": "銅像景點",
+    "image": "habitat_ui/bronze-landmark-131.png",
+    "pokemon": [
+      {
+        "id": "clefairy",
+        "no": 149,
+        "name": "皮皮",
+        "category": "妖精寶可夢"
+      },
+      {
+        "id": "clefable",
+        "no": 150,
+        "name": "皮可西",
+        "category": "妖精寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "railroad-crossing-132",
+    "no": 132,
+    "name": "平交道",
+    "image": "habitat_ui/railroad-crossing-132.jpg",
+    "pokemon": [
+      {
+        "id": "carkol",
+        "no": 194,
+        "name": "大炭車",
+        "category": "煤炭寶可夢"
+      },
+      {
+        "id": "rolycoly",
+        "no": 193,
+        "name": "小炭仔",
+        "category": "煤炭寶可夢"
+      },
+      {
+        "id": "coalossal",
+        "no": 195,
+        "name": "巨炭山",
+        "category": "煤炭寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "chefs-kitchen-133",
+    "no": 133,
+    "name": "主廚的廚房",
+    "image": "habitat_ui/chefs-kitchen-133.jpg",
+    "pokemon": [
+      {
+        "id": "greedent",
+        "no": 192,
+        "name": "藏飽栗鼠",
+        "category": "貪吃寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "absolute-luxury-134",
+    "no": 134,
+    "name": "極致豪華",
+    "image": "habitat_ui/absolute-luxury-134.jpg",
+    "pokemon": [
+      {
+        "id": "gholdengo",
+        "no": 206,
+        "name": "賽富豪",
+        "category": "金幣寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "heavy-iron-135",
+    "no": 135,
+    "name": "沉甸甸的鐵",
+    "image": "habitat_ui/heavy-iron-135.jpg",
+    "pokemon": [
+      {
+        "id": "coalossal",
+        "no": 195,
+        "name": "巨炭山",
+        "category": "煤炭寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "modern-living-136",
+    "no": 136,
+    "name": "現代生活",
+    "image": "habitat_ui/modern-living-136.jpg",
+    "pokemon": [
+      {
+        "id": "decidueye",
+        "no": 187,
+        "name": "狙射樹梟",
+        "category": "箭羽寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "pink-tall-grass-137",
+    "no": 137,
+    "name": "粉色的草叢",
+    "image": "habitat_ui/pink-tall-grass-137.jpg",
+    "pokemon": [
+      {
+        "id": "trapinch",
+        "no": 237,
+        "name": "大顎蟻",
+        "category": "蟻穴寶可夢"
+      },
+      {
+        "id": "vibrava",
+        "no": 238,
+        "name": "超音波幼蟲",
+        "category": "震動寶可夢"
+      },
+      {
+        "id": "flygon",
+        "no": 239,
+        "name": "沙漠蜻蜓",
+        "category": "神秘寶可夢"
+      },
+      {
+        "id": "swablu",
+        "no": 240,
+        "name": "青綿鳥",
+        "category": "棉花鳥寶可夢"
+      },
+      {
+        "id": "duskull",
+        "no": 242,
+        "name": "夜巡靈",
+        "category": "安魂曲寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "tree-shaded-pink-tall-grass-138",
+    "no": 138,
+    "name": "樹蔭的粉色草叢",
+    "image": "habitat_ui/tree-shaded-pink-tall-grass-138.jpg",
+    "pokemon": [
+      {
+        "id": "sprigatito",
+        "no": 263,
+        "name": "新葉喵",
+        "category": "草貓寶可夢"
+      },
+      {
+        "id": "pupitar",
+        "no": 170,
+        "name": "沙基拉斯",
+        "category": "硬殼寶可夢"
+      },
+      {
+        "id": "dreepy",
+        "no": 260,
+        "name": "多龍梅西亞",
+        "category": "逗留寶可夢"
+      },
+      {
+        "id": "drakloak",
+        "no": 261,
+        "name": "多龍奇",
+        "category": "守護寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "hydrated-pink-tall-grass-139",
+    "no": 139,
+    "name": "濕潤的粉色草叢",
+    "image": "habitat_ui/hydrated-pink-tall-grass-139.jpg",
+    "pokemon": [
+      {
+        "id": "froakie",
+        "no": 251,
+        "name": "呱呱泡蛙",
+        "category": "泡泡蛙寶可夢"
+      },
+      {
+        "id": "frogadier",
+        "no": 252,
+        "name": "呱頭蛙",
+        "category": "泡泡蛙寶可夢"
+      },
+      {
+        "id": "greninja",
+        "no": 253,
+        "name": "甲賀忍蛙",
+        "category": "忍者寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "elevated-pink-tall-grass-140",
+    "no": 140,
+    "name": "高崗的粉色草叢",
+    "image": "habitat_ui/elevated-pink-tall-grass-140.png",
+    "pokemon": [
+      {
+        "id": "corvisquire",
+        "no": 258,
+        "name": "藍鴉",
+        "category": "烏鴉寶可夢"
+      },
+      {
+        "id": "corviknight",
+        "no": 259,
+        "name": "鋼鎧鴉",
+        "category": "烏鴉寶可夢"
+      },
+      {
+        "id": "wattrel",
+        "no": 266,
+        "name": "電海燕",
+        "category": "海燕寶可夢"
+      },
+      {
+        "id": "kilowattrel",
+        "no": 267,
+        "name": "大電海燕",
+        "category": "軍艦鳥寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "concrete-pipe-secret-base-141",
+    "no": 141,
+    "name": "水管秘密基地",
+    "image": "habitat_ui/concrete-pipe-secret-base-141.jpg",
+    "pokemon": [
+      {
+        "id": "cyndaquil",
+        "no": 224,
+        "name": "火球鼠",
+        "category": "火鼠寶可夢"
+      },
+      {
+        "id": "quilava",
+        "no": 225,
+        "name": "火岩鼠",
+        "category": "火山寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "fluffy-flower-bed-142",
+    "no": 142,
+    "name": "軟綿綿的花田",
+    "image": "habitat_ui/fluffy-flower-bed-142.jpg",
+    "pokemon": [
+      {
+        "id": "vulpix",
+        "no": 207,
+        "name": "六尾",
+        "category": "狐狸寶可夢"
+      },
+      {
+        "id": "ninetales",
+        "no": 208,
+        "name": "九尾",
+        "category": "狐狸寶可夢"
+      },
+      {
+        "id": "misdreavus",
+        "no": 227,
+        "name": "夢妖",
+        "category": "尖叫寶可夢"
+      },
+      {
+        "id": "mismagius",
+        "no": 228,
+        "name": "夢妖魔",
+        "category": "魔法寶可夢"
+      },
+      {
+        "id": "rookidee",
+        "no": 257,
+        "name": "稚山雀",
+        "category": "迷你鳥寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "tree-shaded-fluffy-flower-bed-143",
+    "no": 143,
+    "name": "樹蔭的軟綿綿花田",
+    "image": "habitat_ui/tree-shaded-fluffy-flower-bed-143.jpg",
+    "pokemon": [
+      {
+        "id": "girafarig",
+        "no": 229,
+        "name": "麒麟奇",
+        "category": "長頸寶可夢"
+      },
+      {
+        "id": "farigiraf",
+        "no": 230,
+        "name": "奇麒麟",
+        "category": "長頸寶可夢"
+      },
+      {
+        "id": "servine",
+        "no": 249,
+        "name": "青藤蛇",
+        "category": "草蛇寶可夢"
+      },
+      {
+        "id": "serperior",
+        "no": 250,
+        "name": "君主蛇",
+        "category": "威嚴寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "hydrated-fluffy-flower-bed-144",
+    "no": 144,
+    "name": "濕潤的軟綿綿花田",
+    "image": "habitat_ui/hydrated-fluffy-flower-bed-144.png",
+    "pokemon": [
+      {
+        "id": "dratini",
+        "no": 221,
+        "name": "迷你龍",
+        "category": "龍寶可夢"
+      },
+      {
+        "id": "poliwhirl",
+        "no": 210,
+        "name": "蚊香君",
+        "category": "蝌蚪寶可夢"
+      },
+      {
+        "id": "dragonair",
+        "no": 222,
+        "name": "哈克龍",
+        "category": "龍寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "waterside-dinghy-145",
+    "no": 145,
+    "name": "水邊小船",
+    "image": "habitat_ui/waterside-dinghy-145.jpg",
+    "pokemon": [
+      {
+        "id": "dragonite",
+        "no": 223,
+        "name": "快龍",
+        "category": "龍寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "illuminated-waterfall-146",
+    "no": 146,
+    "name": "光照的瀑布",
+    "image": "habitat_ui/illuminated-waterfall-146.jpg",
+    "pokemon": [
+      {
+        "id": "gyarados",
+        "no": 46,
+        "name": "暴鯉龍",
+        "category": "殘暴寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "birdsong-garden-147",
+    "no": 147,
+    "name": "鳥鳴花園",
+    "image": "habitat_ui/birdsong-garden-147.jpg",
+    "pokemon": [
+      {
+        "id": "altaria",
+        "no": 241,
+        "name": "七夕青鳥",
+        "category": "嗡嗡寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "simple-bathroom-148",
+    "no": 148,
+    "name": "簡約浴室",
+    "image": "habitat_ui/simple-bathroom-148.jpg",
+    "pokemon": [
+      {
+        "id": "dratini",
+        "no": 221,
+        "name": "迷你龍",
+        "category": "龍寶可夢"
+      },
+      {
+        "id": "dragonair",
+        "no": 222,
+        "name": "哈克龍",
+        "category": "龍寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "cycling-rest-stop-149",
+    "no": 149,
+    "name": "騎行中休息",
+    "image": "habitat_ui/cycling-rest-stop-149.jpg",
+    "pokemon": [
+      {
+        "id": "beldum",
+        "no": 245,
+        "name": "鐵啞鈴",
+        "category": "鋼球寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "fireplace-nap-spot-150",
+    "no": 150,
+    "name": "暖爐旁打盹",
+    "image": "habitat_ui/fireplace-nap-spot-150.png",
+    "pokemon": [
+      {
+        "id": "typhlosion",
+        "no": 226,
+        "name": "火爆獸",
+        "category": "火山寶可夢"
+      },
+      {
+        "id": "quilava",
+        "no": 225,
+        "name": "火岩鼠",
+        "category": "火山寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "surging-psychic-power-151",
+    "no": 151,
+    "name": "滿溢的超能力",
+    "image": "habitat_ui/surging-psychic-power-151.jpg",
+    "pokemon": [
+      {
+        "id": "alakazam",
+        "no": 215,
+        "name": "胡地",
+        "category": "超能力寶可夢"
+      },
+      {
+        "id": "abra",
+        "no": 213,
+        "name": "凱西",
+        "category": "超能力寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "fortune-tellers-table-152",
+    "no": 152,
+    "name": "水晶占卜",
+    "image": "habitat_ui/fortune-tellers-table-152.jpg",
+    "pokemon": [
+      {
+        "id": "abra",
+        "no": 213,
+        "name": "凱西",
+        "category": "超能力寶可夢"
+      },
+      {
+        "id": "kadabra",
+        "no": 214,
+        "name": "勇基拉",
+        "category": "超能力寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "trash-site-tv-153",
+    "no": 153,
+    "name": "垃圾場的電視",
+    "image": "habitat_ui/trash-site-tv-153.jpg",
+    "pokemon": [
+      {
+        "id": "dusclops",
+        "no": 243,
+        "name": "彷徨夜靈",
+        "category": "招手寶可夢"
+      },
+      {
+        "id": "dusknoir",
+        "no": 244,
+        "name": "黑夜魔靈",
+        "category": "鉗制寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "oversized-dumping-ground-154",
+    "no": 154,
+    "name": "大型垃圾場",
+    "image": "habitat_ui/oversized-dumping-ground-154.jpg",
+    "pokemon": [
+      {
+        "id": "tinkatink",
+        "no": 268,
+        "name": "小鍛匠",
+        "category": "鍛冶寶可夢"
+      },
+      {
+        "id": "tinkaton",
+        "no": 270,
+        "name": "巨鍛匠",
+        "category": "鐵鎚寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "interrogation-desk-155",
+    "no": 155,
+    "name": "跟搭檔一起調查",
+    "image": "habitat_ui/interrogation-desk-155.jpg",
+    "pokemon": [
+      {
+        "id": "floragato",
+        "no": 264,
+        "name": "蒂蕾喵",
+        "category": "草貓寶可夢"
+      },
+      {
+        "id": "sprigatito",
+        "no": 263,
+        "name": "新葉喵",
+        "category": "草貓寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "sewer-hole-inspection-156",
+    "no": 156,
+    "name": "正在保養人孔蓋",
+    "image": "habitat_ui/sewer-hole-inspection-156.jpg",
+    "pokemon": [
+      {
+        "id": "tinkatuff",
+        "no": 269,
+        "name": "巧鍛匠",
+        "category": "鐵鎚寶可夢"
+      },
+      {
+        "id": "tinkatink",
+        "no": 268,
+        "name": "小鍛匠",
+        "category": "鍛冶寶可夢"
+      },
+      {
+        "id": "poliwrath",
+        "no": 211,
+        "name": "蚊香泳士",
+        "category": "蝌蚪寶可夢"
+      },
+      {
+        "id": "corviknight",
+        "no": 259,
+        "name": "鋼鎧鴉",
+        "category": "烏鴉寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "spotless-washing-station-157",
+    "no": 157,
+    "name": "亮晶晶洗手台",
+    "image": "habitat_ui/spotless-washing-station-157.jpg",
+    "pokemon": [
+      {
+        "id": "mime-jr",
+        "no": 216,
+        "name": "魔尼尼",
+        "category": "默劇寶可夢"
+      },
+      {
+        "id": "mr-mime",
+        "no": 217,
+        "name": "魔牆人偶",
+        "category": "障壁寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "home-theater-158",
+    "no": 158,
+    "name": "家庭影院",
+    "image": "habitat_ui/home-theater-158.jpg",
+    "pokemon": [
+      {
+        "id": "mismagius",
+        "no": 228,
+        "name": "夢妖魔",
+        "category": "魔法寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "study-area-159",
+    "no": 159,
+    "name": "學習空間",
+    "image": "habitat_ui/study-area-159.jpg",
+    "pokemon": [
+      {
+        "id": "ralts",
+        "no": 231,
+        "name": "拉魯拉絲",
+        "category": "感覺寶可夢"
+      },
+      {
+        "id": "kirlia",
+        "no": 232,
+        "name": "奇魯莉安",
+        "category": "情感寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "rhythmic-living-room-160",
+    "no": 160,
+    "name": "律動客廳",
+    "image": "habitat_ui/rhythmic-living-room-160.jpg",
+    "pokemon": [
+      {
+        "id": "noibat",
+        "no": 255,
+        "name": "嗡蝠",
+        "category": "聲波寶可夢"
+      },
+      {
+        "id": "noivern",
+        "no": 256,
+        "name": "音波龍",
+        "category": "聲波寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "squeaky-clean-161",
+    "no": 161,
+    "name": "咻咻打掃",
+    "image": "habitat_ui/squeaky-clean-161.jpg",
+    "pokemon": [
+      {
+        "id": "poliwag",
+        "no": 209,
+        "name": "蚊香蝌蚪",
+        "category": "蝌蚪寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "moisturizing-makeup-stand-162",
+    "no": 162,
+    "name": "質感化妝台",
+    "image": "habitat_ui/moisturizing-makeup-stand-162.jpg",
+    "pokemon": [
+      {
+        "id": "kirlia",
+        "no": 232,
+        "name": "奇魯莉安",
+        "category": "情感寶可夢"
+      },
+      {
+        "id": "gardevoir",
+        "no": 233,
+        "name": "沙奈朵",
+        "category": "擁抱寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "mini-library-163",
+    "no": 163,
+    "name": "迷你圖書館",
+    "image": "habitat_ui/mini-library-163.jpg",
+    "pokemon": [
+      {
+        "id": "gardevoir",
+        "no": 233,
+        "name": "沙奈朵",
+        "category": "擁抱寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "game-corner-battle-zone-164",
+    "no": 164,
+    "name": "遊戲連線對戰",
+    "image": "habitat_ui/game-corner-battle-zone-164.png",
+    "pokemon": [
+      {
+        "id": "porygon-z",
+        "no": 220,
+        "name": "多邊獸Ｚ",
+        "category": "虛擬寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "playland-165",
+    "no": 165,
+    "name": "遊樂園",
+    "image": "habitat_ui/playland-165.jpg",
+    "pokemon": [
+      {
+        "id": "snivy",
+        "no": 248,
+        "name": "藤藤蛇",
+        "category": "草蛇寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "work-desk-166",
+    "no": 166,
+    "name": "辦公桌",
+    "image": "habitat_ui/work-desk-166.jpg",
+    "pokemon": [
+      {
+        "id": "porygon2",
+        "no": 219,
+        "name": "多邊獸Ⅱ",
+        "category": "虛擬寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "office-storeroom-167",
+    "no": 167,
+    "name": "辦公室倉庫",
+    "image": "habitat_ui/office-storeroom-167.jpg",
+    "pokemon": [
+      {
+        "id": "misdreavus",
+        "no": 227,
+        "name": "夢妖",
+        "category": "尖叫寶可夢"
+      },
+      {
+        "id": "mismagius",
+        "no": 228,
+        "name": "夢妖魔",
+        "category": "魔法寶可夢"
+      },
+      {
+        "id": "drakloak",
+        "no": 261,
+        "name": "多龍奇",
+        "category": "守護寶可夢"
+      },
+      {
+        "id": "dragapult",
+        "no": 262,
+        "name": "多龍巴魯托",
+        "category": "潛行寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "experiment-space-168",
+    "no": 168,
+    "name": "實驗空間",
+    "image": "habitat_ui/experiment-space-168.jpg",
+    "pokemon": [
+      {
+        "id": "alakazam",
+        "no": 215,
+        "name": "胡地",
+        "category": "超能力寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "professors-apprentice-program-169",
+    "no": 169,
+    "name": "以博士為目標研究中",
+    "image": "habitat_ui/professors-apprentice-program-169.jpg",
+    "pokemon": [
+      {
+        "id": "metang",
+        "no": 246,
+        "name": "金屬怪",
+        "category": "鋼爪寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "researchers-desk-170",
+    "no": 170,
+    "name": "研究員的桌子",
+    "image": "habitat_ui/researchers-desk-170.jpg",
+    "pokemon": [
+      {
+        "id": "porygon",
+        "no": 218,
+        "name": "多邊獸",
+        "category": "虛擬寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "public-reading-material-171",
+    "no": 171,
+    "name": "歡迎閱讀",
+    "image": "habitat_ui/public-reading-material-171.jpg",
+    "pokemon": [
+      {
+        "id": "mime-jr",
+        "no": 216,
+        "name": "魔尼尼",
+        "category": "默劇寶可夢"
+      },
+      {
+        "id": "serperior",
+        "no": 250,
+        "name": "君主蛇",
+        "category": "威嚴寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "heart-pounding-surprise-box-172",
+    "no": 172,
+    "name": "咚咚驚喜箱",
+    "image": "habitat_ui/heart-pounding-surprise-box-172.jpg",
+    "pokemon": [
+      {
+        "id": "meowscarada",
+        "no": 265,
+        "name": "魔幻假面喵",
+        "category": "魔術師寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "prank-button-173",
+    "no": 173,
+    "name": "惡作劇開關",
+    "image": "habitat_ui/prank-button-173.jpg",
+    "pokemon": [
+      {
+        "id": "frogadier",
+        "no": 252,
+        "name": "呱頭蛙",
+        "category": "泡泡蛙寶可夢"
+      },
+      {
+        "id": "greninja",
+        "no": 253,
+        "name": "甲賀忍蛙",
+        "category": "忍者寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "picturesque-photo-cutout-board-174",
+    "no": 174,
+    "name": "絕景拍照版",
+    "image": "habitat_ui/picturesque-photo-cutout-board-174.jpg",
+    "pokemon": [
+      {
+        "id": "plusle",
+        "no": 235,
+        "name": "正電拍拍",
+        "category": "加油寶可夢"
+      },
+      {
+        "id": "minun",
+        "no": 236,
+        "name": "負電拍拍",
+        "category": "加油寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "tire-park-175",
+    "no": 175,
+    "name": "輪胎公園",
+    "image": "habitat_ui/tire-park-175.jpg",
+    "pokemon": [
+      {
+        "id": "dedenne",
+        "no": 254,
+        "name": "咚咚鼠",
+        "category": "天線寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "natures-market-176",
+    "no": 176,
+    "name": "大自然的市場",
+    "image": "habitat_ui/natures-market-176.jpg",
+    "pokemon": [
+      {
+        "id": "raichu",
+        "no": 80,
+        "name": "雷丘",
+        "category": "老鼠寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "construction-site-generator-177",
+    "no": 177,
+    "name": "施工地的發電站",
+    "image": "habitat_ui/construction-site-generator-177.jpg",
+    "pokemon": [
+      {
+        "id": "conkeldurr",
+        "no": 67,
+        "name": "修建老匠",
+        "category": "肌肉寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "dojo-training-178",
+    "no": 178,
+    "name": "在道場訓練",
+    "image": "habitat_ui/dojo-training-178.jpg",
+    "pokemon": [
+      {
+        "id": "gallade",
+        "no": 234,
+        "name": "艾路雷朵",
+        "category": "刀刃寶可夢"
+      },
+      {
+        "id": "poliwrath",
+        "no": 211,
+        "name": "蚊香泳士",
+        "category": "蝌蚪寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "evil-organization-hq-179",
+    "no": 179,
+    "name": "邪惡組織的秘密基地",
+    "image": "habitat_ui/evil-organization-hq-179.jpg",
+    "pokemon": [
+      {
+        "id": "persian",
+        "no": 85,
+        "name": "貓老大",
+        "category": "優雅貓寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "nine-flames-180",
+    "no": 180,
+    "name": "九道火焰",
+    "image": "habitat_ui/nine-flames-180.jpg",
+    "pokemon": [
+      {
+        "id": "ninetales",
+        "no": 208,
+        "name": "九尾",
+        "category": "狐狸寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "plush-central-181",
+    "no": 181,
+    "name": "被布偶圍滿",
+    "image": "habitat_ui/plush-central-181.png",
+    "pokemon": [
+      {
+        "id": "drifloon",
+        "no": 61,
+        "name": "飄飄球",
+        "category": "氣球寶可夢"
+      },
+      {
+        "id": "drifblim",
+        "no": 62,
+        "name": "隨風球",
+        "category": "飛艇寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "gamers-paradise-182",
+    "no": 182,
+    "name": "絕佳的遊戲環境",
+    "image": "habitat_ui/gamers-paradise-182.jpg",
+    "pokemon": [
+      {
+        "id": "metagross",
+        "no": 247,
+        "name": "巨金怪",
+        "category": "鋼腿寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "top-pop-183",
+    "no": 183,
+    "name": "流行潮流",
+    "image": "habitat_ui/top-pop-183.png",
+    "pokemon": [
+      {
+        "id": "typhlosion",
+        "no": 226,
+        "name": "火爆獸",
+        "category": "火山寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "fishing-pond-184",
+    "no": 184,
+    "name": "釣魚池",
+    "image": "habitat_ui/fishing-pond-184.jpg",
+    "pokemon": [
+      {
+        "id": "slowking",
+        "no": 26,
+        "name": "呆呆王",
+        "category": "皇族寶可夢"
+      },
+      {
+        "id": "slowbro",
+        "no": 25,
+        "name": "呆殼獸",
+        "category": "寄居蟹寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "ocean-fishing-spot-185",
+    "no": 185,
+    "name": "海釣",
+    "image": "habitat_ui/ocean-fishing-spot-185.png",
+    "pokemon": [
+      {
+        "id": "magikarp",
+        "no": 45,
+        "name": "鯉魚王",
+        "category": "魚寶可夢"
+      },
+      {
+        "id": "gastrodon-west-sea",
+        "no": 60,
+        "name": "海兔獸",
+        "category": "海蛞蝓寶可夢"
+      },
+      {
+        "id": "gastrodon-east-sea",
+        "no": 0,
+        "name": "海兔獸",
+        "category": ""
+      }
+    ]
+  },
+  {
+    "id": "marsh-fishing-spot-186",
+    "no": 186,
+    "name": "沼澤釣",
+    "image": "habitat_ui/marsh-fishing-spot-186.jpg",
+    "pokemon": [
+      {
+        "id": "grimer",
+        "no": 91,
+        "name": "臭泥",
+        "category": "污泥寶可夢"
+      },
+      {
+        "id": "muk",
+        "no": 92,
+        "name": "臭臭泥",
+        "category": "污泥寶可夢"
+      },
+      {
+        "id": "clodsire",
+        "no": 118,
+        "name": "土王",
+        "category": "刺魚寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "hot-spring-fishing-spot-187",
+    "no": 187,
+    "name": "溫泉釣",
+    "image": "habitat_ui/hot-spring-fishing-spot-187.jpg",
+    "pokemon": [
+      {
+        "id": "lotad",
+        "no": 172,
+        "name": "蓮葉童子",
+        "category": "水草寶可夢"
+      },
+      {
+        "id": "lombre",
+        "no": 173,
+        "name": "蓮帽小童",
+        "category": "歡樂寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "magma-fishing-spot-188",
+    "no": 188,
+    "name": "熔岩釣",
+    "image": "habitat_ui/magma-fishing-spot-188.jpg",
+    "pokemon": [
+      {
+        "id": "arcanine",
+        "no": 89,
+        "name": "風速狗",
+        "category": "傳說寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "amped-rock-stage-189",
+    "no": 189,
+    "name": "高調的搖滾舞台",
+    "image": "habitat_ui/amped-rock-stage-189.png",
+    "pokemon": [
+      {
+        "id": "toxtricity-amped-form",
+        "no": 197,
+        "name": "顫弦蠑螈",
+        "category": "龐克寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "low-key-rock-stage-190",
+    "no": 190,
+    "name": "低調的搖滾舞台",
+    "image": "habitat_ui/low-key-rock-stage-190.jpg",
+    "pokemon": [
+      {
+        "id": "toxtricity-low-key-form",
+        "no": 0,
+        "name": "顫弦蠑螈",
+        "category": ""
+      }
+    ]
+  },
+  {
+    "id": "malicious-knights-shrine-191",
+    "no": 191,
+    "name": "怨念騎士的祭壇",
+    "image": "habitat_ui/malicious-knights-shrine-191.jpg",
+    "pokemon": [
+      {
+        "id": "ceruledge",
+        "no": 202,
+        "name": "蒼炎刃鬼",
+        "category": "火刃寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "auspicious-knights-shrine-192",
+    "no": 192,
+    "name": "忠誠騎士的祭壇",
+    "image": "habitat_ui/auspicious-knights-shrine-192.jpg",
+    "pokemon": [
+      {
+        "id": "armarouge",
+        "no": 201,
+        "name": "紅蓮鎧騎",
+        "category": "火焰武士寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "wing-fossil-display-193",
+    "no": 193,
+    "name": "飛翼",
+    "image": "habitat_ui/wing-fossil-display-193.jpg",
+    "pokemon": [
+      {
+        "id": "aerodactyl",
+        "no": 271,
+        "name": "化石翼龍",
+        "category": "化石寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "skull-fossil-display-194",
+    "no": 194,
+    "name": "頭蓋化石展示台",
+    "image": "habitat_ui/skull-fossil-display-194.jpg",
+    "pokemon": [
+      {
+        "id": "cranidos",
+        "no": 272,
+        "name": "頭蓋龍",
+        "category": "頂頭寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "headbutt-fossil-display-195",
+    "no": 195,
+    "name": "頭槌化石展示台",
+    "image": "habitat_ui/headbutt-fossil-display-195.jpg",
+    "pokemon": [
+      {
+        "id": "rampardos",
+        "no": 273,
+        "name": "戰槌龍",
+        "category": "頂頭寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "armor-fossil-display-196",
+    "no": 196,
+    "name": "盾甲化石展示台",
+    "image": "habitat_ui/armor-fossil-display-196.jpg",
+    "pokemon": [
+      {
+        "id": "shieldon",
+        "no": 274,
+        "name": "盾甲龍",
+        "category": "盾牌寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "shield-fossil-display-197",
+    "no": 197,
+    "name": "護盾化石展示台",
+    "image": "habitat_ui/shield-fossil-display-197.jpg",
+    "pokemon": [
+      {
+        "id": "bastiodon",
+        "no": 275,
+        "name": "護城龍",
+        "category": "盾牌寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "jaw-fossil-display-198",
+    "no": 198,
+    "name": "顎之化石展示台",
+    "image": "habitat_ui/jaw-fossil-display-198.jpg",
+    "pokemon": [
+      {
+        "id": "tyrunt",
+        "no": 276,
+        "name": "寶寶暴龍",
+        "category": "皇嗣寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "despot-fossil-display-199",
+    "no": 199,
+    "name": "暴君化石展示台",
+    "image": "habitat_ui/despot-fossil-display-199.jpg",
+    "pokemon": [
+      {
+        "id": "tyrantrum",
+        "no": 277,
+        "name": "怪顎龍",
+        "category": "暴君寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "sail-fossil-display-200",
+    "no": 200,
+    "name": "鰭之化石展示台",
+    "image": "habitat_ui/sail-fossil-display-200.jpg",
+    "pokemon": [
+      {
+        "id": "amaura",
+        "no": 278,
+        "name": "冰雪龍",
+        "category": "凍原寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "tundra-fossil-display-201",
+    "no": 201,
+    "name": "凍原化石展示台",
+    "image": "habitat_ui/tundra-fossil-display-201.jpg",
+    "pokemon": [
+      {
+        "id": "aurorus",
+        "no": 279,
+        "name": "冰雪巨龍",
+        "category": "凍原寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "boundless-blue-beverage-202",
+    "no": 202,
+    "name": "沁爽清藍",
+    "image": "habitat_ui/boundless-blue-beverage-202.jpg",
+    "pokemon": [
+      {
+        "id": "vaporeon",
+        "no": 281,
+        "name": "水伊布",
+        "category": "水球寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "electrifying-potatoes-203",
+    "no": 203,
+    "name": "麻麻薯餅",
+    "image": "habitat_ui/electrifying-potatoes-203.jpg",
+    "pokemon": [
+      {
+        "id": "jolteon",
+        "no": 282,
+        "name": "雷伊布",
+        "category": "閃電寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "burning-hot-spice-204",
+    "no": 204,
+    "name": "辣到噴火",
+    "image": "habitat_ui/burning-hot-spice-204.jpg",
+    "pokemon": [
+      {
+        "id": "flareon",
+        "no": 283,
+        "name": "火伊布",
+        "category": "火焰寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "elegant-daytime-treats-205",
+    "no": 205,
+    "name": "優雅的午後",
+    "image": "habitat_ui/elegant-daytime-treats-205.jpg",
+    "pokemon": [
+      {
+        "id": "espeon",
+        "no": 284,
+        "name": "太陽伊布",
+        "category": "太陽寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "dark-chocolate-cookies-206",
+    "no": 206,
+    "name": "黑色的滋味",
+    "image": "habitat_ui/dark-chocolate-cookies-206.jpg",
+    "pokemon": [
+      {
+        "id": "umbreon",
+        "no": 285,
+        "name": "月亮伊布",
+        "category": "月光寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "leafy-greens-sandwich-207",
+    "no": 207,
+    "name": "綠色三明治",
+    "image": "habitat_ui/leafy-greens-sandwich-207.jpg",
+    "pokemon": [
+      {
+        "id": "leafeon",
+        "no": 286,
+        "name": "葉伊布",
+        "category": "翠綠寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "chilly-shaved-ice-208",
+    "no": 208,
+    "name": "沁涼刨冰",
+    "image": "habitat_ui/chilly-shaved-ice-208.jpg",
+    "pokemon": [
+      {
+        "id": "glaceon",
+        "no": 287,
+        "name": "冰伊布",
+        "category": "新雪寶可夢"
+      }
+    ]
+  },
+  {
+    "id": "lovely-ribbon-cake-209",
+    "no": 209,
+    "name": "可愛的蛋糕",
+    "image": "habitat_ui/lovely-ribbon-cake-209.jpg",
+    "pokemon": [
+      {
+        "id": "sylveon",
+        "no": 288,
+        "name": "仙子伊布",
+        "category": "纏繞寶可夢"
+      }
+    ]
+  }
+]

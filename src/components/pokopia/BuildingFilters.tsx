@@ -9,6 +9,9 @@ interface BuildingFiltersProps {
   onSearchChange: (term: string) => void;
   onCategoryChange: (category: BuildingCategory | null) => void;
   onSeriesChange: (series: BuildingSeries | null) => void;
+  /** 只顯示還沒標記為「已蓋」的建築 */
+  unbuiltOnly: boolean;
+  onUnbuiltOnlyChange: (value: boolean) => void;
 }
 
 /**
@@ -23,6 +26,8 @@ export function BuildingFilters({
   onSearchChange,
   onCategoryChange,
   onSeriesChange,
+  unbuiltOnly,
+  onUnbuiltOnlyChange,
 }: BuildingFiltersProps) {
   const counts = countByCategory();
   const showSeries = category === null || category === "住宅";
@@ -100,6 +105,27 @@ export function BuildingFilters({
         </fieldset>
       )}
 
+      <label className="mt-5 inline-flex min-h-11 cursor-pointer items-center gap-2.5">
+        <input
+          type="checkbox"
+          checked={unbuiltOnly}
+          onChange={(e) => onUnbuiltOnlyChange(e.target.checked)}
+          className="peer sr-only"
+        />
+        {/*
+         * 開關軌道：靠滑塊位移與填色一起表達狀態，不只靠顏色（色盲可辨）。
+         * 滑塊的樣式要用 [&>span] 從軌道往下選——peer-checked 是同層兄弟選擇器（~），
+         * 直接寫在滑塊上不會生效，因為它是軌道的子元素而非 input 的兄弟。
+         */}
+        <span
+          aria-hidden="true"
+          className="relative h-6 w-11 rounded-full border-2 border-pokopia-tint bg-white transition-colors peer-checked:border-pokopia-accent peer-checked:bg-pokopia-accent peer-checked:[&>span]:translate-x-5 peer-checked:[&>span]:bg-white peer-focus-visible:ring-2 peer-focus-visible:ring-pokopia-accent peer-focus-visible:ring-offset-2"
+        >
+          <span className="absolute top-0.5 left-0.5 h-4 w-4 rounded-full bg-pokopia-ink-soft transition-transform" />
+        </span>
+        <span className="text-sm font-medium text-pokopia-ink">只看還沒蓋的</span>
+      </label>
+
       <p className="mt-4 text-xs font-medium text-pokopia-ink-soft" aria-live="polite">
         共 <span className="font-bold text-pokopia-ink">{resultCount}</span> 種建築
       </p>
@@ -139,10 +165,11 @@ function FilterChip({
         />
       )}
       {label}
+      {/*
+       * 選中態用實心白字：原本 text-white/80 疊在 accent (#a35f1f) 上實測只有 3.63:1，
+       * 沒過 AA。實心白對 accent 是 4.8:1（見 styles.css 的色板註解）。
+       */}
       {typeof count === "number" && (
-        // 選中態原本是 text-white/80，在 pokopia-accent（#a35f1f）上只有 3.81:1。
-        // /90 也只到 4.39，仍不到 4.5——這個底色沒有「淡一點的白」可用，
-        // 只能用純白（4.98:1，與旁邊 label 同值）。未選中態的 ink-soft 本來就合格。
         <span className={active ? "text-white" : "text-pokopia-ink-soft"}>{count}</span>
       )}
     </button>

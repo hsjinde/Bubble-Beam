@@ -64,6 +64,12 @@ export function PokopiaLayout({ children }: { children: ReactNode }) {
             <span className="sm:hidden">影片</span>
             <span className="hidden sm:inline">建築影片</span>
           </Link>
+          <Link
+            to="/pokopia/habitats"
+            className="inline-flex min-h-11 items-center font-semibold whitespace-nowrap text-pokopia-ink hover:underline"
+          >
+            棲息地
+          </Link>
           {/* 跨區入口，與 GuideLayout 的對稱作法；配色留在 pokopia 暖色域內。 */}
           <Link
             to="/decks"

@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as DecksIndexRouteImport } from './routes/decks/index'
 import { Route as DecksDeckIdRouteImport } from './routes/decks/$deckId'
 import { Route as PokopiaIndexRouteImport } from './routes/pokopia/index'
+import { Route as PokopiaHabitatsRouteImport } from './routes/pokopia/habitats'
 import { Route as PokopiaVideosRouteImport } from './routes/pokopia/videos'
 
 const IndexRoute = IndexRouteImport.update({
@@ -35,6 +36,11 @@ const PokopiaIndexRoute = PokopiaIndexRouteImport.update({
   path: '/pokopia/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PokopiaHabitatsRoute = PokopiaHabitatsRouteImport.update({
+  id: '/pokopia/habitats',
+  path: '/pokopia/habitats',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PokopiaVideosRoute = PokopiaVideosRouteImport.update({
   id: '/pokopia/videos',
   path: '/pokopia/videos',
@@ -44,6 +50,7 @@ const PokopiaVideosRoute = PokopiaVideosRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/decks/$deckId': typeof DecksDeckIdRoute
+  '/pokopia/habitats': typeof PokopiaHabitatsRoute
   '/pokopia/videos': typeof PokopiaVideosRoute
   '/decks/': typeof DecksIndexRoute
   '/pokopia/': typeof PokopiaIndexRoute
@@ -51,6 +58,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/decks/$deckId': typeof DecksDeckIdRoute
+  '/pokopia/habitats': typeof PokopiaHabitatsRoute
   '/pokopia/videos': typeof PokopiaVideosRoute
   '/decks': typeof DecksIndexRoute
   '/pokopia': typeof PokopiaIndexRoute
@@ -59,6 +67,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/decks/$deckId': typeof DecksDeckIdRoute
+  '/pokopia/habitats': typeof PokopiaHabitatsRoute
   '/pokopia/videos': typeof PokopiaVideosRoute
   '/decks/': typeof DecksIndexRoute
   '/pokopia/': typeof PokopiaIndexRoute
@@ -66,13 +75,25 @@ export interface FileRoutesById {
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/decks/$deckId' | '/pokopia/videos' | '/decks/' | '/pokopia/'
+    | '/'
+    | '/decks/$deckId'
+    | '/pokopia/habitats'
+    | '/pokopia/videos'
+    | '/decks/'
+    | '/pokopia/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/decks/$deckId' | '/pokopia/videos' | '/decks' | '/pokopia'
+  to:
+    | '/'
+    | '/decks/$deckId'
+    | '/pokopia/habitats'
+    | '/pokopia/videos'
+    | '/decks'
+    | '/pokopia'
   id:
     | '__root__'
     | '/'
     | '/decks/$deckId'
+    | '/pokopia/habitats'
     | '/pokopia/videos'
     | '/decks/'
     | '/pokopia/'
@@ -81,6 +102,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DecksDeckIdRoute: typeof DecksDeckIdRoute
+  PokopiaHabitatsRoute: typeof PokopiaHabitatsRoute
   PokopiaVideosRoute: typeof PokopiaVideosRoute
   DecksIndexRoute: typeof DecksIndexRoute
   PokopiaIndexRoute: typeof PokopiaIndexRoute
@@ -116,6 +138,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PokopiaIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pokopia/habitats': {
+      id: '/pokopia/habitats'
+      path: '/pokopia/habitats'
+      fullPath: '/pokopia/habitats'
+      preLoaderRoute: typeof PokopiaHabitatsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pokopia/videos': {
       id: '/pokopia/videos'
       path: '/pokopia/videos'
@@ -129,6 +158,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DecksDeckIdRoute: DecksDeckIdRoute,
+  PokopiaHabitatsRoute: PokopiaHabitatsRoute,
   PokopiaVideosRoute: PokopiaVideosRoute,
   DecksIndexRoute: DecksIndexRoute,
   PokopiaIndexRoute: PokopiaIndexRoute,
