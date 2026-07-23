@@ -54,39 +54,61 @@ function DeckDetailPage() {
 
   return (
     <GuideLayout>
-      <Link to="/decks" className="text-sm font-semibold text-guide-ink/70 hover:text-guide-ink">
+      <Link
+        to="/decks"
+        className="inline-flex items-center text-sm font-semibold text-guide-ink-deep hover:text-guide-ink"
+      >
         ← 回牌組列表
       </Link>
-      <div className="mt-3 flex flex-wrap items-center gap-3">
-        <TierBadge tier={deck.tier} />
-        <h1 className="text-2xl font-bold text-guide-ink sm:text-3xl">{deck.name}</h1>
-        <span className="flex gap-1">
-          {deck.energy.map((e) => (
-            <EnergyIcon key={e} type={e} />
-          ))}
-        </span>
-        <span className="rounded-full bg-guide-tint px-3 py-0.5 text-sm font-semibold text-guide-ink">
-          難度：{deck.difficulty}
-        </span>
-      </div>
-      <p className="mt-3 text-slate-600">{deck.summary}</p>
 
-      <h2 className="mt-8 text-xl font-bold text-guide-ink">牌表（20 張）</h2>
+      <div className="mt-4 rounded-2xl border border-guide-tint bg-white p-6 shadow-sm">
+        <div className="flex flex-wrap items-center gap-3">
+          <TierBadge tier={deck.tier} />
+          <h1 className="text-2xl font-extrabold text-guide-ink sm:text-3xl">{deck.name}</h1>
+          <span className="flex gap-1.5">
+            {deck.energy.map((e) => (
+              <EnergyIcon key={e} type={e} />
+            ))}
+          </span>
+          <span className="rounded-full border border-guide-accent/30 bg-guide-tint/80 px-3 py-0.5 text-xs font-bold text-guide-ink-deep">
+            難度：{deck.difficulty}
+          </span>
+        </div>
+        <p className="mt-4 text-base leading-relaxed text-slate-700">{deck.summary}</p>
+      </div>
+
+      <h2 className="mt-10 border-l-4 border-guide-accent pl-3 text-xl font-bold text-guide-ink">
+        牌表（20 張）
+      </h2>
       <div className="mt-4">
         <Decklist cards={deck.cards} />
       </div>
 
-      <h2 className="mt-8 text-xl font-bold text-guide-ink">打法攻略</h2>
-      <Strategy text={deck.strategy} />
+      <h2 className="mt-10 border-l-4 border-guide-accent pl-3 text-xl font-bold text-guide-ink">
+        打法攻略
+      </h2>
+      <div className="mt-2 rounded-xl border border-guide-tint/50 bg-white/70 p-5">
+        <Strategy text={deck.strategy} />
+      </div>
 
       {deck.matchups && deck.matchups.length > 0 && (
         <>
-          <h2 className="mt-8 text-xl font-bold text-guide-ink">對戰思路</h2>
-          <div className="mt-3 space-y-3">
+          <h2 className="mt-10 border-l-4 border-guide-accent pl-3 text-xl font-bold text-guide-ink">
+            對戰思路
+          </h2>
+          <div className="mt-4 space-y-3.5">
             {deck.matchups.map((m) => (
-              <div key={m.vs} className="rounded-lg border border-guide-tint bg-white p-4">
-                <div className="font-bold text-guide-ink">vs {m.vs}</div>
-                <p className="mt-1 text-sm leading-relaxed text-slate-700">{m.note}</p>
+              <div
+                key={m.vs}
+                className="rounded-xl border border-guide-tint bg-white p-5 shadow-xs transition-shadow hover:shadow-md"
+              >
+                <div className="flex items-center gap-2">
+                  <span className="rounded-full bg-guide-tint px-2.5 py-0.5 text-xs font-bold text-guide-ink-deep">
+                    VS
+                  </span>
+                  <span className="text-base font-bold text-guide-ink">{m.vs}</span>
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-slate-700">{m.note}</p>
               </div>
             ))}
           </div>

@@ -27,10 +27,13 @@ function StatBar({
   const markerPct = marker != null ? clamp(((marker - min) / (max - min)) * 100) : null;
   return (
     <div
-      className="relative mt-1 h-1.5 w-full overflow-hidden rounded-full bg-guide-tint"
+      className="relative mt-1 h-1.5 w-full overflow-hidden rounded-full bg-guide-tint/70"
       aria-hidden="true"
     >
-      <div className="h-full rounded-full bg-guide-ink" style={{ width: `${pct}%` }} />
+      <div
+        className="h-full rounded-full bg-gradient-to-r from-guide-accent to-guide-ink transition-all duration-500 ease-out"
+        style={{ width: `${pct}%` }}
+      />
       {markerPct != null && (
         // 白線＋深藍描邊：在深藍填充（≥50%）與淺藍軌道（<50%）兩種背景都清楚
         <div
@@ -148,34 +151,34 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
       <div className="overflow-x-auto rounded-xl border border-guide-tint bg-white shadow-sm">
         <table className="w-full text-sm md:min-w-[640px]">
           <thead>
-            <tr className="border-b border-guide-tint text-left text-guide-ink">
+            <tr className="border-b border-guide-tint bg-gradient-to-b from-slate-50 to-guide-bg/40 text-left text-guide-ink">
               <th
                 scope="col"
-                className="px-2 py-2 font-bold whitespace-nowrap md:px-3"
+                className="px-2 py-2.5 font-bold whitespace-nowrap text-xs tracking-wider md:px-3"
                 title="名次；旁邊是與上次更新相比的變化"
               >
                 #
               </th>
-              <th scope="col" className="px-2 py-2 font-bold md:px-3">
-                Tier
+              <th scope="col" className="px-2 py-2.5 font-bold text-xs tracking-wider md:px-3">
+                TIER
               </th>
-              <th scope="col" className="px-2 py-2 font-bold md:px-3">
+              <th scope="col" className="px-2 py-2.5 font-bold text-xs tracking-wider md:px-3">
                 牌組
               </th>
               <th
                 scope="col"
-                className="hidden px-3 py-2 text-right font-bold md:table-cell"
+                className="hidden px-3 py-2.5 text-right font-bold text-xs tracking-wider md:table-cell"
                 title="Wilson score 95% 信賴下界"
               >
-                Wilson 下界
+                WILSON 下界
               </th>
-              <th scope="col" className="px-2 py-2 text-right font-bold md:px-3">
+              <th scope="col" className="px-2 py-2.5 text-right font-bold text-xs tracking-wider md:px-3">
                 勝率
               </th>
-              <th scope="col" className="hidden px-3 py-2 text-right font-bold md:table-cell">
+              <th scope="col" className="hidden px-3 py-2.5 text-right font-bold text-xs tracking-wider md:table-cell">
                 使用率
               </th>
-              <th scope="col" className="hidden px-3 py-2 text-right font-bold md:table-cell">
+              <th scope="col" className="hidden px-3 py-2.5 text-right font-bold text-xs tracking-wider md:table-cell">
                 場數 (W-L-T)
               </th>
             </tr>
@@ -187,8 +190,8 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
               return (
                 <Fragment key={d.rank}>
                   <tr
-                    className={`border-b border-guide-bg last:border-0 ${
-                      d.tier === "S" ? "bg-guide-bg-highlight" : ""
+                    className={`border-b border-guide-bg transition-colors duration-150 hover:bg-guide-bg-highlight/80 last:border-0 ${
+                      d.tier === "S" ? "bg-guide-bg-highlight/90" : ""
                     }`}
                   >
                     <td className="px-2 py-2 whitespace-nowrap md:px-3">

@@ -28,19 +28,19 @@ export function BuildingFilters({
   const showSeries = category === null || category === "住宅";
 
   return (
-    <div className="rounded-xl border border-pokopia-tint bg-pokopia-bg-panel p-4">
-      <label htmlFor="pokopia-search" className="block text-sm font-semibold text-pokopia-ink">
+    <div className="rounded-2xl border border-pokopia-tint bg-pokopia-bg-panel p-5 shadow-xs">
+      <label htmlFor="pokopia-search" className="block text-sm font-bold text-pokopia-ink">
         搜尋建築
       </label>
       <div className="relative mt-2">
-        <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-pokopia-ink-soft">
+        <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-pokopia-ink-soft">
           <svg
             width="18"
             height="18"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth={1.75}
+            strokeWidth={2}
             strokeLinecap="round"
             strokeLinejoin="round"
             aria-hidden="true"
@@ -55,13 +55,13 @@ export function BuildingFilters({
           placeholder="輸入名稱、英文或關鍵字…"
           value={searchTerm}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="min-h-11 w-full rounded-lg border border-pokopia-tint bg-white pl-10 pr-3 text-pokopia-ink placeholder:text-pokopia-ink-soft/70 focus:border-pokopia-accent focus:outline-none"
+          className="min-h-11 w-full rounded-xl border border-pokopia-tint bg-white pl-10 pr-4 text-pokopia-ink placeholder:text-pokopia-ink-soft/70 transition-all focus:border-pokopia-accent focus:outline-none focus:ring-2 focus:ring-pokopia-accent/30"
         />
       </div>
 
-      <fieldset className="mt-4">
-        <legend className="text-sm font-semibold text-pokopia-ink">功能分類</legend>
-        <div className="mt-2 flex flex-wrap gap-2">
+      <fieldset className="mt-5">
+        <legend className="text-sm font-bold text-pokopia-ink">功能分類</legend>
+        <div className="mt-2.5 flex flex-wrap gap-2">
           <FilterChip
             active={category === null}
             onClick={() => onCategoryChange(null)}
@@ -82,12 +82,12 @@ export function BuildingFilters({
       </fieldset>
 
       {showSeries && (
-        <fieldset className="mt-4">
-          <legend className="text-sm font-semibold text-pokopia-ink">
+        <fieldset className="mt-5">
+          <legend className="text-sm font-bold text-pokopia-ink">
             住宅系列
             <span className="ml-1 font-normal text-pokopia-ink-soft">（材質・主題）</span>
           </legend>
-          <div className="mt-2 flex flex-wrap gap-2">
+          <div className="mt-2.5 flex flex-wrap gap-2">
             {SERIES.map((s) => (
               <FilterChip
                 key={s}
@@ -100,8 +100,8 @@ export function BuildingFilters({
         </fieldset>
       )}
 
-      <p className="mt-4 text-sm text-pokopia-ink-soft" aria-live="polite">
-        共 <span className="font-semibold text-pokopia-ink">{resultCount}</span> 種建築
+      <p className="mt-4 text-xs font-medium text-pokopia-ink-soft" aria-live="polite">
+        共 <span className="font-bold text-pokopia-ink">{resultCount}</span> 種建築
       </p>
     </div>
   );
@@ -125,10 +125,10 @@ function FilterChip({
       type="button"
       aria-pressed={active}
       onClick={onClick}
-      className={`inline-flex min-h-9 items-center gap-1.5 rounded-full border px-3 py-1 text-sm font-medium transition-colors ${
+      className={`inline-flex min-h-9 items-center gap-1.5 rounded-full border px-3.5 py-1 text-sm font-medium transition-all duration-200 ${
         active
-          ? "border-pokopia-accent bg-pokopia-accent text-white"
-          : "border-pokopia-tint bg-white text-pokopia-ink hover:bg-pokopia-highlight"
+          ? "border-pokopia-accent bg-pokopia-accent text-white shadow-xs"
+          : "border-pokopia-tint bg-white text-pokopia-ink hover:border-pokopia-accent/50 hover:bg-pokopia-highlight/60"
       }`}
     >
       {dotColor && !active && (

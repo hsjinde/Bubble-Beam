@@ -25,8 +25,13 @@ export function TierBadge({ tier }: { tier: MetaTier }) {
   const s = TIER_STYLES[tier];
   return (
     <span
-      className="inline-flex h-7 w-7 items-center justify-center rounded-full text-sm font-bold shadow"
-      style={{ backgroundColor: s.bg, color: s.ink }}
+      className="inline-flex h-7 w-7 items-center justify-center rounded-full text-sm font-bold shadow-sm transition-transform duration-200 hover:scale-105"
+      style={{
+        backgroundColor: s.bg,
+        color: s.ink,
+        boxShadow: "0 1px 3px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.45)",
+        border: "1px solid rgba(0,0,0,0.06)",
+      }}
       title={`Tier ${tier}`}
       role="img"
       aria-label={`Tier ${tier}`}
