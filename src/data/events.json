@@ -1,0 +1,50 @@
+{
+  "_comment": [
+    "遊戲活動與新擴充包發售的人工維護清單，供 /decks/schedule 使用。",
+    "",
+    "為什麼要人工維護：上游卡片資料庫（flibustier）只收錄「已發售」的擴充包，",
+    "不含即將發售的，也沒有遊戲內活動。sets.json 那條歷代時間軸是自動的，這裡不是。",
+    "",
+    "維護規則：",
+    "  1. 每筆都要有可查證的 url，日期以官方公告或兩個以上獨立來源一致者為準。",
+    "     來源互相矛盾又無法判定時，寧可不收——倒數錯了比沒有倒數更糟。",
+    "  2. 時間一律寫 ISO 8601 並帶明確時區偏移。整天活動用 +08:00（本站讀者主要在台灣），",
+    "     這樣「顯示的日期」與「倒數的天數」才會落在同一個日曆日；寫 Z 會讓 +0800 的",
+    "     讀者看到『7/29 結束』卻被告知『還有 6 天』（實際指向 7/30）。",
+    "     擴充包發售這種有精確時刻的，照官方公告的真實時刻寫（可以是 Z）。",
+    "  3. 過期的活動不必刪：前端會自動依現在時間分到「已結束」，或直接不顯示。",
+    "  4. updatedAt 每次改動都要更新，前端會把它顯示出來，讓讀者知道清單新不新。",
+    "",
+    "type：set（新擴充包）／drop（Drop 活動）／wonderpick／ranked（排名賽季）／other"
+  ],
+  "updatedAt": "2026-07-24",
+  "events": [
+    {
+      "id": "b4-ruler-of-the-skies",
+      "type": "set",
+      "title": "Ruler of the Skies（B4）",
+      "titleTC": "天空的支配者",
+      "startAt": "2026-07-30T01:00:00Z",
+      "note": "第八個主要擴充包，Mega Rayquaza ex 登場；同步加入牌組 2D 條碼分享功能。",
+      "url": "https://www.pokemon.com/us/news/pokemon-tcg-pocket-ruler-of-the-skies-expansion-coming-soon"
+    },
+    {
+      "id": "hisuian-zorua-drop-2026-07",
+      "type": "drop",
+      "title": "Hisuian Zorua Drop event",
+      "startAt": "2026-07-16T00:00:00+08:00",
+      "endAt": "2026-07-26T23:59:00+08:00",
+      "note": "單人對戰活動，打索羅亞主題牌組換限定 promo 卡與獎勵。",
+      "url": "https://game8.co/games/Pokemon-TCG-Pocket/archives/608923"
+    },
+    {
+      "id": "ranked-season-15",
+      "type": "ranked",
+      "title": "Ranked Match Season 15（B3b）",
+      "startAt": "2026-07-15T00:00:00+08:00",
+      "endAt": "2026-07-29T23:59:00+08:00",
+      "note": "第 15 賽季排名賽，有專屬徽章與任務。",
+      "url": "https://www.pokemon-zone.com/schedule/"
+    }
+  ]
+}

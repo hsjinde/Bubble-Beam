@@ -1,0 +1,238 @@
+[
+  {
+    "code": "A1",
+    "series": "A",
+    "releaseDate": "2024-10-30",
+    "count": 286,
+    "nameEN": "Genetic Apex",
+    "nameTC": "最強的基因",
+    "packs": [
+      "Charizard",
+      "Mewtwo",
+      "Pikachu"
+    ]
+  },
+  {
+    "code": "PROMO-A",
+    "series": "A",
+    "releaseDate": "2024-10-30",
+    "count": 117,
+    "nameEN": "Promo A",
+    "packs": [
+      "Vol. 1",
+      "Vol. 2",
+      "Vol. 3",
+      "Vol. 4",
+      "Vol. 5",
+      "Vol. 6",
+      "Vol. 7",
+      "Vol. 8",
+      "Vol. 9",
+      "Vol. 10",
+      "Vol. 11",
+      "Vol. 12",
+      "Vol. 13"
+    ]
+  },
+  {
+    "code": "A1a",
+    "series": "A",
+    "releaseDate": "2024-12-17",
+    "count": 85,
+    "nameEN": "Mythical Island",
+    "nameTC": "幻遊鳥",
+    "packs": [
+      "Mew"
+    ]
+  },
+  {
+    "code": "A2",
+    "series": "A",
+    "releaseDate": "2025-01-29",
+    "count": 207,
+    "nameEN": "Space-Time Smackdown",
+    "packs": [
+      "Dialga",
+      "Palkia"
+    ]
+  },
+  {
+    "code": "A2a",
+    "series": "A",
+    "releaseDate": "2025-02-28",
+    "count": 96,
+    "nameEN": "Triumphant Light",
+    "packs": [
+      "Arceus"
+    ]
+  },
+  {
+    "code": "A2b",
+    "series": "A",
+    "releaseDate": "2025-03-27",
+    "count": 111,
+    "nameEN": "Shining Revelry",
+    "packs": [
+      "Shining"
+    ]
+  },
+  {
+    "code": "A3",
+    "series": "A",
+    "releaseDate": "2025-04-30",
+    "count": 239,
+    "nameEN": "Celestial Guardians",
+    "packs": [
+      "Lunala",
+      "Solgaleo"
+    ]
+  },
+  {
+    "code": "A3a",
+    "series": "A",
+    "releaseDate": "2025-05-29",
+    "count": 103,
+    "nameEN": "Extradimensional Crisis",
+    "packs": [
+      "Extradimensional"
+    ]
+  },
+  {
+    "code": "A3b",
+    "series": "A",
+    "releaseDate": "2025-06-26",
+    "count": 107,
+    "nameEN": "Eevee Grove",
+    "packs": [
+      "Eevee"
+    ]
+  },
+  {
+    "code": "A4",
+    "series": "A",
+    "releaseDate": "2025-07-30",
+    "count": 241,
+    "nameEN": "Wisdom of Sea and Sky",
+    "packs": [
+      "Ho-Oh",
+      "Lugia"
+    ]
+  },
+  {
+    "code": "A4a",
+    "series": "A",
+    "releaseDate": "2025-08-28",
+    "count": 105,
+    "nameEN": "Secluded Springs",
+    "packs": [
+      "Secluded"
+    ]
+  },
+  {
+    "code": "A4b",
+    "series": "A",
+    "releaseDate": "2025-09-30",
+    "count": 379,
+    "nameEN": "Deluxe Pack: ex",
+    "packs": [
+      "Deluxe"
+    ]
+  },
+  {
+    "code": "B1",
+    "series": "B",
+    "releaseDate": "2025-10-30",
+    "count": 331,
+    "nameEN": "Mega Rising",
+    "packs": [
+      "Mega Altaria",
+      "Mega Blaziken",
+      "Mega Gyarados"
+    ]
+  },
+  {
+    "code": "PROMO-B",
+    "series": "B",
+    "releaseDate": "2025-10-30",
+    "nameEN": "Promo B",
+    "packs": [
+      "B Series Vol. 1",
+      "B Series Vol. 2",
+      "B Series Vol. 3",
+      "B Series Vol. 4",
+      "B Series Vol. 5",
+      "B Series Vol. 6",
+      "B Series Vol. 7"
+    ]
+  },
+  {
+    "code": "B1a",
+    "series": "B",
+    "releaseDate": "2025-12-17",
+    "count": 103,
+    "nameEN": "Crimson Blaze",
+    "packs": [
+      "Crimson Blaze"
+    ]
+  },
+  {
+    "code": "B2",
+    "series": "B",
+    "releaseDate": "2026-01-29",
+    "count": 234,
+    "nameEN": "Fantastical Parade",
+    "packs": [
+      "Gardevoir"
+    ]
+  },
+  {
+    "code": "B2a",
+    "series": "B",
+    "releaseDate": "2026-02-26",
+    "count": 131,
+    "nameEN": "Paldean Wonders",
+    "packs": [
+      "Paldean"
+    ]
+  },
+  {
+    "code": "B2b",
+    "series": "B",
+    "releaseDate": "2026-03-26",
+    "count": 117,
+    "nameEN": "Mega Shine",
+    "packs": [
+      "Mega Shine"
+    ]
+  },
+  {
+    "code": "B3",
+    "series": "B",
+    "releaseDate": "2026-04-28",
+    "count": 257,
+    "nameEN": "Pulsing Aura",
+    "packs": [
+      "Pulsing Aura"
+    ]
+  },
+  {
+    "code": "B3a",
+    "series": "B",
+    "releaseDate": "2026-05-28",
+    "count": 109,
+    "nameEN": "Paradox Drive",
+    "packs": [
+      "Paradox Drive"
+    ]
+  },
+  {
+    "code": "B3b",
+    "series": "B",
+    "releaseDate": "2026-06-30",
+    "count": 106,
+    "nameEN": "Everyday Wonders",
+    "packs": [
+      "Everyday Wonders"
+    ]
+  }
+]

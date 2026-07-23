@@ -39,6 +39,7 @@ const decks = listDecks();
 const urls = [
   { loc: "/" },
   { loc: "/decks", lastmod: meta.fetchedAt },
+  { loc: "/decks/schedule" },
   ...decks.map((d) => ({ loc: `/decks/${d.id}` })),
   { loc: "/pokopia" },
   { loc: "/pokopia/videos" },

@@ -35,11 +35,19 @@ export function GuideLayout({ children }: { children: ReactNode }) {
               Piplup!
             </span>
           </Link>
+          {/* exact：否則 /decks/schedule 與各攻略頁下父路由也會被標成 active */}
           <Link
             to="/decks"
+            activeOptions={{ exact: true }}
             className="inline-flex min-h-11 items-center font-semibold whitespace-nowrap text-guide-ink hover:underline"
           >
             牌組攻略
+          </Link>
+          <Link
+            to="/decks/schedule"
+            className="inline-flex min-h-11 items-center font-semibold whitespace-nowrap text-guide-ink hover:underline"
+          >
+            行事曆
           </Link>
           {/*
            * 跨區入口。在這之前兩個子站只有首頁一條橋——從搜尋引擎直接落到 /decks 的

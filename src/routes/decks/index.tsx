@@ -4,6 +4,7 @@ import { getMeta } from "@/data/meta";
 import { CuratedDecks } from "@/components/guide/CuratedDecks";
 import { GuideLayout } from "@/components/guide/GuideLayout";
 import { MetaRanking } from "@/components/guide/MetaRanking";
+import { NextSetBanner } from "@/components/guide/NextSetBanner";
 import { absoluteUrl } from "@/lib/site";
 import { breadcrumbList, jsonLdScript } from "@/lib/json-ld";
 
@@ -66,6 +67,7 @@ function DecksPage() {
 
   return (
     <GuideLayout>
+      <NextSetBanner />
       <h1 className="text-2xl font-bold text-guide-ink sm:text-3xl">TCG Pocket 環境排行榜</h1>
       <p className="mt-2 text-slate-600">
         依 Limitless 賽事數據以 Wilson score 95% 下界排序的 Top {meta.decks.length}
