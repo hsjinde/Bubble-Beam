@@ -110,9 +110,15 @@ Tailwind v4 的 `dark:` variant **預設綁 `prefers-color-scheme`**，跟 class
 
 已盤點：29 個檔案、約 180 處硬編色。策略是**只動深色模式強迫要動的**。
 
-**其餘約 84 處為什麼不動**（先講清楚，免得審閱時以為漏了）：語意色晶片刻意維持
-（tier 10 組、能量屬性十幾個、漲跌藥丸）、首頁那些硬編十六進位（隔離後不受影響）、
-以及本來就安全的（`bg-black/55` 之類實心黑底、深底上的白字）。
+**其餘約 100 處為什麼不動**（先講清楚，免得審閱時以為漏了）：
+
+| 對象                                         | 理由                                                                        |
+| -------------------------------------------- | --------------------------------------------------------------------------- |
+| `TierBadge`（10 組）、`EnergyIcon`（屬性色） | 語意色晶片，對比是晶片內部的，不受頁面背景影響                              |
+| `RankChangeBadge` 的漲跌兩色                 | 自帶淺底藥丸，同上                                                          |
+| 首頁的硬編十六進位                           | 由 `data-theme="light"` 隔離，不受影響                                      |
+| `src/lib/error-page.ts`（8 處）              | 完全獨立的 HTML 字串，是 h3 層級錯誤的最後防線——讀不到 token 也沒有 `.dark` |
+| `bg-black/40`、`bg-black/55`                 | scrim，實心黑底不翻值，且都落在 pro-rules 的 40–60% 範圍                    |
 
 ### 收斂成 token（76 處，6 個新 token）
 
@@ -170,10 +176,18 @@ Tailwind v4 的 `dark:` variant **預設綁 `prefers-color-scheme`**，跟 class
 （`bg-pokopia-accent` 填在 `bg-pokopia-tint` 軌道上）。它們不需要 `on-*` token，
 但**填色與軌道的對比**要照 WCAG 1.4.11 驗（非文字 3:1），列進驗證清單。
 
-### 就地加 `dark:` variant（約 20 處）
+### 就地加 `dark:` variant（實際只有 1 處）
 
-零星的功能色（`text-emerald-600`、`text-rose-500`、`bg-black/40` scrim 等）留在原地，
-它們的深色值是各自獨立的判斷，抽成 token 反而失去脈絡。
+原本估「約 20 處」，逐行核對後**實際只有一處**：`CopyDecklist.tsx:61` 的
+`text-red-700`（複製失敗訊息），改成 `text-red-700 dark:text-red-400`。
+其餘全被上面的 token 收斂吸收了。
+
+`RankChangeBadge.tsx` 註解裡提到的 `text-emerald-600` / `text-rose-500` 是
+**歷史記錄，不是實際使用**——那行寫的是「原本用這些色只有 3.49／3.59，已換掉」。
+grep 統計時容易誤讀成實際用色。
+
+另外 `RankChangeBadge` 的「持平」色因為寫在 inline style 裡（`dark:` 無效），
+改走 CSS 變數 `--rank-same-ink` 分模式給值，不算在這一類。
 
 ### 語意色晶片：維持淺底深字，不做深色版
 
@@ -252,7 +266,8 @@ type ResolvedTheme   = "light" | "dark";              // 實際套用的
 - 套用方式：在 `<html>` 上加／移 `dark` class，同時設
   `style.colorScheme = resolved`——讓瀏覽器原生 UI（捲軸、表單控制項、autofill 底色）
   跟著變，否則深色頁面配白色捲軸。
-- `theme-color` meta 同步更新（淺 `#eef7fc` / 深 `#0f1a22`）。
+- `theme-color` meta 同步更新。淺色**維持現值 `#2a6f97`**（`__root.tsx` 既有，
+  不能改成 `--guide-bg`，那會動到淺色模式的 Android 工具列顏色），深色用 `#0f1a22`。
   不用 `media` 屬性的雙 meta 寫法，那只跟隨系統、不認手動覆寫。
 
 ### 錯誤處理
