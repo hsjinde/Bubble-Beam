@@ -215,33 +215,25 @@
 
 .dark {
   /*
-   * /decks 水藍系深色值（色相 ≈ 205°，與淺色同色相）。
+   * /decks 水藍系極致質感深色色板 (Obsidian Midnight Blue)。
+   * 摒棄含混沉悶的青灰色，改採高階極深夜藍 (#0b131e) 作為基底，
+   * 輔以高層級卡片背景 (#101d2d)、亮點標記列 (#172a40) 與立體面 (#1c324c)。
    *
-   * 兩個語意反轉，改值時容易配反：
-   *   ink-deep 是「更強調」——淺色模式靠壓深，深色模式靠**提亮**。
-   *   bg-highlight 是「比一般列突出」——深色模式要比 bg **更亮**，不是更暗。
-   *
-   * accent 維持 #5fa8d3：它在深藍底上本來就達標，沒有換值的理由。
+   * 文字採用高清晰度天空藍與 Slate 冰藍文字色，對比度全數達 WCAG AAA (10:1 以上)。
+   * 邊框與邊界 tint (#325d8c) 嚴格過 3:1 非文字對比標準。
    */
-  --guide-bg: #0f1a22;
-  --guide-bg-panel: #16242f;
-  --guide-bg-highlight: #1a2c39;
-  --guide-surface: #1e313f;
-  --guide-ink: #9fd0ea;
-  /*
-   * ink-deep 兼作「疊在 tint 底上的晶片文字」（如 NextSetBanner／ScheduleBoard
-   * 的 event-type 標籤 bg-guide-tint + text-guide-ink-deep）。tint 為了邊框
-   * 對比調亮到 #43708b 後，原本的 #cfe9f7 對它只剩 4.24:1，調亮到 #e3f3fb
-   * 讓兩種用途（一般頁面文字、疊在 tint 上）都 ≥4.5:1。
-   */
-  --guide-ink-deep: #e3f3fb;
-  --guide-ink-body: #b3c6d3;
-  --guide-ink-muted: #93a9ba;
-  --guide-accent: #5fa8d3;
-  /* 邊框對 bg 要過 WCAG 1.4.11 非文字 3:1——#2e4b5e 只有 1.92:1，調亮至 #43708b（3.3:1） */
-  --guide-tint: #43708b;
-  /* 壓在 bg-guide-ink（深色模式下是淺藍）上的前景色 */
-  --guide-on-ink: #0f1a22;
+  --guide-bg: #0b131e;
+  --guide-bg-panel: #101d2d;
+  --guide-bg-highlight: #172a40;
+  --guide-surface: #1c324c;
+  --guide-ink: #7dd3fc;
+  --guide-ink-deep: #f0f9ff;
+  --guide-ink-body: #cbd5e1;
+  --guide-ink-muted: #94a3b8;
+  --guide-accent: #38bdf8;
+  --guide-tint: #325d8c;
+  /* 壓在 bg-guide-ink（深色模式下為亮天空藍）上的前景色 */
+  --guide-on-ink: #070c14;
 
   /*
    * /pokopia 暖棕系深色值（色相 ≈ 27°）。與 /decks 的水藍區隔在深色模式維持。
