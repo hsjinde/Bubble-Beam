@@ -294,6 +294,32 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+/*
+ * 首頁不參與深色模式：它是全螢幕影片背景＋手繪塗鴉的遊樂場，沒有可反轉的
+ * 主題表面。但它**讀 guide token**（index.tsx 的標題與 tint 疊層、GuideEntry
+ * 的文字、Doodles 的線條、VideoBackdrop 的 fallback 底），而 .dark 掛在
+ * <html> 上是全站生效的——不隔離的話，GuideEntry 的便條紙會變成白底配淺藍字。
+ *
+ * 自訂屬性沿 DOM 樹繼承（不是視覺樹），所以 GuideEntry／PokopiaEntry 雖然是
+ * fixed 定位，仍在 <main> 的子樹內，涵蓋得到。
+ * （備註：若未來首頁有新增掛載至 document.body 頂層的 Portal 浮動元件，
+ * 需確保該 Portal 包裹層亦帶有 data-theme="light" 屬性）。
+ *
+ * ⚠ 這個隔離只擋 token，擋不了 dark: utility——.dark 仍在 <html> 上。
+ * 因此立一條不變式：**首頁的五個檔案（routes/index.tsx、GuideEntry、
+ * PokopiaEntry、Doodles、VideoBackdrop）不得使用 dark: utility。**
+ * 要改首頁配色就直接改值。破壞這條的症狀只在「深色模式的首頁」出現，很難聯想。
+ */
+.dark [data-theme="light"] {
+  --guide-ink: #2a6f97;
+  --guide-ink-deep: #1d5273;
+  --guide-accent: #5fa8d3;
+  --guide-tint: #bfe3f5;
+  --guide-bg: #eef7fc;
+  --guide-bg-panel: #f8fcff;
+  --guide-bg-highlight: #f4fbff;
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
