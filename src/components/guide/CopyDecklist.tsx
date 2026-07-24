@@ -58,7 +58,7 @@ export function CopyDecklist({ cards, deckName }: { cards: DeckCardEntry[]; deck
       {/* 狀態變化要播報給螢幕報讀者，否則只有看得見的人知道複製成功 */}
       <span
         aria-live="polite"
-        className={`text-sm ${state === "failed" ? "text-red-700" : "text-guide-ink"}`}
+        className={`text-sm ${state === "failed" ? "text-red-700 dark:text-red-400" : "text-guide-ink"}`}
       >
         {state === "copied" && "已複製到剪貼簿"}
         {state === "failed" && "複製失敗，請手動選取"}

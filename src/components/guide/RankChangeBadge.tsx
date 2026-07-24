@@ -17,7 +17,7 @@ import { getRankChange } from "@/data/meta";
 const CHANGE_INK = {
   up: "#e30041", // 漲＝紅。白底 4.84、Tier S 底 4.63
   down: "#008251", // 跌＝綠。白底 4.87、Tier S 底 4.66
-  same: "#69737e", // 4.82 / 4.61
+  same: "var(--rank-same-ink)", // 純文字色，深色模式要提亮，見 styles.css
 } as const;
 const CHANGE_BG = {
   up: "#fce7ec",

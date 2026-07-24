@@ -207,6 +207,10 @@
    * 兩者都是 Tailwind 的固定白色（不像 slate 是 oklch 色階），字面 hex 安全。 */
   --pokopia-surface: #ffffff;
   --pokopia-on-accent: #ffffff;
+
+  /* RankChangeBadge 的「持平」色。漲跌兩色自帶淺底藥丸不受背景影響，
+   * 只有這個是純文字色直接踩在頁面背景上，必須分模式給值。 */
+  --rank-same-ink: #69737e;
 }
 
 .dark {
@@ -254,6 +258,8 @@
   --pokopia-accent: #d98b3f;
   --pokopia-tint: #4a3b2c;
   --pokopia-on-accent: #1a1512;
+
+  --rank-same-ink: #93a1ad;
 
   /*
    * shadcn/oklch design system 的深色值（只有 404 與 error 頁在用）。
