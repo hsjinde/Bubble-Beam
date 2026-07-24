@@ -238,6 +238,60 @@
   --guide-tint: #43708b;
   /* 壓在 bg-guide-ink（深色模式下是淺藍）上的前景色 */
   --guide-on-ink: #0f1a22;
+
+  /*
+   * /pokopia 暖棕系深色值（色相 ≈ 27°）。與 /decks 的水藍區隔在深色模式維持。
+   *
+   * accent 是唯一必須換值的點綴色：#a35f1f 在深棕底上亮度差太小，提亮到 #d98b3f。
+   * （對照：guide 的 accent 不用換。）
+   */
+  --pokopia-bg: #1a1512;
+  --pokopia-bg-panel: #241d17;
+  --pokopia-surface: #2b221b;
+  --pokopia-highlight: #33251b;
+  --pokopia-ink: #ecdcc9;
+  --pokopia-ink-soft: #bfa78d;
+  --pokopia-accent: #d98b3f;
+  --pokopia-tint: #4a3b2c;
+  --pokopia-on-accent: #1a1512;
+
+  /*
+   * shadcn/oklch design system 的深色值（只有 404 與 error 頁在用）。
+   * 直接沿用 shadcn 標準值——這兩頁不是本站的設計重點，驗過對比即可。
+   * 不補的話，深色模式下進 404 頁會整片爆白。
+   */
+  --background: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.984 0.003 247.858);
+  --card: oklch(0.208 0.042 265.755);
+  --card-foreground: oklch(0.984 0.003 247.858);
+  --popover: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.929 0.013 255.508);
+  --primary-foreground: oklch(0.208 0.042 265.755);
+  --secondary: oklch(0.279 0.041 260.031);
+  --secondary-foreground: oklch(0.984 0.003 247.858);
+  --muted: oklch(0.279 0.041 260.031);
+  --muted-foreground: oklch(0.704 0.04 256.788);
+  --accent: oklch(0.279 0.041 260.031);
+  --accent-foreground: oklch(0.984 0.003 247.858);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.551 0.027 264.364);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
 @layer base {
