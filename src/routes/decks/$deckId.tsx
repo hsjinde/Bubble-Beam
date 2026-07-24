@@ -10,6 +10,7 @@ import { CopyDecklist } from "@/components/guide/CopyDecklist";
 import { Decklist } from "@/components/guide/Decklist";
 import { EnergyIcon } from "@/components/guide/EnergyIcon";
 import { GuideLayout } from "@/components/guide/GuideLayout";
+import { SectionHeading } from "@/components/guide/SectionHeading";
 import { TierBadge } from "@/components/guide/TierBadge";
 
 export const Route = createFileRoute("/decks/$deckId")({
@@ -154,7 +155,7 @@ function DeckDetailPage() {
     <GuideLayout>
       <Link
         to="/decks"
-        className="inline-flex items-center text-sm font-semibold text-guide-ink-deep hover:text-guide-ink"
+        className="inline-flex min-h-11 items-center text-sm font-semibold text-guide-ink-deep hover:text-guide-ink"
       >
         ← 返回牌組列表
       </Link>
@@ -176,10 +177,9 @@ function DeckDetailPage() {
         <p className="mt-4 text-base leading-relaxed text-guide-ink-body">{deck.summary}</p>
       </div>
 
-      <h2 className="mt-10 border-l-4 border-guide-accent pl-3 text-xl font-bold text-guide-ink">
-        推薦牌表（共 20 張）
-      </h2>
-      <div className="mt-3">
+      <SectionHeading className="mt-10">推薦牌表（共 20 張）</SectionHeading>
+      {/* 區段標題底下第一塊一律 mt-4，讓三個區段的起手間距一致 */}
+      <div className="mt-4">
         <CopyDecklist cards={deck.cards} deckName={deck.name} />
       </div>
       <div className="mt-4">
@@ -196,18 +196,14 @@ function DeckDetailPage() {
         </div>
       )}
 
-      <h2 className="mt-10 border-l-4 border-guide-accent pl-3 text-xl font-bold text-guide-ink">
-        戰術打法攻略
-      </h2>
-      <div className="mt-2 rounded-xl border border-guide-tint/50 bg-guide-surface/70 p-5">
+      <SectionHeading className="mt-10">戰術打法攻略</SectionHeading>
+      <div className="mt-4 rounded-xl border border-guide-tint/50 bg-guide-surface/70 p-5">
         <Strategy text={deck.strategy} />
       </div>
 
       {deck.matchups && deck.matchups.length > 0 && (
         <>
-          <h2 className="mt-10 border-l-4 border-guide-accent pl-3 text-xl font-bold text-guide-ink">
-            主要對局分析與觀念
-          </h2>
+          <SectionHeading className="mt-10">主要對局分析與觀念</SectionHeading>
           <div className="mt-4 space-y-3.5">
             {deck.matchups.map((m) => {
               // 對手若也有策展攻略就連過去。63 筆目前 100% 對得上，但打錯字或

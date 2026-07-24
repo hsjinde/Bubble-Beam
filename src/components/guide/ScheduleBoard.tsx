@@ -7,6 +7,7 @@ import {
   setsNewestFirst,
 } from "@/data/schedule";
 import type { GameEvent } from "@/data/schedule";
+import { SectionHeading } from "./SectionHeading";
 
 /**
  * 行事曆：上段是人工維護的活動（進行中／即將開始），下段是自動生成的歷代擴充包時間軸。
@@ -90,15 +91,13 @@ export function ScheduleBoard() {
   return (
     <>
       <section>
-        <h2 className="border-l-4 border-guide-accent pl-3 text-xl font-bold text-guide-ink">
-          進行中與即將開始
-        </h2>
+        <SectionHeading>進行中與即將開始</SectionHeading>
 
         {/* now === null 代表還在伺服器端／尚未掛載，先留一句佔位，避免版面跳動 */}
         {now === null ? (
-          <p className="mt-3 text-sm text-guide-ink-muted">載入中…</p>
+          <p className="mt-4 text-sm text-guide-ink-muted">載入中…</p>
         ) : upcoming.length + ongoing.length === 0 ? (
-          <p className="mt-3 rounded-xl border border-dashed border-guide-tint bg-guide-bg-panel p-6 text-sm text-guide-ink-muted">
+          <p className="mt-4 rounded-xl border border-dashed border-guide-tint bg-guide-bg-panel p-6 text-sm text-guide-ink-muted">
             目前沒有進行中或即將開始的活動。這份清單是人工維護的（最後更新 {eventsUpdatedAt}
             ），可能還沒跟上遊戲內的最新公告。
           </p>
@@ -116,10 +115,8 @@ export function ScheduleBoard() {
       </section>
 
       <section className="mt-10">
-        <h2 className="border-l-4 border-guide-accent pl-3 text-xl font-bold text-guide-ink">
-          歷代擴充包
-        </h2>
-        <p className="mt-2 text-sm text-guide-ink-muted">
+        <SectionHeading>歷代擴充包</SectionHeading>
+        <p className="mt-4 text-sm text-guide-ink-muted">
           共 {timeline.length} 個擴充包，資料來自社群卡片資料庫，隨上游自動更新。
           繁中彈名上游只提供最早那幾個，其餘保留英文原名。
         </p>

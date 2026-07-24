@@ -1,39 +1,10 @@
-import { useMemo, useState } from "react";
-import type { Deck, EnergyType, Tier } from "@/data/types";
+import { useCallback, useMemo } from "react";
+import { DIFFICULTIES, ENERGY_TYPES, TIER_ORDER } from "@/data/types";
+import type { Deck, Difficulty, EnergyType, Tier } from "@/data/types";
+import { Chip } from "./Chip";
 import { DeckCard } from "./DeckCard";
 import { EnergyIcon } from "./EnergyIcon";
-
-const TIER_ORDER: Tier[] = ["S", "A", "B", "C"];
-const DIFFICULTIES: Deck["difficulty"][] = ["易", "中", "難"];
-
-/** 篩選晶片。沿用 MetaRanking 控制列的視覺，避免同一頁出現兩套按鈕語言。 */
-function Chip({
-  active,
-  onClick,
-  children,
-  label,
-}: {
-  active: boolean;
-  onClick: () => void;
-  children: React.ReactNode;
-  label?: string;
-}) {
-  return (
-    <button
-      type="button"
-      aria-pressed={active}
-      aria-label={label}
-      onClick={onClick}
-      className={`inline-flex min-h-9 items-center gap-1 rounded-full px-3.5 text-sm font-semibold whitespace-nowrap transition ${
-        active
-          ? "bg-guide-ink text-guide-on-ink shadow-sm"
-          : "border border-guide-tint bg-guide-surface text-guide-ink hover:border-guide-accent"
-      }`}
-    >
-      {children}
-    </button>
-  );
-}
+import { parseSet, toggleInParam, useDebouncedSearchParam, useDecksSearch } from "./useDecksSearch";
 
 /**
  * 策展牌組列表 ＋ 篩選／搜尋。
@@ -44,10 +15,13 @@ function Chip({
  * 篩選之間是 AND，同一組內多選是 OR（選了草＋水＝草或水），這是篩選器的慣例。
  */
 export function CuratedDecks({ decks }: { decks: Deck[] }) {
-  const [query, setQuery] = useState("");
-  const [tiers, setTiers] = useState<Set<Tier>>(new Set());
-  const [energies, setEnergies] = useState<Set<EnergyType>>(new Set());
-  const [difficulties, setDifficulties] = useState<Set<Deck["difficulty"]>>(new Set());
+  // 篩選狀態存網址（見 useDecksSearch）。這一區用 c 開頭的參數，與上方排行榜的分開。
+  const { search, patch } = useDecksSearch();
+  const commitQuery = useCallback((cq: string | undefined) => patch({ cq }), [patch]);
+  const [query, setQuery] = useDebouncedSearchParam(search.cq, commitQuery);
+  const tiers = parseSet<Tier>(search.ctier, TIER_ORDER);
+  const energies = parseSet<EnergyType>(search.cenergy, ENERGY_TYPES);
+  const difficulties = parseSet<Difficulty>(search.cdiff, DIFFICULTIES);
 
   // 只列出實際存在的屬性，避免出現永遠 0 結果的晶片
   const availableEnergies = useMemo(() => {
@@ -56,12 +30,11 @@ export function CuratedDecks({ decks }: { decks: Deck[] }) {
     return [...seen];
   }, [decks]);
 
-  const toggle = <T,>(set: Set<T>, update: (s: Set<T>) => void, value: T) => {
-    const next = new Set(set);
-    if (next.has(value)) next.delete(value);
-    else next.add(value);
-    update(next);
-  };
+  const toggle = <T extends string>(
+    key: "ctier" | "cenergy" | "cdiff",
+    order: readonly T[],
+    value: T,
+  ) => patch(toggleInParam(key, order, value));
 
   const visible = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -74,7 +47,8 @@ export function CuratedDecks({ decks }: { decks: Deck[] }) {
       // 搜尋範圍含簡介——玩家常記得的是「那套削血的」而不是牌組全名
       return `${d.name} ${d.summary}`.toLowerCase().includes(q);
     });
-  }, [decks, query, tiers, energies, difficulties]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- 三個 Set 由 search 字串導出
+  }, [decks, query, search.ctier, search.cenergy, search.cdiff]);
 
   const active = tiers.size + energies.size + difficulties.size > 0 || query.trim() !== "";
 
@@ -120,7 +94,7 @@ export function CuratedDecks({ decks }: { decks: Deck[] }) {
         >
           <span className="text-xs font-semibold text-guide-ink">Tier</span>
           {TIER_ORDER.map((t) => (
-            <Chip key={t} active={tiers.has(t)} onClick={() => toggle(tiers, setTiers, t)}>
+            <Chip key={t} active={tiers.has(t)} onClick={() => toggle("ctier", TIER_ORDER, t)}>
               {t}
             </Chip>
           ))}
@@ -132,7 +106,7 @@ export function CuratedDecks({ decks }: { decks: Deck[] }) {
             <Chip
               key={e}
               active={energies.has(e)}
-              onClick={() => toggle(energies, setEnergies, e)}
+              onClick={() => toggle("cenergy", ENERGY_TYPES, e)}
               label={`篩選 ${e} 屬性`}
             >
               <EnergyIcon type={e} />
@@ -146,7 +120,7 @@ export function CuratedDecks({ decks }: { decks: Deck[] }) {
             <Chip
               key={d}
               active={difficulties.has(d)}
-              onClick={() => toggle(difficulties, setDifficulties, d)}
+              onClick={() => toggle("cdiff", DIFFICULTIES, d)}
             >
               {d}
             </Chip>
@@ -156,9 +130,7 @@ export function CuratedDecks({ decks }: { decks: Deck[] }) {
               type="button"
               onClick={() => {
                 setQuery("");
-                setTiers(new Set());
-                setEnergies(new Set());
-                setDifficulties(new Set());
+                patch({ cq: undefined, ctier: undefined, cenergy: undefined, cdiff: undefined });
               }}
               className="ml-auto min-h-9 rounded-full px-3 text-sm font-semibold text-guide-ink-deep underline hover:text-guide-ink"
             >

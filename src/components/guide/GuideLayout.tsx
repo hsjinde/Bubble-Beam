@@ -36,12 +36,7 @@ export function GuideLayout({ children }: { children: ReactNode }) {
             >
               <path d="M32 6 Q34 26 54 32 Q34 34 32 58 Q30 34 10 32 Q30 26 32 6 Z" />
             </svg>
-            <span
-              className="text-xl font-bold"
-              style={{ fontFamily: "'Comic Sans MS', 'Segoe Print', cursive" }}
-            >
-              Piplup!
-            </span>
+            <span className="font-handwritten text-xl font-bold">Piplup!</span>
           </Link>
           {/* exact：否則 /decks/schedule 與各攻略頁下父路由也會被標成 active */}
           <Link

@@ -86,6 +86,25 @@
   --color-guide-ink-muted: var(--guide-ink-muted);
   --color-guide-on-ink: var(--guide-on-ink);
 
+  /*
+   * 手寫體 wordmark（首頁的「Piplup!」與兩個子站 header 的 logo）。
+   *
+   * 這裡直接寫字型堆疊而不是指向 :root 變數：它不分淺／深模式，沒有覆寫需求。
+   * 註冊在 @theme 裡才生得出 `font-handwritten` utility，五個使用點就不用各自
+   * 寫一份 inline style——原本就是那樣，結果首頁的堆疊補了 macOS 字型、另外四處沒補。
+   *
+   * 堆疊涵蓋 Windows（Comic Sans MS／Segoe Print／Ink Free）與 macOS·iOS
+   * （Chalkboard SE／Bradley Hand／Marker Felt）。
+   *
+   * **結尾刻意是 system-ui 而不是 cursive。** Android 與多數 Linux 桌面沒有上面
+   * 任何一個具名字型，落到通用 cursive 時算繪結果不可控（各平台對映到什麼字型不一定，
+   * 可能是完全不同調性的花體）。寧可退成乾淨的系統字——旁邊的手繪水花 SVG 已經
+   * 承擔了「這裡很好玩」的訊號，字型不是唯一線索。
+   */
+  --font-handwritten:
+    "Comic Sans MS", "Chalkboard SE", "Bradley Hand", "Marker Felt", "Segoe Print", "Ink Free",
+    system-ui, sans-serif;
+
   /* /pokopia 暖色色板（見 :root 區塊註解）*/
   --color-pokopia-ink: var(--pokopia-ink);
   --color-pokopia-ink-soft: var(--pokopia-ink-soft);
@@ -208,9 +227,27 @@
   --pokopia-surface: #ffffff;
   --pokopia-on-accent: #ffffff;
 
-  /* RankChangeBadge 的「持平」色。漲跌兩色自帶淺底藥丸不受背景影響，
-   * 只有這個是純文字色直接踩在頁面背景上，必須分模式給值。 */
+  /*
+   * RankChangeBadge 的三種狀態色。色彩採華語圈慣例（漲紅跌綠）。
+   *
+   * 三組都必須分模式給值，理由各不相同：
+   * - same 是純文字色，直接踩在頁面背景上。
+   * - up／down 是「藥丸底＋文字」的組合。淺色模式的硬編淺粉／淺綠壓在深色頁面
+   *   （#070913）上會變成整頁唯一的亮色塊，重量遠超過它該有的份量。
+   *
+   * 量測基準（藥丸的存在感刻意做得很輕，與淺色模式對齊）：
+   *   淺色 up   #d1003c / #fce7ec = 4.71；藥丸底 vs 白列 1.18、vs Tier S 列 1.13
+   *   淺色 down #007a4c / #e2f3ec = 4.69
+   *   深色 up   #fb8ba5 / #57192c = 5.91；藥丸底 vs 一般列 1.20、vs Tier S 列 1.29
+   *   深色 down #45cf95 / #0d3a28 = 6.42；藥丸底 vs 一般列 1.26、vs Tier S 列 1.35
+   * 換色時「文字 vs 藥丸底」要 ≥4.5:1，「藥丸底 vs 列背景」維持在 1.1–1.4 之間——
+   * 太低會看不出藥丸，太高就變成搶戲的色塊。
+   */
   --rank-same-ink: #69737e;
+  --rank-up-ink: #d1003c;
+  --rank-up-bg: #fce7ec;
+  --rank-down-ink: #007a4c;
+  --rank-down-bg: #e2f3ec;
 }
 
 .dark {
@@ -249,6 +286,11 @@
   --pokopia-on-accent: #1a1512;
 
   --rank-same-ink: #93a1ad;
+  /* 深色藥丸：改成同色相的深底＋亮字，量測值見 :root 的註解 */
+  --rank-up-ink: #fb8ba5;
+  --rank-up-bg: #57192c;
+  --rank-down-ink: #45cf95;
+  --rank-down-bg: #0d3a28;
 
   /*
    * shadcn/oklch design system 的深色值（只有 404 與 error 頁在用）。

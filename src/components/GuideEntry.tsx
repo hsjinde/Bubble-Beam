@@ -9,8 +9,7 @@ export function GuideEntry() {
     <Link
       to="/decks"
       aria-label="前往 Pokémon TCG Pocket 牌組攻略站"
-      className="group fixed bottom-8 left-4 z-40 flex w-[10.5rem] -rotate-3 flex-col gap-1.5 rounded-[0.4rem] border border-white/60 bg-white/80 px-4 py-3.5 shadow-[0_10px_28px_rgba(42,111,151,0.28)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:rotate-0 hover:bg-white/95 hover:shadow-[0_16px_36px_rgba(42,111,151,0.38)] sm:bottom-10 sm:left-8 sm:w-[14rem] sm:px-5 sm:py-5"
-      style={{ fontFamily: "'Comic Sans MS', 'Segoe Print', cursive" }}
+      className="group fixed bottom-8 left-4 z-40 flex w-[10.5rem] -rotate-3 flex-col gap-1.5 rounded-[0.4rem] border border-white/60 bg-white/80 px-4 py-3.5 font-handwritten shadow-[0_10px_28px_rgba(42,111,151,0.28)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:rotate-0 hover:bg-white/95 hover:shadow-[0_16px_36px_rgba(42,111,151,0.38)] sm:bottom-10 sm:left-8 sm:w-[14rem] sm:px-5 sm:py-5"
     >
       {/* 膠帶 */}
       <span

@@ -1,11 +1,14 @@
-import { Fragment, useMemo, useState } from "react";
+import { Fragment, useCallback, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { getDeck } from "@/data/decks";
+import { META_TIER_ORDER } from "@/data/types";
 import type { MetaDeck, MetaTier } from "@/data/types";
 import { CardUsagePanel } from "./CardUsagePanel";
+import { Chip } from "./Chip";
 import { Decklist } from "./Decklist";
 import { RankChangeBadge } from "./RankChangeBadge";
 import { TierBadge } from "./TierBadge";
+import { parseSet, toggleInParam, useDebouncedSearchParam, useDecksSearch } from "./useDecksSearch";
 
 /**
  * 迷你數據條：把窄值域的數字差異視覺化。value/min/max 定義尺標，marker 畫一條
@@ -51,7 +54,12 @@ function ExpandedList({ deck }: { deck: MetaDeck }) {
   if (!deck.cards) return null;
   return (
     <div id={`deck-cards-${deck.rank}`} className="bg-guide-bg-panel px-4 py-4">
-      <div className="mb-3 flex flex-wrap items-center gap-3 text-xs text-slate-500">
+      {/*
+        用 guide token 而非 text-slate-500：slate-500 沒有深色對應值，踩在深色的
+        --guide-bg-panel（#0e1120）上只有 3.94:1，低於 12px 文字的 4.5:1。
+        --guide-ink-muted 本來就分模式給值（淺 slate-600／深 #94a3b8），兩邊都過。
+      */}
+      <div className="mb-3 flex flex-wrap items-center gap-3 text-xs text-guide-ink-muted">
         {/* 桌面版表格已顯示這些欄位，手機版被隱藏，改在展開區補顯示 */}
         <span className="font-semibold text-guide-ink md:hidden">
           Wilson 下界 {deck.wilsonLowerBoundPct}%・使用率 {deck.sharePct}%・
@@ -94,29 +102,36 @@ function ExpandedList({ deck }: { deck: MetaDeck }) {
   );
 }
 
-const TIER_ORDER: MetaTier[] = ["S", "A", "B", "C", "D"];
-
 export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
-  const [tierFilter, setTierFilter] = useState<MetaTier | "all">("all");
-  const [query, setQuery] = useState("");
+  const { search, patch } = useDecksSearch();
+  /*
+   * Tier 改成多選（原本是單選＋一顆「全部」）。同一頁下方的精選攻略本來就是多選，
+   * 兩個長得一樣的篩選卻有不同語意是使用者最容易踩的那種坑。空集合＝全部，
+   * 不需要「全部」那顆按鈕——按掉最後一個選取就自然回到全部。
+   */
+  const tiers = parseSet<MetaTier>(search.tier, META_TIER_ORDER);
+  const commitQuery = useCallback((q: string | undefined) => patch({ q }), [patch]);
+  const [query, setQuery] = useDebouncedSearchParam(search.q, commitQuery);
   // Set 支援多列同時展開＋一鍵全展開（power user 並排比較牌表），取代原本單一展開。
   const [expandedRows, setExpandedRows] = useState<Set<number>>(new Set());
   // 使用率條的尺標上界：取本批最大使用率，讓熱度差（可達 ~29 倍）撐滿條寬。
   const maxShare = Math.max(...decks.map((d) => d.sharePct), 0.01);
 
-  const availableTiers = TIER_ORDER.filter((t) => decks.some((d) => d.tier === t));
+  const availableTiers = META_TIER_ORDER.filter((t) => decks.some((d) => d.tier === t));
+  const toggleTier = (t: MetaTier) => patch(toggleInParam("tier", META_TIER_ORDER, t));
+
   // Tier 與搜尋算在同一個 visibleDecks 裡，展開全部與 aria-live 計數才不會各說各話
   const visibleDecks = useMemo(() => {
     const q = query.trim().toLowerCase();
     return decks.filter((d) => {
-      if (tierFilter !== "all" && d.tier !== tierFilter) return false;
+      if (tiers.size && !tiers.has(d.tier)) return false;
       if (!q) return true;
       // 也比對繁中策展名：這是繁中站，玩家想找的是「密勒頓」而不是 Miraidon。
       // 上游只給英文名，中文名要透過 curatedId 反查——沒攻略的牌組就只能用英文搜。
       const tc = d.curatedId ? (getDeck(d.curatedId)?.name ?? "") : "";
       return `${d.name} ${tc}`.toLowerCase().includes(q);
     });
-  }, [decks, tierFilter, query]);
+  }, [decks, search.tier, query]); // eslint-disable-line react-hooks/exhaustive-deps -- tiers 由 search.tier 導出
   const expandableRanks = visibleDecks.filter((d) => d.cards).map((d) => d.rank);
   const allExpanded =
     expandableRanks.length > 0 && expandableRanks.every((r) => expandedRows.has(r));
@@ -154,7 +169,7 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
         />
       </div>
 
-      {/* 控制列：Tier 篩選（單選）＋ 展開全部。次要輔助控制，min-h-9 密集但仍可觸控。 */}
+      {/* 控制列：Tier 篩選（多選）＋ 展開全部。次要輔助控制，min-h-9 密集但仍可觸控。 */}
       <div className="mb-3 flex flex-wrap items-center gap-2">
         {/*
           role="group" 只包 Tier 按鈕，不含「展開全部」——後者不是篩選條件，
@@ -164,27 +179,26 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
         <div
           className="flex flex-wrap items-center gap-2"
           role="group"
-          aria-label="依 Tier 篩選排行榜"
+          aria-label="依 Tier 篩選排行榜（可複選）"
         >
           <span className="mr-1 text-xs font-semibold text-guide-ink">Tier</span>
-          {(["all", ...availableTiers] as const).map((t) => {
-            const active = tierFilter === t;
-            return (
-              <button
-                key={t}
-                type="button"
-                aria-pressed={active}
-                onClick={() => setTierFilter(t)}
-                className={`min-h-9 rounded-full px-3.5 text-sm font-semibold transition ${
-                  active
-                    ? "bg-guide-ink text-guide-on-ink shadow-sm"
-                    : "border border-guide-tint bg-guide-surface text-guide-ink hover:border-guide-accent"
-                }`}
-              >
-                {t === "all" ? "全部" : t}
-              </button>
-            );
-          })}
+          {availableTiers.map((t) => (
+            <Chip key={t} active={tiers.has(t)} onClick={() => toggleTier(t)}>
+              {t}
+            </Chip>
+          ))}
+          {(tiers.size > 0 || query.trim() !== "") && (
+            <button
+              type="button"
+              onClick={() => {
+                setQuery("");
+                patch({ q: undefined, tier: undefined });
+              }}
+              className="min-h-9 rounded-full px-3 text-sm font-semibold text-guide-ink-deep underline hover:text-guide-ink"
+            >
+              清除篩選
+            </button>
+          )}
         </div>
         <button
           type="button"
@@ -198,7 +212,7 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
       {/* 篩選結果宣告給螢幕報讀者（Sam persona：狀態變化要被 announce） */}
       <p className="sr-only" aria-live="polite">
         顯示 {visibleDecks.length} / {decks.length} 套牌組
-        {tierFilter !== "all" ? `（Tier ${tierFilter}）` : ""}
+        {tiers.size ? `（Tier ${[...tiers].join("、")}）` : ""}
         {query.trim() ? `（搜尋「${query.trim()}」）` : ""}
       </p>
 
@@ -313,7 +327,8 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
                           <StatBar value={d.sharePct} min={0} max={maxShare} />
                         </div>
                       </td>
-                      <td className="hidden px-3 py-2 text-right text-slate-500 md:table-cell dark:text-slate-400">
+                      {/* 與左邊「勝率」欄同一個 token，別再各自寫一套 slate 色階 */}
+                      <td className="hidden px-3 py-2 text-right text-guide-ink-muted md:table-cell">
                         {d.games.toLocaleString()} ({d.record})
                       </td>
                     </tr>

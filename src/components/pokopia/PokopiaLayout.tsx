@@ -41,12 +41,7 @@ export function PokopiaLayout({ children }: { children: ReactNode }) {
               <path d="M52 12 C24 12 12 30 12 52 C34 52 52 40 52 12 Z" />
               <path d="M20 44 Q34 34 46 22" />
             </svg>
-            <span
-              className="text-xl font-bold"
-              style={{ fontFamily: "'Comic Sans MS', 'Segoe Print', cursive" }}
-            >
-              Piplup!
-            </span>
+            <span className="font-handwritten text-xl font-bold">Piplup!</span>
           </Link>
           {/* exact：否則 /pokopia/videos 下父路由也會被標成 active，兩個連結同時 aria-current */}
           <Link

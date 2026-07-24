@@ -50,9 +50,8 @@ function Index() {
         style={{ pointerEvents: "none" }}
       >
         <h1
-          className="absolute top-5 left-5 select-none sm:top-6 sm:left-8"
+          className="absolute top-5 left-5 font-handwritten select-none sm:top-6 sm:left-8"
           style={{
-            fontFamily: "'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', 'Segoe Print', cursive",
             color: "var(--guide-ink)",
             fontSize: "clamp(1.9rem, 8vw, 3rem)",
             fontWeight: 700,

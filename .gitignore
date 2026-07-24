@@ -34,6 +34,7 @@ dist-ssr
 .claude/worktrees/
 .agy/
 .antigravity/
+.impeccable/
 agy.log
 *.agy.log
 

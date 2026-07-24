@@ -9,8 +9,7 @@ export function PokopiaEntry() {
     <Link
       to="/pokopia"
       aria-label="前往 Pokémon Pokopia 建築指南"
-      className="group fixed bottom-[9.5rem] left-4 z-40 flex w-[10.5rem] rotate-2 flex-col gap-1.5 rounded-[0.4rem] border border-white/60 bg-[#fffdf9]/85 px-4 py-3.5 shadow-[0_10px_28px_rgba(74,55,40,0.26)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:rotate-0 hover:bg-[#fffdf9]/98 hover:shadow-[0_16px_36px_rgba(74,55,40,0.36)] sm:bottom-[13rem] sm:left-8 sm:w-[14rem] sm:px-5 sm:py-5"
-      style={{ fontFamily: "'Comic Sans MS', 'Segoe Print', cursive" }}
+      className="group fixed bottom-[9.5rem] left-4 z-40 flex w-[10.5rem] rotate-2 flex-col gap-1.5 rounded-[0.4rem] border border-white/60 bg-[#fffdf9]/85 px-4 py-3.5 font-handwritten shadow-[0_10px_28px_rgba(74,55,40,0.26)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:rotate-0 hover:bg-[#fffdf9]/98 hover:shadow-[0_16px_36px_rgba(74,55,40,0.36)] sm:bottom-[13rem] sm:left-8 sm:w-[14rem] sm:px-5 sm:py-5"
     >
       {/* 膠帶 */}
       <span

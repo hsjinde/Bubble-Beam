@@ -3,6 +3,18 @@ export type Tier = "S" | "A" | "B" | "C";
 /** 排行榜用：Wilson 下界太低的牌組會落到 D（策展牌組仍限 S–C）。 */
 export type MetaTier = Tier | "D";
 
+/**
+ * 上面這些聯集型別的執行期對照表。
+ *
+ * 型別本身在編譯後就消失了，但有三件事需要「執行期也拿得到這串值、而且順序固定」：
+ * 篩選晶片的排列、網址參數的序列化（`?tier=S,A` 不能今天 S,A 明天 A,S）、以及
+ * 驗證外部傳進來的網址參數。三者散在各元件裡各寫一份就會漂掉，所以放在型別旁邊。
+ *
+ * `satisfies` 讓漏列或多列一個值時編譯就報錯，不會等到執行期才發現少一個 Tier。
+ */
+export const TIER_ORDER = ["S", "A", "B", "C"] as const satisfies readonly Tier[];
+export const META_TIER_ORDER = ["S", "A", "B", "C", "D"] as const satisfies readonly MetaTier[];
+
 /** 排行榜牌組的代表牌表一張卡（set/number 是上游 imggen payload 的原始欄位，抓取管線需要）。 */
 export interface MetaDeckCard {
   id: string; // 對應 cards.json 的卡 id（P-A/P-B 已轉為 PROMO-A/PROMO-B）
@@ -63,6 +75,22 @@ export type EnergyType =
   | "Dragon"
   | "Colorless";
 
+export const ENERGY_TYPES = [
+  "Grass",
+  "Fire",
+  "Water",
+  "Lightning",
+  "Psychic",
+  "Fighting",
+  "Darkness",
+  "Metal",
+  "Dragon",
+  "Colorless",
+] as const satisfies readonly EnergyType[];
+
+export type Difficulty = "易" | "中" | "難";
+export const DIFFICULTIES = ["易", "中", "難"] as const satisfies readonly Difficulty[];
+
 export interface CardEntry {
   id: string; // "B3b-41"
   nameEN: string; // "Mega Sableye ex"
@@ -89,7 +117,7 @@ export interface Deck {
   summary: string; // 一句話簡介
   strategy: string; // 繁中攻略；段落以空行分隔，"- " 開頭為列點
   matchups?: Matchup[];
-  difficulty: "易" | "中" | "難";
+  difficulty: Difficulty;
   /**
    * 列表縮圖與分享卡片要用的「門面卡」。**通常不用填**——`getHeroCardId()` 會自動推導
    * （Mega 優先 → ex → 牌表第一張），21 套裡只有 1 套推導錯。只有當牌表同時含多張

@@ -7,7 +7,8 @@ const decks: Deck[] = [
     tier: "S",
     energy: ["Lightning"],
     difficulty: "中",
-    summary: "當前賽場登場率第一的雷系快攻：前期由密勒頓ex 發動速攻壓制，中後期由自爆磁怪接管戰局作為重砲主力。",
+    summary:
+      "當前賽場登場率第一的雷系快攻：前期由密勒頓ex 發動速攻壓制，中後期由自爆磁怪接管戰局作為重砲主力。",
     cards: [
       { id: "B3a-19", count: 2 }, // Miraidon ex
       { id: "A3a-21", count: 2 }, // Zeraora
@@ -192,8 +193,7 @@ const decks: Deck[] = [
     tier: "A",
     energy: ["Darkness"],
     difficulty: "難",
-    summary:
-      "惡系變幻戰術：索羅亞克ex 特性複製對手招式，搭配 Mega阿勃梭魯ex 破壞棄牌區與手牌。",
+    summary: "惡系變幻戰術：索羅亞克ex 特性複製對手招式，搭配 Mega阿勃梭魯ex 破壞棄牌區與手牌。",
     cards: [
       { id: "B3-105", count: 2 }, // Zorua
       { id: "B3-106", count: 2 }, // Zoroark ex
@@ -285,8 +285,7 @@ const decks: Deck[] = [
     tier: "A",
     energy: ["Psychic"],
     difficulty: "中",
-    summary:
-      "超能控場加速：愛管侍ex 特性加速供能與恢復血量，養出騎拉帝納ex 毀滅級爆發毀滅戰線。",
+    summary: "超能控場加速：愛管侍ex 特性加速供能與恢復血量，養出騎拉帝納ex 毀滅級爆發毀滅戰線。",
     cards: [
       { id: "A3-66", count: 2 }, // Oricorio
       { id: "B1-121", count: 2 }, // Giratina ex
@@ -330,8 +329,7 @@ const decks: Deck[] = [
     tier: "A",
     energy: ["Water"],
     difficulty: "易",
-    summary:
-      "水系高機動控場：伊布ex 靈活抽牌與展開，美納斯ex 封鎖對方道具與特定招式掌控節奏。",
+    summary: "水系高機動控場：伊布ex 靈活抽牌與展開，美納斯ex 封鎖對方道具與特定招式掌控節奏。",
     cards: [
       { id: "A4a-21", count: 2 }, // Feebas
       { id: "B3b-15", count: 2 }, // Milotic ex
@@ -377,8 +375,7 @@ const decks: Deck[] = [
     tier: "A",
     energy: ["Psychic", "Darkness"],
     difficulty: "難",
-    summary:
-      "雙神重砲點傷：達克萊伊ex 特性每回合放置傷害指示物，騎拉帝納ex 在後期一擊必殺收割。",
+    summary: "雙神重砲點傷：達克萊伊ex 特性每回合放置傷害指示物，騎拉帝納ex 在後期一擊必殺收割。",
     cards: [
       { id: "A2-110", count: 2 }, // Darkrai ex
       { id: "A2b-35", count: 2 }, // Giratina ex
@@ -425,8 +422,7 @@ const decks: Deck[] = [
     tier: "A",
     energy: ["Darkness"],
     difficulty: "難",
-    summary:
-      "干擾與削血控制：甲賀忍蛙飛水手裏劍點傷，Mega阿勃梭魯ex 打亂對方手牌與資源。",
+    summary: "干擾與削血控制：甲賀忍蛙飛水手裏劍點傷，Mega阿勃梭魯ex 打亂對方手牌與資源。",
     cards: [
       { id: "A1-87", count: 2 }, // Froakie
       { id: "A1-89", count: 2 }, // Greninja
