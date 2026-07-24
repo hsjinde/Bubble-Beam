@@ -215,25 +215,23 @@
 
 .dark {
   /*
-   * /decks 水藍系極致質感深色色板 (Obsidian Midnight Blue)。
-   * 摒棄含混沉悶的青灰色，改採高階極深夜藍 (#0b131e) 作為基底，
-   * 輔以高層級卡片背景 (#101d2d)、亮點標記列 (#172a40) 與立體面 (#1c324c)。
-   *
-   * 文字採用高清晰度天空藍與 Slate 冰藍文字色，對比度全數達 WCAG AAA (10:1 以上)。
-   * 邊框與邊界 tint (#325d8c) 嚴格過 3:1 非文字對比標準。
+   * /decks 深色模式：極簡高質感 Obsidian Charcoal (Linear / Vercel 風格)。
+   * 徹底擺脫藍底藍字的濁湯感，採用極致純淨的 Obsidian 炭黑 (#09090b) 作為大背景。
+   * 卡片 (#121318) 與高亮列 (#1c1d24) 走微透鋅灰階層，
+   * 讓波加曼的水藍 Accent (#38bdf8) 在黑色畫布上如霓虹般發光通透。
    */
-  --guide-bg: #0b131e;
-  --guide-bg-panel: #101d2d;
-  --guide-bg-highlight: #172a40;
-  --guide-surface: #1c324c;
-  --guide-ink: #7dd3fc;
-  --guide-ink-deep: #f0f9ff;
-  --guide-ink-body: #cbd5e1;
-  --guide-ink-muted: #94a3b8;
+  --guide-bg: #09090b;
+  --guide-bg-panel: #121318;
+  --guide-bg-highlight: #1c1d24;
+  --guide-surface: #22242c;
+  --guide-ink: #38bdf8;
+  --guide-ink-deep: #f4f4f5;
+  --guide-ink-body: #d4d4d8;
+  --guide-ink-muted: #a1a1aa;
   --guide-accent: #38bdf8;
-  --guide-tint: #325d8c;
-  /* 壓在 bg-guide-ink（深色模式下為亮天空藍）上的前景色 */
-  --guide-on-ink: #070c14;
+  --guide-tint: #5c5c6b;
+  /* 壓在 bg-guide-ink（深色模式下為亮水藍）上的前景色 */
+  --guide-on-ink: #09090b;
 
   /*
    * /pokopia 暖棕系深色值（色相 ≈ 27°）。與 /decks 的水藍區隔在深色模式維持。
