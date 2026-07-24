@@ -215,23 +215,22 @@
 
 .dark {
   /*
-   * /decks 深色模式：極簡高質感 Obsidian Charcoal (Linear / Vercel 風格)。
-   * 徹底擺脫藍底藍字的濁湯感，採用極致純淨的 Obsidian 炭黑 (#09090b) 作為大背景。
-   * 卡片 (#121318) 與高亮列 (#1c1d24) 走微透鋅灰階層，
-   * 讓波加曼的水藍 Accent (#38bdf8) 在黑色畫布上如霓虹般發光通透。
+   * /decks 深色模式：Deep Indigo Obsidian (Raycast / Arc 高級星空風格)。
+   * 以沉靜深邃的星空夜藍 (#070913) 為頂級舞台基底，搭配高雅靛藍板塊 (#0e1120)
+   * 與微光高亮列 (#15192e)，輔以通透極光冰藍 (#f8fafc / #38bdf8) 與微光邊框 (#465b9c)。
    */
-  --guide-bg: #09090b;
-  --guide-bg-panel: #121318;
-  --guide-bg-highlight: #1c1d24;
-  --guide-surface: #22242c;
+  --guide-bg: #070913;
+  --guide-bg-panel: #0e1120;
+  --guide-bg-highlight: #15192e;
+  --guide-surface: #1b203a;
   --guide-ink: #38bdf8;
-  --guide-ink-deep: #f4f4f5;
-  --guide-ink-body: #d4d4d8;
-  --guide-ink-muted: #a1a1aa;
+  --guide-ink-deep: #f8fafc;
+  --guide-ink-body: #cbd5e1;
+  --guide-ink-muted: #94a3b8;
   --guide-accent: #38bdf8;
-  --guide-tint: #5c5c6b;
-  /* 壓在 bg-guide-ink（深色模式下為亮水藍）上的前景色 */
-  --guide-on-ink: #09090b;
+  --guide-tint: #465b9c;
+  /* 壓在 bg-guide-ink（深色模式下為亮天空藍）上的前景色 */
+  --guide-on-ink: #070913;
 
   /*
    * /pokopia 暖棕系深色值（色相 ≈ 27°）。與 /decks 的水藍區隔在深色模式維持。
