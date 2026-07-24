@@ -72,7 +72,7 @@ export function BuildingList({
               <span className="sr-only">標記「{building.name}」已建造</span>
               <span
                 aria-hidden="true"
-                className="flex h-6 w-6 items-center justify-center rounded-full border-2 border-pokopia-tint bg-pokopia-bg-panel text-transparent shadow-xs transition-colors peer-checked:border-pokopia-accent peer-checked:bg-pokopia-accent peer-checked:text-white peer-focus-visible:ring-2 peer-focus-visible:ring-pokopia-accent peer-focus-visible:ring-offset-2"
+                className="flex h-6 w-6 items-center justify-center rounded-full border-2 border-pokopia-tint bg-pokopia-bg-panel text-transparent shadow-xs transition-colors peer-checked:border-pokopia-accent peer-checked:bg-pokopia-accent peer-checked:text-pokopia-on-accent peer-focus-visible:ring-2 peer-focus-visible:ring-pokopia-accent peer-focus-visible:ring-offset-2"
               >
                 <svg
                   width="14"

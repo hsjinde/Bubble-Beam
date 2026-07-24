@@ -84,6 +84,8 @@
   --color-pokopia-bg: var(--pokopia-bg);
   --color-pokopia-bg-panel: var(--pokopia-bg-panel);
   --color-pokopia-highlight: var(--pokopia-highlight);
+  --color-pokopia-surface: var(--pokopia-surface);
+  --color-pokopia-on-accent: var(--pokopia-on-accent);
 }
 
 :root {
@@ -189,6 +191,12 @@
   --pokopia-bg: #faf6f1;
   --pokopia-bg-panel: #fffdf9;
   --pokopia-highlight: #fbe8dd;
+
+  /* 與 guide 側同構：surface 承接 bg-white，on-accent 承接壓在
+   * bg-pokopia-accent 上的白字（深色模式下 accent 會提亮，白字會爆掉）。
+   * 兩者都是 Tailwind 的固定白色（不像 slate 是 oklch 色階），字面 hex 安全。 */
+  --pokopia-surface: #ffffff;
+  --pokopia-on-accent: #ffffff;
 }
 
 @layer base {

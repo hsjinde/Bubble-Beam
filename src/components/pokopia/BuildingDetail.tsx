@@ -27,7 +27,7 @@ export function BuildingDetail({ building, onSelectBuilding, onClose }: Building
               type="button"
               onClick={onClose}
               aria-label="關閉詳情"
-              className="absolute right-3 top-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/85 text-pokopia-ink shadow-sm backdrop-blur hover:bg-white"
+              className="absolute right-3 top-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-pokopia-surface/85 text-pokopia-ink shadow-sm backdrop-blur hover:bg-pokopia-surface"
             >
               <svg
                 width="22"
@@ -49,7 +49,7 @@ export function BuildingDetail({ building, onSelectBuilding, onClose }: Building
           <h2 className="text-xl font-bold text-pokopia-ink">{building.name}</h2>
           <p className="text-sm text-pokopia-ink-soft">{building.nameEN}</p>
           <div className="mt-3 flex flex-wrap gap-2">
-            <span className="inline-flex items-center rounded-full bg-pokopia-accent px-3 py-1 text-xs font-medium text-white">
+            <span className="inline-flex items-center rounded-full bg-pokopia-accent px-3 py-1 text-xs font-medium text-pokopia-on-accent">
               {building.category}
             </span>
             {building.series && building.series !== "特色" && (
