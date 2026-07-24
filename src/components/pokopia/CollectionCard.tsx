@@ -53,7 +53,7 @@ export function CollectionCard({ collection, onSelectBuilding }: CollectionCardP
                 <button
                   type="button"
                   onClick={() => onSelectBuilding(id)}
-                  className="inline-flex min-h-9 items-center rounded-full border border-pokopia-tint bg-white px-3 py-1 text-sm text-pokopia-ink transition-colors hover:bg-pokopia-highlight"
+                  className="inline-flex min-h-9 items-center rounded-full border border-pokopia-tint bg-pokopia-surface px-3 py-1 text-sm text-pokopia-ink transition-colors hover:bg-pokopia-highlight"
                 >
                   {building?.name ?? id}
                 </button>

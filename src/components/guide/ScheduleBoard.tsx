@@ -40,12 +40,12 @@ function EventCard({ event, now }: { event: GameEvent; now: number }) {
   const days = daysUntil(event.endAt ?? event.startAt, now);
   const isUpcoming = Date.parse(event.startAt) > now;
   return (
-    <li className="rounded-xl border border-guide-tint bg-white p-4 shadow-xs">
+    <li className="rounded-xl border border-guide-tint bg-guide-surface p-4 shadow-xs">
       <div className="flex flex-wrap items-center gap-2">
         <span className="rounded-full bg-guide-tint px-2.5 py-0.5 text-xs font-bold text-guide-ink-deep">
           {EVENT_TYPE_LABEL[event.type]}
         </span>
-        <span className="rounded-full bg-guide-ink px-2.5 py-0.5 text-xs font-bold text-white">
+        <span className="rounded-full bg-guide-ink px-2.5 py-0.5 text-xs font-bold text-guide-on-ink">
           {isUpcoming
             ? days <= 0
               ? "即將開始"
@@ -58,14 +58,16 @@ function EventCard({ event, now }: { event: GameEvent; now: number }) {
       <h3 className="mt-2 font-bold text-guide-ink">
         {event.title}
         {event.titleTC && (
-          <span className="ml-1.5 font-normal text-slate-600">（{event.titleTC}）</span>
+          <span className="ml-1.5 font-normal text-guide-ink-muted">（{event.titleTC}）</span>
         )}
       </h3>
-      <p className="mt-1 text-sm text-slate-600">
+      <p className="mt-1 text-sm text-guide-ink-muted">
         {formatDate(event.startAt)}
         {event.endAt ? ` – ${formatDate(event.endAt)}` : " 發售"}
       </p>
-      {event.note && <p className="mt-2 text-sm leading-relaxed text-slate-700">{event.note}</p>}
+      {event.note && (
+        <p className="mt-2 text-sm leading-relaxed text-guide-ink-body">{event.note}</p>
+      )}
       {event.url && (
         <a
           href={event.url}
@@ -94,9 +96,9 @@ export function ScheduleBoard() {
 
         {/* now === null 代表還在伺服器端／尚未掛載，先留一句佔位，避免版面跳動 */}
         {now === null ? (
-          <p className="mt-3 text-sm text-slate-600">載入中…</p>
+          <p className="mt-3 text-sm text-guide-ink-muted">載入中…</p>
         ) : upcoming.length + ongoing.length === 0 ? (
-          <p className="mt-3 rounded-xl border border-dashed border-guide-tint bg-guide-bg-panel p-6 text-sm text-slate-600">
+          <p className="mt-3 rounded-xl border border-dashed border-guide-tint bg-guide-bg-panel p-6 text-sm text-guide-ink-muted">
             目前沒有進行中或即將開始的活動。這份清單是人工維護的（最後更新 {eventsUpdatedAt}
             ），可能還沒跟上遊戲內的最新公告。
           </p>
@@ -108,7 +110,7 @@ export function ScheduleBoard() {
           </ul>
         )}
 
-        <p className="mt-3 text-xs text-slate-600">
+        <p className="mt-3 text-xs text-guide-ink-muted">
           活動清單為人工維護，最後更新 {eventsUpdatedAt}；每筆都附資料來源可查證。
         </p>
       </section>
@@ -117,7 +119,7 @@ export function ScheduleBoard() {
         <h2 className="border-l-4 border-guide-accent pl-3 text-xl font-bold text-guide-ink">
           歷代擴充包
         </h2>
-        <p className="mt-2 text-sm text-slate-600">
+        <p className="mt-2 text-sm text-guide-ink-muted">
           共 {timeline.length} 個擴充包，資料來自社群卡片資料庫，隨上游自動更新。
           繁中彈名上游只提供最早那幾個，其餘保留英文原名。
         </p>
@@ -125,9 +127,9 @@ export function ScheduleBoard() {
           {timeline.map((s) => (
             <li
               key={s.code}
-              className="flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-xl border border-guide-tint bg-white px-4 py-3"
+              className="flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-xl border border-guide-tint bg-guide-surface px-4 py-3"
             >
-              <span className="w-20 shrink-0 text-sm font-semibold text-slate-600">
+              <span className="w-20 shrink-0 text-sm font-semibold text-guide-ink-muted">
                 {s.releaseDate.replace(/-/g, "/")}
               </span>
               <span className="rounded-full bg-guide-tint px-2 py-0.5 text-xs font-bold text-guide-ink-deep">
@@ -136,11 +138,11 @@ export function ScheduleBoard() {
               <span className="font-semibold text-guide-ink">
                 {s.nameEN}
                 {s.nameTC && (
-                  <span className="ml-1.5 font-normal text-slate-600">（{s.nameTC}）</span>
+                  <span className="ml-1.5 font-normal text-guide-ink-muted">（{s.nameTC}）</span>
                 )}
               </span>
               {typeof s.count === "number" && (
-                <span className="text-sm text-slate-600">{s.count} 張</span>
+                <span className="text-sm text-guide-ink-muted">{s.count} 張</span>
               )}
             </li>
           ))}

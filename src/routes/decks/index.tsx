@@ -69,7 +69,7 @@ function DecksPage() {
     <GuideLayout>
       <NextSetBanner />
       <h1 className="text-2xl font-bold text-guide-ink sm:text-3xl">TCG Pocket 環境排行榜</h1>
-      <p className="mt-2 text-slate-600">
+      <p className="mt-2 text-guide-ink-muted">
         本排行榜整合 Limitless 大賽統計數據，採用 95% Wilson 信賴區間下界進行名次排序，精準校正小樣本帶來的勝率偏差，真實反映牌組的客觀實力與穩定度。帶有連結的牌組附有詳細攻略。資料更新日期：
         {meta.fetchedAt.slice(0, 10)}
         {meta.previousFetchedAt
@@ -83,7 +83,7 @@ function DecksPage() {
 
       <section className="mt-10">
         <h2 className="text-xl font-bold text-guide-ink">精選牌組攻略</h2>
-        <p className="mt-1 text-sm text-slate-600">人工整理的完整牌表、打法與對戰思路。</p>
+        <p className="mt-1 text-sm text-guide-ink-muted">人工整理的完整牌表、打法與對戰思路。</p>
         <CuratedDecks decks={curated} />
       </section>
     </GuideLayout>

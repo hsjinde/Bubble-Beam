@@ -113,7 +113,7 @@ export function HabitatLookup({
           placeholder="輸入寶可夢名稱，例如「皮卡丘」"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="mt-2 min-h-11 w-full rounded-xl border border-pokopia-tint bg-white px-4 text-pokopia-ink transition-all placeholder:text-pokopia-ink-soft/70 focus:border-pokopia-accent focus:ring-2 focus:ring-pokopia-accent/30 focus:outline-none"
+          className="mt-2 min-h-11 w-full rounded-xl border border-pokopia-tint bg-pokopia-surface px-4 text-pokopia-ink transition-all placeholder:text-pokopia-ink-soft/70 focus:border-pokopia-accent focus:ring-2 focus:ring-pokopia-accent/30 focus:outline-none"
         />
 
         {query.trim() && (
@@ -136,14 +136,17 @@ export function HabitatLookup({
                         onClick={() => onSelectPokemon(active ? null : e.pokemon.id)}
                         className={`inline-flex min-h-11 items-center gap-1.5 rounded-full border px-3 text-sm font-medium transition-colors ${
                           active
-                            ? "border-pokopia-accent bg-pokopia-accent text-white"
-                            : "border-pokopia-tint bg-white text-pokopia-ink hover:border-pokopia-accent"
+                            ? "border-pokopia-accent bg-pokopia-accent text-pokopia-on-accent"
+                            : "border-pokopia-tint bg-pokopia-surface text-pokopia-ink hover:border-pokopia-accent"
                         }`}
                       >
                         <Sprite pokemon={e.pokemon} size={24} />
                         {e.pokemon.name}
-                        {/* 實心白字，不用 /80：半透明疊在 accent 上只有 3.63:1，沒過 AA */}
-                        <span className={active ? "text-white" : "text-pokopia-ink-soft"}>
+                        {/* 實心字，不用 /80：半透明疊在 accent 上只有 3.63:1，沒過 AA。
+                            走 on-accent token，深色模式下 accent 提亮時字色跟著變深 */}
+                        <span
+                          className={active ? "text-pokopia-on-accent" : "text-pokopia-ink-soft"}
+                        >
                           {e.habitats.length}
                         </span>
                       </button>

@@ -60,7 +60,7 @@ export function BuildingFilters({
           placeholder="輸入名稱、英文或關鍵字…"
           value={searchTerm}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="min-h-11 w-full rounded-xl border border-pokopia-tint bg-white pl-10 pr-4 text-pokopia-ink placeholder:text-pokopia-ink-soft/70 transition-all focus:border-pokopia-accent focus:outline-none focus:ring-2 focus:ring-pokopia-accent/30"
+          className="min-h-11 w-full rounded-xl border border-pokopia-tint bg-pokopia-surface pl-10 pr-4 text-pokopia-ink placeholder:text-pokopia-ink-soft/70 transition-all focus:border-pokopia-accent focus:outline-none focus:ring-2 focus:ring-pokopia-accent/30"
         />
       </div>
 
@@ -119,7 +119,7 @@ export function BuildingFilters({
          */}
         <span
           aria-hidden="true"
-          className="relative h-6 w-11 rounded-full border-2 border-pokopia-tint bg-white transition-colors peer-checked:border-pokopia-accent peer-checked:bg-pokopia-accent peer-checked:[&>span]:translate-x-5 peer-checked:[&>span]:bg-white peer-focus-visible:ring-2 peer-focus-visible:ring-pokopia-accent peer-focus-visible:ring-offset-2"
+          className="relative h-6 w-11 rounded-full border-2 border-pokopia-tint bg-pokopia-surface transition-colors peer-checked:border-pokopia-accent peer-checked:bg-pokopia-accent peer-checked:[&>span]:translate-x-5 peer-checked:[&>span]:bg-pokopia-on-accent peer-focus-visible:ring-2 peer-focus-visible:ring-pokopia-accent peer-focus-visible:ring-offset-2"
         >
           <span className="absolute top-0.5 left-0.5 h-4 w-4 rounded-full bg-pokopia-ink-soft transition-transform" />
         </span>
@@ -153,8 +153,8 @@ function FilterChip({
       onClick={onClick}
       className={`inline-flex min-h-9 items-center gap-1.5 rounded-full border px-3.5 py-1 text-sm font-medium transition-all duration-200 ${
         active
-          ? "border-pokopia-accent bg-pokopia-accent text-white shadow-xs"
-          : "border-pokopia-tint bg-white text-pokopia-ink hover:border-pokopia-accent/50 hover:bg-pokopia-highlight/60"
+          ? "border-pokopia-accent bg-pokopia-accent text-pokopia-on-accent shadow-xs"
+          : "border-pokopia-tint bg-pokopia-surface text-pokopia-ink hover:border-pokopia-accent/50 hover:bg-pokopia-highlight/60"
       }`}
     >
       {dotColor && !active && (
@@ -168,9 +168,10 @@ function FilterChip({
       {/*
        * 選中態用實心白字：原本 text-white/80 疊在 accent (#a35f1f) 上實測只有 3.63:1，
        * 沒過 AA。實心白對 accent 是 4.8:1（見 styles.css 的色板註解）。
+       * 改走 text-pokopia-on-accent token（深色模式下 accent 會提亮，字色要跟著變深）。
        */}
       {typeof count === "number" && (
-        <span className={active ? "text-white" : "text-pokopia-ink-soft"}>{count}</span>
+        <span className={active ? "text-pokopia-on-accent" : "text-pokopia-ink-soft"}>{count}</span>
       )}
     </button>
   );

@@ -3,19 +3,29 @@
 @import "tw-animate-css";
 
 /*
+ * Tailwind v4 的 dark: variant 預設綁 prefers-color-scheme，跟 class 無關。
+ * 本站要支援「系統／淺色／深色」三態手動覆寫，必須改成 class-based。
+ * 沒有這一行的話，所有 dark: utility 都只會跟隨系統，手動切換無效。
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
  * Design system definition.
  *
  * The @theme inline block maps CSS custom properties to Tailwind utility
  * classes (e.g. --color-primary -> bg-primary, text-primary).
  *
- * :root defines the actual color values using oklch. All colors MUST use
- * oklch format. There is no .dark variant: nothing in this app ever applies
- * a .dark class, so no @custom-variant dark or .dark block exists. If dark
- * mode is ever added, reintroduce both alongside a real toggle.
+ * :root defines the light values; the .dark block below overrides them.
+ * Dark mode is class-based (@custom-variant dark above), driven by
+ * src/lib/theme.ts and the inline script in __root.tsx.
  *
  * To add a new semantic color:
  * 1. Add the variable to :root
- * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ * 2. Add its dark counterpart to .dark
+ * 3. Register it in @theme inline as --color-<name>: var(--<name>)
+ *
+ * 深色值一律是「同色相的去飽和／明度變體」，不是把顏色反轉。改任何值之後
+ * 都要在兩個模式各量一次算繪後對比（見 docs/handoff.md）。
  *
  * The /decks guide palette (--guide-*, bottom of :root) is a separate,
  * intentionally hex-based system — see the comment at its definition.
@@ -71,6 +81,10 @@
   --color-guide-bg: var(--guide-bg);
   --color-guide-bg-panel: var(--guide-bg-panel);
   --color-guide-bg-highlight: var(--guide-bg-highlight);
+  --color-guide-surface: var(--guide-surface);
+  --color-guide-ink-body: var(--guide-ink-body);
+  --color-guide-ink-muted: var(--guide-ink-muted);
+  --color-guide-on-ink: var(--guide-on-ink);
 
   /* /pokopia 暖色色板（見 :root 區塊註解）*/
   --color-pokopia-ink: var(--pokopia-ink);
@@ -80,6 +94,8 @@
   --color-pokopia-bg: var(--pokopia-bg);
   --color-pokopia-bg-panel: var(--pokopia-bg-panel);
   --color-pokopia-highlight: var(--pokopia-highlight);
+  --color-pokopia-surface: var(--pokopia-surface);
+  --color-pokopia-on-accent: var(--pokopia-on-accent);
 }
 
 :root {
@@ -132,6 +148,25 @@
   --guide-bg-highlight: #f4fbff;
 
   /*
+   * 深色模式收斂進來的四個 token。淺色值刻意沿用原本的算繪結果，讓
+   * 這次收斂零視覺變化——但「沿用算繪結果」不等於「抄字面值」：
+   * ink-body／ink-muted 原本是 Tailwind 的 text-slate-700／600，而
+   * Tailwind v4 的 slate 色階是 oklch 定義，不是舊版 v3 的 #334155／
+   * #475569。曾經直接抄舊版 hex，用 canvas 比對算繪像素才發現偏差
+   * （rgb(51,65,85) vs 實際算繪的 rgb(49,65,88)）——所以這兩個必須是
+   * 瀏覽器對 slate-700／600 實際編譯出的 oklch 字串，不能用十六進位。
+   * 深色值見 .dark 區塊。
+   *
+   * on-ink 是「壓在 bg-guide-ink 上的前景色」。深色模式下 --guide-ink
+   * 會翻成淺藍，白字會爆掉，所以前景必須跟著翻——沿用 Material 的
+   * on-<color> 命名慣例。
+   */
+  --guide-surface: #ffffff;
+  --guide-ink-body: oklch(0.372 0.044 257.287); /* = Tailwind v4 text-slate-700 算繪值 */
+  --guide-ink-muted: oklch(0.446 0.043 257.281); /* = Tailwind v4 text-slate-600 算繪值 */
+  --guide-on-ink: #ffffff;
+
+  /*
    * Tier 段位色階。刻意「低飽和金屬段位感」，與 EnergyIcon 的鮮豔屬性色區隔：
    * 屬性色已佔滿高飽和黃(雷)／綠(草)／藍(水)／紅(火)／紫(超)…，tier 若也用鮮豔
    * 色相就會跟屬性圖示撞色（原本 S 金撞雷、A 藍撞水、B 綠撞草）。改走柔和段位路線，
@@ -166,6 +201,118 @@
   --pokopia-bg: #faf6f1;
   --pokopia-bg-panel: #fffdf9;
   --pokopia-highlight: #fbe8dd;
+
+  /* 與 guide 側同構：surface 承接 bg-white，on-accent 承接壓在
+   * bg-pokopia-accent 上的白字（深色模式下 accent 會提亮，白字會爆掉）。
+   * 兩者都是 Tailwind 的固定白色（不像 slate 是 oklch 色階），字面 hex 安全。 */
+  --pokopia-surface: #ffffff;
+  --pokopia-on-accent: #ffffff;
+
+  /* RankChangeBadge 的「持平」色。漲跌兩色自帶淺底藥丸不受背景影響，
+   * 只有這個是純文字色直接踩在頁面背景上，必須分模式給值。 */
+  --rank-same-ink: #69737e;
+}
+
+.dark {
+  /*
+   * /decks 深色模式：Deep Indigo Obsidian (Raycast / Arc 高級星空風格)。
+   * 以沉靜深邃的星空夜藍 (#070913) 為頂級舞台基底，搭配高雅靛藍板塊 (#0e1120)
+   * 與微光高亮列 (#15192e)，輔以通透極光冰藍 (#f8fafc / #38bdf8) 與微光邊框 (#465b9c)。
+   */
+  --guide-bg: #070913;
+  --guide-bg-panel: #0e1120;
+  --guide-bg-highlight: #15192e;
+  --guide-surface: #1b203a;
+  --guide-ink: #38bdf8;
+  --guide-ink-deep: #f8fafc;
+  --guide-ink-body: #cbd5e1;
+  --guide-ink-muted: #94a3b8;
+  --guide-accent: #38bdf8;
+  --guide-tint: #465b9c;
+  /* 壓在 bg-guide-ink（深色模式下為亮天空藍）上的前景色 */
+  --guide-on-ink: #070913;
+
+  /*
+   * /pokopia 暖棕系深色值（色相 ≈ 27°）。與 /decks 的水藍區隔在深色模式維持。
+   *
+   * accent 是唯一必須換值的點綴色：#a35f1f 在深棕底上亮度差太小，提亮到 #d98b3f。
+   * （對照：guide 的 accent 不用換。）
+   */
+  --pokopia-bg: #1a1512;
+  --pokopia-bg-panel: #241d17;
+  --pokopia-surface: #2b221b;
+  --pokopia-highlight: #33251b;
+  --pokopia-ink: #ecdcc9;
+  --pokopia-ink-soft: #bfa78d;
+  --pokopia-accent: #d98b3f;
+  --pokopia-tint: #4a3b2c;
+  --pokopia-on-accent: #1a1512;
+
+  --rank-same-ink: #93a1ad;
+
+  /*
+   * shadcn/oklch design system 的深色值（只有 404 與 error 頁在用）。
+   * 直接沿用 shadcn 標準值——這兩頁不是本站的設計重點，驗過對比即可。
+   * 不補的話，深色模式下進 404 頁會整片爆白。
+   */
+  --background: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.984 0.003 247.858);
+  --card: oklch(0.208 0.042 265.755);
+  --card-foreground: oklch(0.984 0.003 247.858);
+  --popover: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.929 0.013 255.508);
+  --primary-foreground: oklch(0.208 0.042 265.755);
+  --secondary: oklch(0.279 0.041 260.031);
+  --secondary-foreground: oklch(0.984 0.003 247.858);
+  --muted: oklch(0.279 0.041 260.031);
+  --muted-foreground: oklch(0.704 0.04 256.788);
+  --accent: oklch(0.279 0.041 260.031);
+  --accent-foreground: oklch(0.984 0.003 247.858);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.551 0.027 264.364);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+/*
+ * 首頁不參與深色模式：它是全螢幕影片背景＋手繪塗鴉的遊樂場，沒有可反轉的
+ * 主題表面。但它**讀 guide token**（index.tsx 的標題與 tint 疊層、GuideEntry
+ * 的文字、Doodles 的線條、VideoBackdrop 的 fallback 底），而 .dark 掛在
+ * <html> 上是全站生效的——不隔離的話，GuideEntry 的便條紙會變成白底配淺藍字。
+ *
+ * 自訂屬性沿 DOM 樹繼承（不是視覺樹），所以 GuideEntry／PokopiaEntry 雖然是
+ * fixed 定位，仍在 <main> 的子樹內，涵蓋得到。
+ * （備註：若未來首頁有新增掛載至 document.body 頂層的 Portal 浮動元件，
+ * 需確保該 Portal 包裹層亦帶有 data-theme="light" 屬性）。
+ *
+ * ⚠ 這個隔離只擋 token，擋不了 dark: utility——.dark 仍在 <html> 上。
+ * 因此立一條不變式：**首頁的五個檔案（routes/index.tsx、GuideEntry、
+ * PokopiaEntry、Doodles、VideoBackdrop）不得使用 dark: utility。**
+ * 要改首頁配色就直接改值。破壞這條的症狀只在「深色模式的首頁」出現，很難聯想。
+ */
+.dark [data-theme="light"] {
+  --guide-ink: #2a6f97;
+  --guide-ink-deep: #1d5273;
+  --guide-accent: #5fa8d3;
+  --guide-tint: #bfe3f5;
+  --guide-bg: #eef7fc;
+  --guide-bg-panel: #f8fcff;
+  --guide-bg-highlight: #f4fbff;
 }
 
 @layer base {

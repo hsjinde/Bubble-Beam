@@ -94,7 +94,7 @@ export function PokopiaPage({ selectedBuildingId, onSelectBuilding }: PokopiaPag
             <button
               type="button"
               onClick={clearBuilt}
-              className="inline-flex min-h-11 items-center rounded-lg border border-pokopia-tint bg-white px-3 text-sm font-medium text-pokopia-ink transition-colors hover:border-pokopia-accent"
+              className="inline-flex min-h-11 items-center rounded-lg border border-pokopia-tint bg-pokopia-surface px-3 text-sm font-medium text-pokopia-ink transition-colors hover:border-pokopia-accent"
             >
               清除紀錄
             </button>
@@ -136,7 +136,7 @@ export function PokopiaPage({ selectedBuildingId, onSelectBuilding }: PokopiaPag
               <button
                 type="button"
                 onClick={clearFilters}
-                className="mt-4 inline-flex min-h-11 items-center rounded-lg bg-pokopia-accent px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
+                className="mt-4 inline-flex min-h-11 items-center rounded-lg bg-pokopia-accent px-4 py-2 text-sm font-medium text-pokopia-on-accent transition-opacity hover:opacity-90"
               >
                 清除篩選
               </button>

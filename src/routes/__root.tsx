@@ -13,6 +13,33 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { absoluteUrl } from "../lib/site";
 
+/**
+ * 防止深色模式首畫面白閃。
+ *
+ * SSR 產出的 HTML 不知道使用者偏好，若等 hydrate 後才加 class，深色模式
+ * 使用者會先看到一幀白底。這段必須是**同步**、無相依、自包含的——它要在
+ * 首次繪製前跑完，那時 src/lib/theme.ts 還沒載入。
+ *
+ * ⚠ 這是 src/lib/theme.ts 解析邏輯的**第二份實作**。兩份要一起改，
+ * 否則 inline script 與 React 端會對同一個偏好給出不同結果。
+ */
+const THEME_INIT_SCRIPT = `
+(function () {
+  try {
+    var p = localStorage.getItem("piplup-theme");
+    if (p !== "light" && p !== "dark") p = "system";
+    var r = p === "system"
+      ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+      : p;
+    var el = document.documentElement;
+    if (r === "dark") el.classList.add("dark");
+    el.style.colorScheme = r;
+  } catch (e) {
+    /* localStorage 被擋：什麼都不做，維持 SSR 的淺色 */
+  }
+})();
+`;
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -154,9 +181,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="zh-Hant">
+    <html lang="zh-Hant" suppressHydrationWarning>
       <head>
         <HeadContent />
+        {/* 必須在 HeadContent 之後——theme-color meta 要先存在才改得到。
+            同步執行，擋住首次繪製，這是刻意的：它只做幾個字串比較。 */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
       <body>
         {children}
