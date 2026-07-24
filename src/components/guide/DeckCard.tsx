@@ -10,7 +10,7 @@ export function DeckCard({ deck }: { deck: Deck }) {
     <Link
       to="/decks/$deckId"
       params={{ deckId: deck.id }}
-      className="block rounded-xl border border-guide-tint bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+      className="block rounded-xl border border-guide-tint bg-guide-surface p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
     >
       <div className="flex items-start gap-4">
         <div className="w-20 shrink-0">
@@ -27,7 +27,7 @@ export function DeckCard({ deck }: { deck: Deck }) {
               <EnergyIcon key={e} type={e} />
             ))}
           </div>
-          <p className="mt-2 line-clamp-2 text-sm text-slate-600">{deck.summary}</p>
+          <p className="mt-2 line-clamp-2 text-sm text-guide-ink-muted">{deck.summary}</p>
         </div>
       </div>
     </Link>

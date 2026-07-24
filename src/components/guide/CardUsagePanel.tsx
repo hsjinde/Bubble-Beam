@@ -25,11 +25,14 @@ function UsageTile({ entry }: { entry: MetaCardUsage }) {
   return (
     <figure className="relative">
       <CardImage cardId={entry.id} />
-      <span className="absolute -top-1 -right-1 rounded-full bg-guide-ink px-1.5 py-0.5 text-[0.65rem] font-bold text-white shadow">
+      <span className="absolute -top-1 -right-1 rounded-full bg-guide-ink px-1.5 py-0.5 text-[0.65rem] font-bold text-guide-on-ink shadow">
         ×{entry.modalCount}
       </span>
       <figcaption className="mt-1">
-        <span className="block truncate text-center text-[0.7rem] text-slate-600" title={name}>
+        <span
+          className="block truncate text-center text-[0.7rem] text-guide-ink-muted"
+          title={name}
+        >
           {name}
         </span>
         {/* 長條是視覺輔助，數字本身已在下一行提供給螢幕報讀者 */}
@@ -69,7 +72,7 @@ export function CardUsagePanel({
     <section className="rounded-xl border border-guide-tint bg-guide-bg-panel p-4">
       <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
         <h3 className="text-sm font-bold text-guide-ink">核心牌與自由席</h3>
-        <p className="text-xs text-slate-600">
+        <p className="text-xs text-guide-ink-muted">
           取自 Limitless 最近 {listsSampled} 份公開牌表的採用率
         </p>
       </div>
@@ -81,7 +84,7 @@ export function CardUsagePanel({
               <span className="rounded-full bg-guide-tint px-2.5 py-0.5 text-xs font-bold text-guide-ink-deep">
                 {band.label} {band.cards.length}
               </span>
-              <span className="text-xs text-slate-600">{band.hint}</span>
+              <span className="text-xs text-guide-ink-muted">{band.hint}</span>
             </div>
             <div className="mt-2 grid grid-cols-4 gap-2 sm:grid-cols-6 md:grid-cols-8">
               {band.cards.map((entry) => (
@@ -97,7 +100,7 @@ export function CardUsagePanel({
        * 牌組，20 份牌表幾乎一模一樣。不寫這句的話讀者會以為壞掉了。
        */}
       {bands.every((b) => b.key !== "flex") && (
-        <p className="mt-3 text-xs text-slate-600">
+        <p className="mt-3 text-xs text-guide-ink-muted">
           這套牌沒有自由席——取樣到的牌表在這些牌位上完全一致。
         </p>
       )}

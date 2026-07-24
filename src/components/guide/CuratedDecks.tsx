@@ -26,8 +26,8 @@ function Chip({
       onClick={onClick}
       className={`inline-flex min-h-9 items-center gap-1 rounded-full px-3.5 text-sm font-semibold whitespace-nowrap transition ${
         active
-          ? "bg-guide-ink text-white shadow-sm"
-          : "border border-guide-tint bg-white text-guide-ink hover:border-guide-accent"
+          ? "bg-guide-ink text-guide-on-ink shadow-sm"
+          : "border border-guide-tint bg-guide-surface text-guide-ink hover:border-guide-accent"
       }`}
     >
       {children}
@@ -80,13 +80,13 @@ export function CuratedDecks({ decks }: { decks: Deck[] }) {
 
   return (
     <div>
-      <div className="mt-4 space-y-3 rounded-xl border border-guide-tint bg-white/70 p-4">
+      <div className="mt-4 space-y-3 rounded-xl border border-guide-tint bg-guide-surface/70 p-4">
         {/*
           這頁有兩組長得幾乎一樣的 Tier 篩選（上面排行榜一組、這裡一組）。
           兩者的差異靠三件事說清楚，別為了視覺整齊拿掉任何一件：
           這塊有外框面板、標籤明講範圍（「精選攻略」而非「牌組」）、下面這句話。
         */}
-        <p className="text-xs text-slate-600">
+        <p className="text-xs text-guide-ink-muted">
           以下條件只篩這 {decks.length} 套精選攻略，與上方排行榜的篩選各自獨立。
         </p>
         <div>
@@ -109,7 +109,7 @@ export function CuratedDecks({ decks }: { decks: Deck[] }) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="牌組名或關鍵字，例如「削血」"
-            className="mt-1 block min-h-11 w-full rounded-lg border border-guide-ink bg-white px-3 text-sm text-slate-700 placeholder:text-slate-500"
+            className="mt-1 block min-h-11 w-full rounded-lg border border-guide-ink bg-guide-surface px-3 text-sm text-guide-ink-body placeholder:text-slate-500"
           />
         </div>
 
@@ -169,12 +169,12 @@ export function CuratedDecks({ decks }: { decks: Deck[] }) {
       </div>
 
       {/* 結果數變化要播報，否則螢幕報讀者按了篩選卻不知道發生什麼事 */}
-      <p aria-live="polite" className="mt-3 text-sm text-slate-600">
+      <p aria-live="polite" className="mt-3 text-sm text-guide-ink-muted">
         顯示 {visible.length} / {decks.length} 套
       </p>
 
       {visible.length === 0 ? (
-        <p className="mt-4 rounded-xl border border-dashed border-guide-tint bg-white/60 p-8 text-center text-sm text-slate-600">
+        <p className="mt-4 rounded-xl border border-dashed border-guide-tint bg-guide-surface/60 p-8 text-center text-sm text-guide-ink-muted">
           沒有符合條件的牌組。試著放寬篩選或換個關鍵字。
         </p>
       ) : (

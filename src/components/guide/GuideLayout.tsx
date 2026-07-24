@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export function GuideLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-guide-bg">
-      <header className="sticky top-0 z-40 border-b border-guide-tint bg-white/90 backdrop-blur">
+      <header className="sticky top-0 z-40 border-b border-guide-tint bg-guide-surface/90 backdrop-blur">
         {/* py-2 + min-h-11：連結本身撐到 44px 觸控目標，導覽列總高維持在 60px */}
         <nav className="mx-auto flex max-w-5xl items-center gap-6 px-4 py-2">
           <Link to="/" className="group inline-flex min-h-11 items-center gap-1.5 text-guide-ink">

@@ -22,12 +22,14 @@ export function NextSetBanner() {
       to="/decks/schedule"
       className="mb-4 flex min-h-11 flex-wrap items-center gap-x-2 gap-y-1 rounded-xl border border-guide-tint bg-guide-bg-panel px-4 py-2 text-sm transition hover:border-guide-accent"
     >
-      <span className="rounded-full bg-guide-ink px-2.5 py-0.5 text-xs font-bold text-white">
+      <span className="rounded-full bg-guide-ink px-2.5 py-0.5 text-xs font-bold text-guide-on-ink">
         {days <= 0 ? "即將發售" : `${days} 天後`}
       </span>
       <span className="font-semibold text-guide-ink">
         新擴充包 {next.title}
-        {next.titleTC && <span className="font-normal text-slate-600">（{next.titleTC}）</span>}
+        {next.titleTC && (
+          <span className="font-normal text-guide-ink-muted">（{next.titleTC}）</span>
+        )}
       </span>
       <span className="ml-auto font-semibold text-guide-ink-deep">看行事曆 →</span>
     </Link>

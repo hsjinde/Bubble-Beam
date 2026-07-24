@@ -39,7 +39,7 @@ function StatBar({
       {markerPct != null && (
         // 白線＋深藍描邊：在深藍填充（≥50%）與淺藍軌道（<50%）兩種背景都清楚
         <div
-          className="absolute inset-y-0 w-px bg-white shadow-[0_0_0_0.5px_rgba(29,82,115,0.55)]"
+          className="absolute inset-y-0 w-px bg-guide-surface shadow-[0_0_0_0.5px_rgba(29,82,115,0.55)]"
           style={{ left: `${markerPct}%` }}
         />
       )}
@@ -62,7 +62,7 @@ function ExpandedList({ deck }: { deck: MetaDeck }) {
           <Link
             to="/decks/$deckId"
             params={{ deckId: deck.curatedId }}
-            className="inline-flex min-h-11 items-center rounded-full bg-guide-ink px-4 text-xs font-semibold text-white shadow-sm transition hover:bg-guide-ink-deep"
+            className="inline-flex min-h-11 items-center rounded-full bg-guide-ink px-4 text-xs font-semibold text-guide-on-ink shadow-sm transition hover:bg-guide-ink-deep"
           >
             查看完整攻略 →
           </Link>
@@ -150,7 +150,7 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="牌組名，中英皆可，例如「密勒頓」或 Miraidon"
-          className="mt-1 block min-h-11 w-full rounded-lg border border-guide-ink bg-white px-3 text-sm text-slate-700 placeholder:text-slate-500 sm:max-w-sm"
+          className="mt-1 block min-h-11 w-full rounded-lg border border-guide-ink bg-guide-surface px-3 text-sm text-guide-ink-body placeholder:text-slate-500 sm:max-w-sm"
         />
       </div>
 
@@ -177,8 +177,8 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
                 onClick={() => setTierFilter(t)}
                 className={`min-h-9 rounded-full px-3.5 text-sm font-semibold transition ${
                   active
-                    ? "bg-guide-ink text-white shadow-sm"
-                    : "border border-guide-tint bg-white text-guide-ink hover:border-guide-accent"
+                    ? "bg-guide-ink text-guide-on-ink shadow-sm"
+                    : "border border-guide-tint bg-guide-surface text-guide-ink hover:border-guide-accent"
                 }`}
               >
                 {t === "all" ? "全部" : t}
@@ -190,7 +190,7 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
           type="button"
           onClick={toggleAll}
           disabled={expandableRanks.length === 0}
-          className="ml-auto min-h-9 rounded-full border border-guide-tint bg-white px-3.5 text-sm font-semibold text-guide-ink transition hover:border-guide-accent disabled:cursor-not-allowed disabled:opacity-40"
+          className="ml-auto min-h-9 rounded-full border border-guide-tint bg-guide-surface px-3.5 text-sm font-semibold text-guide-ink transition hover:border-guide-accent disabled:cursor-not-allowed disabled:opacity-40"
         >
           {allExpanded ? "收合全部" : "展開全部"}
         </button>
@@ -204,11 +204,11 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
 
       {visibleDecks.length === 0 ? (
         // 沒有這段的話 0 結果會渲染成一張只剩表頭的表，看起來像壞掉而不是「沒找到」
-        <p className="rounded-xl border border-dashed border-guide-tint bg-white/60 p-8 text-center text-sm text-slate-600">
+        <p className="rounded-xl border border-dashed border-guide-tint bg-guide-surface/60 p-8 text-center text-sm text-guide-ink-muted">
           排行榜裡沒有符合的牌組。Top {decks.length} 只收錄上榜牌組，冷門牌組不會出現在這裡。
         </p>
       ) : (
-        <div className="overflow-x-auto rounded-xl border border-guide-tint bg-white shadow-sm">
+        <div className="overflow-x-auto rounded-xl border border-guide-tint bg-guide-surface shadow-sm">
           <table className="w-full text-sm md:min-w-[640px]">
             <thead>
               <tr className="border-b border-guide-tint bg-gradient-to-b from-slate-50 to-guide-bg/40 text-left text-guide-ink">
@@ -272,7 +272,7 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
                       <td className="px-2 py-2 md:px-3">
                         <TierBadge tier={d.tier} />
                       </td>
-                      <td className="px-2 py-2 font-semibold text-slate-700 md:px-3">
+                      <td className="px-2 py-2 font-semibold text-guide-ink-body md:px-3">
                         {expandable ? (
                           <button
                             type="button"
@@ -280,7 +280,7 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
                             aria-expanded={isExpanded}
                             aria-controls={`deck-cards-${d.rank}`}
                             // min-h-11：手機上這是本頁主要互動，原本只有 20px 高
-                            className="flex min-h-11 w-full cursor-pointer flex-wrap items-center gap-x-1.5 gap-y-1 text-left text-slate-700 hover:text-guide-ink"
+                            className="flex min-h-11 w-full cursor-pointer flex-wrap items-center gap-x-1.5 gap-y-1 text-left text-guide-ink-body hover:text-guide-ink"
                           >
                             <span>{d.name}</span>
                             {d.curatedId && (
@@ -298,18 +298,18 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
                       </td>
                       <td className="hidden px-3 py-2 md:table-cell">
                         <div className="ml-auto flex w-24 flex-col items-end">
-                          <span className="font-semibold text-slate-700">
+                          <span className="font-semibold text-guide-ink-body">
                             {d.wilsonLowerBoundPct}%
                           </span>
                           <StatBar value={d.wilsonLowerBoundPct} min={45} max={55} marker={50} />
                         </div>
                       </td>
-                      <td className="px-2 py-2 text-right text-slate-600 md:px-3">
+                      <td className="px-2 py-2 text-right text-guide-ink-muted md:px-3">
                         {d.winratePct}%
                       </td>
                       <td className="hidden px-3 py-2 md:table-cell">
                         <div className="ml-auto flex w-20 flex-col items-end">
-                          <span className="text-slate-600">{d.sharePct}%</span>
+                          <span className="text-guide-ink-muted">{d.sharePct}%</span>
                           <StatBar value={d.sharePct} min={0} max={maxShare} />
                         </div>
                       </td>

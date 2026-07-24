@@ -71,6 +71,10 @@
   --color-guide-bg: var(--guide-bg);
   --color-guide-bg-panel: var(--guide-bg-panel);
   --color-guide-bg-highlight: var(--guide-bg-highlight);
+  --color-guide-surface: var(--guide-surface);
+  --color-guide-ink-body: var(--guide-ink-body);
+  --color-guide-ink-muted: var(--guide-ink-muted);
+  --color-guide-on-ink: var(--guide-on-ink);
 
   /* /pokopia 暖色色板（見 :root 區塊註解）*/
   --color-pokopia-ink: var(--pokopia-ink);
@@ -130,6 +134,25 @@
   --guide-bg: #eef7fc;
   --guide-bg-panel: #f8fcff;
   --guide-bg-highlight: #f4fbff;
+
+  /*
+   * 深色模式收斂進來的四個 token。淺色值刻意沿用原本的算繪結果，讓
+   * 這次收斂零視覺變化——但「沿用算繪結果」不等於「抄字面值」：
+   * ink-body／ink-muted 原本是 Tailwind 的 text-slate-700／600，而
+   * Tailwind v4 的 slate 色階是 oklch 定義，不是舊版 v3 的 #334155／
+   * #475569。曾經直接抄舊版 hex，用 canvas 比對算繪像素才發現偏差
+   * （rgb(51,65,85) vs 實際算繪的 rgb(49,65,88)）——所以這兩個必須是
+   * 瀏覽器對 slate-700／600 實際編譯出的 oklch 字串，不能用十六進位。
+   * 深色值見 .dark 區塊。
+   *
+   * on-ink 是「壓在 bg-guide-ink 上的前景色」。深色模式下 --guide-ink
+   * 會翻成淺藍，白字會爆掉，所以前景必須跟著翻——沿用 Material 的
+   * on-<color> 命名慣例。
+   */
+  --guide-surface: #ffffff;
+  --guide-ink-body: oklch(0.372 0.044 257.287); /* = Tailwind v4 text-slate-700 算繪值 */
+  --guide-ink-muted: oklch(0.446 0.043 257.281); /* = Tailwind v4 text-slate-600 算繪值 */
+  --guide-on-ink: #ffffff;
 
   /*
    * Tier 段位色階。刻意「低飽和金屬段位感」，與 EnergyIcon 的鮮豔屬性色區隔：

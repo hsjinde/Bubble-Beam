@@ -51,7 +51,7 @@ export function CopyDecklist({ cards, deckName }: { cards: DeckCardEntry[]; deck
       <button
         type="button"
         onClick={copy}
-        className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-guide-tint bg-white px-4 text-sm font-semibold whitespace-nowrap text-guide-ink transition hover:border-guide-accent hover:bg-guide-bg"
+        className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-guide-tint bg-guide-surface px-4 text-sm font-semibold whitespace-nowrap text-guide-ink transition hover:border-guide-accent hover:bg-guide-bg"
       >
         複製牌表文字
       </button>

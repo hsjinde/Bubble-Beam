@@ -78,13 +78,13 @@ function Strategy({ text }: { text: string }) {
     <>
       {text.split(/\n\n+/).map((block, i) =>
         block.trimStart().startsWith("- ") ? (
-          <ul key={i} className="mt-3 list-disc space-y-1 pl-5 text-slate-700">
+          <ul key={i} className="mt-3 list-disc space-y-1 pl-5 text-guide-ink-body">
             {block.split("\n").map((line, j) => (
               <li key={j}>{line.replace(/^- /, "")}</li>
             ))}
           </ul>
         ) : (
-          <p key={i} className="mt-3 leading-relaxed text-slate-700">
+          <p key={i} className="mt-3 leading-relaxed text-guide-ink-body">
             {block}
           </p>
         ),
@@ -105,7 +105,7 @@ function DeckPager({ current }: { current: string }) {
   if (!prev && !next) return null;
 
   const card =
-    "flex min-h-11 flex-col justify-center rounded-xl border border-guide-tint bg-white p-4 shadow-xs transition-shadow hover:shadow-md";
+    "flex min-h-11 flex-col justify-center rounded-xl border border-guide-tint bg-guide-surface p-4 shadow-xs transition-shadow hover:shadow-md";
 
   return (
     <nav
@@ -114,7 +114,7 @@ function DeckPager({ current }: { current: string }) {
     >
       {prev && (
         <Link to="/decks/$deckId" params={{ deckId: prev.id }} className={`group ${card}`}>
-          <span className="text-xs font-semibold text-slate-600">← 上一套</span>
+          <span className="text-xs font-semibold text-guide-ink-muted">← 上一套</span>
           <span className="mt-0.5 font-bold text-guide-ink group-hover:underline">{prev.name}</span>
         </Link>
       )}
@@ -125,7 +125,7 @@ function DeckPager({ current }: { current: string }) {
           params={{ deckId: next.id }}
           className={`group ${card} sm:text-right ${prev ? "" : "sm:col-start-2"}`}
         >
-          <span className="text-xs font-semibold text-slate-600">下一套 →</span>
+          <span className="text-xs font-semibold text-guide-ink-muted">下一套 →</span>
           <span className="mt-0.5 font-bold text-guide-ink group-hover:underline">{next.name}</span>
         </Link>
       )}
@@ -142,7 +142,7 @@ function DeckDetailPage() {
     return (
       <GuideLayout>
         <h1 className="text-2xl font-bold text-guide-ink">找不到這套牌</h1>
-        <p className="mt-2 text-slate-600">它可能已被移除或網址打錯了。</p>
+        <p className="mt-2 text-guide-ink-muted">它可能已被移除或網址打錯了。</p>
         <Link to="/decks" className="mt-4 inline-block font-semibold text-guide-ink underline">
           ← 回牌組列表
         </Link>
@@ -159,7 +159,7 @@ function DeckDetailPage() {
         ← 回牌組列表
       </Link>
 
-      <div className="mt-4 rounded-2xl border border-guide-tint bg-white p-6 shadow-sm">
+      <div className="mt-4 rounded-2xl border border-guide-tint bg-guide-surface p-6 shadow-sm">
         <div className="flex flex-wrap items-center gap-3">
           <TierBadge tier={deck.tier} />
           {/* font-bold 而非 extrabold：全站唯一一處 800 字重，為它多載一整個字重不划算 */}
@@ -173,7 +173,7 @@ function DeckDetailPage() {
             難度：{deck.difficulty}
           </span>
         </div>
-        <p className="mt-4 text-base leading-relaxed text-slate-700">{deck.summary}</p>
+        <p className="mt-4 text-base leading-relaxed text-guide-ink-body">{deck.summary}</p>
       </div>
 
       <h2 className="mt-10 border-l-4 border-guide-accent pl-3 text-xl font-bold text-guide-ink">
@@ -199,7 +199,7 @@ function DeckDetailPage() {
       <h2 className="mt-10 border-l-4 border-guide-accent pl-3 text-xl font-bold text-guide-ink">
         打法攻略
       </h2>
-      <div className="mt-2 rounded-xl border border-guide-tint/50 bg-white/70 p-5">
+      <div className="mt-2 rounded-xl border border-guide-tint/50 bg-guide-surface/70 p-5">
         <Strategy text={deck.strategy} />
       </div>
 
@@ -216,7 +216,7 @@ function DeckDetailPage() {
               return (
                 <div
                   key={m.vs}
-                  className="rounded-xl border border-guide-tint bg-white p-5 shadow-xs transition-shadow hover:shadow-md"
+                  className="rounded-xl border border-guide-tint bg-guide-surface p-5 shadow-xs transition-shadow hover:shadow-md"
                 >
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="rounded-full bg-guide-tint px-2.5 py-0.5 text-xs font-bold text-guide-ink-deep">
@@ -242,7 +242,7 @@ function DeckDetailPage() {
                       <span className="text-base font-bold text-guide-ink">{m.vs}</span>
                     )}
                   </div>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-700">{m.note}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-guide-ink-body">{m.note}</p>
                 </div>
               );
             })}
