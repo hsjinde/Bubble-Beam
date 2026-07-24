@@ -37,11 +37,11 @@ function ScheduleRoute() {
           to="/decks"
           className="inline-flex min-h-11 items-center text-sm font-semibold text-guide-ink-deep hover:text-guide-ink"
         >
-          ← 回排行榜
+          ← 返回排行榜
         </Link>
         <h1 className="mt-3 text-2xl font-bold text-guide-ink sm:text-3xl">擴充包與活動行事曆</h1>
         <p className="mt-2 max-w-2xl text-slate-600">
-          新擴充包什麼時候發售、現在有哪些活動在跑。牌組名與擴充包名保留英文原文。
+          即時掌握新擴充包發售時程與當前熱門活動情報。牌組名稱與擴充包名稱保留官方/社群英文原名對照。
         </p>
       </header>
 

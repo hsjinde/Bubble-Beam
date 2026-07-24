@@ -141,10 +141,10 @@ function DeckDetailPage() {
   if (!deck) {
     return (
       <GuideLayout>
-        <h1 className="text-2xl font-bold text-guide-ink">找不到這套牌</h1>
-        <p className="mt-2 text-slate-600">它可能已被移除或網址打錯了。</p>
+        <h1 className="text-2xl font-bold text-guide-ink">找不到此牌組</h1>
+        <p className="mt-2 text-slate-600">該牌組攻略可能已被調整或網址不正確。</p>
         <Link to="/decks" className="mt-4 inline-block font-semibold text-guide-ink underline">
-          ← 回牌組列表
+          ← 返回牌組列表
         </Link>
       </GuideLayout>
     );
@@ -156,7 +156,7 @@ function DeckDetailPage() {
         to="/decks"
         className="inline-flex items-center text-sm font-semibold text-guide-ink-deep hover:text-guide-ink"
       >
-        ← 回牌組列表
+        ← 返回牌組列表
       </Link>
 
       <div className="mt-4 rounded-2xl border border-guide-tint bg-white p-6 shadow-sm">
@@ -170,14 +170,14 @@ function DeckDetailPage() {
             ))}
           </span>
           <span className="rounded-full border border-guide-accent/30 bg-guide-tint/80 px-3 py-0.5 text-xs font-bold text-guide-ink-deep">
-            難度：{deck.difficulty}
+            操作難度：{deck.difficulty}
           </span>
         </div>
         <p className="mt-4 text-base leading-relaxed text-slate-700">{deck.summary}</p>
       </div>
 
       <h2 className="mt-10 border-l-4 border-guide-accent pl-3 text-xl font-bold text-guide-ink">
-        牌表（20 張）
+        推薦牌表（共 20 張）
       </h2>
       <div className="mt-3">
         <CopyDecklist cards={deck.cards} deckName={deck.name} />
@@ -197,7 +197,7 @@ function DeckDetailPage() {
       )}
 
       <h2 className="mt-10 border-l-4 border-guide-accent pl-3 text-xl font-bold text-guide-ink">
-        打法攻略
+        戰術打法攻略
       </h2>
       <div className="mt-2 rounded-xl border border-guide-tint/50 bg-white/70 p-5">
         <Strategy text={deck.strategy} />
@@ -206,7 +206,7 @@ function DeckDetailPage() {
       {deck.matchups && deck.matchups.length > 0 && (
         <>
           <h2 className="mt-10 border-l-4 border-guide-accent pl-3 text-xl font-bold text-guide-ink">
-            對戰思路
+            主要對局分析與觀念
           </h2>
           <div className="mt-4 space-y-3.5">
             {deck.matchups.map((m) => {

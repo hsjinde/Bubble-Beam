@@ -87,7 +87,7 @@ export function CuratedDecks({ decks }: { decks: Deck[] }) {
           這塊有外框面板、標籤明講範圍（「精選攻略」而非「牌組」）、下面這句話。
         */}
         <p className="text-xs text-slate-600">
-          以下條件只篩這 {decks.length} 套精選攻略，與上方排行榜的篩選各自獨立。
+          以下條件僅篩選下方 {decks.length} 套精選攻略牌組，與上方賽事排行榜的篩選各自獨立。
         </p>
         <div>
           <label htmlFor="deck-search" className="text-xs font-semibold text-guide-ink">
@@ -108,7 +108,7 @@ export function CuratedDecks({ decks }: { decks: Deck[] }) {
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="牌組名或關鍵字，例如「削血」"
+            placeholder="搜尋牌組名稱或戰術關鍵字（如：削血、速攻）"
             className="mt-1 block min-h-11 w-full rounded-lg border border-guide-ink bg-white px-3 text-sm text-slate-700 placeholder:text-slate-500"
           />
         </div>

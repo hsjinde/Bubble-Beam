@@ -68,7 +68,7 @@ function ExpandedList({ deck }: { deck: MetaDeck }) {
           </Link>
         )}
         <span>
-          代表牌表（取自該牌組最近的最佳賽績）
+          建議牌表（取自該牌組近期最佳賽事獲勝紀錄）
           {deck.listSource && (
             <>
               ・
@@ -78,7 +78,7 @@ function ExpandedList({ deck }: { deck: MetaDeck }) {
                 rel="noreferrer"
                 className="underline hover:text-guide-ink"
               >
-                牌表來源
+                查看賽事原牌表
               </a>
             </>
           )}
@@ -149,7 +149,7 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="牌組名，中英皆可，例如「密勒頓」或 Miraidon"
+          placeholder="搜尋牌組名稱（中英皆可，如「密勒頓」或 Miraidon）"
           className="mt-1 block min-h-11 w-full rounded-lg border border-guide-ink bg-white px-3 text-sm text-slate-700 placeholder:text-slate-500 sm:max-w-sm"
         />
       </div>

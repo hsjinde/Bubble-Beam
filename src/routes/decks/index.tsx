@@ -70,11 +70,10 @@ function DecksPage() {
       <NextSetBanner />
       <h1 className="text-2xl font-bold text-guide-ink sm:text-3xl">TCG Pocket 環境排行榜</h1>
       <p className="mt-2 text-slate-600">
-        依 Limitless 賽事數據以 Wilson score 95% 下界排序的 Top {meta.decks.length}
-        ：小樣本的極端勝率會被往下修正，名次反映「有統計信心的最低實力」。帶連結的牌組有完整攻略。資料日期：
+        本排行榜整合 Limitless 大賽統計數據，採用 95% Wilson 信賴區間下界進行名次排序，精準校正小樣本帶來的勝率偏差，真實反映牌組的客觀實力與穩定度。帶有連結的牌組附有詳細攻略。資料更新日期：
         {meta.fetchedAt.slice(0, 10)}
         {meta.previousFetchedAt
-          ? `；「變化」欄與 ${meta.previousFetchedAt.slice(0, 10)} 的排行相比。`
+          ? `；「名次變動」與 ${meta.previousFetchedAt.slice(0, 10)} 的排行相比。`
           : "。"}
       </p>
 

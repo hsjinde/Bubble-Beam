@@ -90,17 +90,17 @@ export function getPairing(id: string): { recommendedIds: string[]; reason: stri
     if (siblings.length > 0) {
       return {
         recommendedIds: siblings,
-        reason: `同為「${building.series}」系列，外觀一致，排在一起最像一座聚落。`,
+        reason: `同屬「${building.series}」風格系列，整體視覺協調一致，極適合規劃為風格獨特的城鎮園區。`,
       };
     }
   }
 
   const REASON_BY_CATEGORY: Record<BuildingCategory, string> = {
-    住宅: "同屬住宅，湊成住宅區能容納更多寶可夢。",
-    寶可夢中心: "其他主題寶可夢中心，並列展示各有風情。",
-    發電: "集中發電設施能提高整區供電效率。",
-    商店設施: "商店與設施擺在一起，機能生活區更完整。",
-    裝飾地標: "其他裝飾地標，適合一起打造觀光／活動區。",
+    住宅: "同屬住宅建築，並列規劃可打造熱鬧便利的住宅生活區，容納更多寶可夢夥伴。",
+    寶可夢中心: "同為寶可夢中心主題建築，搭配展示能展現豐富多樣的建築特色。",
+    發電: "集中發電設施規劃，能有效提升整座園區的供電運轉效率。",
+    商店設施: "結合商店與休閒設施，讓生活機能區更加健全齊備。",
+    裝飾地標: "搭配其他裝飾地標，極適合共同打造兼具觀光與休閒價值的特色園區。",
   };
   const peers = buildings
     .filter((b) => b.id !== id && b.category === building.category)
