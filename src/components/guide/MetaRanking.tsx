@@ -150,7 +150,7 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="牌組名，中英皆可，例如「密勒頓」或 Miraidon"
-          className="mt-1 block min-h-11 w-full rounded-lg border border-guide-ink bg-guide-surface px-3 text-sm text-guide-ink-body placeholder:text-slate-500 sm:max-w-sm"
+          className="mt-1 block min-h-11 w-full rounded-lg border border-guide-ink bg-guide-surface px-3 text-sm text-guide-ink-body placeholder:text-slate-500 dark:placeholder:text-slate-400 sm:max-w-sm"
         />
       </div>
 
@@ -313,7 +313,7 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
                           <StatBar value={d.sharePct} min={0} max={maxShare} />
                         </div>
                       </td>
-                      <td className="hidden px-3 py-2 text-right text-slate-500 md:table-cell">
+                      <td className="hidden px-3 py-2 text-right text-slate-500 md:table-cell dark:text-slate-400">
                         {d.games.toLocaleString()} ({d.record})
                       </td>
                     </tr>

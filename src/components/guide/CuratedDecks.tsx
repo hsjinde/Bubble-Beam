@@ -109,7 +109,7 @@ export function CuratedDecks({ decks }: { decks: Deck[] }) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="牌組名或關鍵字，例如「削血」"
-            className="mt-1 block min-h-11 w-full rounded-lg border border-guide-ink bg-guide-surface px-3 text-sm text-guide-ink-body placeholder:text-slate-500"
+            className="mt-1 block min-h-11 w-full rounded-lg border border-guide-ink bg-guide-surface px-3 text-sm text-guide-ink-body placeholder:text-slate-500 dark:placeholder:text-slate-400"
           />
         </div>
 

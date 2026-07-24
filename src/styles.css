@@ -3,19 +3,29 @@
 @import "tw-animate-css";
 
 /*
+ * Tailwind v4 的 dark: variant 預設綁 prefers-color-scheme，跟 class 無關。
+ * 本站要支援「系統／淺色／深色」三態手動覆寫，必須改成 class-based。
+ * 沒有這一行的話，所有 dark: utility 都只會跟隨系統，手動切換無效。
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
  * Design system definition.
  *
  * The @theme inline block maps CSS custom properties to Tailwind utility
  * classes (e.g. --color-primary -> bg-primary, text-primary).
  *
- * :root defines the actual color values using oklch. All colors MUST use
- * oklch format. There is no .dark variant: nothing in this app ever applies
- * a .dark class, so no @custom-variant dark or .dark block exists. If dark
- * mode is ever added, reintroduce both alongside a real toggle.
+ * :root defines the light values; the .dark block below overrides them.
+ * Dark mode is class-based (@custom-variant dark above), driven by
+ * src/lib/theme.ts and the inline script in __root.tsx.
  *
  * To add a new semantic color:
  * 1. Add the variable to :root
- * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ * 2. Add its dark counterpart to .dark
+ * 3. Register it in @theme inline as --color-<name>: var(--<name>)
+ *
+ * 深色值一律是「同色相的去飽和／明度變體」，不是把顏色反轉。改任何值之後
+ * 都要在兩個模式各量一次算繪後對比（見 docs/handoff.md）。
  *
  * The /decks guide palette (--guide-*, bottom of :root) is a separate,
  * intentionally hex-based system — see the comment at its definition.
@@ -197,6 +207,37 @@
    * 兩者都是 Tailwind 的固定白色（不像 slate 是 oklch 色階），字面 hex 安全。 */
   --pokopia-surface: #ffffff;
   --pokopia-on-accent: #ffffff;
+}
+
+.dark {
+  /*
+   * /decks 水藍系深色值（色相 ≈ 205°，與淺色同色相）。
+   *
+   * 兩個語意反轉，改值時容易配反：
+   *   ink-deep 是「更強調」——淺色模式靠壓深，深色模式靠**提亮**。
+   *   bg-highlight 是「比一般列突出」——深色模式要比 bg **更亮**，不是更暗。
+   *
+   * accent 維持 #5fa8d3：它在深藍底上本來就達標，沒有換值的理由。
+   */
+  --guide-bg: #0f1a22;
+  --guide-bg-panel: #16242f;
+  --guide-bg-highlight: #1a2c39;
+  --guide-surface: #1e313f;
+  --guide-ink: #9fd0ea;
+  /*
+   * ink-deep 兼作「疊在 tint 底上的晶片文字」（如 NextSetBanner／ScheduleBoard
+   * 的 event-type 標籤 bg-guide-tint + text-guide-ink-deep）。tint 為了邊框
+   * 對比調亮到 #43708b 後，原本的 #cfe9f7 對它只剩 4.24:1，調亮到 #e3f3fb
+   * 讓兩種用途（一般頁面文字、疊在 tint 上）都 ≥4.5:1。
+   */
+  --guide-ink-deep: #e3f3fb;
+  --guide-ink-body: #b3c6d3;
+  --guide-ink-muted: #93a9ba;
+  --guide-accent: #5fa8d3;
+  /* 邊框對 bg 要過 WCAG 1.4.11 非文字 3:1——#2e4b5e 只有 1.92:1，調亮至 #43708b（3.3:1） */
+  --guide-tint: #43708b;
+  /* 壓在 bg-guide-ink（深色模式下是淺藍）上的前景色 */
+  --guide-on-ink: #0f1a22;
 }
 
 @layer base {
