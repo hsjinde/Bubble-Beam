@@ -1,12 +1,20 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
+import { ThemeToggle } from "@/components/ThemeToggle";
+
 export function GuideLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-guide-bg">
       <header className="sticky top-0 z-40 border-b border-guide-tint bg-guide-surface/90 backdrop-blur">
-        {/* py-2 + min-h-11：連結本身撐到 44px 觸控目標，導覽列總高維持在 60px */}
-        <nav className="mx-auto flex max-w-5xl items-center gap-6 px-4 py-2">
+        {/*
+         * py-2 + min-h-11：連結本身撐到 44px 觸控目標。
+         *
+         * flex-wrap：這裡原本沒有 wrap，手機 375px 下會強制單行水平溢位
+         * （既有 bug，跟深色模式無關，加 ThemeToggle 前先順手修掉——不修的話
+         * 新按鈕只會讓溢位更嚴重，也會過不了「手機無水平溢位」這條硬底線）。
+         */}
+        <nav className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-1 px-4 py-2">
           <Link to="/" className="group inline-flex min-h-11 items-center gap-1.5 text-guide-ink">
             {/*
              * 首頁個性延續：手寫 logo ＋ 首頁既有的手繪水花，呼應那個好玩的波加曼世界，
@@ -55,13 +63,16 @@ export function GuideLayout({ children }: { children: ReactNode }) {
            * 左側是「本區的分頁」，右側是「離開這一區」，避免看起來像同層級的第三個分頁。
            * 用 guide 色票而非 pokopia 暖色——它還在攻略站的視覺範圍內。
            */}
-          <Link
-            to="/pokopia"
-            className="ml-auto inline-flex min-h-11 items-center gap-1 rounded-full border border-guide-tint px-3.5 text-sm font-semibold whitespace-nowrap text-guide-ink transition hover:border-guide-accent hover:bg-guide-bg"
-          >
-            Pokopia 建築
-            <span aria-hidden="true">→</span>
-          </Link>
+          <div className="ml-auto flex items-center gap-1">
+            <Link
+              to="/pokopia"
+              className="inline-flex min-h-11 items-center gap-1 rounded-full border border-guide-tint px-3.5 text-sm font-semibold whitespace-nowrap text-guide-ink transition hover:border-guide-accent hover:bg-guide-bg"
+            >
+              Pokopia 建築
+              <span aria-hidden="true">→</span>
+            </Link>
+            <ThemeToggle />
+          </div>
         </nav>
       </header>
       <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>

@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
+import { ThemeToggle } from "@/components/ThemeToggle";
+
 /**
  * /pokopia 的外框：/decks GuideLayout 的暖色雙生。結構（sticky nav + 版權 footer）
  * 刻意一致，配色換成 pokopia 暖色 token。`data-scope="pokopia"` 讓 styles.css 的
@@ -11,16 +13,15 @@ export function PokopiaLayout({ children }: { children: ReactNode }) {
     <div data-scope="pokopia" className="min-h-dvh bg-pokopia-bg">
       <header className="sticky top-0 z-40 border-b border-pokopia-tint bg-pokopia-bg-panel/90 backdrop-blur">
         {/*
-         * 375px 手機的實測預算（可用寬 343px＝375 − px-4 兩側）：
-         *   logo 82 ＋「Pokopia 建築」99 ＋「建築影片」64 ＋ 跨區膠囊 104 ＋ gap-x-6 72 ＝ 421
-         * 超出 78px，跨區膠囊被擠到第二行，sticky header 從 61px 漲到 109px（手機視高 13%）。
+         * 375px 手機的實測預算（可用寬 343px＝375 − px-4 兩側）。
          *
-         * 只縮 gap 不夠（gap-x-4 才省 24px），所以手機同時縮欄間距與區內標籤：
-         *   82 ＋「建築」32 ＋「影片」32 ＋ 104 ＋ gap-x-4 48 ＝ 298，留 45px 餘裕。
-         * 縮的是**區內**標籤而非跨區膠囊——你已經在 Pokopia 區裡了，區名是冗餘資訊；
-         * 「離開這一區」的膠囊反而要講清楚去哪。sm 以上一律還原全名。
+         * ⚠ 這裡先前的註解算式（「82＋建築32＋影片32＋104＋gap48＝298，留 45px」）
+         * 漏算了「棲息地」連結（48px）——實測含棲息地後，即使區內標籤已縮寫，
+         * 單靠縮寫仍不夠塞進一行，跨區膠囊照樣被擠到第二行（109px，非 61px）。
+         * 這是 2026-07-24 加深色模式之前就存在的既有計算疏漏，與 ThemeToggle 無關。
          *
-         * flex-wrap 留著當保險：日後再加連結塞不下時折成兩行，而不是溢出或壓縮標籤。
+         * 加入 ThemeToggle（44px）後只會讓第二行更擠，不會造成水平溢位——
+         * flex-wrap 已經在，兩行式樣本來就是保底機制。
          */}
         <nav className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-4 gap-y-1 px-4 py-2 sm:gap-x-6">
           <Link to="/" className="group inline-flex min-h-11 items-center gap-1.5 text-pokopia-ink">
@@ -71,13 +72,16 @@ export function PokopiaLayout({ children }: { children: ReactNode }) {
             棲息地
           </Link>
           {/* 跨區入口，與 GuideLayout 的對稱作法；配色留在 pokopia 暖色域內。 */}
-          <Link
-            to="/decks"
-            className="ml-auto inline-flex min-h-11 items-center gap-1 rounded-full border border-pokopia-tint px-3.5 text-sm font-semibold whitespace-nowrap text-pokopia-ink transition hover:border-pokopia-accent hover:bg-pokopia-highlight"
-          >
-            牌組攻略
-            <span aria-hidden="true">→</span>
-          </Link>
+          <div className="ml-auto flex items-center gap-1">
+            <Link
+              to="/decks"
+              className="inline-flex min-h-11 items-center gap-1 rounded-full border border-pokopia-tint px-3.5 text-sm font-semibold whitespace-nowrap text-pokopia-ink transition hover:border-pokopia-accent hover:bg-pokopia-highlight"
+            >
+              牌組攻略
+              <span aria-hidden="true">→</span>
+            </Link>
+            <ThemeToggle />
+          </div>
         </nav>
       </header>
       <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
