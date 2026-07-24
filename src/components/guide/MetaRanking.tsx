@@ -211,7 +211,7 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
         <div className="overflow-x-auto rounded-xl border border-guide-tint bg-guide-surface shadow-sm">
           <table className="w-full text-sm md:min-w-[640px]">
             <thead>
-              <tr className="border-b border-guide-tint bg-gradient-to-b from-slate-50 to-guide-bg/40 text-left text-guide-ink">
+              <tr className="border-b border-guide-tint bg-guide-bg-highlight text-left text-guide-ink">
                 <th
                   scope="col"
                   className="px-2 py-2.5 font-bold whitespace-nowrap text-xs tracking-wider md:px-3"
