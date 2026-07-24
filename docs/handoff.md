@@ -407,7 +407,7 @@ push 後由 **Cloudflare Workers Builds webhook** 自動觸發，約 60 秒上�
 「push 成功」不等於「上線了」。驗證方式是 curl 線上 HTML 找這次改動的特徵字串：
 
 ```bash
-curl -s -H "Cache-Control: no-cache" https://bubble.19980803.xyz/decks | grep -o 'lang="[^"]*"'
+curl -s -H "Cache-Control: no-cache" https://pokemon.19980803.xyz/decks | grep -o 'lang="[^"]*"'
 ```
 
 也要確認 hash 過的 JS chunk 與靜態資源回 200。上一輪用的特徵是 `lang="zh-Hant"`

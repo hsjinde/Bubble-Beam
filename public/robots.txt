@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bubble.19980803.xyz/sitemap.xml
+Sitemap: https://pokemon.19980803.xyz/sitemap.xml
