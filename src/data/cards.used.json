@@ -1,4 +1,9 @@
 {
+  "A1-33": {
+    "id": "A1-33",
+    "nameEN": "Charmander",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/33.webp"
+  },
   "A1-87": {
     "id": "A1-87",
     "nameEN": "Froakie",
@@ -264,6 +269,16 @@
     "nameEN": "Lisia",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/226.webp"
   },
+  "B1a-12": {
+    "id": "B1a-12",
+    "nameEN": "Charmeleon",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1a/12.webp"
+  },
+  "B1a-13": {
+    "id": "B1a-13",
+    "nameEN": "Charizard",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1a/13.webp"
+  },
   "B1a-14": {
     "id": "B1a-14",
     "nameEN": "Mega Charizard Y ex",
@@ -473,6 +488,11 @@
     "id": "B3a-73",
     "nameEN": "Professor Turo",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/73.webp"
+  },
+  "B3a-74": {
+    "id": "B3a-74",
+    "nameEN": "Area Zero",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/74.webp"
   },
   "B3b-15": {
     "id": "B3b-15",
