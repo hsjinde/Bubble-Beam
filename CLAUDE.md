@@ -114,6 +114,10 @@ TanStack Start 檔案式路由。`src/routes/README.md` 有完整慣例表——
 
 Issues 走 GitHub Issues（`hsjinde/Bubble-Beam`），用 `gh` CLI 操作。See `docs/agents/issue-tracker.md`.
 
+### Triage labels
+
+沿用五個標準角色的預設標籤（`needs-triage`、`needs-info`、`ready-for-agent`、`ready-for-human`、`wontfix`），標籤字串與角色同名。See `docs/agents/triage-labels.md`.
+
 ### Domain docs
 
 單一 context：根目錄 `CONTEXT.md` ＋ `docs/adr/`（目前兩者都尚未建立，需要時才由 `/domain-modeling` 產生）。See `docs/agents/domain.md`.
