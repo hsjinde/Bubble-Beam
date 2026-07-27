@@ -185,19 +185,28 @@ export const VIDEOS: VideoInspiration[] = [
     blurb: "遊玩上千小時打造的超巨大建築島導覽，開眼界找靈感。",
     group: "city",
   },
+  {
+    id: "kLY9GwYVpWk",
+    title:
+      "Pokémon Pokopia~I STARTED A NEW CITY ISLAND!~RETRO DINER & MODERN CITY ROAD LAYOUT PREP~#1 #pokopia",
+    channel: "HorribleGaming",
+    blurb: "復古餐廳與現代城市道路佈局，大島嶼城鎮規劃示範。",
+    group: "city",
+  },
   // ── 住宅・別墅 ─────────────────────────────────────────────────
   {
-    id: "2PXUx1F1_VA",
-    title: "【ぽこポケ】初期地形を生かす⛱️レストランの再建と海辺の自宅づくり🏝️",
-    channel: "Haruchi create",
-    blurb: "活用初期地形，重建餐廳並蓋海邊自宅（發售初期經典）。",
+    id: "8JHUVsq-L2Y",
+    title:
+      "Pokémon Pokopia~REALISTIC MODERN VILLA HABITAT HOME DESIGN~BLEAK BEACH~SPEED BUILD~#pokopia",
+    channel: "HorribleGaming",
+    blurb: "寫實現代別墅，蓋在荒涼海灘上的質感住宅。",
     group: "house",
   },
   {
     id: "-5um9Org_Ys",
     title: "【ぽこポケ】初期地形を生かす🔰地下倉庫のある水車小屋作り",
     channel: "Haruchi create",
-    blurb: "有地下倉庫的水車小屋，順著地形而建的機能住宅（你清單精選）。",
+    blurb: "有地下倉庫的水車小屋，順著地形而建的機能住宅。",
     group: "house",
   },
   {
@@ -209,11 +218,18 @@ export const VIDEOS: VideoInspiration[] = [
     group: "house",
   },
   {
-    id: "8JHUVsq-L2Y",
+    id: "-ZNJR9kLDvk",
+    title: "Pokopia Speed Build: Hidden Cliff House by the Ocean | Step By Step Build & Tricks",
+    channel: "CloudySkies Gaming",
+    blurb: "海邊隱密崖頂小屋，利用高低落差蓋出絕美棲地。",
+    group: "house",
+  },
+  {
+    id: "TuhSytDfEP8",
     title:
-      "Pokémon Pokopia~REALISTIC MODERN VILLA HABITAT HOME DESIGN~BLEAK BEACH~SPEED BUILD~#pokopia",
-    channel: "HorribleGaming",
-    blurb: "寫實現代別墅，蓋在荒涼海灘上的質感住宅。",
+      "【ぽこポケ】必要な素材少なめ🔰森の中の小さなコテージの作り方＆解説【ぽこあポケモン建築】",
+    channel: "すくると",
+    blurb: "極簡資材打造森林溫馨小木屋，新手也能輕鬆上手。",
     group: "house",
   },
   // ── 商店・餐飲 ─────────────────────────────────────────────────
@@ -230,15 +246,21 @@ export const VIDEOS: VideoInspiration[] = [
     title:
       "【ぽこポケ】使い方次第で別のアイテムに！アイスクリーム屋さんの作り方＆解説【ぽこあポケモン建築】",
     channel: "すくると",
-    blurb: "冰淇淋店做法解說，教你用道具巧手拼出小店（你清單精選）。",
+    blurb: "冰淇淋店做法解說，教你用道具巧手拼出小店。",
     group: "shop",
   },
   {
-    id: "TybuNrH2FLg",
-    title:
-      "Pokémon Pokopia~EASY STARTER CAFE/STOREFRONT HABITAT BUILDING DESIGN~STORAGE BUILDING IDEA",
-    channel: "HorribleGaming",
-    blurb: "新手也能蓋的咖啡廳／店面，附收納建築點子。",
+    id: "IutbULM6W58",
+    title: "【ぽこポケ】8分でわかる！実は超簡単な「コンビニ」の作り方│建築│Pokopia",
+    channel: "かぴぱか create",
+    blurb: "8 分鐘學會街角便利商店，簡潔好看的實用生活設施。",
+    group: "shop",
+  },
+  {
+    id: "GILoD4q6n5s",
+    title: "Flareon and Jolteon's Pizza Restaurant Build Guide Pokemon Pokopia",
+    channel: "MSensei NTD",
+    blurb: "火伊布與雷伊布的主題披薩餐廳，氛圍滿分的機能小店。",
     group: "shop",
   },
   // ── 主題・地標・遊樂 ───────────────────────────────────────────
@@ -250,19 +272,26 @@ export const VIDEOS: VideoInspiration[] = [
     group: "landmark",
   },
   {
-    id: "Tv9aIqSlPio",
-    title:
-      "期間限定ジラーチイベント！イベント限定アイテムで可愛い星空が見える家を建築してみた！【ぽこあポケモン】",
-    channel: "涼太ぱんけーき♭",
-    blurb: "基拉祈活動限定，能望見星空的浪漫主題屋。",
-    group: "landmark",
-  },
-  {
     id: "7nBNt4n2CYw",
     title:
       "【ぽこあポケモン】ガチで作りこんだ「巨大水上遊園地」のクオリティが限界突破すぎる…！【観覧車】ぽこポケ│建築",
     channel: "かぴぱか create",
     blurb: "有摩天輪的巨大水上遊樂園，大型主題設施天花板。",
+    group: "landmark",
+  },
+  {
+    id: "QVI2GcpxUrY",
+    title: "【ぽこポケ】初心者が１か月かけてシンデレラ城を再現してみた！【ぽこあポケモン建築】",
+    channel: "すくると",
+    blurb: "1 個月打造灰姑娘城堡，夢幻壯觀的童話地標。",
+    group: "landmark",
+  },
+  {
+    id: "KBcGfIAXbsc",
+    title:
+      "【ぽこポケ】ポケカのブラッキーVMAXのお城を２０×２０で再現してみたよ！簡単に作れる｜５×５建築｜初心者",
+    channel: "わむのスローライフっぽい",
+    blurb: "再現寶可夢卡牌「月亮伊布 VMAX」暗夜城堡，帥氣度滿分。",
     group: "landmark",
   },
   // ── 機關・自動化 ───────────────────────────────────────────────
@@ -274,6 +303,14 @@ export const VIDEOS: VideoInspiration[] = [
     group: "automation",
   },
   {
+    id: "YPI0Z18XOs4",
+    title:
+      "【ぽこポケ】さらさらいわ使って野菜と木の実完全自動化の世界樹作ってみた！水流で一か所に集まるから一吸いで収穫完了！",
+    channel: "わむのスローライフっぽい",
+    blurb: "利用細沙岩與水流達成全自動化採收世界樹，效率極高。",
+    group: "automation",
+  },
+  {
     id: "L_YmoChE4O4",
     title: "【ぽこポケ】不具合を解決した野菜と木の実自動化施設の徹底解説！サラサラ岩｜クロック回路",
     channel: "わむのスローライフっぽい",
@@ -281,11 +318,11 @@ export const VIDEOS: VideoInspiration[] = [
     group: "automation",
   },
   {
-    id: "uHzBdlva08Y",
+    id: "53hWuG8z0Ic",
     title:
-      "Pokémon Pokopia~INDUSTRIAL CRAFTING & STORAGE WAREHOUSE~PALETTE TOWN MODERN CITY DESIGN~#pokopia #11",
+      "Pokémon Pokopia~POWER PLANT FACTORY BUILD DESIGN~ZAPDOS HABITAT~BUILDING A HUGE CITY~#pokopia  #5",
     channel: "HorribleGaming",
-    blurb: "工業風製作＋倉儲廠房，把機能區蓋得有模有樣。",
+    blurb: "閃電鳥棲地風發電廠與現代工廠，將發電設施藝術化。",
     group: "automation",
   },
   // ── 自然造景 ───────────────────────────────────────────────────
@@ -298,9 +335,17 @@ export const VIDEOS: VideoInspiration[] = [
     group: "nature",
   },
   {
+    id: "ozYyqbEnreo",
+    title:
+      "【ぽこポケ】苔カビゴンが祀られた世界樹【ぽこポケ建築】鳥居｜パーゴラ｜神社｜自然系｜ツタ｜巨大樹｜ツリーハウス",
+    channel: "わむのスローライフっぽい",
+    blurb: "供奉苔蘚卡比獸的神社世界樹，結合鳥居與綠意棲地。",
+    group: "nature",
+  },
+  {
     id: "qud4uVkthmY",
     title:
-      "POKOPIA Natural Aesthetic PokéCenter & Neighborhood Speed Build | PocoPoke Design Tutorial",
+      "POKOPIA Natural Aesthetic PokéCenter &  Neighborhood Speed Build | PocoPoke Design Tutorial",
     channel: "Lex Play",
     blurb: "自然風寶可夢中心與街區的實作 speed build，跟著蓋。",
     group: "nature",
@@ -327,6 +372,13 @@ export const VIDEOS: VideoInspiration[] = [
       "Overwhelmed? 12 Beginner Design Tips to Plan a Pretty & Functional Starter Base in Pokopia",
     channel: "CloudySkies Gaming",
     blurb: "新手入門：12 個把起始基地規劃得又美又實用的技巧。",
+    group: "tips",
+  },
+  {
+    id: "e4lbjJgJ-LQ",
+    title: "Exotic Sableye Gem Design Hacks That Will Level Up Your Next Build | Pokopia",
+    channel: "CloudySkies Gaming",
+    blurb: "勾魂眼寶石擺設技巧與裝飾小訣竅，細節質感升級。",
     group: "tips",
   },
   {
