@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { listDecks } from "@/data/decks";
-import { getMeta } from "@/data/meta";
+import { formatSnapshotDate, getMeta } from "@/data/meta";
 import { DIFFICULTIES, ENERGY_TYPES, META_TIER_ORDER, TIER_ORDER } from "@/data/types";
 import type { DecksSearch } from "@/components/guide/useDecksSearch";
 import { CuratedDecks } from "@/components/guide/CuratedDecks";
@@ -103,9 +103,9 @@ function DecksPage() {
       <p className="mt-2 text-guide-ink-muted">
         本排行榜整合 Limitless 大賽統計數據，採用 95% Wilson
         信賴區間下界進行名次排序，精準校正小樣本帶來的勝率偏差，真實反映牌組的客觀實力與穩定度。帶有連結的牌組附有詳細攻略。資料更新日期：
-        {meta.fetchedAt.slice(0, 10)}
+        {formatSnapshotDate(meta.fetchedAt)}
         {meta.previousFetchedAt
-          ? `；「名次變動」與 ${meta.previousFetchedAt.slice(0, 10)} 的排行相比。`
+          ? `；「名次變動」與 ${formatSnapshotDate(meta.previousFetchedAt)} 的排行相比。`
           : "。"}
       </p>
 

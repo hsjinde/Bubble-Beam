@@ -21,6 +21,23 @@ export function getMetaByCuratedId(curatedId: string): MetaDeck | undefined {
   return getMeta().decks.find((d) => d.curatedId === curatedId);
 }
 
+/**
+ * 把快照時間戳換算成台灣日曆日（`YYYY-MM-DD`）。
+ *
+ * `fetchedAt`／`previousFetchedAt` 存的是 UTC，直接 `.slice(0, 10)` 拿到的是 **UTC 的日期**：
+ * 台灣時間 7/24 凌晨 01:19 抓的資料存成 `2026-07-23T17:19Z`，前端就顯示「更新日期 7/23」，
+ * 讀者會以為資料整天沒動。台灣時間傍晚以後跑的每一次更新都會踩到。
+ *
+ * 刻意用固定 +8 小時算術，不用 `Intl` 的 `timeZone: "Asia/Taipei"`：SSR 跑在 Cloudflare
+ * Workers，它的 ICU 時區資料與本機 Node 未必一致，兩邊算出不同日期就是 hydration mismatch，
+ * 而且在 dev（純 Node）測不出來。台灣沒有日光節約時間，固定偏移永遠正確。
+ *
+ * 只用於顯示——`meta.json` 裡存的一律維持 UTC，sitemap 的 `lastmod` 要的就是 UTC。
+ */
+export function formatSnapshotDate(iso: string): string {
+  return new Date(Date.parse(iso) + 8 * 60 * 60 * 1000).toISOString().slice(0, 10);
+}
+
 /** 排名變化的四種狀態；unknown 代表沒有可比對的歷史資料，前端應留白。 */
 export type RankChangeState = "up" | "down" | "same" | "new" | "unknown";
 
