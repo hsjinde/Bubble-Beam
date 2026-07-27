@@ -607,7 +607,7 @@ const decks: Deck[] = [
   {
     id: "mega-lucario-solo",
     name: "Mega路卡利歐ex 純格極速",
-    tier: "B",
+    tier: "C",
     energy: ["Fighting"],
     difficulty: "易",
     summary:
