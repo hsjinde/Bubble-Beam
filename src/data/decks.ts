@@ -938,7 +938,7 @@ const decks: Deck[] = [
     energy: ["Darkness"],
     difficulty: "難",
     heroCardId: "B3b-41",
-    summary: "使用率第二的削血流：雙忍蛙＋達克萊伊每回合固定磨血，Mega勾魂眼ex 負責收割。",
+    summary: "惡系削血流：雙忍蛙＋達克萊伊每回合固定磨血，Mega勾魂眼ex 負責收割。",
     cards: [
       { id: "A1-87", count: 2 }, // Froakie
       { id: "A1-89", count: 2 }, // Greninja
