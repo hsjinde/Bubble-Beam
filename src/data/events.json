@@ -17,7 +17,7 @@
     "",
     "type：set（新擴充包）／drop（Drop 活動）／wonderpick／ranked（排名賽季）／other"
   ],
-  "updatedAt": "2026-07-27",
+  "updatedAt": "2026-07-29",
   "events": [
     {
       "id": "b4-ruler-of-the-skies",
@@ -27,6 +27,55 @@
       "startAt": "2026-07-30T01:00:00Z",
       "note": "第八個主要擴充包，Mega Rayquaza ex 登場；同步加入牌組 2D 條碼分享功能。",
       "url": "https://www.pokemon.com/us/news/pokemon-tcg-pocket-ruler-of-the-skies-expansion-coming-soon"
+    },
+    {
+      "id": "summer-event-missions-2026-07",
+      "type": "other",
+      "title": "Summer Event Missions",
+      "titleTC": "夏日活動任務",
+      "startAt": "2026-07-30T00:00:00+08:00",
+      "endAt": "2026-08-06T23:59:00+08:00",
+      "note": "配合 B4 發售推出的夏日特別任務，可解鎖包款沙漏與各式獎勵。",
+      "url": "https://www.pokemon.com/us/news/pokemon-tcg-pocket-ruler-of-the-skies-expansion-coming-soon"
+    },
+    {
+      "id": "ranked-season-16",
+      "type": "ranked",
+      "title": "Ranked Match Season 16（B4）",
+      "startAt": "2026-07-30T00:00:00+08:00",
+      "endAt": "2026-08-13T23:59:00+08:00",
+      "note": "第 16 賽季排名賽，B4『天空的支配者』環境全新開打。",
+      "url": "https://www.pokemon-zone.com/schedule/"
+    },
+    {
+      "id": "ruler-of-the-skies-emblem-2026-08",
+      "type": "other",
+      "title": "Ruler of the Skies Emblem Event",
+      "titleTC": "天空的支配者 徽章對戰活動",
+      "startAt": "2026-08-01T00:00:00+08:00",
+      "endAt": "2026-08-15T23:59:00+08:00",
+      "note": "玩家對戰活動，累積勝場可獲得天空的支配者限定主題徽章與沙漏。",
+      "url": "https://www.pokemon.com/us/news/pokemon-tcg-pocket-ruler-of-the-skies-expansion-coming-soon"
+    },
+    {
+      "id": "mega-houndoom-ex-drop-2026-08",
+      "type": "drop",
+      "title": "Mega Houndoom ex Drop Event",
+      "titleTC": "超級黑魯加 ex Drop 活動",
+      "startAt": "2026-08-13T00:00:00+08:00",
+      "endAt": "2026-08-23T23:59:00+08:00",
+      "note": "單人對戰活動，挑戰超級黑魯加主題牌組換取 B 系列 Vol.11 點賞包與限定卡。",
+      "url": "https://game8.co/games/Pokemon-TCG-Pocket/archives/608923"
+    },
+    {
+      "id": "wonder-pick-pachirisu-beldum-2026-08",
+      "type": "wonderpick",
+      "title": "Wonder Pick Event (Pachirisu & Beldum)",
+      "titleTC": "得勝挑戰（帕奇利茲與鐵啞鈴）",
+      "startAt": "2026-08-13T00:00:00+08:00",
+      "endAt": "2026-08-27T23:59:00+08:00",
+      "note": "神奇選卡限時活動，有機會獲得帕奇利茲與鐵啞鈴特別繪製卡。",
+      "url": "https://www.pokemon-zone.com/schedule/"
     },
     {
       "id": "hisuian-zorua-drop-2026-07",
