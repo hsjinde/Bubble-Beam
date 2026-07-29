@@ -95,7 +95,7 @@ const decks: Deck[] = [
   {
     id: "mega-blaziken-greninja",
     name: "Mega火焰雞ex 甲賀忍蛙",
-    tier: "S",
+    tier: "A",
     energy: ["Fire"],
     difficulty: "中",
     summary:
@@ -326,7 +326,7 @@ const decks: Deck[] = [
   {
     id: "milotic-eevee-ex",
     name: "美納斯ex 伊布ex",
-    tier: "A",
+    tier: "S",
     energy: ["Water"],
     difficulty: "易",
     summary: "水系高機動控場：伊布ex 靈活抽牌與展開，美納斯ex 封鎖對方道具與特定招式掌控節奏。",
@@ -419,7 +419,7 @@ const decks: Deck[] = [
   {
     id: "greninja-mega-absol",
     name: "甲賀忍蛙 Mega阿勃梭魯ex",
-    tier: "A",
+    tier: "S",
     energy: ["Darkness"],
     difficulty: "難",
     summary: "干擾與削血控制：甲賀忍蛙飛水手裏劍點傷，Mega阿勃梭魯ex 打亂對方手牌與資源。",
@@ -703,7 +703,7 @@ const decks: Deck[] = [
   {
     id: "magnezone-ex-magnezone",
     name: "自爆磁怪ex 自爆磁怪",
-    tier: "C",
+    tier: "B",
     energy: ["Lightning"],
     difficulty: "中",
     summary:

@@ -14,6 +14,7 @@
 //   node <skill-path>/scripts/fetch-tier-list.mjs --json <tmp>/tier-list.json
 //   node scripts/update-meta.mjs <tmp>/tier-list.json
 import { readFile, writeFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
 
 const input = process.argv[2];
 if (!input) {
@@ -130,7 +131,7 @@ const map = JSON.parse(
 
 // 排名變化的基準：現有的 meta.json 就是「上一次」的快照，覆寫前先讀進來比對。
 // 沒有既有檔案時（第一次產生）整批不寫 previousRank，前端才不會把 20 列全標成新進榜。
-const metaPath = new URL("../src/data/meta.json", import.meta.url);
+const metaPath = fileURLToPath(new URL("../src/data/meta.json", import.meta.url));
 let previous = null;
 try {
   previous = JSON.parse(await readFile(metaPath, "utf8"));
