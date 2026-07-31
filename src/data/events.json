@@ -17,8 +17,16 @@
     "",
     "type：set（新擴充包）／drop（Drop 活動）／wonderpick／ranked（排名賽季）／other"
   ],
-  "updatedAt": "2026-07-29",
+  "updatedAt": "2026-07-31",
   "events": [
+    {
+      "id": "b4a-expansion",
+      "type": "set",
+      "title": "B4a Expansion",
+      "startAt": "2026-08-27T01:00:00Z",
+      "note": "B4『天空的支配者』強化擴充包（Mini Expansion）。",
+      "url": "https://www.pokemon-zone.com/schedule/"
+    },
     {
       "id": "b4-ruler-of-the-skies",
       "type": "set",
