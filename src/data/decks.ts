@@ -95,7 +95,7 @@ const decks: Deck[] = [
   {
     id: "mega-blaziken-greninja",
     name: "Mega火焰雞ex 甲賀忍蛙",
-    tier: "A",
+    tier: "S",
     energy: ["Fire"],
     difficulty: "中",
     summary:
@@ -146,7 +146,7 @@ const decks: Deck[] = [
     tier: "A",
     energy: ["Grass"],
     difficulty: "中",
-    summary: "勝率頂尖的草系牌組：神奇糖果直上 Mega蜥蜴王ex，甲賀忍蛙特性每回合補刀。",
+    summary: "高使用率的草系主力：神奇糖果直上 Mega蜥蜴王ex，甲賀忍蛙特性每回合補刀。",
     cards: [
       { id: "B3-5", count: 2 }, // Treecko
       { id: "B3-6", count: 1 }, // Grovyle
@@ -165,7 +165,7 @@ const decks: Deck[] = [
       { id: "A2-148", count: 1 }, // Rocky Helmet
     ],
     strategy: [
-      "核心思路：目前勝率極高的主流牌組。主線戰術是用神奇糖果讓木守宮直接跳級成 Mega蜥蜴王ex 擔綱主砲；副線則讓呱呱泡蛙同樣走糖果路線進化出甲賀忍蛙，靠特性「飛水手裏劍」每回合免費輸出點傷，幫主砲把擊殺線壓進射程。",
+      "核心思路：賽場使用率名列前段的草系主流牌組。主線戰術是用神奇糖果讓木守宮直接跳級成 Mega蜥蜴王ex 擔綱主砲；副線則讓呱呱泡蛙同樣走糖果路線進化出甲賀忍蛙，靠特性「飛水手裏劍」每回合免費輸出點傷，幫主砲把擊殺線壓進射程。",
       "展開順序：起手將木守宮鋪在場上並開始附能，第二隻基礎寶可夢優先選擇呱呱泡蛙。手上有神奇糖果時需算準進化時機：寧可多沉住氣一回合，也不要將糖果浪費在容易被對方威脅的位置。費洛美螂與多麗米亞可用於前期頂線或靈活補位。",
       "注意事項：",
       "- 甲賀忍蛙的削血能創造「本回合 90 傷害、下回合手裏劍 20 補刀」等算計，務必算清兩回合內的總傷害再決定攻擊目標。",
@@ -607,7 +607,7 @@ const decks: Deck[] = [
   {
     id: "mega-lucario-solo",
     name: "Mega路卡利歐ex 純格極速",
-    tier: "C",
+    tier: "B",
     energy: ["Fighting"],
     difficulty: "易",
     summary:
@@ -890,7 +890,7 @@ const decks: Deck[] = [
   {
     id: "hydreigon-mega-sableye",
     name: "三首惡龍 Mega勾魂眼ex",
-    tier: "C",
+    tier: "B",
     energy: ["Darkness"],
     difficulty: "難",
     summary: "三階惡龍收割網：三首惡龍滿破壞力群體點傷，搭配 Mega勾魂眼ex 偷取資源並徹底擊垮後排。",
