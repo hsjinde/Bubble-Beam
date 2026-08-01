@@ -125,3 +125,40 @@ def render(path, scale=1.0, angle=0.0, blur=0.0, fmt="image/png", quality=0.92):
 def convert_to_png(path):
     """Decode any Chromium-supported image format to PNG bytes."""
     return render(path, fmt="image/png")
+
+
+_MATRIX_PAGE = """<!doctype html>
+<html><body><div id="out">PENDING</div><script>
+try {
+  const m = %(matrix)s, scale = %(scale)d, quiet = %(quiet)d;
+  const n = m.length, size = (n + quiet * 2) * scale;
+  const canvas = document.createElement('canvas');
+  canvas.width = size; canvas.height = size;
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, size, size);
+  ctx.fillStyle = '#000000';
+  for (let r = 0; r < n; r++)
+    for (let c = 0; c < n; c++)
+      if (m[r][c] === 1)
+        ctx.fillRect((c + quiet) * scale, (r + quiet) * scale, scale, scale);
+  document.getElementById('out').textContent = canvas.toDataURL('image/png');
+} catch (e) { document.getElementById('out').textContent = 'ERROR ' + e; }
+</script></body></html>
+"""
+
+
+def render_matrix(matrix, scale=8, quiet=4):
+    """Render a boolean module matrix to PNG using Chromium's own canvas.
+
+    Independent of imageio's hand-written PNG encoder, so comparing the two
+    outputs isolates whether a scanning problem lives in our rendering layer.
+    """
+    import json
+    rows = [[1 if v else 0 for v in row] for row in matrix]
+    html = _MATRIX_PAGE % {
+        "matrix": json.dumps(rows),
+        "scale": int(scale),
+        "quiet": int(quiet),
+    }
+    data_url = _run_page(html)
+    return base64.b64decode(data_url.split(",", 1)[1])
