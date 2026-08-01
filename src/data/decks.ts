@@ -4,11 +4,10 @@ const decks: Deck[] = [
   {
     id: "miraidon-magnezone",
     name: "密勒頓ex 自爆磁怪",
-    tier: "S",
+    tier: "C",
     energy: ["Lightning"],
     difficulty: "中",
-    summary:
-      "當前賽場登場率第一的雷系快攻：前期由密勒頓ex 發動速攻壓制，中後期由自爆磁怪接管戰局作為重砲主力。",
+    summary: "雷系快攻：前期由密勒頓ex 發動速攻壓制，中後期由自爆磁怪接管戰局作為重砲主力。",
     cards: [
       { id: "B3a-19", count: 2 }, // Miraidon ex
       { id: "A3a-21", count: 2 }, // Zeraora
@@ -26,7 +25,7 @@ const decks: Deck[] = [
       { id: "A2-147", count: 1 }, // Giant Cape
     ],
     strategy: [
-      "核心思路：目前賽場使用率最高的主流牌組（約佔 10%）。雙主線打法——前期利用密勒頓ex 與捷拉奧拉發動快速進攻、搶先拿下首分；中後期則將小磁怪一路進化成自爆磁怪，接棒擔任主要輸出。雙線進攻能力讓對手難以同時兼顧與防守。",
+      "核心思路：雙主線打法——前期利用密勒頓ex 與捷拉奧拉發動快速進攻、搶先拿下首分；中後期則將小磁怪一路進化成自爆磁怪，接棒擔任主要輸出。雙線進攻能力讓對手難以同時兼顧與防守。",
       "展開順序：開局優先尋找密勒頓ex 站前場帶動節奏，同時在備戰區鋪設小磁怪進行培養。手牌透過博士的研究與精靈球快速過濾，確保進化鏈穩定流暢。在自爆磁怪就位之前，避免讓密勒頓ex 孤軍深入遭圍毆，必要時可讓捷拉奧拉前場頂線。",
       "注意事項：",
       "- 巨大披風能為前場主攻手增加 20 HP，常能讓對手多花一個回合才能擊倒，戰術價值極高。",
@@ -51,7 +50,7 @@ const decks: Deck[] = [
   {
     id: "suicune-baxcalibur",
     name: "水君ex 戟脊龍",
-    tier: "S",
+    tier: "C",
     energy: ["Water"],
     difficulty: "中",
     summary: "水系中速主流：以戟脊龍為填能引擎，帶動水君ex 與古劍豹ex 連續發動重砲打擊。",
@@ -95,11 +94,10 @@ const decks: Deck[] = [
   {
     id: "mega-blaziken-greninja",
     name: "Mega火焰雞ex 甲賀忍蛙",
-    tier: "S",
+    tier: "C",
     energy: ["Fire"],
     difficulty: "中",
-    summary:
-      "S級火系重砲：神奇糖果直上 Mega火焰雞ex 高爆發輸出，配合甲賀忍蛙飛水手裏劍遠程補刀削血。",
+    summary: "火系重砲：神奇糖果直上 Mega火焰雞ex 高爆發輸出，配合甲賀忍蛙飛水手裏劍遠程補刀削血。",
     cards: [
       { id: "B1-33", count: 2 }, // Torchic
       { id: "B1-34", count: 1 }, // Combusken
@@ -190,7 +188,7 @@ const decks: Deck[] = [
   {
     id: "zoroark-mega-absol",
     name: "索羅亞克ex Mega阿勃梭魯ex",
-    tier: "A",
+    tier: "C",
     energy: ["Darkness"],
     difficulty: "難",
     summary: "惡系變幻戰術：索羅亞克ex 特性複製對手招式，搭配 Mega阿勃梭魯ex 破壞棄牌區與手牌。",
@@ -237,7 +235,7 @@ const decks: Deck[] = [
   {
     id: "mega-altaria-espeon",
     name: "Mega七夕青鳥ex 太陽伊布",
-    tier: "A",
+    tier: "S",
     energy: ["Psychic"],
     difficulty: "中",
     summary: "超能高耐久防守：Mega七夕青鳥ex 龐大 HP 搭配太陽伊布治癒與彈性戰術，後發制人。",
@@ -464,7 +462,7 @@ const decks: Deck[] = [
   {
     id: "mega-lucario",
     name: "Mega路卡利歐ex",
-    tier: "A",
+    tier: "C",
     energy: ["Fighting"],
     difficulty: "易",
     summary: "格鬥直球對決：Mega路卡利歐ex 單核主砲＋滿配干擾與防護道具。",
@@ -488,7 +486,7 @@ const decks: Deck[] = [
       { id: "B3-154", count: 1 }, // Arena of Antiquity
     ],
     strategy: [
-      "核心思路：結構最單純的一套——把 Mega路卡利歐ex 立起來，然後一路揍過去。副攻擊手（飛腿郎、基格爾德）與大量單張工具卡（岩石頭盔、防護斗篷、太古的鬥技場）讓這套牌在單核之外仍有應對彈性。對雷系牌組有天然的弱點壓制，是它在現環境站穩腳步的主因。",
+      "核心思路：結構最單純的一套——把 Mega路卡利歐ex 立起來，然後一路揍過去。副攻擊手（飛腿郎、基格爾德）與大量單張工具卡（岩石頭盔、防護斗篷、太古的鬥技場）讓這套牌在單核之外仍有應對彈性。對雷系牌組有天然的弱點壓制。",
       "展開順序：利歐路開局落地、柯爾妮（Korrina）幫你穩定找到進化線。兩張 Mega路卡利歐ex 讓你不怕第一隻被處理；X速度與撤退管理確保主砲永遠打在最划算的目標上。",
       "注意事項：",
       "- 對局中最重要的問題是「對面誰能一擊打死我的主砲」——把防護道具留給那個回合。",
