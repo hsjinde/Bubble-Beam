@@ -609,6 +609,76 @@
     "nameEN": "Wallace",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/68.webp"
   },
+  "B4-10": {
+    "id": "B4-10",
+    "nameEN": "Combee",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_019710_00_MITSUHONEY_C.webp"
+  },
+  "B4-11": {
+    "id": "B4-11",
+    "nameEN": "Vespiquen ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_019720_00_BEEQUENex_RR.webp"
+  },
+  "B4-34": {
+    "id": "B4-34",
+    "nameEN": "Carvanha",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_019950_00_KIBANHA_C.webp"
+  },
+  "B4-35": {
+    "id": "B4-35",
+    "nameEN": "Mega Sharpedo ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_019960_00_MEGASAMEHADERex_RR.webp"
+  },
+  "B4-61": {
+    "id": "B4-61",
+    "nameEN": "Heliolisk",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_020220_00_ELEZARD_U.webp"
+  },
+  "B4-68": {
+    "id": "B4-68",
+    "nameEN": "Mime Jr.",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_020290_00_MANENE_R.webp"
+  },
+  "B4-100": {
+    "id": "B4-100",
+    "nameEN": "Absol",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_020610_00_ABSOL_U.webp"
+  },
+  "B4-116": {
+    "id": "B4-116",
+    "nameEN": "Dratini",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_020770_00_MINIRYU_C.webp"
+  },
+  "B4-117": {
+    "id": "B4-117",
+    "nameEN": "Dragonair",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_020780_00_HAKURYU_U.webp"
+  },
+  "B4-120": {
+    "id": "B4-120",
+    "nameEN": "Mega Rayquaza ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_020810_00_MEGARAYQUAZAex_RR.webp"
+  },
+  "B4-124": {
+    "id": "B4-124",
+    "nameEN": "Drampa",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_020850_00_JIJILONG_U.webp"
+  },
+  "B4-148": {
+    "id": "B4-148",
+    "nameEN": "Deceptive Needle",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_10_001520_00_INCHIKIBARI_U.webp"
+  },
+  "B4-154": {
+    "id": "B4-154",
+    "nameEN": "Soothing Shore",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_10_001580_00_IYASHINOUMIBE_U.webp"
+  },
+  "B4-155": {
+    "id": "B4-155",
+    "nameEN": "Rainbow Cave",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_10_001590_00_NIJIIRONODOUKUTSU_U.webp"
+  },
   "PROMO-A-2": {
     "id": "PROMO-A-2",
     "nameEN": "X Speed",
