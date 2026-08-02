@@ -579,6 +579,11 @@
     "nameEN": "Professor Turo",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/73.webp"
   },
+  "B3a-74": {
+    "id": "B3a-74",
+    "nameEN": "Area Zero",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/74.webp"
+  },
   "B3b-15": {
     "id": "B3b-15",
     "nameEN": "Milotic ex",
@@ -634,15 +639,15 @@
     "nameEN": "Heliolisk",
     "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_020220_00_ELEZARD_U.webp"
   },
-  "B4-68": {
-    "id": "B4-68",
-    "nameEN": "Mime Jr.",
-    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_020290_00_MANENE_R.webp"
-  },
   "B4-100": {
     "id": "B4-100",
     "nameEN": "Absol",
     "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_020610_00_ABSOL_U.webp"
+  },
+  "B4-103": {
+    "id": "B4-103",
+    "nameEN": "Hoopa ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_020640_00_HOOPAex_RR.webp"
   },
   "B4-116": {
     "id": "B4-116",

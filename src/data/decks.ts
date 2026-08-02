@@ -280,7 +280,7 @@ const decks: Deck[] = [
   {
     id: "indeedee-giratina",
     name: "愛管侍ex 騎拉帝納ex",
-    tier: "A",
+    tier: "C",
     energy: ["Psychic"],
     difficulty: "中",
     summary: "超能控場加速：愛管侍ex 特性加速供能與恢復血量，養出騎拉帝納ex 毀滅級爆發毀滅戰線。",
@@ -324,7 +324,7 @@ const decks: Deck[] = [
   {
     id: "milotic-eevee-ex",
     name: "美納斯ex 伊布ex",
-    tier: "S",
+    tier: "C",
     energy: ["Water"],
     difficulty: "易",
     summary: "水系高機動控場：伊布ex 靈活抽牌與展開，美納斯ex 封鎖對方道具與特定招式掌控節奏。",
@@ -370,7 +370,7 @@ const decks: Deck[] = [
   {
     id: "giratina-darkrai",
     name: "騎拉帝納ex 達克萊伊ex",
-    tier: "A",
+    tier: "C",
     energy: ["Psychic", "Darkness"],
     difficulty: "難",
     summary: "雙神重砲點傷：達克萊伊ex 特性每回合放置傷害指示物，騎拉帝納ex 在後期一擊必殺收割。",
@@ -417,7 +417,7 @@ const decks: Deck[] = [
   {
     id: "greninja-mega-absol",
     name: "甲賀忍蛙 Mega阿勃梭魯ex",
-    tier: "S",
+    tier: "C",
     energy: ["Darkness"],
     difficulty: "難",
     summary: "干擾與削血控制：甲賀忍蛙飛水手裏劍點傷，Mega阿勃梭魯ex 打亂對方手牌與資源。",
@@ -512,7 +512,7 @@ const decks: Deck[] = [
   {
     id: "mega-manectric-zeraora",
     name: "Mega雷電獸ex 捷拉奧拉",
-    tier: "B",
+    tier: "C",
     energy: ["Lightning"],
     difficulty: "易",
     summary: "雷系極速打擊：Mega雷電獸ex 快速爆發填能，捷拉奧拉隨時狙擊對手後排殘血單位。",
@@ -605,7 +605,7 @@ const decks: Deck[] = [
   {
     id: "mega-lucario-solo",
     name: "Mega路卡利歐ex 純格極速",
-    tier: "B",
+    tier: "C",
     energy: ["Fighting"],
     difficulty: "易",
     summary:
@@ -701,7 +701,7 @@ const decks: Deck[] = [
   {
     id: "magnezone-ex-magnezone",
     name: "自爆磁怪ex 自爆磁怪",
-    tier: "B",
+    tier: "C",
     energy: ["Lightning"],
     difficulty: "中",
     summary:
@@ -888,7 +888,7 @@ const decks: Deck[] = [
   {
     id: "hydreigon-mega-sableye",
     name: "三首惡龍 Mega勾魂眼ex",
-    tier: "B",
+    tier: "C",
     energy: ["Darkness"],
     difficulty: "難",
     summary: "三階惡龍收割網：三首惡龍滿破壞力群體點傷，搭配 Mega勾魂眼ex 偷取資源並徹底擊垮後排。",
