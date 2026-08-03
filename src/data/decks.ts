@@ -50,7 +50,7 @@ const decks: Deck[] = [
   {
     id: "suicune-baxcalibur",
     name: "水君ex 戟脊龍",
-    tier: "C",
+    tier: "B",
     energy: ["Water"],
     difficulty: "中",
     summary: "水系中速主流：以戟脊龍為填能引擎，帶動水君ex 與古劍豹ex 連續發動重砲打擊。",
@@ -141,7 +141,7 @@ const decks: Deck[] = [
   {
     id: "mega-sceptile-greninja",
     name: "Mega蜥蜴王ex 甲賀忍蛙",
-    tier: "A",
+    tier: "B",
     energy: ["Grass"],
     difficulty: "中",
     summary: "高使用率的草系主力：神奇糖果直上 Mega蜥蜴王ex，甲賀忍蛙特性每回合補刀。",
