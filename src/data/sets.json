@@ -234,5 +234,15 @@
     "packs": [
       "Everyday Wonders"
     ]
+  },
+  {
+    "code": "B4",
+    "series": "B",
+    "releaseDate": "2026-07-30",
+    "count": 233,
+    "nameEN": "Rulers of the Skies",
+    "packs": [
+      "Rulers of the Skies"
+    ]
   }
 ]

@@ -38,8 +38,10 @@ function formatDate(iso: string): string {
 }
 
 function EventCard({ event, now }: { event: GameEvent; now: number }) {
-  const days = daysUntil(event.endAt ?? event.startAt, now);
   const isUpcoming = Date.parse(event.startAt) > now;
+  // 還沒開始的數到「開始日」，進行中的數到「結束日」——兩者一律數 endAt 的話，
+  // 8/9 開始、8/16 結束的活動會在 8/3 顯示成「13 天後開始」（那是到結束日的天數）。
+  const days = daysUntil(isUpcoming ? event.startAt : (event.endAt ?? event.startAt), now);
   return (
     <li className="rounded-xl border border-guide-tint bg-guide-surface p-4 shadow-xs">
       <div className="flex flex-wrap items-center gap-2">

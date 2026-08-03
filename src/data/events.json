@@ -15,17 +15,78 @@
     "  3. 過期的活動不必刪：前端會自動依現在時間分到「已結束」，或直接不顯示。",
     "  4. updatedAt 每次改動都要更新，前端會把它顯示出來，讓讀者知道清單新不新。",
     "",
+    "已知陷阱：Pokemon Zone 的 /schedule/ 與 /events/ 兩頁對 drop／wonderpick 的「結束日」",
+    "常常不一致（2026-08-03 實測：Mega Houndoom drop 一頁寫 8/22、另一頁寫 8/29；",
+    "Pachirisu & Beldum wonder pick 一頁 8/26、另一頁 9/2）。多半是「對戰／抽卡開放期」與",
+    "「任務獎勵領取期」兩段時間被不同區塊各取一段。同站兩頁打架也算打架，判不出來就整筆不收。",
+    "",
     "type：set（新擴充包）／drop（Drop 活動）／wonderpick／ranked（排名賽季）／other"
   ],
-  "updatedAt": "2026-07-31",
+  "updatedAt": "2026-08-03",
   "events": [
     {
       "id": "b4a-expansion",
       "type": "set",
       "title": "B4a Expansion",
       "startAt": "2026-08-27T01:00:00Z",
-      "note": "B4『天空的支配者』強化擴充包（Mini Expansion）。",
-      "url": "https://www.pokemon-zone.com/schedule/"
+      "note": "B4『天空的支配者』強化擴充包（Mini Expansion）。官方尚未公布卡表，發售日由社群資料庫推得（台灣時間 8/27 上午）。",
+      "url": "https://www.pokemon-zone.com/sets/b4a/"
+    },
+    {
+      "id": "deluxe-pack-ex-rerun-2026-08",
+      "type": "other",
+      "title": "Deluxe Pack: ex returns",
+      "startAt": "2026-08-14T00:00:00+08:00",
+      "endAt": "2026-08-21T23:59:00+08:00",
+      "note": "豪華包 ex 復刻登場兩週，內含全圖鑑支援者等高稀有度卡。",
+      "url": "https://ptcgpocket.gg/deluxe-pack-ex-b4-august-2026-rerun/"
+    },
+    {
+      "id": "ranked-season-16",
+      "type": "ranked",
+      "title": "Ranked Match Season 16（B4）",
+      "startAt": "2026-08-12T00:00:00+08:00",
+      "endAt": "2026-08-26T23:59:00+08:00",
+      "note": "第 16 賽季排名賽，B4『天空的支配者』環境開打（台灣時間 8/12 下午兩點開始）。",
+      "url": "https://ptcgpocket.gg/ranked-match-season-b4-ranking-guide-all-rewards/"
+    },
+    {
+      "id": "community-week-missions-2026-08",
+      "type": "other",
+      "title": "Community Week Missions",
+      "startAt": "2026-08-09T00:00:00+08:00",
+      "endAt": "2026-08-16T23:59:00+08:00",
+      "note": "為期一週的社群任務，完成可拿包款沙漏、閃耀星塵與商店券。",
+      "url": "https://ptcgpocket.gg/community-week-missions-4/"
+    },
+    {
+      "id": "ruler-of-the-skies-emblem-2026-08",
+      "type": "other",
+      "title": "Ruler of the Skies Emblem Event",
+      "titleTC": "天空的支配者 徽章對戰活動",
+      "startAt": "2026-08-03T00:00:00+08:00",
+      "endAt": "2026-08-13T23:59:00+08:00",
+      "note": "玩家對戰活動，累積勝場可獲得天空的支配者限定主題徽章與閃耀星塵。",
+      "url": "https://game8.co/games/Pokemon-TCG-Pocket/archives/483037"
+    },
+    {
+      "id": "summer-event-missions-2026-07",
+      "type": "other",
+      "title": "Summer Event Missions",
+      "titleTC": "夏日活動任務",
+      "startAt": "2026-07-31T00:00:00+08:00",
+      "endAt": "2026-08-09T23:59:00+08:00",
+      "note": "配合 B4 發售推出的夏日特別任務與登入獎勵，可解鎖點賞包與包款沙漏。",
+      "url": "https://game8.co/games/Pokemon-TCG-Pocket/archives/483037"
+    },
+    {
+      "id": "elite-deck-gift-missions-3-2026-07",
+      "type": "other",
+      "title": "Elite Deck Gift Missions 3 & Handy Card Collection Missions",
+      "startAt": "2026-07-31T00:00:00+08:00",
+      "endAt": "2026-10-28T23:59:00+08:00",
+      "note": "長期任務，可領到 Mega Lucario ex 與 Hitmonchan ex 的鬥系牌組，以及 Leaf、Sabrina、Red 等訓練家卡。",
+      "url": "https://game8.co/games/Pokemon-TCG-Pocket/archives/483037"
     },
     {
       "id": "b4-ruler-of-the-skies",
@@ -35,55 +96,6 @@
       "startAt": "2026-07-30T01:00:00Z",
       "note": "第八個主要擴充包，Mega Rayquaza ex 登場；同步加入牌組 2D 條碼分享功能。",
       "url": "https://www.pokemon.com/us/news/pokemon-tcg-pocket-ruler-of-the-skies-expansion-coming-soon"
-    },
-    {
-      "id": "summer-event-missions-2026-07",
-      "type": "other",
-      "title": "Summer Event Missions",
-      "titleTC": "夏日活動任務",
-      "startAt": "2026-07-30T00:00:00+08:00",
-      "endAt": "2026-08-06T23:59:00+08:00",
-      "note": "配合 B4 發售推出的夏日特別任務，可解鎖包款沙漏與各式獎勵。",
-      "url": "https://www.pokemon.com/us/news/pokemon-tcg-pocket-ruler-of-the-skies-expansion-coming-soon"
-    },
-    {
-      "id": "ranked-season-16",
-      "type": "ranked",
-      "title": "Ranked Match Season 16（B4）",
-      "startAt": "2026-07-30T00:00:00+08:00",
-      "endAt": "2026-08-13T23:59:00+08:00",
-      "note": "第 16 賽季排名賽，B4『天空的支配者』環境全新開打。",
-      "url": "https://www.pokemon-zone.com/schedule/"
-    },
-    {
-      "id": "ruler-of-the-skies-emblem-2026-08",
-      "type": "other",
-      "title": "Ruler of the Skies Emblem Event",
-      "titleTC": "天空的支配者 徽章對戰活動",
-      "startAt": "2026-08-01T00:00:00+08:00",
-      "endAt": "2026-08-15T23:59:00+08:00",
-      "note": "玩家對戰活動，累積勝場可獲得天空的支配者限定主題徽章與沙漏。",
-      "url": "https://www.pokemon.com/us/news/pokemon-tcg-pocket-ruler-of-the-skies-expansion-coming-soon"
-    },
-    {
-      "id": "mega-houndoom-ex-drop-2026-08",
-      "type": "drop",
-      "title": "Mega Houndoom ex Drop Event",
-      "titleTC": "超級黑魯加 ex Drop 活動",
-      "startAt": "2026-08-13T00:00:00+08:00",
-      "endAt": "2026-08-23T23:59:00+08:00",
-      "note": "單人對戰活動，挑戰超級黑魯加主題牌組換取 B 系列 Vol.11 點賞包與限定卡。",
-      "url": "https://game8.co/games/Pokemon-TCG-Pocket/archives/608923"
-    },
-    {
-      "id": "wonder-pick-pachirisu-beldum-2026-08",
-      "type": "wonderpick",
-      "title": "Wonder Pick Event (Pachirisu & Beldum)",
-      "titleTC": "得勝挑戰（帕奇利茲與鐵啞鈴）",
-      "startAt": "2026-08-13T00:00:00+08:00",
-      "endAt": "2026-08-27T23:59:00+08:00",
-      "note": "神奇選卡限時活動，有機會獲得帕奇利茲與鐵啞鈴特別繪製卡。",
-      "url": "https://www.pokemon-zone.com/schedule/"
     },
     {
       "id": "hisuian-zorua-drop-2026-07",
@@ -101,7 +113,7 @@
       "startAt": "2026-07-15T00:00:00+08:00",
       "endAt": "2026-07-29T23:59:00+08:00",
       "note": "第 15 賽季排名賽，有專屬徽章與任務。",
-      "url": "https://www.pokemon-zone.com/schedule/"
+      "url": "https://www.serebii.net/tcgpocket/rankedmatch.shtml"
     }
   ]
 }
