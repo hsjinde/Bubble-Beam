@@ -19,20 +19,10 @@
     "nameEN": "Magneton",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/98.webp"
   },
-  "A1-110": {
-    "id": "A1-110",
-    "nameEN": "Helioptile",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/110.webp"
-  },
   "A1-154": {
     "id": "A1-154",
     "nameEN": "Hitmonlee",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/154.webp"
-  },
-  "A1-183": {
-    "id": "A1-183",
-    "nameEN": "Dratini",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/183.webp"
   },
   "A1-219": {
     "id": "A1-219",
@@ -174,15 +164,15 @@
     "nameEN": "Zeraora",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3a/21.webp"
   },
+  "A3a-64": {
+    "id": "A3a-64",
+    "nameEN": "Repel",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3a/64.webp"
+  },
   "A3b-51": {
     "id": "A3b-51",
     "nameEN": "Dratini",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3b/51.webp"
-  },
-  "A3b-53": {
-    "id": "A3b-53",
-    "nameEN": "Dragonite ex",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3b/53.webp"
   },
   "A3b-56": {
     "id": "A3b-56",
@@ -279,11 +269,6 @@
     "nameEN": "Heatmor",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/44.webp"
   },
-  "B1-52": {
-    "id": "B1-52",
-    "nameEN": "Mega Gyarados ex",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/52.webp"
-  },
   "B1-80": {
     "id": "B1-80",
     "nameEN": "Eiscue",
@@ -358,11 +343,6 @@
     "id": "B1-226",
     "nameEN": "Lisia",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/226.webp"
-  },
-  "B1a-13": {
-    "id": "B1a-13",
-    "nameEN": "Charizard",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1a/13.webp"
   },
   "B1a-14": {
     "id": "B1a-14",
@@ -554,11 +534,6 @@
     "nameEN": "Korrina",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/149.webp"
   },
-  "B3-150": {
-    "id": "B3-150",
-    "nameEN": "Cabbie",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/150.webp"
-  },
   "B3-153": {
     "id": "B3-153",
     "nameEN": "Fragrant Forest",
@@ -584,20 +559,10 @@
     "nameEN": "Roaring Moon",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/47.webp"
   },
-  "B3a-53": {
-    "id": "B3a-53",
-    "nameEN": "Walking Wake",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/53.webp"
-  },
   "B3a-54": {
     "id": "B3a-54",
     "nameEN": "Gouging Fire",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/54.webp"
-  },
-  "B3a-55": {
-    "id": "B3a-55",
-    "nameEN": "Raging Bolt",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/55.webp"
   },
   "B3a-69": {
     "id": "B3a-69",
@@ -669,10 +634,20 @@
     "nameEN": "Mega Sharpedo ex",
     "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_019960_00_MEGASAMEHADERex_RR.webp"
   },
+  "B4-60": {
+    "id": "B4-60",
+    "nameEN": "Helioptile",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_020210_00_ERIKITERU_C.webp"
+  },
   "B4-61": {
     "id": "B4-61",
     "nameEN": "Heliolisk",
     "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_020220_00_ELEZARD_U.webp"
+  },
+  "B4-74": {
+    "id": "B4-74",
+    "nameEN": "Wynaut",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_020350_00_SOHNANO_R.webp"
   },
   "B4-100": {
     "id": "B4-100",

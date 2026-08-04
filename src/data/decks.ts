@@ -188,7 +188,7 @@ const decks: Deck[] = [
   {
     id: "zoroark-mega-absol",
     name: "索羅亞克ex Mega阿勃梭魯ex",
-    tier: "C",
+    tier: "B",
     energy: ["Darkness"],
     difficulty: "難",
     summary: "惡系變幻戰術：索羅亞克ex 特性複製對手招式，搭配 Mega阿勃梭魯ex 破壞棄牌區與手牌。",
@@ -235,7 +235,7 @@ const decks: Deck[] = [
   {
     id: "mega-altaria-espeon",
     name: "Mega七夕青鳥ex 太陽伊布",
-    tier: "S",
+    tier: "A",
     energy: ["Psychic"],
     difficulty: "中",
     summary: "超能高耐久防守：Mega七夕青鳥ex 龐大 HP 搭配太陽伊布治癒與彈性戰術，後發制人。",
@@ -462,7 +462,7 @@ const decks: Deck[] = [
   {
     id: "mega-lucario",
     name: "Mega路卡利歐ex",
-    tier: "C",
+    tier: "B",
     energy: ["Fighting"],
     difficulty: "易",
     summary: "格鬥直球對決：Mega路卡利歐ex 單核主砲＋滿配干擾與防護道具。",
