@@ -16,21 +16,36 @@
     "  4. updatedAt 每次改動都要更新，前端會把它顯示出來，讓讀者知道清單新不新。",
     "",
     "已知陷阱：Pokemon Zone 的 /schedule/ 與 /events/ 兩頁對 drop／wonderpick 的「結束日」",
-    "常常不一致（2026-08-03 實測：Mega Houndoom drop 一頁寫 8/22、另一頁寫 8/29；",
-    "Pachirisu & Beldum wonder pick 一頁 8/26、另一頁 9/2）。多半是「對戰／抽卡開放期」與",
-    "「任務獎勵領取期」兩段時間被不同區塊各取一段。同站兩頁打架也算打架，判不出來就整筆不收。",
+    "常常差 7 天（Mega Houndoom drop 8/22 vs 8/29、Pachirisu & Beldum wonder pick 8/26 vs 9/2）。",
+    "2026-08-04 從單一活動頁判出語意：頁首標的是含後續領取的「整體視窗」（長版），",
+    "頁內各區塊（Drop 的 Beginner～Expert 關卡、Wonder Pick 的 Bonus/Chansey Pick 與任務）",
+    "標的是真正能行動的期間（短版）。endAt 一律收短版，長版寫進 note。",
+    "這條讀法是拿當時進行中的 Growlithe and Emolga wonder pick 驗出來的：2026-08-04 那天，",
+    "它的頁首還寫 7/19 - 8/5「Ends in 21h」，頁內三個區塊卻都寫 7/19 - 7/29 且自標 Has ended，",
+    "而 skill 文件 2026-07-24 的實測記錄裡，Game8 對這筆也記 7/29——短版才是真正還能抽卡的期間。",
+    "反過來 ptcgpocket.gg 當時仍把它標成 LIVE，那是跟著長版走，別拿它當「還能參加」的證據。",
+    "兩個數字都只在同一頁出現時才這樣判；連語意都分不出來就整筆不收。",
     "",
     "type：set（新擴充包）／drop（Drop 活動）／wonderpick／ranked（排名賽季）／other"
   ],
-  "updatedAt": "2026-08-03",
+  "updatedAt": "2026-08-04",
   "events": [
     {
       "id": "b4a-expansion",
       "type": "set",
       "title": "B4a Expansion",
       "startAt": "2026-08-27T01:00:00Z",
-      "note": "B4『天空的支配者』強化擴充包（Mini Expansion）。官方尚未公布卡表，發售日由社群資料庫推得（台灣時間 8/27 上午）。",
-      "url": "https://www.pokemon-zone.com/sets/b4a/"
+      "note": "B4『天空的支配者』強化擴充包（Mini Expansion）。官方尚未公布卡表與發售日；Game8 由隨機對戰賽季結束時刻推得 8/26 下午 6 點 PDT，Pokemon Zone 的 B4a 頁同樣指向這個時間點（台灣時間 8/27 上午 9 點）。",
+      "url": "https://game8.co/games/Pokemon-TCG-Pocket/archives/500900"
+    },
+    {
+      "id": "pachirisu-beldum-wonder-pick-2026-08",
+      "type": "wonderpick",
+      "title": "Pachirisu and Beldum Wonder Pick event",
+      "startAt": "2026-08-16T00:00:00+08:00",
+      "endAt": "2026-08-26T23:59:00+08:00",
+      "note": "Bonus Pick 與 Chansey Pick 可抽 Promo Pachirisu 與 Beldum，任務另給兩張保底與水水獺主題配件。抽卡與任務開放到 8/26，來源頁首把含後續領取的整體期間標到 9/2。",
+      "url": "https://www.pokemon-zone.com/events/pachirisu-beldum-wonder-pick/"
     },
     {
       "id": "deluxe-pack-ex-rerun-2026-08",
@@ -40,6 +55,15 @@
       "endAt": "2026-08-21T23:59:00+08:00",
       "note": "豪華包 ex 復刻登場兩週，內含全圖鑑支援者等高稀有度卡。",
       "url": "https://ptcgpocket.gg/deluxe-pack-ex-b4-august-2026-rerun/"
+    },
+    {
+      "id": "mega-houndoom-ex-drop-2026-08",
+      "type": "drop",
+      "title": "Mega Houndoom ex Drop event",
+      "startAt": "2026-08-12T00:00:00+08:00",
+      "endAt": "2026-08-22T23:59:00+08:00",
+      "note": "單人對戰活動，打 Houndoom 主題 CPU 牌組換 Promo Pack B 系列 Vol. 11（主打 Mega Houndoom ex）。對戰關卡與任務開放到 8/22，來源頁首把含後續領取的整體期間標到 8/29。",
+      "url": "https://www.pokemon-zone.com/events/mega-houndoom-ex-drop-event/"
     },
     {
       "id": "ranked-season-16",
