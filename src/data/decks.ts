@@ -116,7 +116,7 @@ const decks: Deck[] = [
       { id: "B2b-69", count: 1 }, // Hiking Trail
     ],
     strategy: [
-      "核心思路：環境頂級的火系爆發牌組。核心玩法是利用神奇糖果讓火稚雞直接跳級進化成 Mega火焰雞ex（Mega Blaziken ex），提供極高單體爆發打擊；備戰區同時培養甲賀忍蛙，發動特性「飛水手裏劍」每回合提供 20 點遠程點傷，協助主砲輕鬆收割對手的高血量單位。搭配火焰貼紙（Flame Patch）與登山步道（Hiking Trail）能進一步確保火能量源源不絕。",
+      "核心思路：走極端爆發路線的火系牌組。核心玩法是利用神奇糖果讓火稚雞直接跳級進化成 Mega火焰雞ex（Mega Blaziken ex），提供極高單體爆發打擊；備戰區同時培養甲賀忍蛙，發動特性「飛水手裏劍」每回合提供 20 點遠程點傷，協助主砲輕鬆收割對手的高血量單位。搭配火焰貼紙（Flame Patch）與登山步道（Hiking Trail）能進一步確保火能量源源不絕。",
       "展開順序：首回合優先起手火稚雞並進行附能，第二隻基礎寶可夢選擇呱呱泡蛙或飄浮泡泡。手上有神奇糖果時算好回合，迅速將主砲立起。前期可用飄浮泡泡進行過渡，待 Mega火焰雞ex 成型後即登場進行壓制。",
       "注意事項：",
       "- 飛水手裏劍的 20 點點傷極為關鍵，常能將敵方主力血線削至 Mega火焰雞ex 的一擊必殺區間。",
@@ -557,7 +557,7 @@ const decks: Deck[] = [
   {
     id: "mega-altaria-chingling",
     name: "Mega七夕青鳥ex 鈴噹響",
-    tier: "B",
+    tier: "C",
     energy: ["Psychic"],
     difficulty: "中",
     summary: "龍超鎖招耐久：前期鈴噹響封鎖對手道具展開，後續養出 Mega七夕青鳥ex 靠高 HP 消耗對戰。",
@@ -701,7 +701,7 @@ const decks: Deck[] = [
   {
     id: "magnezone-ex-magnezone",
     name: "自爆磁怪ex 自爆磁怪",
-    tier: "C",
+    tier: "A",
     energy: ["Lightning"],
     difficulty: "中",
     summary:

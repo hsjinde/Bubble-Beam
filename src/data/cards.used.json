@@ -144,11 +144,6 @@
     "nameEN": "Leaf Cape",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/147.webp"
   },
-  "A3-152": {
-    "id": "A3-152",
-    "nameEN": "Lana",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/152.webp"
-  },
   "A3a-7": {
     "id": "A3a-7",
     "nameEN": "Pheromosa",
@@ -194,25 +189,10 @@
     "nameEN": "Gyarados",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/45.webp"
   },
-  "A4-66": {
-    "id": "A4-66",
-    "nameEN": "Pichu",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/66.webp"
-  },
-  "A4-102": {
-    "id": "A4-102",
-    "nameEN": "Hitmontop",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/102.webp"
-  },
   "A4-134": {
     "id": "A4-134",
     "nameEN": "Eevee",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/134.webp"
-  },
-  "A4-151": {
-    "id": "A4-151",
-    "nameEN": "Elemental Switch",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/151.webp"
   },
   "A4a-10": {
     "id": "A4a-10",
@@ -268,11 +248,6 @@
     "id": "B1-44",
     "nameEN": "Heatmor",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/44.webp"
-  },
-  "B1-80": {
-    "id": "B1-80",
-    "nameEN": "Eiscue",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/80.webp"
   },
   "B1-102": {
     "id": "B1-102",
