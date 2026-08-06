@@ -157,9 +157,15 @@ export const BOOKMARKS: Bookmark[] = [
  * `title`／`channel` 為 YouTube 原始資料（標題保留日文／英文原文，符合本站專有名詞慣例）；
  * 縮圖走 i.ytimg.com/vi/{id}/hqdefault.jpg，連結走 youtube.com/watch?v={id}。
  *
- * 選片依據（2026-07）：從使用者精選清單的主播出發，抓各頻道 videos 頁的觀看數／發布時間
- * 取「近期熱門」，並逐支用 YouTube oEmbed 查證存在＋取回官方標題（同時濾掉混入頻道的
- * 他遊戲影片，如 Disney Dreamlight Valley）。更新時沿用同一套查證流程，別憑印象填 id。
+ * 選片依據（2026-08 更新）：從使用者精選清單的主播出發，抓各頻道 videos 頁的觀看數／發布
+ * 時間取「近期熱門」，並逐支用 YouTube oEmbed 查證存在＋取回官方標題（同時濾掉混入頻道的
+ * 他遊戲影片，如 Disney Dreamlight Valley、Splatoon、あつ森）。更新時沿用同一套查證流程，
+ * 別憑印象填 id。
+ *
+ * 本次主播動向：HorribleGaming 仍最高產（Palette Town 都會系列）；すくると 轉以島嶼導覽為主；
+ * 涼太ぱんけーき♭ 大幅轉向 Splatoon，但仍有「街づくり」建築系列；かぴぱか create 穩定產出短片
+ * 教學；わむのスローライフっぽい 產能下降，保留其自動化經典；Haruchi create 已轉做他款遊戲，
+ * 只留仍在射程內的 Pokopia 作品。
  */
 export const VIDEOS: VideoInspiration[] = [
   // ── 城市・街景 ─────────────────────────────────────────────────
@@ -168,6 +174,14 @@ export const VIDEOS: VideoInspiration[] = [
     title: "【島紹介】ぽこポケとは思えない「サイバーパンクな街」が凄すぎる！【ぽこあポケモン】",
     channel: "すくると",
     blurb: "賽博龐克風城市島導覽，霓虹高樓的震撼範例。",
+    group: "city",
+  },
+  {
+    id: "IOSVHqn7juU",
+    title:
+      "【島紹介】配色センスが天才すぎる！ポケモンたちが暮らす街を案内してもらいました！【ぽこあポケモン】",
+    channel: "すくると",
+    blurb: "配色功力驚人的玩家城鎮導覽，學怎麼用色統一整條街。",
     group: "city",
   },
   {
@@ -186,14 +200,21 @@ export const VIDEOS: VideoInspiration[] = [
     group: "city",
   },
   {
-    id: "kLY9GwYVpWk",
-    title:
-      "Pokémon Pokopia~I STARTED A NEW CITY ISLAND!~RETRO DINER & MODERN CITY ROAD LAYOUT PREP~#1 #pokopia",
-    channel: "HorribleGaming",
-    blurb: "復古餐廳與現代城市道路佈局，大島嶼城鎮規劃示範。",
+    id: "RuvgHYT5g_U",
+    title: "【ぽこあ建築】街づくり、始めました。大きな建物が並ぶ海沿いの区画【ぽこあポケモン】",
+    channel: "涼太ぱんけーき♭",
+    blurb: "「街づくり」系列開篇，大型建築林立的海濱街區規劃。",
     group: "city",
   },
   // ── 住宅・別墅 ─────────────────────────────────────────────────
+  {
+    id: "mf4v4YZKdao",
+    title:
+      "Pokémon Pokopia~REALISTIC LUXURY APARTMENTS & INTERIOR DESIGNS~MODERN CLOUD CITY DESIGN #pokopia  #6",
+    channel: "HorribleGaming",
+    blurb: "寫實高級公寓連室內都做滿，都會住宅的質感示範。",
+    group: "house",
+  },
   {
     id: "8JHUVsq-L2Y",
     title:
@@ -203,18 +224,17 @@ export const VIDEOS: VideoInspiration[] = [
     group: "house",
   },
   {
+    id: "96hdbbHQAB0",
+    title: "【ぽこポケ】パサパサこうやの街に洋風なお家を建設すること🏠自宅づくり｜建築｜クリエイト",
+    channel: "Haruchi create",
+    blurb: "在乾荒野地帶蓋起洋風自宅，地形不討喜時的住宅解法。",
+    group: "house",
+  },
+  {
     id: "-5um9Org_Ys",
     title: "【ぽこポケ】初期地形を生かす🔰地下倉庫のある水車小屋作り",
     channel: "Haruchi create",
     blurb: "有地下倉庫的水車小屋，順著地形而建的機能住宅。",
-    group: "house",
-  },
-  {
-    id: "tEU_Az77RT0",
-    title:
-      "Pokémon Pokopia~BEGINNER PLAYER HOME STORAGE HOUSE DESIGN~BUILDING A HOME IN #pokopia~Home Design",
-    channel: "HorribleGaming",
-    blurb: "新手玩家家園＋收納屋，機能與外觀一次到位。",
     group: "house",
   },
   {
@@ -242,11 +262,10 @@ export const VIDEOS: VideoInspiration[] = [
     group: "shop",
   },
   {
-    id: "yQo5BmnfX2w",
-    title:
-      "【ぽこポケ】使い方次第で別のアイテムに！アイスクリーム屋さんの作り方＆解説【ぽこあポケモン建築】",
-    channel: "すくると",
-    blurb: "冰淇淋店做法解說，教你用道具巧手拼出小店。",
+    id: "9K2Og05Gjqc",
+    title: "【ぽこあ建築】ぽこあポケモンの世界にスターバックスを復活させてみた！【ぽこあポケモン】",
+    channel: "涼太ぱんけーき♭",
+    blurb: "把星巴克搬進遊戲，連綠色招牌與座位區都還原。",
     group: "shop",
   },
   {
@@ -257,18 +276,20 @@ export const VIDEOS: VideoInspiration[] = [
     group: "shop",
   },
   {
-    id: "GILoD4q6n5s",
-    title: "Flareon and Jolteon's Pizza Restaurant Build Guide Pokemon Pokopia",
-    channel: "MSensei NTD",
-    blurb: "火伊布與雷伊布的主題披薩餐廳，氛圍滿分的機能小店。",
+    id: "5NxZCRs0Ecs",
+    title:
+      "【ぽこポケ】ただの道が劇的に変わる！海沿いを彩る「屋台通り」の建築アイデア│建築│Pokopia",
+    channel: "かぴぱか create",
+    blurb: "海濱屋台街的做法，一條普通道路瞬間變熱鬧商圈。",
     group: "shop",
   },
   // ── 主題・地標・遊樂 ───────────────────────────────────────────
   {
-    id: "WNUGARMiE_8",
-    title: "【ぽこあポケモン】本の中から現れる「幻想的な神殿」の作り方│建築│Pokopia",
-    channel: "かぴぱか create",
-    blurb: "從書中浮現的幻想神殿，充滿故事感的主題地標。",
+    id: "KHAWKAGoYVg",
+    title:
+      "【島紹介】見たら絶対に訪れたくなる素敵な水族館を案内してもらいました！【ぽこあポケモン】",
+    channel: "すくると",
+    blurb: "玩家自製水族館導覽，大型室內主題設施的天花板。",
     group: "landmark",
   },
   {
@@ -287,19 +308,20 @@ export const VIDEOS: VideoInspiration[] = [
     group: "landmark",
   },
   {
-    id: "KBcGfIAXbsc",
+    id: "VszqWwdoqpM",
     title:
-      "【ぽこポケ】ポケカのブラッキーVMAXのお城を２０×２０で再現してみたよ！簡単に作れる｜５×５建築｜初心者",
-    channel: "わむのスローライフっぽい",
-    blurb: "再現寶可夢卡牌「月亮伊布 VMAX」暗夜城堡，帥氣度滿分。",
+      "Pokemon Pokopia Insane Team Rocket HQ and Secret Laboratory Hidden In Haunted Mansion Pokopia Build",
+    channel: "MSensei NTD",
+    blurb: "鬼屋底下藏著火箭隊基地與秘密實驗室，敘事感滿分。",
     group: "landmark",
   },
   // ── 機關・自動化 ───────────────────────────────────────────────
   {
-    id: "XuwJzDk9y8w",
-    title: "The ONLY Crafting Base You Need in Pokopia! This Build FIXES Storage",
-    channel: "zoibean",
-    blurb: "一次解決收納痛點的製作基地，機能流必看。",
+    id: "PPX-esFPq7s",
+    title:
+      "【ぽこポケ】回路基礎から木の実と野菜自動化施設づくりまで徹底解説！センサーマグマの基礎知識クロック回路と扇風機についてまるっとこの一本で理解しちゃおう【設計図付き】",
+    channel: "わむのスローライフっぽい",
+    blurb: "從電路基礎講到自動化農場，附設計圖的機關入門總整理。",
     group: "automation",
   },
   {
@@ -311,18 +333,18 @@ export const VIDEOS: VideoInspiration[] = [
     group: "automation",
   },
   {
-    id: "L_YmoChE4O4",
-    title: "【ぽこポケ】不具合を解決した野菜と木の実自動化施設の徹底解説！サラサラ岩｜クロック回路",
-    channel: "わむのスローライフっぽい",
-    blurb: "蔬菜與木之實全自動化設施徹底解說，電路機關硬核向。",
+    id: "uHzBdlva08Y",
+    title:
+      "Pokémon Pokopia~INDUSTRIAL CRAFTING & STORAGE WAREHOUSE~PALETTE TOWN MODERN CITY DESIGN~#pokopia #11",
+    channel: "HorribleGaming",
+    blurb: "工業風製作區與倉庫，把收納機能直接做成城市景觀。",
     group: "automation",
   },
   {
-    id: "53hWuG8z0Ic",
-    title:
-      "Pokémon Pokopia~POWER PLANT FACTORY BUILD DESIGN~ZAPDOS HABITAT~BUILDING A HUGE CITY~#pokopia  #5",
-    channel: "HorribleGaming",
-    blurb: "閃電鳥棲地風發電廠與現代工廠，將發電設施藝術化。",
+    id: "XuwJzDk9y8w",
+    title: "The ONLY Crafting Base You Need in Pokopia! This Build FIXES Storage",
+    channel: "zoibean",
+    blurb: "一次解決收納痛點的製作基地，機能流必看。",
     group: "automation",
   },
   // ── 自然造景 ───────────────────────────────────────────────────
@@ -343,11 +365,10 @@ export const VIDEOS: VideoInspiration[] = [
     group: "nature",
   },
   {
-    id: "qud4uVkthmY",
-    title:
-      "POKOPIA Natural Aesthetic PokéCenter &  Neighborhood Speed Build | PocoPoke Design Tutorial",
-    channel: "Lex Play",
-    blurb: "自然風寶可夢中心與街區的實作 speed build，跟著蓋。",
+    id: "Ec2pAFJDuWY",
+    title: "I Built A Jungle Camp Hideout in Pokopia (+ New Gem Hunt Event Items!)",
+    channel: "CloudySkies Gaming",
+    blurb: "叢林營地藏身處，順帶示範寶石活動的新道具怎麼用。",
     group: "nature",
   },
   {
@@ -367,18 +388,18 @@ export const VIDEOS: VideoInspiration[] = [
     group: "tips",
   },
   {
-    id: "vWWQdwB6QTc",
-    title:
-      "Overwhelmed? 12 Beginner Design Tips to Plan a Pretty & Functional Starter Base in Pokopia",
-    channel: "CloudySkies Gaming",
-    blurb: "新手入門：12 個把起始基地規劃得又美又實用的技巧。",
+    id: "xk-E14UmuMQ",
+    title: "【ぽこあポケモン】クオリティ爆発！エモすぎる「レトロな緑の電車」の作り方【神建築】",
+    channel: "かぴぱか create",
+    blurb: "復古綠皮電車做法，擺一台就撐起整個場景的氛圍。",
     group: "tips",
   },
   {
-    id: "e4lbjJgJ-LQ",
-    title: "Exotic Sableye Gem Design Hacks That Will Level Up Your Next Build | Pokopia",
-    channel: "CloudySkies Gaming",
-    blurb: "勾魂眼寶石擺設技巧與裝飾小訣竅，細節質感升級。",
+    id: "9kb5lr5zT_o",
+    title:
+      "【ぽこポケ】整地する前にみて！壊したらあかんアイテムを紹介！！【資料の活用方法も解説】こわれたアーチタイル、こわれたまちの街灯、こわれた本棚",
+    channel: "わむのスローライフっぽい",
+    blurb: "整地前必看：哪些既有物件千萬別拆，拆了就再也拿不回來。",
     group: "tips",
   },
   {
