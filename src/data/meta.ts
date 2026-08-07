@@ -1,5 +1,7 @@
 import type { MetaDeck } from "./types";
 import raw from "./meta.json" with { type: "json" };
+import limitlessMap from "./limitless-map.json" with { type: "json" };
+import { getDeck } from "./decks";
 
 export interface MetaSnapshot {
   fetchedAt: string; // ISO timestamp
@@ -8,8 +10,41 @@ export interface MetaSnapshot {
   decks: MetaDeck[];
 }
 
+/**
+ * Limitless 英文牌組名 → 策展攻略 id，與 `update-meta.mjs` 用的是同一份
+ * `limitless-map.json`。
+ *
+ * 為什麼前端要再查一次：`curatedId` 是抓取當下寫進 `meta.json` 的欄位，但寫攻略
+ * 的節奏跟排行榜的抓取週期是兩回事。今天補完 `decks.ts` 與 `limitless-map.json`，
+ * `meta.json` 那一列仍然沒有 `curatedId`，排行榜就不會長出連結——而且不報錯、
+ * 不會建置失敗，是無聲失敗。為了掛連結去重跑 `update-meta.mjs` 更糟：那會把
+ * `previousRank` 的比較基準洗成新快照，真正的升降救不回來（見 CLAUDE.md）。
+ *
+ * 所以改成讀取時補值：只補不覆寫，`meta.json` 已經有值時一律以生成檔為準，
+ * 下次正常抓取後這層就自動變成 no-op。
+ */
+const curatedIdByLimitlessName = new Map<string, string>(
+  // 檔案裡有一個 `_comment` 字串鍵，所以逐筆判斷型別；對不到 decks.ts 的 id 也不補，
+  // 連過去只會是 404。
+  Object.entries(limitlessMap as Record<string, string | { limitlessName: string }>).flatMap(
+    ([id, entry]): [string, string][] =>
+      typeof entry === "object" && getDeck(id) ? [[entry.limitlessName, id]] : [],
+  ),
+);
+
+let snapshot: MetaSnapshot | undefined;
+
 export function getMeta(): MetaSnapshot {
-  return raw as MetaSnapshot;
+  const base = raw as MetaSnapshot;
+  snapshot ??= {
+    ...base,
+    decks: base.decks.map((deck) => {
+      if (deck.curatedId) return deck;
+      const curatedId = curatedIdByLimitlessName.get(deck.name);
+      return curatedId ? { ...deck, curatedId } : deck;
+    }),
+  };
+  return snapshot;
 }
 
 /**

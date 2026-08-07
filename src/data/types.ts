@@ -120,7 +120,7 @@ export interface Deck {
   difficulty: Difficulty;
   /**
    * 列表縮圖與分享卡片要用的「門面卡」。**通常不用填**——`getHeroCardId()` 會自動推導
-   * （Mega 優先 → ex → 牌表第一張），21 套裡只有 1 套推導錯。只有當牌表同時含多張
+   * （Mega 優先 → ex → 牌表第一張），26 套裡只有 2 套推導錯。只有當牌表同時含多張
    * Mega／ex、而排在前面的那張不是牌組名主角時才需要明寫。
    */
   heroCardId?: string;

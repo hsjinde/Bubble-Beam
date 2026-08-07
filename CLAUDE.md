@@ -70,7 +70,9 @@ TanStack Start 檔案式路由。`src/routes/README.md` 有完整慣例表——
 | `src/data/cards.json`         | 完整卡片索引 `id → {nameEN, imageUrl}`，3520 張。**只給腳本查表用，前端不要 import** | `scripts/fetch-cards.mjs` 生成  |
 | `src/data/cards.used.json`    | 上面的子集，只含本站實際引用的約 100 張。`cards.ts` import 的是這個                  | `scripts/subset-cards.mjs` 生成 |
 
-`update-meta.mjs` 用 `limitless-map.json` 的 `limitlessName` 反查，替有攻略的排行列打上 `curatedId`，前端才知道哪一列可以連到詳情頁。新增策展牌組時，`decks.ts` 和 `limitless-map.json` 要一起改，否則該牌組在排行榜上不會出現連結。
+`update-meta.mjs` 用 `limitless-map.json` 的 `limitlessName` 反查，替有攻略的排行列打上 `curatedId`，前端才知道哪一列可以連到詳情頁。新增策展牌組時，`decks.ts` 和 `limitless-map.json` 要一起改，否則該牌組不會有連結。
+
+`curatedId` 是抓取當下烤進 `meta.json` 的，但寫攻略的節奏跟抓排行榜的週期是兩回事，所以 `meta.ts` 的 `getMeta()` 在讀取時用同一份 `limitless-map.json` **補（不覆寫）**缺的 `curatedId`：新攻略當天就有連結，不必為了掛連結去重跑 `update-meta.mjs`（那會洗掉 `previousRank` 的基準）。這層是刻意的冗餘，不要當成重複邏輯刪掉；下次正常抓取後它自動變成 no-op。
 
 **生成檔不要手改**：`cards.json`、`cards.used.json`、`meta.json`、`routeTree.gen.ts`。
 
