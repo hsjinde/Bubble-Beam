@@ -26,12 +26,12 @@ export const Route = createFileRoute("/pokopia/habitats")({
       {
         name: "description",
         content:
-          "《Pokémon Pokopia》棲息地反查：輸入想招來的寶可夢，直接查出該蓋哪些棲息地。收錄全 209 個棲息地與 294 種寶可夢。",
+          "《Pokémon Pokopia》棲息地反查：輸入想招來的寶可夢，直接查出該蓋哪些棲息地、要準備什麼材料。收錄本篇與 DLC「冒泡泡海底的城鎮」共 245 個棲息地與 344 種寶可夢。",
       },
       { property: "og:title", content: "Pokopia 棲息地反查 — Piplup!" },
       {
         property: "og:description",
-        content: "輸入想招來的寶可夢，查出該蓋哪些棲息地。全 209 個棲息地一覽。",
+        content: "輸入想招來的寶可夢，查出該蓋哪些棲息地與建造材料。含 DLC 共 245 個棲息地一覽。",
       },
     ],
   }),
@@ -74,8 +74,9 @@ function HabitatsRoute() {
         </Link>
         <h1 className="mt-3 text-3xl font-bold text-pokopia-ink sm:text-4xl">棲息地反查</h1>
         <p className="mt-2 max-w-2xl text-pokopia-ink-soft">
-          想招來特定寶可夢，卻不知道要蓋什麼？直接搜寶可夢名字，查出牠會出沒的棲息地。
-          棲息地名稱、寶可夢名與分類為上游社群資料庫的官方繁中資料。
+          想招來特定寶可夢，卻不知道要蓋什麼？直接搜寶可夢名字，查出牠會出沒的棲息地與建造材料。
+          收錄本篇與 DLC「冒泡泡海底的城鎮」，棲息地名稱、寶可夢名與分類為上游社群資料庫的繁中資料；
+          少數 DLC 材料上游尚未在地化，會顯示英文原名。
         </p>
       </header>
 

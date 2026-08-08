@@ -41,7 +41,15 @@ node scripts/fetch-cards.mjs                               # → src/data/cards.
 # 改完 meta.json 或 decks.ts 後重算「本站實際引用的卡片」子集
 node scripts/subset-cards.mjs                              # → src/data/cards.used.json
 node scripts/subset-cards.mjs --check                      # 只檢查是否過期（不寫檔）
+
+# 重建 /pokopia/habitats 棲息地索引（約 250 次連續 fetch，~2 分鐘）
+node scripts/fetch-habitats.mjs                            # → src/data/pokopia/habitats.json
 ```
+
+`fetch-habitats.mjs` **同時抓兩個上游**：`pokopia.pokemonhubs.com` 給「棲息地 → 出沒寶可夢」，
+`pokopiaguide.com/zh/habitat` 給建造材料（hubs 沒有這塊）。兩站是不同的粉絲翻譯、名稱對不起來，
+所以繁中名一律採 hubs，材料靠**編號（本篇）與寶可夢 slug 集合相似度（DLC）**併過去——
+腳本結尾會印出未配對清單，改完解析邏輯要看那份清單有沒有暴增。
 
 `subset-cards.mjs` 已掛在 `package.json` 的 `prebuild`，`npm run build` 會自動重跑，
 所以正式建置產物一定是最新的。手動在 dev 下改資料時才需要自己跑一次。

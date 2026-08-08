@@ -62,8 +62,16 @@ function HabitatCard({ habitat }: { habitat: Habitat }) {
         />
       )}
       <div className="p-3">
-        <p className="text-xs font-medium text-pokopia-ink-soft">
+        <p className="flex items-center gap-1.5 text-xs font-medium text-pokopia-ink-soft">
           No.{String(habitat.no).padStart(3, "0")}
+          {/* DLC 另外從 No.001 重編號，不標的話兩套編號在同一頁會互相冒充。
+              配色走 accent／on-accent 這組：accent 字疊 highlight 底在淺色只有
+              4.19:1，這種 10px 級的小字沒過 AA。 */}
+          {habitat.dlc && (
+            <span className="rounded-full bg-pokopia-accent px-1.5 py-px text-[0.65rem] font-bold text-pokopia-on-accent">
+              DLC
+            </span>
+          )}
         </p>
         <p className="font-semibold text-pokopia-ink">{habitat.name}</p>
         <ul className="mt-2 flex flex-wrap items-center gap-1.5">
@@ -74,6 +82,21 @@ function HabitatCard({ habitat }: { habitat: Habitat }) {
             </li>
           ))}
         </ul>
+        {habitat.materials && (
+          <div className="mt-3 border-t border-pokopia-tint pt-2">
+            <p className="text-[0.7rem] font-bold text-pokopia-ink-soft">建造材料</p>
+            <ul className="mt-1 flex flex-wrap gap-1">
+              {habitat.materials.map((m) => (
+                <li
+                  key={m.name}
+                  className="rounded-md bg-pokopia-highlight px-1.5 py-0.5 text-xs text-pokopia-ink"
+                >
+                  {m.name} ×{m.qty}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </li>
   );
