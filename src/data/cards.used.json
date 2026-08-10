@@ -49,11 +49,6 @@
     "nameEN": "Vaporeon",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1a/19.webp"
   },
-  "A2-17": {
-    "id": "A2-17",
-    "nameEN": "Combee",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/17.webp"
-  },
   "A2-18": {
     "id": "A2-18",
     "nameEN": "Vespiquen",
@@ -98,6 +93,16 @@
     "id": "A2a-72",
     "nameEN": "Irida",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2a/72.webp"
+  },
+  "A2b-5": {
+    "id": "A2b-5",
+    "nameEN": "Sprigatito",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2b/5.webp"
+  },
+  "A2b-7": {
+    "id": "A2b-7",
+    "nameEN": "Meowscarada",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2b/7.webp"
   },
   "A2b-8": {
     "id": "A2b-8",
@@ -164,11 +169,6 @@
     "nameEN": "Repel",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3a/64.webp"
   },
-  "A3b-51": {
-    "id": "A3b-51",
-    "nameEN": "Dratini",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3b/51.webp"
-  },
   "A3b-56": {
     "id": "A3b-56",
     "nameEN": "Eevee ex",
@@ -188,6 +188,11 @@
     "id": "A4-45",
     "nameEN": "Gyarados",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/45.webp"
+  },
+  "A4-102": {
+    "id": "A4-102",
+    "nameEN": "Hitmontop",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/102.webp"
   },
   "A4-134": {
     "id": "A4-134",
@@ -389,6 +394,16 @@
     "nameEN": "Peculiar Plaza",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/155.webp"
   },
+  "B2a-2": {
+    "id": "B2a-2",
+    "nameEN": "Floragato",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2a/2.webp"
+  },
+  "B2a-3": {
+    "id": "B2a-3",
+    "nameEN": "Meowscarada ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2a/3.webp"
+  },
   "B2a-34": {
     "id": "B2a-34",
     "nameEN": "Frigibax",
@@ -463,6 +478,11 @@
     "id": "B3-54",
     "nameEN": "Magnezone ex",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/54.webp"
+  },
+  "B3-78": {
+    "id": "B3-78",
+    "nameEN": "Bonsly",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/78.webp"
   },
   "B3-79": {
     "id": "B3-79",
@@ -648,11 +668,6 @@
     "id": "B4-120",
     "nameEN": "Mega Rayquaza ex",
     "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_020810_00_MEGARAYQUAZAex_RR.webp"
-  },
-  "B4-124": {
-    "id": "B4-124",
-    "nameEN": "Drampa",
-    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_020850_00_JIJILONG_U.webp"
   },
   "B4-148": {
     "id": "B4-148",

@@ -3,7 +3,7 @@
 給下一個接手的人（Claude Code 或 `agy`）。這份檔案記錄目前的 UI／前端品質狀態與待辦，
 每輪工作結束時更新它，不要讓它過期。
 
-最後更新：2026-07-27
+最後更新：2026-08-10
 
 ---
 
@@ -390,6 +390,18 @@ placeholder `slate-500` 4.76:1、不加 `focus:outline-none`），不要重新�
 - **雙模式對比度實測結果**：
   - `/decks`（含展開列）、`/decks/$deckId`、`/decks/schedule`、`/pokopia`（含篩選與詳情）、`/pokopia/videos`、`/pokopia/habitats`、`/no-such-page` (404) 等 7 頁雙模式 14 次量測，`failCount` **全數為 0**。
 
+### 11. 排行榜資料更新（2026-08-10）
+
+純資料輪，沒有動 UI。`meta.json` 重跑（對比基準 2026-08-06：6 升 5 降 6 持平 3 新進），
+`decks.ts` 依 Wilson 下界改了 5 套的 tier（蜂女王 S→A、Mega雷電獸光電傘蜥 A→B、
+Mega路卡利歐 B→A、索羅亞克 B→A、自爆磁怪密勒頓 C→B），`cards.used.json` 重算成 143 張。
+攻略文案逐條核對過**沒有需要改的**——`hoopa-mega-absol` 的「Wilson 排名最高」仍是第 1、
+`vespiquen-shuckle` 的「使用率最高的草系」7.92% 仍是全表最高，掉 tier 不等於掉使用率。
+
+**下輪注意**：`limitless-map.json` 的 `slug` 欄位不是純裝飾。Limitless 目前有 11 組
+同名不同 slug 的原型（`Mega Lucario ex Lucario` 有 n=2510 與 n=7 兩列），
+只用 `limitlessName` 比對會抓到小樣本那筆、把 tier 算成 D。
+`update-meta.mjs` 自己有「同名取樣本大者」的去重，但**手動比對 tier 時要記得用 slug 收斂**。
 
 ### 沒有 PRODUCT.md
 

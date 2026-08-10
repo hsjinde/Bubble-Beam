@@ -188,7 +188,7 @@ const decks: Deck[] = [
   {
     id: "zoroark-mega-absol",
     name: "索羅亞克ex Mega阿勃梭魯ex",
-    tier: "B",
+    tier: "A",
     energy: ["Darkness"],
     difficulty: "難",
     summary: "惡系變幻戰術：索羅亞克ex 特性複製對手招式，搭配 Mega阿勃梭魯ex 破壞棄牌區與手牌。",
@@ -462,7 +462,7 @@ const decks: Deck[] = [
   {
     id: "mega-lucario",
     name: "Mega路卡利歐ex",
-    tier: "B",
+    tier: "A",
     energy: ["Fighting"],
     difficulty: "易",
     summary: "格鬥直球對決：Mega路卡利歐ex 單核主砲＋滿配干擾與防護道具。",
@@ -655,7 +655,7 @@ const decks: Deck[] = [
   {
     id: "magnezone-miraidon",
     name: "自爆磁怪 密勒頓ex",
-    tier: "C",
+    tier: "B",
     energy: ["Lightning"],
     difficulty: "中",
     summary: "磁怪重砲主攻：以自爆磁怪作為主要火力，花舞鳥與密勒頓ex 前期爭取充能時間並穩固防線。",
@@ -1025,7 +1025,7 @@ const decks: Deck[] = [
   {
     id: "vespiquen-shuckle",
     name: "蜂女王ex 壺壺ex",
-    tier: "S",
+    tier: "A",
     energy: ["Grass"],
     difficulty: "中",
     summary: "使用率最高的草系一線牌：蜂女王ex 主線輸出，樹葉披風與芬芳森林堆出誇張耐久。",
@@ -1117,7 +1117,7 @@ const decks: Deck[] = [
   {
     id: "mega-manectric-heliolisk",
     name: "Mega雷電獸ex 光電傘蜥",
-    tier: "A",
+    tier: "B",
     energy: ["Lightning"],
     difficulty: "中",
     summary:
