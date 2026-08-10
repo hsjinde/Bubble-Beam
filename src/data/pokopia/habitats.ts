@@ -4,7 +4,7 @@ import type { Habitat, HabitatPokemon } from "./types";
 /**
  * 棲息地資料與「寶可夢 → 棲息地」反查索引。
  *
- * **這個模組刻意獨立於 `pokopia.ts`**：habitats.json 約 88 KB，只有 /pokopia/habitats
+ * **這個模組刻意獨立於 `pokopia.ts`**：habitats.json 約 146 KB，只有 /pokopia/habitats
  * 需要它。放進 pokopia.ts 的話 /pokopia 主頁也會一起載入（同一個 chunk），
  * 這正是 cards.json 那次踩過的坑（見 CLAUDE.md）。只讓該路由 import，
  * 讓路由層 code-split 把它切出去。
@@ -59,9 +59,15 @@ for (const entry of byName.values()) {
   for (const id of entry.formIds) idToEntry.set(id, entry);
 }
 
-/** 全部寶可夢，依圖鑑編號排序（沒有編號的變種排在最後）。 */
+/**
+ * 全部寶可夢，依圖鑑編號排序（沒有編號的變種排在最後）。
+ *
+ * DLC 的圖鑑另外從 #001 起算，跟本篇的編號會撞，所以只出沒在 DLC 棲息地的
+ * 那批一律排在本篇之後，避免搜尋結果裡冒出兩隻同號的。兩邊的物種目前沒有交集。
+ */
 export const pokemonList: PokemonHabitats[] = [...byName.values()].sort(
   (a, b) =>
+    Number(a.habitats.every((h) => h.dlc)) - Number(b.habitats.every((h) => h.dlc)) ||
     (a.pokemon.no || Number.MAX_SAFE_INTEGER) - (b.pokemon.no || Number.MAX_SAFE_INTEGER) ||
     a.pokemon.id.localeCompare(b.pokemon.id),
 );
@@ -71,10 +77,12 @@ export function getPokemonHabitats(pokemonId: string): PokemonHabitats | undefin
 }
 
 const HABITAT_IMAGE_BASE = "https://pokopiadex.com/images/habitats/";
+/** DLC 棲息地圖在 pokopiadex 上是 404，只有 hubs 自己有一份。 */
+const DLC_HABITAT_IMAGE_BASE = "https://pokopia.pokemonhubs.com/assets/images/habitats/";
 const SPRITE_BASE = "https://pokopiadex.com/images/pokemon/sprites/";
 
 export function habitatImageUrl(habitat: Habitat): string {
-  return HABITAT_IMAGE_BASE + habitat.image;
+  return (habitat.dlc ? DLC_HABITAT_IMAGE_BASE : HABITAT_IMAGE_BASE) + habitat.image;
 }
 
 /** sprite 檔名就是圖鑑 slug，不需要另外存一份網址。 */

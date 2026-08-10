@@ -62,17 +62,41 @@ export interface HabitatPokemon {
   category: string;
 }
 
+/**
+ * 建造一個棲息地所需的材料。來源是 pokopiaguide.com——hubs 完全沒有這塊資料，
+ * 所以 habitats.json 是兩個上游併出來的（見 scripts/fetch-habitats.mjs）。
+ */
+export interface HabitatMaterial {
+  /**
+   * 材料名。本篇是繁中；**DLC 那批上游尚未在地化，會是英文原字串**
+   * （`seafloor grass`、`small coral`…），簡中版一樣沒翻，不是本站漏翻。
+   */
+  name: string;
+  qty: number;
+}
+
 /** 一個棲息地（來源：scripts/fetch-habitats.mjs 產生的 habitats.json）。 */
 export interface Habitat {
   /** 上游 slug，穩定 id，也用於 deep-link 的 ?h= 參數 */
   id: string;
-  /** 上游編號（No.001） */
+  /**
+   * 上游編號（No.001）。**全表不唯一**——上游把 DLC 從 No.001 重新編號，
+   * 所以要當 key 用時得配 `dlc` 一起看，穩定的唯一鍵只有 `id`。
+   */
   no: number;
   /** 官方繁中名 */
   name: string;
-  /** 圖片路徑，相對於 pokopiadex 的 /images/habitats/（例：`habitat_ui/tall-grass-001.png`） */
+  /**
+   * 圖片路徑。本篇相對於 pokopiadex 的 /images/habitats/（`habitat_ui/tall-grass-001.png`），
+   * DLC 那批 pokopiadex 上沒有（404），改相對於 hubs 自己的資產目錄——
+   * 基底由 `dlc` 分流，見 habitats.ts 的 habitatImageUrl。
+   */
   image: string;
+  /** DLC「冒泡泡海底的城鎮」新增的海底棲息地 */
+  dlc?: boolean;
   pokemon: HabitatPokemon[];
+  /** 建造材料；兩邊上游對不起來時為 undefined（245 筆中有 17 筆查無） */
+  materials?: HabitatMaterial[];
 }
 
 /** 外部書籤連結（皆為查證過的真實網址）。 */
