@@ -51,6 +51,13 @@ node scripts/fetch-habitats.mjs                            # → src/data/pokopi
 所以繁中名一律採 hubs，材料靠**編號（本篇）與寶可夢 slug 集合相似度（DLC）**併過去——
 腳本結尾會印出未配對清單，改完解析邏輯要看那份清單有沒有暴增。
 
+DLC「泡泡海底」那 36 筆的材料**不走 guide**：guide 只收錄其中 20 筆，而且有數筆漏列
+（獨木舟碼頭少了 Floating logs、被丟棄的寶物少了 Big treasure chest），所以改由手寫的
+`src/data/pokopia/habitat-materials.json` **覆寫**——它是這條管線裡唯一手動維護的檔，
+比照 `limitless-map.json`，資料來源與繁中／英文的取捨規則寫在檔案自己的 `_comment` 裡。
+本篇 209 筆仍然完全以 guide 為準。DLC 出新區域時要自己補這個檔，`fetch-habitats.mjs`
+結尾會把「overlay 對不到的 slug」與「最後仍然沒有材料的 DLC」印出來。
+
 `subset-cards.mjs` 已掛在 `package.json` 的 `prebuild`，`npm run build` 會自動重跑，
 所以正式建置產物一定是最新的。手動在 dev 下改資料時才需要自己跑一次。
 

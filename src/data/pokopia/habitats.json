@@ -6873,7 +6873,7 @@
     ],
     "materials": [
       {
-        "name": "seafloor grass",
+        "name": "Seabed tall grass",
         "qty": 4
       }
     ]
@@ -6906,15 +6906,15 @@
     ],
     "materials": [
       {
-        "name": "seafloor grass",
+        "name": "Seabed tall grass",
         "qty": 4
       },
       {
-        "name": "small coral",
+        "name": "Small coral",
         "qty": 1
       },
       {
-        "name": "tall coral",
+        "name": "Tall coral",
         "qty": 1
       }
     ]
@@ -6950,6 +6950,12 @@
         "name": "螢光魚",
         "category": "飛翅魚寶可夢"
       }
+    ],
+    "materials": [
+      {
+        "name": "Seabed flowers",
+        "qty": 4
+      }
     ]
   },
   {
@@ -6980,8 +6986,12 @@
     ],
     "materials": [
       {
-        "name": "colorful coral",
+        "name": "Colorful corals",
         "qty": 1
+      },
+      {
+        "name": "Seabed flowers",
+        "qty": 4
       }
     ]
   },
@@ -7007,11 +7017,15 @@
     ],
     "materials": [
       {
-        "name": "chimney rock",
+        "name": "Seabed flowers",
+        "qty": 4
+      },
+      {
+        "name": "Chimney rocks",
         "qty": 1
       },
       {
-        "name": "long seaweed",
+        "name": "Lush seaweed",
         "qty": 2
       }
     ]
@@ -7038,8 +7052,12 @@
     ],
     "materials": [
       {
-        "name": "net",
+        "name": "Netting",
         "qty": 4
+      },
+      {
+        "name": "Lush seaweed",
+        "qty": 2
       }
     ]
   },
@@ -7077,15 +7095,15 @@
     ],
     "materials": [
       {
-        "name": "colorful coral",
+        "name": "Small coral",
         "qty": 1
       },
       {
-        "name": "small coral",
+        "name": "Tall coral",
         "qty": 1
       },
       {
-        "name": "tall coral",
+        "name": "Colorful corals",
         "qty": 1
       }
     ]
@@ -7106,12 +7124,12 @@
     ],
     "materials": [
       {
-        "name": "sand hill",
-        "qty": 1
+        "name": "Seabed tall grass",
+        "qty": 4
       },
       {
-        "name": "seafloor grass",
-        "qty": 4
+        "name": "Sandpile",
+        "qty": 1
       }
     ]
   },
@@ -7143,11 +7161,11 @@
     ],
     "materials": [
       {
-        "name": "sand hill",
+        "name": "Sandpile",
         "qty": 1
       },
       {
-        "name": "sand play set",
+        "name": "Sand toys",
         "qty": 1
       }
     ]
@@ -7174,7 +7192,7 @@
     ],
     "materials": [
       {
-        "name": "sand hill",
+        "name": "Tabletop mic",
         "qty": 1
       },
       {
@@ -7182,7 +7200,7 @@
         "qty": 1
       },
       {
-        "name": "tabletop microphone",
+        "name": "Sandpile",
         "qty": 1
       }
     ]
@@ -7199,6 +7217,24 @@
         "no": 10,
         "name": "大力鱷",
         "category": "大顎寶可夢"
+      }
+    ],
+    "materials": [
+      {
+        "name": "Gold Teeth",
+        "qty": 1
+      },
+      {
+        "name": "沙包",
+        "qty": 1
+      },
+      {
+        "name": "桌子（任意）",
+        "qty": 1
+      },
+      {
+        "name": "Sandpile",
+        "qty": 1
       }
     ]
   },
@@ -7230,7 +7266,7 @@
     ],
     "materials": [
       {
-        "name": "sea moss",
+        "name": "Sea moss",
         "qty": 4
       }
     ]
@@ -7251,12 +7287,12 @@
     ],
     "materials": [
       {
-        "name": "hot rock",
-        "qty": 1
+        "name": "Sea moss",
+        "qty": 4
       },
       {
-        "name": "sea moss",
-        "qty": 4
+        "name": "Molten rock",
+        "qty": 1
       }
     ]
   },
@@ -7282,20 +7318,20 @@
     ],
     "materials": [
       {
-        "name": "chimney rock",
-        "qty": 1
-      },
-      {
-        "name": "sea moss",
-        "qty": 4
-      },
-      {
         "name": "木桶",
         "qty": 1
       },
       {
         "name": "提燈",
         "qty": 1
+      },
+      {
+        "name": "Chimney rocks",
+        "qty": 1
+      },
+      {
+        "name": "Sea moss",
+        "qty": 4
       }
     ]
   },
@@ -7321,11 +7357,7 @@
     ],
     "materials": [
       {
-        "name": "chimney rock",
-        "qty": 1
-      },
-      {
-        "name": "handcart",
+        "name": "Traffic cone",
         "qty": 1
       },
       {
@@ -7333,7 +7365,11 @@
         "qty": 1
       },
       {
-        "name": "pole traffic cone",
+        "name": "Wheelbarrow",
+        "qty": 1
+      },
+      {
+        "name": "Chimney rocks",
         "qty": 1
       }
     ]
@@ -7360,11 +7396,15 @@
     ],
     "materials": [
       {
-        "name": "trash can (any)",
+        "name": "垃圾袋",
         "qty": 1
       },
       {
-        "name": "trash bag",
+        "name": "垃圾桶（任意）",
+        "qty": 1
+      },
+      {
+        "name": "Big treasure chest",
         "qty": 1
       }
     ]
@@ -7394,6 +7434,24 @@
         "name": "破破舵輪",
         "category": "碎藻寶可夢"
       }
+    ],
+    "materials": [
+      {
+        "name": "船舵",
+        "qty": 1
+      },
+      {
+        "name": "木箱",
+        "qty": 1
+      },
+      {
+        "name": "Big treasure chest",
+        "qty": 1
+      },
+      {
+        "name": "Bottled ship",
+        "qty": 1
+      }
     ]
   },
   {
@@ -7415,6 +7473,20 @@
         "name": "超壞星",
         "category": "非星寶可夢"
       }
+    ],
+    "materials": [
+      {
+        "name": "提燈",
+        "qty": 1
+      },
+      {
+        "name": "Big treasure chest",
+        "qty": 1
+      },
+      {
+        "name": "Sparkling jewelry",
+        "qty": 1
+      }
     ]
   },
   {
@@ -7429,6 +7501,20 @@
         "no": 19,
         "name": "泥泥鰍",
         "category": "鬚魚寶可夢"
+      }
+    ],
+    "materials": [
+      {
+        "name": "Small coral",
+        "qty": 1
+      },
+      {
+        "name": "Lampion",
+        "qty": 1
+      },
+      {
+        "name": "Seashell seat",
+        "qty": 1
       }
     ]
   },
@@ -7486,6 +7572,20 @@
         "name": "保母曼波",
         "category": "看護寶可夢"
       }
+    ],
+    "materials": [
+      {
+        "name": "Sparkling jewelry",
+        "qty": 1
+      },
+      {
+        "name": "Bottled ship",
+        "qty": 1
+      },
+      {
+        "name": "Marine chest",
+        "qty": 1
+      }
     ]
   },
   {
@@ -7506,6 +7606,20 @@
         "no": 43,
         "name": "咬咬龜",
         "category": "咬住寶可夢"
+      }
+    ],
+    "materials": [
+      {
+        "name": "桌子（任意）",
+        "qty": 1
+      },
+      {
+        "name": "Blender",
+        "qty": 1
+      },
+      {
+        "name": "盤裝食物",
+        "qty": 1
       }
     ]
   },
@@ -7537,11 +7651,15 @@
     ],
     "materials": [
       {
-        "name": "light (any)",
+        "name": "燈光（任意）",
         "qty": 1
       },
       {
         "name": "人偶（任意）",
+        "qty": 1
+      },
+      {
+        "name": "Cushion bed",
         "qty": 1
       }
     ]
@@ -7578,6 +7696,10 @@
         "qty": 1
       },
       {
+        "name": "Floating logs",
+        "qty": 2
+      },
+      {
         "name": "水",
         "qty": 2
       }
@@ -7611,11 +7733,15 @@
     ],
     "materials": [
       {
-        "name": "floating Inkay",
+        "name": "Towel rack",
         "qty": 1
       },
       {
-        "name": "wall-mounted towel",
+        "name": "Windup Inkay",
+        "qty": 1
+      },
+      {
+        "name": "Floating logs",
         "qty": 1
       },
       {
@@ -7637,6 +7763,24 @@
         "name": "巨沼怪",
         "category": "沼魚寶可夢"
       }
+    ],
+    "materials": [
+      {
+        "name": "Bathtime set",
+        "qty": 1
+      },
+      {
+        "name": "Seat (wide)",
+        "qty": 1
+      },
+      {
+        "name": "Gyarados fountain",
+        "qty": 1
+      },
+      {
+        "name": "泥水",
+        "qty": 2
+      }
     ]
   },
   {
@@ -7655,7 +7799,7 @@
     ],
     "materials": [
       {
-        "name": "提燈",
+        "name": "Lampion",
         "qty": 3
       }
     ]
@@ -7672,6 +7816,16 @@
         "no": 8,
         "name": "小鋸鱷",
         "category": "大顎寶可夢"
+      }
+    ],
+    "materials": [
+      {
+        "name": "浴缸",
+        "qty": 1
+      },
+      {
+        "name": "Bubble machine",
+        "qty": 1
       }
     ]
   },
@@ -7694,6 +7848,16 @@
         "name": "花漾海獅",
         "category": "偶像寶可夢"
       }
+    ],
+    "materials": [
+      {
+        "name": "Small stage",
+        "qty": 1
+      },
+      {
+        "name": "Bubble machine",
+        "qty": 2
+      }
     ]
   },
   {
@@ -7712,11 +7876,11 @@
     ],
     "materials": [
       {
-        "name": "microphone stand",
+        "name": "Standing mic",
         "qty": 3
       },
       {
-        "name": "wireless power transmitter",
+        "name": "Wireless power-transmitter post",
         "qty": 3
       }
     ]
@@ -7733,6 +7897,20 @@
         "no": 36,
         "name": "西獅海壬",
         "category": "獨唱者寶可夢"
+      }
+    ],
+    "materials": [
+      {
+        "name": "Shell lamp",
+        "qty": 2
+      },
+      {
+        "name": "Marine chair",
+        "qty": 1
+      },
+      {
+        "name": "Harp",
+        "qty": 1
       }
     ]
   },
@@ -7755,6 +7933,28 @@
         "name": "胖嘟嘟（雄性）",
         "category": "漂浮寶可夢"
       }
+    ],
+    "materials": [
+      {
+        "name": "Push cart",
+        "qty": 1
+      },
+      {
+        "name": "Chic table",
+        "qty": 1
+      },
+      {
+        "name": "Chic chair",
+        "qty": 2
+      },
+      {
+        "name": "Tea set",
+        "qty": 1
+      },
+      {
+        "name": "Bottled ship",
+        "qty": 1
+      }
     ]
   },
   {
@@ -7769,6 +7969,32 @@
         "no": 12,
         "name": "電燈怪",
         "category": "燈寶可夢"
+      }
+    ],
+    "materials": [
+      {
+        "name": "Antique chest",
+        "qty": 1
+      },
+      {
+        "name": "Photo frame",
+        "qty": 1
+      },
+      {
+        "name": "木箱",
+        "qty": 1
+      },
+      {
+        "name": "提燈",
+        "qty": 1
+      },
+      {
+        "name": "Sea moss",
+        "qty": 2
+      },
+      {
+        "name": "Music box",
+        "qty": 1
       }
     ]
   },
@@ -7785,6 +8011,20 @@
         "name": "刺龍王",
         "category": "龍寶可夢"
       }
+    ],
+    "materials": [
+      {
+        "name": "Marine closet",
+        "qty": 1
+      },
+      {
+        "name": "Marine dresser",
+        "qty": 1
+      },
+      {
+        "name": "Marine chair",
+        "qty": 1
+      }
     ]
   },
   {
@@ -7800,6 +8040,20 @@
         "name": "鯰魚王",
         "category": "鬚魚寶可夢"
       }
+    ],
+    "materials": [
+      {
+        "name": "Ornate partition",
+        "qty": 1
+      },
+      {
+        "name": "Ornate bed",
+        "qty": 1
+      },
+      {
+        "name": "Ornate stand",
+        "qty": 1
+      }
     ]
   },
   {
@@ -7814,6 +8068,40 @@
         "no": 7,
         "name": "寶石海星",
         "category": "謎寶可夢"
+      }
+    ],
+    "materials": [
+      {
+        "name": "展示台",
+        "qty": 6
+      },
+      {
+        "name": "Marine sofa",
+        "qty": 1
+      },
+      {
+        "name": "Decorative Great Ball",
+        "qty": 1
+      },
+      {
+        "name": "Decorative Heal Ball",
+        "qty": 1
+      },
+      {
+        "name": "Decorative Dive Ball",
+        "qty": 1
+      },
+      {
+        "name": "Decorative Net Ball",
+        "qty": 1
+      },
+      {
+        "name": "Decorative Lure Ball",
+        "qty": 1
+      },
+      {
+        "name": "Decorative Quick Ball",
+        "qty": 1
       }
     ]
   }

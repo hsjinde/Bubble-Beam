@@ -2,10 +2,11 @@
 // can answer "I want Pokémon X — which habitat attracts it?" without hitting the
 // upstream site at runtime.
 //
-// 兩個上游，各補各的：
+// 兩個上游 ＋ 一份手動資料，各補各的：
 //   pokopia.pokemonhubs.com  棲息地 → 出沒寶可夢（本篇 209 ＋ DLC 36），含圖鑑編號與分類
 //   pokopiaguide.com/zh      棲息地 → 建造材料（本篇 208 ＋ DLC 24），hubs 完全沒有這塊
-// 兩邊是不同的粉絲翻譯（hubs「岩影的草地」＝ guide「岩蔭草叢」），名稱對不起來，
+//   habitat-materials.json   DLC 36 筆的建造材料，覆寫上一行（guide 的 DLC 那批不全）
+// 前兩邊是不同的粉絲翻譯（hubs「岩影的草地」＝ guide「岩蔭草叢」），名稱對不起來，
 // 所以繁中名一律採 hubs 那份（既有資料，不改動），guide 只借材料欄位過來。
 //
 // Images are hotlinked like the buildings are, so only the path fragment is
@@ -16,12 +17,13 @@
 //
 // Usage:
 //   node scripts/fetch-habitats.mjs
-import { writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 
 const BASE = "https://pokopia.pokemonhubs.com";
 const GUIDE = "https://pokopiaguide.com/zh/habitat";
 const UA = { "user-agent": "Mozilla/5.0 (piplup-website habitat fetcher)" };
 const OUT = new URL("../src/data/pokopia/habitats.json", import.meta.url);
+const OVERLAY = new URL("../src/data/pokopia/habitat-materials.json", import.meta.url);
 const MAX_PAGES = 30; // 迴圈上限，避免上游分頁行為改變時無限抓下去
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -267,12 +269,43 @@ if (guide.length) {
     merged++;
   }
   for (const h of dlcHabitats) {
-    if (!claimed.has(h)) unmatched.push(`DLC No.${h.no} ${h.name}（guide 查無對應，無材料）`);
+    // guide 收錄不全是常態，DLC 的材料本來就以 habitat-materials.json 為準；
+    // 真的沒有材料會在第 4 步結束後另外報出來
+    if (!claimed.has(h)) unmatched.push(`DLC No.${h.no} ${h.name}（guide 查無對應）`);
   }
 
   for (const row of pool) {
     unmatched.push(`guide #${row.no} ${row.name}（hubs 查無對應，未使用）`);
   }
+}
+
+// 4. 蓋上手動維護的 DLC 材料（src/data/pokopia/habitat-materials.json）。
+//
+//    pokopiaguide 只收錄 36 筆 DLC 裡的 20 筆，而且實測有數筆漏列材料（獨木舟碼頭少了
+//    Floating logs、被丟棄的寶物少了 Big treasure chest），所以 DLC 這段是**覆寫**而非補洞；
+//    本篇仍然完全以 guide 為準。資料來源與翻譯規則寫在那個檔的 _comment 裡。
+let overlaid = 0;
+try {
+  const overlay = JSON.parse(await readFile(OVERLAY, "utf8"));
+  const byHabitatId = new Map(habitats.map((h) => [h.id, h]));
+  for (const [id, materials] of Object.entries(overlay)) {
+    if (id.startsWith("_")) continue; // _comment
+    const h = byHabitatId.get(id);
+    if (!h) {
+      // 上游改了 slug 就會走到這裡——靜靜跳過的話材料會無聲消失
+      unmatched.push(`overlay ${id}（habitats 查無此 slug，材料沒有套用）`);
+      continue;
+    }
+    h.materials = materials;
+    overlaid++;
+  }
+} catch (err) {
+  console.log(`overlay: ${err.message} — 略過手動材料，DLC 只會有 guide 那份`);
+}
+
+const dlcWithout = habitats.filter((h) => h.dlc && !h.materials?.length);
+if (dlcWithout.length) {
+  unmatched.push(...dlcWithout.map((h) => `DLC ${h.id} ${h.name}（最後仍然沒有材料）`));
 }
 
 // 本篇照編號排，DLC 自成一段接在後面（兩邊的 No. 各自從 1 起算）
@@ -283,8 +316,10 @@ habitats.sort(
 await writeFile(OUT, JSON.stringify(habitats, null, 2));
 
 const withPokemon = habitats.filter((h) => h.pokemon.length).length;
+const withMaterials = habitats.filter((h) => h.materials?.length).length;
 const species = new Set(habitats.flatMap((h) => h.pokemon.map((p) => p.id))).size;
 console.log(
-  `wrote habitats.json: ${habitats.length} habitats (${habitats.filter((h) => h.dlc).length} DLC, ${withPokemon} with pokemon, ${failed} failed), ${species} distinct species, ${merged} with materials`,
+  // guide 命中數含被 overlay 蓋掉的那批 DLC，所以 guide + overlay 會大於 withMaterials
+  `wrote habitats.json: ${habitats.length} habitats (${habitats.filter((h) => h.dlc).length} DLC, ${withPokemon} with pokemon, ${failed} failed), ${species} distinct species, ${withMaterials} with materials（guide 命中 ${merged}、overlay 覆寫 ${overlaid}，重疊部分以 overlay 為準）`,
 );
 if (unmatched.length) console.log(`未配對 ${unmatched.length} 筆：\n  ${unmatched.join("\n  ")}`);

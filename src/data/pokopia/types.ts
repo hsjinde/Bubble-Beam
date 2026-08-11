@@ -63,13 +63,14 @@ export interface HabitatPokemon {
 }
 
 /**
- * 建造一個棲息地所需的材料。來源是 pokopiaguide.com——hubs 完全沒有這塊資料，
- * 所以 habitats.json 是兩個上游併出來的（見 scripts/fetch-habitats.mjs）。
+ * 建造一個棲息地所需的材料。本篇來源是 pokopiaguide.com（hubs 完全沒有這塊資料），
+ * DLC 那 36 筆改由手寫的 habitat-materials.json 覆寫（見 scripts/fetch-habitats.mjs）。
  */
 export interface HabitatMaterial {
   /**
-   * 材料名。本篇是繁中；**DLC 那批上游尚未在地化，會是英文原字串**
-   * （`seafloor grass`、`small coral`…），簡中版一樣沒翻，不是本站漏翻。
+   * 材料名。本篇是繁中；**DLC 的海底道具沒有任何上游有繁中譯名，會是英文原字串**
+   * （`Seabed tall grass`、`Small coral`…），不是本站漏翻——只有在本篇既有詞彙裡
+   * 對得上的道具（`提燈`、`桌子（任意）`…）才會顯示繁中。
    */
   name: string;
   qty: number;
@@ -95,7 +96,7 @@ export interface Habitat {
   /** DLC「冒泡泡海底的城鎮」新增的海底棲息地 */
   dlc?: boolean;
   pokemon: HabitatPokemon[];
-  /** 建造材料；兩邊上游對不起來時為 undefined（245 筆中有 17 筆查無） */
+  /** 建造材料；上游對不起來時為 undefined（245 筆中僅剩 1 筆本篇查無） */
   materials?: HabitatMaterial[];
 }
 

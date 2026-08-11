@@ -1,0 +1,507 @@
+{
+  "_comment": "手動維護：DLC「泡泡海底」（Bubbly Basin）36 筆棲息地的建造材料，以棲息地 slug 為鍵。\n上游 pokopiaguide 只收錄其中 20 筆、且有數筆漏列材料，所以 fetch-habitats.mjs 會用這份覆寫 DLC 的 materials（本篇仍以 pokopiaguide 為準）。\n數量取自 game8 的 Bubbly Basin 總表（game8.co/games/Pokemon-Pokopia/archives/614184），與 gamewith（gamewith.jp/pocoapokemon/571139）的 items 數量逐筆對照 35/36 相符；唯一分歧的 No.33 由 Serebii 與 Dexerto 佐證 game8。\n英文名採 Serebii 道具資料庫的寫法。繁中只在有依據時才用：pokopiaguide 在同一筆棲息地給過的譯名，或 hubs /items/ 與 /en/items/ 對得上、且該譯名本來就出現在本篇材料詞彙裡。Wheelbarrow 與 Push Cart 在 hubs 同樣叫「推車」，分不出來，兩個都留英文。\nNo.27 天翻地覆的材料 guide 標成「提燈」（它的 lantern 條目），但 game8 與 Serebii 都說是 Lampion，Serebii 的 lantern 與 lampion 是兩個不同道具、該棲息地的說明也寫著 lampion——所以這裡照 Lampion 走，是刻意修正 guide 的誤標，不是漏翻。",
+  "basin-tall-grass": [
+    {
+      "name": "Seabed tall grass",
+      "qty": 4
+    }
+  ],
+  "basin-tall-grass-and-coral": [
+    {
+      "name": "Seabed tall grass",
+      "qty": 4
+    },
+    {
+      "name": "Small coral",
+      "qty": 1
+    },
+    {
+      "name": "Tall coral",
+      "qty": 1
+    }
+  ],
+  "swaying-flower-bed": [
+    {
+      "name": "Seabed flowers",
+      "qty": 4
+    }
+  ],
+  "swaying-flower-bed-and-coral": [
+    {
+      "name": "Colorful corals",
+      "qty": 1
+    },
+    {
+      "name": "Seabed flowers",
+      "qty": 4
+    }
+  ],
+  "swaying-flower-bed-and-seaweed": [
+    {
+      "name": "Seabed flowers",
+      "qty": 4
+    },
+    {
+      "name": "Chimney rocks",
+      "qty": 1
+    },
+    {
+      "name": "Lush seaweed",
+      "qty": 2
+    }
+  ],
+  "seaweed-and-netting": [
+    {
+      "name": "Netting",
+      "qty": 4
+    },
+    {
+      "name": "Lush seaweed",
+      "qty": 2
+    }
+  ],
+  "coral-congregation": [
+    {
+      "name": "Small coral",
+      "qty": 1
+    },
+    {
+      "name": "Tall coral",
+      "qty": 1
+    },
+    {
+      "name": "Colorful corals",
+      "qty": 1
+    }
+  ],
+  "sandy-basin-tall-grass": [
+    {
+      "name": "Seabed tall grass",
+      "qty": 4
+    },
+    {
+      "name": "Sandpile",
+      "qty": 1
+    }
+  ],
+  "sandy-digging-spot": [
+    {
+      "name": "Sandpile",
+      "qty": 1
+    },
+    {
+      "name": "Sand toys",
+      "qty": 1
+    }
+  ],
+  "sandy-speech": [
+    {
+      "name": "Tabletop mic",
+      "qty": 1
+    },
+    {
+      "name": "桌子（任意）",
+      "qty": 1
+    },
+    {
+      "name": "Sandpile",
+      "qty": 1
+    }
+  ],
+  "biteable-punching-bag": [
+    {
+      "name": "Gold Teeth",
+      "qty": 1
+    },
+    {
+      "name": "沙包",
+      "qty": 1
+    },
+    {
+      "name": "桌子（任意）",
+      "qty": 1
+    },
+    {
+      "name": "Sandpile",
+      "qty": 1
+    }
+  ],
+  "marine-mossy-rest-spot": [
+    {
+      "name": "Sea moss",
+      "qty": 4
+    }
+  ],
+  "molten-mossy-rest-spot": [
+    {
+      "name": "Sea moss",
+      "qty": 4
+    },
+    {
+      "name": "Molten rock",
+      "qty": 1
+    }
+  ],
+  "creepy-chimney-rocks": [
+    {
+      "name": "木桶",
+      "qty": 1
+    },
+    {
+      "name": "提燈",
+      "qty": 1
+    },
+    {
+      "name": "Chimney rocks",
+      "qty": 1
+    },
+    {
+      "name": "Sea moss",
+      "qty": 4
+    }
+  ],
+  "chimney-rocks-dig-site": [
+    {
+      "name": "Traffic cone",
+      "qty": 1
+    },
+    {
+      "name": "挖掘工具",
+      "qty": 1
+    },
+    {
+      "name": "Wheelbarrow",
+      "qty": 1
+    },
+    {
+      "name": "Chimney rocks",
+      "qty": 1
+    }
+  ],
+  "discarded-treasure": [
+    {
+      "name": "垃圾袋",
+      "qty": 1
+    },
+    {
+      "name": "垃圾桶（任意）",
+      "qty": 1
+    },
+    {
+      "name": "Big treasure chest",
+      "qty": 1
+    }
+  ],
+  "playing-sailor": [
+    {
+      "name": "船舵",
+      "qty": 1
+    },
+    {
+      "name": "木箱",
+      "qty": 1
+    },
+    {
+      "name": "Big treasure chest",
+      "qty": 1
+    },
+    {
+      "name": "Bottled ship",
+      "qty": 1
+    }
+  ],
+  "treasure-chest-and-sparkling-jewels": [
+    {
+      "name": "提燈",
+      "qty": 1
+    },
+    {
+      "name": "Big treasure chest",
+      "qty": 1
+    },
+    {
+      "name": "Sparkling jewelry",
+      "qty": 1
+    }
+  ],
+  "ocean-rest-spot": [
+    {
+      "name": "Small coral",
+      "qty": 1
+    },
+    {
+      "name": "Lampion",
+      "qty": 1
+    },
+    {
+      "name": "Seashell seat",
+      "qty": 1
+    }
+  ],
+  "marine-shop": [
+    {
+      "name": "收銀機",
+      "qty": 1
+    },
+    {
+      "name": "桌子（任意）",
+      "qty": 1
+    },
+    {
+      "name": "水",
+      "qty": 1
+    }
+  ],
+  "ocean-treasures": [
+    {
+      "name": "Sparkling jewelry",
+      "qty": 1
+    },
+    {
+      "name": "Bottled ship",
+      "qty": 1
+    },
+    {
+      "name": "Marine chest",
+      "qty": 1
+    }
+  ],
+  "smoothie-making-spot": [
+    {
+      "name": "桌子（任意）",
+      "qty": 1
+    },
+    {
+      "name": "Blender",
+      "qty": 1
+    },
+    {
+      "name": "盤裝食物",
+      "qty": 1
+    }
+  ],
+  "fluffy-relaxation": [
+    {
+      "name": "燈光（任意）",
+      "qty": 1
+    },
+    {
+      "name": "人偶（任意）",
+      "qty": 1
+    },
+    {
+      "name": "Cushion bed",
+      "qty": 1
+    }
+  ],
+  "canoe-dock": [
+    {
+      "name": "獨木舟",
+      "qty": 1
+    },
+    {
+      "name": "Floating logs",
+      "qty": 2
+    },
+    {
+      "name": "水",
+      "qty": 2
+    }
+  ],
+  "muddy-playtime": [
+    {
+      "name": "Towel rack",
+      "qty": 1
+    },
+    {
+      "name": "Windup Inkay",
+      "qty": 1
+    },
+    {
+      "name": "Floating logs",
+      "qty": 1
+    },
+    {
+      "name": "泥水",
+      "qty": 2
+    }
+  ],
+  "muddy-spa": [
+    {
+      "name": "Bathtime set",
+      "qty": 1
+    },
+    {
+      "name": "Seat (wide)",
+      "qty": 1
+    },
+    {
+      "name": "Gyarados fountain",
+      "qty": 1
+    },
+    {
+      "name": "泥水",
+      "qty": 2
+    }
+  ],
+  "topsy-turvy": [
+    {
+      "name": "Lampion",
+      "qty": 3
+    }
+  ],
+  "bubbly-bathtub": [
+    {
+      "name": "浴缸",
+      "qty": 1
+    },
+    {
+      "name": "Bubble machine",
+      "qty": 1
+    }
+  ],
+  "bubbly-stage": [
+    {
+      "name": "Small stage",
+      "qty": 1
+    },
+    {
+      "name": "Bubble machine",
+      "qty": 2
+    }
+  ],
+  "glowing-stage-for-three": [
+    {
+      "name": "Standing mic",
+      "qty": 3
+    },
+    {
+      "name": "Wireless power-transmitter post",
+      "qty": 3
+    }
+  ],
+  "elegant-concert": [
+    {
+      "name": "Shell lamp",
+      "qty": 2
+    },
+    {
+      "name": "Marine chair",
+      "qty": 1
+    },
+    {
+      "name": "Harp",
+      "qty": 1
+    }
+  ],
+  "marine-teatime": [
+    {
+      "name": "Push cart",
+      "qty": 1
+    },
+    {
+      "name": "Chic table",
+      "qty": 1
+    },
+    {
+      "name": "Chic chair",
+      "qty": 2
+    },
+    {
+      "name": "Tea set",
+      "qty": 1
+    },
+    {
+      "name": "Bottled ship",
+      "qty": 1
+    }
+  ],
+  "nostalgia-zone": [
+    {
+      "name": "Antique chest",
+      "qty": 1
+    },
+    {
+      "name": "Photo frame",
+      "qty": 1
+    },
+    {
+      "name": "木箱",
+      "qty": 1
+    },
+    {
+      "name": "提燈",
+      "qty": 1
+    },
+    {
+      "name": "Sea moss",
+      "qty": 2
+    },
+    {
+      "name": "Music box",
+      "qty": 1
+    }
+  ],
+  "marine-makeup-stand": [
+    {
+      "name": "Marine closet",
+      "qty": 1
+    },
+    {
+      "name": "Marine dresser",
+      "qty": 1
+    },
+    {
+      "name": "Marine chair",
+      "qty": 1
+    }
+  ],
+  "gorgeous-sleeping-area": [
+    {
+      "name": "Ornate partition",
+      "qty": 1
+    },
+    {
+      "name": "Ornate bed",
+      "qty": 1
+    },
+    {
+      "name": "Ornate stand",
+      "qty": 1
+    }
+  ],
+  "mermaids-gym": [
+    {
+      "name": "展示台",
+      "qty": 6
+    },
+    {
+      "name": "Marine sofa",
+      "qty": 1
+    },
+    {
+      "name": "Decorative Great Ball",
+      "qty": 1
+    },
+    {
+      "name": "Decorative Heal Ball",
+      "qty": 1
+    },
+    {
+      "name": "Decorative Dive Ball",
+      "qty": 1
+    },
+    {
+      "name": "Decorative Net Ball",
+      "qty": 1
+    },
+    {
+      "name": "Decorative Lure Ball",
+      "qty": 1
+    },
+    {
+      "name": "Decorative Quick Ball",
+      "qty": 1
+    }
+  ]
+}
