@@ -67,11 +67,7 @@ export interface HabitatPokemon {
  * DLC 那 36 筆改由手寫的 habitat-materials.json 覆寫（見 scripts/fetch-habitats.mjs）。
  */
 export interface HabitatMaterial {
-  /**
-   * 材料名。本篇是繁中；**DLC 的海底道具沒有任何上游有繁中譯名，會是英文原字串**
-   * （`Seabed tall grass`、`Small coral`…），不是本站漏翻——只有在本篇既有詞彙裡
-   * 對得上的道具（`提燈`、`桌子（任意）`…）才會顯示繁中。
-   */
+  /** 材料名（本篇與 DLC 皆已完整中文化對齊官方/社群繁中譯名）。 */
   name: string;
   qty: number;
 }

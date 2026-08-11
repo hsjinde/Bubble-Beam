@@ -6873,7 +6873,7 @@
     ],
     "materials": [
       {
-        "name": "Seabed tall grass",
+        "name": "海底草叢",
         "qty": 4
       }
     ]
@@ -6906,15 +6906,15 @@
     ],
     "materials": [
       {
-        "name": "Seabed tall grass",
+        "name": "海底草叢",
         "qty": 4
       },
       {
-        "name": "Small coral",
+        "name": "小珊瑚",
         "qty": 1
       },
       {
-        "name": "Tall coral",
+        "name": "高珊瑚",
         "qty": 1
       }
     ]
@@ -6953,7 +6953,7 @@
     ],
     "materials": [
       {
-        "name": "Seabed flowers",
+        "name": "海底花",
         "qty": 4
       }
     ]
@@ -6986,11 +6986,11 @@
     ],
     "materials": [
       {
-        "name": "Colorful corals",
+        "name": "五彩珊瑚",
         "qty": 1
       },
       {
-        "name": "Seabed flowers",
+        "name": "海底花",
         "qty": 4
       }
     ]
@@ -7017,15 +7017,15 @@
     ],
     "materials": [
       {
-        "name": "Seabed flowers",
+        "name": "海底花",
         "qty": 4
       },
       {
-        "name": "Chimney rocks",
+        "name": "煙囪岩",
         "qty": 1
       },
       {
-        "name": "Lush seaweed",
+        "name": "茂密海藻",
         "qty": 2
       }
     ]
@@ -7052,11 +7052,11 @@
     ],
     "materials": [
       {
-        "name": "Netting",
+        "name": "漁網",
         "qty": 4
       },
       {
-        "name": "Lush seaweed",
+        "name": "茂密海藻",
         "qty": 2
       }
     ]
@@ -7095,15 +7095,15 @@
     ],
     "materials": [
       {
-        "name": "Small coral",
+        "name": "小珊瑚",
         "qty": 1
       },
       {
-        "name": "Tall coral",
+        "name": "高珊瑚",
         "qty": 1
       },
       {
-        "name": "Colorful corals",
+        "name": "五彩珊瑚",
         "qty": 1
       }
     ]
@@ -7124,11 +7124,11 @@
     ],
     "materials": [
       {
-        "name": "Seabed tall grass",
+        "name": "海底草叢",
         "qty": 4
       },
       {
-        "name": "Sandpile",
+        "name": "沙丘",
         "qty": 1
       }
     ]
@@ -7161,11 +7161,11 @@
     ],
     "materials": [
       {
-        "name": "Sandpile",
+        "name": "沙丘",
         "qty": 1
       },
       {
-        "name": "Sand toys",
+        "name": "玩沙套組",
         "qty": 1
       }
     ]
@@ -7192,7 +7192,7 @@
     ],
     "materials": [
       {
-        "name": "Tabletop mic",
+        "name": "桌上型麥克風",
         "qty": 1
       },
       {
@@ -7200,7 +7200,7 @@
         "qty": 1
       },
       {
-        "name": "Sandpile",
+        "name": "沙丘",
         "qty": 1
       }
     ]
@@ -7221,7 +7221,7 @@
     ],
     "materials": [
       {
-        "name": "Gold Teeth",
+        "name": "金牙齒",
         "qty": 1
       },
       {
@@ -7233,7 +7233,7 @@
         "qty": 1
       },
       {
-        "name": "Sandpile",
+        "name": "沙丘",
         "qty": 1
       }
     ]
@@ -7266,7 +7266,7 @@
     ],
     "materials": [
       {
-        "name": "Sea moss",
+        "name": "海苔蘚",
         "qty": 4
       }
     ]
@@ -7287,11 +7287,11 @@
     ],
     "materials": [
       {
-        "name": "Sea moss",
+        "name": "海苔蘚",
         "qty": 4
       },
       {
-        "name": "Molten rock",
+        "name": "熔岩岩石",
         "qty": 1
       }
     ]
@@ -7326,11 +7326,11 @@
         "qty": 1
       },
       {
-        "name": "Chimney rocks",
+        "name": "煙囪岩",
         "qty": 1
       },
       {
-        "name": "Sea moss",
+        "name": "海苔蘚",
         "qty": 4
       }
     ]
@@ -7357,7 +7357,7 @@
     ],
     "materials": [
       {
-        "name": "Traffic cone",
+        "name": "交通錐",
         "qty": 1
       },
       {
@@ -7365,11 +7365,11 @@
         "qty": 1
       },
       {
-        "name": "Wheelbarrow",
+        "name": "推車",
         "qty": 1
       },
       {
-        "name": "Chimney rocks",
+        "name": "煙囪岩",
         "qty": 1
       }
     ]
@@ -7404,7 +7404,7 @@
         "qty": 1
       },
       {
-        "name": "Big treasure chest",
+        "name": "大寶箱",
         "qty": 1
       }
     ]
@@ -7445,11 +7445,11 @@
         "qty": 1
       },
       {
-        "name": "Big treasure chest",
+        "name": "大寶箱",
         "qty": 1
       },
       {
-        "name": "Bottled ship",
+        "name": "瓶中船",
         "qty": 1
       }
     ]
@@ -7480,11 +7480,11 @@
         "qty": 1
       },
       {
-        "name": "Big treasure chest",
+        "name": "大寶箱",
         "qty": 1
       },
       {
-        "name": "Sparkling jewelry",
+        "name": "閃亮珠寶",
         "qty": 1
       }
     ]
@@ -7505,15 +7505,15 @@
     ],
     "materials": [
       {
-        "name": "Small coral",
+        "name": "小珊瑚",
         "qty": 1
       },
       {
-        "name": "Lampion",
+        "name": "提燈",
         "qty": 1
       },
       {
-        "name": "Seashell seat",
+        "name": "貝殼座椅",
         "qty": 1
       }
     ]
@@ -7575,15 +7575,15 @@
     ],
     "materials": [
       {
-        "name": "Sparkling jewelry",
+        "name": "閃亮珠寶",
         "qty": 1
       },
       {
-        "name": "Bottled ship",
+        "name": "瓶中船",
         "qty": 1
       },
       {
-        "name": "Marine chest",
+        "name": "海洋收納櫃",
         "qty": 1
       }
     ]
@@ -7614,7 +7614,7 @@
         "qty": 1
       },
       {
-        "name": "Blender",
+        "name": "果汁機",
         "qty": 1
       },
       {
@@ -7659,7 +7659,7 @@
         "qty": 1
       },
       {
-        "name": "Cushion bed",
+        "name": "靠墊床",
         "qty": 1
       }
     ]
@@ -7696,7 +7696,7 @@
         "qty": 1
       },
       {
-        "name": "Floating logs",
+        "name": "漂浮圓木",
         "qty": 2
       },
       {
@@ -7733,15 +7733,15 @@
     ],
     "materials": [
       {
-        "name": "Towel rack",
+        "name": "毛巾架",
         "qty": 1
       },
       {
-        "name": "Windup Inkay",
+        "name": "發條好喇魷",
         "qty": 1
       },
       {
-        "name": "Floating logs",
+        "name": "漂浮圓木",
         "qty": 1
       },
       {
@@ -7766,15 +7766,15 @@
     ],
     "materials": [
       {
-        "name": "Bathtime set",
+        "name": "洗澡組",
         "qty": 1
       },
       {
-        "name": "Seat (wide)",
+        "name": "椅子（長型）",
         "qty": 1
       },
       {
-        "name": "Gyarados fountain",
+        "name": "暴鯉龍噴泉",
         "qty": 1
       },
       {
@@ -7799,7 +7799,7 @@
     ],
     "materials": [
       {
-        "name": "Lampion",
+        "name": "提燈",
         "qty": 3
       }
     ]
@@ -7824,7 +7824,7 @@
         "qty": 1
       },
       {
-        "name": "Bubble machine",
+        "name": "泡泡機",
         "qty": 1
       }
     ]
@@ -7851,11 +7851,11 @@
     ],
     "materials": [
       {
-        "name": "Small stage",
+        "name": "小舞台",
         "qty": 1
       },
       {
-        "name": "Bubble machine",
+        "name": "泡泡機",
         "qty": 2
       }
     ]
@@ -7876,11 +7876,11 @@
     ],
     "materials": [
       {
-        "name": "Standing mic",
+        "name": "立式麥克風",
         "qty": 3
       },
       {
-        "name": "Wireless power-transmitter post",
+        "name": "無線電力傳輸器",
         "qty": 3
       }
     ]
@@ -7901,15 +7901,15 @@
     ],
     "materials": [
       {
-        "name": "Shell lamp",
+        "name": "貝殼燈",
         "qty": 2
       },
       {
-        "name": "Marine chair",
+        "name": "海洋椅",
         "qty": 1
       },
       {
-        "name": "Harp",
+        "name": "豎琴",
         "qty": 1
       }
     ]
@@ -7936,23 +7936,23 @@
     ],
     "materials": [
       {
-        "name": "Push cart",
+        "name": "推車",
         "qty": 1
       },
       {
-        "name": "Chic table",
+        "name": "時尚桌",
         "qty": 1
       },
       {
-        "name": "Chic chair",
+        "name": "時尚椅",
         "qty": 2
       },
       {
-        "name": "Tea set",
+        "name": "茶具組",
         "qty": 1
       },
       {
-        "name": "Bottled ship",
+        "name": "瓶中船",
         "qty": 1
       }
     ]
@@ -7973,11 +7973,11 @@
     ],
     "materials": [
       {
-        "name": "Antique chest",
+        "name": "古董木箱",
         "qty": 1
       },
       {
-        "name": "Photo frame",
+        "name": "相框",
         "qty": 1
       },
       {
@@ -7989,11 +7989,11 @@
         "qty": 1
       },
       {
-        "name": "Sea moss",
+        "name": "海苔蘚",
         "qty": 2
       },
       {
-        "name": "Music box",
+        "name": "音樂盒",
         "qty": 1
       }
     ]
@@ -8014,15 +8014,15 @@
     ],
     "materials": [
       {
-        "name": "Marine closet",
+        "name": "海洋衣櫃",
         "qty": 1
       },
       {
-        "name": "Marine dresser",
+        "name": "海洋梳妝台",
         "qty": 1
       },
       {
-        "name": "Marine chair",
+        "name": "海洋椅",
         "qty": 1
       }
     ]
@@ -8043,15 +8043,15 @@
     ],
     "materials": [
       {
-        "name": "Ornate partition",
+        "name": "華麗隔板",
         "qty": 1
       },
       {
-        "name": "Ornate bed",
+        "name": "華麗床",
         "qty": 1
       },
       {
-        "name": "Ornate stand",
+        "name": "華麗台架",
         "qty": 1
       }
     ]
@@ -8076,31 +8076,31 @@
         "qty": 6
       },
       {
-        "name": "Marine sofa",
+        "name": "海洋沙發",
         "qty": 1
       },
       {
-        "name": "Decorative Great Ball",
+        "name": "裝飾用超級球",
         "qty": 1
       },
       {
-        "name": "Decorative Heal Ball",
+        "name": "裝飾用治癒球",
         "qty": 1
       },
       {
-        "name": "Decorative Dive Ball",
+        "name": "裝飾用潛水球",
         "qty": 1
       },
       {
-        "name": "Decorative Net Ball",
+        "name": "裝飾用捕網球",
         "qty": 1
       },
       {
-        "name": "Decorative Lure Ball",
+        "name": "裝飾用誘餌球",
         "qty": 1
       },
       {
-        "name": "Decorative Quick Ball",
+        "name": "裝飾用先攻球",
         "qty": 1
       }
     ]
