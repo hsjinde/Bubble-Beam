@@ -14,13 +14,13 @@
 同日補上三項站台基礎建設（詳見下方「2026-07-23 這輪」）：兩個子站的導覽互連、
 每頁專屬的 OG 分享卡片、favicon 與 webmanifest。
 
-| 面向          | 稽核當下 | 現在           | 備註                                              |
-| ------------- | -------- | -------------- | ------------------------------------------------- |
-| Accessibility | 2/4      | 4/4            | 程式量測 WCAG AA 全過；**未經螢幕閱讀器實測**     |
-| Performance   | 2/4      | 4/4            | 卡片索引子集化                                    |
-| Theming       | 2/4      | 4/4            | 三態深色模式支援完成（系統/淺色/深色），雙模式對比 0 失敗 |
-| Responsive    | 3/4      | 4/4            | 觸控目標補齊                                      |
-| Anti-Patterns | 4/4      | 4/4            | 偵測器 0 命中，無 AI slop 特徵                    |
+| 面向          | 稽核當下 | 現在 | 備註                                                      |
+| ------------- | -------- | ---- | --------------------------------------------------------- |
+| Accessibility | 2/4      | 4/4  | 程式量測 WCAG AA 全過；**未經螢幕閱讀器實測**             |
+| Performance   | 2/4      | 4/4  | 卡片索引子集化                                            |
+| Theming       | 2/4      | 4/4  | 三態深色模式支援完成（系統/淺色/深色），雙模式對比 0 失敗 |
+| Responsive    | 3/4      | 4/4  | 觸控目標補齊                                              |
+| Anti-Patterns | 4/4      | 4/4  | 偵測器 0 命中，無 AI slop 特徵                            |
 
 相關 commit：`b6ece42`（bundle 子集化）、`4e73cf5`（a11y）。
 
@@ -402,6 +402,13 @@ Mega路卡利歐 B→A、索羅亞克 B→A、自爆磁怪密勒頓 C→B），`
 同名不同 slug 的原型（`Mega Lucario ex Lucario` 有 n=2510 與 n=7 兩列），
 只用 `limitlessName` 比對會抓到小樣本那筆、把 tier 算成 D。
 `update-meta.mjs` 自己有「同名取樣本大者」的去重，但**手動比對 tier 時要記得用 slug 收斂**。
+
+### 12. Pokopia 棲息地繁體中文化 (2026-08-11)
+
+全站 `/pokopia/habitats` 棲息地反查頁面完成 100% 繁體中文化：
+- `src/data/pokopia/habitat-materials.json`（DLC 1 泡泡海底 36 筆棲息地材料）74 種道具/材料名稱對齊官方《Pokémon Pokopia》繁中與 Pokemon Hubs / PokopiaGuide 社群標準譯名（如：`裝飾用超級球`、`發條好喇魷`、`暴鯉龍噴泉`、`桌上型麥克風`、`五彩珊瑚` 等）。
+- 重跑 `scripts/fetch-habitats.mjs`，`src/data/pokopia/habitats.json` 245 個棲息地、344 種寶可夢名、分類與建造材料已達成 0 英文殘留。
+- 更新 `src/routes/pokopia/habitats.tsx` 與 `src/data/pokopia/types.ts` 之文案與型別註解。
 
 ### 沒有 PRODUCT.md
 
