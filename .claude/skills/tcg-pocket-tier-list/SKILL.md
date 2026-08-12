@@ -75,7 +75,7 @@ curated tier drift (next section) in the same pass, then commit
 ### The two timestamps are UTC — the page shows them in Taiwan time
 
 `fetchedAt` and `previousFetchedAt` are stored as UTC ISO strings, but readers
-are in Taiwan (UTC+8). Any run after 16:00 UTC belongs to the *next* Taiwan
+are in Taiwan (UTC+8). Any run after 16:00 UTC belongs to the _next_ Taiwan
 calendar day, so slicing the raw string yields a date that looks a day stale —
 this is what "資料更新日期都沒動過" means when the pipeline clearly did run.
 The page formats both through `formatSnapshotDate()` in `src/data/meta.ts`
@@ -89,7 +89,7 @@ timezone data may not match local Node, and a server/client disagreement here
 is a hydration mismatch that dev (plain Node) won't reproduce. Taiwan has no
 DST, so the fixed offset is permanently correct.
 
-`previousFetchedAt` is the *previous* `meta.json`'s `fetchedAt`, so both dates
+`previousFetchedAt` is the _previous_ `meta.json`'s `fetchedAt`, so both dates
 collapse to the same day if the pipeline runs twice in one Taiwan day — which
 the project's CLAUDE.md already forbids for a worse reason (the second run
 wipes every real rank movement to "unchanged", unrecoverably).

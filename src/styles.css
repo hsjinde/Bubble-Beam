@@ -10,6 +10,39 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 /*
+ * 自架字型子集。檔案由 scripts/subset-fonts.mjs 產生（已掛 prebuild），
+ * 內容是「掃過 src/ 全部原始碼算出來的字元集」，不是整套字型。
+ *
+ * 為什麼不用 Google Fonts：漢字分塊是照全語料使用頻率切的，一篇正常長度的中文
+ * 內容就會散落在二十幾個 unicode-range 區段，/decks 實測要載 1463 KB 才顯示
+ * 383 個相異漢字。unicode-range 不會自動幫忙省，自架子集才會。
+ *
+ * `src` 用根目錄絕對路徑：檔案在 public/ 下，寫相對路徑 Vite 會在建置期試著解析而失敗。
+ *
+ * `font-weight: 400 700` 是可變軸的宣告，不是「有 400 和 700 兩種」——
+ * 子集保留了 wght 軸（scripts/subset-fonts.mjs 會讀產出的 fvar 驗證），
+ * font-medium(500)／font-semibold(600) 由軸插值算繪，不會退成最近字重。
+ *
+ * 刻意**不加** unicode-range：全站只有一支 CJK 子集，加了也不會少載，
+ * 反而會讓「缺字要退到系統字型」這條降級路徑多一層要驗的東西。
+ */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/fonts/plus-jakarta-sans-subset.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url("/fonts/noto-sans-tc-subset.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
  * Design system definition.
  *
  * The @theme inline block maps CSS custom properties to Tailwind utility
@@ -365,6 +398,11 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    /*
+     * 前兩個是自架子集，只含站上實際用得到的字。子集萬一漏字，瀏覽器會**逐字**
+     * 退到後面的字型——所以系統 CJK 字型要明寫出來，不能只靠 sans-serif 的
+     * 「瀏覽器預設中文字型」。漏字的結果是換一種字體，不是豆腐框。
+     */
     font-family:
       "Plus Jakarta Sans",
       "Noto Sans TC",
@@ -373,6 +411,9 @@
       BlinkMacSystemFont,
       "Segoe UI",
       Roboto,
+      "PingFang TC",
+      "Microsoft JhengHei",
+      "Noto Sans CJK TC",
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

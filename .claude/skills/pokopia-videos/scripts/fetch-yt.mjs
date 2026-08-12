@@ -106,7 +106,8 @@ function collectPlaylist(data) {
           title: r.title?.runs?.[0]?.text ?? "",
           channel: r.shortBylineText?.runs?.[0]?.text ?? "",
           channelUrl:
-            r.shortBylineText?.runs?.[0]?.navigationEndpoint?.browseEndpoint?.canonicalBaseUrl ?? "",
+            r.shortBylineText?.runs?.[0]?.navigationEndpoint?.browseEndpoint?.canonicalBaseUrl ??
+            "",
           length: r.lengthText?.simpleText ?? "",
         });
       }

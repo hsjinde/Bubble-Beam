@@ -157,15 +157,17 @@ export const BOOKMARKS: Bookmark[] = [
  * `title`／`channel` 為 YouTube 原始資料（標題保留日文／英文原文，符合本站專有名詞慣例）；
  * 縮圖走 i.ytimg.com/vi/{id}/hqdefault.jpg，連結走 youtube.com/watch?v={id}。
  *
- * 選片依據（2026-08 更新）：從使用者精選清單的主播出發，抓各頻道 videos 頁的觀看數／發布
- * 時間取「近期熱門」，並逐支用 YouTube oEmbed 查證存在＋取回官方標題（同時濾掉混入頻道的
- * 他遊戲影片，如 Disney Dreamlight Valley、Splatoon、あつ森）。更新時沿用同一套查證流程，
- * 別憑印象填 id。
+ * 選片依據（2026-08-10 更新，Bubbly Basin DLC 與免費大更新上線後）：從使用者精選清單的主播
+ * 出發，抓各頻道 videos 頁的觀看數／發布時間取「近期熱門」，並逐支用 YouTube oEmbed 查證存在
+ * ＋取回官方標題（同時濾掉混入頻道的他遊戲影片，如 Disney Dreamlight Valley、Splatoon
+ * Raiders、あつ森、Village in the Shade、Minecraft）。更新時沿用同一套查證流程，別憑印象填 id。
+ * 這頁只收「建築成品／技巧」，patch notes 與 DLC 情報解析影片刻意不收。
  *
- * 本次主播動向：HorribleGaming 仍最高產（Palette Town 都會系列）；すくると 轉以島嶼導覽為主；
- * 涼太ぱんけーき♭ 大幅轉向 Splatoon，但仍有「街づくり」建築系列；かぴぱか create 穩定產出短片
- * 教學；わむのスローライフっぽい 產能下降，保留其自動化經典；Haruchi create 已轉做他款遊戲，
- * 只留仍在射程內的 Pokopia 作品。
+ * 本次主播動向：HorribleGaming 仍最高產，DLC 一上線就交出潛水艇棲地宅與巨大水族館；すくると
+ * 專做島嶼導覽；涼太ぱんけーき♭ 主力已移到 Splatoon Raiders，但「街づくり」建築系列仍在更新；
+ * かぴぱか create 穩定產短片教學（最新一支轉做 Minecraft，下次要留意）；わむのスローライフっぽい
+ * 近兩個月沒新的 Pokopia，保留其自動化經典並換上修掉不具合的新版解說；Haruchi create（→ あつ森）
+ * 與 CloudySkies Gaming（→ Village in the Shade 等）已轉做他款遊戲，各留一支仍具參考價值的經典。
  */
 export const VIDEOS: VideoInspiration[] = [
   // ── 城市・街景 ─────────────────────────────────────────────────
@@ -177,14 +179,6 @@ export const VIDEOS: VideoInspiration[] = [
     group: "city",
   },
   {
-    id: "IOSVHqn7juU",
-    title:
-      "【島紹介】配色センスが天才すぎる！ポケモンたちが暮らす街を案内してもらいました！【ぽこあポケモン】",
-    channel: "すくると",
-    blurb: "配色功力驚人的玩家城鎮導覽，學怎麼用色統一整條街。",
-    group: "city",
-  },
-  {
     id: "jmbUoFY4B24",
     title:
       "Pokémon Pokopia~PALETTE TOWN ENTRY DESIGN & SKYSCRAPERS~BUILDING A HUGE MODERN CITY~#pokopia  #7",
@@ -193,20 +187,29 @@ export const VIDEOS: VideoInspiration[] = [
     group: "city",
   },
   {
-    id: "vghz7UzZNqs",
-    title: "【島紹介】1000時間プレイで作られた超巨大建築が凄すぎる！【ぽこあポケモン】",
+    id: "qXb46YdOGLU",
+    title:
+      "【島紹介】ハーフティンバーで統一された街並みが凄すぎる！ポケモンたちの暮らしに密着しました！【ぽこあポケモン】",
     channel: "すくると",
-    blurb: "遊玩上千小時打造的超巨大建築島導覽，開眼界找靈感。",
+    blurb: "半木造風格統一的街景導覽，學怎麼靠單一建材撐起整條街。",
     group: "city",
   },
   {
-    id: "RuvgHYT5g_U",
-    title: "【ぽこあ建築】街づくり、始めました。大きな建物が並ぶ海沿いの区画【ぽこあポケモン】",
+    id: "PLIl_QWZ-hE",
+    title: "【ぽこあ建築】街づくり、始めました。おしゃれな建物が並ぶ大通り【ぽこあポケモン】",
     channel: "涼太ぱんけーき♭",
-    blurb: "「街づくり」系列開篇，大型建築林立的海濱街區規劃。",
+    blurb: "「街づくり」系列最新集，時髦建築林立的主幹道規劃。",
     group: "city",
   },
   // ── 住宅・別墅 ─────────────────────────────────────────────────
+  {
+    id: "PbBvHBwoxs0",
+    title:
+      "Pokémon Pokopia~DEEP-DIVING SUBMARINE HABITAT HOME DESIGN~BUBBLY BASIN DLC~SPEED BUILD #pokopia",
+    channel: "HorribleGaming",
+    blurb: "Bubbly Basin DLC 的深海潛水艇住家，示範新家具怎麼做水下棲地。",
+    group: "house",
+  },
   {
     id: "mf4v4YZKdao",
     title:
@@ -216,18 +219,10 @@ export const VIDEOS: VideoInspiration[] = [
     group: "house",
   },
   {
-    id: "8JHUVsq-L2Y",
-    title:
-      "Pokémon Pokopia~REALISTIC MODERN VILLA HABITAT HOME DESIGN~BLEAK BEACH~SPEED BUILD~#pokopia",
-    channel: "HorribleGaming",
-    blurb: "寫實現代別墅，蓋在荒涼海灘上的質感住宅。",
-    group: "house",
-  },
-  {
-    id: "96hdbbHQAB0",
-    title: "【ぽこポケ】パサパサこうやの街に洋風なお家を建設すること🏠自宅づくり｜建築｜クリエイト",
-    channel: "Haruchi create",
-    blurb: "在乾荒野地帶蓋起洋風自宅，地形不討喜時的住宅解法。",
+    id: "ldfA8a_GHcg",
+    title: "【ぽこあ建築】雅なリゾート気分！プール付きの和風な家を建築【ぽこあポケモン】",
+    channel: "涼太ぱんけーき♭",
+    blurb: "附泳池的和風宅邸，度假感十足的雅致住宅。",
     group: "house",
   },
   {
@@ -262,10 +257,11 @@ export const VIDEOS: VideoInspiration[] = [
     group: "shop",
   },
   {
-    id: "9K2Og05Gjqc",
-    title: "【ぽこあ建築】ぽこあポケモンの世界にスターバックスを復活させてみた！【ぽこあポケモン】",
-    channel: "涼太ぱんけーき♭",
-    blurb: "把星巴克搬進遊戲，連綠色招牌與座位區都還原。",
+    id: "_DsoYs4VlNA",
+    title:
+      "Pokémon Pokopia~PALETTE TOWN MARKET STREET~FUNCTIONAL BUILD~BUILDING A HUGE CITY~#pokopia   #10",
+    channel: "HorribleGaming",
+    blurb: "都會市集街，把店鋪外觀與收納機能一次做齊。",
     group: "shop",
   },
   {
@@ -285,11 +281,11 @@ export const VIDEOS: VideoInspiration[] = [
   },
   // ── 主題・地標・遊樂 ───────────────────────────────────────────
   {
-    id: "KHAWKAGoYVg",
+    id: "h8a4fXpnXJU",
     title:
-      "【島紹介】見たら絶対に訪れたくなる素敵な水族館を案内してもらいました！【ぽこあポケモン】",
-    channel: "すくると",
-    blurb: "玩家自製水族館導覽，大型室內主題設施的天花板。",
+      "Pokémon Pokopia~HUGE MODERN AQUARIUM HABITAT DESIGN~PALETTE TOWN BIG CITY~BUBBLY BASIN #pokopia  #17",
+    channel: "HorribleGaming",
+    blurb: "DLC 期間蓋起的巨大現代水族館，大型室內主題設施天花板。",
     group: "landmark",
   },
   {
@@ -301,10 +297,11 @@ export const VIDEOS: VideoInspiration[] = [
     group: "landmark",
   },
   {
-    id: "QVI2GcpxUrY",
-    title: "【ぽこポケ】初心者が１か月かけてシンデレラ城を再現してみた！【ぽこあポケモン建築】",
-    channel: "すくると",
-    blurb: "1 個月打造灰姑娘城堡，夢幻壯觀的童話地標。",
+    id: "Tv9aIqSlPio",
+    title:
+      "期間限定ジラーチイベント！イベント限定アイテムで可愛い星空が見える家を建築してみた！【ぽこあポケモン】",
+    channel: "涼太ぱんけーき♭",
+    blurb: "用基拉祈活動限定道具蓋的觀星屋，星空氛圍滿分。",
     group: "landmark",
   },
   {
@@ -325,11 +322,10 @@ export const VIDEOS: VideoInspiration[] = [
     group: "automation",
   },
   {
-    id: "YPI0Z18XOs4",
-    title:
-      "【ぽこポケ】さらさらいわ使って野菜と木の実完全自動化の世界樹作ってみた！水流で一か所に集まるから一吸いで収穫完了！",
+    id: "L_YmoChE4O4",
+    title: "【ぽこポケ】不具合を解決した野菜と木の実自動化施設の徹底解説！サラサラ岩｜クロック回路",
     channel: "わむのスローライフっぽい",
-    blurb: "利用細沙岩與水流達成全自動化採收世界樹，效率極高。",
+    blurb: "全自動蔬果採收設施的修正版解說，解掉舊設計會卡住的不具合。",
     group: "automation",
   },
   {
@@ -365,10 +361,10 @@ export const VIDEOS: VideoInspiration[] = [
     group: "nature",
   },
   {
-    id: "Ec2pAFJDuWY",
-    title: "I Built A Jungle Camp Hideout in Pokopia (+ New Gem Hunt Event Items!)",
-    channel: "CloudySkies Gaming",
-    blurb: "叢林營地藏身處，順帶示範寶石活動的新道具怎麼用。",
+    id: "3Xp_GERavXU",
+    title: "Natural & OVERGROWN Palette Town Tour!",
+    channel: "consolecaito",
+    blurb: "蔓草叢生的自然風城鎮導覽，看綠意怎麼吃進街區。",
     group: "nature",
   },
   {
@@ -388,10 +384,10 @@ export const VIDEOS: VideoInspiration[] = [
     group: "tips",
   },
   {
-    id: "xk-E14UmuMQ",
-    title: "【ぽこあポケモン】クオリティ爆発！エモすぎる「レトロな緑の電車」の作り方【神建築】",
+    id: "xcJPJnO54BA",
+    title: "【ぽこあポケモン】狭い場所でも作れる！省スペースクリエイト5選【作り方】",
     channel: "かぴぱか create",
-    blurb: "復古綠皮電車做法，擺一台就撐起整個場景的氛圍。",
+    blurb: "狹窄空地也塞得下的 5 種省空間建築，補洞的好用招式。",
     group: "tips",
   },
   {

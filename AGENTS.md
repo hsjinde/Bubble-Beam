@@ -45,15 +45,16 @@
 
 `/decks` 的資料由人工策展與自動化腳本匯合：
 
-| 檔案 | 性質 | 維護方式 |
-| --- | --- | --- |
-| `src/data/decks.ts` | 人工策展牌組（繁中攻略、對戰思路、Tier S–C） | 手寫 |
-| `src/data/meta.json` | Limitless Top 20 即時排行（勝率、使用率、代表牌表） | `scripts/update-meta.mjs` 生成 |
-| `src/data/limitless-map.json` | 策展 id ↔ Limitless 英文牌組名映射表 | 手寫 |
-| `src/data/cards.json` | 完整卡片索引（3520張，約 580 KB） | `scripts/fetch-cards.mjs` 生成（僅供腳本查表） |
-| `src/data/cards.used.json` | 本站引用卡片子集（約 100張，~19 KB） | `scripts/subset-cards.mjs` 生成（前端使用） |
+| 檔案                          | 性質                                                | 維護方式                                       |
+| ----------------------------- | --------------------------------------------------- | ---------------------------------------------- |
+| `src/data/decks.ts`           | 人工策展牌組（繁中攻略、對戰思路、Tier S–C）        | 手寫                                           |
+| `src/data/meta.json`          | Limitless Top 20 即時排行（勝率、使用率、代表牌表） | `scripts/update-meta.mjs` 生成                 |
+| `src/data/limitless-map.json` | 策展 id ↔ Limitless 英文牌組名映射表                | 手寫                                           |
+| `src/data/cards.json`         | 完整卡片索引（3520張，約 580 KB）                   | `scripts/fetch-cards.mjs` 生成（僅供腳本查表） |
+| `src/data/cards.used.json`    | 本站引用卡片子集（約 100張，~19 KB）                | `scripts/subset-cards.mjs` 生成（前端使用）    |
 
 ### ⛔ 硬性禁忌與規則：
+
 1. **前端嚴禁 `import cards.json`**：完整卡片檔過大（580KB），會膨脹 client bundle。前端一律經由 `getCard()` 讀取 `cards.used.json`。
 2. **嚴禁手動修改生成檔**：`cards.json`、`cards.used.json`、`meta.json`、`routeTree.gen.ts`。
 3. **改動資料後的更新流程**：
@@ -68,6 +69,7 @@
 ## 4. 開發、指令與測試
 
 ### 常用指令：
+
 ```bash
 npm run dev        # 開發伺服器（port 8080）
 npm run build      # 正式建置（nitro，預設 target 為 cloudflare）
@@ -76,6 +78,7 @@ npm run format     # prettier 格式化
 ```
 
 ### 伺服器啟動與測試規範：
+
 - **Dev Server 啟動方式**：跑 dev server 請優先使用 preview / dev 工具（`piplup-dev`），避免產生殘留背景進程。
 - **無自動化測試框架**：專案未安裝 Jest/Vitest。驗證必須透過瀏覽器實測、檢查 console/network 紀錄，並回報結果。**請勿擅自安裝測試框架**。
 - **對比度標準**：`/decks` 版面必須保持 0 處 accessibility 對比失敗。調整顏色時必須實測渲染後的色彩數值。

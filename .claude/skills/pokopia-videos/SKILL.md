@@ -16,12 +16,12 @@ description: 更新 piplup-website /pokopia/videos 頁的建築靈感影片清�
 
 ## 資料結構與檔案
 
-| 檔案 | 角色 |
-|---|---|
-| `src/data/pokopia/pokopia.ts` → `VIDEOS` | 影片清單（要更新的主體）|
-| `src/data/pokopia/types.ts` → `VideoGroup` | 7 個建築類型的 union 型別 |
-| `src/components/pokopia/VideoInspiration.tsx` → `GROUPS` | 各分區的標題與說明文案 |
-| `src/routes/pokopia/videos.tsx` | 影片頁 route（頁首 h1 與說明）|
+| 檔案                                                     | 角色                           |
+| -------------------------------------------------------- | ------------------------------ |
+| `src/data/pokopia/pokopia.ts` → `VIDEOS`                 | 影片清單（要更新的主體）       |
+| `src/data/pokopia/types.ts` → `VideoGroup`               | 7 個建築類型的 union 型別      |
+| `src/components/pokopia/VideoInspiration.tsx` → `GROUPS` | 各分區的標題與說明文案         |
+| `src/routes/pokopia/videos.tsx`                          | 影片頁 route（頁首 h1 與說明） |
 
 每支影片欄位：`id`（YouTube video id）、`title`（官方原文標題，保留日文／英文，專有名詞
 不翻）、`channel`（頻道名）、`blurb`（一句繁中說明它適合看什麼）、`group`。縮圖與連結都由
@@ -78,8 +78,14 @@ id 組出（`i.ytimg.com/vi/{id}/hqdefault.jpg`、`youtube.com/watch?v={id}`）�
 → 轉做 Minecraft）、`@haruchicreate`（Haruchi create，近期停更 Pokopia，但發售初期作品是
 這批人裡觀看最高的，可留經典）。
 
-**英文主播**：Lex Play、CloudySkies Gaming、MSensei NTD、zoibean、consolecaito、Syd Mac、
-lizzy3kate、Crossing Channel（多為 speed build／設計技巧向）。
+**英文主播**：`@MSenseiNTD`（仍高產，但多為 patch notes／DLC 情報，要挑建築成品）、
+`@consolecaito`（主力已回 Dreamlight Valley，仍有 Palette Town 導覽）、`@CloudySkiesGaming`
+（→ Village in the Shade 等，已淡出）、`@lizzy3kate`（speed build 系列，近三個月未更新 Pokopia）、
+Syd Mac、Crossing Channel（多為 speed build／設計技巧向）。
+
+**handle 已知不可用**（2026-08 實測，會抓到完全不相干的頻道，別再照打）：`@zoibean` → OMORI
+繪師頻道、`@LexPlay` → 葡文法規頻道。這兩位的正確 handle 未知；`zoibean` 的既有影片仍在，
+頻道名靠 oEmbed 的 `author_name` 核對即可。
 
 ## 建築類型分類（7 類，對應 VideoGroup）
 

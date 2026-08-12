@@ -13,13 +13,13 @@ description: 更新 piplup-website /decks/schedule 擴充包與活動行事曆�
 
 ## 兩條資料來源（刻意分開，不要混）
 
-| 檔案 | 性質 | 誰維護 |
-|---|---|---|
-| `src/data/events.json` | 即將發售與遊戲內活動。上游卡片資料庫**不收**未發售擴充包，也沒有遊戲內活動，所以只能人工查 | 手寫（本 skill 的主體）|
-| `src/data/sets.json` | 歷代擴充包時間軸（code／發售日／卡數／pack）| `scripts/fetch-sets.mjs` 生成，**不要手改** |
-| `src/data/schedule.ts` | 資料層：型別、`eventPhase`／`activeEvents`／`daysUntil` | 手寫，改欄位才會動到 |
-| `src/components/guide/ScheduleBoard.tsx` | 行事曆算繪 | 改版面才會動到 |
-| `src/components/guide/NextSetBanner.tsx` | `/decks` 頁頂提示條，吃 `nextSetRelease()` | 同上 |
+| 檔案                                     | 性質                                                                                       | 誰維護                                      |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------- |
+| `src/data/events.json`                   | 即將發售與遊戲內活動。上游卡片資料庫**不收**未發售擴充包，也沒有遊戲內活動，所以只能人工查 | 手寫（本 skill 的主體）                     |
+| `src/data/sets.json`                     | 歷代擴充包時間軸（code／發售日／卡數／pack）                                               | `scripts/fetch-sets.mjs` 生成，**不要手改** |
+| `src/data/schedule.ts`                   | 資料層：型別、`eventPhase`／`activeEvents`／`daysUntil`                                    | 手寫，改欄位才會動到                        |
+| `src/components/guide/ScheduleBoard.tsx` | 行事曆算繪                                                                                 | 改版面才會動到                              |
+| `src/components/guide/NextSetBanner.tsx` | `/decks` 頁頂提示條，吃 `nextSetRelease()`                                                 | 同上                                        |
 
 `fetch-sets.mjs` **沒有掛在 prebuild**（prebuild 只有 `subset-cards.mjs` 與 sitemap）。
 所以「隨上游自動更新」的實際意思是「你跑腳本時才更新」——新擴充包發售後沒人跑，時間軸就會少一包。
@@ -75,10 +75,10 @@ description: 更新 piplup-website /decks/schedule 擴充包與活動行事曆�
 兩者用同一套換算，所以它們永遠自洽——時區偏移寫錯時，日期與天數會**一起**位移，
 畫面看起來毫無破綻。實測（本機 +08:00、今天 7/24）：
 
-| `endAt` | 卡片顯示 | 倒數 |
-|---|---|---|
-| `2026-07-26T23:59:00+08:00` | 2026/07/26 | 還有 2 天 |
-| `2026-07-26T23:59:00Z` | 2026/07**/27** | 還有 **3** 天 |
+| `endAt`                     | 卡片顯示       | 倒數          |
+| --------------------------- | -------------- | ------------- |
+| `2026-07-26T23:59:00+08:00` | 2026/07/26     | 還有 2 天     |
+| `2026-07-26T23:59:00Z`      | 2026/07**/27** | 還有 **3** 天 |
 
 兩列都自洽，但下面那列整整晚了一天。**所以驗證只能拿「來源寫的日期」去核對卡片顯示的日期，
 不能拿卡片自己的兩個數字互相對。**
@@ -125,13 +125,13 @@ description: 更新 piplup-website /decks/schedule 擴充包與活動行事曆�
 每個站擋機器人的方式不同，**用錯工具會得到 403 或逾時，看起來像「這站掛了」，其實只是走錯門**。
 下表的取法是 2026-07-24 逐一實測的結果；站會改版，抓不到時先換另一條路徑再判定它真的不能用。
 
-| 來源 | 取法（實測）| 內容 |
-|---|---|---|
-| **官方** `pokemon.com` 新聞稿、遊戲內公告、X `@PokemonTCGP` | WebSearch／WebFetch | 有官方就以官方為準，其餘都是佐證 |
-| **Pokemon Zone** `pokemon-zone.com/schedule/` | **只有瀏覽器分頁能開**：`preview_start {url}` → `get_page_text`。直連逾時、WebFetch 吃 403 | 覆蓋度最好：進行中／即將／已結束、Wonder Pick、Drop、排名賽季、商店，還帶倒數 |
-| **Game8** `game8.co/games/Pokemon-TCG-Pocket` | **WebFetch**（curl 會吃 403，擋 UA）| 活動細節與發售時刻詳盡（B4 的 `6pm PDT` 就查得到）|
-| **Serebii** `serebii.net/tcgpocket/` | curl／WebFetch 皆可 | **索引頁沒有日期**，要進分頁：`events.shtml`（特殊活動）、`dropevents.shtml`、`wonderpickevents.shtml`、`rankedmatch.shtml` |
-| **Limitless** `pocket.limitlesstcg.com` | curl／WebFetch 皆可 | 賽事端為主，擴充包發售日可交叉驗證 |
+| 來源                                                        | 取法（實測）                                                                               | 內容                                                                                                                        |
+| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| **官方** `pokemon.com` 新聞稿、遊戲內公告、X `@PokemonTCGP` | WebSearch／WebFetch                                                                        | 有官方就以官方為準，其餘都是佐證                                                                                            |
+| **Pokemon Zone** `pokemon-zone.com/schedule/`               | **只有瀏覽器分頁能開**：`preview_start {url}` → `get_page_text`。直連逾時、WebFetch 吃 403 | 覆蓋度最好：進行中／即將／已結束、Wonder Pick、Drop、排名賽季、商店，還帶倒數                                               |
+| **Game8** `game8.co/games/Pokemon-TCG-Pocket`               | **WebFetch**（curl 會吃 403，擋 UA）                                                       | 活動細節與發售時刻詳盡（B4 的 `6pm PDT` 就查得到）                                                                          |
+| **Serebii** `serebii.net/tcgpocket/`                        | curl／WebFetch 皆可                                                                        | **索引頁沒有日期**，要進分頁：`events.shtml`（特殊活動）、`dropevents.shtml`、`wonderpickevents.shtml`、`rankedmatch.shtml` |
+| **Limitless** `pocket.limitlesstcg.com`                     | curl／WebFetch 皆可                                                                        | 賽事端為主，擴充包發售日可交叉驗證                                                                                          |
 
 社群站彼此會互抄，兩個都抄同一篇不算「兩個獨立來源」——看它們有沒有各自附官方連結。
 

@@ -54,5 +54,9 @@ public/videos/*.mp4
 public/videos/*.webm
 public/videos/manifest.json
 
+# 字型子集化的來源快取（google/fonts 的原始可變 TTF，約 12 MB）。
+# scripts/subset-fonts.mjs 需要時才下載；產出的子集檔本身有進版控。
+.cache/
+
 # Cloned repositories / test scripts
 pi/

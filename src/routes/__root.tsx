@@ -123,44 +123,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: absoluteUrl("/piplup.png") },
     ],
     links: [
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com",
-        crossOrigin: "anonymous" as const,
-      },
       /*
-       * **用範圍語法 `wght@400..700`，不要用離散的 `wght@400;500;600;700`。**
-       * 兩者都是可變字型，離散寫法會讓 Google 為每個字重各發一整套 @font-face
-       * （每套約 105 段 unicode range），而範圍寫法只發一套、宣告成
-       * `font-weight: 400 700`，可變軸自己插值出中間字重。
+       * 字型是自架子集，不再走 Google Fonts。`@font-face` 在 styles.css，
+       * 檔案由 scripts/subset-fonts.mjs 產生（已掛 prebuild）。
        *
-       * 實測這支 render-blocking CSS（`@font-face` 數）：
-       *   離散 400;500;600;700 → 489 KB / 440 個（傳輸 133 KB）
-       *   離散 400;700        → 247 KB / 226 個（傳輸 66.9 KB）
-       *   範圍 400..700       → 122 KB / 109 個  ← 現在用這個
-       * 範圍寫法比砍字重更小，而且 font-medium(500)／font-semibold(600) 仍能正確算繪，
-       * 離散寫法反而會讓它們落到最近的既有字重。
+       * 拔掉 Google Fonts 一併省掉的東西：兩個 preconnect、一支 33.5 KB 的
+       * **render-blocking** CSS，以及跨網域的那一趟 round trip。
        *
-       * 字型檔本身**不受字重寫法影響**——分塊切的是 unicode 範圍而不是字重。
+       * CJK 子集要 preload：它在 styles.css 的 @font-face 裡，瀏覽器要先下載並
+       * 解析完 CSS 才會發現它，白白多一層瀑布。拉丁子集只有 24 KB 且同一份 CSS
+       * 裡就會接著要，不值得再佔一條 preload 的優先權。
        *
-       * 別以為 unicode-range 分塊會讓成本自動變小。/decks 的實測（Resource Timing，
-       * decodedBodySize）：
-       *   Noto Sans TC      23 個分塊 / 1463 KB
-       *   Plus Jakarta Sans  1 個分塊 /   27 KB
-       * 而這頁只用到 **383 個相異漢字**——平均一個字花掉 3.8 KB。漢字分塊是照使用
-       * 頻率切的，一篇正常中文文章就會散落在二十幾個區段裡，等於幾乎整套都要載。
-       *
-       * 所以真正有效的手段是自架子集（383 字 ≈ 50 KB，省 96%），不是換字重寫法。
-       * 那需要引入字型子集化工具鏈，而且 meta.json 每週更新、文字會變，子集要跟著
-       * 重算，漏字就會出現豆腐框——是個要人拍板的取捨，別順手做。
-       *
-       * 現況的緩解：display=swap ＋ 非阻塞，文字先用系統 CJK 字型顯示再替換，
-       * 不擋首次繪製；Google CDN 快取一年，回訪者成本為 0。
+       * `crossOrigin` 即使同源也**必須**寫：字型是 CORS-mode 抓取，preload 沒標
+       * anonymous 的話會被當成另一筆請求，變成下載兩次。
        */
       {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..700&family=Noto+Sans+TC:wght@400..700&display=swap",
+        rel: "preload",
+        as: "font",
+        type: "font/woff2",
+        href: "/fonts/noto-sans-tc-subset.woff2",
+        crossOrigin: "anonymous" as const,
       },
       {
         rel: "stylesheet",

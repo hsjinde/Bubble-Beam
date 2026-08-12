@@ -16,3 +16,6 @@ src/data/meta.json
 
 # sitemap 由 scripts/generate-sitemap.mjs 產生
 public/sitemap.xml
+
+# 字型子集清單由 scripts/subset-fonts.mjs 產生（charset 欄位是一整串排序過的字元）
+scripts/fonts.manifest.json
