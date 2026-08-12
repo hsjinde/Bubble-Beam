@@ -25,10 +25,13 @@
     "而 skill 文件 2026-07-24 的實測記錄裡，Game8 對這筆也記 7/29——短版才是真正還能抽卡的期間。",
     "反過來 ptcgpocket.gg 當時仍把它標成 LIVE，那是跟著長版走，別拿它當「還能參加」的證據。",
     "兩個數字都只在同一頁出現時才這樣判；連語意都分不出來就整筆不收。",
+    "2026-08-12 補：Serebii 的活動表獨立佐證了這個讀法——它把 Mega Houndoom drop 記成",
+    "8/12 - 8/22（短版，非 Pokemon Zone 卡片區塊的 8/29），7 月那筆 Wonder Pick 記成",
+    "7/19 - 7/29（短版，非頁首的 8/5）。所以短版＝Serebii 的口徑，這條規則可以放心沿用。",
     "",
     "type：set（新擴充包）／drop（Drop 活動）／wonderpick／ranked（排名賽季）／other"
   ],
-  "updatedAt": "2026-08-10",
+  "updatedAt": "2026-08-12",
   "events": [
     {
       "id": "b4a-expansion",
