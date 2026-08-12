@@ -141,7 +141,7 @@ const decks: Deck[] = [
   {
     id: "mega-sceptile-greninja",
     name: "Mega蜥蜴王ex 甲賀忍蛙",
-    tier: "B",
+    tier: "A",
     energy: ["Grass"],
     difficulty: "中",
     summary: "高使用率的草系主力：神奇糖果直上 Mega蜥蜴王ex，甲賀忍蛙特性每回合補刀。",
@@ -701,7 +701,7 @@ const decks: Deck[] = [
   {
     id: "magnezone-ex-magnezone",
     name: "自爆磁怪ex 自爆磁怪",
-    tier: "A",
+    tier: "S",
     energy: ["Lightning"],
     difficulty: "中",
     summary:
@@ -999,7 +999,7 @@ const decks: Deck[] = [
       { id: "B2-154", count: 1 }, // Starting Plains
     ],
     strategy: [
-      "核心思路：目前 Wilson 下界排名最高的一套牌，也是惡系體系的集大成者。它不靠進化線，全隊都是基礎寶可夢——這代表沒有「被打斷進化就崩盤」的軟肋，開局第二回合就能開始交換。兩張胡帕ex（Hoopa ex）是主要輸出來源，達克萊伊ex（Darkrai ex）提供不需上場也能運作的削血，Mega阿勃梭魯ex（Mega Absol ex）則是破壞對手節奏與收尾的第三張王牌。",
+      "核心思路：Wilson 下界穩居排行前段的一套牌，也是惡系體系的集大成者。它不靠進化線，全隊都是基礎寶可夢——這代表沒有「被打斷進化就崩盤」的軟肋，開局第二回合就能開始交換。兩張胡帕ex（Hoopa ex）是主要輸出來源，達克萊伊ex（Darkrai ex）提供不需上場也能運作的削血，Mega阿勃梭魯ex（Mega Absol ex）則是破壞對手節奏與收尾的第三張王牌。",
       "展開順序：開局優先讓胡帕ex 站前場並持續附能，備戰區同時鋪達克萊伊ex 累積削血。因為沒有進化線要保護，前期資源可以全數投入手牌過濾（博士的研究、模仿少女、精靈球），把兩張赤日留到收頭回合。Mega阿勃梭魯ex 不必急著上場，等對手主砲成型、你手上有位移手段時再登場，才能打在最痛的地方。",
       "注意事項：",
       "- 這套牌的固定班底非常明確：胡帕ex、達克萊伊ex、Mega阿勃梭魯ex、赤日、模仿少女、精靈球、博士的研究、除障器（Field Blower）與兩張欺瞞之針，在取樣牌表中都是 100% 採用；幸運冰棒 95%、開始的平原 90%。抄牌時這一段不要動。",

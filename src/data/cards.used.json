@@ -49,6 +49,11 @@
     "nameEN": "Vaporeon",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1a/19.webp"
   },
+  "A2-17": {
+    "id": "A2-17",
+    "nameEN": "Combee",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/17.webp"
+  },
   "A2-18": {
     "id": "A2-18",
     "nameEN": "Vespiquen",
@@ -169,6 +174,11 @@
     "nameEN": "Repel",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3a/64.webp"
   },
+  "A3b-51": {
+    "id": "A3b-51",
+    "nameEN": "Dratini",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3b/51.webp"
+  },
   "A3b-56": {
     "id": "A3b-56",
     "nameEN": "Eevee ex",
@@ -278,6 +288,11 @@
     "id": "B1-121",
     "nameEN": "Indeedee ex",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/121.webp"
+  },
+  "B1-124": {
+    "id": "B1-124",
+    "nameEN": "Hitmonchan ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/124.webp"
   },
   "B1-151": {
     "id": "B1-151",
@@ -628,11 +643,6 @@
     "id": "B4-35",
     "nameEN": "Mega Sharpedo ex",
     "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_019960_00_MEGASAMEHADERex_RR.webp"
-  },
-  "B4-60": {
-    "id": "B4-60",
-    "nameEN": "Helioptile",
-    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_020210_00_ERIKITERU_C.webp"
   },
   "B4-61": {
     "id": "B4-61",
