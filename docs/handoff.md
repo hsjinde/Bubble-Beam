@@ -3,7 +3,7 @@
 給下一個接手的人（Claude Code 或 `agy`）。這份檔案記錄目前的 UI／前端品質狀態與待辦，
 每輪工作結束時更新它，不要讓它過期。
 
-最後更新：2026-08-10
+最後更新：2026-08-15
 
 ---
 
@@ -415,6 +415,49 @@ Mega路卡利歐 B→A、索羅亞克 B→A、自爆磁怪密勒頓 C→B），`
 `$impeccable` 的 `critique`／`bolder`／`delight` 那類需要判斷「這站該有什麼調性」的指令，
 沒有 PRODUCT.md 會做得很泛。純技術性的 `audit`／`optimize` 不受影響。
 要做那類工作前先跑 `$impeccable init`。
+
+---
+
+## 2026-08-15 這輪：全站內容更新（在遠端沙箱裡跑，網路受限）
+
+使用者要求「更新網站所有內容」。四條會過期的內容線裡只有兩條跑得完，原因是這次是在
+**Claude Code 遠端沙箱**（claude.ai/code 開的 session）執行，egress policy 擋掉了大部分上游。
+
+| 內容線                 | 結果      | 說明                                                                 |
+| ---------------------- | --------- | -------------------------------------------------------------------- |
+| `/decks` 排行榜        | ✅ 已更新 | Limitless 連得到，`meta.json` 重抓（10 升 6 降 3 平 1 新進榜）        |
+| 策展攻略 `decks.ts`    | ✅ 已核對 | 26 個牌組 tier 與新資料**全數一致**，攻略文的名次敘述也仍成立，未改動 |
+| `/decks/schedule` 活動 | ✅ 已複查 | 12 筆無異動，只更新 `updatedAt`                                       |
+| `sets.json` 時間軸     | ⏭ 跳過    | 上游被擋；且 B4a 8/27 才發售，上游本來就還沒收錄                       |
+| `/pokopia/videos`      | ❌ 做不了 | YouTube 全站被擋，oEmbed 查證流程無法執行                             |
+| `/pokopia/habitats`    | ❌ 做不了 | 兩個上游都被擋；本來也是靜態遊戲資料，沒有 DLC 更新就不用重跑         |
+
+### 這個環境擋掉了什麼（下次在沙箱裡跑之前先看這段）
+
+curl 與 WebFetch 一律回 403（`CONNECT tunnel failed`），**只有 WebSearch 的摘要可用**：
+
+- `raw.githubusercontent.com`／`cdn.jsdelivr.net` → `fetch-sets.mjs`、`fetch-cards.mjs` 跑不動
+- `youtube.com` → `pokopia-videos` skill 整條掛掉
+- `serebii.net`／`pokemon-zone.com`／`game8.co`／`ptcgpocket.gg`／`bulbapedia` → 行事曆的來源全滅
+- `pokopia.pokemonhubs.com`／`pokopiaguide.com` → `fetch-habitats.mjs` 跑不動
+- `registry.npmjs.org` 的 **tarball** 也被擋（metadata 過得去），所以 `npm ci` 會在 403 停掉——
+  **這個 repo 在沙箱裡裝不了相依**，`npm run lint`／`npm run build` 都跑不了
+
+`play.limitlesstcg.com` 是少數連得到的，所以排行榜那條剛好能做。
+
+### 因此這輪的驗證是降級的
+
+沒有 `node_modules` 就沒有 vite／eslint，也沒有 `preview_start` 可以起瀏覽器實測。實際做到的：
+
+- `npx prettier --check src/data/events.json` 通過
+- `node scripts/subset-cards.mjs` 重跑（149 張、28.0 KB），`--check` 由「已過期」轉為乾淨
+- `node --experimental-strip-types scripts/generate-sitemap.mjs` 手動補跑（平常靠 prebuild），
+  32 個網址、`lastmod` 已同步到新的 `fetchedAt`
+- 用 node 逐筆比對 `meta.json` 的 265 個卡片 id：`cards.json` 與 `cards.used.json` 都 0 缺漏
+
+**改動全是資料檔（`meta.json`／`cards.used.json`／`events.json`／`sitemap.xml`），沒有動任何
+`.ts`／`.tsx`**，所以型別與版面風險趨近於零。但下一個在本機有網路的人接手時，
+請補一次 `npm run build` 與 `/decks`、`/decks/schedule` 的瀏覽器實測，並把上面兩條 ❌ 補完。
 
 ---
 
