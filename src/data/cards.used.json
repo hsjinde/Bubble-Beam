@@ -224,6 +224,11 @@
     "nameEN": "Mantyke",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4a/23.webp"
   },
+  "A4a-55": {
+    "id": "A4a-55",
+    "nameEN": "Altaria",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4a/55.webp"
+  },
   "A4a-59": {
     "id": "A4a-59",
     "nameEN": "Igglybuff",
@@ -393,6 +398,11 @@
     "id": "B2-147",
     "nameEN": "Protective Poncho",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/147.webp"
+  },
+  "B2-150": {
+    "id": "B2-150",
+    "nameEN": "Sightseer",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/150.webp"
   },
   "B2-153": {
     "id": "B2-153",

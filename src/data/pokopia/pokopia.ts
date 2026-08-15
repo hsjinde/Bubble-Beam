@@ -168,6 +168,18 @@ export const BOOKMARKS: Bookmark[] = [
  * かぴぱか create 穩定產短片教學（最新一支轉做 Minecraft，下次要留意）；わむのスローライフっぽい
  * 近兩個月沒新的 Pokopia，保留其自動化經典並換上修掉不具合的新版解說；Haruchi create（→ あつ森）
  * 與 CloudySkies Gaming（→ Village in the Shade 等）已轉做他款遊戲，各留一支仍具參考價值的經典。
+ *
+ * 2026-08-15 抽查（清單未改動）：在 Claude Code 遠端沙箱裡 youtube.com 與 i.ytimg.com 都被
+ * egress policy 擋掉，oEmbed 那條查證流程整個跑不了。改用 WebSearch 以 video id 反查，六支
+ * 分屬最可能失效的頻道（Haruchi create、CloudySkies Gaming、zoibean、consolecaito、すくると、
+ * HorribleGaming）全部仍在、標題與本檔一字不差。
+ *
+ * 但這條備援只夠「查證存在與官方標題」——**拿不到觀看數、可靠的發布日與頻道歸屬**，
+ * 而本頁的選片邏輯正是靠觀看數排「近期熱門」。所以沙箱裡只做抽查、不增刪：
+ * 用比較弱的證據往策展清單塞新片，是讓它變差而不是變新。要真正換片請在連得到
+ * YouTube 的環境跑完整流程。（當時掃到但**刻意沒收**的候選：HorribleGaming 的
+ * jBphEMt6bK0 是直播 VOD 而非剪輯成品，且該頻道已佔 7 支；k6CO1xjf-8E、sxDVtSM8AIo
+ * 是 DLC 情報解析，依上面的規則本來就不收。）
  */
 export const VIDEOS: VideoInspiration[] = [
   // ── 城市・街景 ─────────────────────────────────────────────────
