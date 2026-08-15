@@ -29,9 +29,15 @@
     "8/12 - 8/22（短版，非 Pokemon Zone 卡片區塊的 8/29），7 月那筆 Wonder Pick 記成",
     "7/19 - 7/29（短版，非頁首的 8/5）。所以短版＝Serebii 的口徑，這條規則可以放心沿用。",
     "",
+    "2026-08-15 複查：清單無異動（8 月三筆進行中的活動、B4a 8/27 發售日皆與來源一致，",
+    "Season 17 與 9 月活動上游都還沒公布，依規則 1 不收）。這輪的環境限制要記一下：",
+    "Serebii／Pokemon Zone／Game8／ptcgpocket.gg／Bulbapedia 在 Claude Code 遠端沙箱裡",
+    "全被 egress policy 擋掉（curl 與 WebFetch 皆 403），只有 WebSearch 的摘要能用。",
+    "下次若同樣連不到來源，別把「查不到新活動」當成「沒有新活動」——換能連外的環境再查一次。",
+    "",
     "type：set（新擴充包）／drop（Drop 活動）／wonderpick／ranked（排名賽季）／other"
   ],
-  "updatedAt": "2026-08-12",
+  "updatedAt": "2026-08-15",
   "events": [
     {
       "id": "b4a-expansion",
