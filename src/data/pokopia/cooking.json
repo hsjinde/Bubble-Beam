@@ -1,0 +1,1093 @@
+{
+  "updatedAt": "2026-08-16",
+  "recipes": [
+    {
+      "id": "plain-salad",
+      "name": "簡單沙拉",
+      "nameSource": "hubs",
+      "category": "salad",
+      "tool": "砧板",
+      "toolId": "cutting-board",
+      "flavor": "plain",
+      "move": "樹葉",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "葉子",
+          "wildcard": false
+        }
+      ],
+      "price": 100,
+      "effect": "較容易和寶可夢變親密",
+      "level": 2
+    },
+    {
+      "id": "leppa-salad",
+      "name": "慕柑果沙拉",
+      "nameSource": "hubs",
+      "category": "salad",
+      "tool": "砧板",
+      "toolId": "cutting-board",
+      "flavor": "sweet",
+      "move": "樹葉",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "葉子",
+          "wildcard": false
+        },
+        {
+          "name": "慕柑果",
+          "wildcard": false
+        }
+      ],
+      "price": 100,
+      "effect": "古代之物較容易出現",
+      "level": 2
+    },
+    {
+      "id": "seaweed-salad",
+      "name": "海藻沙拉",
+      "nameSource": "hubs",
+      "category": "salad",
+      "tool": "砧板",
+      "toolId": "cutting-board",
+      "flavor": "bitter",
+      "move": "樹葉",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "葉子",
+          "wildcard": false
+        },
+        {
+          "name": "海藻",
+          "wildcard": false
+        }
+      ],
+      "price": 200,
+      "effect": "較容易找到稀有物品",
+      "level": 2
+    },
+    {
+      "id": "shredded-salad",
+      "name": "絲狀沙拉",
+      "nameSource": "hubs",
+      "category": "salad",
+      "tool": "砧板",
+      "toolId": "cutting-board",
+      "flavor": "sour",
+      "move": "樹葉",
+      "strongMove": false,
+      "specialty": "伐木",
+      "ingredients": [
+        {
+          "name": "葉子",
+          "wildcard": false
+        }
+      ],
+      "price": 200,
+      "effect": "商店較容易出現好物品",
+      "level": 2
+    },
+    {
+      "id": "mashed-salad",
+      "name": "碎果實沙拉",
+      "nameSource": "hubs",
+      "category": "salad",
+      "tool": "砧板",
+      "toolId": "cutting-board",
+      "flavor": "dry",
+      "move": "樹葉",
+      "strongMove": false,
+      "specialty": "搗碎",
+      "ingredients": [
+        {
+          "name": "葉子",
+          "wildcard": false
+        },
+        {
+          "name": "伊奈果",
+          "wildcard": false
+        }
+      ],
+      "price": 500,
+      "effect": "更容易遇到鳳王/洛奇亞",
+      "level": 3
+    },
+    {
+      "id": "crouton-salad",
+      "name": "麵包丁沙拉",
+      "nameSource": "hubs",
+      "category": "salad",
+      "tool": "砧板",
+      "toolId": "cutting-board",
+      "flavor": "spicy",
+      "move": "樹葉",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "葉子",
+          "wildcard": false
+        },
+        {
+          "name": "任意麵包",
+          "wildcard": true
+        }
+      ],
+      "price": 500,
+      "effect": "棲息地更容易出現寶可夢",
+      "level": 3
+    },
+    {
+      "id": "plain-soup",
+      "name": "簡單湯品",
+      "nameSource": "hubs",
+      "category": "soup",
+      "tool": "鍋子",
+      "toolId": "cooking-pot",
+      "flavor": "plain",
+      "move": "水槍",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "新鮮水",
+          "wildcard": false
+        }
+      ],
+      "price": 100,
+      "effect": "較容易和寶可夢變親密",
+      "level": 2
+    },
+    {
+      "id": "seaweed-soup",
+      "name": "海藻湯",
+      "nameSource": "hubs",
+      "category": "soup",
+      "tool": "鍋子",
+      "toolId": "cooking-pot",
+      "flavor": "bitter",
+      "move": "水槍",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "新鮮水",
+          "wildcard": false
+        },
+        {
+          "name": "海藻",
+          "wildcard": false
+        }
+      ],
+      "price": 100,
+      "effect": "較容易找到稀有物品",
+      "level": 2
+    },
+    {
+      "id": "mushroom-soup",
+      "name": "蘑菇湯",
+      "nameSource": "hubs",
+      "category": "soup",
+      "tool": "鍋子",
+      "toolId": "cooking-pot",
+      "flavor": "dry",
+      "move": "水槍",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "新鮮水",
+          "wildcard": false
+        },
+        {
+          "name": "洞穴蘑菇",
+          "wildcard": false
+        }
+      ],
+      "price": 200,
+      "effect": "較容易遇到鳳王/洛奇亞",
+      "level": 2
+    },
+    {
+      "id": "electric-soup",
+      "name": "雷電湯",
+      "nameSource": "hubs",
+      "category": "soup",
+      "tool": "鍋子",
+      "toolId": "cooking-pot",
+      "flavor": "spicy",
+      "move": "水槍",
+      "strongMove": false,
+      "specialty": "發電",
+      "ingredients": [
+        {
+          "name": "新鮮水",
+          "wildcard": false
+        }
+      ],
+      "price": 200,
+      "effect": "棲息地較容易出現寶可夢",
+      "level": 2
+    },
+    {
+      "id": "herbal-soup",
+      "name": "健康湯",
+      "nameSource": "hubs",
+      "category": "soup",
+      "tool": "鍋子",
+      "toolId": "cooking-pot",
+      "flavor": "spicy",
+      "move": "水槍",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "新鮮水",
+          "wildcard": false
+        },
+        {
+          "name": "豆子",
+          "wildcard": false
+        },
+        {
+          "name": "葉子",
+          "wildcard": false
+        }
+      ],
+      "price": 500,
+      "effect": "棲息地更容易出現寶可夢",
+      "level": 3
+    },
+    {
+      "id": "mixed-soup",
+      "name": "鮮味湯",
+      "nameSource": "hubs",
+      "category": "soup",
+      "tool": "鍋子",
+      "toolId": "cooking-pot",
+      "flavor": "sour",
+      "move": "水槍",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "新鮮水",
+          "wildcard": false
+        },
+        {
+          "name": "亞培果",
+          "wildcard": false
+        },
+        {
+          "name": "任意漢堡排",
+          "wildcard": true
+        }
+      ],
+      "price": 500,
+      "effect": "商店更容易出現好物品",
+      "level": 3
+    },
+    {
+      "id": "plain-bread",
+      "name": "簡單麵包",
+      "nameSource": "hubs",
+      "category": "bread",
+      "tool": "麵包窯",
+      "toolId": "bread-oven",
+      "flavor": "plain",
+      "move": "居合斬",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "小麥",
+          "wildcard": false
+        }
+      ],
+      "price": 100,
+      "effect": "較容易和寶可夢變親密",
+      "level": 2
+    },
+    {
+      "id": "leppa-bread",
+      "name": "慕柑果麵包",
+      "nameSource": "hubs",
+      "category": "bread",
+      "tool": "麵包窯",
+      "toolId": "bread-oven",
+      "flavor": "sour",
+      "move": "居合斬",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "小麥",
+          "wildcard": false
+        },
+        {
+          "name": "慕柑果",
+          "wildcard": false
+        }
+      ],
+      "price": 100,
+      "effect": "商店較容易出現好物品",
+      "level": 2
+    },
+    {
+      "id": "carrot-bread",
+      "name": "紅蘿蔔麵包",
+      "nameSource": "hubs",
+      "category": "bread",
+      "tool": "麵包窯",
+      "toolId": "bread-oven",
+      "flavor": "spicy",
+      "move": "居合斬",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "小麥",
+          "wildcard": false
+        },
+        {
+          "name": "新鮮紅蘿蔔",
+          "wildcard": false
+        }
+      ],
+      "price": 200,
+      "effect": "棲息地較容易出現寶可夢",
+      "level": 2
+    },
+    {
+      "id": "recycled-bread",
+      "name": "再生麵包",
+      "nameSource": "hubs",
+      "category": "bread",
+      "tool": "麵包窯",
+      "toolId": "bread-oven",
+      "flavor": "bitter",
+      "move": "居合斬",
+      "strongMove": false,
+      "specialty": "回收",
+      "ingredients": [
+        {
+          "name": "小麥",
+          "wildcard": false
+        },
+        {
+          "name": "任意麵包",
+          "wildcard": true
+        }
+      ],
+      "price": 200,
+      "effect": "較容易找到稀有物品",
+      "level": 2
+    },
+    {
+      "id": "fluffy-bread",
+      "name": "鬆軟麵包",
+      "nameSource": "hubs",
+      "category": "bread",
+      "tool": "麵包窯",
+      "toolId": "bread-oven",
+      "flavor": "sweet",
+      "move": "居合斬",
+      "strongMove": false,
+      "specialty": "澆水",
+      "ingredients": [
+        {
+          "name": "小麥",
+          "wildcard": false
+        },
+        {
+          "name": "木桃果",
+          "wildcard": false
+        }
+      ],
+      "price": 500,
+      "effect": "古代之物更容易出現",
+      "level": 3
+    },
+    {
+      "id": "stew-bread",
+      "name": "麵包碗",
+      "nameSource": "hubs",
+      "category": "bread",
+      "tool": "麵包窯",
+      "toolId": "bread-oven",
+      "flavor": "spicy",
+      "move": "居合斬",
+      "strongMove": false,
+      "specialty": "燃燒",
+      "ingredients": [
+        {
+          "name": "小麥",
+          "wildcard": false
+        },
+        {
+          "name": "任意湯",
+          "wildcard": true
+        }
+      ],
+      "price": 500,
+      "effect": "棲息地更容易出現寶可夢",
+      "level": 3
+    },
+    {
+      "id": "plain-hamburger",
+      "name": "簡單漢堡排",
+      "nameSource": "hubs",
+      "category": "hamburger-steak",
+      "tool": "平底鍋",
+      "toolId": "frying-pan",
+      "flavor": "plain",
+      "move": "碎岩",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "豆子",
+          "wildcard": false
+        }
+      ],
+      "price": 100,
+      "effect": "較容易和寶可夢變親密",
+      "level": 2
+    },
+    {
+      "id": "mushroom-hamburger",
+      "name": "蘑菇漢堡排",
+      "nameSource": "hubs",
+      "category": "hamburger-steak",
+      "tool": "平底鍋",
+      "toolId": "frying-pan",
+      "flavor": "dry",
+      "move": "碎岩",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "豆子",
+          "wildcard": false
+        },
+        {
+          "name": "洞穴蘑菇",
+          "wildcard": false
+        }
+      ],
+      "price": 100,
+      "effect": "較容易遇到鳳王/洛奇亞",
+      "level": 2
+    },
+    {
+      "id": "tomato-hamburger",
+      "name": "番茄漢堡排",
+      "nameSource": "hubs",
+      "category": "hamburger-steak",
+      "tool": "平底鍋",
+      "toolId": "frying-pan",
+      "flavor": "sour",
+      "move": "碎岩",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "豆子",
+          "wildcard": false
+        },
+        {
+          "name": "番茄",
+          "wildcard": false
+        }
+      ],
+      "price": 200,
+      "effect": "商店較容易出現好物品",
+      "level": 2
+    },
+    {
+      "id": "potato-hamburger",
+      "name": "馬鈴薯漢堡排",
+      "nameSource": "hubs",
+      "category": "hamburger-steak",
+      "tool": "平底鍋",
+      "toolId": "frying-pan",
+      "flavor": "sweet",
+      "move": "碎岩",
+      "strongMove": true,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "豆子",
+          "wildcard": false
+        },
+        {
+          "name": "馬鈴薯",
+          "wildcard": false
+        }
+      ],
+      "price": 200,
+      "effect": "古代之物較容易出現",
+      "level": 2
+    },
+    {
+      "id": "mature-hamburger",
+      "name": "苦味漢堡排",
+      "nameSource": "hubs",
+      "category": "hamburger-steak",
+      "tool": "平底鍋",
+      "toolId": "frying-pan",
+      "flavor": "bitter",
+      "move": "碎岩",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "豆子",
+          "wildcard": false
+        },
+        {
+          "name": "西卡果",
+          "wildcard": false
+        },
+        {
+          "name": "光蘭果",
+          "wildcard": false
+        }
+      ],
+      "price": 500,
+      "effect": "更容易找到稀有物品",
+      "level": 3
+    },
+    {
+      "id": "colorful-hamburger",
+      "name": "活力漢堡排",
+      "nameSource": "hubs",
+      "category": "hamburger-steak",
+      "tool": "平底鍋",
+      "toolId": "frying-pan",
+      "flavor": "plain",
+      "move": "碎岩",
+      "strongMove": true,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "豆子",
+          "wildcard": false
+        },
+        {
+          "name": "馬鈴薯",
+          "wildcard": false
+        },
+        {
+          "name": "任意沙拉",
+          "wildcard": true
+        }
+      ],
+      "price": 500,
+      "effect": "更容易和寶可夢變親密",
+      "level": 3
+    },
+    {
+      "id": "watermelon-smoothie",
+      "name": "西瓜冰沙",
+      "nameSource": "guide",
+      "category": "smoothie",
+      "tool": "攪拌機",
+      "toolId": "mixer",
+      "flavor": "sweet",
+      "move": "衝浪",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "切西瓜",
+          "wildcard": false
+        },
+        {
+          "name": "任意食材",
+          "wildcard": true
+        },
+        {
+          "name": "任意食材",
+          "wildcard": true
+        }
+      ],
+      "price": null,
+      "dlc": true,
+      "effect": "古代之物較容易出現",
+      "level": 2
+    },
+    {
+      "id": "sea-grapes-smoothie",
+      "name": "海葡萄冰沙",
+      "nameSource": "guide",
+      "category": "smoothie",
+      "tool": "攪拌機",
+      "toolId": "mixer",
+      "flavor": "dry",
+      "move": "衝浪",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "切西瓜",
+          "wildcard": false
+        },
+        {
+          "name": "海葡萄",
+          "wildcard": false
+        },
+        {
+          "name": "任意食材",
+          "wildcard": true
+        }
+      ],
+      "price": null,
+      "dlc": true,
+      "effect": "較容易遇到鳳王/洛奇亞",
+      "level": 2
+    },
+    {
+      "id": "leppa-smoothie",
+      "name": "慕柑果冰沙",
+      "nameSource": "guide",
+      "category": "smoothie",
+      "tool": "攪拌機",
+      "toolId": "mixer",
+      "flavor": "sweet",
+      "move": "衝浪",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "切西瓜",
+          "wildcard": false
+        },
+        {
+          "name": "慕柑果",
+          "wildcard": false
+        },
+        {
+          "name": "任意食材",
+          "wildcard": true
+        }
+      ],
+      "price": null,
+      "dlc": true,
+      "effect": "古代之物較容易出現",
+      "level": 2
+    },
+    {
+      "id": "red-hot-smoothie",
+      "name": "火辣冰沙",
+      "nameSource": "guide",
+      "category": "smoothie",
+      "tool": "攪拌機",
+      "toolId": "mixer",
+      "flavor": "spicy",
+      "move": "衝浪",
+      "strongMove": false,
+      "specialty": "燃燒",
+      "ingredients": [
+        {
+          "name": "切西瓜",
+          "wildcard": false
+        },
+        {
+          "name": "新鮮紅蘿蔔",
+          "wildcard": false
+        },
+        {
+          "name": "任意食材",
+          "wildcard": true
+        }
+      ],
+      "price": null,
+      "dlc": true,
+      "effect": "棲息地較容易出現寶可夢",
+      "level": 2
+    },
+    {
+      "id": "refreshing-soda-smoothie",
+      "name": "清爽汽水冰沙",
+      "nameSource": "guide",
+      "category": "smoothie",
+      "tool": "攪拌機",
+      "toolId": "mixer",
+      "flavor": "sour",
+      "move": "衝浪",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "切西瓜",
+          "wildcard": false
+        },
+        {
+          "name": "汽水",
+          "wildcard": false
+        },
+        {
+          "name": "亞培果",
+          "wildcard": false
+        }
+      ],
+      "price": null,
+      "dlc": true,
+      "effect": "商店更容易出現好物品",
+      "level": 3
+    },
+    {
+      "id": "coffee-parfait-smoothie",
+      "name": "咖啡芭菲冰沙",
+      "nameSource": "guide",
+      "category": "smoothie",
+      "tool": "攪拌機",
+      "toolId": "mixer",
+      "flavor": "bitter",
+      "move": "衝浪",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "切西瓜",
+          "wildcard": false
+        },
+        {
+          "name": "咪咪牛奶咖啡",
+          "wildcard": false
+        },
+        {
+          "name": "任意麵包",
+          "wildcard": true
+        }
+      ],
+      "price": null,
+      "dlc": true,
+      "effect": "更容易找到稀有物品",
+      "level": 3
+    },
+    {
+      "id": "popping-salad",
+      "name": "粒粒沙拉",
+      "nameSource": "guide",
+      "category": "salad",
+      "tool": "砧板",
+      "toolId": "cutting-board",
+      "flavor": "bitter",
+      "move": "樹葉",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "葉子",
+          "wildcard": false
+        },
+        {
+          "name": "海葡萄",
+          "wildcard": false
+        }
+      ],
+      "price": null,
+      "dlc": true,
+      "effect": "較容易找到稀有物品",
+      "level": 2
+    },
+    {
+      "id": "popping-soup",
+      "name": "粒粒湯",
+      "nameSource": "guide",
+      "category": "soup",
+      "tool": "鍋子",
+      "toolId": "cooking-pot",
+      "flavor": "bitter",
+      "move": "水槍",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "新鮮水",
+          "wildcard": false
+        },
+        {
+          "name": "海葡萄",
+          "wildcard": false
+        },
+        {
+          "name": "任意食材",
+          "wildcard": true
+        }
+      ],
+      "price": null,
+      "dlc": true,
+      "effect": "較容易找到稀有物品",
+      "level": 2
+    },
+    {
+      "id": "watermelon-bread",
+      "name": "西瓜麵包",
+      "nameSource": "guide",
+      "category": "bread",
+      "tool": "麵包窯",
+      "toolId": "bread-oven",
+      "flavor": "sweet",
+      "move": "居合斬",
+      "strongMove": false,
+      "specialty": null,
+      "ingredients": [
+        {
+          "name": "小麥",
+          "wildcard": false
+        },
+        {
+          "name": "切西瓜",
+          "wildcard": false
+        },
+        {
+          "name": "任意食材",
+          "wildcard": true
+        }
+      ],
+      "price": null,
+      "dlc": true,
+      "effect": "古代之物較容易出現",
+      "level": 2
+    },
+    {
+      "id": "bursting-hamburger",
+      "name": "辣飛天漢堡排",
+      "nameSource": "guide",
+      "category": "hamburger-steak",
+      "tool": "平底鍋",
+      "toolId": "frying-pan",
+      "flavor": "spicy",
+      "move": "碎岩",
+      "strongMove": true,
+      "specialty": "爆炸",
+      "ingredients": [
+        {
+          "name": "豆子",
+          "wildcard": false
+        },
+        {
+          "name": "海葡萄",
+          "wildcard": false
+        },
+        {
+          "name": "辣椒醬",
+          "wildcard": false
+        },
+        {
+          "name": "任意食材",
+          "wildcard": true
+        }
+      ],
+      "price": null,
+      "dlc": true,
+      "effect": "棲息地更容易出現寶可夢",
+      "level": 3
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "bean",
+      "name": "豆子",
+      "ja": "マメ",
+      "flavor": "sweet",
+      "source": "凸隆隆山地的田裡採收、買種子自己種",
+      "image": "https://pokopiadex.com/images/items/item_ui/bean.png"
+    },
+    {
+      "id": "wheat",
+      "name": "小麥",
+      "ja": "コムギ",
+      "flavor": "dry",
+      "source": "凸隆隆山地的田裡採收、買種子自己種",
+      "image": "https://pokopiadex.com/images/items/item_ui/wheat.png"
+    },
+    {
+      "id": "fresh-water",
+      "name": "新鮮水",
+      "ja": "おいしいみず",
+      "flavor": "plain",
+      "source": "自動販賣機、商店購買",
+      "image": "https://pokopiadex.com/images/items/item_ui/fresh-water.png"
+    },
+    {
+      "id": "tomato",
+      "name": "番茄",
+      "ja": "トマト",
+      "flavor": "sour",
+      "source": "陰沉沉海濱的田裡採收、買種子自己種",
+      "image": "https://pokopiadex.com/images/items/item_ui/tomato.png"
+    },
+    {
+      "id": "potato",
+      "name": "馬鈴薯",
+      "ja": "ジャガイモ",
+      "flavor": "bitter",
+      "source": "買種子自己種（亮晶晶空島環境等級 3 以後）",
+      "image": "https://pokopiadex.com/images/items/item_ui/potato.png"
+    },
+    {
+      "id": "fresh-carrot",
+      "name": "新鮮紅蘿蔔",
+      "ja": "たべごろニンジン",
+      "flavor": "spicy",
+      "source": "野外拔草取得，最好拿的辣味食材",
+      "image": "https://pokopiadex.com/images/items/item_ui/fresh-carrot.png"
+    },
+    {
+      "id": "cave-mushrooms",
+      "name": "洞穴蘑菇",
+      "ja": "たべごろキノコ",
+      "flavor": "dry",
+      "source": "凸隆隆山地的洞窟與樹蔭下",
+      "image": "https://pokopiadex.com/images/items/dream_ui/cave-mushrooms.png"
+    },
+    {
+      "id": "seaweed",
+      "name": "海藻",
+      "ja": "かいそう",
+      "flavor": "bitter",
+      "source": "陰沉沉海濱的沙灘上撿",
+      "image": "https://pokopiadex.com/images/items/item_ui/seaweed.png"
+    },
+    {
+      "id": "leppa-berry",
+      "name": "慕柑果",
+      "ja": "ヒメリのみ",
+      "flavor": "plain",
+      "source": "撞樹掉落、種樹收成",
+      "image": "https://pokopiadex.com/images/items/dream_ui/leppa-berry.png"
+    },
+    {
+      "id": "pecha-berry",
+      "name": "木桃果",
+      "ja": "モモンのみ",
+      "flavor": "sweet",
+      "source": "野生樹木、種樹收成",
+      "image": "https://pokopiadex.com/images/items/item_ui/pecha-berry.png"
+    },
+    {
+      "id": "rawst-berry",
+      "name": "西卡果",
+      "ja": "チーゴのみ",
+      "flavor": "bitter",
+      "source": "野生樹木、種樹收成",
+      "image": "https://pokopiadex.com/images/items/item_ui/rawst-berry.png"
+    },
+    {
+      "id": "aspear-berry",
+      "name": "亞培果",
+      "ja": "ナナシのみ",
+      "flavor": "sour",
+      "source": "野生樹木、種樹收成",
+      "image": "https://pokopiadex.com/images/items/item_ui/aspear-berry.png"
+    },
+    {
+      "id": "lum-berry",
+      "name": "光蘭果",
+      "ja": "ラムのみ",
+      "flavor": "plain",
+      "source": "野生樹木、種樹收成",
+      "image": "https://pokopiadex.com/images/items/item_ui/lum-berry.png"
+    },
+    {
+      "id": "chesto-berry",
+      "name": "伊奈果",
+      "ja": "カゴのみ",
+      "flavor": "dry",
+      "source": "野生樹木、種樹收成",
+      "image": "https://pokopiadex.com/images/items/item_ui/chesto-berry.png"
+    },
+    {
+      "id": "soda-pop",
+      "name": "汽水",
+      "ja": "サイコソーダ",
+      "flavor": "sour",
+      "source": "自動販賣機",
+      "image": "https://pokopiadex.com/images/items/item_ui/soda-pop.png"
+    },
+    {
+      "id": "moomoo-milk-coffee",
+      "name": "咪咪牛奶咖啡",
+      "ja": "モーモーミルクコーヒー",
+      "flavor": "sweet",
+      "source": "自動販賣機",
+      "image": "https://pokopiadex.com/images/items/item_ui/moomoo-milk-coffee.png"
+    },
+    {
+      "id": "roserade-tea",
+      "name": "玫瑰香茶",
+      "ja": "ロズレイティー",
+      "flavor": "dry",
+      "source": "自動販賣機",
+      "image": "https://pokopiadex.com/images/items/item_ui/roserade-tea.png"
+    },
+    {
+      "id": "chili-sauce",
+      "name": "辣椒醬",
+      "ja": "チリソース",
+      "flavor": "spicy",
+      "source": "自動販賣機",
+      "image": "https://pokopiadex.com/images/items/item_ui/chili-sauce.png"
+    },
+    {
+      "id": "cut-watermelon",
+      "name": "切西瓜",
+      "ja": "カットスイカ",
+      "flavor": "sweet",
+      "source": "請擅長伐木的寶可夢加工西瓜（DLC）",
+      "dlc": true,
+      "image": "https://pokopiaguide.com/images/cooking/ingredients/cut-watermelon.webp"
+    },
+    {
+      "id": "sea-grapes",
+      "name": "海葡萄",
+      "ja": "うみぶどう",
+      "flavor": "bitter",
+      "source": "冒泡泡海底的城鎮、海底夢之島（DLC）",
+      "dlc": true,
+      "image": "https://pokopiaguide.com/images/cooking/ingredients/sea-grapes.webp"
+    },
+    {
+      "id": "bruised-berry",
+      "name": "瘀傷果實",
+      "ja": "いたんだきのみ",
+      "flavor": "plain",
+      "source": "劇情中主廚給的果實",
+      "image": "https://pokopiadex.com/images/items/item_ui/bruised-berry.png"
+    },
+    {
+      "id": "common-candy",
+      "name": "普通糖果",
+      "ja": "ふつうのアメ",
+      "flavor": "sweet",
+      "source": "劇情中主廚給的糖果",
+      "image": "https://pokopiadex.com/images/items/item_ui/common-candy.png"
+    },
+    {
+      "id": "rare-candy",
+      "name": "稀有糖果",
+      "ja": "ふしぎなアメ",
+      "flavor": "sweet",
+      "source": "劇情中主廚給的糖果",
+      "image": "https://pokopiadex.com/images/items/item_ui/rare-candy.png"
+    },
+    {
+      "id": "curry-and-rice",
+      "name": "咖哩飯",
+      "ja": "カレーライス",
+      "flavor": "plain",
+      "source": "派對料理取得",
+      "image": "https://pokopiadex.com/images/items/item_ui/curry-and-rice.png"
+    }
+  ]
+}

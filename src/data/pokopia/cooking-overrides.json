@@ -1,0 +1,264 @@
+{
+  "_comment": [
+    "料理管線唯一的手寫檔（比照 habitat-materials.json），scripts/fetch-cooking.mjs 讀它。",
+    "",
+    "為什麼需要它：兩個上游各缺一半。",
+    "  pokopiaguide.com/zh/cooking  結構完整（全 34 道，含 DLC、口味、供奉效果、售價、",
+    "                               所需特長），但繁中譯名是自譯——莓果全對錯了",
+    "                               （把 ヒメリのみ/Leppa 譯成「蘋野果」，實際官方是「慕柑果」）。",
+    "  pokopia.pokemonhubs.com      繁中名對齊官方（莓果採寶可夢系列官方譯名），但只有本篇 24 道，",
+    "                               沒有 DLC，也沒有供奉效果強度與口味。",
+    "",
+    "所以：結構一律取 guide，繁中名一律取 hubs（腳本自動從 /cooking/ 抓，靠下面的 recipeSlugs 對接），",
+    "hubs 沒收錄的 DLC 10 道退回 guide 名並標 nameSource=\"guide\"（UI 顯示「暫譯」）。",
+    "",
+    "ingredients 是純手寫：口味來自 gamewith「食べ物一覧と味」的 data-text 過濾屬性",
+    "（https://gamewith.jp/pocoapokemon/548709），與同站苔卡比獸頁列出的各口味代表食材",
+    "（マメ=甜、ジャガイモ=苦、コムギ=澀、トマト=酸、ヒメリのみ=普通、たべごろニンジン=辣）互相吻合。",
+    "繁中名採 hubs /items/ 的官方譯名；DLC 兩種（切西瓜、海葡萄）hubs 沒有，退回 guide 名。",
+    "日文名保留是為了下次核對上游時能對得回去，不會顯示在頁面上。"
+  ],
+
+  "recipeSlugs": {
+    "plain-salad": "simple-salad",
+    "leppa-salad": "leppa-salad",
+    "seaweed-salad": "seaweed-salad",
+    "shredded-salad": "shredded-salad",
+    "mashed-salad": "crushed-berry-salad",
+    "crouton-salad": "crouton-salad",
+    "plain-soup": "simple-soup",
+    "seaweed-soup": "seaweed-soup",
+    "mushroom-soup": "mushroom-soup",
+    "electric-soup": "electrifying-soup",
+    "herbal-soup": "healthy-soup",
+    "mixed-soup": "flavorful-soup",
+    "plain-bread": "simple-bread",
+    "leppa-bread": "leppa-bread",
+    "carrot-bread": "carrot-bread",
+    "recycled-bread": "recycled-bread",
+    "fluffy-bread": "fluffy-bread",
+    "stew-bread": "bread-bowl",
+    "plain-hamburger": "simple-hamburger-steak",
+    "mushroom-hamburger": "mushroom-hamburger-steak",
+    "tomato-hamburger": "tomato-hamburger-steak",
+    "potato-hamburger": "potato-hamburger-steak",
+    "mature-hamburger": "bitter-hamburger-steak",
+    "colorful-hamburger": "vibrant-hamburger-steak"
+  },
+
+  "_ingredientNames": [
+    "guide 的食材譯名 → hubs 官方譯名。腳本用它改寫食譜裡的素材名，只列兩邊不一致的。",
+    "同一張表也會套到 DLC 料理的名字上（「蘋野果冰沙」→「慕柑果冰沙」），",
+    "否則那 10 道退回 guide 名時會把錯的莓果譯名一起帶進站內。",
+    "最後一筆不是譯名修正，是把 guide 那句過長的萬用格描述縮短。"
+  ],
+  "ingredientNames": {
+    "蘋野果": "慕柑果",
+    "零餘果": "伊奈果",
+    "木子果": "亞培果",
+    "桃桃果": "木桃果",
+    "莓莓果": "西卡果",
+    "利木果": "光蘭果",
+    "柿仔果": "亞培果",
+    "美味之水": "新鮮水",
+    "成熟的蘑菇": "洞穴蘑菇",
+    "成熟的胡蘿蔔": "新鮮紅蘿蔔",
+    "碳酸飲料": "汽水",
+    "哞哞鮮乳咖啡": "咪咪牛奶咖啡",
+    "辣醬": "辣椒醬",
+    "不會做成其他料理的任意食材": "任意食材"
+  },
+
+  "_specialties": "guide 的特長 key → hubs /specialties/ 的官方繁中特技名。",
+  "specialties": {
+    "chop": "伐木",
+    "crush": "搗碎",
+    "generate": "發電",
+    "recycle": "回收",
+    "water": "澆水",
+    "burn": "燃燒",
+    "explode": "爆炸"
+  },
+
+  "_moves": "guide 的招式繁中是自譯（「樹葉擊」），改採寶可夢系列官方招式名。",
+  "moves": {
+    "leafage": "樹葉",
+    "water-gun": "水槍",
+    "cut": "居合斬",
+    "rock-smash": "碎岩",
+    "surf": "衝浪"
+  },
+
+  "ingredients": [
+    {
+      "id": "bean",
+      "name": "豆子",
+      "ja": "マメ",
+      "flavor": "sweet",
+      "source": "凸隆隆山地的田裡採收、買種子自己種"
+    },
+    {
+      "id": "wheat",
+      "name": "小麥",
+      "ja": "コムギ",
+      "flavor": "dry",
+      "source": "凸隆隆山地的田裡採收、買種子自己種"
+    },
+    {
+      "id": "fresh-water",
+      "name": "新鮮水",
+      "ja": "おいしいみず",
+      "flavor": "plain",
+      "source": "自動販賣機、商店購買"
+    },
+    {
+      "id": "tomato",
+      "name": "番茄",
+      "ja": "トマト",
+      "flavor": "sour",
+      "source": "陰沉沉海濱的田裡採收、買種子自己種"
+    },
+    {
+      "id": "potato",
+      "name": "馬鈴薯",
+      "ja": "ジャガイモ",
+      "flavor": "bitter",
+      "source": "買種子自己種（亮晶晶空島環境等級 3 以後）"
+    },
+    {
+      "id": "fresh-carrot",
+      "name": "新鮮紅蘿蔔",
+      "ja": "たべごろニンジン",
+      "flavor": "spicy",
+      "source": "野外拔草取得，最好拿的辣味食材"
+    },
+    {
+      "id": "cave-mushrooms",
+      "name": "洞穴蘑菇",
+      "ja": "たべごろキノコ",
+      "flavor": "dry",
+      "source": "凸隆隆山地的洞窟與樹蔭下"
+    },
+    {
+      "id": "seaweed",
+      "name": "海藻",
+      "ja": "かいそう",
+      "flavor": "bitter",
+      "source": "陰沉沉海濱的沙灘上撿"
+    },
+    {
+      "id": "leppa-berry",
+      "name": "慕柑果",
+      "ja": "ヒメリのみ",
+      "flavor": "plain",
+      "source": "撞樹掉落、種樹收成"
+    },
+    {
+      "id": "pecha-berry",
+      "name": "木桃果",
+      "ja": "モモンのみ",
+      "flavor": "sweet",
+      "source": "野生樹木、種樹收成"
+    },
+    {
+      "id": "rawst-berry",
+      "name": "西卡果",
+      "ja": "チーゴのみ",
+      "flavor": "bitter",
+      "source": "野生樹木、種樹收成"
+    },
+    {
+      "id": "aspear-berry",
+      "name": "亞培果",
+      "ja": "ナナシのみ",
+      "flavor": "sour",
+      "source": "野生樹木、種樹收成"
+    },
+    {
+      "id": "lum-berry",
+      "name": "光蘭果",
+      "ja": "ラムのみ",
+      "flavor": "plain",
+      "source": "野生樹木、種樹收成"
+    },
+    {
+      "id": "chesto-berry",
+      "name": "伊奈果",
+      "ja": "カゴのみ",
+      "flavor": "dry",
+      "source": "野生樹木、種樹收成"
+    },
+    {
+      "id": "soda-pop",
+      "name": "汽水",
+      "ja": "サイコソーダ",
+      "flavor": "sour",
+      "source": "自動販賣機"
+    },
+    {
+      "id": "moomoo-milk-coffee",
+      "name": "咪咪牛奶咖啡",
+      "ja": "モーモーミルクコーヒー",
+      "flavor": "sweet",
+      "source": "自動販賣機"
+    },
+    {
+      "id": "roserade-tea",
+      "name": "玫瑰香茶",
+      "ja": "ロズレイティー",
+      "flavor": "dry",
+      "source": "自動販賣機"
+    },
+    {
+      "id": "chili-sauce",
+      "name": "辣椒醬",
+      "ja": "チリソース",
+      "flavor": "spicy",
+      "source": "自動販賣機"
+    },
+    {
+      "id": "cut-watermelon",
+      "name": "切西瓜",
+      "ja": "カットスイカ",
+      "flavor": "sweet",
+      "source": "請擅長伐木的寶可夢加工西瓜（DLC）",
+      "dlc": true
+    },
+    {
+      "id": "sea-grapes",
+      "name": "海葡萄",
+      "ja": "うみぶどう",
+      "flavor": "bitter",
+      "source": "冒泡泡海底的城鎮、海底夢之島（DLC）",
+      "dlc": true
+    },
+    {
+      "id": "bruised-berry",
+      "name": "瘀傷果實",
+      "ja": "いたんだきのみ",
+      "flavor": "plain",
+      "source": "劇情中主廚給的果實"
+    },
+    {
+      "id": "common-candy",
+      "name": "普通糖果",
+      "ja": "ふつうのアメ",
+      "flavor": "sweet",
+      "source": "劇情中主廚給的糖果"
+    },
+    {
+      "id": "rare-candy",
+      "name": "稀有糖果",
+      "ja": "ふしぎなアメ",
+      "flavor": "sweet",
+      "source": "劇情中主廚給的糖果"
+    },
+    {
+      "id": "curry-and-rice",
+      "name": "咖哩飯",
+      "ja": "カレーライス",
+      "flavor": "plain",
+      "source": "派對料理取得"
+    }
+  ]
+}

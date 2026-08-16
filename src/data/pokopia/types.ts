@@ -96,6 +96,69 @@ export interface Habitat {
   materials?: HabitatMaterial[];
 }
 
+/**
+ * 料理／食材的口味。供奉給苔卡比獸時，**決定當天 buff 的是口味而不是料理本身**，
+ * 所以這是整個料理頁的主軸。`plain`（普通）在上游是「沒有特殊口味」，不是第七種味道。
+ */
+export type Flavor = "plain" | "sweet" | "spicy" | "bitter" | "dry" | "sour";
+
+/** 料理分類，對應四種（DLC 後五種）料理器具。 */
+export type RecipeCategory = "salad" | "soup" | "bread" | "hamburger-steak" | "smoothie";
+
+/** 一道料理的素材。`wildcard` 是「任意麵包」「任意食材」這種不指定的格子。 */
+export interface RecipeIngredient {
+  name: string;
+  wildcard: boolean;
+}
+
+/** 一道料理（來源：scripts/fetch-cooking.mjs 產生的 cooking.json）。 */
+export interface Recipe {
+  /** pokopiaguide 的 slug，穩定 id，也用於卡片圖與 deep-link 的 ?r= 參數 */
+  id: string;
+  name: string;
+  /**
+   * 名字的出處。`hubs`＝官方繁中名；`guide`＝DLC 那 10 道 hubs 尚未收錄，
+   * 退回 pokopiaguide 的社群譯名，UI 上標「暫譯」以免被當成官方名。
+   */
+  nameSource: "hubs" | "guide";
+  category: RecipeCategory;
+  /** 料理器具（砧板／鍋子／麵包窯／平底鍋／攪拌機） */
+  tool: string;
+  toolId: string;
+  flavor: Flavor;
+  /** 吃下去會強化的招式（樹葉／水槍／居合斬／碎岩／衝浪） */
+  move: string;
+  /** 少數料理的招式強化幅度更大 */
+  strongMove: boolean;
+  /** 需要帶某個特技的寶可夢才做得出來（如「燃燒」「搗碎」），不需要則為 null */
+  specialty: string | null;
+  ingredients: RecipeIngredient[];
+  /** 賣出價（生活幣）。本篇 100／200／500 三階，DLC 上游沒給就是 null */
+  price: number | null;
+  dlc?: boolean;
+  /** 供奉後的當日效果原文（如「棲息地更容易出現寶可夢」） */
+  effect: string;
+  /** 供奉效果強度：2＝較容易、3＝更容易。1 是生食材，只出現在 Ingredient 上 */
+  level: 2 | 3;
+}
+
+/** 可直接供奉（不下鍋）的食材。 */
+export interface Ingredient {
+  id: string;
+  name: string;
+  /** 日文名，只用來對照上游，不顯示 */
+  ja: string;
+  flavor: Flavor;
+  /** 一句話的取得方式 */
+  source: string;
+  dlc?: boolean;
+  /**
+   * 圖示網址。這裡存**完整網址**而不是像建築那樣只存片段：食材圖有兩個來源
+   * （hubs 的 pokopiadex／DLC 兩種退回 pokopiaguide），基底不是同一個。
+   */
+  image: string;
+}
+
 /** 外部書籤連結（皆為查證過的真實網址）。 */
 export interface Bookmark {
   label: string;

@@ -44,6 +44,7 @@ const urls = [
   { loc: "/pokopia" },
   { loc: "/pokopia/videos" },
   { loc: "/pokopia/habitats" },
+  { loc: "/pokopia/cooking" },
 ];
 
 const xml = [

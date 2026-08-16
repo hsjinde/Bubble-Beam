@@ -22,6 +22,9 @@ export function PokopiaLayout({ children }: { children: ReactNode }) {
          *
          * 加入 ThemeToggle（44px）後只會讓第二行更擠，不會造成水平溢位——
          * flex-wrap 已經在，兩行式樣本來就是保底機制。
+         *
+         * 2026-08-16 再加「料理」（32px＋gap）：手機仍然是既有的兩行式樣，
+         * 只是第一行少一個位置，不影響溢位（實測 375px 無水平捲軸）。
          */}
         <nav className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-4 gap-y-1 px-4 py-2 sm:gap-x-6">
           <Link to="/" className="group inline-flex min-h-11 items-center gap-1.5 text-pokopia-ink">
@@ -66,6 +69,12 @@ export function PokopiaLayout({ children }: { children: ReactNode }) {
           >
             棲息地
           </Link>
+          <Link
+            to="/pokopia/cooking"
+            className="inline-flex min-h-11 items-center font-semibold whitespace-nowrap text-pokopia-ink hover:underline"
+          >
+            料理
+          </Link>
           {/* 跨區入口，與 GuideLayout 的對稱作法；配色留在 pokopia 暖色域內。 */}
           <div className="ml-auto flex items-center gap-1">
             <Link
@@ -81,7 +90,7 @@ export function PokopiaLayout({ children }: { children: ReactNode }) {
       </header>
       <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
       <footer className="mx-auto max-w-5xl px-4 pb-8 text-xs text-pokopia-ink-soft">
-        非官方粉絲攻略站。建築名稱、描述與分類資料來自社群資料庫（pokopia.pokemonhubs.com）；「搭配靈感」與「主題選集」為本站策展，非官方資料。Pokémon
+        非官方粉絲攻略站。建築、棲息地與料理資料來自社群資料庫（pokopia.pokemonhubs.com、pokopiaguide.com）；「搭配靈感」「主題選集」與料理推薦為本站策展，非官方資料。Pokémon
         與《Pokémon Pokopia》相關權利屬於任天堂／The Pokémon Company／GAME FREAK。
       </footer>
     </div>
