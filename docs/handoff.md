@@ -3,7 +3,7 @@
 給下一個接手的人（Claude Code 或 `agy`）。這份檔案記錄目前的 UI／前端品質狀態與待辦，
 每輪工作結束時更新它，不要讓它過期。
 
-最後更新：2026-08-15
+最後更新：2026-08-16
 
 ---
 
@@ -406,6 +406,7 @@ Mega路卡利歐 B→A、索羅亞克 B→A、自爆磁怪密勒頓 C→B），`
 ### 12. Pokopia 棲息地繁體中文化 (2026-08-11)
 
 全站 `/pokopia/habitats` 棲息地反查頁面完成 100% 繁體中文化：
+
 - `src/data/pokopia/habitat-materials.json`（DLC 1 泡泡海底 36 筆棲息地材料）74 種道具/材料名稱對齊官方《Pokémon Pokopia》繁中與 Pokemon Hubs / PokopiaGuide 社群標準譯名（如：`裝飾用超級球`、`發條好喇魷`、`暴鯉龍噴泉`、`桌上型麥克風`、`五彩珊瑚` 等）。
 - 重跑 `scripts/fetch-habitats.mjs`，`src/data/pokopia/habitats.json` 245 個棲息地、344 種寶可夢名、分類與建造材料已達成 0 英文殘留。
 - 更新 `src/routes/pokopia/habitats.tsx` 與 `src/data/pokopia/types.ts` 之文案與型別註解。
@@ -423,15 +424,15 @@ Mega路卡利歐 B→A、索羅亞克 B→A、自爆磁怪密勒頓 C→B），`
 使用者要求「更新網站所有內容」。四條會過期的內容線裡只有兩條跑得完，原因是這次是在
 **Claude Code 遠端沙箱**（claude.ai/code 開的 session）執行，egress policy 擋掉了大部分上游。
 
-| 內容線                 | 結果      | 說明                                                                 |
-| ---------------------- | --------- | -------------------------------------------------------------------- |
-| `/decks` 排行榜        | ✅ 已更新 | Limitless 連得到，`meta.json` 重抓（10 升 6 降 3 平 1 新進榜）        |
-| 策展攻略 `decks.ts`    | ✅ 已核對 | 26 個牌組 tier 與新資料**全數一致**，攻略文的名次敘述也仍成立，未改動 |
-| `/decks/schedule` 活動 | ✅ 已複查 | 12 筆無異動，只更新 `updatedAt`                                       |
+| 內容線                 | 結果      | 說明                                                                   |
+| ---------------------- | --------- | ---------------------------------------------------------------------- |
+| `/decks` 排行榜        | ✅ 已更新 | Limitless 連得到，`meta.json` 重抓（10 升 6 降 3 平 1 新進榜）         |
+| 策展攻略 `decks.ts`    | ✅ 已核對 | 26 個牌組 tier 與新資料**全數一致**，攻略文的名次敘述也仍成立，未改動  |
+| `/decks/schedule` 活動 | ✅ 已複查 | 12 筆無異動，只更新 `updatedAt`                                        |
 | `sets.json` 時間軸     | ✅ 已更新 | 改走 git proxy 的匿名 clone 重跑，B4 名稱更正為單數 Ruler of the Skies |
-| `cards.json` 卡片索引  | ✅ 已驗證 | 與上游逐 set 比對：22 set／3761 張完全一致，確認不需重跑              |
-| `/pokopia/videos`      | 🔶 只抽查 | YouTube 被擋，改用 WebSearch 抽查 6 支全存活；不增刪，理由見下        |
-| `/pokopia/habitats`    | ❌ 做不了 | 兩個上游都被擋；本來也是靜態遊戲資料，沒有 DLC 更新就不用重跑         |
+| `cards.json` 卡片索引  | ✅ 已驗證 | 與上游逐 set 比對：22 set／3761 張完全一致，確認不需重跑               |
+| `/pokopia/videos`      | 🔶 只抽查 | YouTube 被擋，改用 WebSearch 抽查 6 支全存活；不增刪，理由見下         |
+| `/pokopia/habitats`    | ❌ 做不了 | 兩個上游都被擋；本來也是靜態遊戲資料，沒有 DLC 更新就不用重跑          |
 
 ### 這個環境擋掉了什麼（下次在沙箱裡跑之前先看這段）
 
@@ -486,6 +487,48 @@ curl 與 WebFetch 一律回 403（`CONNECT tunnel failed`）：
 加一段 `pokopia.ts` 的註解，沒有動任何可執行的 `.ts`／`.tsx`**，所以型別與版面風險趨近於零。
 但下一個在本機有網路的人接手時，請補一次 `npm run build` 與 `/decks`、`/decks/schedule`
 的瀏覽器實測，並把 `/pokopia/videos` 用完整的 oEmbed＋觀看數流程換一輪。
+
+---
+
+## 2026-08-16 這輪：新增 `/pokopia/cooking` 料理食譜頁
+
+使用者要「料理介面、各料理食譜、食物口味，最後推薦好用的 3 級料理」。
+
+新增的東西：
+
+| 檔案                                      | 性質                                                      |
+| ----------------------------------------- | --------------------------------------------------------- |
+| `scripts/fetch-cooking.mjs`               | 抓取管線（3 次 fetch，數秒）                              |
+| `src/data/pokopia/cooking-overrides.json` | **手寫**：兩站 slug 對接、譯名修正、24 種食材的口味與取得 |
+| `src/data/pokopia/cooking.json`           | 生成檔，34 道料理 ＋ 24 種食材                            |
+| `src/data/pokopia/cooking.ts`             | 口味／等級常數、策展推薦（只在這條路由 import）           |
+| `src/components/pokopia/CookingGuide.tsx` | 頁面主體（口味對照 → 3 級推薦 → 全食譜篩選 → 食材口味）   |
+| `src/routes/pokopia/cooking.tsx`          | 路由                                                      |
+
+### 這頁的資料判斷（下次更新前先看）
+
+- **「3 級料理」是本站定義的說法**，上游沒有這個欄位。判定規則寫在 `fetch-cooking.mjs`
+  抬頭：供奉效果句「更容易」＝ 3 級、「較容易」＝ 2 級、生食材＝ 1 級。
+  兩個獨立來源交叉驗證過：pokopiaguide 標售價 500 的本篇 8 道，與 gamewith
+  「かなり効果が上昇する料理」清單（含 DLC 共 11 道）完全同一批。腳本每次跑都會自動對帳。
+- **繁中名取 hubs，不取 guide**：guide 的莓果譯名整組是自譯而且對錯（Leppa→「蘋野果」，
+  官方是「慕柑果」；Chesto→「零餘果」，官方是「伊奈果」）。hubs 沒收錄的 DLC 10 道
+  只好退回 guide 名，UI 上標「暫譯」。哪天 hubs 補上 DLC，只要在 `recipeSlugs` 加對應就會自動換掉。
+- **每種口味的首選是策展**，不是官方推薦。判斷依據是製作成本（要不要生火、要不要先做
+  另一道料理當素材、要不要專程找帶特定特技的寶可夢），頁面上有明確標示。
+
+### 驗證數字
+
+- 圖片：34 道料理 ＋ 24 種食材共 58 個 hotlink 全數 200，頁面實測 64 張圖 0 破圖
+- 對比：淺色／深色各重新載入後量測算繪色，`header`＋`main`＋`footer` **0 處失敗**
+  （量測腳本要用 canvas 把 `oklab()` 轉成 sRGB 再算，直接 regex 拆數字會誤判成 9 處假陽性）
+- 375px：無水平溢位；導覽列多一個「料理」仍是既有的兩行式樣
+- 互動：篩選（口味／器具／只看 3 級）實測正確，「3 級＋冰沙」＝ 2 道
+- `npm run lint` 0 問題；`npx vite build` 成功，料理資料切成獨立 chunk（server 49.8 KB），
+  沒有混進 `/pokopia` 主頁
+- ⚠ `npm run build` 的完整 prebuild 目前**跑不完**：`scripts/subset-fonts.mjs` 需要的
+  `fontverter` 沒有安裝（既有環境問題，與這輪改動無關）。這輪改跑
+  `subset-cards` ＋ `gen:sitemap` ＋ `vite build` 三段驗證。
 
 ---
 

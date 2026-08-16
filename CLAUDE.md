@@ -44,6 +44,9 @@ node scripts/subset-cards.mjs --check                      # 只檢查是否過�
 
 # 重建 /pokopia/habitats 棲息地索引（約 250 次連續 fetch，~2 分鐘）
 node scripts/fetch-habitats.mjs                            # → src/data/pokopia/habitats.json
+
+# 重建 /pokopia/cooking 料理索引（3 次 fetch，數秒）
+node scripts/fetch-cooking.mjs                             # → src/data/pokopia/cooking.json
 ```
 
 `fetch-habitats.mjs` **同時抓兩個上游**：`pokopia.pokemonhubs.com` 給「棲息地 → 出沒寶可夢」，
@@ -57,6 +60,18 @@ DLC「泡泡海底」那 36 筆的材料**不走 guide**：guide 只收錄其中
 比照 `limitless-map.json`，資料來源與繁中／英文的取捨規則寫在檔案自己的 `_comment` 裡。
 本篇 209 筆仍然完全以 guide 為準。DLC 出新區域時要自己補這個檔，`fetch-habitats.mjs`
 結尾會把「overlay 對不到的 slug」與「最後仍然沒有材料的 DLC」印出來。
+
+`fetch-cooking.mjs` 也是雙上游，但分工反過來：**結構取 guide、名字取 hubs**。
+guide（`pokopiaguide.com/zh/cooking`）有全 34 道含 DLC 的結構化欄位（口味、供奉效果、
+售價、所需特技），資料直接躺在 Next.js 的 RSC flight payload 裡，不用刮 DOM；但它的莓果
+譯名整組是自譯而且對錯（把 Leppa 譯成「蘋野果」，官方是「慕柑果」），所以繁中名一律
+用 hubs 的官方譯名，靠手寫的 `cooking-overrides.json` 對接兩邊的 slug。hubs 沒收錄的
+DLC 10 道退回 guide 名並標 `nameSource: "guide"`，頁面上顯示「暫譯」。
+
+**料理等級（1／2／3 級）是本站定義的呈現方式**，上游沒有這個欄位：供奉效果句寫
+「更容易」的是 3 級、「較容易」是 2 級，生食材直接供奉是 1 級。這條規則有兩個獨立佐證
+（guide 的售價 500 那批、gamewith 的「かなり」清單，兩邊算出來是同一批 11 道），
+腳本結尾會自動對帳售價與等級，不一致就印警告——那代表上游改了資料，要回頭確認規則。
 
 `subset-cards.mjs` 已掛在 `package.json` 的 `prebuild`，`npm run build` 會自動重跑，
 所以正式建置產物一定是最新的。手動在 dev 下改資料時才需要自己跑一次。
