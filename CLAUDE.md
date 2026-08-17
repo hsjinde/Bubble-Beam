@@ -42,6 +42,10 @@ node scripts/fetch-cards.mjs                               # → src/data/cards.
 node scripts/subset-cards.mjs                              # → src/data/cards.used.json
 node scripts/subset-cards.mjs --check                      # 只檢查是否過期（不寫檔）
 
+# 重產排行榜的牌組匯入 QR（改完 meta.json 或 deck-energy.json 後）
+npm run gen:deck-qr                                        # → public/deck-qr/*.png + src/data/deck-qr.json
+node --experimental-strip-types scripts/generate-deck-qr.mjs --check   # 只檢查是否過期
+
 # 重建 /pokopia/habitats 棲息地索引（約 250 次連續 fetch，~2 分鐘）
 node scripts/fetch-habitats.mjs                            # → src/data/pokopia/habitats.json
 
@@ -73,8 +77,10 @@ DLC 10 道退回 guide 名並標 `nameSource: "guide"`，頁面上顯示「暫�
 （guide 的售價 500 那批、gamewith 的「かなり」清單，兩邊算出來是同一批 11 道），
 腳本結尾會自動對帳售價與等級，不一致就印警告——那代表上游改了資料，要回頭確認規則。
 
-`subset-cards.mjs` 已掛在 `package.json` 的 `prebuild`，`npm run build` 會自動重跑，
-所以正式建置產物一定是最新的。手動在 dev 下改資料時才需要自己跑一次。
+`subset-cards.mjs` 與 `generate-deck-qr.mjs` 已掛在 `package.json` 的 `prebuild`，
+`npm run build` 會自動重跑，所以正式建置產物一定是最新的。手動在 dev 下改資料時才需要自己跑一次。
+QR 那支特別不能漏：`meta.json` 換了新排行卻沒重產 QR 的話，玩家掃到的是**上一份快照的牌表**，
+畫面上完全看不出異狀——所以它跟卡片子集一樣走 prebuild，不是「記得要跑」的口頭約定。
 
 ## 架構
 
@@ -97,15 +103,37 @@ TanStack Start 檔案式路由。`src/routes/README.md` 有完整慣例表——
 | `src/data/decks.ts`           | 人工策展牌組：繁中攻略、對戰思路、tier S–C                                           | 手寫                            |
 | `src/data/meta.json`          | Limitless Top 20 即時排行：Wilson 下界、勝率、使用率、代表牌表；tier 可到 D          | `scripts/update-meta.mjs` 生成  |
 | `src/data/limitless-map.json` | 兩者的橋樑：策展 id ↔ Limitless 英文牌組名                                           | 手寫                            |
-| `src/data/cards.json`         | 完整卡片索引 `id → {nameEN, imageUrl}`，3520 張。**只給腳本查表用，前端不要 import** | `scripts/fetch-cards.mjs` 生成  |
-| `src/data/cards.used.json`    | 上面的子集，只含本站實際引用的約 100 張。`cards.ts` import 的是這個                  | `scripts/subset-cards.mjs` 生成 |
+| `src/data/cards.json`         | 完整卡片索引 `id → {nameEN, imageUrl, deckBuilderNr}`，3761 張。**只給腳本查表用，前端不要 import** | `scripts/fetch-cards.mjs` 生成  |
+| `src/data/cards.used.json`    | 上面的子集，只含本站實際引用的約 150 張。`cards.ts` import 的是這個                  | `scripts/subset-cards.mjs` 生成 |
 | `src/data/pokemon-names.json` | 寶可夢英文名 → 官方繁中名，供排行榜牌組名繁中化（`deck-name.ts`）                    | 手寫                            |
+| `src/data/deck-energy.json`   | 排行榜牌組要設定的能量（只補沒有攻略的那幾副）                                       | 手寫                            |
+| `src/data/deck-qr.json`       | 牌組名 → 匯入代碼、圖檔名、能量；搭配 `public/deck-qr/*.png`                         | `scripts/generate-deck-qr.mjs` 生成 |
 
 `update-meta.mjs` 用 `limitless-map.json` 的 `limitlessName` 反查，替有攻略的排行列打上 `curatedId`，前端才知道哪一列可以連到詳情頁。新增策展牌組時，`decks.ts` 和 `limitless-map.json` 要一起改，否則該牌組不會有連結。
 
 `curatedId` 是抓取當下烤進 `meta.json` 的，但寫攻略的節奏跟抓排行榜的週期是兩回事，所以 `meta.ts` 的 `getMeta()` 在讀取時用同一份 `limitless-map.json` **補（不覆寫）**缺的 `curatedId`：新攻略當天就有連結，不必為了掛連結去重跑 `update-meta.mjs`（那會洗掉 `previousRank` 的基準）。這層是刻意的冗餘，不要當成重複邏輯刪掉；下次正常抓取後它自動變成 no-op。
 
-**生成檔不要手改**：`cards.json`、`cards.used.json`、`meta.json`、`routeTree.gen.ts`。
+**生成檔不要手改**：`cards.json`、`cards.used.json`、`meta.json`、`deck-qr.json`、
+`public/deck-qr/*.png`、`routeTree.gen.ts`。
+
+### 牌組匯入 QR
+
+排行榜每一列展開後有一張「匯入用 2 次元代碼」，掃進遊戲就是那副牌（`DeckQrPanel`）。
+代碼格式是社群逆向的（[Nirostar/ptcgp-deck-qr](https://github.com/Nirostar/ptcgp-deck-qr)，MIT），
+實作在 `src/lib/deck-code.ts`：訓練家段＋寶可夢段＋能量段，每張卡三個位元組存
+`deckBuilderNr × 10`，最後 base64。沒有簽章也沒有 checksum，所以能離線算。
+
+兩條隱性相依要知道：
+
+- **`deckBuilderNr` 是從上游素材檔名反推的**（`cPK_10_000010_…` → 1、`cTR_…` → +1,000,000），
+  不是上游自己的欄位。上游改檔名慣例就會整批推不出來——`fetch-cards.mjs` 結尾會把推不出來的
+  卡片印出來，那份清單正常應該是空的。同一張卡的不同印刷共用同一個編號（遊戲掃描時自動選
+  最高稀有度），所以卡圖用哪個版本跟代碼無關。
+- **能量只能人工填**。Limitless 的牌表頁沒有能量欄位，而靠寶可夢屬性反推在龍系／無色系必定
+  失敗（`Dragonair Altaria` 整隊都是龍與無色，實際要放火＋雷）。判定看招式費用實際需要哪幾種
+  基本能量，無色費用不算。有攻略的牌組直接沿用 `decks.ts` 的 `energy`，其餘補
+  `deck-energy.json`；**沒填就不出 QR**，寧可少一張圖也不要給玩家能量錯的牌組。
+  `Dragon` 與 `Colorless` 在代碼格式裡沒有 id，出現一律當成「還沒填」。
 
 **前端不要 `import cards.json`**：完整索引約 580 KB，靜態 import 會整包進 client bundle
 （實測曾是 562.7 KB，比整個 React + router 還大），而全站只用到約 100 張。

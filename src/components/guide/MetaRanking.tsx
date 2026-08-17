@@ -6,6 +6,7 @@ import { META_TIER_ORDER } from "@/data/types";
 import type { MetaDeck, MetaTier } from "@/data/types";
 import { CardUsagePanel } from "./CardUsagePanel";
 import { Chip } from "./Chip";
+import { DeckQrPanel } from "./DeckQrPanel";
 import { Decklist } from "./Decklist";
 import { RankChangeBadge } from "./RankChangeBadge";
 import { TierBadge } from "./TierBadge";
@@ -111,6 +112,7 @@ function ExpandedList({ deck }: { deck: MetaDeck }) {
         </span>
       </div>
       <Decklist cards={deck.cards.map(({ id, count }) => ({ id, count }))} />
+      <DeckQrPanel deckName={deck.name} />
       {deck.cardUsage && deck.cardUsage.length > 0 && deck.listsSampled && (
         <div className="mt-4">
           <CardUsagePanel usage={deck.cardUsage} listsSampled={deck.listsSampled} />
