@@ -35,9 +35,21 @@
     "全被 egress policy 擋掉（curl 與 WebFetch 皆 403），只有 WebSearch 的摘要能用。",
     "下次若同樣連不到來源，別把「查不到新活動」當成「沒有新活動」——換能連外的環境再查一次。",
     "",
+    "2026-08-17 複查（本輪環境連得上，8/15 那條懸案結案）：Pokemon Zone /schedule/ 走瀏覽器分頁",
+    "讀到全文、Serebii 的 events／dropevents／wonderpickevents／rankedmatch 四頁 WebFetch 皆通、",
+    "Game8 亦通，查出來的結果與 8/15 那份清單完全一致——所以 8/15 的「查不到新活動」這次被",
+    "證實真的等於「沒有新活動」，不是被 egress 擋住而漏掉。修正一處敘述錯誤：Deluxe Pack: ex",
+    "復刻是一週（8/14–8/21）不是兩週。順手複查了先前只有單一來源的 elite-deck-gift-missions-3，",
+    "Game8 仍記 7/31–10/28，維持原狀。",
+    "本輪另一項實測：Pokemon Zone 的 /schedule/upcoming/ 讀到的是空頁（只有標題與 Month",
+    "Selector，載入兩次皆然），沒有進一步確認是上游無資料還是需要互動才載入。這輪不影響",
+    "結論——「8/26 之後沒有新活動」另有 Serebii 四頁與 Game8 各自佐證。",
+    "已知後續：8/27 之後行事曆會幾乎空掉（B4a 過發售點即 ended、Season 16 8/26 結束、",
+    "Season 17 與 9 月活動上游都還沒公布），屆時只剩 elite-deck-gift-missions-3 撐到 10/28。",
+    "",
     "type：set（新擴充包）／drop（Drop 活動）／wonderpick／ranked（排名賽季）／other"
   ],
-  "updatedAt": "2026-08-15",
+  "updatedAt": "2026-08-17",
   "events": [
     {
       "id": "b4a-expansion",
@@ -62,7 +74,7 @@
       "title": "Deluxe Pack: ex returns",
       "startAt": "2026-08-14T00:00:00+08:00",
       "endAt": "2026-08-21T23:59:00+08:00",
-      "note": "豪華包 ex 復刻登場兩週，內含全圖鑑支援者等高稀有度卡。",
+      "note": "豪華包 ex 復刻登場一週，內含全圖鑑支援者等高稀有度卡。",
       "url": "https://ptcgpocket.gg/deluxe-pack-ex-b4-august-2026-rerun/"
     },
     {
