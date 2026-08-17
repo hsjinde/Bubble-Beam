@@ -99,6 +99,7 @@ TanStack Start 檔案式路由。`src/routes/README.md` 有完整慣例表——
 | `src/data/limitless-map.json` | 兩者的橋樑：策展 id ↔ Limitless 英文牌組名                                           | 手寫                            |
 | `src/data/cards.json`         | 完整卡片索引 `id → {nameEN, imageUrl}`，3520 張。**只給腳本查表用，前端不要 import** | `scripts/fetch-cards.mjs` 生成  |
 | `src/data/cards.used.json`    | 上面的子集，只含本站實際引用的約 100 張。`cards.ts` import 的是這個                  | `scripts/subset-cards.mjs` 生成 |
+| `src/data/pokemon-names.json` | 寶可夢英文名 → 官方繁中名，供排行榜牌組名繁中化（`deck-name.ts`）                    | 手寫                            |
 
 `update-meta.mjs` 用 `limitless-map.json` 的 `limitlessName` 反查，替有攻略的排行列打上 `curatedId`，前端才知道哪一列可以連到詳情頁。新增策展牌組時，`decks.ts` 和 `limitless-map.json` 要一起改，否則該牌組不會有連結。
 
@@ -132,7 +133,9 @@ TanStack Start 檔案式路由。`src/routes/README.md` 有完整慣例表——
 
 ## 慣例
 
-**語言分工**：介面文字與攻略文用繁體中文；牌組名與卡名保留 Limitless 的英文原文（專有名詞，玩家在 Limitless 上看到的就是這個）；`decks.ts` 的策展牌組名則是繁中譯名。程式碼識別字一律英文。
+**語言分工**：介面文字與攻略文用繁體中文；卡名保留 Limitless 的英文原文（專有名詞，玩家在 Limitless 上看到的就是這個）；`decks.ts` 的策展牌組名是繁中譯名。程式碼識別字一律英文。
+
+排行榜的牌組名（上游只有英文）**繁中為主、英文原名小字並列**：`deck-name.ts` 的 `toDeckNameTC()` 拿 `pokemon-names.json` 逐字翻，翻不出來就整串退回英文。英文那行不要拿掉——玩家拿它去 Limitless 對牌表，翻不出繁中時它也是唯一的顯示內容。譯名體例沿用 `decks.ts`：**Mega 保留原文**（官方譯作「超級」，但站內 26 套策展名寫的都是 `Mega阿勃梭魯ex`）、**ex 緊貼名字**。新寶可夢沒譯名時補 `pokemon-names.json`，**不要自己編譯名**，查官方台灣圖鑑。
 
 **攻略頁配色**是硬編的水系淡藍（`#2a6f97` 深藍字、`#5fa8d3` 邊框、`#bfe3f5` 淺藍、`#eef7fc` 背景），不是走 `styles.css` 的 Tailwind theme token。改攻略頁 UI 時沿用這組色碼保持一致；`styles.css` 的 oklch design system 是 Lovable 模板帶來的，攻略頁沒在用。
 

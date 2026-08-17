@@ -1,6 +1,6 @@
 ---
 name: tcg-pocket-tier-list
-description: Fetch live Pokémon TCG Pocket tournament data from Limitless (play.limitlesstcg.com) and produce a statistically honest tier list ranked by Wilson score lower bound of win rate. Use this whenever the user asks about the TCG Pocket meta, deck tier lists, deck win rates, "現在什麼牌組最強", "meta 環境", "更新資料", "更新排行榜", updating deck tiers or the Top 20 ranking on their site, or anything involving Limitless TCG Pocket data — even if they don't say "tier list" explicitly. Also use it to refresh the piplup-website /decks ranking (src/data/meta.json) together with the curated guides that describe it (src/data/decks.ts — both the tiers and the prose quoting ranks/usage rates); refreshing the ranking always means refreshing both.
+description: Fetch live Pokémon TCG Pocket tournament data from Limitless (play.limitlesstcg.com) and produce a statistically honest tier list ranked by Wilson score lower bound of win rate. Use this whenever the user asks about the TCG Pocket meta, deck tier lists, deck win rates, "現在什麼牌組最強", "meta 環境", "更新資料", "更新排行榜", updating deck tiers or the Top 20 ranking on their site, or anything involving Limitless TCG Pocket data — even if they don't say "tier list" explicitly. Also use it to refresh the piplup-website /decks ranking (src/data/meta.json) together with the curated guides that describe it (src/data/decks.ts — both the tiers and the prose quoting ranks/usage rates); refreshing the ranking always means refreshing both. Also covers the ranking's 繁中 deck names (src/data/pokemon-names.json + deck-name.ts) — use it when a deck name on /decks shows up in English instead of Chinese, or when a new Pokémon needs a 繁中 translation added.
 ---
 
 # TCG Pocket Tier List
@@ -34,7 +34,10 @@ bottom, large consistent samples rise. Ties count as half a win.
 
 2. Present the tier list to the user **in the conversation's language**
    (translate headings and commentary; keep English deck names as-is — they are
-   proper nouns matching what players see in Limitless). Lead with the top
+   proper nouns matching what players see in Limitless). That applies to the
+   **conversation only** — the website's `/decks` table has shown 繁中 names
+   with the English original underneath since 2026-08-17, and keeping it that
+   way needs a step of its own (see "Deck name translations" below). Lead with the top
    tiers and notable movements; don't dump all 500 rows. Mention sample sizes
    when a placement is surprising — that's the whole point of the method.
 
@@ -67,10 +70,46 @@ new expansion set was probably released — add it to `SETS` in
 flibustier/pokemon-tcg-pocket-database; check which set files exist with a
 HEAD request before adding).
 
-After updating, verify `/decks` in the browser (20 rows, expanding a
-non-curated row shows its card grid, links work, 資料日期 updated), check
-curated tier drift (next section) in the same pass, then commit
-`src/data/meta.json` (and any tier/card-index changes) together.
+After updating, verify `/decks` in the browser (20 rows, **every row's deck
+name in 繁中**, expanding a non-curated row shows its card grid, links work,
+資料日期 updated), check deck-name coverage (right below) and curated tier
+drift ("Refreshing the curated guides") in the same pass, then commit
+`src/data/meta.json` (and any tier/name/card-index changes) together.
+
+### Deck name translations (pokemon-names.json) — check every refresh
+
+`/decks` renders each deck name as 繁中 on top with the Limitless English
+underneath. The Chinese comes from `toDeckNameTC()` in `src/data/deck-name.ts`,
+which translates the name word by word against `src/data/pokemon-names.json`
+and **returns null — falling back to English-only — if even one word is
+missing**. So a refresh that brings in a Pokémon the table doesn't know yet
+silently turns those rows back into English. Nothing errors; the page just
+gets less Chinese.
+
+Check it right after `update-meta.mjs`:
+
+```bash
+npx tsx -e "import {toDeckNameTC} from './src/data/deck-name.ts'; import meta from './src/data/meta.json' with { type: 'json' }; const miss = meta.decks.filter(d => !toDeckNameTC(d.name)); console.log(miss.length ? miss.map(d => d.name).join('\n') : 'all translated');"
+```
+
+Anything it prints is a deck whose name has an unknown word. Find the word,
+then add it to `names` in `pokemon-names.json`:
+
+- **Never invent a translation.** Look it up at the official Taiwan Pokédex
+  `https://tw.portal-pokemon.com/play/pokedex/{4-digit dex number}` (the page
+  title is the 繁中 name), or Bulbapedia's "In other languages" section. If you
+  can't confirm one, leave it out — that row stays English, which is the
+  designed fallback, and a made-up name would be read as official.
+- Keys are the raw strings as they appear in the Limitless name, **without
+  `Mega` and `ex`** — those are handled by `deck-name.ts` (Mega stays English,
+  ex is glued to the name: `Mega阿勃梭魯ex`). Keys may contain spaces
+  (`Gouging Fire`, `Charizard Y`); matching is longest-prefix.
+- The house style comes from `decks.ts`, not from official Mega naming. Don't
+  "fix" `Mega` to 「超級」 in one place only — 26 curated deck names use the
+  `Mega` form, and two conventions on one page is worse than not translating.
+
+Re-run the check until it prints `all translated`, then re-read the table in
+the browser.
 
 ### The two timestamps are UTC — the page shows them in Taiwan time
 
@@ -104,7 +143,10 @@ same pass as the data refresh.
 
 The page copy on `/decks` itself needs no edit — its dates come from
 `formatSnapshotDate(meta.fetchedAt)` and its counts from `meta.decks.length`,
-so they follow the data automatically. It's `decks.ts` that goes stale.
+so they follow the data automatically. It's `decks.ts` that goes stale. (The
+one hand-written sentence in that intro is the 「牌組名以繁體中文顯示，下方小字
+為 Limitless 的英文原名」 line — it describes how the table renders, not the
+data, so it only needs touching if the deck-name display itself changes.)
 
 ### 1. Tiers
 

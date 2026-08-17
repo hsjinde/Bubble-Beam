@@ -1,5 +1,6 @@
 import { Fragment, useCallback, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
+import { toDeckNameTC } from "@/data/deck-name";
 import { getDeck } from "@/data/decks";
 import { META_TIER_ORDER } from "@/data/types";
 import type { MetaDeck, MetaTier } from "@/data/types";
@@ -47,6 +48,23 @@ function StatBar({
         />
       )}
     </div>
+  );
+}
+
+/**
+ * 牌組名雙行呈現：繁中在上、Limitless 英文原名小字在下。
+ *
+ * 英文一定要留著，不是排版裝飾——玩家拿它去 Limitless 對牌表，而 `toDeckNameTC()`
+ * 翻不出來時（新寶可夢還沒進 pokemon-names.json）它就是唯一的顯示內容。
+ */
+function DeckName({ name }: { name: string }) {
+  const tc = toDeckNameTC(name);
+  if (!tc) return <span>{name}</span>;
+  return (
+    <span className="flex flex-col items-start leading-tight">
+      <span>{tc}</span>
+      <span className="text-xs font-normal text-guide-ink-muted">{name}</span>
+    </span>
   );
 }
 
@@ -126,10 +144,13 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
     return decks.filter((d) => {
       if (tiers.size && !tiers.has(d.tier)) return false;
       if (!q) return true;
-      // 也比對繁中策展名：這是繁中站，玩家想找的是「密勒頓」而不是 Miraidon。
-      // 上游只給英文名，中文名要透過 curatedId 反查——沒攻略的牌組就只能用英文搜。
-      const tc = d.curatedId ? (getDeck(d.curatedId)?.name ?? "") : "";
-      return `${d.name} ${tc}`.toLowerCase().includes(q);
+      // 也比對繁中名：這是繁中站，玩家想找的是「密勒頓」而不是 Miraidon。
+      // 兩份中文都比對：`toDeckNameTC()` 逐字翻上游牌組名（沒攻略的牌組也有中文可搜），
+      // 策展名則是攻略頁的概念名，未必逐字相同（「Mega Lucario ex Lucario」翻出來是
+      // 「Mega路卡利歐ex 路卡利歐」，策展名只叫「Mega路卡利歐ex」）。
+      const curated = d.curatedId ? (getDeck(d.curatedId)?.name ?? "") : "";
+      const tc = toDeckNameTC(d.name) ?? "";
+      return `${d.name} ${tc} ${curated}`.toLowerCase().includes(q);
     });
   }, [decks, search.tier, query]); // eslint-disable-line react-hooks/exhaustive-deps -- tiers 由 search.tier 導出
   const expandableRanks = visibleDecks.filter((d) => d.cards).map((d) => d.rank);
@@ -296,7 +317,7 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
                             // min-h-11：手機上這是本頁主要互動，原本只有 20px 高
                             className="flex min-h-11 w-full cursor-pointer flex-wrap items-center gap-x-1.5 gap-y-1 text-left text-guide-ink-body hover:text-guide-ink"
                           >
-                            <span>{d.name}</span>
+                            <DeckName name={d.name} />
                             {d.curatedId && (
                               <span className="rounded-full bg-guide-tint px-2 py-0.5 text-xs font-semibold text-guide-ink-deep">
                                 攻略
@@ -307,7 +328,7 @@ export function MetaRanking({ decks }: { decks: MetaDeck[] }) {
                             </span>
                           </button>
                         ) : (
-                          d.name
+                          <DeckName name={d.name} />
                         )}
                       </td>
                       <td className="hidden px-3 py-2 md:table-cell">
