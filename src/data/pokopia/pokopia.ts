@@ -157,29 +157,13 @@ export const BOOKMARKS: Bookmark[] = [
  * `title`／`channel` 為 YouTube 原始資料（標題保留日文／英文原文，符合本站專有名詞慣例）；
  * 縮圖走 i.ytimg.com/vi/{id}/hqdefault.jpg，連結走 youtube.com/watch?v={id}。
  *
- * 選片依據（2026-08-10 更新，Bubbly Basin DLC 與免費大更新上線後）：從使用者精選清單的主播
- * 出發，抓各頻道 videos 頁的觀看數／發布時間取「近期熱門」，並逐支用 YouTube oEmbed 查證存在
- * ＋取回官方標題（同時濾掉混入頻道的他遊戲影片，如 Disney Dreamlight Valley、Splatoon
- * Raiders、あつ森、Village in the Shade、Minecraft）。更新時沿用同一套查證流程，別憑印象填 id。
+ * 選片依據（2026-08-18 更新）：從已知主播頻道出發，抓各頻道 videos 頁的觀看數／發布時間取「近期熱門」，
+ * 並逐支用 YouTube oEmbed 查證存在＋取回官方標題（同時濾掉混入頻道的他遊戲影片，如 Disney Dreamlight
+ * Valley、Splatoon Raiders、あつ森、Minecraft）。更新時沿用同一套查證流程，絕不憑印象填 id。
  * 這頁只收「建築成品／技巧」，patch notes 與 DLC 情報解析影片刻意不收。
  *
- * 本次主播動向：HorribleGaming 仍最高產，DLC 一上線就交出潛水艇棲地宅與巨大水族館；すくると
- * 專做島嶼導覽；涼太ぱんけーき♭ 主力已移到 Splatoon Raiders，但「街づくり」建築系列仍在更新；
- * かぴぱか create 穩定產短片教學（最新一支轉做 Minecraft，下次要留意）；わむのスローライフっぽい
- * 近兩個月沒新的 Pokopia，保留其自動化經典並換上修掉不具合的新版解說；Haruchi create（→ あつ森）
- * 與 CloudySkies Gaming（→ Village in the Shade 等）已轉做他款遊戲，各留一支仍具參考價值的經典。
- *
- * 2026-08-15 抽查（清單未改動）：在 Claude Code 遠端沙箱裡 youtube.com 與 i.ytimg.com 都被
- * egress policy 擋掉，oEmbed 那條查證流程整個跑不了。改用 WebSearch 以 video id 反查，六支
- * 分屬最可能失效的頻道（Haruchi create、CloudySkies Gaming、zoibean、consolecaito、すくると、
- * HorribleGaming）全部仍在、標題與本檔一字不差。
- *
- * 但這條備援只夠「查證存在與官方標題」——**拿不到觀看數、可靠的發布日與頻道歸屬**，
- * 而本頁的選片邏輯正是靠觀看數排「近期熱門」。所以沙箱裡只做抽查、不增刪：
- * 用比較弱的證據往策展清單塞新片，是讓它變差而不是變新。要真正換片請在連得到
- * YouTube 的環境跑完整流程。（當時掃到但**刻意沒收**的候選：HorribleGaming 的
- * jBphEMt6bK0 是直播 VOD 而非剪輯成品，且該頻道已佔 7 支；k6CO1xjf-8E、sxDVtSM8AIo
- * 是 DLC 情報解析，依上面的規則本來就不收。）
+ * 本次更新動向：HorribleGaming 依舊高產，新增 Bubbly Basin DLC 的沈船海賊船與 Bleak Beach 現代海濱別墅；
+ * かぴぱか create 新增了超逼真的 ENEOS 加油站（配豪力店員）與質感爆表綠電車神建築教學。
  */
 export const VIDEOS: VideoInspiration[] = [
   // ── 城市・街景 ─────────────────────────────────────────────────
@@ -220,6 +204,14 @@ export const VIDEOS: VideoInspiration[] = [
       "Pokémon Pokopia~DEEP-DIVING SUBMARINE HABITAT HOME DESIGN~BUBBLY BASIN DLC~SPEED BUILD #pokopia",
     channel: "HorribleGaming",
     blurb: "Bubbly Basin DLC 的深海潛水艇住家，示範新家具怎麼做水下棲地。",
+    group: "house",
+  },
+  {
+    id: "8JHUVsq-L2Y",
+    title:
+      "Pokémon Pokopia~REALISTIC MODERN VILLA HABITAT HOME DESIGN~BLEAK BEACH~SPEED BUILD~#pokopia",
+    channel: "HorribleGaming",
+    blurb: "Bleak Beach 的寫實現代海濱別墅，結合棲地與高級豪宅造景。",
     group: "house",
   },
   {
@@ -277,6 +269,13 @@ export const VIDEOS: VideoInspiration[] = [
     group: "shop",
   },
   {
+    id: "ESvj12yessg",
+    title: "【神建築】エネオスに「カイリキー」を配置したら本物すぎたｗ│作り方│Pokopia",
+    channel: "かぴぱか create",
+    blurb: "加油站配上豪力店員的趣味生活設施，還原度與幽默感兼備。",
+    group: "shop",
+  },
+  {
     id: "IutbULM6W58",
     title: "【ぽこポケ】8分でわかる！実は超簡単な「コンビニ」の作り方│建築│Pokopia",
     channel: "かぴぱか create",
@@ -292,6 +291,14 @@ export const VIDEOS: VideoInspiration[] = [
     group: "shop",
   },
   // ── 主題・地標・遊樂 ───────────────────────────────────────────
+  {
+    id: "nUQ6HgJfstg",
+    title:
+      "Pokémon Pokopia~SUNKEN PIRATE SHIP DESIGN~FULLY DECORATED & MULTIPLE HABITATS~BUBBLY BASIN DLC",
+    channel: "HorribleGaming",
+    blurb: "Bubbly Basin DLC 的沈船海賊船造景，示範如何將沉船融合寶可夢棲地。",
+    group: "landmark",
+  },
   {
     id: "h8a4fXpnXJU",
     title:
@@ -393,6 +400,13 @@ export const VIDEOS: VideoInspiration[] = [
     title: "【ぽこポケ】置くだけでかわいい！5種類の乗り物の作り方＆解説【ぽこあポケモン建築】",
     channel: "すくると",
     blurb: "只要擺上就很可愛，5 種載具小物的做法解說。",
+    group: "tips",
+  },
+  {
+    id: "xk-E14UmuMQ",
+    title: "【ぽこあポケモン】クオリティ爆発！エモすぎる「レトロな緑の電車」の作り方【神建築】",
+    channel: "かぴぱか create",
+    blurb: "超質感復古綠色電車教學，教你用基礎塊做出驚豔載具。",
     group: "tips",
   },
   {

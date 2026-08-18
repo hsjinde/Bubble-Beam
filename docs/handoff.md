@@ -3,7 +3,7 @@
 給下一個接手的人（Claude Code 或 `agy`）。這份檔案記錄目前的 UI／前端品質狀態與待辦，
 每輪工作結束時更新它，不要讓它過期。
 
-最後更新：2026-08-16
+最後更新：2026-08-18
 
 ---
 
@@ -529,6 +529,23 @@ curl 與 WebFetch 一律回 403（`CONNECT tunnel failed`）：
 - ⚠ `npm run build` 的完整 prebuild 目前**跑不完**：`scripts/subset-fonts.mjs` 需要的
   `fontverter` 沒有安裝（既有環境問題，與這輪改動無關）。這輪改跑
   `subset-cards` ＋ `gen:sitemap` ＋ `vite build` 三段驗證。
+
+---
+
+## 2026-08-18 這輪：更新 `/pokopia/videos` 建築靈感影片
+
+執行 `/pokopia-videos` 技能，掃描最新熱門建築影片與頻道動向，完成影片查證與清單更新。
+
+### 更新細節：
+1. **頻道掃描**：執行 `scripts/fetch-yt.mjs channels` 掃描主播（`HorribleGaming`、`すくると`、`涼太ぱんけーき♭`、`かぴぱか create`、`わむのスローライフっぽい`）。
+2. **oEmbed 查證**：全數 34 支影片通過 oEmbed 官方 Title/Channel 與 200 存活度查證，濾除他款遊戲（Dinkum, Minecraft 等）。
+3. **精選擴充**：
+   - 新增 Bubbly Basin DLC 巨大沈船棲地 (`nUQ6HgJfstg`, HorribleGaming, 5 days ago, 16K views)。
+   - 新增 Bleak Beach 現代海濱別墅 (`8JHUVsq-L2Y`, HorribleGaming, 18K views)。
+   - 新增超逼真 ENEOS 加油站配豪力店員 (`ESvj12yessg`, かぴぱか create, 22K views)。
+   - 新增復古綠電車神建築教學 (`xk-E14UmuMQ`, かぴぱか create)。
+4. **熱連線驗證**：34/34 縮圖 `i.ytimg.com/vi/{id}/hqdefault.jpg` 均通過 HTTP 200 檢查。
+5. **程式驗證**：`npx prettier` + `npm run lint` + `npm run build` 全數綠燈通過。
 
 ---
 
