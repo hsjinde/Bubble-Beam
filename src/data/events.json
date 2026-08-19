@@ -47,9 +47,18 @@
     "已知後續：8/27 之後行事曆會幾乎空掉（B4a 過發售點即 ended、Season 16 8/26 結束、",
     "Season 17 與 9 月活動上游都還沒公布），屆時只剩 elite-deck-gift-missions-3 撐到 10/28。",
     "",
+    "2026-08-20 複查：環境連得上（瀏覽器分頁＋WebFetch 皆通），8 月各筆與 8/17 完全一致、無異動。",
+    "B4a 仍未見官方公布名稱與卡表，沿用 Game8 的 8/26 6pm PDT（台灣 8/27 上午 9 點）推算，與既有",
+    "記載相同。/schedule/upcoming/ 這次同樣是空頁——8/17 那條「不確定是無資料還是要互動」這次可以",
+    "確定是前者：August 月頁（/schedule/2026/8/）沒有 8/26 之後的任何項目，Serebii 的 dropevents／",
+    "wonderpickevents／rankedmatch 三頁也都明講目前沒有更新項目，多方一致。新陷阱一筆：WebFetch",
+    "摘要 Serebii 的 events.shtml（總表，未依年份分段）這次誤報了幾筆「9月活動」，其中一筆還自相",
+    "矛盾標成 2025 年；拿 dropevents／wonderpickevents 分頁對照後那些活動根本不存在。單頁摘要看似",
+    "言之鑿鑿也可能是誤讀了跨年同月的歷史列，沒有其他來源佐證前不要採信。",
+    "",
     "type：set（新擴充包）／drop（Drop 活動）／wonderpick／ranked（排名賽季）／other"
   ],
-  "updatedAt": "2026-08-17",
+  "updatedAt": "2026-08-20",
   "events": [
     {
       "id": "b4a-expansion",
