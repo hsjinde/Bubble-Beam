@@ -3,7 +3,7 @@
 給下一個接手的人（Claude Code 或 `agy`）。這份檔案記錄目前的 UI／前端品質狀態與待辦，
 每輪工作結束時更新它，不要讓它過期。
 
-最後更新：2026-08-18
+最後更新：2026-08-20
 
 ---
 
@@ -546,6 +546,47 @@ curl 與 WebFetch 一律回 403（`CONNECT tunnel failed`）：
    - 新增復古綠電車神建築教學 (`xk-E14UmuMQ`, かぴぱか create)。
 4. **熱連線驗證**：34/34 縮圖 `i.ytimg.com/vi/{id}/hqdefault.jpg` 均通過 HTTP 200 檢查。
 5. **程式驗證**：`npx prettier` + `npm run lint` + `npm run build` 全數綠燈通過。
+
+---
+
+## 2026-08-20 這輪：排行榜資料更新（`/tcg-pocket-tier-list`）
+
+純資料輪，沒有動 UI。`meta.json` 重跑（基準 2026-08-15：7 升 7 降 4 持平 2 新進），
+新進榜的是 `Hydreigon Mega Absol ex`（#16）與 `Giratina ex Darkrai ex`（#20），
+掉出去的是 `Chandelure Oricorio` 與 `Mega Lucario ex Hitmonchan ex`。
+牌組名繁中覆蓋率 20/20，`pokemon-names.json` 不用補。
+
+`decks.ts` 依 Wilson 下界改了 3 套 tier，全是卡在門檻邊上的下修：
+自爆磁怪ex 自爆磁怪 S→A（51.64%，S 需 52%）、Mega蜥蜴王ex 甲賀忍蛙 A→B（49.82%，A 需 50%）、
+Mega路卡利歐ex 甲賀忍蛙 B→C（47.35%，B 需 48%）。
+
+**排名／使用率類的文案這輪不用改**——「使用率最高的草系一線牌」（蜂女王 7.27% 仍是草系最高）、
+「現環境的惡系標竿」（胡帕 Mega阿勃梭魯仍是第 1）逐條核對後都還成立。
+改的是**卡片採用率**那一類（4 套牌），因為新取樣的 20 份牌表把數字洗掉了。
+
+### 採用率文案要跟頁面上的「核心牌與自由席」區塊對齊
+
+這輪踩到的坑：`hoopa-mega-absol` 的 Repel 從 75% 漲到 90%，
+而牌組頁那個自動產生的區塊是**按採用率分桶**的（≥90% 進「核心」），
+所以原本寫「真正的自由席只有三張：Repel…」會跟同一頁的區塊自相矛盾——
+區塊說它是核心，散文說它是自由席。**改採用率數字時，要順手確認散文的「核心／自由席」
+歸類還跟區塊的分桶一致**，光把數字換掉不夠。
+
+### 新進榜牌組要補 `deck-energy.json`，否則沒有 QR
+
+`Hydreigon Mega Absol ex` 新進榜時沒有能量設定，`gen:deck-qr` 會**靜靜少產一張**
+（只在腳本結尾印一行）。這次判定用站內既有證據收斂：`hydreigon-mega-sableye`
+（同樣的 Deino／Hydreigon／Bombirdier 線）是 `["Darkness"]`，
+四套含 Mega阿勃梭魯ex 的策展牌組也全是 `["Darkness"]`，兩條線獨立指向同一答案。
+補完後 20/20 都有 QR。
+
+### 驗證
+
+`npm run lint` 0 問題、`npx prettier --check` 全過、`npm run build` 綠燈。
+瀏覽器實測 `/decks`：20 列、牌組名全繁中、資料更新日期 2026-08-20（台灣時間，UTC 是 08-19T21:02Z）、
+展開全部後 20 張 QR 與 623 張卡圖**零破圖**、console 零錯誤。
+四頁被改到採用率的牌組頁（`hoopa-mega-absol`／`vespiquen-shuckle`／`hoopa-greninja`／
+`mega-lucario-greninja`）逐頁比對過散文數字與區塊分桶，一致。
 
 ---
 

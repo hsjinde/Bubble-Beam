@@ -341,12 +341,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/121.webp",
     "deckBuilderNr": 1203
   },
-  "B1-124": {
-    "id": "B1-124",
-    "nameEN": "Hitmonchan ex",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/124.webp",
-    "deckBuilderNr": 1206
-  },
   "B1-151": {
     "id": "B1-151",
     "nameEN": "Mega Absol ex",
@@ -455,18 +449,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/17.webp",
     "deckBuilderNr": 1383
   },
-  "B2-67": {
-    "id": "B2-67",
-    "nameEN": "Litwick",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/67.webp",
-    "deckBuilderNr": 1433
-  },
-  "B2-69": {
-    "id": "B2-69",
-    "nameEN": "Chandelure",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/69.webp",
-    "deckBuilderNr": 1435
-  },
   "B2-145": {
     "id": "B2-145",
     "nameEN": "Lucky Ice Pop",
@@ -532,6 +514,12 @@
     "nameEN": "Chien-Pao ex",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2a/37.webp",
     "deckBuilderNr": 1546
+  },
+  "B2a-92": {
+    "id": "B2a-92",
+    "nameEN": "Penny",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2a/92.webp",
+    "deckBuilderNr": 1000070
   },
   "B2b-7": {
     "id": "B2b-7",
@@ -665,12 +653,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/149.webp",
     "deckBuilderNr": 1000130
   },
-  "B3-150": {
-    "id": "B3-150",
-    "nameEN": "Cabbie",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/150.webp",
-    "deckBuilderNr": 1000131
-  },
   "B3-153": {
     "id": "B3-153",
     "nameEN": "Fragrant Forest",
@@ -802,12 +784,6 @@
     "nameEN": "Wynaut",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/74.webp",
     "deckBuilderNr": 2035
-  },
-  "B4-78": {
-    "id": "B4-78",
-    "nameEN": "Oricorio",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/78.webp",
-    "deckBuilderNr": 2039
   },
   "B4-100": {
     "id": "B4-100",

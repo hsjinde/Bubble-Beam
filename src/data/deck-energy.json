@@ -2,6 +2,7 @@
   "_comment": "排行榜牌組要設定的能量屬性，鍵是 Limitless 的英文牌組名（meta.json 的 deck.name）。手寫，因為 Limitless 的牌表頁完全沒有能量欄位，而靠寶可夢屬性反推在龍系／無色系牌組必定失敗——Dragonair Altaria 全隊都是龍與無色，實際卻要放火＋雷（隊裡的 Mega Rayquaza ex 招式吃這兩種）。判定方式：看牌裡寶可夢招式費用實際需要哪幾種基本能量，無色費用不算（任何能量都付得起）——請看卡圖上的能量符號本身，不要靠寶可夢自己的屬性推。現有這幾筆都是這樣核對出來的：Mega Rayquaza ex（B4-120）的 Mega Burst 吃火＋雷，所以兩副龍系都放火＋雷，而 Altaria（A4a-55）的招式本來就寫「附有 2 種以上不同能量時傷害 +60」；Chandelure 那副的 Bonsly（B3-78）與 Sharpedo 那副的 Mantyke（A4a-23）雖然是鬥系與水系，招式費用其實是無色，所以不用多開一種能量。只需要填『沒有策展攻略』的那幾副——有 curatedId 的一律以 decks.ts 的 energy 為準，不要在這裡重複。牌組名會隨著環境每週變動，對不到的舊條目留著無妨，generate-deck-qr.mjs 會把缺能量的牌組印出來。可用值只有八種基本能量（Grass/Fire/Water/Lightning/Psychic/Fighting/Darkness/Metal），最多三種——Dragon 與 Colorless 在遊戲的能量選擇裡不存在，代碼格式也沒有對應 id。",
   "Gouging Fire Dragonair": ["Fire", "Lightning"],
   "Hoopa ex Mega Sableye ex": ["Darkness"],
+  "Hydreigon Mega Absol ex": ["Darkness"],
   "Mega Sharpedo ex Gyarados": ["Water"],
   "Meowscarada ex Meowscarada": ["Grass"],
   "Chandelure Oricorio": ["Psychic"],
