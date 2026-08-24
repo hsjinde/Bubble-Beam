@@ -5,6 +5,12 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/33.webp",
     "deckBuilderNr": 33
   },
+  "A1-35": {
+    "id": "A1-35",
+    "nameEN": "Charizard",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/35.webp",
+    "deckBuilderNr": 35
+  },
   "A1-87": {
     "id": "A1-87",
     "nameEN": "Froakie",
@@ -395,12 +401,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/226.webp",
     "deckBuilderNr": 1000100
   },
-  "B1a-13": {
-    "id": "B1a-13",
-    "nameEN": "Charizard",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1a/13.webp",
-    "deckBuilderNr": 1318
-  },
   "B1a-14": {
     "id": "B1a-14",
     "nameEN": "Mega Charizard Y ex",
@@ -460,12 +460,6 @@
     "nameEN": "Protective Poncho",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/147.webp",
     "deckBuilderNr": 1000108
-  },
-  "B2-150": {
-    "id": "B2-150",
-    "nameEN": "Sightseer",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/150.webp",
-    "deckBuilderNr": 1000111
   },
   "B2-153": {
     "id": "B2-153",
@@ -712,6 +706,24 @@
     "nameEN": "Professor Turo",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/73.webp",
     "deckBuilderNr": 1000141
+  },
+  "B3b-1": {
+    "id": "B3b-1",
+    "nameEN": "Caterpie",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/1.webp",
+    "deckBuilderNr": 1904
+  },
+  "B3b-2": {
+    "id": "B3b-2",
+    "nameEN": "Metapod",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/2.webp",
+    "deckBuilderNr": 1905
+  },
+  "B3b-3": {
+    "id": "B3b-3",
+    "nameEN": "Butterfree",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/3.webp",
+    "deckBuilderNr": 1906
   },
   "B3b-15": {
     "id": "B3b-15",
