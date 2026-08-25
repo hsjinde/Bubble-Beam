@@ -17,7 +17,8 @@ description: 更新 piplup-website /decks/schedule 擴充包與活動行事曆�
 | ---------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------- |
 | `src/data/events.json`                   | 即將發售與遊戲內活動。上游卡片資料庫**不收**未發售擴充包，也沒有遊戲內活動，所以只能人工查 | 手寫（本 skill 的主體）                     |
 | `src/data/sets.json`                     | 歷代擴充包時間軸（code／發售日／卡數／pack）                                               | `scripts/fetch-sets.mjs` 生成，**不要手改** |
-| `src/data/schedule.ts`                   | 資料層：型別、`eventPhase`／`activeEvents`／`daysUntil`                                    | 手寫，改欄位才會動到                        |
+| `src/data/set-names-tc.json`             | 擴充包的官方繁中名，`schedule.ts` 在讀取端**覆寫**進 `sets.json`（上游只帶兩筆且有錯字）   | 手寫                                        |
+| `src/data/schedule.ts`                   | 資料層：型別、`eventPhase`／`activeEvents`／`daysUntil`、併入繁中包名                      | 手寫，改欄位才會動到                        |
 | `src/components/guide/ScheduleBoard.tsx` | 行事曆算繪                                                                                 | 改版面才會動到                              |
 | `src/components/guide/NextSetBanner.tsx` | `/decks` 頁頂提示條，吃 `nextSetRelease()`                                                 | 同上                                        |
 
@@ -58,6 +59,11 @@ description: 更新 piplup-website /decks/schedule 擴充包與活動行事曆�
    node scripts/fetch-sets.mjs            # 連線逾時的話見下方「陷阱」，是本地網路不是腳本壞了
    git diff --stat src/data/sets.json     # 確認真的多了一包，而不是白跑
    ```
+
+   **同一口氣把新那包的繁中名補進 `src/data/set-names-tc.json`**（查法見下方「官方繁中名怎麼查」）。
+   漏掉的話時間軸會出現英文包名，而上方的活動卡是繁中，同一頁自相矛盾。名字通常在發售前就
+   公布了，所以其實可以在還沒發售時就先寫進 overlay——`sets.json` 還沒有那個 code 時它只是 no-op，
+   等上游收錄那天自己生效。
 
    上游（flibustier）只在擴充包**實際發售後**才收錄。剛發售可能還沒進上游，此時 `sets.json`
    不會變，那包就繼續留在 `events.json` 當 `upcoming`——不用急，下次再跑。
@@ -185,7 +191,9 @@ Emblem ＝**勳章**（不是「徽章」）、promo pack ＝**特典卡牌包**
 - **不要自己編 `titleTC`**：官方繁中名沒公布就省略欄位，前端會只顯示英文原名。自己翻的譯名
   會被讀者當成官方名。
 - **`sets.json` 不要手改**：它是生成檔，下次跑 `fetch-sets.mjs` 會被整個覆寫，手改必然遺失。
-  未發售的擴充包屬於 `events.json`，不屬於這裡。另外它目前**不在 `.prettierignore` 裡**（其他生成檔
+  未發售的擴充包屬於 `events.json`，不屬於這裡；**繁中包名屬於 `set-names-tc.json`**，那層 overlay
+  在讀取端覆寫 `sets.json`，所以在 `sets.json` 或 `fetch-sets.mjs` 裡加 `nameTC` 都不會生效。
+  另外它目前**不在 `.prettierignore` 裡**（其他生成檔
   都在），而產生器沒寫結尾換行，所以 `npx prettier --check` 會對它報警——那是既有狀態，不是你弄壞的。
   別為此跑 `prettier --write` 去「修好」它：下次跑 `fetch-sets.mjs` 又會被寫回去，只是多一份無意義 diff。
 - **`fetch-sets.mjs` 抓不到上游**：`raw.githubusercontent.com` 從這台機器連線逾時（2026-07-24
