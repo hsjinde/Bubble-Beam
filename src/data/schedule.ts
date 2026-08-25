@@ -1,10 +1,15 @@
 import rawEvents from "./events.json";
+import rawSetNamesTC from "./set-names-tc.json";
 import rawSets from "./sets.json";
 
 /**
  * /decks/schedule 的資料層。兩條來源刻意分開：
  *   sets.json   — scripts/fetch-sets.mjs 生成，歷代擴充包時間軸，永遠不會過期
  *   events.json — 人工維護，即將發售與遊戲內活動（上游沒有這些資料）
+ *
+ * 第三個檔 set-names-tc.json 是前者的補丁：擴充包的官方繁中名。上游只帶最早兩個
+ * set 的繁中名，而且其中一個是錯字（幻遊「鳥」）。在讀取端併入而不是回頭改生成檔，
+ * 是因為譯名的更新節奏跟抓取節奏無關——跟 meta.ts 的 getMeta() 補 curatedId 同一個理由。
  */
 
 export type EventType = "set" | "drop" | "wonderpick" | "ranked" | "other";
@@ -37,7 +42,12 @@ const eventsFile = rawEvents as { updatedAt: string; events: GameEvent[] };
 /** 人工清單最後更新日。前端要顯示它——讀者才知道這份資料新不新。 */
 export const eventsUpdatedAt = eventsFile.updatedAt;
 
-export const sets = rawSets as ExpansionSet[];
+/** 手寫的官方繁中包名，**覆寫**上游而不只是補缺（上游那兩筆有錯字）。 */
+const setNamesTC = (rawSetNamesTC as { names: Record<string, string> }).names;
+
+export const sets: ExpansionSet[] = (rawSets as ExpansionSet[]).map((s) =>
+  setNamesTC[s.code] ? { ...s, nameTC: setNamesTC[s.code] } : s,
+);
 
 export const EVENT_TYPE_LABEL: Record<EventType, string> = {
   set: "新擴充包",

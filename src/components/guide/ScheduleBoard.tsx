@@ -123,8 +123,8 @@ export function ScheduleBoard() {
       <section className="mt-10">
         <SectionHeading>歷代擴充包</SectionHeading>
         <p className="mt-4 text-sm text-guide-ink-muted">
-          共 {timeline.length} 個擴充包，資料來自社群卡片資料庫，隨上游自動更新。
-          繁中彈名上游只提供最早那幾個，其餘保留英文原名。
+          共 {timeline.length} 個擴充包，發售日與卡數來自社群卡片資料庫，隨上游自動更新。
+          繁中包名取自官方公告；官方沒有正式繁中名的（promo 系列）保留英文原名。
         </p>
         <ol className="mt-4 space-y-2">
           {timeline.map((s) => (

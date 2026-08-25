@@ -7,8 +7,12 @@
 // Caveats this script deliberately does NOT paper over:
 //   - Upstream carries a Traditional Chinese set name for only a couple of the
 //     earliest sets; the rest have `en` only. `nameTC` is written when upstream
-//     has it and left out otherwise — src/data/events.json is where hand-written
-//     Chinese names go, so generated and hand-maintained data stay separable.
+//     has it and left out otherwise, so generated and hand-maintained data stay
+//     separable. The 繁中 names the site actually renders come from the
+//     hand-written src/data/set-names-tc.json, merged in at read time by
+//     src/data/schedule.ts — that overlay OVERRIDES whatever lands here, because
+//     upstream's own 繁中 names contain a typo (A1a is 幻遊島, not 幻遊鳥).
+//     Adding a name here is therefore not enough; the overlay is the source of truth.
 //   - Upstream lags on unreleased sets. Anything not yet listed there belongs in
 //     events.json as an upcoming entry, not here.
 //
