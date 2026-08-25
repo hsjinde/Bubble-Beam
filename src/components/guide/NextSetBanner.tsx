@@ -26,9 +26,11 @@ export function NextSetBanner() {
         {days <= 0 ? "即將發售" : `${days} 天後`}
       </span>
       <span className="font-semibold text-guide-ink">
-        新擴充包 {next.title}
+        {/* 繁中為主、英文原名小字跟在後面。這裡刻意不用括號包英文——
+            title 本身就帶了「（B4a）」，再包一層會變成雙層括號。 */}
+        新擴充包 {next.titleTC ?? next.title}
         {next.titleTC && (
-          <span className="font-normal text-guide-ink-muted">（{next.titleTC}）</span>
+          <span className="ml-2 text-xs font-normal text-guide-ink-muted">{next.title}</span>
         )}
       </span>
       <span className="ml-auto font-semibold text-guide-ink-deep">看行事曆 →</span>

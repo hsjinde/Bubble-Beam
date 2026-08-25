@@ -97,7 +97,7 @@ description: 更新 piplup-website /decks/schedule 擴充包與活動行事曆�
   "id": "b4-ruler-of-the-skies",
   "type": "set",
   "title": "Ruler of the Skies（B4）",
-  "titleTC": "天空的支配者",
+  "titleTC": "天空主宰",
   "startAt": "2026-07-30T01:00:00Z",
   "note": "第八個主要擴充包，Mega Rayquaza ex 登場。",
   "url": "https://www.pokemon.com/us/news/…"
@@ -132,8 +132,35 @@ description: 更新 piplup-website /decks/schedule 擴充包與活動行事曆�
 | **Game8** `game8.co/games/Pokemon-TCG-Pocket`               | **WebFetch**（curl 會吃 403，擋 UA）                                                       | 活動細節與發售時刻詳盡（B4 的 `6pm PDT` 就查得到）                                                                          |
 | **Serebii** `serebii.net/tcgpocket/`                        | curl／WebFetch 皆可                                                                        | **索引頁沒有日期**，要進分頁：`events.shtml`（特殊活動）、`dropevents.shtml`、`wonderpickevents.shtml`、`rankedmatch.shtml` |
 | **Limitless** `pocket.limitlesstcg.com`                     | curl／WebFetch 皆可                                                                        | 賽事端為主，擴充包發售日可交叉驗證                                                                                          |
+| **官方繁中站** `pokemontcgpocket.com/tc/news/`              | 見下方「官方繁中名怎麼查」——內文抓不到，但**標題抓得到**                                   | `titleTC` 的唯一一手來源：擴充包的官方繁中名                                                                                |
 
 社群站彼此會互抄，兩個都抄同一篇不算「兩個獨立來源」——看它們有沒有各自附官方連結。
+
+### 官方繁中名怎麼查（2026-08-25 實測）
+
+擴充包的官方繁中名**不必靠社群站猜**，官方繁中站的公告標題就寫了。內文是 client-side 載入、
+這台機器抓不到（`__NEXT_DATA__` 沒有內文、猜的幾個 API 路徑全 404、拒絕 cookie 後重載也一樣），
+但 `<title>` 在 HTML 裡，用瀏覽器分頁跑一段 JS 就能整批收：
+
+```js
+// 在 pokemontcgpocket.com 的分頁執行（javascript_tool）
+const t = await (await fetch("/sitemap.xml")).text();
+const ids = [...t.matchAll(/\/tc\/news\/(\d+)\//g)].map((x) => +x[1]).sort((a, b) => b - a);
+for (const i of ids.slice(0, 14)) {
+  const h = await (await fetch("/tc/news/" + i + "/")).text();
+  console.log(i, h.match(/<title>([^<]*)<\/title>/)?.[1]);
+}
+```
+
+sitemap 只收部分編號（中間有很多 404），最新一篇未必在裡面——sitemap 的最大值抓到後，
+往上再試幾號就會撞到還沒進 sitemap 的新公告（B4a 的 `/tc/news/80/` 就是這樣找到的）。
+
+**活動名沒有這條捷徑**：官方繁中站只發擴充包公告，遊戲內活動名只能靠台灣媒體轉述
+（`pokemonhubs.com`、`gamelife.tw`、巴哈姆特），而它們彼此會有一字之差。收之前先比對兩家，
+不一致就把差異寫進 `_comment`，別假裝有共識。查不到完整名的就留英文——**組合式自譯也算自己編**。
+
+官方繁中用詞對照（多來源一致，可放心沿用）：Wonder Pick ＝**得卡挑戰**、Drop event ＝**掉落活動**、
+Emblem ＝**勳章**（不是「徽章」）、promo pack ＝**特典卡牌包**。
 
 ## 驗證
 

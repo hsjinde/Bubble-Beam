@@ -58,10 +58,14 @@ function EventCard({ event, now }: { event: GameEvent; now: number }) {
               : `還有 ${days} 天`}
         </span>
       </div>
+      {/* 繁中為主、英文原名小字並列，與排行榜的牌組名同一套體例。
+          官方還沒公布繁中名的（titleTC 缺）就只出英文，不自己編譯名。 */}
       <h3 className="mt-2 font-bold text-guide-ink">
-        {event.title}
+        {event.titleTC ?? event.title}
         {event.titleTC && (
-          <span className="ml-1.5 font-normal text-guide-ink-muted">（{event.titleTC}）</span>
+          <span className="mt-0.5 block text-xs font-normal text-guide-ink-muted">
+            {event.title}
+          </span>
         )}
       </h3>
       <p className="mt-1 text-sm text-guide-ink-muted">
@@ -134,10 +138,11 @@ export function ScheduleBoard() {
               <span className="rounded-full bg-guide-tint px-2 py-0.5 text-xs font-bold text-guide-ink-deep">
                 {s.code}
               </span>
+              {/* 與上方活動卡同一套體例：有繁中名就繁中為主、英文原名小字並列 */}
               <span className="font-semibold text-guide-ink">
-                {s.nameEN}
+                {s.nameTC ?? s.nameEN}
                 {s.nameTC && (
-                  <span className="ml-1.5 font-normal text-guide-ink-muted">（{s.nameTC}）</span>
+                  <span className="ml-2 text-xs font-normal text-guide-ink-muted">{s.nameEN}</span>
                 )}
               </span>
               {typeof s.count === "number" && (
