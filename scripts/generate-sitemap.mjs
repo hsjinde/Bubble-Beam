@@ -29,7 +29,15 @@ const meta = JSON.parse(readFileSync(path.join(root, "src/data/meta.json"), "utf
 const esc = (s) =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-const decks = listDecks();
+/**
+ * 刻意不沿用 `listDecks()` 的 tier 排序，改按 id 排死。
+ *
+ * sitemap 的順序對協議與搜尋引擎都沒有意義，但它會洩漏到 diff 裡：tier 一調整，
+ * 整段位置就被擠開，產生一堆成對的增刪行，跟「真的新增／移除攻略頁」長得一模一樣
+ * （2026-08-25 就這樣誤判過一次，以為掉了一頁，其實只是換位置）。
+ * 排死之後，這個檔的 diff 只會在頁面真的增刪時才變動。
+ */
+const decks = [...listDecks()].sort((a, b) => a.id.localeCompare(b.id));
 
 /**
  * lastmod 只給真的知道時間的頁面。/decks 用排行榜資料的抓取時間——那是這頁內容
