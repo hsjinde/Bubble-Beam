@@ -56,17 +56,69 @@
     "矛盾標成 2025 年；拿 dropevents／wonderpickevents 分頁對照後那些活動根本不存在。單頁摘要看似",
     "言之鑿鑿也可能是誤讀了跨年同月的歷史列，沒有其他來源佐證前不要採信。",
     "",
+    "2026-08-25 更新（B4a 官方公布，一次補進四筆 9 月活動）：TPC 北美官方新聞稿（press.pokemon.com，",
+    "8/20 發布）逐字列出四個活動的 PDT 起訖，B4a 定名 Team Rocket's Ambition、8/26 下午 6 點 PDT 發售",
+    "（＝既有的 2026-08-27T01:00:00Z，與先前 Game8 推得的時刻一致）。這輪學到五件事：",
+    "  a. press.pokemon.com 對 WebFetch 回 401（/en/releases/… 與 /en/… 兩種網址皆然），但用瀏覽器分頁",
+    "     開得起來——跟 Pokemon Zone 擋 WebFetch 是同一類問題，別因為 401 就當它不能用。",
+    "  b. PDT → +08:00 是 +15 小時，本輪區間內沒有日光節約切換，四筆一致適用。官方寫的",
+    "     『X 日 23:00 PDT 至 Y 日 22:59 PDT』換算成台灣時間就是『X+1 日 14:00 至 Y+1 日 13:59』，",
+    "     這也解釋了為什麼遊戲內活動一律在台灣時間下午兩點換場。",
+    "  c. 拿這條規則對帳時，Pokemon Zone 的 B4a 頁四筆裡有三筆換算無誤，只有徽章活動的結束日寫成",
+    "     9/9（沒有 +1）——官方原文是 9/9 22:59 PDT ＝台灣 9/10，所以本檔收 9/10。Bulbagarden 與",
+    "     ComicBook 也記 9/9，但它們與官方是同一份新聞稿的轉述，不算獨立佐證，判定依據是官方原文。",
+    "  d. The Great Puzzle Challenge 官方明說『活動期間 8/27 才公布』，依規則 1 不收，只寫進 B4a 的 note。",
+    "  e. 仍然沒有的：排名賽季 17（Season 16 8/26 結束後即無公告）、Serebii 的 dropevents／",
+    "     wonderpickevents／rankedmatch 三頁最新一筆都還停在 8 月那批。sets.json 已含 B4（7/30），",
+    "     不必重跑 fetch-sets.mjs；B4a 要等實際發售後才會進上游。",
+    "",
     "type：set（新擴充包）／drop（Drop 活動）／wonderpick／ranked（排名賽季）／other"
   ],
-  "updatedAt": "2026-08-20",
+  "updatedAt": "2026-08-25",
   "events": [
+    {
+      "id": "fennekin-meowstic-wonder-pick-2026-09",
+      "type": "wonderpick",
+      "title": "Fennekin and Meowstic Wonder Pick event",
+      "startAt": "2026-09-19T00:00:00+08:00",
+      "endAt": "2026-09-29T23:59:00+08:00",
+      "note": "Promo Fennekin 與 Meowstic 進入 Wonder Pick，另有任務可拿活動商店券換 promo 卡。官方原文為 9/18 23:00 PDT 至 9/28 22:59 PDT（台灣時間 9/19 下午兩點至 9/29 下午一點五十九分）。",
+      "url": "https://press.pokemon.com/en/releases/Prepare-for-Trouble-Team-Rockets-Ambition-Themed-Booster-Pack-Coming-S"
+    },
+    {
+      "id": "team-rockets-lapras-drop-2026-09",
+      "type": "drop",
+      "title": "Team Rocket's Lapras Drop Event",
+      "startAt": "2026-09-10T00:00:00+08:00",
+      "endAt": "2026-09-20T23:59:00+08:00",
+      "note": "單人對戰活動，打特殊關卡換 Promo Pack B 系列 Vol. 12，主打 Art Rare 的 Team Rocket's Lapras。官方原文為 9/9 23:00 PDT 至 9/19 22:59 PDT（台灣時間 9/10 下午兩點至 9/20 下午一點五十九分）。",
+      "url": "https://press.pokemon.com/en/releases/Prepare-for-Trouble-Team-Rockets-Ambition-Themed-Booster-Pack-Coming-S"
+    },
+    {
+      "id": "team-rockets-ambition-emblem-2026-08",
+      "type": "other",
+      "title": "Team Rocket's Ambition Emblem Event",
+      "startAt": "2026-08-28T00:00:00+08:00",
+      "endAt": "2026-09-10T23:59:00+08:00",
+      "note": "玩家對戰活動，依勝場數取得火箭隊主題徽章與閃耀星塵等獎勵。官方原文為 8/27 23:00 PDT 至 9/9 22:59 PDT（台灣時間 8/28 下午兩點至 9/10 下午一點五十九分）。",
+      "url": "https://press.pokemon.com/en/releases/Prepare-for-Trouble-Team-Rockets-Ambition-Themed-Booster-Pack-Coming-S"
+    },
+    {
+      "id": "team-rockets-special-assignments-2026-08",
+      "type": "other",
+      "title": "Team Rocket's Special Assignments",
+      "startAt": "2026-08-28T00:00:00+08:00",
+      "endAt": "2026-09-29T23:59:00+08:00",
+      "note": "長期任務，完成後取得 Team Rocket's Shady Ticket，活動期間可在遊戲內找地方兌換獎勵。官方原文為 8/27 23:00 PDT 至 9/28 22:59 PDT（台灣時間 8/28 下午兩點至 9/29 下午一點五十九分）。",
+      "url": "https://press.pokemon.com/en/releases/Prepare-for-Trouble-Team-Rockets-Ambition-Themed-Booster-Pack-Coming-S"
+    },
     {
       "id": "b4a-expansion",
       "type": "set",
-      "title": "B4a Expansion",
+      "title": "Team Rocket's Ambition（B4a）",
       "startAt": "2026-08-27T01:00:00Z",
-      "note": "B4『天空的支配者』強化擴充包（Mini Expansion）。官方尚未公布卡表與發售日；Game8 由隨機對戰賽季結束時刻推得 8/26 下午 6 點 PDT，Pokemon Zone 的 B4a 頁同樣指向這個時間點（台灣時間 8/27 上午 9 點）。",
-      "url": "https://game8.co/games/Pokemon-TCG-Pocket/archives/500900"
+      "note": "B4『天空的支配者』之後的主題強化擴充包（Mini Expansion），主打初代火箭隊，Team Rocket's Mewtwo 與三神鳥 ex 登場。官方公布發售時刻為 8/26 下午 6 點 PDT（台灣時間 8/27 上午 9 點）。同步展開的 The Great Puzzle Challenge 網頁解謎活動可換包款沙漏序號，活動期間官方要到 8/27 才公布。",
+      "url": "https://press.pokemon.com/en/releases/Prepare-for-Trouble-Team-Rockets-Ambition-Themed-Booster-Pack-Coming-S"
     },
     {
       "id": "pachirisu-beldum-wonder-pick-2026-08",
