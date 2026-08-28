@@ -275,12 +275,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4a/23.webp",
     "deckBuilderNr": 1042
   },
-  "A4a-55": {
-    "id": "A4a-55",
-    "nameEN": "Altaria",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4a/55.webp",
-    "deckBuilderNr": 1070
-  },
   "A4a-59": {
     "id": "A4a-59",
     "nameEN": "Igglybuff",
@@ -509,12 +503,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2a/37.webp",
     "deckBuilderNr": 1546
   },
-  "B2a-92": {
-    "id": "B2a-92",
-    "nameEN": "Penny",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2a/92.webp",
-    "deckBuilderNr": 1000070
-  },
   "B2b-7": {
     "id": "B2b-7",
     "nameEN": "Charmander",
@@ -731,6 +719,12 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/15.webp",
     "deckBuilderNr": 1916
   },
+  "B3b-24": {
+    "id": "B3b-24",
+    "nameEN": "Dedenne ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3b/24.webp",
+    "deckBuilderNr": 1922
+  },
   "B3b-41": {
     "id": "B3b-41",
     "nameEN": "Mega Sableye ex",
@@ -797,6 +791,12 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/74.webp",
     "deckBuilderNr": 2035
   },
+  "B4-78": {
+    "id": "B4-78",
+    "nameEN": "Oricorio",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/78.webp",
+    "deckBuilderNr": 2039
+  },
   "B4-100": {
     "id": "B4-100",
     "nameEN": "Absol",
@@ -808,12 +808,6 @@
     "nameEN": "Hoopa ex",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/103.webp",
     "deckBuilderNr": 2064
-  },
-  "B4-116": {
-    "id": "B4-116",
-    "nameEN": "Dratini",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/116.webp",
-    "deckBuilderNr": 2077
   },
   "B4-117": {
     "id": "B4-117",
@@ -832,6 +826,12 @@
     "nameEN": "Deceptive Needle",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/148.webp",
     "deckBuilderNr": 1000152
+  },
+  "B4-149": {
+    "id": "B4-149",
+    "nameEN": "Clear Veil",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/149.webp",
+    "deckBuilderNr": 1000153
   },
   "B4-153": {
     "id": "B4-153",

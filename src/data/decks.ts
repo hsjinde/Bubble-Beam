@@ -50,7 +50,7 @@ const decks: Deck[] = [
   {
     id: "suicune-baxcalibur",
     name: "水君ex 戟脊龍",
-    tier: "A",
+    tier: "S",
     energy: ["Water"],
     difficulty: "中",
     summary: "水系中速主流：以戟脊龍為填能引擎，帶動水君ex 與古劍豹ex 連續發動重砲打擊。",
@@ -235,7 +235,7 @@ const decks: Deck[] = [
   {
     id: "mega-altaria-espeon",
     name: "Mega七夕青鳥ex 太陽伊布",
-    tier: "A",
+    tier: "S",
     energy: ["Psychic"],
     difficulty: "中",
     summary: "超能高耐久防守：Mega七夕青鳥ex 龐大 HP 搭配太陽伊布治癒與彈性戰術，後發制人。",
@@ -1163,7 +1163,7 @@ const decks: Deck[] = [
   {
     id: "mega-lucario-greninja",
     name: "Mega路卡利歐ex 甲賀忍蛙",
-    tier: "B",
+    tier: "C",
     energy: ["Fighting"],
     difficulty: "中",
     summary: "格鬥系的削血版本：Mega路卡利歐ex 靠神奇糖果跳級，甲賀忍蛙每回合手裏劍補刀壓線。",
