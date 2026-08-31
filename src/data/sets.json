@@ -34,7 +34,7 @@
     "code": "A1a",
     "series": "A",
     "releaseDate": "2024-12-17",
-    "count": 85,
+    "count": 86,
     "nameEN": "Mythical Island",
     "nameTC": "幻遊鳥",
     "packs": ["Mew"]
@@ -131,7 +131,12 @@
       "B Series Vol. 4",
       "B Series Vol. 5",
       "B Series Vol. 6",
-      "B Series Vol. 7"
+      "B Series Vol. 7",
+      "B Series Vol. 8",
+      "B Series Vol. 9",
+      "B Series Vol. 10",
+      "B Series Vol. 11",
+      "B Series Vol. 12"
     ]
   },
   {
@@ -170,7 +175,7 @@
     "code": "B3",
     "series": "B",
     "releaseDate": "2026-04-28",
-    "count": 257,
+    "count": 234,
     "nameEN": "Pulsing Aura",
     "packs": ["Pulsing Aura"]
   },
@@ -196,6 +201,14 @@
     "releaseDate": "2026-07-30",
     "count": 233,
     "nameEN": "Ruler of the Skies",
+    "packs": ["Ruler of the Skies"]
+  },
+  {
+    "code": "B4a",
+    "series": "B",
+    "releaseDate": "2026-08-27",
+    "count": 110,
+    "nameEN": "Team Rocket’s Ambition",
     "packs": ["Ruler of the Skies"]
   }
 ]

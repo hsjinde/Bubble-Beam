@@ -193,13 +193,25 @@ Emblem ＝**勳章**（不是「徽章」）、promo pack ＝**特典卡牌包**
 - **`sets.json` 不要手改**：它是生成檔，下次跑 `fetch-sets.mjs` 會被整個覆寫，手改必然遺失。
   未發售的擴充包屬於 `events.json`，不屬於這裡；**繁中包名屬於 `set-names-tc.json`**，那層 overlay
   在讀取端覆寫 `sets.json`，所以在 `sets.json` 或 `fetch-sets.mjs` 裡加 `nameTC` 都不會生效。
-  另外它目前**不在 `.prettierignore` 裡**（其他生成檔
-  都在），而產生器沒寫結尾換行，所以 `npx prettier --check` 會對它報警——那是既有狀態，不是你弄壞的。
-  別為此跑 `prettier --write` 去「修好」它：下次跑 `fetch-sets.mjs` 又會被寫回去，只是多一份無意義 diff。
-- **`fetch-sets.mjs` 抓不到上游**：`raw.githubusercontent.com` 從這台機器連線逾時（2026-07-24
-  實測，沙箱內外皆同，是本地網路而非腳本壞了）。同一份檔案的 CDN 鏡像可用且內容相同：
+- **跑完 `fetch-sets.mjs` 要補一次 `npx prettier --write src/data/sets.json`**：它**不在
+  `.prettierignore` 裡**（其他生成檔都在），而產生器輸出的是 `JSON.stringify(…, 2)` 的展開版、
+  也沒寫結尾換行。repo 裡存的是 prettier 排版（`"packs": ["Mew"]` 單行），所以不補這一步的話，
+  一次重跑會生出約 90 行純格式雜訊，真正的內容變更淹在裡面。這是既有慣例，`c08ef14` 的 commit
+  訊息就寫了「輸出再過一次 prettier 以維持既有排版」。過完 prettier 後 `--check` 也會通過。
+  2026-08-31 實測：這樣做完，diff 只剩上游真正改的三處（A1a 卡數 85→86、B3 257→234、
+  PROMO-B 補上 Vol. 8–12）加上新的 B4a。
+- **`fetch-sets.mjs` 抓不到上游**：`raw.githubusercontent.com` 曾從這台機器連線逾時（2026-07-24
+  實測，沙箱內外皆同，是本地網路而非腳本壞了），但**2026-08-31 實測直連正常**——所以先照原樣跑，
+  真的逾時再換路。同一份檔案的 CDN 鏡像可用且內容相同：
   `https://cdn.jsdelivr.net/gh/flibustier/pokemon-tcg-pocket-database@main/dist/sets.json`。
   需要時把 `fetch-sets.mjs` 的 `SRC` 暫時指過去，跑完 `git checkout scripts/fetch-sets.mjs` 還原，
   並用 `git status` 確認腳本沒被留下改動。
+- **官方預告的活動日期會被實裝推翻，發售後要回頭複查**：2026-08-31 實測，B4a 那批四個活動裡，
+  勳章活動官方 8/20 稿寫 8/27 23:00 PDT 開始，實際上線是 8/31 06:00 UTC（晚三天），結束日不變；
+  其餘三筆與官方換算吻合，所以不是系統性偏移。官方稿自己的腳註就寫了「Event duration periods are
+  subject to change」。**發售前依預告寫進 `events.json` 的活動，發售後那一輪要逐筆對一次實裝資料**，
+  對帳來源用 `ptcgpocket.gg` 的活動頁（有結構化的 `Event Period` 欄位、直接給 UTC 時刻，比任何站的
+  日曆列都好核）＋ Pokemon Zone 的日曆日互為佐證。但欄位化不等於可信：同一批頁面裡，Season 17 頁的
+  「Result Announcement: August 29」是明顯筆誤（賽季 9/29 才結束），仍要兩個來源對得上才收。
 - **別把「更新行事曆」和「更新排行榜」混在一起**：牌組勝率／tier／Top 20 是 `tcg-pocket-tier-list`
   skill 的事，動的是 `meta.json`。兩者互不相干，一次做一件。

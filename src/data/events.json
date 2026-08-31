@@ -95,9 +95,42 @@
     "     wonderpickevents／rankedmatch 三頁最新一筆都還停在 8 月那批。sets.json 已含 B4（7/30），",
     "     不必重跑 fetch-sets.mjs；B4a 要等實際發售後才會進上游。",
     "",
+    "2026-08-31 更新（B4a 已發售，補三筆 9 月活動並修正勳章活動的開始日）：本輪環境全通——",
+    "press.pokemon.com／pokemon-zone.com／ptcgpocket.gg 走瀏覽器分頁、pokemon.com 與 serebii 走 WebFetch、",
+    "官方繁中站的 sitemap＋<title> 抓法照舊有效。新增 Ranked Match Season 17（B4a）、9 月的 Community",
+    "Week Missions、以及 The Great Puzzle Challenge（8/25 那輪依規則 1 押後的那筆，官方 8/27 已公布期間）。",
+    "本輪的三件事：",
+    "  a. **官方預告會被實裝推翻**：勳章活動官方 8/20 稿寫 8/27 23:00 PDT 開始（台灣 8/28），實際上線是",
+    "     8/31 06:00 UTC（台灣 8/31 下午兩點），整整晚三天，結束日則不變。判定依據是兩個獨立來源：",
+    "     Pokemon Zone 的 schedule／events／單一活動三個頁面都寫 8月31日，ptcgpocket.gg 的活動頁直接給",
+    "     『Start: August 31, 2026 at 6 AM UTC』。同一批四筆活動裡只有這筆偏移，其餘三筆（特別任務 8/28、",
+    "     拉普拉斯 9/10、得卡挑戰 9/19）兩站與官方換算完全吻合，所以不是系統性誤差。官方稿自己的腳註就寫了",
+    "     『Event duration periods are subject to change』——**發售前寫進來的活動日期，發售後要回頭複查一次**。",
+    "  b. ptcgpocket.gg 的活動頁有結構化的『Event Period』欄位且直接給 UTC 時刻，比任何站的日曆列都好對帳，",
+    "     這輪三筆新活動的精確時刻都是從那裡取的（WebFetch 吃 403，要走瀏覽器分頁）。但它同一頁也會出錯：",
+    "     Season 17 頁的『Result Announcement: August 29』明顯是筆誤（賽季 9/29 才結束），欄位化不等於可信，",
+    "     仍要跟第二來源對帳——這三筆的日曆日都另有 Pokemon Zone 佐證。",
+    "  c. Great Puzzle Challenge 是這批唯一沒有精確時刻的活動，兩端都只有美國口徑的日曆日。結束端：",
+    "     官方寫『to September 30』，ptcgpocket.gg 寫 10/1 06:00 UTC ＝台灣 10/1 下午兩點，兩者是同一",
+    "     時刻的不同表述、不是矛盾；本檔取官方的 9/30，倒數因此比實際早半天結束——這個方向是刻意的，",
+    "     早收比讓讀者以為 10/1 整天還能玩安全。開始端同樣取官方的 8/27，理由是它不可能更晚：序號兌換",
+    "     視窗 8/26 08:00 PDT（台灣 8/26 晚上 11 點）就開了，B4a 也在台灣 8/27 上午 9 點發售。**起訖用",
+    "     同一套口徑**這件事本身要留意——只換一端會讓區間無聲地錯開。其餘活動沒有這個問題：它們起於",
+    "     06:00 UTC、訖於 05:59 UTC，換算後都落在單一個台灣日曆日。",
+    "  c2. 這筆的 titleTC 是官方一手：解謎活動站本身有繁中版，但路徑是 **`/tc/`**（`/zh-tw/`、`/zh-hant/`、",
+    "     `/zh/` 全都回 S3 的 AccessDenied，語言選單又是 JS 切換、href 只有 `#`，照連結找會以為沒有繁中版）。",
+    "     內文一樣是 client-side 載入抓不到，但 `<title>` 在 HTML 裡就寫了「火箭隊的野心～解謎大作戰～」。",
+    "     取法跟官方繁中站同一招，`/tc/` 這個路徑慣例兩邊一致，下次遇到官方活動站可以直接試。",
+    "  d. 下一個主要擴充包 C1 仍不能收：官方繁中站 /tc/news/77/『新系列將在2026年10月推出！』與 Pokemon Zone",
+    "     的 C1 頁都只說 10 月、明講 exact date unknown，依規則 1 不收。因此 /decks 頁頂的 NextSetBanner",
+    "     這段期間會是空的（沒有 upcoming 的 set），那是預期行為不是壞掉。C1 帶雙屬性卡與御三家 ex，",
+    "     劇透已見 Mega Mewtwo X ex／Piplup ex／Fuecoco ex。",
+    "  e. sets.json 這輪重跑過了，B4a（2026-08-27、110 張）已進上游，繁中名由 set-names-tc.json 既有的",
+    "     那筆自動生效。上游同時修了兩個舊卡數（A1a 85→86、B3 257→234）並補齊 PROMO-B 的 Vol. 8–12。",
+    "",
     "type：set（新擴充包）／drop（Drop 活動）／wonderpick／ranked（排名賽季）／other"
   ],
-  "updatedAt": "2026-08-25",
+  "updatedAt": "2026-08-31",
   "events": [
     {
       "id": "fennekin-meowstic-wonder-pick-2026-09",
@@ -110,6 +143,15 @@
       "url": "https://press.pokemon.com/en/releases/Prepare-for-Trouble-Team-Rockets-Ambition-Themed-Booster-Pack-Coming-S"
     },
     {
+      "id": "ranked-season-17",
+      "type": "ranked",
+      "title": "Ranked Match Season 17（B4a）",
+      "startAt": "2026-09-15T00:00:00+08:00",
+      "endAt": "2026-09-29T23:59:00+08:00",
+      "note": "第 17 賽季排名賽，B4a『火箭隊的野心』環境開打。精確時刻為 9/15 06:00 UTC 至 9/29 05:59 UTC（台灣時間 9/15 下午兩點至 9/29 下午一點五十九分）。",
+      "url": "https://ptcgpocket.gg/ranked-match-season-b4a-ranking-guide-all-rewards/"
+    },
+    {
       "id": "team-rockets-lapras-drop-2026-09",
       "type": "drop",
       "title": "Team Rocket's Lapras Drop Event",
@@ -120,14 +162,23 @@
       "url": "https://press.pokemon.com/en/releases/Prepare-for-Trouble-Team-Rockets-Ambition-Themed-Booster-Pack-Coming-S"
     },
     {
+      "id": "community-week-missions-2026-09",
+      "type": "other",
+      "title": "Community Week Missions",
+      "startAt": "2026-09-05T00:00:00+08:00",
+      "endAt": "2026-09-12T23:59:00+08:00",
+      "note": "為期一週的社群任務，完成可拿包款沙漏、閃耀星塵、交換沙漏與限定背景。精確時刻為 9/5 06:00 UTC 至 9/12 06:00 UTC（台灣時間 9/5 下午兩點至 9/12 下午兩點）。",
+      "url": "https://ptcgpocket.gg/community-week-missions-5/"
+    },
+    {
       "id": "team-rockets-ambition-emblem-2026-08",
       "type": "other",
       "title": "Team Rocket's Ambition Emblem Event",
       "titleTC": "「火箭隊的野心」勳章活動",
-      "startAt": "2026-08-28T00:00:00+08:00",
+      "startAt": "2026-08-31T00:00:00+08:00",
       "endAt": "2026-09-10T23:59:00+08:00",
-      "note": "玩家對戰活動，依勝場數取得火箭隊主題勳章與閃耀星塵等獎勵。官方原文為 8/27 23:00 PDT 至 9/9 22:59 PDT（台灣時間 8/28 下午兩點至 9/10 下午一點五十九分）。",
-      "url": "https://press.pokemon.com/en/releases/Prepare-for-Trouble-Team-Rockets-Ambition-Themed-Booster-Pack-Coming-S"
+      "note": "玩家對戰活動，依勝場數取得火箭隊主題勳章與閃耀星塵等獎勵。實際上線時刻為 8/31 06:00 UTC 至 9/10 05:59 UTC（台灣時間 8/31 下午兩點至 9/10 下午一點五十九分）——官方 8/20 的預告原本寫 8/27 開始，實裝時延後三天，結束日不變。",
+      "url": "https://ptcgpocket.gg/team-rockets-ambition-emblem-event/"
     },
     {
       "id": "team-rockets-special-assignments-2026-08",
@@ -145,8 +196,18 @@
       "title": "Team Rocket's Ambition（B4a）",
       "titleTC": "火箭隊的野心",
       "startAt": "2026-08-27T01:00:00Z",
-      "note": "B4『天空主宰』之後的主題強化擴充包（Mini Expansion），主打初代火箭隊，Team Rocket's Mewtwo 與三神鳥 ex 登場。官方公布發售時刻為 8/26 下午 6 點 PDT（台灣時間 8/27 上午 9 點）。同步展開的 The Great Puzzle Challenge 網頁解謎活動可換包款沙漏序號，活動期間官方要到 8/27 才公布。",
+      "note": "B4『天空主宰』之後的主題強化擴充包（Mini Expansion），主打初代火箭隊，Team Rocket's Mewtwo 與三神鳥 ex 登場，共 110 張。官方公布發售時刻為 8/26 下午 6 點 PDT（台灣時間 8/27 上午 9 點）。同步展開的網頁解謎活動見下一筆 The Great Puzzle Challenge。",
       "url": "https://press.pokemon.com/en/releases/Prepare-for-Trouble-Team-Rockets-Ambition-Themed-Booster-Pack-Coming-S"
+    },
+    {
+      "id": "great-puzzle-challenge-2026-08",
+      "type": "other",
+      "title": "Team Rocket's Ambition: The Great Puzzle Challenge",
+      "titleTC": "火箭隊的野心～解謎大作戰～",
+      "startAt": "2026-08-27T00:00:00+08:00",
+      "endAt": "2026-09-30T23:59:00+08:00",
+      "note": "官方活動網站（tr.pokemontcgpocket.com/tc/）上的解謎活動，共六題分三個難度，全破可拿 24 個包款沙漏的序號。起訖兩端都取官方公告的 8/27 至 9/30（美國時區口徑）：官方沒有公布精確時刻，而序號兌換視窗 8/26 08:00 PDT（台灣 8/26 晚上 11 點）就開了、B4a 也在台灣 8/27 上午 9 點發售，所以開始日不會晚於 8/27；結束端第三方記載為 10/1 06:00 UTC ＝台灣 10/1 下午兩點，本站仍取 9/30，倒數會比實際早半天結束（寧可早收）。",
+      "url": "https://www.pokemon.com/us/news/pokemon-tcg-pocket-team-rockets-ambition-expansion-is-now-available"
     },
     {
       "id": "pachirisu-beldum-wonder-pick-2026-08",
