@@ -1,16 +1,4 @@
 {
-  "A1-33": {
-    "id": "A1-33",
-    "nameEN": "Charmander",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/33.webp",
-    "deckBuilderNr": 33
-  },
-  "A1-35": {
-    "id": "A1-35",
-    "nameEN": "Charizard",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/35.webp",
-    "deckBuilderNr": 35
-  },
   "A1-87": {
     "id": "A1-87",
     "nameEN": "Froakie",
@@ -503,12 +491,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2a/37.webp",
     "deckBuilderNr": 1546
   },
-  "B2b-7": {
-    "id": "B2b-7",
-    "nameEN": "Charmander",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2b/7.webp",
-    "deckBuilderNr": 1613
-  },
   "B2b-8": {
     "id": "B2b-8",
     "nameEN": "Charmeleon",
@@ -791,12 +773,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/74.webp",
     "deckBuilderNr": 2035
   },
-  "B4-78": {
-    "id": "B4-78",
-    "nameEN": "Oricorio",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/78.webp",
-    "deckBuilderNr": 2039
-  },
   "B4-100": {
     "id": "B4-100",
     "nameEN": "Absol",
@@ -833,12 +809,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/149.webp",
     "deckBuilderNr": 1000153
   },
-  "B4-153": {
-    "id": "B4-153",
-    "nameEN": "Wally",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/153.webp",
-    "deckBuilderNr": 1000157
-  },
   "B4-154": {
     "id": "B4-154",
     "nameEN": "Soothing Shore",
@@ -850,6 +820,24 @@
     "nameEN": "Rainbow Cave",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/155.webp",
     "deckBuilderNr": 1000159
+  },
+  "B4a-42": {
+    "id": "B4a-42",
+    "nameEN": "Team Rocket’s Koffing",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021550_00_ROCKETDANNODOGARS_C.webp",
+    "deckBuilderNr": 2155
+  },
+  "B4a-43": {
+    "id": "B4a-43",
+    "nameEN": "Team Rocket’s Weezing ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021560_00_ROCKETDANNOMATADOGASex_RR.webp",
+    "deckBuilderNr": 2156
+  },
+  "B4a-67": {
+    "id": "B4a-67",
+    "nameEN": "Team Rocket’s Thieving Machine",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_10_001600_00_ROCKETDANNODOROBOUMASHIN_U.webp",
+    "deckBuilderNr": 1000160
   },
   "PROMO-A-2": {
     "id": "PROMO-A-2",
@@ -868,6 +856,12 @@
     "nameEN": "Professor’s Research",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-A/7.webp",
     "deckBuilderNr": 1000004
+  },
+  "PROMO-B-37": {
+    "id": "PROMO-B-37",
+    "nameEN": "Frigibax",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-B/37.webp",
+    "deckBuilderNr": 1599
   },
   "PROMO-B-43": {
     "id": "PROMO-B-43",

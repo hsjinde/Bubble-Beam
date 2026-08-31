@@ -50,7 +50,7 @@ const decks: Deck[] = [
   {
     id: "suicune-baxcalibur",
     name: "水君ex 戟脊龍",
-    tier: "S",
+    tier: "A",
     energy: ["Water"],
     difficulty: "中",
     summary: "水系中速主流：以戟脊龍為填能引擎，帶動水君ex 與古劍豹ex 連續發動重砲打擊。",

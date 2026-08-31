@@ -27,6 +27,7 @@ const SETS = [
   "B3a",
   "B3b",
   "B4",
+  "B4a",
   "PROMO-A",
   "PROMO-B",
 ];

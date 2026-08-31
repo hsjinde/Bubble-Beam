@@ -23,7 +23,11 @@
     "  - Dragonair、Sharpedo、Gyarados、Hitmonchan、Chandelure、Oricorio 查官方台灣圖鑑",
     "    tw.portal-pokemon.com/play/pokedex/{編號}。",
     "  - Chingling 查官方圖鑑 0433 為「鈴鐺響」；decks.ts 的策展名寫的是「鈴噹響」，",
-    "    兩邊差一個字，這裡以官方為準（沒有一併改 decks.ts，那是另一件事）。"
+    "    兩邊差一個字，這裡以官方為準（沒有一併改 decks.ts，那是另一件事）。",
+    "  - Weezing 查官方圖鑑 0110 為「雙彈瓦斯」（2026-08-31 查證）。火箭隊系列卡另立",
+    "    「Team Rocket's Weezing」一筆：最長前綴比對會先吃到 Team 這個字，只補 Weezing",
+    "    的話整串還是翻不出來。前綴「火箭隊的」比照官方繁中包名「火箭隊的野心」",
+    "    （set-names-tc.json 的 B4a），不是自譯。"
   ],
   "names": {
     "Absol": "阿勃梭魯",
@@ -64,7 +68,9 @@
     "Sharpedo": "巨牙鯊",
     "Shuckle": "壺壺",
     "Suicune": "水君",
+    "Team Rocket's Weezing": "火箭隊的雙彈瓦斯",
     "Vespiquen": "蜂女王",
+    "Weezing": "雙彈瓦斯",
     "Zeraora": "捷拉奧拉",
     "Zoroark": "索羅亞克"
   }

@@ -21347,6 +21347,666 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/233.webp",
     "deckBuilderNr": 2078
   },
+  "B4a-1": {
+    "id": "B4a-1",
+    "nameEN": "Volbeat",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021190_00_BARUBEAT_C.webp",
+    "deckBuilderNr": 2119
+  },
+  "B4a-2": {
+    "id": "B4a-2",
+    "nameEN": "Illumise",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021200_00_ILLUMISE_C.webp",
+    "deckBuilderNr": 2120
+  },
+  "B4a-3": {
+    "id": "B4a-3",
+    "nameEN": "Snivy",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021210_00_TSUTARJA_C.webp",
+    "deckBuilderNr": 2121
+  },
+  "B4a-4": {
+    "id": "B4a-4",
+    "nameEN": "Servine",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021220_00_JANOVY_U.webp",
+    "deckBuilderNr": 2122
+  },
+  "B4a-5": {
+    "id": "B4a-5",
+    "nameEN": "Serperior",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021230_00_JALORDA_R.webp",
+    "deckBuilderNr": 2123
+  },
+  "B4a-6": {
+    "id": "B4a-6",
+    "nameEN": "Team Rocket’s Magmar",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021240_00_ROCKETDANNOBOOBER_C.webp",
+    "deckBuilderNr": 2124
+  },
+  "B4a-7": {
+    "id": "B4a-7",
+    "nameEN": "Team Rocket’s Moltres ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021250_00_ROCKETDANNOFIREex_RR.webp",
+    "deckBuilderNr": 2125
+  },
+  "B4a-8": {
+    "id": "B4a-8",
+    "nameEN": "Team Rocket’s Houndour",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021260_00_ROCKETDANNODELVIL_C.webp",
+    "deckBuilderNr": 2126
+  },
+  "B4a-9": {
+    "id": "B4a-9",
+    "nameEN": "Team Rocket’s Houndoom",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021270_00_ROCKETDANNOHELLGAR_C.webp",
+    "deckBuilderNr": 2127
+  },
+  "B4a-10": {
+    "id": "B4a-10",
+    "nameEN": "Fennekin",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021170_00_FOKKO_C.webp",
+    "deckBuilderNr": 2117
+  },
+  "B4a-11": {
+    "id": "B4a-11",
+    "nameEN": "Braixen",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021280_00_TAIRENAR_U.webp",
+    "deckBuilderNr": 2128
+  },
+  "B4a-12": {
+    "id": "B4a-12",
+    "nameEN": "Delphox",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021290_00_MAHOXY_R.webp",
+    "deckBuilderNr": 2129
+  },
+  "B4a-13": {
+    "id": "B4a-13",
+    "nameEN": "Team Rocket’s Lapras",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021100_00_ROCKETDANNOLAPLACE_U.webp",
+    "deckBuilderNr": 2110
+  },
+  "B4a-14": {
+    "id": "B4a-14",
+    "nameEN": "Team Rocket’s Articuno ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021300_00_ROCKETDANNOFREEZERex_RR.webp",
+    "deckBuilderNr": 2130
+  },
+  "B4a-15": {
+    "id": "B4a-15",
+    "nameEN": "Wingull",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021110_00_CAMOME_C.webp",
+    "deckBuilderNr": 2111
+  },
+  "B4a-16": {
+    "id": "B4a-16",
+    "nameEN": "Pelipper",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021310_00_PELIPPER_U.webp",
+    "deckBuilderNr": 2131
+  },
+  "B4a-17": {
+    "id": "B4a-17",
+    "nameEN": "Hisuian Basculin",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021320_00_HISUIBASSRAO_C.webp",
+    "deckBuilderNr": 2132
+  },
+  "B4a-18": {
+    "id": "B4a-18",
+    "nameEN": "Hisuian Basculegion",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021330_00_HISUIIDAITOU_U.webp",
+    "deckBuilderNr": 2133
+  },
+  "B4a-19": {
+    "id": "B4a-19",
+    "nameEN": "Team Rocket’s Voltorb",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021340_00_ROCKETDANNOBIRIRIDAMA_C.webp",
+    "deckBuilderNr": 2134
+  },
+  "B4a-20": {
+    "id": "B4a-20",
+    "nameEN": "Team Rocket’s Electrode",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021350_00_ROCKETDANNOMARUMINE_U.webp",
+    "deckBuilderNr": 2135
+  },
+  "B4a-21": {
+    "id": "B4a-21",
+    "nameEN": "Team Rocket’s Zapdos ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021360_00_ROCKETDANNOTHUNDERex_RR.webp",
+    "deckBuilderNr": 2136
+  },
+  "B4a-22": {
+    "id": "B4a-22",
+    "nameEN": "Blitzle",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021370_00_SHIMAMA_C.webp",
+    "deckBuilderNr": 2137
+  },
+  "B4a-23": {
+    "id": "B4a-23",
+    "nameEN": "Zebstrika",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021380_00_ZEBRAIKA_U.webp",
+    "deckBuilderNr": 2138
+  },
+  "B4a-24": {
+    "id": "B4a-24",
+    "nameEN": "Team Rocket’s Pincurchin",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021390_00_ROCKETDANNOBACHINUNI_C.webp",
+    "deckBuilderNr": 2139
+  },
+  "B4a-25": {
+    "id": "B4a-25",
+    "nameEN": "Team Rocket’s Slowpoke",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021400_00_ROCKETDANNOYADON_C.webp",
+    "deckBuilderNr": 2140
+  },
+  "B4a-26": {
+    "id": "B4a-26",
+    "nameEN": "Team Rocket’s Slowking ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021410_00_ROCKETDANNOYADOKINGex_RR.webp",
+    "deckBuilderNr": 2141
+  },
+  "B4a-27": {
+    "id": "B4a-27",
+    "nameEN": "Team Rocket’s Drowzee",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021420_00_ROCKETDANNOSLEEPE_C.webp",
+    "deckBuilderNr": 2142
+  },
+  "B4a-28": {
+    "id": "B4a-28",
+    "nameEN": "Team Rocket’s Hypno",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021430_00_ROCKETDANNOSLEEPER_U.webp",
+    "deckBuilderNr": 2143
+  },
+  "B4a-29": {
+    "id": "B4a-29",
+    "nameEN": "Team Rocket’s Mr. Mime",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021440_00_ROCKETDANNOBARRIERD_C.webp",
+    "deckBuilderNr": 2144
+  },
+  "B4a-30": {
+    "id": "B4a-30",
+    "nameEN": "Team Rocket’s Mewtwo",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021450_00_ROCKETDANNOMEWTWO_R.webp",
+    "deckBuilderNr": 2145
+  },
+  "B4a-31": {
+    "id": "B4a-31",
+    "nameEN": "Espurr",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021460_00_NYASPER_C.webp",
+    "deckBuilderNr": 2146
+  },
+  "B4a-32": {
+    "id": "B4a-32",
+    "nameEN": "Meowstic",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021180_00_NYAONIX_U.webp",
+    "deckBuilderNr": 2118
+  },
+  "B4a-33": {
+    "id": "B4a-33",
+    "nameEN": "Oranguru",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021470_00_YAREYUUTAN_U.webp",
+    "deckBuilderNr": 2147
+  },
+  "B4a-34": {
+    "id": "B4a-34",
+    "nameEN": "Gimmighoul",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021480_00_COLLECUREI_C.webp",
+    "deckBuilderNr": 2148
+  },
+  "B4a-35": {
+    "id": "B4a-35",
+    "nameEN": "Cubone",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021490_00_KARAKARA_C.webp",
+    "deckBuilderNr": 2149
+  },
+  "B4a-36": {
+    "id": "B4a-36",
+    "nameEN": "Marowak",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021130_00_GARAGARA_U.webp",
+    "deckBuilderNr": 2113
+  },
+  "B4a-37": {
+    "id": "B4a-37",
+    "nameEN": "Landorus",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021500_00_LANDLOS_R.webp",
+    "deckBuilderNr": 2150
+  },
+  "B4a-38": {
+    "id": "B4a-38",
+    "nameEN": "Team Rocket’s Ekans",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021510_00_ROCKETDANNOARBO_C.webp",
+    "deckBuilderNr": 2151
+  },
+  "B4a-39": {
+    "id": "B4a-39",
+    "nameEN": "Team Rocket’s Arbok",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021520_00_ROCKETDANNOARBOK_U.webp",
+    "deckBuilderNr": 2152
+  },
+  "B4a-40": {
+    "id": "B4a-40",
+    "nameEN": "Team Rocket’s Grimer",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021530_00_ROCKETDANNOBETBETER_C.webp",
+    "deckBuilderNr": 2153
+  },
+  "B4a-41": {
+    "id": "B4a-41",
+    "nameEN": "Team Rocket’s Muk",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021540_00_ROCKETDANNOBETBETON_U.webp",
+    "deckBuilderNr": 2154
+  },
+  "B4a-42": {
+    "id": "B4a-42",
+    "nameEN": "Team Rocket’s Koffing",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021550_00_ROCKETDANNODOGARS_C.webp",
+    "deckBuilderNr": 2155
+  },
+  "B4a-43": {
+    "id": "B4a-43",
+    "nameEN": "Team Rocket’s Weezing ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021560_00_ROCKETDANNOMATADOGASex_RR.webp",
+    "deckBuilderNr": 2156
+  },
+  "B4a-44": {
+    "id": "B4a-44",
+    "nameEN": "Team Rocket’s Sneasel",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021570_00_ROCKETDANNONYULA_C.webp",
+    "deckBuilderNr": 2157
+  },
+  "B4a-45": {
+    "id": "B4a-45",
+    "nameEN": "Togedemaru",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021580_00_TOGEDEMARU_C.webp",
+    "deckBuilderNr": 2158
+  },
+  "B4a-46": {
+    "id": "B4a-46",
+    "nameEN": "Cufant",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021590_00_ZOUDOU_C.webp",
+    "deckBuilderNr": 2159
+  },
+  "B4a-47": {
+    "id": "B4a-47",
+    "nameEN": "Copperajah",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021600_00_DAIOUDOU_U.webp",
+    "deckBuilderNr": 2160
+  },
+  "B4a-48": {
+    "id": "B4a-48",
+    "nameEN": "Team Rocket’s Tinkatink",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021610_00_ROCKETDANNOKANUCHAN_C.webp",
+    "deckBuilderNr": 2161
+  },
+  "B4a-49": {
+    "id": "B4a-49",
+    "nameEN": "Team Rocket’s Tinkatuff",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021620_00_ROCKETDANNONAKANUCHAN_U.webp",
+    "deckBuilderNr": 2162
+  },
+  "B4a-50": {
+    "id": "B4a-50",
+    "nameEN": "Team Rocket’s Tinkaton",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021630_00_ROCKETDANNODEKANUCHAN_R.webp",
+    "deckBuilderNr": 2163
+  },
+  "B4a-51": {
+    "id": "B4a-51",
+    "nameEN": "Gholdengo",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021640_00_SURFUGO_U.webp",
+    "deckBuilderNr": 2164
+  },
+  "B4a-52": {
+    "id": "B4a-52",
+    "nameEN": "Gible",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021140_00_FUKAMARU_C.webp",
+    "deckBuilderNr": 2114
+  },
+  "B4a-53": {
+    "id": "B4a-53",
+    "nameEN": "Gabite",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021150_00_GABITE_U.webp",
+    "deckBuilderNr": 2115
+  },
+  "B4a-54": {
+    "id": "B4a-54",
+    "nameEN": "Garchomp",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021650_00_GABURIAS_R.webp",
+    "deckBuilderNr": 2165
+  },
+  "B4a-55": {
+    "id": "B4a-55",
+    "nameEN": "Duraludon",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021660_00_DURALUDON_U.webp",
+    "deckBuilderNr": 2166
+  },
+  "B4a-56": {
+    "id": "B4a-56",
+    "nameEN": "Archaludon",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021670_00_BRIDURAS_R.webp",
+    "deckBuilderNr": 2167
+  },
+  "B4a-57": {
+    "id": "B4a-57",
+    "nameEN": "Regidrago",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021680_00_REGIDORAGO_U.webp",
+    "deckBuilderNr": 2168
+  },
+  "B4a-58": {
+    "id": "B4a-58",
+    "nameEN": "Team Rocket’s Rattata",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021690_00_ROCKETDANNOKORATTA_C.webp",
+    "deckBuilderNr": 2169
+  },
+  "B4a-59": {
+    "id": "B4a-59",
+    "nameEN": "Team Rocket’s Raticate ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021700_00_ROCKETDANNORATTAex_RR.webp",
+    "deckBuilderNr": 2170
+  },
+  "B4a-60": {
+    "id": "B4a-60",
+    "nameEN": "Team Rocket’s Meowth",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021710_00_ROCKETDANNONYARTH_C.webp",
+    "deckBuilderNr": 2171
+  },
+  "B4a-61": {
+    "id": "B4a-61",
+    "nameEN": "Team Rocket’s Persian",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021720_00_ROCKETDANNOPERSIAN_U.webp",
+    "deckBuilderNr": 2172
+  },
+  "B4a-62": {
+    "id": "B4a-62",
+    "nameEN": "Team Rocket’s Kecleon",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021730_00_ROCKETDANNOKAKUREON_C.webp",
+    "deckBuilderNr": 2173
+  },
+  "B4a-63": {
+    "id": "B4a-63",
+    "nameEN": "Happiny",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021740_00_PINPUKU_R.webp",
+    "deckBuilderNr": 2174
+  },
+  "B4a-64": {
+    "id": "B4a-64",
+    "nameEN": "Furfrou",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021750_00_TRIMMIEN_C.webp",
+    "deckBuilderNr": 2175
+  },
+  "B4a-65": {
+    "id": "B4a-65",
+    "nameEN": "Lechonk",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021760_00_GOURTON_C.webp",
+    "deckBuilderNr": 2176
+  },
+  "B4a-66": {
+    "id": "B4a-66",
+    "nameEN": "Oinkologne",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021770_00_PERFUTON_C.webp",
+    "deckBuilderNr": 2177
+  },
+  "B4a-67": {
+    "id": "B4a-67",
+    "nameEN": "Team Rocket’s Thieving Machine",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_10_001600_00_ROCKETDANNODOROBOUMASHIN_U.webp",
+    "deckBuilderNr": 1000160
+  },
+  "B4a-68": {
+    "id": "B4a-68",
+    "nameEN": "Team Rocket’s Goo-zooka",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_10_001610_00_ROCKETDANNOBETOBETOBAZOOKA_U.webp",
+    "deckBuilderNr": 1000161
+  },
+  "B4a-69": {
+    "id": "B4a-69",
+    "nameEN": "Team Rocket’s Researcher",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_10_001620_00_ROCKETDANNOKENKYUUIN_U.webp",
+    "deckBuilderNr": 1000162
+  },
+  "B4a-70": {
+    "id": "B4a-70",
+    "nameEN": "Team Rocket’s Master Plan",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_10_001630_00_ROCKETDANNODAISAKUSEN_U.webp",
+    "deckBuilderNr": 1000163
+  },
+  "B4a-71": {
+    "id": "B4a-71",
+    "nameEN": "Team Rocket’s Boss",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_10_001640_00_ROCKETDANNOBOSS_U.webp",
+    "deckBuilderNr": 1000164
+  },
+  "B4a-72": {
+    "id": "B4a-72",
+    "nameEN": "Arcade",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_10_001650_00_GAMECENTER_U.webp",
+    "deckBuilderNr": 1000165
+  },
+  "B4a-73": {
+    "id": "B4a-73",
+    "nameEN": "Delphox",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021290_00_MAHOXY_AR.webp",
+    "deckBuilderNr": 2129
+  },
+  "B4a-74": {
+    "id": "B4a-74",
+    "nameEN": "Team Rocket’s Hypno",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021430_00_ROCKETDANNOSLEEPER_AR.webp",
+    "deckBuilderNr": 2143
+  },
+  "B4a-75": {
+    "id": "B4a-75",
+    "nameEN": "Team Rocket’s Tinkaton",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021630_00_ROCKETDANNODEKANUCHAN_AR.webp",
+    "deckBuilderNr": 2163
+  },
+  "B4a-76": {
+    "id": "B4a-76",
+    "nameEN": "Team Rocket’s Kecleon",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021730_00_ROCKETDANNOKAKUREON_AR.webp",
+    "deckBuilderNr": 2173
+  },
+  "B4a-77": {
+    "id": "B4a-77",
+    "nameEN": "Happiny",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021740_00_PINPUKU_AR.webp",
+    "deckBuilderNr": 2174
+  },
+  "B4a-78": {
+    "id": "B4a-78",
+    "nameEN": "Lechonk",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021760_00_GOURTON_AR.webp",
+    "deckBuilderNr": 2176
+  },
+  "B4a-79": {
+    "id": "B4a-79",
+    "nameEN": "Team Rocket’s Moltres ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021250_00_ROCKETDANNOFIREex_SR.webp",
+    "deckBuilderNr": 2125
+  },
+  "B4a-80": {
+    "id": "B4a-80",
+    "nameEN": "Team Rocket’s Articuno ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021300_00_ROCKETDANNOFREEZERex_SR.webp",
+    "deckBuilderNr": 2130
+  },
+  "B4a-81": {
+    "id": "B4a-81",
+    "nameEN": "Team Rocket’s Zapdos ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021360_00_ROCKETDANNOTHUNDERex_SR.webp",
+    "deckBuilderNr": 2136
+  },
+  "B4a-82": {
+    "id": "B4a-82",
+    "nameEN": "Team Rocket’s Slowking ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021410_00_ROCKETDANNOYADOKINGex_SR.webp",
+    "deckBuilderNr": 2141
+  },
+  "B4a-83": {
+    "id": "B4a-83",
+    "nameEN": "Team Rocket’s Weezing ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021560_00_ROCKETDANNOMATADOGASex_SR.webp",
+    "deckBuilderNr": 2156
+  },
+  "B4a-84": {
+    "id": "B4a-84",
+    "nameEN": "Team Rocket’s Raticate ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021700_00_ROCKETDANNORATTAex_SR.webp",
+    "deckBuilderNr": 2170
+  },
+  "B4a-85": {
+    "id": "B4a-85",
+    "nameEN": "Team Rocket’s Researcher",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_20_001620_00_ROCKETDANNOKENKYUUIN_SR.webp",
+    "deckBuilderNr": 1000162
+  },
+  "B4a-86": {
+    "id": "B4a-86",
+    "nameEN": "Team Rocket’s Master Plan",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_20_001630_00_ROCKETDANNODAISAKUSEN_SR.webp",
+    "deckBuilderNr": 1000163
+  },
+  "B4a-87": {
+    "id": "B4a-87",
+    "nameEN": "Team Rocket’s Boss",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_20_001640_00_ROCKETDANNOBOSS_SR.webp",
+    "deckBuilderNr": 1000164
+  },
+  "B4a-88": {
+    "id": "B4a-88",
+    "nameEN": "Team Rocket’s Moltres ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021250_01_ROCKETDANNOFIREex_SAR.webp",
+    "deckBuilderNr": 2125
+  },
+  "B4a-89": {
+    "id": "B4a-89",
+    "nameEN": "Team Rocket’s Articuno ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021300_01_ROCKETDANNOFREEZERex_SAR.webp",
+    "deckBuilderNr": 2130
+  },
+  "B4a-90": {
+    "id": "B4a-90",
+    "nameEN": "Team Rocket’s Zapdos ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021360_01_ROCKETDANNOTHUNDERex_SAR.webp",
+    "deckBuilderNr": 2136
+  },
+  "B4a-91": {
+    "id": "B4a-91",
+    "nameEN": "Team Rocket’s Slowking ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021410_01_ROCKETDANNOYADOKINGex_SAR.webp",
+    "deckBuilderNr": 2141
+  },
+  "B4a-92": {
+    "id": "B4a-92",
+    "nameEN": "Team Rocket’s Weezing ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021560_01_ROCKETDANNOMATADOGASex_SAR.webp",
+    "deckBuilderNr": 2156
+  },
+  "B4a-93": {
+    "id": "B4a-93",
+    "nameEN": "Team Rocket’s Raticate ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021700_01_ROCKETDANNORATTAex_SAR.webp",
+    "deckBuilderNr": 2170
+  },
+  "B4a-94": {
+    "id": "B4a-94",
+    "nameEN": "Team Rocket’s Master Plan",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_20_001630_01_ROCKETDANNODAISAKUSEN_IM.webp",
+    "deckBuilderNr": 1000163
+  },
+  "B4a-95": {
+    "id": "B4a-95",
+    "nameEN": "Vulpix",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_019110_01_ROKON_S.webp",
+    "deckBuilderNr": 1911
+  },
+  "B4a-96": {
+    "id": "B4a-96",
+    "nameEN": "Ninetales",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_019120_00_KYUKON_S.webp",
+    "deckBuilderNr": 1912
+  },
+  "B4a-97": {
+    "id": "B4a-97",
+    "nameEN": "Goldeen",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_019130_00_TOSAKINTO_S.webp",
+    "deckBuilderNr": 1913
+  },
+  "B4a-98": {
+    "id": "B4a-98",
+    "nameEN": "Seaking",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_019140_00_AZUMAO_S.webp",
+    "deckBuilderNr": 1914
+  },
+  "B4a-99": {
+    "id": "B4a-99",
+    "nameEN": "Toxel",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_014200_01_ELESON_S.webp",
+    "deckBuilderNr": 1420
+  },
+  "B4a-100": {
+    "id": "B4a-100",
+    "nameEN": "Sinistea",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_014400_00_YABACHA_S.webp",
+    "deckBuilderNr": 1440
+  },
+  "B4a-101": {
+    "id": "B4a-101",
+    "nameEN": "Polteageist",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_014410_00_POTDEATH_S.webp",
+    "deckBuilderNr": 1441
+  },
+  "B4a-102": {
+    "id": "B4a-102",
+    "nameEN": "Mawile",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_014780_00_KUCHEAT_S.webp",
+    "deckBuilderNr": 1478
+  },
+  "B4a-103": {
+    "id": "B4a-103",
+    "nameEN": "Taillow",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_014980_00_SUBAME_S.webp",
+    "deckBuilderNr": 1498
+  },
+  "B4a-104": {
+    "id": "B4a-104",
+    "nameEN": "Swellow",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_014990_00_OHSUBAME_S.webp",
+    "deckBuilderNr": 1499
+  },
+  "B4a-105": {
+    "id": "B4a-105",
+    "nameEN": "Mega Charizard Y ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_013190_02_MEGALIZARDONYex_SSR.webp",
+    "deckBuilderNr": 1319
+  },
+  "B4a-106": {
+    "id": "B4a-106",
+    "nameEN": "Toxtricity ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_014210_02_STRINDERex_SSR.webp",
+    "deckBuilderNr": 1421
+  },
+  "B4a-107": {
+    "id": "B4a-107",
+    "nameEN": "Mimikyu ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_014390_02_MIMIKKYUex_SSR.webp",
+    "deckBuilderNr": 1439
+  },
+  "B4a-108": {
+    "id": "B4a-108",
+    "nameEN": "Mega Mawile ex",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_014790_02_MEGAKUCHEATex_SSR.webp",
+    "deckBuilderNr": 1479
+  },
+  "B4a-109": {
+    "id": "B4a-109",
+    "nameEN": "Gholdengo",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_20_021640_00_SURFUGO_UR.webp",
+    "deckBuilderNr": 2164
+  },
+  "B4a-110": {
+    "id": "B4a-110",
+    "nameEN": "Team Rocket’s Goo-zooka",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_20_001610_00_ROCKETDANNOBETOBETOBAZOOKA_UR.webp",
+    "deckBuilderNr": 1000161
+  },
   "PROMO-A-1": {
     "id": "PROMO-A-1",
     "nameEN": "Potion",
@@ -22564,5 +23224,53 @@
     "nameEN": "Beldum",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-B/86.webp",
     "deckBuilderNr": 2067
+  },
+  "PROMO-B-87": {
+    "id": "PROMO-B-87",
+    "nameEN": "Mega Sceptile ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-B/87.webp",
+    "deckBuilderNr": 1673
+  },
+  "PROMO-B-88": {
+    "id": "PROMO-B-88",
+    "nameEN": "Team Rocket’s Scyther",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-B/88.webp",
+    "deckBuilderNr": 2109
+  },
+  "PROMO-B-89": {
+    "id": "PROMO-B-89",
+    "nameEN": "Team Rocket’s Lapras",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-B/89.webp",
+    "deckBuilderNr": 2110
+  },
+  "PROMO-B-90": {
+    "id": "PROMO-B-90",
+    "nameEN": "Wingull",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-B/90.webp",
+    "deckBuilderNr": 2111
+  },
+  "PROMO-B-91": {
+    "id": "PROMO-B-91",
+    "nameEN": "Team Rocket’s Wobbuffet",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-B/91.webp",
+    "deckBuilderNr": 2112
+  },
+  "PROMO-B-92": {
+    "id": "PROMO-B-92",
+    "nameEN": "Marowak",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-B/92.webp",
+    "deckBuilderNr": 2113
+  },
+  "PROMO-B-93": {
+    "id": "PROMO-B-93",
+    "nameEN": "Fennekin",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-B/93.webp",
+    "deckBuilderNr": 2117
+  },
+  "PROMO-B-94": {
+    "id": "PROMO-B-94",
+    "nameEN": "Meowstic",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-B/94.webp",
+    "deckBuilderNr": 2118
   }
 }
