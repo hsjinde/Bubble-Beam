@@ -27,10 +27,16 @@
     "  - Weezing 查官方圖鑑 0110 為「雙彈瓦斯」（2026-08-31 查證）。火箭隊系列卡另立",
     "    「Team Rocket's Weezing」一筆：最長前綴比對會先吃到 Team 這個字，只補 Weezing",
     "    的話整串還是翻不出來。前綴「火箭隊的」比照官方繁中包名「火箭隊的野心」",
-    "    （set-names-tc.json 的 B4a），不是自譯。"
+    "    （set-names-tc.json 的 B4a），不是自譯。",
+    "  - Garchomp 查官方圖鑑 0445 為「烈咬陸鯊」、Raticate 查 0020 為「拉達」（2026-09-02 查證）。",
+    "    火箭隊系列同樣另立「Team Rocket's Raticate」一筆，前綴比照上面的雙彈瓦斯。",
+    "  - Alolan Ninetales：官方圖鑑 0038 把地區形態拆成「九尾」＋副標「阿羅拉的樣子」，沒有合併字串，",
+    "    合併形態名「阿羅拉九尾」以神奇寶貝百科（wiki.52poke.com）記載的官方譯名為準——",
+    "    那是遊戲與卡牌內實際顯示的名字，不是自譯。"
   ],
   "names": {
     "Absol": "阿勃梭魯",
+    "Alolan Ninetales": "阿羅拉九尾",
     "Altaria": "七夕青鳥",
     "Baxcalibur": "戟脊龍",
     "Blaziken": "火焰雞",
@@ -47,6 +53,7 @@
     "Eevee": "伊布",
     "Entei": "炎帝",
     "Espeon": "太陽伊布",
+    "Garchomp": "烈咬陸鯊",
     "Giratina": "騎拉帝納",
     "Gouging Fire": "破空焰",
     "Greninja": "甲賀忍蛙",
@@ -68,6 +75,7 @@
     "Sharpedo": "巨牙鯊",
     "Shuckle": "壺壺",
     "Suicune": "水君",
+    "Team Rocket's Raticate": "火箭隊的拉達",
     "Team Rocket's Weezing": "火箭隊的雙彈瓦斯",
     "Vespiquen": "蜂女王",
     "Weezing": "雙彈瓦斯",
