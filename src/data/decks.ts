@@ -4,7 +4,7 @@ const decks: Deck[] = [
   {
     id: "miraidon-magnezone",
     name: "密勒頓ex 自爆磁怪",
-    tier: "C",
+    tier: "B",
     energy: ["Lightning"],
     difficulty: "中",
     summary: "雷系快攻：前期由密勒頓ex 發動速攻壓制，中後期由自爆磁怪接管戰局作為重砲主力。",
@@ -94,7 +94,7 @@ const decks: Deck[] = [
   {
     id: "mega-blaziken-greninja",
     name: "Mega火焰雞ex 甲賀忍蛙",
-    tier: "C",
+    tier: "A",
     energy: ["Fire"],
     difficulty: "中",
     summary: "火系重砲：神奇糖果直上 Mega火焰雞ex 高爆發輸出，配合甲賀忍蛙飛水手裏劍遠程補刀削血。",
@@ -141,7 +141,7 @@ const decks: Deck[] = [
   {
     id: "mega-sceptile-greninja",
     name: "Mega蜥蜴王ex 甲賀忍蛙",
-    tier: "S",
+    tier: "A",
     energy: ["Grass"],
     difficulty: "中",
     summary: "高使用率的草系主力：神奇糖果直上 Mega蜥蜴王ex，甲賀忍蛙特性每回合補刀。",
@@ -324,7 +324,7 @@ const decks: Deck[] = [
   {
     id: "milotic-eevee-ex",
     name: "美納斯ex 伊布ex",
-    tier: "B",
+    tier: "C",
     energy: ["Water"],
     difficulty: "易",
     summary: "水系高機動控場：伊布ex 靈活抽牌與展開，美納斯ex 封鎖對方道具與特定招式掌控節奏。",
@@ -605,7 +605,7 @@ const decks: Deck[] = [
   {
     id: "mega-lucario-solo",
     name: "Mega路卡利歐ex 純格極速",
-    tier: "A",
+    tier: "B",
     energy: ["Fighting"],
     difficulty: "易",
     summary:
@@ -701,7 +701,7 @@ const decks: Deck[] = [
   {
     id: "magnezone-ex-magnezone",
     name: "自爆磁怪ex 自爆磁怪",
-    tier: "C",
+    tier: "B",
     energy: ["Lightning"],
     difficulty: "中",
     summary:
@@ -1025,7 +1025,7 @@ const decks: Deck[] = [
   {
     id: "vespiquen-shuckle",
     name: "蜂女王ex 壺壺ex",
-    tier: "A",
+    tier: "S",
     energy: ["Grass"],
     difficulty: "中",
     summary: "使用率最高的草系一線牌：蜂女王ex 主線輸出，樹葉披風與芬芳森林堆出誇張耐久。",
@@ -1117,7 +1117,7 @@ const decks: Deck[] = [
   {
     id: "mega-manectric-heliolisk",
     name: "Mega雷電獸ex 光電傘蜥",
-    tier: "A",
+    tier: "C",
     energy: ["Lightning"],
     difficulty: "中",
     summary:

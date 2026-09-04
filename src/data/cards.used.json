@@ -1,4 +1,10 @@
 {
+  "A1-33": {
+    "id": "A1-33",
+    "nameEN": "Charmander",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/33.webp",
+    "deckBuilderNr": 33
+  },
   "A1-87": {
     "id": "A1-87",
     "nameEN": "Froakie",
@@ -71,12 +77,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/110.webp",
     "deckBuilderNr": 391
   },
-  "A2-121": {
-    "id": "A2-121",
-    "nameEN": "Gible",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/121.webp",
-    "deckBuilderNr": 402
-  },
   "A2-146": {
     "id": "A2-146",
     "nameEN": "Pokémon Communication",
@@ -101,12 +101,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/150.webp",
     "deckBuilderNr": 1000032
   },
-  "A2-152": {
-    "id": "A2-152",
-    "nameEN": "Cynthia",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/152.webp",
-    "deckBuilderNr": 1000034
-  },
   "A2-155": {
     "id": "A2-155",
     "nameEN": "Mars",
@@ -118,18 +112,6 @@
     "nameEN": "Irida",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2a/72.webp",
     "deckBuilderNr": 1000038
-  },
-  "A2b-5": {
-    "id": "A2b-5",
-    "nameEN": "Sprigatito",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2b/5.webp",
-    "deckBuilderNr": 508
-  },
-  "A2b-7": {
-    "id": "A2b-7",
-    "nameEN": "Meowscarada",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2b/7.webp",
-    "deckBuilderNr": 526
   },
   "A2b-8": {
     "id": "A2b-8",
@@ -161,24 +143,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2b/71.webp",
     "deckBuilderNr": 1000044
   },
-  "A2b-72": {
-    "id": "A2b-72",
-    "nameEN": "Team Rocket Grunt",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2b/72.webp",
-    "deckBuilderNr": 1000045
-  },
-  "A3-40": {
-    "id": "A3-40",
-    "nameEN": "Alolan Vulpix",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/40.webp",
-    "deckBuilderNr": 621
-  },
-  "A3-41": {
-    "id": "A3-41",
-    "nameEN": "Alolan Ninetales",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/41.webp",
-    "deckBuilderNr": 622
-  },
   "A3-66": {
     "id": "A3-66",
     "nameEN": "Oricorio",
@@ -208,12 +172,6 @@
     "nameEN": "Leaf Cape",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/147.webp",
     "deckBuilderNr": 1000051
-  },
-  "A3-152": {
-    "id": "A3-152",
-    "nameEN": "Lana",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/152.webp",
-    "deckBuilderNr": 1000056
   },
   "A3a-7": {
     "id": "A3a-7",
@@ -251,12 +209,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/21.webp",
     "deckBuilderNr": 877
   },
-  "A4-77": {
-    "id": "A4-77",
-    "nameEN": "Cleffa",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/77.webp",
-    "deckBuilderNr": 933
-  },
   "A4-102": {
     "id": "A4-102",
     "nameEN": "Hitmontop",
@@ -286,12 +238,6 @@
     "nameEN": "Feebas",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4a/21.webp",
     "deckBuilderNr": 1041
-  },
-  "A4a-23": {
-    "id": "A4a-23",
-    "nameEN": "Mantyke",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4a/23.webp",
-    "deckBuilderNr": 1042
   },
   "A4a-59": {
     "id": "A4a-59",
@@ -377,12 +323,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/157.webp",
     "deckBuilderNr": 1239
   },
-  "B1-177": {
-    "id": "B1-177",
-    "nameEN": "Goomy",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/177.webp",
-    "deckBuilderNr": 1259
-  },
   "B1-184": {
     "id": "B1-184",
     "nameEN": "Eevee",
@@ -467,18 +407,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/17.webp",
     "deckBuilderNr": 1383
   },
-  "B2-28": {
-    "id": "B2-28",
-    "nameEN": "Alolan Vulpix",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/28.webp",
-    "deckBuilderNr": 1394
-  },
-  "B2-29": {
-    "id": "B2-29",
-    "nameEN": "Alolan Ninetales ex",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/29.webp",
-    "deckBuilderNr": 1395
-  },
   "B2-145": {
     "id": "B2-145",
     "nameEN": "Lucky Ice Pop",
@@ -490,12 +418,6 @@
     "nameEN": "Protective Poncho",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/147.webp",
     "deckBuilderNr": 1000108
-  },
-  "B2-150": {
-    "id": "B2-150",
-    "nameEN": "Sightseer",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/150.webp",
-    "deckBuilderNr": 1000111
   },
   "B2-153": {
     "id": "B2-153",
@@ -515,18 +437,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/155.webp",
     "deckBuilderNr": 1000116
   },
-  "B2a-2": {
-    "id": "B2a-2",
-    "nameEN": "Floragato",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2a/2.webp",
-    "deckBuilderNr": 1511
-  },
-  "B2a-3": {
-    "id": "B2a-3",
-    "nameEN": "Meowscarada ex",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2a/3.webp",
-    "deckBuilderNr": 1512
-  },
   "B2a-34": {
     "id": "B2a-34",
     "nameEN": "Frigibax",
@@ -545,11 +455,23 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2a/37.webp",
     "deckBuilderNr": 1546
   },
+  "B2b-7": {
+    "id": "B2b-7",
+    "nameEN": "Charmander",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2b/7.webp",
+    "deckBuilderNr": 1613
+  },
   "B2b-8": {
     "id": "B2b-8",
     "nameEN": "Charmeleon",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2b/8.webp",
     "deckBuilderNr": 1614
+  },
+  "B2b-9": {
+    "id": "B2b-9",
+    "nameEN": "Mega Charizard X ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2b/9.webp",
+    "deckBuilderNr": 1615
   },
   "B2b-26": {
     "id": "B2b-26",
@@ -575,12 +497,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2b/69.webp",
     "deckBuilderNr": 1000127
   },
-  "B3-4": {
-    "id": "B3-4",
-    "nameEN": "Celebi",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/4.webp",
-    "deckBuilderNr": 1669
-  },
   "B3-5": {
     "id": "B3-5",
     "nameEN": "Treecko",
@@ -604,6 +520,12 @@
     "nameEN": "Castform Sunny Form",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/24.webp",
     "deckBuilderNr": 1689
+  },
+  "B3-37": {
+    "id": "B3-37",
+    "nameEN": "Vaporeon ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/37.webp",
+    "deckBuilderNr": 1702
   },
   "B3-54": {
     "id": "B3-54",
@@ -779,18 +701,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/11.webp",
     "deckBuilderNr": 1972
   },
-  "B4-46": {
-    "id": "B4-46",
-    "nameEN": "Dewpider",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/46.webp",
-    "deckBuilderNr": 2007
-  },
-  "B4-47": {
-    "id": "B4-47",
-    "nameEN": "Araquanid",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/47.webp",
-    "deckBuilderNr": 2008
-  },
   "B4-61": {
     "id": "B4-61",
     "nameEN": "Heliolisk",
@@ -809,11 +719,11 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/78.webp",
     "deckBuilderNr": 2039
   },
-  "B4-90": {
-    "id": "B4-90",
-    "nameEN": "Minior",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/90.webp",
-    "deckBuilderNr": 2051
+  "B4-100": {
+    "id": "B4-100",
+    "nameEN": "Absol",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/100.webp",
+    "deckBuilderNr": 2061
   },
   "B4-103": {
     "id": "B4-103",
@@ -869,53 +779,11 @@
     "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021560_00_ROCKETDANNOMATADOGASex_RR.webp",
     "deckBuilderNr": 2156
   },
-  "B4a-52": {
-    "id": "B4a-52",
-    "nameEN": "Gible",
-    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021140_00_FUKAMARU_C.webp",
-    "deckBuilderNr": 2114
-  },
-  "B4a-53": {
-    "id": "B4a-53",
-    "nameEN": "Gabite",
-    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021150_00_GABITE_U.webp",
-    "deckBuilderNr": 2115
-  },
-  "B4a-54": {
-    "id": "B4a-54",
-    "nameEN": "Garchomp",
-    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021650_00_GABURIAS_R.webp",
-    "deckBuilderNr": 2165
-  },
-  "B4a-58": {
-    "id": "B4a-58",
-    "nameEN": "Team Rocket’s Rattata",
-    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021690_00_ROCKETDANNOKORATTA_C.webp",
-    "deckBuilderNr": 2169
-  },
-  "B4a-59": {
-    "id": "B4a-59",
-    "nameEN": "Team Rocket’s Raticate ex",
-    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021700_00_ROCKETDANNORATTAex_RR.webp",
-    "deckBuilderNr": 2170
-  },
-  "B4a-63": {
-    "id": "B4a-63",
-    "nameEN": "Happiny",
-    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021740_00_PINPUKU_R.webp",
-    "deckBuilderNr": 2174
-  },
-  "B4a-67": {
-    "id": "B4a-67",
-    "nameEN": "Team Rocket’s Thieving Machine",
-    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_10_001600_00_ROCKETDANNODOROBOUMASHIN_U.webp",
-    "deckBuilderNr": 1000160
-  },
-  "B4a-68": {
-    "id": "B4a-68",
-    "nameEN": "Team Rocket’s Goo-zooka",
-    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_10_001610_00_ROCKETDANNOBETOBETOBAZOOKA_U.webp",
-    "deckBuilderNr": 1000161
+  "B4a-64": {
+    "id": "B4a-64",
+    "nameEN": "Furfrou",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021750_00_TRIMMIEN_C.webp",
+    "deckBuilderNr": 2175
   },
   "B4a-71": {
     "id": "B4a-71",
