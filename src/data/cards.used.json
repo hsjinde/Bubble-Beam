@@ -29,6 +29,12 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/154.webp",
     "deckBuilderNr": 154
   },
+  "A1-155": {
+    "id": "A1-155",
+    "nameEN": "Hitmonchan",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/155.webp",
+    "deckBuilderNr": 155
+  },
   "A1-219": {
     "id": "A1-219",
     "nameEN": "Erika",
@@ -46,6 +52,12 @@
     "nameEN": "Sabrina",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/225.webp",
     "deckBuilderNr": 1000017
+  },
+  "A1a-17": {
+    "id": "A1a-17",
+    "nameEN": "Magikarp",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1a/17.webp",
+    "deckBuilderNr": 231
   },
   "A1a-19": {
     "id": "A1a-19",
@@ -209,6 +221,18 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/21.webp",
     "deckBuilderNr": 877
   },
+  "A4-44": {
+    "id": "A4-44",
+    "nameEN": "Magikarp",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/44.webp",
+    "deckBuilderNr": 900
+  },
+  "A4-45": {
+    "id": "A4-45",
+    "nameEN": "Gyarados",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/45.webp",
+    "deckBuilderNr": 901
+  },
   "A4-102": {
     "id": "A4-102",
     "nameEN": "Hitmontop",
@@ -238,6 +262,12 @@
     "nameEN": "Feebas",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4a/21.webp",
     "deckBuilderNr": 1041
+  },
+  "A4a-23": {
+    "id": "A4a-23",
+    "nameEN": "Mantyke",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4a/23.webp",
+    "deckBuilderNr": 1042
   },
   "A4a-59": {
     "id": "A4a-59",
@@ -521,12 +551,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/24.webp",
     "deckBuilderNr": 1689
   },
-  "B3-37": {
-    "id": "B3-37",
-    "nameEN": "Vaporeon ex",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/37.webp",
-    "deckBuilderNr": 1702
-  },
   "B3-54": {
     "id": "B3-54",
     "nameEN": "Magnezone ex",
@@ -701,6 +725,18 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/11.webp",
     "deckBuilderNr": 1972
   },
+  "B4-34": {
+    "id": "B4-34",
+    "nameEN": "Carvanha",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/34.webp",
+    "deckBuilderNr": 1995
+  },
+  "B4-35": {
+    "id": "B4-35",
+    "nameEN": "Mega Sharpedo ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/35.webp",
+    "deckBuilderNr": 1996
+  },
   "B4-61": {
     "id": "B4-61",
     "nameEN": "Heliolisk",
@@ -718,12 +754,6 @@
     "nameEN": "Oricorio",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/78.webp",
     "deckBuilderNr": 2039
-  },
-  "B4-100": {
-    "id": "B4-100",
-    "nameEN": "Absol",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/100.webp",
-    "deckBuilderNr": 2061
   },
   "B4-103": {
     "id": "B4-103",
@@ -778,12 +808,6 @@
     "nameEN": "Team Rocket’s Weezing ex",
     "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021560_00_ROCKETDANNOMATADOGASex_RR.webp",
     "deckBuilderNr": 2156
-  },
-  "B4a-64": {
-    "id": "B4a-64",
-    "nameEN": "Furfrou",
-    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021750_00_TRIMMIEN_C.webp",
-    "deckBuilderNr": 2175
   },
   "B4a-71": {
     "id": "B4a-71",
