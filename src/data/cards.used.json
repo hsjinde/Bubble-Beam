@@ -1,10 +1,4 @@
 {
-  "A1-33": {
-    "id": "A1-33",
-    "nameEN": "Charmander",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/33.webp",
-    "deckBuilderNr": 33
-  },
   "A1-87": {
     "id": "A1-87",
     "nameEN": "Froakie",
@@ -29,12 +23,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/154.webp",
     "deckBuilderNr": 154
   },
-  "A1-155": {
-    "id": "A1-155",
-    "nameEN": "Hitmonchan",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/155.webp",
-    "deckBuilderNr": 155
-  },
   "A1-219": {
     "id": "A1-219",
     "nameEN": "Erika",
@@ -52,12 +40,6 @@
     "nameEN": "Sabrina",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/225.webp",
     "deckBuilderNr": 1000017
-  },
-  "A1a-17": {
-    "id": "A1a-17",
-    "nameEN": "Magikarp",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1a/17.webp",
-    "deckBuilderNr": 231
   },
   "A1a-19": {
     "id": "A1a-19",
@@ -389,6 +371,12 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1/226.webp",
     "deckBuilderNr": 1000100
   },
+  "B1a-13": {
+    "id": "B1a-13",
+    "nameEN": "Charizard",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B1a/13.webp",
+    "deckBuilderNr": 1318
+  },
   "B1a-14": {
     "id": "B1a-14",
     "nameEN": "Mega Charizard Y ex",
@@ -497,12 +485,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2b/8.webp",
     "deckBuilderNr": 1614
   },
-  "B2b-9": {
-    "id": "B2b-9",
-    "nameEN": "Mega Charizard X ex",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2b/9.webp",
-    "deckBuilderNr": 1615
-  },
   "B2b-26": {
     "id": "B2b-26",
     "nameEN": "Electrike",
@@ -550,6 +532,12 @@
     "nameEN": "Castform Sunny Form",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/24.webp",
     "deckBuilderNr": 1689
+  },
+  "B3-37": {
+    "id": "B3-37",
+    "nameEN": "Vaporeon ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3/37.webp",
+    "deckBuilderNr": 1702
   },
   "B3-54": {
     "id": "B3-54",
@@ -850,5 +838,11 @@
     "nameEN": "Zygarde",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-B/51.webp",
     "deckBuilderNr": 1886
+  },
+  "PROMO-B-72": {
+    "id": "PROMO-B-72",
+    "nameEN": "Feebas",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-B/72.webp",
+    "deckBuilderNr": 1896
   }
 }
