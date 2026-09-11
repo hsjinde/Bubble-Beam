@@ -20,6 +20,13 @@
       "Grass"
     ]
   },
+  "Vespiquen ex Shuckle ex": {
+    "code": "DZiWlJiWlJiWqJiWqJiXKpiXwJiYfpiYfpiaXpiaXpibgJibvJibvAcAIkIAIkIANgYATP4ATP4ATQgATQgBAQ==",
+    "file": "vespiquen-ex-shuckle-ex.png",
+    "energy": [
+      "Grass"
+    ]
+  },
   "Dedenne ex Indeedee ex": {
     "code": "DpiWnpiWnpiWqJiWqJiXopiXopiXwJiaXpiaXpia/picFpicFpicepicegYAGUYAGUYALv4ALv4ASxQASxQCBAU=",
     "file": "dedenne-ex-indeedee-ex.png",
@@ -28,16 +35,23 @@
       "Psychic"
     ]
   },
+  "Mega Lucario ex Lucario": {
+    "code": "DZiWlJiWnpiWnpiWqJiWqJiXwJiYLpiaXpiaXpiauJibgJiblJibxgcABgQADpIARBYARCAARCAARDQARDQBBg==",
+    "file": "mega-lucario-ex-lucario.png",
+    "energy": [
+      "Fighting"
+    ]
+  },
   "Mega Blaziken ex Greninja": {
-    "code": "DZiWnpiWnpiWqJiWqJiXmJiXwJiYYJiYYJiaDpiaXpiaXpibdpibgAcAA2YAA3oAK44AK44AK6wAK/wAQfoBAg==",
+    "code": "C5iWlJiWnpiWnpiWqJiWqJiXwJiYYJiYYJiaDpiaXpiaXgkAA2YAA3oAK44AK44AK5gAK6wAK6wAK/wATHwBAg==",
     "file": "mega-blaziken-ex-greninja.png",
     "energy": [
       "Fire"
     ]
   },
-  "Vespiquen ex Shuckle ex": {
-    "code": "DZiWlJiWlJiWqJiWqJiXKpiXwJiYfpiYfpiaXpiaXpibgJibvJibvAcAIkIAIkIANgYATP4ATP4ATQgATQgBAQ==",
-    "file": "vespiquen-ex-shuckle-ex.png",
+  "Mega Sceptile ex Greninja": {
+    "code": "C5iWlJiWnpiWnpiWqJiWqJiXwJiYYJiYYJiaXpiaXpibdgkAA2YAA3oAHUIAQTwAQTwAQUYAQVoAQVoATHwBAQ==",
+    "file": "mega-sceptile-ex-greninja.png",
     "energy": [
       "Grass"
     ]
@@ -49,18 +63,11 @@
       "Fire"
     ]
   },
-  "Mega Lucario ex Lucario": {
-    "code": "DZiWlJiWnpiWnpiWqJiWqJiXwJiYLpiaXpiaXpiauJibgJiblJibxgcABgQADpIARBYARCAARCAARDQARDQBBg==",
-    "file": "mega-lucario-ex-lucario.png",
+  "Mega Sharpedo ex Gyarados": {
+    "code": "CZiWnpiWqJiWqJiaXpiaaJia9JicPpicPpic6AsAIygAIygAIzIAIzIAKLQAKLQAPGQATe4ATe4ATfgATfgBAw==",
+    "file": "mega-sharpedo-ex-gyarados.png",
     "energy": [
-      "Fighting"
-    ]
-  },
-  "Indeedee ex Giratina ex": {
-    "code": "D5iWnpiWnpiWqJiWqJiXopiXopiXwJiYLpiaXpiapJiapJiauJiauJia/pia/gUAFZAAGUYAGUYALv4ALv4BBQ==",
-    "file": "indeedee-ex-giratina-ex.png",
-    "energy": [
-      "Psychic"
+      "Water"
     ]
   },
   "Miraidon ex Magnezone": {
@@ -70,11 +77,11 @@
       "Lightning"
     ]
   },
-  "Mega Sceptile ex Greninja": {
-    "code": "C5iWlJiWnpiWnpiWqJiWqJiXwJiYYJiYYJiaXpiaXpibdgkAA2YAA3oAHUIAQTwAQTwAQUYAQVoAQVoATHwBAQ==",
-    "file": "mega-sceptile-ex-greninja.png",
+  "Suicune ex Baxcalibur": {
+    "code": "DZiWnpiWnpiWqJiWqJiXopiYLpiYYJiYYJiZtJiaXpibgJicrJic6AcAKKAAKKAAPEYAPFoAPFoAPGQAPnYBAw==",
+    "file": "suicune-ex-baxcalibur.png",
     "energy": [
-      "Grass"
+      "Water"
     ]
   },
   "Milotic ex Eevee ex": {
@@ -84,25 +91,11 @@
       "Water"
     ]
   },
-  "Mega Manectric ex Heliolisk": {
-    "code": "DZiWnpiWnpiWqJiWqJiXwJiaXpiacpiacpiahpiahpia9JibgJicIAcANBIANBIAP7YAP8AAP8AATvwATvwBBA==",
-    "file": "mega-manectric-ex-heliolisk.png",
+  "Indeedee ex Giratina ex": {
+    "code": "D5iWnpiWnpiWqJiWqJiXopiXopiXwJiYLpiaXpiapJiapJiauJiauJia/pia/gUAFZAAGUYAGUYALv4ALv4BBQ==",
+    "file": "indeedee-ex-giratina-ex.png",
     "energy": [
-      "Lightning"
-    ]
-  },
-  "Mega Sharpedo ex Gyarados": {
-    "code": "CZiWnpiWqJiWqJiaXpiaaJia9JicPpicPpic6AsAIygAIygAIzIAIzIAKLQAKLQAPGQATe4ATe4ATfgATfgBAw==",
-    "file": "mega-sharpedo-ex-gyarados.png",
-    "energy": [
-      "Water"
-    ]
-  },
-  "Suicune ex Baxcalibur": {
-    "code": "DZiWnpiWnpiWqJiWqJiXopiYLpiYYJiYYJiZtJiaXpibgJicrJic6AcAKKAAKKAAPEYAPFoAPFoAPGQAPnYBAw==",
-    "file": "suicune-ex-baxcalibur.png",
-    "energy": [
-      "Water"
+      "Psychic"
     ]
   },
   "Mega Charizard Y ex Entei ex": {
@@ -112,11 +105,25 @@
       "Fire"
     ]
   },
+  "Hydreigon Mega Absol ex": {
+    "code": "DpiWnpiWnpiWqJiWqJiXKpiXrJiXrJiXwJiYYJiYYJiaXpiaXpiapJiapAYAMCoAMFIAMFIAMGYAMGYARYgBBw==",
+    "file": "hydreigon-mega-absol-ex.png",
+    "energy": [
+      "Darkness"
+    ]
+  },
   "Mega Altaria ex": {
     "code": "DJiWnpiWnpiWqJiWqJiXKpiXwJiX8piaXpiaaJiapJia9JibgAgAGdIAGfoALkAALkAAMewAMewARBYAUiYBBQ==",
     "file": "mega-altaria-ex.png",
     "energy": [
       "Psychic"
+    ]
+  },
+  "Mega Manectric ex Heliolisk": {
+    "code": "DZiWnpiWnpiWqJiWqJiXwJiaXpiacpiacpiahpiahpia9JibgJicIAcANBIANBIAP7YAP8AAP8AATvwATvwBBA==",
+    "file": "mega-manectric-ex-heliolisk.png",
+    "energy": [
+      "Lightning"
     ]
   },
   "Team Rocket's Weezing ex Hoopa ex": {
@@ -126,18 +133,11 @@
       "Darkness"
     ]
   },
-  "Hydreigon Mega Absol ex": {
-    "code": "DpiWnpiWnpiWqJiWqJiXKpiXwJiYYJiYYJiaXpiaXpiapJiapJiccJiccAYAMCoAMFIAMFIAMGYAMGYARYgBBw==",
-    "file": "hydreigon-mega-absol-ex.png",
+  "Zoroark ex Mega Absol ex": {
+    "code": "DZiWnpiWnpiWqJiWqJiXKpiXopiXwJiYLpiaXpiaXpiapJiccJiccAcAD0YAMCoARSQARSQARS4ARS4ARYgBBw==",
+    "file": "zoroark-ex-mega-absol-ex.png",
     "energy": [
       "Darkness"
-    ]
-  },
-  "Mega Altaria ex Igglybuff": {
-    "code": "DJiWlJiWlJiWnpiWnpiWqJiWqJiXKpiXwJiaXpiaXpiaaJia9AgAKfQAKfQALkAALkAAMewAMewAQDgAQDgBBQ==",
-    "file": "mega-altaria-ex-igglybuff.png",
-    "energy": [
-      "Psychic"
     ]
   }
 }
