@@ -1,10 +1,4 @@
 {
-  "A1-33": {
-    "id": "A1-33",
-    "nameEN": "Charmander",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/33.webp",
-    "deckBuilderNr": 33
-  },
   "A1-87": {
     "id": "A1-87",
     "nameEN": "Froakie",
@@ -28,6 +22,12 @@
     "nameEN": "Hitmonlee",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/154.webp",
     "deckBuilderNr": 154
+  },
+  "A1-183": {
+    "id": "A1-183",
+    "nameEN": "Dratini",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/183.webp",
+    "deckBuilderNr": 183
   },
   "A1-219": {
     "id": "A1-219",
@@ -76,6 +76,12 @@
     "nameEN": "Darkrai ex",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/110.webp",
     "deckBuilderNr": 391
+  },
+  "A2-144": {
+    "id": "A2-144",
+    "nameEN": "Skull Fossil",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/144.webp",
+    "deckBuilderNr": 1000026
   },
   "A2-146": {
     "id": "A2-146",
@@ -149,12 +155,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/66.webp",
     "deckBuilderNr": 647
   },
-  "A3-80": {
-    "id": "A3-80",
-    "nameEN": "Comfey",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/80.webp",
-    "deckBuilderNr": 661
-  },
   "A3-84": {
     "id": "A3-84",
     "nameEN": "Tapu Lele",
@@ -196,6 +196,12 @@
     "nameEN": "Repel",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3a/64.webp",
     "deckBuilderNr": 1000061
+  },
+  "A3b-51": {
+    "id": "A3b-51",
+    "nameEN": "Dratini",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3b/51.webp",
+    "deckBuilderNr": 843
   },
   "A3b-56": {
     "id": "A3b-56",
@@ -509,6 +515,12 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2b/40.webp",
     "deckBuilderNr": 1644
   },
+  "B2b-51": {
+    "id": "B2b-51",
+    "nameEN": "Dratini",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2b/51.webp",
+    "deckBuilderNr": 1655
+  },
   "B2b-69": {
     "id": "B2b-69",
     "nameEN": "Hiking Trail",
@@ -635,11 +647,29 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/47.webp",
     "deckBuilderNr": 1862
   },
+  "B3a-54": {
+    "id": "B3a-54",
+    "nameEN": "Gouging Fire",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/54.webp",
+    "deckBuilderNr": 1869
+  },
+  "B3a-69": {
+    "id": "B3a-69",
+    "nameEN": "Ancient Booster Energy Capsule",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/69.webp",
+    "deckBuilderNr": 1000137
+  },
   "B3a-71": {
     "id": "B3a-71",
     "nameEN": "Juliana",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/71.webp",
     "deckBuilderNr": 1000139
+  },
+  "B3a-72": {
+    "id": "B3a-72",
+    "nameEN": "Professor Sada",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B3a/72.webp",
+    "deckBuilderNr": 1000140
   },
   "B3a-73": {
     "id": "B3a-73",
@@ -755,11 +785,17 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/103.webp",
     "deckBuilderNr": 2064
   },
-  "B4-142": {
-    "id": "B4-142",
-    "nameEN": "Furfrou",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/142.webp",
-    "deckBuilderNr": 2103
+  "B4-117": {
+    "id": "B4-117",
+    "nameEN": "Dragonair",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/117.webp",
+    "deckBuilderNr": 2078
+  },
+  "B4-120": {
+    "id": "B4-120",
+    "nameEN": "Mega Rayquaza ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/120.webp",
+    "deckBuilderNr": 2081
   },
   "B4-148": {
     "id": "B4-148",
@@ -791,17 +827,17 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/155.webp",
     "deckBuilderNr": 1000159
   },
-  "B4a-42": {
-    "id": "B4a-42",
-    "nameEN": "Team Rocket’s Koffing",
-    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021550_00_ROCKETDANNODOGARS_C.webp",
-    "deckBuilderNr": 2155
+  "B4a-29": {
+    "id": "B4a-29",
+    "nameEN": "Team Rocket’s Mr. Mime",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021440_00_ROCKETDANNOBARRIERD_C.webp",
+    "deckBuilderNr": 2144
   },
-  "B4a-43": {
-    "id": "B4a-43",
-    "nameEN": "Team Rocket’s Weezing ex",
-    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021560_00_ROCKETDANNOMATADOGASex_RR.webp",
-    "deckBuilderNr": 2156
+  "B4a-64": {
+    "id": "B4a-64",
+    "nameEN": "Furfrou",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021750_00_TRIMMIEN_C.webp",
+    "deckBuilderNr": 2175
   },
   "B4a-67": {
     "id": "B4a-67",

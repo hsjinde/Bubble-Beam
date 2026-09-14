@@ -50,7 +50,7 @@ const decks: Deck[] = [
   {
     id: "suicune-baxcalibur",
     name: "水君ex 戟脊龍",
-    tier: "B",
+    tier: "A",
     energy: ["Water"],
     difficulty: "中",
     summary: "水系中速主流：以戟脊龍為填能引擎，帶動水君ex 與古劍豹ex 連續發動重砲打擊。",
@@ -188,7 +188,7 @@ const decks: Deck[] = [
   {
     id: "zoroark-mega-absol",
     name: "索羅亞克ex Mega阿勃梭魯ex",
-    tier: "C",
+    tier: "B",
     energy: ["Darkness"],
     difficulty: "難",
     summary: "惡系變幻戰術：索羅亞克ex 特性複製對手招式，搭配 Mega阿勃梭魯ex 破壞棄牌區與手牌。",
@@ -978,7 +978,7 @@ const decks: Deck[] = [
   {
     id: "hoopa-mega-absol",
     name: "胡帕ex Mega阿勃梭魯ex",
-    tier: "C",
+    tier: "B",
     energy: ["Darkness"],
     difficulty: "中",
     summary:
@@ -1117,7 +1117,7 @@ const decks: Deck[] = [
   {
     id: "mega-manectric-heliolisk",
     name: "Mega雷電獸ex 光電傘蜥",
-    tier: "B",
+    tier: "A",
     energy: ["Lightning"],
     difficulty: "中",
     summary:
@@ -1140,8 +1140,8 @@ const decks: Deck[] = [
       "核心思路：把既有的「Mega雷電獸ex 捷拉奧拉」升級成雙進化線的版本。Mega雷電獸ex 仍是速度最快的 Mega 之一（落雷獸可以直接進化，不需要神奇糖果），但副手從零撤退的捷拉奧拉換成了光電傘蜥（Heliolisk）——輸出更高、也更能撐住第二輪交換。這套牌的骨幹是兩張希特隆（Clemont）加兩張希特隆的背包（Clemont's Backpack）組成的支援包：檢索與附能同時解決，讓兩條進化線都不會卡手。",
       "展開順序：首回合落雷獸站前場、傘電蜥（Helioptile）鋪後排，這是最理想的起手。希特隆的背包用來補齊缺的那一半進化線，博士的研究則留給真正斷手的回合。Mega雷電獸ex 先出來壓制，等它被處理掉時光電傘蜥剛好進化完成接棒——這套牌的節奏就是這兩棒不能斷。",
       "注意事項：",
-      "- 固定班底：兩張 Mega雷電獸ex、兩張光電傘蜥、兩張希特隆、兩張希特隆的背包、博士的研究、精靈球、赤日、模仿少女（皆 100% 採用），加上 95% 採用的傘電蜥。",
-      "- 自由席其實不多：優雅披風（Elegant Cape）與除障器都到 90%、訓練場（Training Area）80%，落雷獸則在 B2b 版（80%）與 promo 版（30%）之間各家取捨。這代表牌表細節可以按手感調整，但兩條進化線的「終點」不能少。",
+      "- 固定班底：兩張 Mega雷電獸ex、兩張光電傘蜥、兩張傘電蜥、兩張希特隆、兩張希特隆的背包、博士的研究、精靈球、除障器、赤日、模仿少女（皆 100% 採用）。",
+      "- 自由席其實不多：訓練場（Training Area）95%、優雅披風（Elegant Cape）與 B2b 版落雷獸都是 90%，promo 版落雷獸則已低於 15% 的統計門檻。這代表牌表細節可以按手感調整，但兩條進化線的「終點」不能少。",
       "- 這套牌沒有回血也沒有厚道具，唯一的防護是那張優雅披風——把它掛在你打算撐兩回合的那一隻身上，而不是隨手掛給前場。",
       "- 雷系弱格鬥是硬傷。面對格鬥系時別讓 Mega雷電獸ex 待在前場過夜，用光電傘蜥交換、把主砲留給收頭。",
     ].join("\n\n"),

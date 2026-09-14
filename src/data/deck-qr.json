@@ -1,4 +1,11 @@
 {
+  "Mega Altaria ex Espeon": {
+    "code": "CpiWnpiWnpiWqJiWqJiXKpiaXpiaXpia9JibgJicFgoAKfQALkAAMXQAMXQAMewAMewAQDgAQDgAR64AR64BBQ==",
+    "file": "mega-altaria-ex-espeon.png",
+    "energy": [
+      "Psychic"
+    ]
+  },
   "Magnezone Miraidon ex": {
     "code": "C5iWnpiWnpiWqJiWqJiXwJiYLpiaXpiaaJiahpiapJicAgkAA9QAA9QAGUYAGUYAM+oAM+oAM/4AM/4AR6QBBA==",
     "file": "magnezone-miraidon-ex.png",
@@ -6,11 +13,11 @@
       "Lightning"
     ]
   },
-  "Mega Altaria ex Espeon": {
-    "code": "CpiWnpiWnpiWqJiWqJiXKpiaXpiaXpia9JibgJicFgoAKfQALkAAMXQAMXQAMewAMewAQDgAQDgAR64AR64BBQ==",
-    "file": "mega-altaria-ex-espeon.png",
+  "Mega Sceptile ex Greninja": {
+    "code": "C5iWlJiWnpiWnpiWqJiWqJiXwJiYYJiYYJiaXpiaXpibdgkAA2YAA3oAHUIAQTwAQTwAQUYAQVoAQVoATHwBAQ==",
+    "file": "mega-sceptile-ex-greninja.png",
     "energy": [
-      "Psychic"
+      "Grass"
     ]
   },
   "Butterfree Mega Sceptile ex": {
@@ -20,11 +27,11 @@
       "Grass"
     ]
   },
-  "Vespiquen ex Shuckle ex": {
-    "code": "DZiWlJiWlJiWqJiWqJiXKpiXwJiYfpiYfpiaXpiaXpibgJibvJibvAcAIkIAIkIANgYATP4ATP4ATQgATQgBAQ==",
-    "file": "vespiquen-ex-shuckle-ex.png",
+  "Mega Manectric ex Heliolisk": {
+    "code": "DZiWnpiWnpiWqJiWqJiXwJiaXpiacpiacpiahpiahpia9JibgJicIAcANBIANBIAP7YAP8AAP8AATvwATvwBBA==",
+    "file": "mega-manectric-ex-heliolisk.png",
     "energy": [
-      "Grass"
+      "Lightning"
     ]
   },
   "Dedenne ex Indeedee ex": {
@@ -35,13 +42,6 @@
       "Psychic"
     ]
   },
-  "Mega Lucario ex Lucario": {
-    "code": "DZiWlJiWnpiWnpiWqJiWqJiXwJiYLpiaXpiaXpiauJibgJiblJibxgcABgQADpIARBYARCAARCAARDQARDQBBg==",
-    "file": "mega-lucario-ex-lucario.png",
-    "energy": [
-      "Fighting"
-    ]
-  },
   "Mega Blaziken ex Greninja": {
     "code": "C5iWlJiWnpiWnpiWqJiWqJiXwJiYYJiYYJiaDpiaXpiaXgkAA2YAA3oAK44AK44AK5gAK6wAK6wAK/wATHwBAg==",
     "file": "mega-blaziken-ex-greninja.png",
@@ -49,32 +49,11 @@
       "Fire"
     ]
   },
-  "Mega Sceptile ex Greninja": {
-    "code": "C5iWlJiWnpiWnpiWqJiWqJiXwJiYYJiYYJiaXpiaXpibdgkAA2YAA3oAHUIAQTwAQTwAQUYAQVoAQVoATHwBAQ==",
-    "file": "mega-sceptile-ex-greninja.png",
+  "Vespiquen ex Shuckle ex": {
+    "code": "DZiWlJiWlJiWqJiWqJiXKpiXwJiYfpiYfpiaXpiaXpibgJibvJibvAcAIkIAIkIANgYATP4ATP4ATQgATQgBAQ==",
+    "file": "vespiquen-ex-shuckle-ex.png",
     "energy": [
       "Grass"
-    ]
-  },
-  "Mega Blaziken ex": {
-    "code": "DpiWnpiWnpiWqJiWqJiXrJiXwJiYYJiYYJiaDpiaDpiaXpiaXpibdpibgAYAK44AK44AK6wAK6wAK/wAQfoBAg==",
-    "file": "mega-blaziken-ex.png",
-    "energy": [
-      "Fire"
-    ]
-  },
-  "Mega Sharpedo ex Gyarados": {
-    "code": "CZiWnpiWqJiWqJiaXpiaaJia9JicPpicPpic6AsAIygAIygAIzIAIzIAKLQAKLQAPGQATe4ATe4ATfgATfgBAw==",
-    "file": "mega-sharpedo-ex-gyarados.png",
-    "energy": [
-      "Water"
-    ]
-  },
-  "Miraidon ex Magnezone": {
-    "code": "C5iWnpiWnpiWqJiWqJiXKpiXopiXwJiaXpiaaJiahpicAgkAA9QAA9QAGUYAHPIAM+oAM+oAM/4AR6QAR6QBBA==",
-    "file": "miraidon-ex-magnezone.png",
-    "energy": [
-      "Lightning"
     ]
   },
   "Suicune ex Baxcalibur": {
@@ -84,11 +63,47 @@
       "Water"
     ]
   },
+  "Mega Lucario ex Lucario": {
+    "code": "DZiWlJiWnpiWnpiWqJiWqJiXwJiYLpiaXpiaXpiauJibgJiblJibxgcABgQADpIARBYARCAARCAARDQARDQBBg==",
+    "file": "mega-lucario-ex-lucario.png",
+    "energy": [
+      "Fighting"
+    ]
+  },
+  "Mega Blaziken ex": {
+    "code": "DpiWnpiWnpiWqJiWqJiXrJiXwJiYYJiYYJiaDpiaDpiaXpiaXpibdpibgAYAK44AK44AK6wAK6wAK/wAQfoBAg==",
+    "file": "mega-blaziken-ex.png",
+    "energy": [
+      "Fire"
+    ]
+  },
+  "Miraidon ex Magnezone": {
+    "code": "C5iWnpiWnpiWqJiWqJiXKpiXwJiaXpiaaJiahpia/picAgkAA9QAA9QAGUYAHPIAM+oAM+oAM/4AR6QAR6QBBA==",
+    "file": "miraidon-ex-magnezone.png",
+    "energy": [
+      "Lightning"
+    ]
+  },
+  "Dragonair Mega Rayquaza ex": {
+    "code": "DZiWnpiWnpiWqJiWqJiXhJiXwJiaXpiaXpib2pib+JicFpictpictgcAByYAByYASQIASQIAUSwAUSwAUUoCAgQ=",
+    "file": "dragonair-mega-rayquaza-ex.png",
+    "energy": [
+      "Fire",
+      "Lightning"
+    ]
+  },
   "Milotic ex Eevee ex": {
     "code": "C5iWnpiWnpiWqJiWqJiXopiaXpiaXpia9JibgJicPpicrAkACRoAISAAISAAKKoAKKoAPGQAQnwAStgAStgBAw==",
     "file": "milotic-ex-eevee-ex.png",
     "energy": [
       "Water"
+    ]
+  },
+  "Zoroark ex Mega Absol ex": {
+    "code": "DZiWnpiWnpiWqJiWqJiXKpiXopiXwJiYLpiaXpiaXpiapJiccJiccAcAD0YAMCoARSQARSQARS4ARS4ARYgBBw==",
+    "file": "zoroark-ex-mega-absol-ex.png",
+    "energy": [
+      "Darkness"
     ]
   },
   "Indeedee ex Giratina ex": {
@@ -105,6 +120,13 @@
       "Fire"
     ]
   },
+  "Mega Sharpedo ex Gyarados": {
+    "code": "CZiWnpiWqJiWqJiaXpiaaJia9JicPpicPpic6AsAIygAIygAIzIAIzIAKLQAKLQAPGQATe4ATe4ATfgATfgBAw==",
+    "file": "mega-sharpedo-ex-gyarados.png",
+    "energy": [
+      "Water"
+    ]
+  },
   "Hydreigon Mega Absol ex": {
     "code": "DpiWnpiWnpiWqJiWqJiXKpiXrJiXrJiXwJiYYJiYYJiaXpiaXpiapJiapAYAMCoAMFIAMFIAMGYAMGYARYgBBw==",
     "file": "hydreigon-mega-absol-ex.png",
@@ -112,32 +134,12 @@
       "Darkness"
     ]
   },
-  "Mega Altaria ex": {
-    "code": "DJiWnpiWnpiWqJiWqJiXKpiXwJiX8piaXpiaaJiapJia9JibgAgAGdIAGfoALkAALkAAMewAMewARBYAUiYBBQ==",
-    "file": "mega-altaria-ex.png",
+  "Mega Altaria ex Greninja": {
+    "code": "CpiWnpiWnpiWqJiWqJiXwJiYYJiYYJiaXpicFpicwAoAA2YAA2YAA3oAA3oALkAALkAAMewAMewAU8AAU8ACAwU=",
+    "file": "mega-altaria-ex-greninja.png",
     "energy": [
+      "Water",
       "Psychic"
-    ]
-  },
-  "Mega Manectric ex Heliolisk": {
-    "code": "DZiWnpiWnpiWqJiWqJiXwJiaXpiacpiacpiahpiahpia9JibgJicIAcANBIANBIAP7YAP8AAP8AATvwATvwBBA==",
-    "file": "mega-manectric-ex-heliolisk.png",
-    "energy": [
-      "Lightning"
-    ]
-  },
-  "Team Rocket's Weezing ex Hoopa ex": {
-    "code": "DZiWlJiWnpiWnpiWqJiWqJiXwJiXwJiX8piaXpiaXpibgJiccJiccAcAD0YAUKAAUKAAVC4AVC4AVDgAVDgBBw==",
-    "file": "team-rocket-s-weezing-ex-hoopa-ex.png",
-    "energy": [
-      "Darkness"
-    ]
-  },
-  "Zoroark ex Mega Absol ex": {
-    "code": "DZiWnpiWnpiWqJiWqJiXKpiXopiXwJiYLpiaXpiaXpiapJiccJiccAcAD0YAMCoARSQARSQARS4ARS4ARYgBBw==",
-    "file": "zoroark-ex-mega-absol-ex.png",
-    "energy": [
-      "Darkness"
     ]
   }
 }
