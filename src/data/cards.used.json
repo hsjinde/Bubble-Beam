@@ -47,6 +47,12 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/225.webp",
     "deckBuilderNr": 1000017
   },
+  "A1a-17": {
+    "id": "A1a-17",
+    "nameEN": "Magikarp",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1a/17.webp",
+    "deckBuilderNr": 231
+  },
   "A1a-19": {
     "id": "A1a-19",
     "nameEN": "Vaporeon",
@@ -196,12 +202,6 @@
     "nameEN": "Repel",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3a/64.webp",
     "deckBuilderNr": 1000061
-  },
-  "A3b-51": {
-    "id": "A3b-51",
-    "nameEN": "Dratini",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3b/51.webp",
-    "deckBuilderNr": 843
   },
   "A3b-56": {
     "id": "A3b-56",
@@ -773,12 +773,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/74.webp",
     "deckBuilderNr": 2035
   },
-  "B4-78": {
-    "id": "B4-78",
-    "nameEN": "Oricorio",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/78.webp",
-    "deckBuilderNr": 2039
-  },
   "B4-103": {
     "id": "B4-103",
     "nameEN": "Hoopa ex",
@@ -827,23 +821,11 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/155.webp",
     "deckBuilderNr": 1000159
   },
-  "B4a-29": {
-    "id": "B4a-29",
-    "nameEN": "Team Rocket’s Mr. Mime",
-    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021440_00_ROCKETDANNOBARRIERD_C.webp",
-    "deckBuilderNr": 2144
-  },
   "B4a-64": {
     "id": "B4a-64",
     "nameEN": "Furfrou",
     "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021750_00_TRIMMIEN_C.webp",
     "deckBuilderNr": 2175
-  },
-  "B4a-67": {
-    "id": "B4a-67",
-    "nameEN": "Team Rocket’s Thieving Machine",
-    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_10_001600_00_ROCKETDANNODOROBOUMASHIN_U.webp",
-    "deckBuilderNr": 1000160
   },
   "B4a-71": {
     "id": "B4a-71",
