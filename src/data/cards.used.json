@@ -197,12 +197,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3a/64.webp",
     "deckBuilderNr": 1000061
   },
-  "A3b-51": {
-    "id": "A3b-51",
-    "nameEN": "Dratini",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3b/51.webp",
-    "deckBuilderNr": 843
-  },
   "A3b-56": {
     "id": "A3b-56",
     "nameEN": "Eevee ex",
@@ -214,18 +208,6 @@
     "nameEN": "Shuckle ex",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/21.webp",
     "deckBuilderNr": 877
-  },
-  "A4-44": {
-    "id": "A4-44",
-    "nameEN": "Magikarp",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/44.webp",
-    "deckBuilderNr": 900
-  },
-  "A4-45": {
-    "id": "A4-45",
-    "nameEN": "Gyarados",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/45.webp",
-    "deckBuilderNr": 901
   },
   "A4-102": {
     "id": "A4-102",
@@ -256,12 +238,6 @@
     "nameEN": "Feebas",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4a/21.webp",
     "deckBuilderNr": 1041
-  },
-  "A4a-23": {
-    "id": "A4a-23",
-    "nameEN": "Mantyke",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4a/23.webp",
-    "deckBuilderNr": 1042
   },
   "A4a-59": {
     "id": "A4a-59",
@@ -748,18 +724,6 @@
     "nameEN": "Vespiquen ex",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/11.webp",
     "deckBuilderNr": 1972
-  },
-  "B4-34": {
-    "id": "B4-34",
-    "nameEN": "Carvanha",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/34.webp",
-    "deckBuilderNr": 1995
-  },
-  "B4-35": {
-    "id": "B4-35",
-    "nameEN": "Mega Sharpedo ex",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/35.webp",
-    "deckBuilderNr": 1996
   },
   "B4-61": {
     "id": "B4-61",
