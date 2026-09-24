@@ -188,7 +188,7 @@ const decks: Deck[] = [
   {
     id: "zoroark-mega-absol",
     name: "索羅亞克ex Mega阿勃梭魯ex",
-    tier: "A",
+    tier: "B",
     energy: ["Darkness"],
     difficulty: "難",
     summary: "惡系變幻戰術：索羅亞克ex 特性複製對手招式，搭配 Mega阿勃梭魯ex 破壞棄牌區與手牌。",
@@ -701,7 +701,7 @@ const decks: Deck[] = [
   {
     id: "magnezone-ex-magnezone",
     name: "自爆磁怪ex 自爆磁怪",
-    tier: "C",
+    tier: "B",
     energy: ["Lightning"],
     difficulty: "中",
     summary:

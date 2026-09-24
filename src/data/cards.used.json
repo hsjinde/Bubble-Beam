@@ -1,4 +1,10 @@
 {
+  "A1-33": {
+    "id": "A1-33",
+    "nameEN": "Charmander",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/33.webp",
+    "deckBuilderNr": 33
+  },
   "A1-87": {
     "id": "A1-87",
     "nameEN": "Froakie",
@@ -154,6 +160,12 @@
     "nameEN": "Oricorio",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/66.webp",
     "deckBuilderNr": 647
+  },
+  "A3-80": {
+    "id": "A3-80",
+    "nameEN": "Comfey",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A3/80.webp",
+    "deckBuilderNr": 661
   },
   "A3-84": {
     "id": "A3-84",
@@ -761,6 +773,12 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/120.webp",
     "deckBuilderNr": 2081
   },
+  "B4-142": {
+    "id": "B4-142",
+    "nameEN": "Furfrou",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/142.webp",
+    "deckBuilderNr": 2103
+  },
   "B4-148": {
     "id": "B4-148",
     "nameEN": "Deceptive Needle",
@@ -797,17 +815,17 @@
     "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021440_00_ROCKETDANNOBARRIERD_C.webp",
     "deckBuilderNr": 2144
   },
+  "B4a-63": {
+    "id": "B4a-63",
+    "nameEN": "Happiny",
+    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021740_00_PINPUKU_R.webp",
+    "deckBuilderNr": 2174
+  },
   "B4a-64": {
     "id": "B4a-64",
     "nameEN": "Furfrou",
     "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cPK_10_021750_00_TRIMMIEN_C.webp",
     "deckBuilderNr": 2175
-  },
-  "B4a-67": {
-    "id": "B4a-67",
-    "nameEN": "Team Rocket’s Thieving Machine",
-    "imageUrl": "https://assets.pokemon-zone.com/game-assets/CardPreviews/cTR_10_001600_00_ROCKETDANNODOROBOUMASHIN_U.webp",
-    "deckBuilderNr": 1000160
   },
   "B4a-71": {
     "id": "B4a-71",
