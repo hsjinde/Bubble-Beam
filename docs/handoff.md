@@ -3,7 +3,7 @@
 給下一個接手的人（Claude Code 或 `agy`）。這份檔案記錄目前的 UI／前端品質狀態與待辦，
 每輪工作結束時更新它，不要讓它過期。
 
-最後更新：2026-08-20
+最後更新：2026-09-29
 
 ---
 
@@ -587,6 +587,19 @@ Mega路卡利歐ex 甲賀忍蛙 B→C（47.35%，B 需 48%）。
 展開全部後 20 張 QR 與 623 張卡圖**零破圖**、console 零錯誤。
 四頁被改到採用率的牌組頁（`hoopa-mega-absol`／`vespiquen-shuckle`／`hoopa-greninja`／
 `mega-lucario-greninja`）逐頁比對過散文數字與區塊分桶，一致。
+
+---
+
+## 2026-09-29 這輪：行事曆補 B4b 官方資料（`/tcg-pocket-schedule`）
+
+純資料輪。B4b 定名 **Deluxe Pack: Mega／高級擴充包MEGA**（官方英文稿＋官方繁中站 #83），
+發售時刻 9/30 01:00 UTC 經官方確認、未變動；`set-names-tc.json` 預寫 B4b（上游收錄前是 no-op）。
+配套活動（平行閃卡大量出現、Season 18、Mega Garchomp ex 掉落、小火龍與老翁龍得卡挑戰）
+官方只給「9 月底／10 月中下旬」，**全部還沒收**，清單與陷阱寫在 `events.json` 的 `_comment`
+（9/29 那段），下一輪回頭補精確時刻。9/30 發售後要跑 `fetch-sets.mjs`（記得再過一次 prettier）。
+
+驗證：`prettier --check` 兩檔通過；`/decks/schedule` 的 B4b 卡顯示「2026/09/30 發售」
+（對照官方繁中標題的 9 月 30 日）、`/decks` 頁頂提示條重新出現且天數一致，console 無 hydration 警告。
 
 ---
 
