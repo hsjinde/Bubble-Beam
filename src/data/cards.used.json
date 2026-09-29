@@ -53,6 +53,12 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/225.webp",
     "deckBuilderNr": 1000017
   },
+  "A1a-17": {
+    "id": "A1a-17",
+    "nameEN": "Magikarp",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1a/17.webp",
+    "deckBuilderNr": 231
+  },
   "A1a-19": {
     "id": "A1a-19",
     "nameEN": "Vaporeon",
@@ -221,6 +227,12 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/21.webp",
     "deckBuilderNr": 877
   },
+  "A4-45": {
+    "id": "A4-45",
+    "nameEN": "Gyarados",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/45.webp",
+    "deckBuilderNr": 901
+  },
   "A4-102": {
     "id": "A4-102",
     "nameEN": "Hitmontop",
@@ -232,6 +244,12 @@
     "nameEN": "Eevee",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/134.webp",
     "deckBuilderNr": 990
+  },
+  "A4-151": {
+    "id": "A4-151",
+    "nameEN": "Elemental Switch",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/151.webp",
+    "deckBuilderNr": 1000071
   },
   "A4a-10": {
     "id": "A4a-10",
@@ -250,6 +268,12 @@
     "nameEN": "Feebas",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4a/21.webp",
     "deckBuilderNr": 1041
+  },
+  "A4a-23": {
+    "id": "A4a-23",
+    "nameEN": "Mantyke",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4a/23.webp",
+    "deckBuilderNr": 1042
   },
   "A4a-59": {
     "id": "A4a-59",
@@ -424,6 +448,12 @@
     "nameEN": "Teal Mask Ogerpon ex",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/17.webp",
     "deckBuilderNr": 1383
+  },
+  "B2-45": {
+    "id": "B2-45",
+    "nameEN": "Cramorant",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B2/45.webp",
+    "deckBuilderNr": 1411
   },
   "B2-145": {
     "id": "B2-145",
@@ -737,6 +767,18 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/11.webp",
     "deckBuilderNr": 1972
   },
+  "B4-34": {
+    "id": "B4-34",
+    "nameEN": "Carvanha",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/34.webp",
+    "deckBuilderNr": 1995
+  },
+  "B4-35": {
+    "id": "B4-35",
+    "nameEN": "Mega Sharpedo ex",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/35.webp",
+    "deckBuilderNr": 1996
+  },
   "B4-61": {
     "id": "B4-61",
     "nameEN": "Heliolisk",
@@ -754,6 +796,12 @@
     "nameEN": "Oricorio",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/78.webp",
     "deckBuilderNr": 2039
+  },
+  "B4-90": {
+    "id": "B4-90",
+    "nameEN": "Minior",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/90.webp",
+    "deckBuilderNr": 2051
   },
   "B4-103": {
     "id": "B4-103",
