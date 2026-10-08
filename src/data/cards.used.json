@@ -53,12 +53,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/225.webp",
     "deckBuilderNr": 1000017
   },
-  "A1a-17": {
-    "id": "A1a-17",
-    "nameEN": "Magikarp",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1a/17.webp",
-    "deckBuilderNr": 231
-  },
   "A1a-19": {
     "id": "A1a-19",
     "nameEN": "Vaporeon",
@@ -94,12 +88,6 @@
     "nameEN": "Skull Fossil",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/144.webp",
     "deckBuilderNr": 1000026
-  },
-  "A2-146": {
-    "id": "A2-146",
-    "nameEN": "Pokémon Communication",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A2/146.webp",
-    "deckBuilderNr": 1000028
   },
   "A2-147": {
     "id": "A2-147",
@@ -809,6 +797,12 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/103.webp",
     "deckBuilderNr": 2064
   },
+  "B4-116": {
+    "id": "B4-116",
+    "nameEN": "Dratini",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/B4/116.webp",
+    "deckBuilderNr": 2077
+  },
   "B4-117": {
     "id": "B4-117",
     "nameEN": "Dragonair",
@@ -899,12 +893,6 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-A/7.webp",
     "deckBuilderNr": 1000004
   },
-  "PROMO-B-37": {
-    "id": "PROMO-B-37",
-    "nameEN": "Frigibax",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-B/37.webp",
-    "deckBuilderNr": 1599
-  },
   "PROMO-B-43": {
     "id": "PROMO-B-43",
     "nameEN": "Electrike",
@@ -916,11 +904,5 @@
     "nameEN": "Zygarde",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-B/51.webp",
     "deckBuilderNr": 1886
-  },
-  "PROMO-B-72": {
-    "id": "PROMO-B-72",
-    "nameEN": "Feebas",
-    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/PROMO-B/72.webp",
-    "deckBuilderNr": 1896
   }
 }

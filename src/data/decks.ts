@@ -978,7 +978,7 @@ const decks: Deck[] = [
   {
     id: "hoopa-mega-absol",
     name: "胡帕ex Mega阿勃梭魯ex",
-    tier: "A",
+    tier: "S",
     energy: ["Darkness"],
     difficulty: "中",
     summary:
