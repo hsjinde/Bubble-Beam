@@ -33,14 +33,17 @@ const SETS = [
 ];
 const DATA_BASE =
   "https://raw.githubusercontent.com/flibustier/pokemon-tcg-pocket-database/main/dist/cards";
-const IMAGE_BASE =
-  "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set";
+// 全尺寸卡圖：exchange 在 2026-10-05 把 public/images/cards-by-set 改成指向外部資料庫的
+// symlink，原本的 raw.githubusercontent 路徑整批 404；現在改走它正式站的 CDN（路徑結構不變）。
+const IMAGE_BASE = "https://cdn.pokemon-tcg.exchange/images/cards-by-set";
 // 卡名資料（上面的 database）出得比卡圖庫（exchange）快，新擴充包常常有名字沒圖。
 // 圖庫還沒收錄的 set 改指 pokemon-zone 的官方 asset，檔名就是 database 的 `image` 欄位。
 // 那邊擋無 UA 的請求（curl 會 403），但瀏覽器載得到，尺寸與圖庫一致（367x512）。
 const FALLBACK_IMAGE_BASE = "https://assets.pokemon-zone.com/game-assets/CardPreviews";
+// 判斷「哪些 set 有圖」改列 thumbnails 目錄：cards-by-set 已是 symlink，contents API 列不出內容，
+// 而縮圖與全尺寸圖是同一批 set 一起產的。
 const IMAGE_SETS_API =
-  "https://api.github.com/repos/flibustier/pokemon-tcg-exchange/contents/public/images/cards-by-set";
+  "https://api.github.com/repos/flibustier/pokemon-tcg-exchange/contents/public/images/thumbnails";
 const OUT = new URL("../src/data/cards.json", import.meta.url);
 
 /**

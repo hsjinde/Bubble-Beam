@@ -10,8 +10,12 @@
 - **卡片資料**：[flibustier/pokemon-tcg-pocket-database](https://github.com/flibustier/pokemon-tcg-pocket-database)（v2.8.0「Everyday Wonders」2026-06-30，覆蓋 A1–B3b + PROMO-A/B）
   `https://raw.githubusercontent.com/flibustier/pokemon-tcg-pocket-database/main/dist/cards/{SET}.json`
 - **卡圖**：姊妹 repo [pokemon-tcg-exchange](https://github.com/flibustier/pokemon-tcg-exchange)
-  `https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/{SET}/{number}.webp`
-  （實測 A1/36、B3/81、B3b/41、PROMO-A/7、PROMO-B/51 全部 HTTP 200）
+  `https://cdn.pokemon-tcg.exchange/images/cards-by-set/{SET}/{number}.webp`
+  （2026-10-12 改：exchange 在 10/5 把 repo 內的 `cards-by-set` 改成 symlink，原本的
+  `raw.githubusercontent.com/.../public/images/cards-by-set/...` 路徑整批 404，卡圖全破；
+  改走它正式站的 CDN，實測 153 張本站引用的卡全部 200、尺寸 367x512。repo 內仍有 208x290 縮圖在
+  `public/images/thumbnails/{SET}/{number}.webp`。CDN 是上游自己的正式站，路徑再變時先查
+  `src/services/cards.ts` 的 `CDN_URL`）
 - **卡 id 慣例**：`{SET}-{number}`，編號不補零（如 `B3b-41`、`PROMO-A-7`）。Limitless 的 `P-A`/`P-B` 對映為 `PROMO-A`/`PROMO-B`。
 - 全部 5 套牌 47 張不重複卡已逐張對 flibustier 資料庫驗證：卡名全部吻合（唯一差異為撇號字形 `'`/`’`）。
 
