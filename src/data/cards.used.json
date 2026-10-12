@@ -53,6 +53,12 @@
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1/225.webp",
     "deckBuilderNr": 1000017
   },
+  "A1a-17": {
+    "id": "A1a-17",
+    "nameEN": "Magikarp",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A1a/17.webp",
+    "deckBuilderNr": 231
+  },
   "A1a-19": {
     "id": "A1a-19",
     "nameEN": "Vaporeon",
@@ -214,6 +220,12 @@
     "nameEN": "Shuckle ex",
     "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/21.webp",
     "deckBuilderNr": 877
+  },
+  "A4-44": {
+    "id": "A4-44",
+    "nameEN": "Magikarp",
+    "imageUrl": "https://raw.githubusercontent.com/flibustier/pokemon-tcg-exchange/main/public/images/cards-by-set/A4/44.webp",
+    "deckBuilderNr": 900
   },
   "A4-45": {
     "id": "A4-45",

@@ -796,7 +796,7 @@ const decks: Deck[] = [
   {
     id: "mega-charizard-entei",
     name: "Mega噴火龍Y ex 炎帝ex",
-    tier: "A",
+    tier: "B",
     energy: ["Fire"],
     difficulty: "易",
     summary:
@@ -978,7 +978,7 @@ const decks: Deck[] = [
   {
     id: "hoopa-mega-absol",
     name: "胡帕ex Mega阿勃梭魯ex",
-    tier: "S",
+    tier: "A",
     energy: ["Darkness"],
     difficulty: "中",
     summary:
@@ -1117,7 +1117,7 @@ const decks: Deck[] = [
   {
     id: "mega-manectric-heliolisk",
     name: "Mega雷電獸ex 光電傘蜥",
-    tier: "A",
+    tier: "B",
     energy: ["Lightning"],
     difficulty: "中",
     summary:
@@ -1141,7 +1141,7 @@ const decks: Deck[] = [
       "展開順序：首回合落雷獸站前場、傘電蜥（Helioptile）鋪後排，這是最理想的起手。希特隆的背包用來補齊缺的那一半進化線，博士的研究則留給真正斷手的回合。Mega雷電獸ex 先出來壓制，等它被處理掉時光電傘蜥剛好進化完成接棒——這套牌的節奏就是這兩棒不能斷。",
       "注意事項：",
       "- 固定班底：兩張 Mega雷電獸ex、兩張光電傘蜥、兩張傘電蜥、兩張希特隆、兩張希特隆的背包、博士的研究、精靈球、除障器、赤日、模仿少女（皆 100% 採用）。",
-      "- 自由席其實不多：訓練場（Training Area）95%、優雅披風（Elegant Cape）與 B2b 版落雷獸都是 90%，promo 版落雷獸則已低於 15% 的統計門檻。這代表牌表細節可以按手感調整，但兩條進化線的「終點」不能少。",
+      "- 自由席其實不多：訓練場（Training Area）95%、B2b 版落雷獸 90%、優雅披風（Elegant Cape）85%，promo 版落雷獸則已低於 15% 的統計門檻。這代表牌表細節可以按手感調整，但兩條進化線的「終點」不能少。",
       "- 這套牌沒有回血也沒有厚道具，唯一的防護是那張優雅披風——把它掛在你打算撐兩回合的那一隻身上，而不是隨手掛給前場。",
       "- 雷系弱格鬥是硬傷。面對格鬥系時別讓 Mega雷電獸ex 待在前場過夜，用光電傘蜥交換、把主砲留給收頭。",
     ].join("\n\n"),
