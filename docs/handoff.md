@@ -3,7 +3,7 @@
 給下一個接手的人（Claude Code 或 `agy`）。這份檔案記錄目前的 UI／前端品質狀態與待辦，
 每輪工作結束時更新它，不要讓它過期。
 
-最後更新：2026-09-29
+最後更新：2026-10-20
 
 ---
 
@@ -537,6 +537,7 @@ curl 與 WebFetch 一律回 403（`CONNECT tunnel failed`）：
 執行 `/pokopia-videos` 技能，掃描最新熱門建築影片與頻道動向，完成影片查證與清單更新。
 
 ### 更新細節：
+
 1. **頻道掃描**：執行 `scripts/fetch-yt.mjs channels` 掃描主播（`HorribleGaming`、`すくると`、`涼太ぱんけーき♭`、`かぴぱか create`、`わむのスローライフっぽい`）。
 2. **oEmbed 查證**：全數 34 支影片通過 oEmbed 官方 Title/Channel 與 200 存活度查證，濾除他款遊戲（Dinkum, Minecraft 等）。
 3. **精選擴充**：
@@ -600,6 +601,23 @@ Mega路卡利歐ex 甲賀忍蛙 B→C（47.35%，B 需 48%）。
 
 驗證：`prettier --check` 兩檔通過；`/decks/schedule` 的 B4b 卡顯示「2026/09/30 發售」
 （對照官方繁中標題的 9 月 30 日）、`/decks` 頁頂提示條重新出現且天數一致，console 無 hydration 警告。
+
+---
+
+## 2026-10-20 這輪：行事曆補 10 月活動、時間軸收 B4b（`/tcg-pocket-schedule`）
+
+純資料輪。行事曆原本只剩一筆進行中的活動，這輪補了四筆，每筆都至少有兩個來源的日曆日一致：
+Season 18（10/14–10/28）、Mega Garchomp ex 掉落活動（10/15–10/25）、小火龍與老翁龍得卡挑戰
+（10/18–10/28，Serebii 寫 10/15 開始，是唯一不一致的來源，不採）、Pika Pika! Pikachu 任務
+（2026/10/20–2027/10/20）。Elite Deck 那筆的 note 補上「Lucario 牌組那半 10/27 就結束」。
+判定過程、未收的 Community Week（只有單一來源）與 C1（仍無確切日期）都寫在 `events.json`
+`_comment` 的 10/20 那段。`fetch-sets.mjs` 已重跑，B4b（429 張）進了時間軸，繁中名自動生效。
+
+環境備忘：Pokemon Zone 的 `/schedule/` 仍卡 Cloudflare，但 `/events/{slug}/` 單一頁用瀏覽器分頁直接開得起來。
+C1 預計 10 月底發售，官方發稿後（通常在發售前一週）要補一筆 `set`，發售後再跑一次 `fetch-sets.mjs`。
+
+驗證：兩個 JSON 都通過 `prettier --check`；`/decks/schedule` 五張卡的日期逐一對過來源，console 沒有 hydration 警告；
+`npm run build` 通過。`/decks` 頁頂提示條目前沒有 upcoming 的 set，所以是空的，這是預期行為。
 
 ---
 

@@ -136,7 +136,8 @@
       "B Series Vol. 9",
       "B Series Vol. 10",
       "B Series Vol. 11",
-      "B Series Vol. 12"
+      "B Series Vol. 12",
+      "B Series Vol. 13"
     ]
   },
   {
@@ -209,6 +210,14 @@
     "releaseDate": "2026-08-27",
     "count": 110,
     "nameEN": "Team Rocket’s Ambition",
-    "packs": ["Ruler of the Skies"]
+    "packs": ["Team Rocket"]
+  },
+  {
+    "code": "B4b",
+    "series": "B",
+    "releaseDate": "2026-09-30",
+    "count": 429,
+    "nameEN": "Deluxe Pack: Mega",
+    "packs": ["Deluxe Pack Mega"]
   }
 ]
