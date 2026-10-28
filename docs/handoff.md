@@ -3,7 +3,7 @@
 給下一個接手的人（Claude Code 或 `agy`）。這份檔案記錄目前的 UI／前端品質狀態與待辦，
 每輪工作結束時更新它，不要讓它過期。
 
-最後更新：2026-10-20
+最後更新：2026-10-28
 
 ---
 
@@ -618,6 +618,22 @@ C1 預計 10 月底發售，官方發稿後（通常在發售前一週）要補�
 
 驗證：兩個 JSON 都通過 `prettier --check`；`/decks/schedule` 五張卡的日期逐一對過來源，console 沒有 hydration 警告；
 `npm run build` 通過。`/decks` 頁頂提示條目前沒有 upcoming 的 set，所以是空的，這是預期行為。
+
+---
+
+## 2026-10-28 這輪：排行榜資料更新（`/tcg-pocket-tier-list`）
+
+開工時工作區裡有一份**沒 commit 過的 10-22 `meta.json`**（來源不明，可能是另一個 agent 跑了沒提交）。
+它從沒發布，所以這輪先 `git restore` 回已發布的 10-19 版再跑 `update-meta.mjs`，名次變動以 10-19 為基準；
+10-22 那份沒有留在 repo。**之後跑完 `update-meta.mjs` 請當輪 commit**，不然下一個人只能二選一基準。
+
+結果：6 升、4 降、9 持平、1 新進（Mega Lucario ex Lucario 回到 #20）；Miraidon ex Magnezone 掉出 Top 20。
+前三名不變（Magnezone Miraidon ex／Mega Altaria ex Espeon／Hoopa ex Mega Absol ex）。20 列全繁中，不用補譯名。
+策展 tier：索羅亞克ex Mega阿勃梭魯ex B→C（47.84%）、三首惡龍 Mega勾魂眼ex C→B（48.8%，只有 309 場、使用率 0.36%，
+樣本偏小，下輪留意會不會掉回去）。散文只改一處：Mega雷電獸ex 光電傘蜥的採用率（B2b 落雷獸 95%、優雅披風 90%）。
+
+驗證：`/decks` 20 列、資料日期 2026-10-28、展開無攻略列有卡圖與 QR、console 零錯誤；兩頁改 tier 的攻略頁顯示正確；
+`decks.ts` 過 `prettier --check`。這輪 github.com DNS 解析失敗，沒辦法 `git fetch` 也沒 push。
 
 ---
 

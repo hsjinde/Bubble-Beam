@@ -239,6 +239,12 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A4/45.webp",
     "deckBuilderNr": 901
   },
+  "A4-102": {
+    "id": "A4-102",
+    "nameEN": "Hitmontop",
+    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A4/102.webp",
+    "deckBuilderNr": 958
+  },
   "A4-134": {
     "id": "A4-134",
     "nameEN": "Eevee",
