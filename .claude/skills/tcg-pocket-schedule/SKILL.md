@@ -138,7 +138,7 @@ description: 更新 piplup-website /decks/schedule 擴充包與活動行事曆�
 | **Game8** `game8.co/games/Pokemon-TCG-Pocket`               | **WebFetch**（curl 會吃 403，擋 UA）                                                       | 活動細節與發售時刻詳盡（B4 的 `6pm PDT` 就查得到）                                                                          |
 | **Serebii** `serebii.net/tcgpocket/`                        | curl／WebFetch 皆可                                                                        | **索引頁沒有日期**，要進分頁：`events.shtml`（特殊活動）、`dropevents.shtml`、`wonderpickevents.shtml`、`rankedmatch.shtml` |
 | **Limitless** `pocket.limitlesstcg.com`                     | curl／WebFetch 皆可                                                                        | 賽事端為主，擴充包發售日可交叉驗證                                                                                          |
-| **官方繁中站** `pokemontcgpocket.com/tc/news/`              | 見下方「官方繁中名怎麼查」——內文抓不到，但**標題抓得到**                                   | `titleTC` 的唯一一手來源：擴充包的官方繁中名                                                                                |
+| **官方繁中站** `pokemontcgpocket.com/tc/news/`              | 見下方「官方繁中名怎麼查」——`fetch()` 只拿得到標題，**瀏覽器分頁算繪後內文也讀得到**       | `titleTC` 的唯一一手來源：擴充包與配套活動的官方繁中名、台灣時間起訖                                                        |
 
 社群站彼此會互抄，兩個都抄同一篇不算「兩個獨立來源」——看它們有沒有各自附官方連結。
 
@@ -166,7 +166,8 @@ for (const i of ids.slice(0, 14)) {
 sitemap 只收部分編號（中間有很多 404），最新一篇未必在裡面——sitemap 的最大值抓到後，
 往上再試幾號就會撞到還沒進 sitemap 的新公告（B4a 的 `/tc/news/80/` 就是這樣找到的）。
 
-**活動名沒有這條捷徑**：官方繁中站只發擴充包公告，遊戲內活動名只能靠台灣媒體轉述
+**活動名先看擴充包公告的內文**：新擴充包公告（如 C1 的 #87）會在內文列出配套活動的官方繁中名與台灣時間，
+用上面的瀏覽器讀法就拿得到。公告沒列的活動才只能靠台灣媒體轉述
 （`pokemonhubs.com`、`gamelife.tw`、巴哈姆特），而它們彼此會有一字之差。收之前先比對兩家，
 不一致就把差異寫進 `_comment`，別假裝有共識。查不到完整名的就留英文——**組合式自譯也算自己編**。
 
