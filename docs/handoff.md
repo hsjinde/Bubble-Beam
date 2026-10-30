@@ -3,7 +3,7 @@
 給下一個接手的人（Claude Code 或 `agy`）。這份檔案記錄目前的 UI／前端品質狀態與待辦，
 每輪工作結束時更新它，不要讓它過期。
 
-最後更新：2026-10-28
+最後更新：2026-10-30
 
 ---
 
@@ -634,6 +634,34 @@ C1 預計 10 月底發售，官方發稿後（通常在發售前一週）要補�
 
 驗證：`/decks` 20 列、資料日期 2026-10-28、展開無攻略列有卡圖與 QR、console 零錯誤；兩頁改 tier 的攻略頁顯示正確；
 `decks.ts` 過 `prettier --check`。這輪 github.com DNS 解析失敗，沒辦法 `git fetch` 也沒 push。
+
+---
+
+## 2026-10-30 這輪：排行榜切到 C1「Dual Fusion」環境（`/tcg-pocket-tier-list`）
+
+Limitless 預設環境已從 B4a 換成新擴充包 **C1**，開打才一兩天：全表只有 111 個 archetype、約 2,100 場
+（10-28 那份第一名一副就有 2,793 場）。舊環境的完整資料仍在 `decks?game=pocket&set=B4a`。
+
+**上榜門檻這輪破例降到 20 場**（使用者同意）。`update-meta.mjs` 的 `MIN_GAMES = 100` 下 C1 只有 4 副過門檻，
+所以用臨時副本改成 20 跑一次就刪掉，**腳本本身仍是 100**。下次照常跑時若 C1 樣本還不夠，榜單會縮成幾列——
+到時要再問使用者要不要破例，別默默改常數。這輪的升降箭頭是 C1 對 B4a 的名次，沒有參考價值；下一輪才是真的。
+
+- 譯名：`pokemon-names.json` 補 12 筆（官方台灣圖鑑查證，出處寫在檔案 `_comment`），20 列全繁中。
+- 策展 tier：密勒頓ex 自爆磁怪 B→S、Mega雷電獸ex 光電傘蜥 A→B，另九副降到 C（多數樣本只有個位數到幾十場）。
+  12 副不在 C1 資料裡（例如 Mega蜥蜴王ex 甲賀忍蛙、騎拉帝納ex 愛管侍），tier 未動；樣本長大後要重看。
+- 散文刪掉三處「主流／高使用率」說法。卡片採用率那幾句（蜂女王、雷電獸的 95%／100%）**沒有**對 C1 重算：
+  C1 每副只取樣到 4–8 份牌表，太少。
+
+**還沒解決的：**
+
+- 上游 flibustier 還沒有 `C1.json`，27 張 C1 新卡在牌表裡退成卡號 placeholder（顯示 `C1-40` 而非卡名）。
+  上游有了之後：`fetch-cards.mjs` 的 `SETS` 加 `C1`（順便確認 `B4b`，上游已有但 SETS 沒列）→
+  `node scripts/fetch-cards.mjs` → subset → `npm run gen:deck-qr`。
+- QR 只出了 5 張：12 副缺 `deck-energy.json` 能量設定，3 副含 C1 卡查不到 `deckBuilderNr`。
+- 行事曆（`events.json`／`sets.json`）還沒有 C1 發售，那是 `/tcg-pocket-schedule` 的事。
+
+驗證：`/decks` 20 列全繁中、資料日期 2026-10-30、展開無攻略列可見 C1 placeholder 與其餘卡圖（0 張破圖）、
+console 零錯誤；`subset-cards.mjs --check` 通過。
 
 ---
 
