@@ -665,6 +665,29 @@ console 零錯誤；`subset-cards.mjs --check` 通過。
 
 ---
 
+## 2026-10-30 這輪：行事曆補 C1「雙元融合」與十筆活動（`/tcg-pocket-schedule`）
+
+純資料輪。C1 發售時刻 10/29 01:00 UTC（台灣 10/29 上午 9 點）有官方英文稿、官方繁中 #87、ptcgpocket.gg 三方一致，
+`titleTC`「雙元融合」取自官方繁中標題，`set-names-tc.json` 同步預寫 C1。今天它已經 ended，所以活動區看不到它。
+另外補了官方繁中 #87 列出的十筆活動（2 週年紀念、復刻 PROMO 掉落／得卡挑戰、便利卡牌得手任務、勳章、獎勵週、
+特典卡牌包 C 系列第 1 波、主題特典卡、**級別對戰賽 賽季C1（12/1–12/15）**、社群週），titleTC 全是官方名。
+
+這輪兩個發現（已寫進 `events.json` `_comment` 與 skill 的「官方繁中名怎麼查」）：
+
+- **官方繁中站的公告內文讀得到**：瀏覽器分頁 `navigate` 後 `get_page_text` 就有全文，以前失敗是因為用 `fetch()`。
+  它直接給台灣時間與官方繁中活動名，是行事曆最好的來源。
+- **官方英文稿的活動日期是美國日期，比台灣早一天**（賽季 C1 英文寫 11/30–12/14，台灣是 12/1–12/15）。只有英文稿時
+  照字面寫 `+08:00` 會整批早一天、畫面卻看起來完全正常。
+
+`fetch-sets.mjs` 已重跑：上游還沒有 C1（`cards/C1.json` 404），`sets.json` 過 prettier 後零差異，時間軸仍到 B4b。
+下一輪要做：上游收 C1 後重跑 `fetch-sets.mjs`；勳章活動（11/6）開始後用 ptcgpocket.gg 對一次實裝時刻
+（官方腳註說期間可能變動，B4a 勳章活動曾延後三天）。
+
+驗證：`/decks/schedule` 進行中＋即將開始共 11 張卡，10 張新卡的日期逐一對過官方繁中 #87 的台灣日期；
+console 沒有 hydration 警告；`prettier --check` 與 `npm run lint` 通過。
+
+---
+
 ## 部署與驗證
 
 push 後由 **Cloudflare Workers Builds webhook** 自動觸發，約 60 秒上線。

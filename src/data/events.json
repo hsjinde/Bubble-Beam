@@ -219,9 +219,32 @@
     "  g. sets.json 重跑過：B4b（2026-09-30、429 張、Deluxe Pack: Mega）進上游，繁中名由 set-names-tc.json 既有那筆生效；",
     "     上游同時補了 PROMO-B Vol. 13、把 B4a 的 packs 從 Ruler of the Skies 修正為 Team Rocket。",
     "",
+    "2026-10-30 更新（C1『雙元融合』已發售，一次補進 C1 與十筆活動）：",
+    "  a. **官方繁中站的公告內文其實讀得到**：用瀏覽器分頁 navigate 到 /tc/news/87/ 再 get_page_text，整篇內文都在",
+    "     （<article> 元素）。之前說「內文抓不到」是因為用 fetch() 拿 HTML，內文是 client-side 載入的——要讓頁面實際算繪。",
+    "     這篇直接寫**台灣時間**與**官方繁中活動名**，是本檔最好的一手來源，下次先看它。",
+    "  b. C1 發售：官方英文稿（pokemon.com，10/20）『Wednesday, October 28, 2026, at 6:00 p.m. PDT』＝官方繁中 #87",
+    "     『10月29日9:00（台灣香港時間）』＝ ptcgpocket.gg/c1『October 29 2026 at 01:00 AM UTC』，三者一致，寫 2026-10-29T01:00:00Z。",
+    "     今天（10/30）它已經是 ended，前端不顯示；時間軸要等上游收錄（見 e）。",
+    "  c. **新陷阱：官方英文稿的活動日期是美國當地日期，比台灣早一天**。英文稿寫『October 29 – November 12』的",
+    "     PROMO Reissue，官方繁中寫 2026/10/30 14:00～11/13 13:59（台灣時間）；Ranked Match Season C1 英文稿『November 30 –",
+    "     December 14』，繁中寫 12/1 14:00～12/15 13:59。九筆活動全部一致地差一天（活動在美國前一天晚上 22:00 PST／",
+    "     23:00 PDT 換場＝台灣下午兩點），Serebii 的 PROMO Reissue 與週年活動也是 10/30 起。**只有英文稿時別照字面寫 +08:00**，",
+    "     會整批早一天、而畫面看起來完全自洽。另外 11/1 起美國改用 PST，與台灣時差變成 16 小時（B4a 那段寫的 15 小時只適用夏令）。",
+    "  d. 收錄的十筆活動日期與 titleTC 全部採官方繁中 #87（url 指向該篇），英文 title 採官方英文稿；起訖照本檔慣例寫",
+    "     當天 00:00／23:59（+08:00），精確時刻（一律 14:00 起、13:59 止）寫進各筆 note。活動名第一次有官方繁中可用，",
+    "     所以排名賽季這次有 titleTC（級別對戰賽 賽季C1），前幾季沒有是因為當時查不到官方口徑。",
+    "     未收：特別包「最初的夥伴」（繁中稿沒給期間；Gamespress 寫 10/31–12/26，英文稿沒寫，單一來源）、",
+    "     實境卡主題收藏任務（只有起點、沒有終點）、11/1 的超級甲賀忍蛙收藏冊（周邊上架，不是活動）。",
+    "     官方稿腳註寫『活動時間、期間與內容有可能不經預告而變更』——**活動開始後要回頭用 ptcgpocket.gg 對一次實裝時刻**",
+    "     （B4a 勳章活動就曾被實裝延後三天）。",
+    "  e. Serebii events.shtml 把 PROMO Reissue Drop 的結束寫成『November 13th 2025』，是年份筆誤（同頁 Wonder Pick 寫 2026）。",
+    "     rankedmatch.shtml 還沒有 C1 賽季。fetch-sets.mjs 已重跑：上游 flibustier 還沒有 C1（cards/C1.json 404），",
+    "     sets.json 過 prettier 後零差異；set-names-tc.json 已預寫 C1，上游收錄那天自己生效。",
+    "",
     "type：set（新擴充包）／drop（Drop 活動）／wonderpick／ranked（排名賽季）／other"
   ],
-  "updatedAt": "2026-10-20",
+  "updatedAt": "2026-10-30",
   "events": [
     {
       "id": "pika-pika-pikachu-missions-2026-10",
@@ -445,6 +468,115 @@
       "endAt": "2026-07-29T23:59:00+08:00",
       "note": "第 15 賽季排名賽，有專屬徽章與任務。",
       "url": "https://www.serebii.net/tcgpocket/rankedmatch.shtml"
+    },
+    {
+      "id": "c1-dual-fusion",
+      "type": "set",
+      "title": "Dual Fusion（C1）",
+      "titleTC": "雙元融合",
+      "startAt": "2026-10-29T01:00:00Z",
+      "note": "C 系列第一個擴充包，雙屬性寶可夢首度登場（Mega Mewtwo X ex 為超＋鬥、Mega Greninja ex 為水＋惡）。官方公布發售時刻為 10/28 下午 6 點 PDT（台灣時間 10/29 上午 9 點）。配套的 6 副租用牌組可用到 12/16 08:59（台灣時間）。",
+      "url": "https://www.pokemon.com/us/news/pokemon-tcg-pocket-dual-fusion-expansion-coming-soon"
+    },
+    {
+      "id": "second-anniversary-campaign-2026",
+      "type": "other",
+      "title": "Second Anniversary Celebration Campaign",
+      "titleTC": "2週年紀念活動",
+      "startAt": "2026-10-30T00:00:00+08:00",
+      "endAt": "2026-12-15T23:59:00+08:00",
+      "note": "慶祝上線 2 週年，禮物盒發放可兌換「必得 1 張 ★★ 卡牌擴充包」的兌換券。官方時刻為台灣時間 10/30 14:00 至 12/15 13:59。",
+      "url": "https://www.pokemontcgpocket.com/tc/news/87/"
+    },
+    {
+      "id": "promo-reissue-drop-2026",
+      "type": "drop",
+      "title": "PROMO Reissue Drop Event 2026",
+      "titleTC": "復刻PROMO掉落活動2026",
+      "startAt": "2026-10-30T00:00:00+08:00",
+      "endAt": "2026-11-13T23:59:00+08:00",
+      "note": "可取得特典卡牌包 A 系列第 7 波與 B 系列第 1～13 波的掉落活動，任務給的特典卡兌換券可換過去登場過的特典卡。官方時刻為台灣時間 10/30 14:00 至 11/13 13:59。",
+      "url": "https://www.pokemontcgpocket.com/tc/news/87/"
+    },
+    {
+      "id": "promo-reissue-wonder-pick-2026",
+      "type": "wonderpick",
+      "title": "PROMO Reissue Wonder Pick Event 2026",
+      "titleTC": "復刻PROMO得卡挑戰活動2026",
+      "startAt": "2026-10-30T00:00:00+08:00",
+      "endAt": "2026-11-13T23:59:00+08:00",
+      "note": "B 系列得卡挑戰出過的特典卡重新登場，活動期間幸運挑戰比平時更容易出現。官方時刻為台灣時間 10/30 14:00 至 11/13 13:59。",
+      "url": "https://www.pokemontcgpocket.com/tc/news/87/"
+    },
+    {
+      "id": "handy-card-collection-missions-2026-10",
+      "type": "other",
+      "title": "Handy Card Collection Missions",
+      "titleTC": "便利卡牌得手任務",
+      "startAt": "2026-10-30T00:00:00+08:00",
+      "endAt": "2027-01-27T23:59:00+08:00",
+      "note": "完成任務可拿娜姿、赤紅等對戰常用的訓練家卡。官方時刻為台灣時間 2026/10/30 14:00 至 2027/1/27 13:59。",
+      "url": "https://www.pokemontcgpocket.com/tc/news/87/"
+    },
+    {
+      "id": "dual-fusion-emblem-2026-11",
+      "type": "other",
+      "title": "Dual Fusion Emblem Event and Battle Rally Missions",
+      "titleTC": "雙元融合勳章任務＆對戰聲援任務",
+      "startAt": "2026-11-06T00:00:00+08:00",
+      "endAt": "2026-11-16T23:59:00+08:00",
+      "note": "依對戰勝場數取得勳章，同期的對戰聲援任務可拿開包沙漏與閃亮沙子。官方時刻為台灣時間 11/6 14:00 至 11/16 13:59。",
+      "url": "https://www.pokemontcgpocket.com/tc/news/87/"
+    },
+    {
+      "id": "bonus-week-2026-11",
+      "type": "other",
+      "title": "Bonus Week",
+      "titleTC": "獎勵週",
+      "startAt": "2026-11-14T00:00:00+08:00",
+      "endAt": "2026-11-21T23:59:00+08:00",
+      "note": "為期一週，每天登入即可領一包擴充包。官方時刻為台灣時間 11/14 14:00 至 11/21 13:59。",
+      "url": "https://www.pokemontcgpocket.com/tc/news/87/"
+    },
+    {
+      "id": "promo-pack-c-vol-1-2026-11",
+      "type": "other",
+      "title": "Promo Pack C Series Vol. 1",
+      "titleTC": "特典卡牌包 C系列第1波",
+      "startAt": "2026-11-18T00:00:00+08:00",
+      "endAt": "2026-12-02T23:59:00+08:00",
+      "note": "每日任務與對戰活動發放特典卡牌包，對戰可選隨機對戰或新的「雙元融合限定對戰」（只能用雙元融合與本波特典卡組牌）。官方時刻為台灣時間 11/18 14:00 至 12/2 13:59。",
+      "url": "https://www.pokemontcgpocket.com/tc/news/87/"
+    },
+    {
+      "id": "themed-promo-card-events-2026-11",
+      "type": "other",
+      "title": "Themed Promo Card Events",
+      "titleTC": "主題特典卡活動",
+      "startAt": "2026-11-26T00:00:00+08:00",
+      "endAt": "2026-12-26T23:59:00+08:00",
+      "note": "為期 3 週、每週追加新任務，依進度取得帶主題的 ★1 式樣特典卡。官方時刻為台灣時間 11/26 14:00 至 12/26 13:59。",
+      "url": "https://www.pokemontcgpocket.com/tc/news/87/"
+    },
+    {
+      "id": "ranked-season-c1",
+      "type": "ranked",
+      "title": "Ranked Match Season C1",
+      "titleTC": "級別對戰賽 賽季C1",
+      "startAt": "2026-12-01T00:00:00+08:00",
+      "endAt": "2026-12-15T23:59:00+08:00",
+      "note": "C1『雙元融合』環境的排名賽季，賽季結束時依級別發勳章與牌組護套。B 系列以前的分級對戰已結束提供。官方時刻為台灣時間 12/1 14:00 至 12/15 13:59。",
+      "url": "https://www.pokemontcgpocket.com/tc/news/87/"
+    },
+    {
+      "id": "community-week-2026-12",
+      "type": "other",
+      "title": "Community Week",
+      "titleTC": "社群週",
+      "startAt": "2026-12-06T00:00:00+08:00",
+      "endAt": "2026-12-13T23:59:00+08:00",
+      "note": "透過交換與分送取得交換沙漏、開包沙漏等報酬。官方時刻為台灣時間 12/6 14:00 至 12/13 13:59。",
+      "url": "https://www.pokemontcgpocket.com/tc/news/87/"
     }
   ]
 }
