@@ -869,6 +869,186 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B4/155.webp",
     "deckBuilderNr": 1000159
   },
+  "C1-5": {
+    "id": "C1-5",
+    "nameEN": "Alolan Exeggutor ex",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_005_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-14": {
+    "id": "C1-14",
+    "nameEN": "Cutiefly",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_014_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-15": {
+    "id": "C1-15",
+    "nameEN": "Ribombee",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_015_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-18": {
+    "id": "C1-18",
+    "nameEN": "Charizard",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_018_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-22": {
+    "id": "C1-22",
+    "nameEN": "Scorbunny",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_022_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-23": {
+    "id": "C1-23",
+    "nameEN": "Raboot",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_023_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-40": {
+    "id": "C1-40",
+    "nameEN": "Froakie",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_040_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-41": {
+    "id": "C1-41",
+    "nameEN": "Frogadier",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_041_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-42": {
+    "id": "C1-42",
+    "nameEN": "Mega Greninja ex",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_042_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-43": {
+    "id": "C1-43",
+    "nameEN": "Pikachu ex",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_043_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-48": {
+    "id": "C1-48",
+    "nameEN": "Pawmi",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_048_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-50": {
+    "id": "C1-50",
+    "nameEN": "Pawmot",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_050_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-51": {
+    "id": "C1-51",
+    "nameEN": "Jigglypuff",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_051_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-56": {
+    "id": "C1-56",
+    "nameEN": "Mega Mewtwo X ex",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_056_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-57": {
+    "id": "C1-57",
+    "nameEN": "Mew ex",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_057_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-58": {
+    "id": "C1-58",
+    "nameEN": "Marill",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_058_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-59": {
+    "id": "C1-59",
+    "nameEN": "Azumarill",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_059_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-84": {
+    "id": "C1-84",
+    "nameEN": "Umbreon",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_084_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-87": {
+    "id": "C1-87",
+    "nameEN": "Zorua",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_087_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-88": {
+    "id": "C1-88",
+    "nameEN": "Zoroark",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_088_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-98": {
+    "id": "C1-98",
+    "nameEN": "Dratini",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_098_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-100": {
+    "id": "C1-100",
+    "nameEN": "Mega Dragonite ex",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_100_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-101": {
+    "id": "C1-101",
+    "nameEN": "Giratina ex",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_101_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-115": {
+    "id": "C1-115",
+    "nameEN": "Buneary",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_115_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-116": {
+    "id": "C1-116",
+    "nameEN": "Lopunny",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_116_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-122": {
+    "id": "C1-122",
+    "nameEN": "Full Heal",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_122_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-123": {
+    "id": "C1-123",
+    "nameEN": "Eviolite",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_123_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-124": {
+    "id": "C1-124",
+    "nameEN": "Light Ball",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_124_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-126": {
+    "id": "C1-126",
+    "nameEN": "Blue's Provocation",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_126_EN.webp",
+    "deckBuilderNr": null
+  },
+  "C1-127": {
+    "id": "C1-127",
+    "nameEN": "Serena's Choice",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_127_EN.webp",
+    "deckBuilderNr": null
+  },
   "PROMO-A-2": {
     "id": "PROMO-A-2",
     "nameEN": "X Speed",

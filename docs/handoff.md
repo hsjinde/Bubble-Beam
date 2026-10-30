@@ -654,10 +654,17 @@ Limitless 預設環境已從 B4a 換成新擴充包 **C1**，開打才一兩天�
 
 **還沒解決的：**
 
-- 上游 flibustier 還沒有 `C1.json`，27 張 C1 新卡在牌表裡退成卡號 placeholder（顯示 `C1-40` 而非卡名）。
-  上游有了之後：`fetch-cards.mjs` 的 `SETS` 加 `C1`（順便確認 `B4b`，上游已有但 SETS 沒列）→
-  `node scripts/fetch-cards.mjs` → subset → `npm run gen:deck-qr`。
-- QR 只出了 5 張：12 副缺 `deck-energy.json` 能量設定，3 副含 C1 卡查不到 `deckBuilderNr`。
+- 上游 flibustier 還沒有 `C1.json`（最後更新停在 10-12）。**卡圖與卡名已補上**（同日稍後）：
+  `fetch-cards.mjs` 新增 `LIMITLESS_FALLBACK_SETS`，database 對該 set 回 404 時改抓
+  `pocket.limitlesstcg.com/cards/C1?display=list`，卡圖走 Limitless 的 CDN。217 張 C1 進了 `cards.json`，
+  其餘 3888 張完全沒變；meta 裡 27 張 C1 卡的卡名與 imggen payload 逐一核對一致。
+- **QR 只有 5 張，而且這輪補不了**：沒有 QR 的 15 副**全部**含 C1 卡，C1 的 `deckBuilderNr` 目前沒有任何
+  拿得到的來源（flibustier、Nirostar/ptcgp-deck-qr 都停在 C1 之前；pokemon-zone 擋 Cloudflare 驗證，不能繞）。
+  **不要用卡號推編號**，推錯玩家會掃到錯的牌。等 flibustier 出 `C1.json`，直接重跑
+  `node scripts/fetch-cards.mjs`（會自動走回正常路徑拿到編號）→ subset → 補 `deck-energy.json` → `npm run gen:deck-qr`。
+  順便確認 `B4b`：上游已有但 `SETS` 沒列。
+- 這 15 副在頁面上顯示「能量設定待補」，但其中 3 副其實已經有能量，真正卡住的是編號——`DeckQrPanel.tsx`
+  的文案是寫死的，要不要分開兩種原因待使用者決定。
 - 行事曆（`events.json`／`sets.json`）還沒有 C1 發售，那是 `/tcg-pocket-schedule` 的事。
 
 驗證：`/decks` 20 列全繁中、資料日期 2026-10-30、展開無攻略列可見 C1 placeholder 與其餘卡圖（0 張破圖）、

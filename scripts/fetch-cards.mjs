@@ -28,6 +28,7 @@ const SETS = [
   "B3b",
   "B4",
   "B4a",
+  "C1",
   "PROMO-A",
   "PROMO-B",
 ];
@@ -44,6 +45,15 @@ const FALLBACK_IMAGE_BASE = "https://assets.pokemon-zone.com/game-assets/CardPre
 // 而縮圖與全尺寸圖是同一批 set 一起產的。
 const IMAGE_SETS_API =
   "https://api.github.com/repos/flibustier/pokemon-tcg-exchange/contents/public/images/thumbnails";
+// 新擴充包剛發售時，上面的 database 可能連 set 檔都還沒有（C1 發售時它停在 10-12 沒更新），
+// 但排行榜當天就會出現新卡。列在這裡的 set 遇到 database 404 時改抓 Limitless 的卡表
+// （列表檢視一頁就有卡號＋卡名，卡圖在它的 CDN，同樣是 367x512）。代價是拿不到素材檔名，
+// deckBuilderNr 只能存 null，含這些卡的牌組不出 QR。等 database 補上該 set，下次重跑就
+// 自動走回正常路徑——這時把 set 從這裡拿掉即可，不拿也不會出錯。
+// 不在這裡的 set 遇到 404 照舊 throw，打錯 set 代號才不會被靜靜吞掉。
+const LIMITLESS_FALLBACK_SETS = new Set(["C1"]);
+const LIMITLESS_CARDS = "https://pocket.limitlesstcg.com/cards";
+const LIMITLESS_IMAGE_BASE = "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket";
 const OUT = new URL("../src/data/cards.json", import.meta.url);
 
 /**
@@ -71,6 +81,33 @@ function deckBuilderNrFromImage(image) {
   return m[1] === "TR" ? TRAINER_OFFSET + nr : nr;
 }
 
+const decodeEntities = (s) =>
+  s
+    .replace(/&#0*39;|&apos;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&");
+
+/** 從 Limitless 卡表的列表檢視解析 `{ number, name }`，見 LIMITLESS_FALLBACK_SETS。 */
+async function fetchLimitlessSet(set) {
+  const res = await fetch(`${LIMITLESS_CARDS}/${set}?display=list`);
+  if (!res.ok) throw new Error(`fetch Limitless ${set} failed: ${res.status}`);
+  const html = await res.text();
+  // 每列是 <td>卡號</td><td>卡名</td>，兩格都連到 /cards/{set}/{number}
+  const row = new RegExp(
+    `<a href="/cards/${set}/(\\d+)">\\1</a></td>\\s*<td><a href="/cards/${set}/\\1">([^<]+)</a>`,
+    "g",
+  );
+  const cards = [...html.matchAll(row)].map((m) => ({
+    set,
+    number: Number(m[1]),
+    name: decodeEntities(m[2].trim()),
+  }));
+  if (cards.length === 0) throw new Error(`Limitless ${set}: parsed 0 cards — markup changed?`);
+  return cards;
+}
+
 const listing = await fetch(IMAGE_SETS_API);
 if (!listing.ok) throw new Error(`list image sets failed: ${listing.status}`);
 const setsWithImages = new Set(
@@ -81,6 +118,21 @@ const index = {};
 const withoutNr = [];
 for (const set of SETS) {
   const res = await fetch(`${DATA_BASE}/${set}.json`);
+  if (res.status === 404 && LIMITLESS_FALLBACK_SETS.has(set)) {
+    const cards = await fetchLimitlessSet(set);
+    for (const card of cards) {
+      const id = `${set}-${card.number}`;
+      withoutNr.push(`${id} (Limitless fallback)`);
+      index[id] = {
+        id,
+        nameEN: card.name,
+        imageUrl: `${LIMITLESS_IMAGE_BASE}/${set}/${set}_${String(card.number).padStart(3, "0")}_EN.webp`,
+        deckBuilderNr: null,
+      };
+    }
+    console.log(`${set}: ${cards.length} cards (Limitless fallback, no deckBuilderNr)`);
+    continue;
+  }
   if (!res.ok) throw new Error(`fetch ${set} failed: ${res.status}`);
   const cards = await res.json();
   const hasImages = setsWithImages.has(set);
