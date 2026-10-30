@@ -4,7 +4,7 @@ const decks: Deck[] = [
   {
     id: "miraidon-magnezone",
     name: "密勒頓ex 自爆磁怪",
-    tier: "B",
+    tier: "S",
     energy: ["Lightning"],
     difficulty: "中",
     summary: "雷系快攻：前期由密勒頓ex 發動速攻壓制，中後期由自爆磁怪接管戰局作為重砲主力。",
@@ -50,10 +50,10 @@ const decks: Deck[] = [
   {
     id: "suicune-baxcalibur",
     name: "水君ex 戟脊龍",
-    tier: "A",
+    tier: "C",
     energy: ["Water"],
     difficulty: "中",
-    summary: "水系中速主流：以戟脊龍為填能引擎，帶動水君ex 與古劍豹ex 連續發動重砲打擊。",
+    summary: "水系中速牌組：以戟脊龍為填能引擎，帶動水君ex 與古劍豹ex 連續發動重砲打擊。",
     cards: [
       { id: "B2a-34", count: 2 }, // Frigibax
       { id: "B2a-36", count: 2 }, // Baxcalibur
@@ -94,7 +94,7 @@ const decks: Deck[] = [
   {
     id: "mega-blaziken-greninja",
     name: "Mega火焰雞ex 甲賀忍蛙",
-    tier: "A",
+    tier: "C",
     energy: ["Fire"],
     difficulty: "中",
     summary: "火系重砲：神奇糖果直上 Mega火焰雞ex 高爆發輸出，配合甲賀忍蛙飛水手裏劍遠程補刀削血。",
@@ -163,7 +163,7 @@ const decks: Deck[] = [
       { id: "A2-148", count: 1 }, // Rocky Helmet
     ],
     strategy: [
-      "核心思路：草系的主流牌組之一。主線戰術是用神奇糖果讓木守宮直接跳級成 Mega蜥蜴王ex 擔綱主砲；副線則讓呱呱泡蛙同樣走糖果路線進化出甲賀忍蛙，靠特性「飛水手裏劍」每回合免費輸出點傷，幫主砲把擊殺線壓進射程。",
+      "核心思路：主線戰術是用神奇糖果讓木守宮直接跳級成 Mega蜥蜴王ex 擔綱主砲；副線則讓呱呱泡蛙同樣走糖果路線進化出甲賀忍蛙，靠特性「飛水手裏劍」每回合免費輸出點傷，幫主砲把擊殺線壓進射程。",
       "展開順序：起手將木守宮鋪在場上並開始附能，第二隻基礎寶可夢優先選擇呱呱泡蛙。手上有神奇糖果時需算準進化時機：寧可多沉住氣一回合，也不要將糖果浪費在容易被對方威脅的位置。費洛美螂與多麗米亞可用於前期頂線或靈活補位。",
       "注意事項：",
       "- 甲賀忍蛙的削血能創造「本回合 90 傷害、下回合手裏劍 20 補刀」等算計，務必算清兩回合內的總傷害再決定攻擊目標。",
@@ -235,7 +235,7 @@ const decks: Deck[] = [
   {
     id: "mega-altaria-espeon",
     name: "Mega七夕青鳥ex 太陽伊布",
-    tier: "S",
+    tier: "C",
     energy: ["Psychic"],
     difficulty: "中",
     summary: "超能高耐久防守：Mega七夕青鳥ex 龐大 HP 搭配太陽伊布治癒與彈性戰術，後發制人。",
@@ -462,7 +462,7 @@ const decks: Deck[] = [
   {
     id: "mega-lucario",
     name: "Mega路卡利歐ex",
-    tier: "B",
+    tier: "C",
     energy: ["Fighting"],
     difficulty: "易",
     summary: "格鬥直球對決：Mega路卡利歐ex 單核主砲＋滿配干擾與防護道具。",
@@ -655,7 +655,7 @@ const decks: Deck[] = [
   {
     id: "magnezone-miraidon",
     name: "自爆磁怪 密勒頓ex",
-    tier: "S",
+    tier: "C",
     energy: ["Lightning"],
     difficulty: "中",
     summary: "磁怪重砲主攻：以自爆磁怪作為主要火力，花舞鳥與密勒頓ex 前期爭取充能時間並穩固防線。",
@@ -796,7 +796,7 @@ const decks: Deck[] = [
   {
     id: "mega-charizard-entei",
     name: "Mega噴火龍Y ex 炎帝ex",
-    tier: "B",
+    tier: "C",
     energy: ["Fire"],
     difficulty: "易",
     summary:
@@ -888,7 +888,7 @@ const decks: Deck[] = [
   {
     id: "hydreigon-mega-sableye",
     name: "三首惡龍 Mega勾魂眼ex",
-    tier: "B",
+    tier: "C",
     energy: ["Darkness"],
     difficulty: "難",
     summary: "三階惡龍收割網：三首惡龍滿破壞力群體點傷，搭配 Mega勾魂眼ex 偷取資源並徹底擊垮後排。",
@@ -978,7 +978,7 @@ const decks: Deck[] = [
   {
     id: "hoopa-mega-absol",
     name: "胡帕ex Mega阿勃梭魯ex",
-    tier: "S",
+    tier: "C",
     energy: ["Darkness"],
     difficulty: "中",
     summary:
@@ -1010,7 +1010,7 @@ const decks: Deck[] = [
     matchups: [
       {
         vs: "蜂女王ex 壺壺ex",
-        note: "不利對局。惡系弱草，對方主力打你都是雙倍傷害，而且對方同樣是高使用率的一線牌。唯一的活路是速度：趁對方披風與場地卡疊起來之前，用赤日＋削血搶先拆掉關鍵攻擊手。",
+        note: "不利對局。惡系弱草，對方主力打你都是雙倍傷害。唯一的活路是速度：趁對方披風與場地卡疊起來之前，用赤日＋削血搶先拆掉關鍵攻擊手。",
       },
       {
         vs: "Mega七夕青鳥ex 太陽伊布",
@@ -1025,7 +1025,7 @@ const decks: Deck[] = [
   {
     id: "vespiquen-shuckle",
     name: "蜂女王ex 壺壺ex",
-    tier: "A",
+    tier: "C",
     energy: ["Grass"],
     difficulty: "中",
     summary: "草系一線的耐久牌：蜂女王ex 主線輸出，樹葉披風與芬芳森林堆出誇張耐久。",
@@ -1117,7 +1117,7 @@ const decks: Deck[] = [
   {
     id: "mega-manectric-heliolisk",
     name: "Mega雷電獸ex 光電傘蜥",
-    tier: "A",
+    tier: "B",
     energy: ["Lightning"],
     difficulty: "中",
     summary:
