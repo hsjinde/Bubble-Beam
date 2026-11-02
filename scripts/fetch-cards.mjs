@@ -41,10 +41,8 @@ const IMAGE_BASE = "https://cdn.pokemon-tcg.exchange/images/cards-by-set";
 // 圖庫還沒收錄的 set 改指 pokemon-zone 的官方 asset，檔名就是 database 的 `image` 欄位。
 // 那邊擋無 UA 的請求（curl 會 403），但瀏覽器載得到，尺寸與圖庫一致（367x512）。
 const FALLBACK_IMAGE_BASE = "https://assets.pokemon-zone.com/game-assets/CardPreviews";
-// 判斷「哪些 set 有圖」改列 thumbnails 目錄：cards-by-set 已是 symlink，contents API 列不出內容，
-// 而縮圖與全尺寸圖是同一批 set 一起產的。
-const IMAGE_SETS_API =
-  "https://api.github.com/repos/flibustier/pokemon-tcg-exchange/contents/public/images/thumbnails";
+// 判斷「哪些 set 有圖」直接對全尺寸圖探測一張：曾經改列 thumbnails 目錄，但 C1 證明縮圖會比
+// 全尺寸圖先上（2026-11-02 縮圖 200、全尺寸 404），列目錄會把整包 set 指到破圖。
 // 新擴充包剛發售時，上面的 database 可能連 set 檔都還沒有（C1 發售時它停在 10-12 沒更新），
 // 但排行榜當天就會出現新卡。列在這裡的 set 遇到 database 404 時改抓 Limitless 的卡表
 // （列表檢視一頁就有卡號＋卡名，卡圖在它的 CDN，同樣是 367x512）。代價是拿不到素材檔名，
@@ -108,11 +106,14 @@ async function fetchLimitlessSet(set) {
   return cards;
 }
 
-const listing = await fetch(IMAGE_SETS_API);
-if (!listing.ok) throw new Error(`list image sets failed: ${listing.status}`);
-const setsWithImages = new Set(
-  (await listing.json()).filter((e) => e.type === "dir").map((e) => e.name),
-);
+const limitlessImageUrl = (set, number) =>
+  `${LIMITLESS_IMAGE_BASE}/${set}/${set}_${String(number).padStart(3, "0")}_EN.webp`;
+
+/** 圖庫有沒有這個 set 的全尺寸圖：探測 1 號卡，見 IMAGE_BASE 底下的註解。 */
+async function hasFullImages(set) {
+  const res = await fetch(`${IMAGE_BASE}/${set}/1.webp`, { method: "HEAD" });
+  return res.ok;
+}
 
 const index = {};
 const withoutNr = [];
@@ -126,7 +127,7 @@ for (const set of SETS) {
       index[id] = {
         id,
         nameEN: card.name,
-        imageUrl: `${LIMITLESS_IMAGE_BASE}/${set}/${set}_${String(card.number).padStart(3, "0")}_EN.webp`,
+        imageUrl: limitlessImageUrl(set, card.number),
         deckBuilderNr: null,
       };
     }
@@ -135,7 +136,10 @@ for (const set of SETS) {
   }
   if (!res.ok) throw new Error(`fetch ${set} failed: ${res.status}`);
   const cards = await res.json();
-  const hasImages = setsWithImages.has(set);
+  const hasImages = await hasFullImages(set);
+  // 圖庫還沒有全尺寸圖時：Limitless 備援 set 用 Limitless 的卡圖（curl 驗得到），
+  // 其餘照舊指 pokemon-zone。卡名與 deckBuilderNr 一樣取 database，只有圖換來源。
+  const useLimitlessImages = !hasImages && LIMITLESS_FALLBACK_SETS.has(set);
   for (const card of cards) {
     const id = `${card.set}-${card.number}`;
     const deckBuilderNr = deckBuilderNrFromImage(card.image);
@@ -143,14 +147,20 @@ for (const set of SETS) {
     index[id] = {
       id,
       nameEN: card.name,
-      imageUrl:
-        hasImages || !card.image
+      imageUrl: useLimitlessImages
+        ? limitlessImageUrl(card.set, card.number)
+        : hasImages || !card.image
           ? `${IMAGE_BASE}/${card.set}/${card.number}.webp`
           : `${FALLBACK_IMAGE_BASE}/${card.image}`,
       deckBuilderNr,
     };
   }
-  console.log(`${set}: ${cards.length} cards${hasImages ? "" : " (fallback images)"}`);
+  const imageNote = hasImages
+    ? ""
+    : useLimitlessImages
+      ? " (Limitless images)"
+      : " (fallback images)";
+  console.log(`${set}: ${cards.length} cards${imageNote}`);
 }
 await writeFile(OUT, JSON.stringify(index, null, 2));
 console.log(`wrote ${Object.keys(index).length} cards`);

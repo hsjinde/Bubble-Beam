@@ -4,7 +4,7 @@ const decks: Deck[] = [
   {
     id: "miraidon-magnezone",
     name: "密勒頓ex 自爆磁怪",
-    tier: "S",
+    tier: "A",
     energy: ["Lightning"],
     difficulty: "中",
     summary: "雷系快攻：前期由密勒頓ex 發動速攻壓制，中後期由自爆磁怪接管戰局作為重砲主力。",
@@ -50,7 +50,7 @@ const decks: Deck[] = [
   {
     id: "suicune-baxcalibur",
     name: "水君ex 戟脊龍",
-    tier: "C",
+    tier: "S",
     energy: ["Water"],
     difficulty: "中",
     summary: "水系中速牌組：以戟脊龍為填能引擎，帶動水君ex 與古劍豹ex 連續發動重砲打擊。",
@@ -141,7 +141,7 @@ const decks: Deck[] = [
   {
     id: "mega-sceptile-greninja",
     name: "Mega蜥蜴王ex 甲賀忍蛙",
-    tier: "A",
+    tier: "C",
     energy: ["Grass"],
     difficulty: "中",
     summary: "草系主力：神奇糖果直上 Mega蜥蜴王ex，甲賀忍蛙特性每回合補刀。",
@@ -235,7 +235,7 @@ const decks: Deck[] = [
   {
     id: "mega-altaria-espeon",
     name: "Mega七夕青鳥ex 太陽伊布",
-    tier: "C",
+    tier: "S",
     energy: ["Psychic"],
     difficulty: "中",
     summary: "超能高耐久防守：Mega七夕青鳥ex 龐大 HP 搭配太陽伊布治癒與彈性戰術，後發制人。",
@@ -417,7 +417,7 @@ const decks: Deck[] = [
   {
     id: "greninja-mega-absol",
     name: "甲賀忍蛙 Mega阿勃梭魯ex",
-    tier: "B",
+    tier: "C",
     energy: ["Darkness"],
     difficulty: "難",
     summary: "干擾與削血控制：甲賀忍蛙飛水手裏劍點傷，Mega阿勃梭魯ex 打亂對方手牌與資源。",
@@ -796,7 +796,7 @@ const decks: Deck[] = [
   {
     id: "mega-charizard-entei",
     name: "Mega噴火龍Y ex 炎帝ex",
-    tier: "C",
+    tier: "B",
     energy: ["Fire"],
     difficulty: "易",
     summary:
@@ -888,7 +888,7 @@ const decks: Deck[] = [
   {
     id: "hydreigon-mega-sableye",
     name: "三首惡龍 Mega勾魂眼ex",
-    tier: "C",
+    tier: "B",
     energy: ["Darkness"],
     difficulty: "難",
     summary: "三階惡龍收割網：三首惡龍滿破壞力群體點傷，搭配 Mega勾魂眼ex 偷取資源並徹底擊垮後排。",
@@ -978,7 +978,7 @@ const decks: Deck[] = [
   {
     id: "hoopa-mega-absol",
     name: "胡帕ex Mega阿勃梭魯ex",
-    tier: "C",
+    tier: "A",
     energy: ["Darkness"],
     difficulty: "中",
     summary:
@@ -1117,7 +1117,7 @@ const decks: Deck[] = [
   {
     id: "mega-manectric-heliolisk",
     name: "Mega雷電獸ex 光電傘蜥",
-    tier: "B",
+    tier: "S",
     energy: ["Lightning"],
     difficulty: "中",
     summary:
@@ -1140,8 +1140,8 @@ const decks: Deck[] = [
       "核心思路：把既有的「Mega雷電獸ex 捷拉奧拉」升級成雙進化線的版本。Mega雷電獸ex 仍是速度最快的 Mega 之一（落雷獸可以直接進化，不需要神奇糖果），但副手從零撤退的捷拉奧拉換成了光電傘蜥（Heliolisk）——輸出更高、也更能撐住第二輪交換。這套牌的骨幹是兩張希特隆（Clemont）加兩張希特隆的背包（Clemont's Backpack）組成的支援包：檢索與附能同時解決，讓兩條進化線都不會卡手。",
       "展開順序：首回合落雷獸站前場、傘電蜥（Helioptile）鋪後排，這是最理想的起手。希特隆的背包用來補齊缺的那一半進化線，博士的研究則留給真正斷手的回合。Mega雷電獸ex 先出來壓制，等它被處理掉時光電傘蜥剛好進化完成接棒——這套牌的節奏就是這兩棒不能斷。",
       "注意事項：",
-      "- 固定班底：兩張 Mega雷電獸ex、兩張光電傘蜥、兩張傘電蜥、兩張希特隆、兩張希特隆的背包、博士的研究、精靈球、除障器、赤日、模仿少女（皆 100% 採用）。",
-      "- 自由席其實不多：訓練場（Training Area）95%、B2b 版落雷獸 95%、優雅披風（Elegant Cape）90%，promo 版落雷獸則已低於 15% 的統計門檻。這代表牌表細節可以按手感調整，但兩條進化線的「終點」不能少。",
+      "- 固定班底：兩張 Mega雷電獸ex、兩張光電傘蜥、兩張傘電蜥、兩張希特隆、兩張希特隆的背包、博士的研究、精靈球、訓練場（Training Area）、赤日、模仿少女（皆 100% 採用）。",
+      "- 自由席其實不多：除障器 95%、B2b 版落雷獸 90%、優雅披風（Elegant Cape）85%，promo 版落雷獸則已低於 15% 的統計門檻。這代表牌表細節可以按手感調整，但兩條進化線的「終點」不能少。",
       "- 這套牌沒有回血也沒有厚道具，唯一的防護是那張優雅披風——把它掛在你打算撐兩回合的那一隻身上，而不是隨手掛給前場。",
       "- 雷系弱格鬥是硬傷。面對格鬥系時別讓 Mega雷電獸ex 待在前場過夜，用光電傘蜥交換、把主砲留給收頭。",
     ].join("\n\n"),

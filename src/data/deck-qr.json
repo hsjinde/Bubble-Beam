@@ -1,13 +1,21 @@
 {
-  "Miraidon ex Magnezone": {
-    "code": "C5iWnpiWnpiWqJiWqJiXKpiXopiXwJiaXpiaaJiahpicAgkAA9QAA9QAHPIAHPIAM+oAM+oAM/4AR6QAR6QBBA==",
-    "file": "miraidon-ex-magnezone.png",
+  "Hydreigon Mega Absol ex": {
+    "code": "DpiWnpiWnpiXwJiYYJiYYJiaXpiaXpibdpibdpibgJiccJiccJidTJidTAYAMCoAMFIAMFIAMGYAMGYARYgBBw==",
+    "file": "hydreigon-mega-absol-ex.png",
     "energy": [
-      "Lightning"
+      "Darkness"
+    ]
+  },
+  "Mega Altaria ex Greninja": {
+    "code": "C5iWnpiWnpiWqJiWqJiXwJiYYJiYYJiaXpiaXpibipibigkAA2YAA2YAA3oAA3oALkAALoYALoYAMewAMewCAwU=",
+    "file": "mega-altaria-ex-greninja.png",
+    "energy": [
+      "Water",
+      "Psychic"
     ]
   },
   "Mega Manectric ex Heliolisk": {
-    "code": "DZiWnpiWnpiWqJiWqJiXwJiaXpiacpiacpiahpiahpia9JibgJicIAcANBIANBIAP7YAP8AAP8AATvwATvwBBA==",
+    "code": "DZiWnpiWnpiWqJiWqJiXKpiXwJiaXpiacpiacpiahpiahpia9JicIAcANBIANBIAPooAP8AAP8AATvwATvwBBA==",
     "file": "mega-manectric-ex-heliolisk.png",
     "energy": [
       "Lightning"
@@ -20,18 +28,32 @@
       "Psychic"
     ]
   },
-  "Magnezone Miraidon ex": {
-    "code": "CpiWnpiWnpiWqJiWqJiXopiXwJiaaJiaaJiahpiahgoAA9QAA9QAGUYAGUYAMS4AM+oAM+oAM/4AM/4AR6QBBA==",
-    "file": "magnezone-miraidon-ex.png",
+  "Suicune ex Baxcalibur": {
+    "code": "DZiWnpiWnpiWqJiWqJiWxpiX8piYYJiYYJiZtJidJJidJJidTJidTAcAKKAAKKAAPEYAPEYAPFoAPFoAPGQBAw==",
+    "file": "suicune-ex-baxcalibur.png",
+    "energy": [
+      "Water"
+    ]
+  },
+  "Hoopa ex Mega Absol ex": {
+    "code": "EJiWlJiWnpiWnpiWqJiWqJiXwJiXwJiX8piYLpiY4piaXpiapJiapJibgJiccJiccAQAD0YAMCoAUKAAUKABBw==",
+    "file": "hoopa-ex-mega-absol-ex.png",
+    "energy": [
+      "Darkness"
+    ]
+  },
+  "Miraidon ex Magnezone": {
+    "code": "C5iWnpiWnpiWqJiWqJiXKpiXopiXwJiaXpiaaJiahpicAgkAA9QAA9QAHPIAHPIAM+oAM+oAM/4AR6QAR6QBBA==",
+    "file": "miraidon-ex-magnezone.png",
     "energy": [
       "Lightning"
     ]
   },
-  "Mega Lucario ex Lucario": {
-    "code": "DZiWlJiWnpiWnpiWqJiWqJiXwJiaXpiaXpiapJiauJibgJiblJibxgcABgQADogADpIAFbgARCAARDQARDQBBg==",
-    "file": "mega-lucario-ex-lucario.png",
+  "Mega Charizard Y ex Entei ex": {
+    "code": "DJiWnpiWnpiWqJiWqJiXopiYLpiaDpiaDpiaSpiaXpicopictggAJ+IAJ+IAM4YAPwIAPwIAPwwAPwwAVb4BAg==",
+    "file": "mega-charizard-y-ex-entei-ex.png",
     "energy": [
-      "Fighting"
+      "Fire"
     ]
   }
 }

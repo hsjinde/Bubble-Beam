@@ -695,6 +695,28 @@ console 沒有 hydration 警告；`prettier --check` 與 `npm run lint` 通過�
 
 ---
 
+## 2026-11-02 這輪：C1 第一份正常門檻的排行榜＋C1 卡片編號補齊（`/tcg-pocket-tier-list`）
+
+C1 樣本長大了：271 個 archetype、約 9,500 場，過 100 場門檻的**剛好 20 副**，所以這輪照常跑、沒有破例。
+升降箭頭以 10-30（C1 剛開打、20 場門檻）為基準：1 升、11 降、8 新進。20 列全繁中，不用補譯名。
+
+- 策展 tier 九副：雷電獸光電傘蜥 B→S、七夕青鳥太陽伊布 C→S、水君戟脊龍 C→S、胡帕 Mega阿勃梭魯 C→A、
+  密勒頓自爆磁怪 S→A、噴火龍Y 炎帝 C→B、三首惡龍 Mega勾魂眼 C→B、蜥蜴王甲賀忍蛙 A→C、甲賀忍蛙 Mega阿勃梭魯 B→C。
+  最後三副樣本小（58／65／3 場），使用者同意照方法改；下輪留意。6 副仍不在 C1 資料裡，tier 未動。
+- 散文只改雷電獸光電傘蜥的採用率（訓練場升到 100% 進固定班底；除障器 95%、落雷獸 90%、優雅披風 85%）。
+  蜂女王壺壺的採用率仍是舊快照數字——它不在 Top 20，沒有新數字可對。
+- **flibustier 已出 `C1.json`**，重跑 `fetch-cards.mjs` 後 217 張 C1 卡都有 `deckBuilderNr`，QR 5→8 張。
+  但它的卡圖庫只有 C1 **縮圖**、全尺寸圖 404，原本「列 thumbnails 目錄判斷有沒有圖」的做法會整包破圖。
+  已改成對每個 set 的 `1.webp` 做 HEAD 探測；`LIMITLESS_FALLBACK_SETS` 裡的 set 沒圖時用 Limitless 卡圖，
+  卡名與編號仍取 database。圖庫補上 C1 全尺寸圖後重跑就會自動切回去。
+- 剩 12 副不出 QR 全是 `deck-energy.json` 沒填能量（編號已不是瓶頸），要人工看招式費用補。
+  `B4b` 仍不在 `fetch-cards.mjs` 的 `SETS`。
+
+驗證：`/decks` 20 列全繁中、資料日期 2026-11-02（對照 10-30）、展開第 1 列（無攻略、含 C1 卡）30 張圖全數載入、
+QR 顯示、console 零錯誤；三頁改 tier 的攻略頁 SSR 顯示正確 tier；`subset-cards.mjs --check`、QR `--check`、`npm run lint` 通過。
+
+---
+
 ## 部署與驗證
 
 push 後由 **Cloudflare Workers Builds webhook** 自動觸發，約 60 秒上線。
