@@ -41,23 +41,11 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A1/225.webp",
     "deckBuilderNr": 1000017
   },
-  "A1a-1": {
-    "id": "A1a-1",
-    "nameEN": "Exeggcute",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A1a/1.webp",
-    "deckBuilderNr": 215
-  },
   "A1a-19": {
     "id": "A1a-19",
     "nameEN": "Vaporeon",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A1a/19.webp",
     "deckBuilderNr": 233
-  },
-  "A1a-66": {
-    "id": "A1a-66",
-    "nameEN": "Budding Expeditioner",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A1a/66.webp",
-    "deckBuilderNr": 1000022
   },
   "A2-91": {
     "id": "A2-91",
@@ -106,6 +94,12 @@
     "nameEN": "Mars",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A2/155.webp",
     "deckBuilderNr": 1000037
+  },
+  "A2a-4": {
+    "id": "A2a-4",
+    "nameEN": "Combee",
+    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A2a/4.webp",
+    "deckBuilderNr": 428
   },
   "A2a-72": {
     "id": "A2a-72",
@@ -208,6 +202,12 @@
     "nameEN": "Shuckle ex",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A4/21.webp",
     "deckBuilderNr": 877
+  },
+  "A4-102": {
+    "id": "A4-102",
+    "nameEN": "Hitmontop",
+    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A4/102.webp",
+    "deckBuilderNr": 958
   },
   "A4-112": {
     "id": "A4-112",
@@ -407,12 +407,6 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B1a/66.webp",
     "deckBuilderNr": 1000101
   },
-  "B1a-67": {
-    "id": "B1a-67",
-    "nameEN": "Quick-Grow Extract",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B1a/67.webp",
-    "deckBuilderNr": 1000102
-  },
   "B1a-68": {
     "id": "B1a-68",
     "nameEN": "Clemont",
@@ -473,12 +467,6 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B2a/37.webp",
     "deckBuilderNr": 1546
   },
-  "B2a-38": {
-    "id": "B2a-38",
-    "nameEN": "Pawmi",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B2a/38.webp",
-    "deckBuilderNr": 1547
-  },
   "B2b-7": {
     "id": "B2b-7",
     "nameEN": "Charmander",
@@ -515,12 +503,6 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B2b/69.webp",
     "deckBuilderNr": 1000127
   },
-  "B3-4": {
-    "id": "B3-4",
-    "nameEN": "Celebi",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3/4.webp",
-    "deckBuilderNr": 1669
-  },
   "B3-5": {
     "id": "B3-5",
     "nameEN": "Treecko",
@@ -550,6 +532,12 @@
     "nameEN": "Magnezone ex",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3/54.webp",
     "deckBuilderNr": 1719
+  },
+  "B3-78": {
+    "id": "B3-78",
+    "nameEN": "Bonsly",
+    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3/78.webp",
+    "deckBuilderNr": 1743
   },
   "B3-79": {
     "id": "B3-79",
@@ -610,12 +598,6 @@
     "nameEN": "Arena of Antiquity",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3/154.webp",
     "deckBuilderNr": 1000135
-  },
-  "B3a-14": {
-    "id": "B3a-14",
-    "nameEN": "Pawmi",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3a/14.webp",
-    "deckBuilderNr": 1829
   },
   "B3a-19": {
     "id": "B3a-19",
@@ -689,12 +671,6 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3b/68.webp",
     "deckBuilderNr": 1000147
   },
-  "B3b-69": {
-    "id": "B3b-69",
-    "nameEN": "Kid’s Room",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3b/69.webp",
-    "deckBuilderNr": 1000148
-  },
   "B4-10": {
     "id": "B4-10",
     "nameEN": "Combee",
@@ -724,12 +700,6 @@
     "nameEN": "Oricorio",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B4/78.webp",
     "deckBuilderNr": 2039
-  },
-  "B4-100": {
-    "id": "B4-100",
-    "nameEN": "Absol",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B4/100.webp",
-    "deckBuilderNr": 2061
   },
   "B4-103": {
     "id": "B4-103",
@@ -779,23 +749,11 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B4/155.webp",
     "deckBuilderNr": 1000159
   },
-  "C1-5": {
-    "id": "C1-5",
-    "nameEN": "Alolan Exeggutor ex",
-    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_005_EN.webp",
-    "deckBuilderNr": 2182
-  },
-  "C1-14": {
-    "id": "C1-14",
-    "nameEN": "Cutiefly",
-    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_014_EN.webp",
-    "deckBuilderNr": 2191
-  },
-  "C1-15": {
-    "id": "C1-15",
-    "nameEN": "Ribombee",
-    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_015_EN.webp",
-    "deckBuilderNr": 2192
+  "C1-7": {
+    "id": "C1-7",
+    "nameEN": "Combee",
+    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_007_EN.webp",
+    "deckBuilderNr": 2184
   },
   "C1-18": {
     "id": "C1-18",
@@ -820,30 +778,6 @@
     "nameEN": "Mega Greninja ex",
     "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_042_EN.webp",
     "deckBuilderNr": 2219
-  },
-  "C1-43": {
-    "id": "C1-43",
-    "nameEN": "Pikachu ex",
-    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_043_EN.webp",
-    "deckBuilderNr": 2220
-  },
-  "C1-48": {
-    "id": "C1-48",
-    "nameEN": "Pawmi",
-    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_048_EN.webp",
-    "deckBuilderNr": 2225
-  },
-  "C1-49": {
-    "id": "C1-49",
-    "nameEN": "Pawmo",
-    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_049_EN.webp",
-    "deckBuilderNr": 2226
-  },
-  "C1-50": {
-    "id": "C1-50",
-    "nameEN": "Pawmot",
-    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_050_EN.webp",
-    "deckBuilderNr": 2227
   },
   "C1-56": {
     "id": "C1-56",
@@ -880,12 +814,6 @@
     "nameEN": "Eviolite",
     "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_123_EN.webp",
     "deckBuilderNr": 1000170
-  },
-  "C1-124": {
-    "id": "C1-124",
-    "nameEN": "Light Ball",
-    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_124_EN.webp",
-    "deckBuilderNr": 1000171
   },
   "C1-126": {
     "id": "C1-126",
