@@ -761,6 +761,14 @@ Magnezone Miraidon ex #8，兩套都有策展攻略，QR 能量取自 `decks.ts`
 
 ---
 
+## 2026-11-05 這輪：更新 `/pokopia/videos` 建築靈感影片（`/pokopia-videos`）
+
+- **`fetch-yt.mjs` 修正**：YouTube 頻道頁自 2026-11 起把觀看數／時間改成精簡字串（`138`、`4d ago`），完整文字移到 `accessibilityLabel`（`2.9 thousand views`、`4 days ago`），導致原本的 `parseLockup`／`parseViews` 對觀看數與 `d ago` 全抓不到。已改讀 `accessibilityLabel` 並支援 `thousand`/`million` 單位。
+- **頻道動向**：`涼太ぱんけーき♭` 轉做密室逃脫與 Splatoon、`かぴぱか create` 轉做 Minecraft、`すくると` 與 `わむのスローライフっぽい` 近 3–5 個月未更新，以上只留經典作；`HorribleGaming` 持續高產（萬聖鬼鎮系列）。用 YouTube 本月上傳搜尋補進新一批高觀看建築主播（`めいチャンネル`、`ゆりも / Yurimo`、`mayu channel`、`ちょちょ`、`おもち`、`RASEN`、`Multi Craft` 等），共換新 19 支、保留 13 支經典，總計 32 支（7 區：4／7／4／4／4／4／5）。
+- **驗證**：32/32 支通過 oEmbed 查證與官方標題過濾、32/32 張縮圖 `hqdefault.jpg` 回 HTTP 200、`npm run lint` 0 問題、`npm run build`（含字型子集重算）通過、SSR 實測 `/pokopia/videos` 回 200 且 7 個分區與 32 組縮圖／連結全數對齊。
+
+---
+
 ## 部署與驗證
 
 push 後由 **Cloudflare Workers Builds webhook** 自動觸發，約 60 秒上線。
