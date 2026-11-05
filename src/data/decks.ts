@@ -141,7 +141,7 @@ const decks: Deck[] = [
   {
     id: "mega-sceptile-greninja",
     name: "Mega蜥蜴王ex 甲賀忍蛙",
-    tier: "C",
+    tier: "A",
     energy: ["Grass"],
     difficulty: "中",
     summary: "草系主力：神奇糖果直上 Mega蜥蜴王ex，甲賀忍蛙特性每回合補刀。",
@@ -655,7 +655,7 @@ const decks: Deck[] = [
   {
     id: "magnezone-miraidon",
     name: "自爆磁怪 密勒頓ex",
-    tier: "C",
+    tier: "A",
     energy: ["Lightning"],
     difficulty: "中",
     summary: "磁怪重砲主攻：以自爆磁怪作為主要火力，花舞鳥與密勒頓ex 前期爭取充能時間並穩固防線。",
@@ -1025,7 +1025,7 @@ const decks: Deck[] = [
   {
     id: "vespiquen-shuckle",
     name: "蜂女王ex 壺壺ex",
-    tier: "B",
+    tier: "S",
     energy: ["Grass"],
     difficulty: "中",
     summary: "草系一線的耐久牌：蜂女王ex 主線輸出，樹葉披風與芬芳森林堆出誇張耐久。",
@@ -1117,7 +1117,7 @@ const decks: Deck[] = [
   {
     id: "mega-manectric-heliolisk",
     name: "Mega雷電獸ex 光電傘蜥",
-    tier: "A",
+    tier: "B",
     energy: ["Lightning"],
     difficulty: "中",
     summary:

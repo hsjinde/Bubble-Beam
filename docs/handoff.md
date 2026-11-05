@@ -3,7 +3,7 @@
 給下一個接手的人（Claude Code 或 `agy`）。這份檔案記錄目前的 UI／前端品質狀態與待辦，
 每輪工作結束時更新它，不要讓它過期。
 
-最後更新：2026-10-30
+最後更新：2026-11-05
 
 ---
 
@@ -739,6 +739,25 @@ Top 20 有 13 副的招牌卡加總低於 100%（80–95%），其餘 12 副沒�
 驗證：`/decks` 20 列全繁中、資料日期 2026-11-03（對照 11-02）、展開第 4 列（新進榜、無攻略）28 張圖全數算繪含 QR、
 console 零錯誤；五頁改 tier 的攻略頁 SSR 描述顯示正確 tier；`subset-cards.mjs --check`、`npm run lint` 通過，
 QR `--check` 只列出缺能量的 8 副。
+
+---
+
+## 2026-11-05 這輪：排行榜更新（`/tcg-pocket-tier-list`）
+
+純資料輪。升降箭頭以 11-03 為基準（隔兩天）：3 升、12 降、3 持平、2 新進（Mega Sceptile ex Greninja #7、
+Magnezone Miraidon ex #8，兩套都有策展攻略，QR 能量取自 `decks.ts`，不用補 `deck-energy.json`）。
+第一名仍是 Hoopa ex Mega Absol ex（下界 53.31%）。
+
+- 策展 tier 四副：蜂女王壺壺 B→S、Mega 喇叭芽 Greninja（`mega-sceptile-greninja`）C→A、
+  `magnezone-miraidon` C→A、`mega-manectric-heliolisk` A→B（下界 49.87%，離 A 門檻只差 0.13，下輪留意）。
+- `indeedee-giratina`、`mega-altaria-chingling`、`milotic-chien-pao` 不在資料裡，tier 未動；
+  `milotic-eevee-ex` 只有 1 場，維持 B。可能需要更新 `limitless-map.json`。
+- 排名／使用率類文案核對過沒有被推翻。**卡片採用率散文未重核**：蜂女王壺壺（模仿少女 94%、赤日 88%、
+  Serena's Choice 69%）與雷電獸光電傘蜥（固定班底 100%）的數字仍是舊快照，新的 `cardUsage` 是 90–95%，
+  且 `cardUsage` 仍有分類錯誤牌表的問題（見 11-03 那節），留給下輪一起處理。
+
+驗證：`prettier --check`、`npm run lint`、`subset-cards.mjs`（142 張）通過；`npm run build` 見下方狀態。
+未做瀏覽器實測 `/decks`。
 
 ---
 

@@ -191,29 +191,11 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A3b/56.webp",
     "deckBuilderNr": 848
   },
-  "A3b-66": {
-    "id": "A3b-66",
-    "nameEN": "Eevee Bag",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A3b/66.webp",
-    "deckBuilderNr": 1000067
-  },
   "A4-21": {
     "id": "A4-21",
     "nameEN": "Shuckle ex",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A4/21.webp",
     "deckBuilderNr": 877
-  },
-  "A4-102": {
-    "id": "A4-102",
-    "nameEN": "Hitmontop",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A4/102.webp",
-    "deckBuilderNr": 958
-  },
-  "A4-112": {
-    "id": "A4-112",
-    "nameEN": "Umbreon ex",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A4/112.webp",
-    "deckBuilderNr": 968
   },
   "A4-120": {
     "id": "A4-120",
@@ -340,6 +322,12 @@
     "nameEN": "Hydreigon",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B1/157.webp",
     "deckBuilderNr": 1239
+  },
+  "B1-177": {
+    "id": "B1-177",
+    "nameEN": "Goomy",
+    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B1/177.webp",
+    "deckBuilderNr": 1259
   },
   "B1-184": {
     "id": "B1-184",
