@@ -95,12 +95,6 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A2/155.webp",
     "deckBuilderNr": 1000037
   },
-  "A2a-4": {
-    "id": "A2a-4",
-    "nameEN": "Combee",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A2a/4.webp",
-    "deckBuilderNr": 428
-  },
   "A2a-72": {
     "id": "A2a-72",
     "nameEN": "Irida",
@@ -196,6 +190,12 @@
     "nameEN": "Shuckle ex",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A4/21.webp",
     "deckBuilderNr": 877
+  },
+  "A4-102": {
+    "id": "A4-102",
+    "nameEN": "Hitmontop",
+    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A4/102.webp",
+    "deckBuilderNr": 958
   },
   "A4-120": {
     "id": "A4-120",
@@ -419,6 +419,12 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B2/147.webp",
     "deckBuilderNr": 1000108
   },
+  "B2-149": {
+    "id": "B2-149",
+    "nameEN": "Diantha",
+    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B2/149.webp",
+    "deckBuilderNr": 1000110
+  },
   "B2-153": {
     "id": "B2-153",
     "nameEN": "Training Area",
@@ -538,6 +544,12 @@
     "nameEN": "Mega Lucario ex",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3/81.webp",
     "deckBuilderNr": 1746
+  },
+  "B3-86": {
+    "id": "B3-86",
+    "nameEN": "Sawk",
+    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3/86.webp",
+    "deckBuilderNr": 1751
   },
   "B3-105": {
     "id": "B3-105",
@@ -736,12 +748,6 @@
     "nameEN": "Rainbow Cave",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B4/155.webp",
     "deckBuilderNr": 1000159
-  },
-  "C1-7": {
-    "id": "C1-7",
-    "nameEN": "Combee",
-    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_007_EN.webp",
-    "deckBuilderNr": 2184
   },
   "C1-18": {
     "id": "C1-18",

@@ -3,7 +3,7 @@
 給下一個接手的人（Claude Code 或 `agy`）。這份檔案記錄目前的 UI／前端品質狀態與待辦，
 每輪工作結束時更新它，不要讓它過期。
 
-最後更新：2026-11-05
+最後更新：2026-11-06
 
 ---
 
@@ -758,6 +758,26 @@ Magnezone Miraidon ex #8，兩套都有策展攻略，QR 能量取自 `decks.ts`
 
 驗證：`prettier --check`、`npm run lint`、`subset-cards.mjs`（142 張）通過；`npm run build` 見下方狀態。
 未做瀏覽器實測 `/decks`。
+
+---
+
+## 2026-11-06 這輪：排行榜更新（`/tcg-pocket-tier-list`）
+
+純資料輪。升降箭頭以 11-05 為基準：8 升、5 降、7 持平、0 新進。第一名仍是 Hoopa ex Mega Absol ex
+（下界 53.88%）；最大跌幅是 Hoopa ex Mega Sableye ex #2→#6（只有 144 場，使用率 0.58%）。
+
+- 策展 tier 三副（使用者同意後套用）：`mega-manectric-heliolisk` B→A（下界 50.68%）、
+  `magnezone-miraidon` A→B（49.38%，#8→#11）、`milotic-eevee-ex` B→C（資料裡仍只有 1 場、
+  已跌出排行，算出 D 壓到 C；上一輪是刻意維持 B，這輪改依規則套用）。
+- `indeedee-giratina`、`mega-altaria-chingling`、`milotic-chien-pao` 仍不在資料裡，tier 未動。
+- 排名／使用率類文案核對過沒有被推翻。**卡片採用率散文仍未重核**（11-05 那節列的蜂女王壺壺、
+  雷電獸光電傘蜥數字），照舊留待處理。
+- QR 仍是 14 張，缺能量的 6 副與上一版相同（Giratina ex Dragonair、Umbreon 三副、
+  Greninja ex Mega Greninja ex、Mega Mewtwo X ex Mew ex），沒有補 `deck-energy.json`。
+
+驗證：繁中名 20/20、`subset-cards.mjs`（143 張）、`npm run lint` 通過；`deck-qr.json` 的 prettier
+警告上一版就有（生成檔）。瀏覽器實測 `/decks`：20 列、資料日期 2026-11-06、展開非策展列卡圖 0 破圖、
+QR 正常載入；三副改 tier 的詳情頁 SSR 顯示新 tier。唯一 console 錯誤是首頁 `/videos/manifest.json` 404（設計上的退路）。
 
 ---
 

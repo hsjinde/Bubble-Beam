@@ -6,13 +6,6 @@
       "Darkness"
     ]
   },
-  "Hoopa ex Mega Sableye ex": {
-    "code": "EJiWlJiWnpiWnpiWqJiWqJiXwJiXwJiYLpiYLpiY4piaXpiapJiapJibgJiccJiccAQAD0YAS74AUKAAUKABBw==",
-    "file": "hoopa-ex-mega-sableye-ex.png",
-    "energy": [
-      "Darkness"
-    ]
-  },
   "Mega Altaria ex Espeon": {
     "code": "CpiWnpiWnpiWqJiWqJiXKpiaXpiaXpia9JibgJicFgoAKfQALkAAMXQAMXQAMewAMewAQDgAQDgAR64AR64BBQ==",
     "file": "mega-altaria-ex-espeon.png",
@@ -27,6 +20,14 @@
       "Water"
     ]
   },
+  "Mega Altaria ex Greninja": {
+    "code": "C5iWnpiWnpiWqJiWqJiXwJiYYJiYYJiaXpiaXpibipibigkAA2YAA2YAA3oAA3oALkAALoYALoYAMewAMewCAwU=",
+    "file": "mega-altaria-ex-greninja.png",
+    "energy": [
+      "Water",
+      "Psychic"
+    ]
+  },
   "Vespiquen ex Shuckle ex": {
     "code": "DZiWlJiWqJiWqJiXKpiX8piYfpiYfpiaXpiaXpibgJibvJibvJidTAcAIkIAIkIANgYATP4ATP4ATQgATQgBAQ==",
     "file": "vespiquen-ex-shuckle-ex.png",
@@ -34,12 +35,11 @@
       "Grass"
     ]
   },
-  "Mega Altaria ex Greninja": {
-    "code": "C5iWnpiWnpiWqJiWqJiXwJiYYJiYYJiaXpiaXpibipibigkAA2YAA2YAA3oAA3oALkAALoYALoYAMewAMewCAwU=",
-    "file": "mega-altaria-ex-greninja.png",
+  "Hoopa ex Mega Sableye ex": {
+    "code": "EJiWlJiWnpiWnpiWqJiWqJiXwJiXwJiYLpiYLpiY4piaXpiapJiapJibgJiccJiccAQAD0YAS74AUKAAUKABBw==",
+    "file": "hoopa-ex-mega-sableye-ex.png",
     "energy": [
-      "Water",
-      "Psychic"
+      "Darkness"
     ]
   },
   "Mega Sceptile ex Greninja": {
@@ -49,9 +49,9 @@
       "Grass"
     ]
   },
-  "Magnezone Miraidon ex": {
-    "code": "CpiWnpiWnpiWqJiWqJiXwJiaSpiaaJiaaJiahpiahgoAA9QAA9QAGUYAGUYAMS4AM+oAM+oAM/4AM/4AR6QBBA==",
-    "file": "magnezone-miraidon-ex.png",
+  "Mega Manectric ex Heliolisk": {
+    "code": "DZiWnpiWnpiWqJiWqJiXKpiXwJiaXpiacpiacpiahpiahpia9JicIAcANBIANBIAPooAP8AAP8AATvwATvwBBA==",
+    "file": "mega-manectric-ex-heliolisk.png",
     "energy": [
       "Lightning"
     ]
@@ -63,18 +63,18 @@
       "Darkness"
     ]
   },
-  "Mega Manectric ex Heliolisk": {
-    "code": "DZiWnpiWnpiWqJiWqJiXKpiXwJiaXpiacpiacpiahpiahpia9JicIAcANBIANBIAPooAP8AAP8AATvwATvwBBA==",
-    "file": "mega-manectric-ex-heliolisk.png",
-    "energy": [
-      "Lightning"
-    ]
-  },
   "Hydreigon Mega Absol ex": {
     "code": "DpiWnpiWnpiXwJiYYJiYYJiaXpiaXpibdpibdpibgJiccJiccJidTJidTAYAMCoAMFIAMFIAMGYAMGYARYgBBw==",
     "file": "hydreigon-mega-absol-ex.png",
     "energy": [
       "Darkness"
+    ]
+  },
+  "Magnezone Miraidon ex": {
+    "code": "CpiWnpiWnpiWqJiWqJiXwJiaSpiaaJiaaJiahpiahgoAA9QAA9QAGUYAGUYAMS4AM+oAM+oAM/4AM/4AR6QBBA==",
+    "file": "magnezone-miraidon-ex.png",
+    "energy": [
+      "Lightning"
     ]
   },
   "Mega Charizard Y ex Entei ex": {

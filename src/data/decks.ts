@@ -324,7 +324,7 @@ const decks: Deck[] = [
   {
     id: "milotic-eevee-ex",
     name: "美納斯ex 伊布ex",
-    tier: "B",
+    tier: "C",
     energy: ["Water"],
     difficulty: "易",
     summary: "水系高機動控場：伊布ex 靈活抽牌與展開，美納斯ex 封鎖對方道具與特定招式掌控節奏。",
@@ -655,7 +655,7 @@ const decks: Deck[] = [
   {
     id: "magnezone-miraidon",
     name: "自爆磁怪 密勒頓ex",
-    tier: "A",
+    tier: "B",
     energy: ["Lightning"],
     difficulty: "中",
     summary: "磁怪重砲主攻：以自爆磁怪作為主要火力，花舞鳥與密勒頓ex 前期爭取充能時間並穩固防線。",
@@ -1117,7 +1117,7 @@ const decks: Deck[] = [
   {
     id: "mega-manectric-heliolisk",
     name: "Mega雷電獸ex 光電傘蜥",
-    tier: "B",
+    tier: "A",
     energy: ["Lightning"],
     difficulty: "中",
     summary:
