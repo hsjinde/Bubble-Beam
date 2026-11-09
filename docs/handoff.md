@@ -3,7 +3,7 @@
 給下一個接手的人（Claude Code 或 `agy`）。這份檔案記錄目前的 UI／前端品質狀態與待辦，
 每輪工作結束時更新它，不要讓它過期。
 
-最後更新：2026-11-06
+最後更新：2026-11-09
 
 ---
 
@@ -734,7 +734,7 @@ QR 顯示、console 零錯誤；三頁改 tier 的攻略頁 SSR 顯示正確 tie
 但實際牌表是 16 份全帶，攻略內文寫的是排除這 4 份後的數字，兩邊會對不起來。
 Top 20 有 13 副的招牌卡加總低於 100%（80–95%），其餘 12 副沒有逐份查，也可能是低於 15% 門檻的異圖版本造成的。
 代表牌表（`cards`、QR 的來源）20 副都含招牌卡，這輪沒有受影響；但它取的是第一份，所以同樣沒有防呆。
-修法建議：過濾掉不含 archetype 招牌卡的牌表。**別為了套用修正而當天重跑 `update-meta.mjs`**，會洗掉名次基準，等下次正常更新。
+修法建議：過濾掉不含 archetype 招牌卡的牌表。**別為了套用修正而當天重跑 `update-meta.mjs`**，會洗掉名次基準，等下次正常更新。（2026-11-09 已修，見該輪。）
 
 驗證：`/decks` 20 列全繁中、資料日期 2026-11-03（對照 11-02）、展開第 4 列（新進榜、無攻略）28 張圖全數算繪含 QR、
 console 零錯誤；五頁改 tier 的攻略頁 SSR 描述顯示正確 tier；`subset-cards.mjs --check`、`npm run lint` 通過，
@@ -778,6 +778,52 @@ Magnezone Miraidon ex #8，兩套都有策展攻略，QR 能量取自 `decks.ts`
 驗證：繁中名 20/20、`subset-cards.mjs`（143 張）、`npm run lint` 通過；`deck-qr.json` 的 prettier
 警告上一版就有（生成檔）。瀏覽器實測 `/decks`：20 列、資料日期 2026-11-06、展開非策展列卡圖 0 破圖、
 QR 正常載入；三副改 tier 的詳情頁 SSR 顯示新 tier。唯一 console 錯誤是首頁 `/videos/manifest.json` 404（設計上的退路）。
+
+---
+
+## 2026-11-09 這輪：排行榜更新＋濾掉歸錯分類的牌表（`/tcg-pocket-tier-list`）
+
+升降箭頭以 11-06 為基準：6 升、9 降、3 持平、2 新進（`Dedenne ex Indeedee ex` #19、
+`Dragonair Mega Rayquaza ex` #20，能量都已在 `deck-energy.json`）。第一名換成 `Magnezone Miraidon ex`
+（下界 54.06%，從 #11 上來），`Hoopa ex Mega Absol ex` 掉到 #4。20 列全繁中，不用補譯名。
+
+**`update-meta.mjs` 新增過濾**（11-03 那節的待辦）：archetype 名要能被該牌表實際的卡名完整拼出來，
+才算屬於這副牌（`listMatchesArchetype()`）。代表牌表、QR、`cardUsage` 都從過濾後的那批算。
+刻意不解析 slug，因為 set 代號不一定每張都有。
+
+- 這輪 400 份濾掉 72 份，每副 0–9 份，所以 `listsSampled` 現在是 11–20，不再固定 20。
+  頁面文案「最近 N 份」是動態的，不用改。
+- 丟超過一半時腳本結尾會印 `WARNING`，代表比對邏輯可能壞了（例如上游改卡名），不要直接 commit。
+- 抽查丟最多的 4 副（共 27 份）全是別的牌組，沒有誤殺。`Mega Lucario ex Lucario` 丟 9/20，採用率只剩 11 份樣本。
+- 同一份蜂女王牌表會同時出現在路卡利歐、胡帕、騎拉帝納的頁面，看起來不只是玩家選錯分類，
+  也可能是上游歸類的問題。沒有再往下查，過濾對兩種來源都有效。
+
+**要重跑時**：先 `git checkout src/data/meta.json` 還原基準再跑，不要疊在上一次的產出上。
+
+**這輪的文件落差**：一次更新其實是 20 副 × 20 份，約 420 次 fetch（光 250ms 延遲就要約 2 分鐘），
+CLAUDE.md 與 skill 寫的「約 40 次、~30s」是加入取樣前的數字，還沒改。
+
+- 策展 tier 四副（使用者同意後套用）：`magnezone-miraidon` B→S（54.06%）、`mega-lucario` C→A（51.28%）、
+  `suicune-baxcalibur` S→A（50.72%）、`miraidon-magnezone` C→B（48.53%）。
+  `mega-sceptile-greninja`（50.13%）與 `mega-manectric-heliolisk`（50.01%）壓在 A 門檻邊緣，下輪留意。
+- `indeedee-giratina`、`milotic-chien-pao` 不在資料裡，tier 未動；`mega-altaria-chingling` 只有 5 場、維持 C。
+- 排名／使用率類文案核對過沒有被推翻。**積欠的採用率文案已用過濾後的數字重核**：
+  `hoopa-mega-absol`、`vespiquen-shuckle`、`mega-manectric-heliolisk`，歸類也對齊頁面分桶。
+  `hoopa-greninja`、`mega-lucario-greninja` 不在 Top 20，沒有新數字可對，散文未動。
+- **牌表細節留給使用者決定**：胡帕的策展牌表還帶小氣球與開始的平原（都低於 15%），缺 X速度、
+  Pokémon Center Lady、Mars；蜂女王的牌表還帶莉佳、費洛美螂、紙御劍，缺娜姿。
+  胡帕那頁的散文只註明了小氣球與開始的平原，卻把牌表沒帶的 X速度等三張列為「不要動」的固定班底；
+  蜂女王那頁第 1、2 段仍提到莉佳與紙御劍，第 4 段卻寫它們低於 15%。這兩處同頁不一致要等牌表決定後一起修。
+- QR 14→16 張，缺能量 4 副：`Giratina ex Dragonair`、`Umbreon Mega Absol ex`、`Umbreon Mega Sableye ex`、
+  `Mega Mewtwo X ex Mew ex`。
+
+驗證：`npm run lint`、`npm run build`、`prettier --check`（`decks.ts`、`update-meta.mjs`）通過，
+`subset-cards.mjs --check` 乾淨（146 張），tier 重算後與資料零差異。瀏覽器實測 `/decks`：20 列全繁中、
+資料日期 2026-11-09、全部展開 630 張圖 0 破圖、16 張 QR；唯一 console 錯誤是首頁 `/videos/manifest.json` 404（設計上的退路）。
+7 頁改動的攻略頁 SSR 顯示正確 tier 與新數字；胡帕頁文字與採用率區塊逐項一致、無 hydration 警告。
+
+**⚠ 這輪 github.com DNS 解析失敗，沒有 `git fetch`，只在本機 commit、沒有 push，所以還沒上線。**
+網路恢復後要先 pull；如果遠端也改過 `meta.json`，名次基準要由人決定。
 
 ---
 

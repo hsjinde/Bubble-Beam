@@ -97,6 +97,24 @@ async function fetchDeckLists(slug, limit) {
   return lists.length ? lists : null;
 }
 
+// Limitless 的 archetype 頁會列出玩家選錯分類的牌表（蜂女王壺壺的 20 份裡曾有 4 份
+// 根本沒有蜂女王ex），不濾掉就會拉低招牌卡採用率，排第一的話還會變成代表牌表與 QR。
+// 判定方式：archetype 名要能被該牌表實際的卡名完整拼出來。刻意不解析 slug——
+// 它的 set 代號不一定每張都有（mega-altaria-ex-chingling-b1）。
+function normalizeName(s) {
+  return s.normalize("NFKD").replace(/\p{M}/gu, "").replace(/[‘’]/g, "'").toLowerCase().trim();
+}
+
+function listMatchesArchetype(archetypeName, cards) {
+  const names = [...new Set(cards.map((c) => normalizeName(c.name)))];
+  const consume = (rest) =>
+    rest === "" ||
+    names.some(
+      (n) => (rest === n || rest.startsWith(`${n} `)) && consume(rest.slice(n.length).trimStart()),
+    );
+  return consume(normalizeName(archetypeName));
+}
+
 // Card usage across the sampled lists: what share of lists ran the card at all,
 // plus the most common copy count among those that did. This is what separates
 // the core cards every list runs from the flex slots each player picks.
@@ -161,6 +179,7 @@ const eligible = [...byName.values()].sort((a, b) => b.wilsonLowerBoundPct - a.w
 const dropped = data.decks.length - eligible.length;
 
 const decks = [];
+const filterWarnings = [];
 for (const [i, d] of eligible.slice(0, TOP_N).entries()) {
   const deck = {
     rank: i + 1,
@@ -178,7 +197,17 @@ for (const [i, d] of eligible.slice(0, TOP_N).entries()) {
     ...(nameToCuratedId[d.name] ? { curatedId: nameToCuratedId[d.name] } : {}),
   };
   try {
-    const lists = await fetchDeckLists(d.slug, LISTS_PER_DECK);
+    const fetched = await fetchDeckLists(d.slug, LISTS_PER_DECK);
+    const matched = fetched?.filter((l) => listMatchesArchetype(d.name, l.cards)) ?? [];
+    const lists = matched.length ? matched : null;
+    if (fetched) {
+      const droppedLists = fetched.length - matched.length;
+      if (droppedLists) console.log(`  dropped ${droppedLists}/${fetched.length} misfiled lists`);
+      // 丟超過一半通常是比對邏輯的問題（例如上游卡名改了），不是真的有那麼多人選錯分類
+      if (droppedLists * 2 > fetched.length) {
+        filterWarnings.push(`${d.name}: dropped ${droppedLists}/${fetched.length}`);
+      }
+    }
     if (lists) {
       // 第一份＝最佳賽績，仍當「代表牌表」，欄位語意與前端不變
       deck.cards = lists[0].cards;
@@ -209,6 +238,11 @@ const out = {
   decks,
 };
 await writeFile(metaPath, JSON.stringify(out, null, 2));
+if (filterWarnings.length) {
+  console.warn(
+    `WARNING: more than half of the sampled lists were dropped — check the name matching before committing:\n  ${filterWarnings.join("\n  ")}`,
+  );
+}
 const moved = decks.filter((d) => typeof d.previousRank === "number" && d.previousRank !== d.rank);
 console.log(
   `wrote meta.json: top ${decks.length} of ${eligible.length} eligible (${dropped} archetypes below ${MIN_GAMES} games or same-name duplicates), ${decks.filter((d) => d.curatedId).length} curated links, ${decks.filter((d) => d.cards).length} with sample decklists, ${decks.reduce((n, d) => n + (d.listsSampled ?? 0), 0)} lists sampled for usage rates, fetched ${out.fetchedAt}`,
