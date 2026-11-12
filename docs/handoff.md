@@ -835,6 +835,18 @@ CLAUDE.md 與 skill 寫的「約 40 次、~30s」是加入取樣前的數字，�
 
 ---
 
+## 2026-11-09 這輪：行事曆補 Vee Vee! Eevee、時間軸收 C1（`/tcg-pocket-schedule`）
+
+純資料輪，改 `events.json`、`sets.json`、`set-names-tc.json`。
+
+- **新增**：Vee Vee! Eevee Missions 11/21–12/15（Pokemon Zone＋ptcgpocket.gg）。官方繁中名查不到，只顯示英文。
+- **既有活動**：`endAt` 全部不動。PROMO Reissue 兩筆、Promo Pack C Vol. 1、2 週年的 note 補上較晚的商店截止日。
+- **時間軸**：上游補上 C1、PROMO-C、SP1，共 27 包。SP1「最初的夥伴」是 10/30 那輪從官方 #87 內文讀到的，這輪內文算繪不出來、沒有重新核對。
+- **沒收**：C2 只有 Pokemon Zone 一家標 12/16，官方無稿，所以 `/decks` 提示條繼續空著；SP1 的販售期間來源打架。判定過程寫在 `events.json` 的 `_comment`。
+- **驗證**：三檔通過 `prettier --check`；`/decks/schedule` 的日期對過來源，沒有 hydration 警告；`npm run build` 通過。console 另有一筆 404，資源清單查不到對應項目，來源沒追出來。
+
+---
+
 ## 部署與驗證
 
 push 後由 **Cloudflare Workers Builds webhook** 自動觸發，約 60 秒上線。

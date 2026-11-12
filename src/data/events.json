@@ -242,9 +242,30 @@
     "     rankedmatch.shtml 還沒有 C1 賽季。fetch-sets.mjs 已重跑：上游 flibustier 還沒有 C1（cards/C1.json 404），",
     "     sets.json 過 prettier 後零差異；set-names-tc.json 已預寫 C1，上游收錄那天自己生效。",
     "",
+    "2026-11-09 更新（補 Vee Vee! Eevee，C1 進時間軸）：",
+    "  a. 新增 Vee Vee! Eevee Missions 11/21–12/15。兩個讀遊戲資料的站一致：Pokemon Zone 單一活動頁（11月21日 - 2026年12月15日）",
+    "     ＋ ptcgpocket.gg 的 Event Period（11/21 06:00 UTC 至 12/15 06:00 UTC），兩站的七天登入獎勵也相同（合計 10 包）。",
+    "     官方繁中名查不到，titleTC 省略。",
+    "  b. 10/30 那批活動開打後的實裝對帳：Dual Fusion Emblem 11/6–11/16 與 Bonus Week 11/14–11/21 兩站皆與官方吻合，無偏移。",
+    "     ptcgpocket.gg 日曆把 PROMO Reissue 兩筆標到 11/20、Promo Pack C Vol. 1 標到 12/9、2 週年標到 12/22，但 Pokemon Zone",
+    "     的商店區塊是同樣的區間，而關卡／任務區塊仍是 11/13、12/2——這是檔頭那條短版／長版規則的又一例。",
+    "     endAt 維持短版，長版寫進各筆 note。2 週年的 12/15 另有 Serebii 與 Game8 佐證。",
+    "  c. C2 不收：只有 Pokemon Zone 標 2026-12-16（/sets/c2/ 與 /schedule/upcoming/ 是同站兩頁，不算兩來源）。ptcgpocket.gg/c2 404，",
+    "     官方繁中站最新仍是 #87，官方英文稿只說下一包發售時會換租用牌組、沒有日期；Serebii、Limitless、Game8、billsarchive 也都沒有。",
+    "     C1 租用牌組與 Random Battles 同在 12/16 結束，方向上吻合，但那是推論不是來源。官方多半發售前約一週發稿，下一輪優先看官方。",
+    "     NextSetBanner 這段期間空著是預期行為。",
+    "  d. Special Pack: First Partners（SP1）的活動不收：官方繁中稿沒給期間，Gamespress 寫 10/31–12/26、ptcgpocket.gg 寫到 12/31，來源打架。",
+    "     發售日也不一致：sets.json 與 ptcgpocket.gg 是 10/29，Bulbapedia 與 Gamespress 是 10/31；sets.json 是生成檔，時間軸照上游顯示。",
+    "  e. fetch-sets.mjs 重跑：上游補上 C1（217 張）、PROMO-C（C Series Vol. 1）、SP1（30 張，series 是新值 Special，前端只顯示 code，不受影響）。",
+    "     SP1 繁中名取 10/30 那輪從 #87 內文讀到的「特別包「最初的夥伴」」，寫進 set-names-tc.json；PROMO-C 照規則留英文。",
+    "  f. 環境：**官方繁中站 #87 這輪算繪不出內文**（沒有 <article>，拒絕 cookie 並重載後相同），<title> 與 sitemap 抓法仍有效（#88–#102 皆無新公告）。",
+    "     SP1 的繁中名因此沒有在本輪重新核對，下次內文讀得到時要回頭確認。Pokemon Zone 的 /schedule/ 這輪恢復可開（前三輪卡 Cloudflare）。",
+    "     Serebii 的 dropevents、wonderpickevents、rankedmatch 還沒有 11 月項目。ptcgpocket.gg 的 Elite Deck Gift Missions 4 頁把結束年份寫成",
+    "     2026/1/27，內文又留著 10/28 的舊段落，是筆誤與舊文，本輪不據此收錄。",
+    "",
     "type：set（新擴充包）／drop（Drop 活動）／wonderpick／ranked（排名賽季）／other"
   ],
-  "updatedAt": "2026-10-30",
+  "updatedAt": "2026-11-09",
   "events": [
     {
       "id": "pika-pika-pikachu-missions-2026-10",
@@ -485,7 +506,7 @@
       "titleTC": "2週年紀念活動",
       "startAt": "2026-10-30T00:00:00+08:00",
       "endAt": "2026-12-15T23:59:00+08:00",
-      "note": "慶祝上線 2 週年，禮物盒發放可兌換「必得 1 張 ★★ 卡牌擴充包」的兌換券。官方時刻為台灣時間 10/30 14:00 至 12/15 13:59。",
+      "note": "慶祝上線 2 週年，禮物盒發放可兌換「必得 1 張 ★★ 卡牌擴充包」的兌換券。官方時刻為台灣時間 10/30 14:00 至 12/15 13:59；兌換卡包的商店開到 12/22。",
       "url": "https://www.pokemontcgpocket.com/tc/news/87/"
     },
     {
@@ -495,7 +516,7 @@
       "titleTC": "復刻PROMO掉落活動2026",
       "startAt": "2026-10-30T00:00:00+08:00",
       "endAt": "2026-11-13T23:59:00+08:00",
-      "note": "可取得特典卡牌包 A 系列第 7 波與 B 系列第 1～13 波的掉落活動，任務給的特典卡兌換券可換過去登場過的特典卡。官方時刻為台灣時間 10/30 14:00 至 11/13 13:59。",
+      "note": "可取得特典卡牌包 A 系列第 7 波與 B 系列第 1～13 波的掉落活動，任務給的特典卡兌換券可換過去登場過的特典卡。官方時刻為台灣時間 10/30 14:00 至 11/13 13:59；活動商店開到 11/20。",
       "url": "https://www.pokemontcgpocket.com/tc/news/87/"
     },
     {
@@ -505,7 +526,7 @@
       "titleTC": "復刻PROMO得卡挑戰活動2026",
       "startAt": "2026-10-30T00:00:00+08:00",
       "endAt": "2026-11-13T23:59:00+08:00",
-      "note": "B 系列得卡挑戰出過的特典卡重新登場，活動期間幸運挑戰比平時更容易出現。官方時刻為台灣時間 10/30 14:00 至 11/13 13:59。",
+      "note": "B 系列得卡挑戰出過的特典卡重新登場，活動期間幸運挑戰比平時更容易出現。官方時刻為台灣時間 10/30 14:00 至 11/13 13:59；活動商店開到 11/20。",
       "url": "https://www.pokemontcgpocket.com/tc/news/87/"
     },
     {
@@ -545,8 +566,17 @@
       "titleTC": "特典卡牌包 C系列第1波",
       "startAt": "2026-11-18T00:00:00+08:00",
       "endAt": "2026-12-02T23:59:00+08:00",
-      "note": "每日任務與對戰活動發放特典卡牌包，對戰可選隨機對戰或新的「雙元融合限定對戰」（只能用雙元融合與本波特典卡組牌）。官方時刻為台灣時間 11/18 14:00 至 12/2 13:59。",
+      "note": "每日任務與對戰活動發放特典卡牌包，對戰可選隨機對戰或新的「雙元融合限定對戰」（只能用雙元融合與本波特典卡組牌）。官方時刻為台灣時間 11/18 14:00 至 12/2 13:59；活動商店開到 12/9。",
       "url": "https://www.pokemontcgpocket.com/tc/news/87/"
+    },
+    {
+      "id": "vee-vee-eevee-missions-2026-11",
+      "type": "other",
+      "title": "Vee Vee! Eevee Missions",
+      "startAt": "2026-11-21T00:00:00+08:00",
+      "endAt": "2026-12-15T23:59:00+08:00",
+      "note": "活動期間內登入滿 7 天，合計可領 10 包 A3b『伊布花園』擴充包。精確時刻為 11/21 06:00 UTC 至 12/15 06:00 UTC（台灣時間 11/21 下午兩點至 12/15 下午兩點）。",
+      "url": "https://www.pokemon-zone.com/events/vee-vee-eevee/"
     },
     {
       "id": "themed-promo-card-events-2026-11",

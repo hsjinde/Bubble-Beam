@@ -219,5 +219,28 @@
     "count": 429,
     "nameEN": "Deluxe Pack: Mega",
     "packs": ["Deluxe Pack Mega"]
+  },
+  {
+    "code": "C1",
+    "series": "C",
+    "releaseDate": "2026-10-29",
+    "count": 217,
+    "nameEN": "Dual Fusion",
+    "packs": ["Dual Fusion Mega Mewtwo X", "Dual Fusion Pikachu"]
+  },
+  {
+    "code": "PROMO-C",
+    "series": "C",
+    "releaseDate": "2026-10-29",
+    "nameEN": "Promo C",
+    "packs": ["C Series Vol. 1"]
+  },
+  {
+    "code": "SP1",
+    "series": "Special",
+    "releaseDate": "2026-10-29",
+    "count": 30,
+    "nameEN": "Special Pack: First Partners",
+    "packs": ["First Partners"]
   }
 ]
