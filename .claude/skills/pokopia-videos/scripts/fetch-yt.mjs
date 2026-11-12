@@ -36,14 +36,10 @@ function extractYtInitialData(html) {
 
 function parseViews(s) {
   if (!s) return 0;
-  const m = s.replace(/,/g, "").match(/([\d.]+)\s*([KMB]?)/i);
+  const m = s.replace(/,/g, "").match(/([\d.]+)\s*(thousand|million|billion|[KMB])?/i);
   if (!m) return 0;
-  let n = parseFloat(m[1]);
-  const u = m[2].toUpperCase();
-  if (u === "K") n *= 1e3;
-  else if (u === "M") n *= 1e6;
-  else if (u === "B") n *= 1e9;
-  return Math.round(n);
+  const mult = { k: 1e3, thousand: 1e3, m: 1e6, million: 1e6, b: 1e9, billion: 1e9 };
+  return Math.round(parseFloat(m[1]) * (mult[m[2]?.toLowerCase()] ?? 1));
 }
 
 // 把 "3 weeks ago" 這類相對時間粗略換算成天數，供「近期」門檻判斷
@@ -64,8 +60,13 @@ function parseLockup(lv) {
   const id = idm ? idm[1] : (lv.contentId ?? "");
   const parts = [];
   const rows = meta?.metadata?.contentMetadataViewModel?.metadataRows ?? [];
+  // 2026-11 起 text.content 是精簡字串（17K、3d ago），比對不到 view／day 而且不會報錯，
+  // 完整文字（17 thousand views、3 days ago）在 accessibilityLabel
   for (const row of rows)
-    for (const p of row.metadataParts ?? []) if (p.text?.content) parts.push(p.text.content);
+    for (const p of row.metadataParts ?? []) {
+      const text = p.accessibilityLabel ?? p.text?.content;
+      if (text) parts.push(text);
+    }
   const views = parts.find((t) => /view|回視聴|觀看/i.test(t)) ?? "";
   const time = parts.find((t) => /ago|前/i.test(t)) ?? "";
   let length = "";
