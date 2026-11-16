@@ -3,7 +3,7 @@
 給下一個接手的人（Claude Code 或 `agy`）。這份檔案記錄目前的 UI／前端品質狀態與待辦，
 每輪工作結束時更新它，不要讓它過期。
 
-最後更新：2026-11-09
+最後更新：2026-11-16
 
 ---
 
@@ -824,6 +824,29 @@ CLAUDE.md 與 skill 寫的「約 40 次、~30s」是加入取樣前的數字，�
 
 **⚠ 這輪 github.com DNS 解析失敗，沒有 `git fetch`，只在本機 commit、沒有 push，所以還沒上線。**
 網路恢復後要先 pull；如果遠端也改過 `meta.json`，名次基準要由人決定。
+
+---
+
+## 2026-11-16 這輪：排行榜更新（`/tcg-pocket-tier-list`）
+
+升降箭頭以 11-12 為基準：6 升、7 降、5 持平、2 新進（`Dragonair Mega Rayquaza ex` #12、
+`Dedenne ex Indeedee ex` #17）。第一名仍是 `Mega Altaria ex Espeon`（54.09%），
+`Mega Altaria ex Greninja` 從 #5 升到 #2。20 列全繁中，不用補譯名；牌表卡片全在索引內。
+
+- **`Vespiquen ex Shuckle ex` 觸發「丟超過一半」WARNING（11/20）——誤報**：逐份抓下來看，
+  被丟的 11 份是路卡利歐、七夕青鳥、戟脊龍、三首惡龍、噴火龍、Mega蒂安希的牌表，留下的 9 份都是真蜂女王壺壺。
+  比對邏輯沒壞，但這副的採用率只剩 9 份樣本（上輪 14）。
+- 策展 tier 兩副（使用者同意後套用）：`mega-lucario` A→B（49.67%）、`mega-charizard-entei` B→A（50.16%）。
+  `indeedee-giratina` 仍不在資料裡，tier 未動。
+- 採用率文案依新數字改三處：胡帕頁模仿少女 64%→57%；蜂女王頁模仿少女併入「全數採用」、
+  三蜜蜂 93%→89%、Serena's Choice 79%→78%、赤日 71%→56%，並補上新越過門檻的 Mars（22%）。
+  光電傘蜥、三首惡龍 Mega勾魂眼的數字與本輪一致，未動。11-09 那節記的「牌表細節留給使用者決定」仍未處理。
+- QR 15→16 張（新增 Dedenne、Dragonair Mega Rayquaza，移除跌出榜的 `hoopa-ex-greninja`），
+  缺能量 4 副：`Umbreon Mega Absol ex`、`Giratina ex Dragonair`、`Mega Mewtwo X ex Mew ex`、`Greninja Mega Mewtwo X ex`。
+
+驗證：`npm run lint`、`vite build`、`prettier --check src/data/decks.ts` 通過，`subset-cards.mjs --check` 乾淨（149 張）。
+瀏覽器實測 `/decks`：資料日期 2026-11-16、20 列全繁中、展開 Dragonair Mega Rayquaza 有牌表與 QR、0 破圖、無 console 錯誤；
+`mega-lucario`／`mega-charizard-entei` 攻略頁顯示新 tier，胡帕與蜂女王頁 SSR 帶新數字。
 
 ---
 

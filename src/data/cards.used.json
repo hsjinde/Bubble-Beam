@@ -137,12 +137,6 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A3/66.webp",
     "deckBuilderNr": 647
   },
-  "A3-80": {
-    "id": "A3-80",
-    "nameEN": "Comfey",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A3/80.webp",
-    "deckBuilderNr": 661
-  },
   "A3-84": {
     "id": "A3-84",
     "nameEN": "Tapu Lele",
@@ -208,6 +202,12 @@
     "nameEN": "Eevee",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A4/134.webp",
     "deckBuilderNr": 990
+  },
+  "A4-151": {
+    "id": "A4-151",
+    "nameEN": "Elemental Switch",
+    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A4/151.webp",
+    "deckBuilderNr": 1000071
   },
   "A4a-10": {
     "id": "A4a-10",
@@ -491,6 +491,12 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B2b/40.webp",
     "deckBuilderNr": 1644
   },
+  "B2b-51": {
+    "id": "B2b-51",
+    "nameEN": "Dratini",
+    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B2b/51.webp",
+    "deckBuilderNr": 1655
+  },
   "B2b-69": {
     "id": "B2b-69",
     "nameEN": "Hiking Trail",
@@ -617,11 +623,29 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3a/47.webp",
     "deckBuilderNr": 1862
   },
+  "B3a-54": {
+    "id": "B3a-54",
+    "nameEN": "Gouging Fire",
+    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3a/54.webp",
+    "deckBuilderNr": 1869
+  },
+  "B3a-69": {
+    "id": "B3a-69",
+    "nameEN": "Ancient Booster Energy Capsule",
+    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3a/69.webp",
+    "deckBuilderNr": 1000137
+  },
   "B3a-71": {
     "id": "B3a-71",
     "nameEN": "Juliana",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3a/71.webp",
     "deckBuilderNr": 1000139
+  },
+  "B3a-72": {
+    "id": "B3a-72",
+    "nameEN": "Professor Sada",
+    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3a/72.webp",
+    "deckBuilderNr": 1000140
   },
   "B3a-73": {
     "id": "B3a-73",
@@ -634,6 +658,12 @@
     "nameEN": "Milotic ex",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3b/15.webp",
     "deckBuilderNr": 1916
+  },
+  "B3b-24": {
+    "id": "B3b-24",
+    "nameEN": "Dedenne ex",
+    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3b/24.webp",
+    "deckBuilderNr": 1922
   },
   "B3b-35": {
     "id": "B3b-35",
@@ -719,6 +749,12 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B4/117.webp",
     "deckBuilderNr": 2078
   },
+  "B4-120": {
+    "id": "B4-120",
+    "nameEN": "Mega Rayquaza ex",
+    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B4/120.webp",
+    "deckBuilderNr": 2081
+  },
   "B4-124": {
     "id": "B4-124",
     "nameEN": "Drampa",
@@ -730,6 +766,12 @@
     "nameEN": "Deceptive Needle",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B4/148.webp",
     "deckBuilderNr": 1000152
+  },
+  "B4-149": {
+    "id": "B4-149",
+    "nameEN": "Clear Veil",
+    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B4/149.webp",
+    "deckBuilderNr": 1000153
   },
   "B4-153": {
     "id": "B4-153",
@@ -760,12 +802,6 @@
     "nameEN": "Charizard",
     "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_018_EN.webp",
     "deckBuilderNr": 2195
-  },
-  "C1-41": {
-    "id": "C1-41",
-    "nameEN": "Frogadier",
-    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_041_EN.webp",
-    "deckBuilderNr": 2218
   },
   "C1-56": {
     "id": "C1-56",
