@@ -21,5 +21,9 @@
   "Mega Charizard X ex Mega Charizard Y ex": ["Fire"],
   "Mega Altaria ex Igglybuff": ["Psychic"],
   "Dragonair Mega Rayquaza ex": ["Fire", "Lightning"],
-  "Mega Altaria ex Happiny": ["Psychic"]
+  "Mega Altaria ex Happiny": ["Psychic"],
+  "Umbreon Mega Absol ex": ["Darkness"],
+  "Umbreon Mega Sableye ex": ["Darkness"],
+  "Entei ex Charizard": ["Fire"],
+  "Giratina ex Dragonair": ["Grass", "Psychic"]
 }

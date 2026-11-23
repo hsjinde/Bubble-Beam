@@ -3,7 +3,7 @@
 給下一個接手的人（Claude Code 或 `agy`）。這份檔案記錄目前的 UI／前端品質狀態與待辦，
 每輪工作結束時更新它，不要讓它過期。
 
-最後更新：2026-11-16
+最後更新：2026-11-23
 
 ---
 
@@ -824,6 +824,28 @@ CLAUDE.md 與 skill 寫的「約 40 次、~30s」是加入取樣前的數字，�
 
 **⚠ 這輪 github.com DNS 解析失敗，沒有 `git fetch`，只在本機 commit、沒有 push，所以還沒上線。**
 網路恢復後要先 pull；如果遠端也改過 `meta.json`，名次基準要由人決定。
+
+---
+
+## 2026-11-23 這輪：排行榜更新（`/tcg-pocket-tier-list`）
+
+升降箭頭以 11-16 為基準：5 升、10 降、3 持平、2 新進（`Umbreon Mega Sableye ex` #17、
+`Entei ex Charizard` #18）。第一名仍是 `Mega Altaria ex Espeon`（54.4%）；`Hoopa ex Mega Sableye ex`
+從 #16 跳到 #7（534 場，樣本偏小）。20 列全繁中，不用補譯名；牌表卡片全在索引內。
+
+- `Vespiquen ex Shuckle ex` 又是 11/20 被丟、留 9 份，與上輪同一模式（見下一節），代表牌表內容正確。
+- 策展 tier 兩副（使用者同意後套用）：`mega-sceptile-greninja` A→B（49.6%）、`vespiquen-shuckle` S→A（51.84%）。
+  `indeedee-giratina` 仍不在資料裡，tier 未動。
+- 採用率文案依新數字改三副：胡帕頁模仿少女 57→60%、Serena's Choice 43→40%；蜂女王頁三蜜蜂 89→100%
+  併入「全數採用」、赤日 56→67%；光電傘蜥頁優雅披風 72→78%、娜姿 67→72%、除障器 33→28%、落雷獸 promo 61→67%／B2b 39→33%。
+- 能量補 4 副（從 Limitless 卡片頁讀招式費用判定）：`Umbreon Mega Absol ex`／`Umbreon Mega Sableye ex` 惡、
+  `Entei ex Charizard` 火、`Giratina ex Dragonair` 草＋超（C1-101 騎拉帝納ex 的 Dragon Impact 是 G P C，其餘全無色）。
+  QR 20/20 張。
+
+驗證：`npm run lint`、`vite build` 通過，`subset-cards.mjs --check`（142 張）與 `generate-deck-qr.mjs --check` 乾淨。
+瀏覽器實測 `/decks`：資料日期 2026-11-23（對照 11-16）、20 列、展開 Entei ex Charizard 有牌表與 QR（能量顯示火）、
+卡圖來源 16/16 可取得、console 只有首頁 `videos/manifest.json` 的預期 404；蜂女王／蜥蜴王攻略頁 SSR 帶新 tier 與新數字。
+**github.com DNS 仍解析失敗，沒有 `git fetch`／push，只在本機 commit。**
 
 ---
 

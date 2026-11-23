@@ -227,12 +227,6 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A4a/21.webp",
     "deckBuilderNr": 1041
   },
-  "A4a-23": {
-    "id": "A4a-23",
-    "nameEN": "Mantyke",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A4a/23.webp",
-    "deckBuilderNr": 1042
-  },
   "A4a-59": {
     "id": "A4a-59",
     "nameEN": "Igglybuff",
@@ -395,12 +389,6 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B1a/68.webp",
     "deckBuilderNr": 1000103
   },
-  "B1a-69": {
-    "id": "B1a-69",
-    "nameEN": "Serena",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B1a/69.webp",
-    "deckBuilderNr": 1000104
-  },
   "B2-17": {
     "id": "B2-17",
     "nameEN": "Teal Mask Ogerpon ex",
@@ -418,12 +406,6 @@
     "nameEN": "Protective Poncho",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B2/147.webp",
     "deckBuilderNr": 1000108
-  },
-  "B2-149": {
-    "id": "B2-149",
-    "nameEN": "Diantha",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B2/149.webp",
-    "deckBuilderNr": 1000110
   },
   "B2-153": {
     "id": "B2-153",
@@ -665,12 +647,6 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3b/24.webp",
     "deckBuilderNr": 1922
   },
-  "B3b-35": {
-    "id": "B3b-35",
-    "nameEN": "Flutter Mane",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B3b/35.webp",
-    "deckBuilderNr": 1933
-  },
   "B3b-41": {
     "id": "B3b-41",
     "nameEN": "Mega Sableye ex",
@@ -724,12 +700,6 @@
     "nameEN": "Wynaut",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B4/74.webp",
     "deckBuilderNr": 2035
-  },
-  "B4-78": {
-    "id": "B4-78",
-    "nameEN": "Oricorio",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/B4/78.webp",
-    "deckBuilderNr": 2039
   },
   "B4-103": {
     "id": "B4-103",
@@ -802,18 +772,6 @@
     "nameEN": "Charizard",
     "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_018_EN.webp",
     "deckBuilderNr": 2195
-  },
-  "C1-56": {
-    "id": "C1-56",
-    "nameEN": "Mega Mewtwo X ex",
-    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_056_EN.webp",
-    "deckBuilderNr": 2233
-  },
-  "C1-57": {
-    "id": "C1-57",
-    "nameEN": "Mew ex",
-    "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/C1/C1_057_EN.webp",
-    "deckBuilderNr": 2234
   },
   "C1-84": {
     "id": "C1-84",
