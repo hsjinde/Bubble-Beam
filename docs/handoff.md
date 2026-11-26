@@ -3,7 +3,7 @@
 給下一個接手的人（Claude Code 或 `agy`）。這份檔案記錄目前的 UI／前端品質狀態與待辦，
 每輪工作結束時更新它，不要讓它過期。
 
-最後更新：2026-11-23
+最後更新：2026-11-26
 
 ---
 
@@ -824,6 +824,25 @@ CLAUDE.md 與 skill 寫的「約 40 次、~30s」是加入取樣前的數字，�
 
 **⚠ 這輪 github.com DNS 解析失敗，沒有 `git fetch`，只在本機 commit、沒有 push，所以還沒上線。**
 網路恢復後要先 pull；如果遠端也改過 `meta.json`，名次基準要由人決定。
+
+---
+
+## 2026-11-26 這輪：排行榜更新（`/tcg-pocket-tier-list`）
+
+升降箭頭以 11-23 為基準：6 升、9 降、5 持平、0 新進。第一名仍是 `Mega Altaria ex Espeon`（54.26%）；
+`Entei ex Charizard` 從 #18 跳到 #9（515 場），`Magnezone Miraidon ex` 從 #2 掉到 #5。
+20 列全繁中，不用補譯名；牌表卡片全在索引內，能量不用補（QR 20/20）。
+
+- `Vespiquen ex Shuckle ex` 又是 11/20 被丟、留 9 份，第三輪同一模式，代表牌表與上輪相同、內容正確。
+- 策展 tier 一副（使用者同意後套用）：`hydreigon-mega-sableye` B→A（50.42%，278 場、樣本偏小，剛過門檻）。
+  `indeedee-giratina` 仍不在資料裡，tier 未動。
+- 採用率文案不用改：胡帕、蜂女王、光電傘蜥三頁引用的數字與新取樣完全一致；三首惡龍 Mega勾魂眼ex
+  的取樣有變（博士的研究、赤日 100→88%），但攻略內文沒有引用採用率。
+
+驗證：`eslint src/data/decks.ts` 通過，`subset-cards.mjs --check`（140 張）與 `generate-deck-qr.mjs --check` 乾淨。
+瀏覽器實測 `/decks`：資料日期 2026-11-26（對照 11-23）、20 列全繁中、展開 Entei ex Charizard 有 46 張卡圖與 QR、
+console 無錯誤；三首惡龍 Mega勾魂眼ex 攻略頁顯示 A。
+**github.com DNS 仍解析失敗，沒有 `git fetch`／push，只在本機 commit。**
 
 ---
 

@@ -191,23 +191,11 @@
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A4/21.webp",
     "deckBuilderNr": 877
   },
-  "A4-120": {
-    "id": "A4-120",
-    "nameEN": "Absol",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A4/120.webp",
-    "deckBuilderNr": 976
-  },
   "A4-134": {
     "id": "A4-134",
     "nameEN": "Eevee",
     "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A4/134.webp",
     "deckBuilderNr": 990
-  },
-  "A4-151": {
-    "id": "A4-151",
-    "nameEN": "Elemental Switch",
-    "imageUrl": "https://cdn.pokemon-tcg.exchange/images/cards-by-set/A4/151.webp",
-    "deckBuilderNr": 1000071
   },
   "A4a-10": {
     "id": "A4a-10",

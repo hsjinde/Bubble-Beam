@@ -888,7 +888,7 @@ const decks: Deck[] = [
   {
     id: "hydreigon-mega-sableye",
     name: "三首惡龍 Mega勾魂眼ex",
-    tier: "B",
+    tier: "A",
     energy: ["Darkness"],
     difficulty: "難",
     summary: "三階惡龍收割網：三首惡龍滿破壞力群體點傷，搭配 Mega勾魂眼ex 偷取資源並徹底擊垮後排。",
